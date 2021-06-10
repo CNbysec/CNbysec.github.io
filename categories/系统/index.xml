@@ -1,0 +1,391 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>系统 - 分类 - bysec</title>
+        <link>https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/</link>
+        <description>系统 - 分类 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
+            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux系统备份与还原</title>
+    <link>https://www.bysec.cn/20210601/</link>
+    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20210601/</guid>
+    <description><![CDATA[<p>在 使用Ubuntu之前，相信很多人都有过使用Windows系统的经历。如果你备份过Windows系统，那么你一定记忆犹新：首先需要找到一个备份工 具(通常都是私有软件)，然后重启电脑进入备份工具提供的软件环境，在这里备份或者恢复Windows系统。Norton Ghost是备份Windows系统时经常使用的备份工具。</p>
+<p>在备份Windows系统的时候你可能想过，我能不能把整个C盘都放到一个ZIP文件里去呢。这在Windows下是不可能的，因为在Windows中有很多文件在它们运行时是不允许拷贝或覆盖的，因此你需要专门的备份工具对Windows系统进行特殊处理。</p>
+<p>和 备份Windows系统不同，如果你要备份Ubuntu系统(或者其它任何Linux系统)，你不再需要像Ghost这类备份工具。事实上，Ghost 这类备份工具对于Linux文件系统的支持很糟糕，例如一些Ghost版本只能完善地支持Ext2文件系统，如果你用它来备份Ext3文件系统，你可能会 丢失一些宝贵的数据。</p>
+<h2 id="1-备份系统">1. 备份系统</h2>
+<p>我该如何备份我的Ubuntu系统呢？很简单，就像你备份或压缩其它东西一样，使用TAR。和Windows不同，Linux不会限制root访问任何东西，你可以把分区上的所有东西都扔到一个TAR文件里去！</p>
+<p>首先成为root用户：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo su
+</code></pre></td></tr></table>
+</div>
+</div><p>然后进入文件系统的根目录(当然，如果你不想备份整个文件系统，你也可以进入你想要备份的目录，包括远程目录或者移动硬盘上的目录)：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /
+</code></pre></td></tr></table>
+</div>
+</div><p>下面是我用来备份系统的完整命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar cvpzf backup.tgz –exclude<span class="o">=</span>/proc –exclude<span class="o">=</span>/lost+found –exclude<span class="o">=</span>/backup.tgz –exclude<span class="o">=</span>/mnt –exclude<span class="o">=</span>/sys /
+</code></pre></td></tr></table>
+</div>
+</div><p>让我们来简单看一下这个命令：</p>
+<p>“tar”当然就是我们备份系统所使用的程序了。</p>
+<p>“cvpfz”是tar的选项，意思是“创建档案文件”、“保持权限”(保留所有东西原来的权限)、“使用gzip来减小文件尺寸”。</p>
+<p>“backup.gz”是我们将要得到的档案文件的文件名。</p>
+<p>“/”是我们要备份的目录，在这里是整个文件系统。</p>
+<p>在 档案文件名“backup.gz”和要备份的目录名“/”之间给出了备份时必须排除在外的目录。有些目录是无用的，例如“/proc”、“/lost+ found”、“/sys”。当然，“backup.gz”这个档案文件本身必须排除在外，否则你可能会得到一些超出常理的结果。如果不把“/mnt”排 除在外，那么挂载在“/mnt”上的其它分区也会被备份。另外需要确认一下“/media”上没有挂载任何东西(例如光盘、移动硬盘)，如果有挂载东西， 必须把“/media”也排除在外。</p>
+<p>有人可能会建议你把“/dev”目录排除在外，但是我认为这样做很不妥，具体原因这里就不讨论了。</p>
+<p>执行备份命令之前请再确认一下你所键入的命令是不是你想要的。执行备份命令可能需要一段不短的时间。</p>
+<p>备份完成后，在文件系统的根目录将生成一个名为“backup.tgz”的文件，它的尺寸有可能非常大。现在你可以把它烧录到DVD上或者放到你认为安全的地方去。</p>
+<p>在备份命令结束时你可能会看到这样一个提示：’tar: Error exit delayed from previous errors’，多数情况下你可以忽略它。</p>
+<p>你还可以用Bzip2来压缩文件，Bzip2比gzip的压缩率高，但是速度慢一些。如果压缩率对你来说很重要，那么你应该使用Bzip2，用“j”代替命令中的“z”，并且给档案文件一个正确的扩展名“bz2”。完整的命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar cvpjf backup.tar.bz2 –exclude<span class="o">=</span>/proc –exclude<span class="o">=</span>/lost+found –exclude<span class="o">=</span>/backup.tar.bz2 –exclude<span class="o">=</span>/mnt –exclude<span class="o">=</span>/sys /
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="2-恢复系统">2. 恢复系统</h2>
+<p>在进行恢复系统的操作时一定要小心！如果你不清楚自己在做什么，那么你有可能把重要的数据弄丢，请务必小心！</p>
+<p>接着上面的例子。切换到root用户，并把文件“backup.tgz”拷贝到分区的根目录下。</p>
+<p>在 Linux中有一件很美妙的事情，就是你可以在一个运行的系统中恢复系统，而不需要用boot-cd来专门引导。当然，如果你的系统已经挂掉不能启动了， 你可以用Live CD来启动，效果是一样的。你还可以用一个命令把Linux系统中的所有文件干掉，当然在这里我不打算给出这个命令！</p>
+<p>使用下面的命令来恢复系统：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar xvpfz backup.tgz -C /
+</code></pre></td></tr></table>
+</div>
+</div><p>如果你的档案文件是使用Bzip2压缩的，应该用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar xvpfj backup.tar.bz2 -C /
+</code></pre></td></tr></table>
+</div>
+</div><p>注意：上面的命令会用档案文件中的文件覆盖分区上的所有文件。</p>
+<p>执行恢复命令之前请再确认一下你所键入的命令是不是你想要的，执行恢复命令可能需要一段不短的时间。</p>
+<p>恢复命令结束时，你的工作还没完成，别忘了重新创建那些在备份时被排除在外的目录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir proc
+mkdir lost+found
+mkdir mnt
+mkdir sys
+</code></pre></td></tr></table>
+</div>
+</div><p>当你重启电脑，你会发现一切东西恢复到你创建备份时的样子了！</p>]]></description>
+</item><item>
+    <title>kali 修改为国内源</title>
+    <link>https://www.bysec.cn/20210501/</link>
+    <pubDate>Sat, 01 May 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20210501/</guid>
+    <description><![CDATA[<h2 id="打开配置文件">打开配置文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/apt/sources.list
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="kali源">kali源</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#中科大</span>
+deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+ 
+<span class="c1">#阿里云</span>
+deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+ 
+<span class="c1">#清华大学</span>
+deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
+ 
+<span class="c1">#浙大</span>
+deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
+deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
+ 
+<span class="c1">#东软大学</span>
+deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
+deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
+ 
+<span class="c1">#官方源</span>
+deb http://http.kali.org/kali kali-rolling main non-free contrib
+deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="debian源">debian源</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 中科大源</span>
+deb http://mirrors.ustc.edu.cn/debian buster main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free
+
+<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
+<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
+<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free</span>
+<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
+
+<span class="c1"># 阿里云</span>
+deb http://mirrors.aliyun.com/debian/ buster main non-free contrib
+deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
+deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
+deb http://mirrors.aliyun.com/debian-security buster/updates main
+
+<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.aliyun.com/debian-security buster/updates main</span>
+
+<span class="c1"># 网易源</span>
+deb http://mirrors.163.com/debian/ buster main non-free contrib
+deb http://mirrors.163.com/debian/ buster-updates main non-free contrib
+deb http://mirrors.163.com/debian/ buster-backports main non-free contrib
+deb http://mirrors.163.com/debian-security/ buster/updates main non-free contrib
+
+<span class="c1">#deb-src http://mirrors.163.com/debian/ buster main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.163.com/debian/ buster-updates main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.163.com/debian/ buster-backports main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.163.com/debian-security/ buster/updates main non-free contrib</span>
+
+<span class="c1"># 官方源</span>
+deb http://deb.debian.org/debian buster main contrib non-free
+deb http://deb.debian.org/debian buster-updates main contrib non-free
+deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+
+<span class="c1">#deb-src http://deb.debian.org/debian buster main contrib non-free</span>
+<span class="c1">#deb-src http://deb.debian.org/debian buster-updates main contrib non-free</span>
+<span class="c1">#deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="更新软件列表并更新软件">更新软件列表并更新软件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
+    <title>Win10创建快捷方式时去掉快捷方式后缀</title>
+    <link>https://www.bysec.cn/20151101/</link>
+    <pubDate>Sun, 01 Nov 2015 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20151101/</guid>
+    <description><![CDATA[<blockquote>
+<p>请在【此电脑】最上方【查看】中勾选【文件扩展名】</p>
+</blockquote>
+<h2 id="使用reg文件添加">使用reg文件添加</h2>
+<blockquote>
+<p>复制下面的代码把后缀改成 <code>.reg</code></p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-reg" data-lang="reg">Windows Registry Editor Version 5.00
+<span class="k">[</span><span class="nb">HKEY_CURRENT_USER</span><span class="k">\Software\Microsoft\Windows\CurrentVersion\Explorer]</span>
+<span class="na">&#34;link&#34;</span><span class="o">=</span><span class="nv">hex</span><span class="p">:</span><span class="m">00,00,00,00</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
+    <title>Win10使用Windows照片查看打开图片</title>
+    <link>https://www.bysec.cn/20151001/</link>
+    <pubDate>Thu, 01 Oct 2015 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20151001/</guid>
+    <description><![CDATA[<blockquote>
+<p>请在【此电脑】最上方【查看】中勾选【文件扩展名】</p>
+</blockquote>
+<h2 id="使用reg文件添加">使用reg文件添加</h2>
+<blockquote>
+<p>复制下面的代码把后缀改成 <code>.reg</code></p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-reg" data-lang="reg">Windows Registry Editor Version 5.00
+<span class="k">[</span><span class="nb">HKEY_LOCAL_MACHINE</span><span class="k">\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations]</span>
+<span class="na">&#34;.ico&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.png&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.gif&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.jpg&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.jpeg&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.bmp&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.ico&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.svg&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.webp&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.tif&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+<span class="na">&#34;.tiff&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="使用bat添加">使用bat添加</h2>
+<p><strong>这个方法需要管理员权限运行，比较推荐使用第一个方法</strong></p>
+<blockquote>
+<p>复制下面的代码把后缀改成 <code>.bat</code></p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">@</span><span class="k">echo</span> off<span class="p">&amp;</span><span class="k">cd</span>\<span class="p">&amp;</span><span class="k">color</span> 0a<span class="p">&amp;</span><span class="k">cls</span>
+<span class="k">echo</span> 如果显示【错误 拒绝访问】请右键选择【以管理员身份运行】
+<span class="k">echo</span> ------------------------------------------------------------
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.ico&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.png&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.gif&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.jpg&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.jpeg&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.bmp&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.ico&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.svg&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.webp&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.tif&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.tiff&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
+<span class="k">echo</span> ------------------------------------------------------------
+<span class="k">echo</span> 右键选择【打开方式】然后选择【照片查看器】即可
+<span class="k">echo</span>;
+<span class="k">pause</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item></channel>
+</rss>

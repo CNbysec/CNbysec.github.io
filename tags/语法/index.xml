@@ -1,0 +1,35 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>语法 - 标签 - bysec</title>
+        <link>https://www.bysec.cn/tags/%E8%AF%AD%E6%B3%95/</link>
+        <description>语法 - 标签 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
+            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Tue, 01 Dec 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E8%AF%AD%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>高级搜索语法</title>
+    <link>https://www.bysec.cn/20151201/</link>
+    <pubDate>Tue, 01 Dec 2015 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20151201/</guid>
+    <description><![CDATA[<hr>
+<ul>
+<li>site：可以限制你搜索范围的域名.</li>
+<li>inurl：用于搜索网页上包含的URL，这个语法对寻找网页上的搜索，帮助之类的很有用.</li>
+<li>intext: 只搜索网页部分中包含的文字(也就是忽略了标题、URL等的文字)</li>
+<li>intitle: 查包含关键词的页面，一般用于社工别人的webshell密码</li>
+<li>filetype：搜索文件的后缀或者扩展名</li>
+<li>intitle：限制你搜索的网页标题.</li>
+<li>link: 可以得到一个所有包含了某个指定URL的页面列表.</li>
+</ul>
+<hr>
+<ul>
+<li>查找后台地址：site域名 inurl:login|admin|manage|member|admin_login|login_admin|system|login|user|main|cms</li>
+<li>查找文本内容：site:域名 intext:管理|后台|登陆|用户名|密码|验证码|系统|帐号|admin|login|sys|managetem|password|username</li>
+<li>查找可注入点：site:域名 inurl:aspx|jsp|php|asp</li>
+<li>查找上传漏洞：site:域名 inurl:file|load|editor|Files</li>
+<li>找eweb编辑器：site:域名 inurl:ewebeditor|editor|uploadfile|eweb|edit</li>
+<li>存在的数据库：site:域名 filetype:mdb|asp|#</li>
+<li>查看脚本类型：site:域名 filetype:asp/aspx/php/jsp</li>
+<li>迂回策略入侵：inurl:cms/data/templates/images/index/</li>
+</ul>]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,35 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>OneDrive - 标签 - bysec</title>
+        <link>https://www.bysec.cn/tags/onedrive/</link>
+        <description>OneDrive - 标签 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
+            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Tue, 01 Sep 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/onedrive/" rel="self" type="application/rss+xml" /><item>
+    <title>搭建OneDrive云盘</title>
+    <link>https://www.bysec.cn/20200901/</link>
+    <pubDate>Tue, 01 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20200901/</guid>
+    <description><![CDATA[<h2 id="国际版">国际版</h2>
+<blockquote>
+<p>国际版就是微软官网那些都是国际版的，速度比世纪互联版差，有些地方需要梯子，敏感东西不会被和谐。</p>
+</blockquote>
+<h3 id="microsoft-onedrivehttpsonedrivelivecom"><a href="https://onedrive.live.com/" target="_blank" rel="noopener noreffer">Microsoft OneDrive</a></h3>
+<h3 id="microsoft-azurehttpsportalazurecom"><a href="https://portal.azure.com/" target="_blank" rel="noopener noreffer">Microsoft Azure</a></h3>
+<h1 id="世纪互联版">世纪互联版</h1>
+<blockquote>
+<p>世纪互联版，只能企业注册，无法个人注册，速度很快，都不需要梯子，有些敏感东西会被和谐。</p>
+</blockquote>
+<h3 id="microsoft-onedrivehttpsloginpartnermicrosoftonlinecn"><a href="https://login.partner.microsoftonline.cn/" target="_blank" rel="noopener noreffer">Microsoft OneDrive</a></h3>
+<h3 id="microsoft-azurehttpsportalazurecn"><a href="https://portal.azure.cn/" target="_blank" rel="noopener noreffer">Microsoft Azure</a></h3>
+<hr>
+<h2 id="获取id和key">获取ID和Key</h2>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>]]></description>
+</item></channel>
+</rss>

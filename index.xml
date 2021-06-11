@@ -2965,6 +2965,7 @@ reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capab
     <pubDate>Tue, 01 Sep 2015 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://www.bysec.cn/20150901/</guid>
-    <description><![CDATA[<h1 id="帮助">帮助</h1>]]></description>
+    <description><![CDATA[<meta charset="UTF-8">
+<h1 id="帮助">帮助</h1>]]></description>
 </item></channel>
 </rss>

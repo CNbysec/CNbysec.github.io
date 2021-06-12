@@ -1,19 +1,7 @@
-﻿# python系统操作
+﻿# python读取yaml文件
 
 
 <!--more-->
-
-## 输入cmd命令
-```Python
-import os
-
-def putCmd(cmd):
-    f = os.popen(cmd)
-    shuchu = f.read()
-    f.close()
-    print(shuchu)
-    return shuchu
-```
 
 ## 读取yaml文件
 ```Python

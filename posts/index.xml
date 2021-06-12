@@ -1548,6 +1548,258 @@ tar -zxvf linux_amd64_client.tar.gz
 <p></p>
 <p></p>]]></description>
 </item><item>
+    <title>Python实现自动推本地github博客到远程仓库</title>
+    <link>https://www.bysec.cn/20170501/</link>
+    <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20170501/</guid>
+    <description><![CDATA[<h2 id="实现自动推本地github博客到远程仓库">实现自动推本地github博客到远程仓库</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding:utf-8 -*-</span>
+<span class="c1"># 本模块的功能:&lt;检测文件夹变化&gt;</span>
+<span class="kn">from</span> <span class="nn">watchdog.observers</span> <span class="kn">import</span> <span class="n">Observer</span>
+<span class="kn">from</span> <span class="nn">watchdog.events</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">76</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git add .&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git commit -m</span><span class="se">\&#34;</span><span class="s1">auto&#39;</span><span class="o">+</span><span class="n">change</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\&#34;</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git push -u origin master&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">76</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">FileEventHandler</span><span class="p">(</span><span class="n">FileSystemEventHandler</span><span class="p">):</span>
+    <span class="c1"># 初始化魔术方法</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">FileSystemEventHandler</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="c1"># 文件或文件夹移动</span>
+    <span class="k">def</span> <span class="nf">on_moved</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_directory</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&#34;directory moved from {0} to {1}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">dest_path</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&#34;file moved from {0} to {1}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">dest_path</span><span class="p">))</span>
+            <span class="c1"># 这里我们只判断文件修改,如需加入文件夹修改,只需在上面的if条件中调用push函数即可</span>
+            <span class="n">push</span><span class="p">(</span><span class="s2">&#34;文件移动: {0} to {1}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">dest_path</span><span class="p">))</span>
+
+    <span class="c1"># 创建文件或文件夹</span>
+    <span class="k">def</span> <span class="nf">on_created</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_directory</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&#34;directory created:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&#34;file created:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="n">push</span><span class="p">(</span><span class="s2">&#34;创建文件:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+
+    <span class="c1"># 删除文件或文件夹</span>
+    <span class="k">def</span> <span class="nf">on_deleted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_directory</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&#34;directory deleted:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&#34;file deleted:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="n">push</span><span class="p">(</span><span class="s2">&#34;删除文件:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+
+    <span class="c1"># 移动文件或文件夹</span>
+    <span class="k">def</span> <span class="nf">on_modified</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_directory</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&#34;directory modified:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&#34;file modified:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+            <span class="n">push</span><span class="p">(</span><span class="s2">&#34;文件修改:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">src_path</span><span class="p">))</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+    <span class="c1"># 实例化Observer对象</span>
+    <span class="n">observer</span> <span class="o">=</span> <span class="n">Observer</span><span class="p">()</span>
+    <span class="n">event_handler</span> <span class="o">=</span> <span class="n">FileEventHandler</span><span class="p">()</span>
+    <span class="c1"># 设置监听目录</span>
+    <span class="n">dis_dir</span> <span class="o">=</span> <span class="s2">&#34;./_posts/&#34;</span>
+    <span class="n">observer</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span><span class="n">event_handler</span><span class="p">,</span> <span class="n">dis_dir</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+    <span class="n">observer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="c1"># 设置监听频率(间隔周期时间)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">observer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">observer</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
+    <title>Python批量修改文档编码</title>
+    <link>https://www.bysec.cn/20170401/</link>
+    <pubDate>Sat, 01 Apr 2017 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20170401/</guid>
+    <description><![CDATA[<h2 id="批量修改文档编码">批量修改文档编码</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">chardet</span>
+
+
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">out_enc</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">content_bytes</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="n">source_encoding</span> <span class="o">=</span> <span class="n">chardet</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">content_bytes</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;encoding&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">chardet</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">content_bytes</span><span class="p">))</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">source_encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">content_str</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">out_enc</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content_str</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">content_bb</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;I/O error:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">explore</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">suffix</span><span class="p">,</span> <span class="n">out_enc</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="nb">dir</span><span class="p">):</span>
+        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="nb">file</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">suffix</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="nb">file</span><span class="p">)</span>
+                <span class="n">convert</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">out_enc</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">explore</span><span class="p">(</span><span class="s2">&#34;./public&#34;</span><span class="p">,</span> <span class="s2">&#34;.md&#34;</span><span class="p">,</span> <span class="s2">&#34;utf-8-sig&#34;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
     <title>Tkinter多线程</title>
     <link>https://www.bysec.cn/20170301/</link>
     <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate>
@@ -2158,114 +2410,6 @@ tar -zxvf linux_amd64_client.tar.gz
 <span class="p">{</span>
     <span class="n">pictureBox1</span><span class="p">.</span><span class="n">Image</span> <span class="p">=</span> <span class="n">Image</span><span class="p">.</span><span class="n">FromStream</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>C# 禁止Form窗口调整大小</title>
-    <link>https://www.bysec.cn/20160701/</link>
-    <pubDate>Fri, 01 Jul 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160701/</guid>
-    <description><![CDATA[<h2 id="禁止form窗口调整大小">禁止Form窗口调整大小</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="err">禁止</span><span class="n">Form窗口调整大小方法</span><span class="err">：</span><span class="n">FormBorderStyle</span> <span class="err">设为</span> <span class="n">FixedSingle</span><span class="err">；</span>
-
-<span class="err">不能使用最大化窗口：</span><span class="n">MaximuzeBox</span> <span class="err">设为</span> <span class="n">False</span><span class="err">；</span>
-
-<span class="err">不能使用最小化窗口：</span><span class="n">MinimizeBox</span> <span class="err">设为</span> <span class="n">False</span><span class="err">；</span>
-
-<span class="err">禁止</span><span class="n">combobox输入方法</span><span class="err">：将</span><span class="n">DropDownStyle</span> <span class="err">设为</span> <span class="n">DropDownList</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>Python批量安装依赖</title>
-    <link>https://www.bysec.cn/20160601/</link>
-    <pubDate>Wed, 01 Jun 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160601/</guid>
-    <description><![CDATA[<h2 id="新建-requirementstxt">新建 requirements.txt</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-txt" data-lang="txt">beautifulsoup4==4.8.2
-certifi==2019.11.28
-cffi==1.14.0
-chardet==3.0.4
-fire==0.2.1
-gevent==1.4.0
-greenlet==0.4.15
-idna==2.8
-lxml==4.5.0
-Pillow==7.1.1
-pycparser==2.20
-requests==2.22.0
-six==1.14.0
-soupsieve==2.0
-termcolor==1.1.0
-tqdm==4.34.0
-urllib3==1.25.3
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="安装命令">安装命令</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="其它pypi源">其它pypi源</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-txt" data-lang="txt">#阿里云
-http://mirrors.aliyun.com/pypi/simple/
-
-#中国科学技术大学
-http://pypi.mirrors.ustc.edu.cn/simple/
-
-#清华大学
-https://pypi.tuna.tsinghua.edu.cn/simple/
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>

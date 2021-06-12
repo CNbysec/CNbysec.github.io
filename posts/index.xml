@@ -1548,12 +1548,12 @@ tar -zxvf linux_amd64_client.tar.gz
 <p></p>
 <p></p>]]></description>
 </item><item>
-    <title>Python实现自动推本地github博客到远程仓库</title>
+    <title>Python实现自动推送到仓库</title>
     <link>https://www.bysec.cn/20170501/</link>
     <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://www.bysec.cn/20170501/</guid>
-    <description><![CDATA[<h2 id="实现自动推本地github博客到远程仓库">实现自动推本地github博客到远程仓库</h2>
+    <description><![CDATA[<h2 id="实现自动推送到仓库">实现自动推送到仓库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1626,12 +1626,10 @@ tar -zxvf linux_amd64_client.tar.gz
 </span><span class="lnt">68
 </span><span class="lnt">69
 </span><span class="lnt">70
-</span><span class="lnt">71
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="ch">#!/usr/bin/env python</span>
-<span class="c1"># -*- coding:utf-8 -*-</span>
-<span class="c1"># 本模块的功能:&lt;检测文件夹变化&gt;</span>
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="c1"># -*- coding:utf-8 -*-</span>
+
 <span class="kn">from</span> <span class="nn">watchdog.observers</span> <span class="kn">import</span> <span class="n">Observer</span>
 <span class="kn">from</span> <span class="nn">watchdog.events</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="nn">time</span>

@@ -1,14 +1,13 @@
-﻿# Python实现自动推本地github博客到远程仓库
+﻿# Python实现自动推送到仓库
 
 
 <!--more-->
 
-## 实现自动推本地github博客到远程仓库
+## 实现自动推送到仓库
 
 ```Python
-#!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# 本模块的功能:<检测文件夹变化>
+
 from watchdog.observers import Observer
 from watchdog.events import *
 import time

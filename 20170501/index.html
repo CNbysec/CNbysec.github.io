@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Python实现自动推本地github博客到远程仓库 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="Python实现自动推本地github博客到远程仓库" />
+        <title>Python实现自动推送到仓库 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="Python实现自动推送到仓库" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.bysec.cn/20170501/" /><meta property="og:image" content="https://www.bysec.cn/logo.png"/><meta property="article:section" content="posts" />
@@ -15,19 +15,19 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.bysec.cn/logo.png"/>
 
-<meta name="twitter:title" content="Python实现自动推本地github博客到远程仓库"/>
+<meta name="twitter:title" content="Python实现自动推送到仓库"/>
 <meta name="twitter:description" content=""/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/OSS/avatar/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.bysec.cn/20170501/" /><link rel="prev" href="https://www.bysec.cn/20170401/" /><link rel="next" href="https://www.bysec.cn/20200901/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Python实现自动推本地github博客到远程仓库",
+        "headline": "Python实现自动推送到仓库",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.bysec.cn\/20170501\/"
-        },"genre": "posts","keywords": "Python","wordcount":  511 ,
+        },"genre": "posts","keywords": "Python","wordcount":  474 ,
         "url": "https:\/\/www.bysec.cn\/20170501\/","datePublished": "2017-05-01T00:00:00+00:00","dateModified": "2017-05-01T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -116,10 +116,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Python实现自动推本地github博客到远程仓库</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Python实现自动推送到仓库</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>bysec</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B/"><i class="far fa-folder fa-fw"></i>编程</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-05-01">2017-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 511 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-05-01">2017-05-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 474 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -127,10 +127,10 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#实现自动推本地github博客到远程仓库">实现自动推本地github博客到远程仓库</a></li>
+    <li><a href="#实现自动推送到仓库">实现自动推送到仓库</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="实现自动推本地github博客到远程仓库">实现自动推本地github博客到远程仓库</h2>
+            </div><div class="content" id="content"><h2 id="实现自动推送到仓库">实现自动推送到仓库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -203,12 +203,10 @@
 </span><span class="lnt">68
 </span><span class="lnt">69
 </span><span class="lnt">70
-</span><span class="lnt">71
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="ch">#!/usr/bin/env python</span>
-<span class="c1"># -*- coding:utf-8 -*-</span>
-<span class="c1"># 本模块的功能:&lt;检测文件夹变化&gt;</span>
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="c1"># -*- coding:utf-8 -*-</span>
+
 <span class="kn">from</span> <span class="nn">watchdog.observers</span> <span class="kn">import</span> <span class="n">Observer</span>
 <span class="kn">from</span> <span class="nn">watchdog.events</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="nn">time</span>

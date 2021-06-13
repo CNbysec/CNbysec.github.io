@@ -1550,6 +1550,135 @@ tar -zxvf linux_amd64_client.tar.gz
 <p></p>
 <p></p>]]></description>
 </item><item>
+    <title>Python部署推送</title>
+    <link>https://www.bysec.cn/20170601/</link>
+    <pubDate>Thu, 01 Jun 2017 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.bysec.cn/20170601/</guid>
+    <description><![CDATA[<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">chardet</span>
+
+
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">out_enc</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">content_bytes</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="n">source_encoding</span> <span class="o">=</span> <span class="n">chardet</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">content_bytes</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;encoding&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">chardet</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">content_bytes</span><span class="p">))</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">source_encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">content_str</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">out_enc</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content_str</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">content_bb</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;I/O error:{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">explore</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">suffix</span><span class="p">,</span> <span class="n">out_enc</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="nb">dir</span><span class="p">):</span>
+        <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="nb">file</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">suffix</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+                <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="nb">file</span><span class="p">)</span>
+                <span class="n">convert</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">out_enc</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># 推送到 Hugo 仓库</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;hugo&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git add .&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git commit -m </span><span class="se">\&#34;</span><span class="s1">main</span><span class="se">\&#34;</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git push&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+    <span class="c1"># 批量修改文档编码</span>
+    <span class="n">explore</span><span class="p">(</span><span class="s2">&#34;public&#34;</span><span class="p">,</span> <span class="s2">&#34;.md&#34;</span><span class="p">,</span> <span class="s2">&#34;utf-8-sig&#34;</span><span class="p">)</span>
+    <span class="c1"># 推送到 CNbysec.github.io 仓库</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;public&#39;</span><span class="p">)</span> 
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git add .&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git commit -m </span><span class="se">\&#34;</span><span class="s1">main</span><span class="se">\&#34;</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;git push&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;hugo server&#39;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
     <title>Python实现自动推送到仓库</title>
     <link>https://www.bysec.cn/20170501/</link>
     <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate>
@@ -3286,99 +3415,6 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 <pre class="chroma"><code class="language-reg" data-lang="reg">Windows Registry Editor Version 5.00
 <span class="k">[</span><span class="nb">HKEY_CURRENT_USER</span><span class="k">\Software\Microsoft\Windows\CurrentVersion\Explorer]</span>
 <span class="na">&#34;link&#34;</span><span class="o">=</span><span class="nv">hex</span><span class="p">:</span><span class="m">00,00,00,00</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>Win10使用Windows照片查看打开图片</title>
-    <link>https://www.bysec.cn/20151001/</link>
-    <pubDate>Thu, 01 Oct 2015 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20151001/</guid>
-    <description><![CDATA[<blockquote>
-<p>请在【此电脑】最上方【查看】中勾选【文件扩展名】</p>
-</blockquote>
-<h2 id="使用reg文件添加">使用reg文件添加</h2>
-<blockquote>
-<p>复制下面的代码把后缀改成 <code>.reg</code></p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-reg" data-lang="reg">Windows Registry Editor Version 5.00
-<span class="k">[</span><span class="nb">HKEY_LOCAL_MACHINE</span><span class="k">\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations]</span>
-<span class="na">&#34;.ico&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.png&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.gif&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.jpg&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.jpeg&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.bmp&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.ico&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.svg&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.webp&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.tif&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-<span class="na">&#34;.tiff&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="使用bat添加">使用bat添加</h2>
-<p><strong>这个方法需要管理员权限运行，比较推荐使用第一个方法</strong></p>
-<blockquote>
-<p>复制下面的代码把后缀改成 <code>.bat</code></p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">@</span><span class="k">echo</span> off<span class="p">&amp;</span><span class="k">cd</span>\<span class="p">&amp;</span><span class="k">color</span> 0a<span class="p">&amp;</span><span class="k">cls</span>
-<span class="k">echo</span> 如果显示【错误 拒绝访问】请右键选择【以管理员身份运行】
-<span class="k">echo</span> ------------------------------------------------------------
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.ico&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.png&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.gif&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.jpg&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.jpeg&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.bmp&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.ico&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.svg&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.webp&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.tif&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-reg add <span class="s2">&#34;HKLM\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&#34;</span> /v <span class="s2">&#34;.tiff&#34;</span> /t REG_SZ /d PhotoViewer.FileAssoc.Tiff /f
-<span class="k">echo</span> ------------------------------------------------------------
-<span class="k">echo</span> 右键选择【打开方式】然后选择【照片查看器】即可
-<span class="k">echo</span>;
-<span class="k">pause</span>
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>

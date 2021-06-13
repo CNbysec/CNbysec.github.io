@@ -56,8 +56,9 @@ def main():
     os.system('git commit -m \"main\"')
     os.system('git push')
     print('-'*80)
+    # 本地部署
+    os.chdir('../')
     os.system('hugo server')
-
 
 if __name__ == "__main__":
     main()

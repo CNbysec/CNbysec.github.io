@@ -7,6 +7,7 @@
 # -*- coding: utf-8 -*-
 import os
 import chardet
+import subprocess
 
 
 def convert(filename, out_enc):
@@ -39,7 +40,19 @@ def explore(dir, suffix, out_enc):
                 convert(path, out_enc)
 
 
-def main():
+def exe():
+    subprocess.check_output("hugo", shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run("git add .", shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run("git commit -m \"main\"", shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run("git push", shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    explore("public", ".md", "utf-8-sig")
+    os.chdir('public') 
+    subprocess.run("git add .", shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run("git commit -m \"main\"", shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run("git push", shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+
+def py():
     # 推送到 Hugo 仓库
     print('-'*80)
     os.system('hugo')
@@ -61,6 +74,7 @@ def main():
     os.system('hugo server')
 
 if __name__ == "__main__":
-    main()
+    # exe()
+    py()
 
 ```

@@ -25,7 +25,7 @@ while is_hesitate:
     i = i.better()
     i.wait_for(u)
     is_hesitate = u.think_over()
-# After a Romantic Wedding
+# After a Romantic Wedding \ud83c\udfe0
 we = i.marry(u);
 while True:
     we.live_with("❤️")

@@ -3,7 +3,13 @@
 
 ## 关于网站
 ###### 个人博客，欢迎交流。 
+> QQ: [547968300](https://api.btstu.cn/qqtalk/api.php?qq=547968300) 
+> 
+> 邮箱: [CNbysec@foxmail.com](mailto:CNbysec@foxmail.com)
 
+## 关于作者
+
+* [❤️](/love/) 爱好游戏、摄影
 
 ## 关于版权
 **本站所有的原创文章均受 [创作共享 署名-非商业性 4.0 许可协议 / CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 保护。**

@@ -2,7 +2,7 @@
 
 
 {{< typeit group=paragraph tag=h2 >}}
-Here is a story about <font color=#e64ba1>love</font>â€¦
+Here is a story about <font color=#e64ba1>love</font>…
 {{< /typeit >}}
 
 {{< typeit group=paragraph tag=h2 code=python >}}
@@ -28,6 +28,6 @@ while is_hesitate:
 # After a Romantic Wedding
 we = i.marry(u);
 while True:
-    we.live_with("ai")
+    we.live_with("❤")
 # Forever...
 {{< /typeit >}}

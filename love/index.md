@@ -28,6 +28,6 @@ while is_hesitate:
 # After a Romantic Wedding
 we = i.marry(u);
 while True:
-    we.live_with("❤")
+    we.live_with("❤️")
 # Forever...
 {{< /typeit >}}

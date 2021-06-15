@@ -1,4 +1,4 @@
-# PyQt5多线程模块QThread使用方法
+﻿# PyQt5多线程模块QThread使用方法
 
 
 <!--more-->

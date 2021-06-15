@@ -1,4 +1,4 @@
-﻿# Python批量安装依赖
+# Python批量安装依赖
 
 
 <!--more-->

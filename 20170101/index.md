@@ -1,4 +1,4 @@
-﻿# python图片切片
+# python图片切片
 
 
 <!--more-->

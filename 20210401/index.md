@@ -1,4 +1,4 @@
-﻿# 论如何使用Python解密*.ncm文件
+# 论如何使用Python解密*.ncm文件
 
 
 <!--more-->

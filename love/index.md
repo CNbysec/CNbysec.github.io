@@ -1,4 +1,4 @@
-﻿# Love
+# Love
 
 
 {{< typeit group=paragraph tag=h2 >}}

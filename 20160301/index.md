@@ -1,4 +1,4 @@
-﻿# C# 连SqlServer数据库
+# C# 连SqlServer数据库
 
 
 <!--more-->

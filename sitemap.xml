@@ -2,13 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://www.bysec.cn/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.bysec.cn/categories/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.bysec.cn/tags/linux/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.bysec.cn/20210601/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.bysec.cn/posts/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.bysec.cn/tags/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://www.bysec.cn/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.bysec.cn/categories/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.bysec.cn/tags/linux/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.bysec.cn/20210601/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.bysec.cn/posts/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.bysec.cn/tags/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://www.bysec.cn/tags/kali/</loc><lastmod>2021-05-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.bysec.cn/20210501/</loc><lastmod>2021-05-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.bysec.cn/tags/python/</loc><lastmod>2021-04-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

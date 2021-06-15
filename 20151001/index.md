@@ -1,4 +1,4 @@
-﻿# Win10使用Windows照片查看打开图片
+# Win10使用Windows照片查看打开图片
 
 
 <!--more-->

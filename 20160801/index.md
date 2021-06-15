@@ -1,4 +1,4 @@
-﻿# C# 通过URL获取图片并显示在PictureBox上的方法
+# C# 通过URL获取图片并显示在PictureBox上的方法
 
 
 <!--more-->

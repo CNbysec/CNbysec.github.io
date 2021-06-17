@@ -6,8 +6,8 @@ Here is a story about <font color=#e64ba1>love</font>…
 {{< /typeit >}}
 
 {{< typeit group=paragraph tag=h2 code=python >}}
-u = Girl("s")
-i = Boy("b")
+u = Girl("x")
+i = Boy("y")
 # [2015/09/01](/about/) is a Special Day
 from datetime import date
 anniversary = date(2015, 9, 1)

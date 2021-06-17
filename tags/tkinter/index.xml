@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/tkinter/" rel="self" type="application/rss+xml" /><item>
     <title>Tkinter多线程</title>
     <link>https://www.bysec.cn/20170301/</link>
-    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170301/</guid>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170301/</guid>
     <description><![CDATA[<h2 id="tkinter多线程">tkinter多线程</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

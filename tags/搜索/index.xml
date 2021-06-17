@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Tue, 01 Dec 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E6%90%9C%E7%B4%A2/" rel="self" type="application/rss+xml" /><item>
     <title>高级搜索语法</title>
     <link>https://www.bysec.cn/20151201/</link>
-    <pubDate>Tue, 01 Dec 2015 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20151201/</guid>
+    <pubDate>Tue, 01 Dec 2015 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20151201/</guid>
     <description><![CDATA[<hr>
 <ul>
 <li>site：可以限制你搜索范围的域名.</li>

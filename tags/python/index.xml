@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>论如何使用Python解密*.ncm文件</title>
     <link>https://www.bysec.cn/20210401/</link>
-    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210401/</guid>
+    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210401/</guid>
     <description><![CDATA[<blockquote>
 <p>网易云音乐把.mp3音乐文件加密为.ncm文件，导致不能将下载好的音乐复制到其它设备，或使用非网易云音乐播放器播放，该程序可将.ncm文件逆向解密为.mp3文件，并保留原始音质。</p>
 </blockquote>
@@ -183,9 +183,9 @@
 </item><item>
     <title>Python部署推送</title>
     <link>https://www.bysec.cn/20170601/</link>
-    <pubDate>Thu, 01 Jun 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170601/</guid>
+    <pubDate>Thu, 01 Jun 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170601/</guid>
     <description><![CDATA[<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -342,9 +342,9 @@
 </item><item>
     <title>Python实现自动推送到仓库</title>
     <link>https://www.bysec.cn/20170501/</link>
-    <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170501/</guid>
+    <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170501/</guid>
     <description><![CDATA[<h2 id="实现自动推送到仓库">实现自动推送到仓库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -496,9 +496,9 @@
 </item><item>
     <title>Python批量修改文档编码</title>
     <link>https://www.bysec.cn/20170401/</link>
-    <pubDate>Sat, 01 Apr 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170401/</guid>
+    <pubDate>Sat, 01 Apr 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170401/</guid>
     <description><![CDATA[<h2 id="批量修改文档编码">批量修改文档编码</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -592,9 +592,9 @@
 </item><item>
     <title>Tkinter多线程</title>
     <link>https://www.bysec.cn/20170301/</link>
-    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170301/</guid>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170301/</guid>
     <description><![CDATA[<h2 id="tkinter多线程">tkinter多线程</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -676,9 +676,9 @@
 </item><item>
     <title>python读取yaml文件</title>
     <link>https://www.bysec.cn/20170201/</link>
-    <pubDate>Wed, 01 Feb 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170201/</guid>
+    <pubDate>Wed, 01 Feb 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170201/</guid>
     <description><![CDATA[<h2 id="读取yaml文件">读取yaml文件</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -708,9 +708,9 @@
 </item><item>
     <title>python图片切片</title>
     <link>https://www.bysec.cn/20170101/</link>
-    <pubDate>Sun, 01 Jan 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170101/</guid>
+    <pubDate>Sun, 01 Jan 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170101/</guid>
     <description><![CDATA[<h2 id="图片切片">图片切片</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -765,9 +765,9 @@
 </item><item>
     <title>Python批量安装依赖</title>
     <link>https://www.bysec.cn/20160601/</link>
-    <pubDate>Wed, 01 Jun 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160601/</guid>
+    <pubDate>Wed, 01 Jun 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160601/</guid>
     <description><![CDATA[<h2 id="新建-requirementstxt">新建 requirements.txt</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -845,9 +845,9 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 </item><item>
     <title>PyQt5多线程模块QThread使用方法</title>
     <link>https://www.bysec.cn/20160501/</link>
-    <pubDate>Sun, 01 May 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160501/</guid>
+    <pubDate>Sun, 01 May 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160501/</guid>
     <description><![CDATA[<h2 id="mainpy">main.py</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

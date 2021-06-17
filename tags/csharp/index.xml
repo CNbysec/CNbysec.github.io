@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Thu, 01 Dec 2016 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/csharp/" rel="self" type="application/rss+xml" /><item>
     <title>C# 多线程</title>
     <link>https://www.bysec.cn/20161201/</link>
-    <pubDate>Thu, 01 Dec 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161201/</guid>
+    <pubDate>Thu, 01 Dec 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161201/</guid>
     <description><![CDATA[<h2 id="主线程">主线程</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -270,9 +270,9 @@
 </item><item>
     <title>C# 下载图片到本地</title>
     <link>https://www.bysec.cn/20161101/</link>
-    <pubDate>Tue, 01 Nov 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161101/</guid>
+    <pubDate>Tue, 01 Nov 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161101/</guid>
     <description><![CDATA[<h2 id="下载图片到本地">下载图片到本地</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -316,9 +316,9 @@
 </item><item>
     <title>C# 使用Newtonsoft.Json解析json</title>
     <link>https://www.bysec.cn/20161001/</link>
-    <pubDate>Sat, 01 Oct 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161001/</guid>
+    <pubDate>Sat, 01 Oct 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161001/</guid>
     <description><![CDATA[<h2 id="使用newtonsoftjson解析json">使用Newtonsoft.Json解析json</h2>
 <p>Visual Studio中搜索安装Newtonsoft.Json插件</p>
 <div class="highlight"><div class="chroma">
@@ -351,9 +351,9 @@
 </item><item>
     <title>C# 复制、粘贴文本信息到剪贴板</title>
     <link>https://www.bysec.cn/20160901/</link>
-    <pubDate>Thu, 01 Sep 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160901/</guid>
+    <pubDate>Thu, 01 Sep 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160901/</guid>
     <description><![CDATA[<h2 id="复制粘贴文本信息到剪贴板">复制、粘贴文本信息到剪贴板</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -397,9 +397,9 @@
 </item><item>
     <title>C# 通过URL获取图片并显示在PictureBox上的方法</title>
     <link>https://www.bysec.cn/20160801/</link>
-    <pubDate>Mon, 01 Aug 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160801/</guid>
+    <pubDate>Mon, 01 Aug 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160801/</guid>
     <description><![CDATA[<h2 id="通过url获取图片并显示在picturebox上的方法">通过URL获取图片并显示在PictureBox上的方法</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -425,9 +425,9 @@
 </item><item>
     <title>C# 禁止Form窗口调整大小</title>
     <link>https://www.bysec.cn/20160701/</link>
-    <pubDate>Fri, 01 Jul 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160701/</guid>
+    <pubDate>Fri, 01 Jul 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160701/</guid>
     <description><![CDATA[<h2 id="禁止form窗口调整大小">禁止Form窗口调整大小</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -453,9 +453,9 @@
 </item><item>
     <title>C# winform中DataGridView的数据实现导出excel</title>
     <link>https://www.bysec.cn/20160401/</link>
-    <pubDate>Fri, 01 Apr 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160401/</guid>
+    <pubDate>Fri, 01 Apr 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160401/</guid>
     <description><![CDATA[<h2 id="引入">引入</h2>
 <blockquote>
 <p>使用这个方法需要装有微软office</p>
@@ -592,9 +592,9 @@
 </item><item>
     <title>C# 连SqlServer数据库</title>
     <link>https://www.bysec.cn/20160301/</link>
-    <pubDate>Tue, 01 Mar 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160301/</guid>
+    <pubDate>Tue, 01 Mar 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160301/</guid>
     <description><![CDATA[<h2 id="环境">环境</h2>
 <p>VS2010 + SqlServer 2008</p>
 <p>首先，按照面向对象的程序设计思想，设计一个数据库操作工具类MyTool.cs，该类中封装了关于数据库连接和操作的方法，各个功能模块在需进行数据库操作时只需调用相应的函数</p>
@@ -731,9 +731,9 @@
 </item><item>
     <title>C# MD5加密</title>
     <link>https://www.bysec.cn/20160201/</link>
-    <pubDate>Mon, 01 Feb 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160201/</guid>
+    <pubDate>Mon, 01 Feb 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160201/</guid>
     <description><![CDATA[<h2 id="md5加密">MD5加密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -885,9 +885,9 @@
 </item><item>
     <title>C# WINFORM 打开新窗体 关闭当前窗体</title>
     <link>https://www.bysec.cn/20160101/</link>
-    <pubDate>Fri, 01 Jan 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160101/</guid>
+    <pubDate>Fri, 01 Jan 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160101/</guid>
     <description><![CDATA[<h2 id="winform-打开新窗体-关闭当前窗体">WINFORM 打开新窗体 关闭当前窗体</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

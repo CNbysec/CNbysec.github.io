@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/categories/%E6%95%99%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
     <title>论如何使用Python解密*.ncm文件</title>
     <link>https://www.bysec.cn/20210401/</link>
-    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210401/</guid>
+    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210401/</guid>
     <description><![CDATA[<blockquote>
 <p>网易云音乐把.mp3音乐文件加密为.ncm文件，导致不能将下载好的音乐复制到其它设备，或使用非网易云音乐播放器播放，该程序可将.ncm文件逆向解密为.mp3文件，并保留原始音质。</p>
 </blockquote>
@@ -183,9 +183,9 @@
 </item><item>
     <title>Bilibili AV号BV号互相转换脚本</title>
     <link>https://www.bysec.cn/20210301/</link>
-    <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210301/</guid>
+    <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210301/</guid>
     <description><![CDATA[<h1 id="av号bv号互相转换脚本">AV号BV号互相转换脚本</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -327,9 +327,9 @@
 </item><item>
     <title>NPS内网穿透配置</title>
     <link>https://www.bysec.cn/20201101/</link>
-    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20201101/</guid>
+    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20201101/</guid>
     <description><![CDATA[<h1 id="nps内网穿透配置nps">NPS内网穿透配置NPS</h1>
 <h2 id="github项目地址">github项目地址</h2>
 <div class="highlight"><div class="chroma">
@@ -472,9 +472,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>使用好压打包成单个exe文件</title>
     <link>https://www.bysec.cn/20201001/</link>
-    <pubDate>Thu, 01 Oct 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20201001/</guid>
+    <pubDate>Thu, 01 Oct 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20201001/</guid>
     <description><![CDATA[<blockquote>
 <p>在线抠图：<a href="https://www.remove.bg" target="_blank" rel="noopener noreffer">https://www.remove.bg</a></p>
 </blockquote>
@@ -555,9 +555,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>搭建OneDrive云盘</title>
     <link>https://www.bysec.cn/20200901/</link>
-    <pubDate>Tue, 01 Sep 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20200901/</guid>
+    <pubDate>Tue, 01 Sep 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20200901/</guid>
     <description><![CDATA[<h2 id="国际版">国际版</h2>
 <blockquote>
 <p>国际版就是微软官网那些都是国际版的，速度比世纪互联版差，有些地方需要梯子，敏感东西不会被和谐。</p>
@@ -582,9 +582,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>Markdown 基本语法</title>
     <link>https://www.bysec.cn/20150901/</link>
-    <pubDate>Tue, 01 Sep 2015 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20150901/</guid>
+    <pubDate>Tue, 01 Sep 2015 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20150901/</guid>
     <description><![CDATA[<h1 id="markdown-基本语法">Markdown 基本语法</h1>
 <p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例.</p>
 <!--more-->

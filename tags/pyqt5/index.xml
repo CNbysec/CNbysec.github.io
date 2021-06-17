@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Sun, 01 May 2016 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/pyqt5/" rel="self" type="application/rss+xml" /><item>
     <title>PyQt5多线程模块QThread使用方法</title>
     <link>https://www.bysec.cn/20160501/</link>
-    <pubDate>Sun, 01 May 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160501/</guid>
+    <pubDate>Sun, 01 May 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160501/</guid>
     <description><![CDATA[<h2 id="mainpy">main.py</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

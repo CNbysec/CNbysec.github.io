@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E6%8A%80%E8%83%BD/" rel="self" type="application/rss+xml" /><item>
     <title>给表弟的Web安全入门建议</title>
     <link>https://www.bysec.cn/20210201/</link>
-    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210201/</guid>
+    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210201/</guid>
     <description><![CDATA[<p>表弟大一刚结束，学的是计算机相关的专业，上学期开始学安全相关的技术，我就给他买了一套云课堂的 <a href="https://mooc.study.163.com/smartSpec/detail/1001227001.htm?share=1&amp;shareId=9305777" target="_blank" rel="noopener noreffer">《Web安全工程师微专业》</a> 课程，结果这货学到第一课的时候，因为错过章节考试时间直接没及格&hellip;&hellip;好在后边几课都按部就班的学习了，然后应该是6月份开始试着在 <a href="https://src.edu-info.edu.cn/" target="_blank" rel="noopener noreffer">教育行业SRC</a> 挖掘漏洞，到现在也只是发现了几个XSS、敏感文件泄露之类的小漏洞，和他同期学习课程的一些同学已经挖了很多了排名很靠前，还有在企业SRC挖洞的，看看别人家的表弟&hellip;之前表弟要准备课程的期末考试之类的，现在放暑假了，我就建议说可以再好好学习那套课程，趁着暑假，多实践。然后就讨论到 <strong>有没有适合入门阶段学习的Web安全书籍</strong> 这个问题。</p>
 <p>说到Web安全书籍，这几年其实是一种百家齐放的状态，不断有优秀的书籍出版，那这里就<strong>尽可能少地整理几本我阅读过的Web安全入门书籍</strong>作为推荐。</p>
 <p>如果没学过相关课程的小伙伴，真的从0基础开始的话，还是需要先掌握一些基本的技能：</p>
@@ -138,9 +138,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 </item><item>
     <title>安全技能书简版</title>
     <link>https://www.bysec.cn/20210101/</link>
-    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210101/</guid>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210101/</guid>
     <description><![CDATA[<p></p>
 <h2 id="http">HTTP</h2>
 <h3 id="burpsuite">BurpSuite</h3>

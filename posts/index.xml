@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Linux系统备份与还原</title>
     <link>https://www.bysec.cn/20210601/</link>
-    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210601/</guid>
+    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210601/</guid>
     <description><![CDATA[<p>在 使用Ubuntu之前，相信很多人都有过使用Windows系统的经历。如果你备份过Windows系统，那么你一定记忆犹新：首先需要找到一个备份工 具(通常都是私有软件)，然后重启电脑进入备份工具提供的软件环境，在这里备份或者恢复Windows系统。Norton Ghost是备份Windows系统时经常使用的备份工具。</p>
 <p>在备份Windows系统的时候你可能想过，我能不能把整个C盘都放到一个ZIP文件里去呢。这在Windows下是不可能的，因为在Windows中有很多文件在它们运行时是不允许拷贝或覆盖的，因此你需要专门的备份工具对Windows系统进行特殊处理。</p>
 <p>和 备份Windows系统不同，如果你要备份Ubuntu系统(或者其它任何Linux系统)，你不再需要像Ghost这类备份工具。事实上，Ghost 这类备份工具对于Linux文件系统的支持很糟糕，例如一些Ghost版本只能完善地支持Ext2文件系统，如果你用它来备份Ext3文件系统，你可能会 丢失一些宝贵的数据。</p>
@@ -104,9 +104,9 @@ mkdir sys
 </item><item>
     <title>kali 修改为国内源</title>
     <link>https://www.bysec.cn/20210501/</link>
-    <pubDate>Sat, 01 May 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210501/</guid>
+    <pubDate>Sat, 01 May 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210501/</guid>
     <description><![CDATA[<h2 id="打开配置文件">打开配置文件</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -271,9 +271,9 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 </item><item>
     <title>论如何使用Python解密*.ncm文件</title>
     <link>https://www.bysec.cn/20210401/</link>
-    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210401/</guid>
+    <pubDate>Thu, 01 Apr 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210401/</guid>
     <description><![CDATA[<blockquote>
 <p>网易云音乐把.mp3音乐文件加密为.ncm文件，导致不能将下载好的音乐复制到其它设备，或使用非网易云音乐播放器播放，该程序可将.ncm文件逆向解密为.mp3文件，并保留原始音质。</p>
 </blockquote>
@@ -447,9 +447,9 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 </item><item>
     <title>Bilibili AV号BV号互相转换脚本</title>
     <link>https://www.bysec.cn/20210301/</link>
-    <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210301/</guid>
+    <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210301/</guid>
     <description><![CDATA[<h1 id="av号bv号互相转换脚本">AV号BV号互相转换脚本</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -591,9 +591,9 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 </item><item>
     <title>给表弟的Web安全入门建议</title>
     <link>https://www.bysec.cn/20210201/</link>
-    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210201/</guid>
+    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210201/</guid>
     <description><![CDATA[<p>表弟大一刚结束，学的是计算机相关的专业，上学期开始学安全相关的技术，我就给他买了一套云课堂的 <a href="https://mooc.study.163.com/smartSpec/detail/1001227001.htm?share=1&amp;shareId=9305777" target="_blank" rel="noopener noreffer">《Web安全工程师微专业》</a> 课程，结果这货学到第一课的时候，因为错过章节考试时间直接没及格&hellip;&hellip;好在后边几课都按部就班的学习了，然后应该是6月份开始试着在 <a href="https://src.edu-info.edu.cn/" target="_blank" rel="noopener noreffer">教育行业SRC</a> 挖掘漏洞，到现在也只是发现了几个XSS、敏感文件泄露之类的小漏洞，和他同期学习课程的一些同学已经挖了很多了排名很靠前，还有在企业SRC挖洞的，看看别人家的表弟&hellip;之前表弟要准备课程的期末考试之类的，现在放暑假了，我就建议说可以再好好学习那套课程，趁着暑假，多实践。然后就讨论到 <strong>有没有适合入门阶段学习的Web安全书籍</strong> 这个问题。</p>
 <p>说到Web安全书籍，这几年其实是一种百家齐放的状态，不断有优秀的书籍出版，那这里就<strong>尽可能少地整理几本我阅读过的Web安全入门书籍</strong>作为推荐。</p>
 <p>如果没学过相关课程的小伙伴，真的从0基础开始的话，还是需要先掌握一些基本的技能：</p>
@@ -722,9 +722,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 </item><item>
     <title>安全技能书简版</title>
     <link>https://www.bysec.cn/20210101/</link>
-    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210101/</guid>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210101/</guid>
     <description><![CDATA[<p></p>
 <h2 id="http">HTTP</h2>
 <h3 id="burpsuite">BurpSuite</h3>
@@ -996,9 +996,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 </item><item>
     <title>绕waf系列之绕安全狗</title>
     <link>https://www.bysec.cn/20201201/</link>
-    <pubDate>Tue, 01 Dec 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20201201/</guid>
+    <pubDate>Tue, 01 Dec 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20201201/</guid>
     <description><![CDATA[<h1 id="攻击的特定">攻击的特定:</h1>
 <p>攻击二象性:已知攻击和未知攻击</p>
 <h1 id="目前市面主流的waf产品">目前市面主流的WAF产品:</h1>
@@ -1295,9 +1295,9 @@ Content-Length头长度大于4008
 </item><item>
     <title>NPS内网穿透配置</title>
     <link>https://www.bysec.cn/20201101/</link>
-    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20201101/</guid>
+    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20201101/</guid>
     <description><![CDATA[<h1 id="nps内网穿透配置nps">NPS内网穿透配置NPS</h1>
 <h2 id="github项目地址">github项目地址</h2>
 <div class="highlight"><div class="chroma">
@@ -1440,9 +1440,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>使用好压打包成单个exe文件</title>
     <link>https://www.bysec.cn/20201001/</link>
-    <pubDate>Thu, 01 Oct 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20201001/</guid>
+    <pubDate>Thu, 01 Oct 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20201001/</guid>
     <description><![CDATA[<blockquote>
 <p>在线抠图：<a href="https://www.remove.bg" target="_blank" rel="noopener noreffer">https://www.remove.bg</a></p>
 </blockquote>
@@ -1523,9 +1523,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>搭建OneDrive云盘</title>
     <link>https://www.bysec.cn/20200901/</link>
-    <pubDate>Tue, 01 Sep 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20200901/</guid>
+    <pubDate>Tue, 01 Sep 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20200901/</guid>
     <description><![CDATA[<h2 id="国际版">国际版</h2>
 <blockquote>
 <p>国际版就是微软官网那些都是国际版的，速度比世纪互联版差，有些地方需要梯子，敏感东西不会被和谐。</p>
@@ -1550,9 +1550,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>Python部署推送</title>
     <link>https://www.bysec.cn/20170601/</link>
-    <pubDate>Thu, 01 Jun 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170601/</guid>
+    <pubDate>Thu, 01 Jun 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170601/</guid>
     <description><![CDATA[<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1709,9 +1709,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>Python实现自动推送到仓库</title>
     <link>https://www.bysec.cn/20170501/</link>
-    <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170501/</guid>
+    <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170501/</guid>
     <description><![CDATA[<h2 id="实现自动推送到仓库">实现自动推送到仓库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1863,9 +1863,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>Python批量修改文档编码</title>
     <link>https://www.bysec.cn/20170401/</link>
-    <pubDate>Sat, 01 Apr 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170401/</guid>
+    <pubDate>Sat, 01 Apr 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170401/</guid>
     <description><![CDATA[<h2 id="批量修改文档编码">批量修改文档编码</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1959,9 +1959,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>Tkinter多线程</title>
     <link>https://www.bysec.cn/20170301/</link>
-    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170301/</guid>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170301/</guid>
     <description><![CDATA[<h2 id="tkinter多线程">tkinter多线程</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2043,9 +2043,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>python读取yaml文件</title>
     <link>https://www.bysec.cn/20170201/</link>
-    <pubDate>Wed, 01 Feb 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170201/</guid>
+    <pubDate>Wed, 01 Feb 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170201/</guid>
     <description><![CDATA[<h2 id="读取yaml文件">读取yaml文件</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2075,9 +2075,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>python图片切片</title>
     <link>https://www.bysec.cn/20170101/</link>
-    <pubDate>Sun, 01 Jan 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170101/</guid>
+    <pubDate>Sun, 01 Jan 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170101/</guid>
     <description><![CDATA[<h2 id="图片切片">图片切片</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2132,9 +2132,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>C# 多线程</title>
     <link>https://www.bysec.cn/20161201/</link>
-    <pubDate>Thu, 01 Dec 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161201/</guid>
+    <pubDate>Thu, 01 Dec 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161201/</guid>
     <description><![CDATA[<h2 id="主线程">主线程</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2395,9 +2395,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>C# 下载图片到本地</title>
     <link>https://www.bysec.cn/20161101/</link>
-    <pubDate>Tue, 01 Nov 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161101/</guid>
+    <pubDate>Tue, 01 Nov 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161101/</guid>
     <description><![CDATA[<h2 id="下载图片到本地">下载图片到本地</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2441,9 +2441,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>C# 使用Newtonsoft.Json解析json</title>
     <link>https://www.bysec.cn/20161001/</link>
-    <pubDate>Sat, 01 Oct 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161001/</guid>
+    <pubDate>Sat, 01 Oct 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161001/</guid>
     <description><![CDATA[<h2 id="使用newtonsoftjson解析json">使用Newtonsoft.Json解析json</h2>
 <p>Visual Studio中搜索安装Newtonsoft.Json插件</p>
 <div class="highlight"><div class="chroma">
@@ -2476,9 +2476,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </item><item>
     <title>C# 复制、粘贴文本信息到剪贴板</title>
     <link>https://www.bysec.cn/20160901/</link>
-    <pubDate>Thu, 01 Sep 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160901/</guid>
+    <pubDate>Thu, 01 Sep 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160901/</guid>
     <description><![CDATA[<h2 id="复制粘贴文本信息到剪贴板">复制、粘贴文本信息到剪贴板</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Linux系统备份与还原</title>
     <link>https://www.bysec.cn/20210601/</link>
-    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20210601/</guid>
+    <pubDate>Tue, 01 Jun 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210601/</guid>
     <description><![CDATA[<p>在 使用Ubuntu之前，相信很多人都有过使用Windows系统的经历。如果你备份过Windows系统，那么你一定记忆犹新：首先需要找到一个备份工 具(通常都是私有软件)，然后重启电脑进入备份工具提供的软件环境，在这里备份或者恢复Windows系统。Norton Ghost是备份Windows系统时经常使用的备份工具。</p>
 <p>在备份Windows系统的时候你可能想过，我能不能把整个C盘都放到一个ZIP文件里去呢。这在Windows下是不可能的，因为在Windows中有很多文件在它们运行时是不允许拷贝或覆盖的，因此你需要专门的备份工具对Windows系统进行特殊处理。</p>
 <p>和 备份Windows系统不同，如果你要备份Ubuntu系统(或者其它任何Linux系统)，你不再需要像Ghost这类备份工具。事实上，Ghost 这类备份工具对于Linux文件系统的支持很糟糕，例如一些Ghost版本只能完善地支持Ext2文件系统，如果你用它来备份Ext3文件系统，你可能会 丢失一些宝贵的数据。</p>

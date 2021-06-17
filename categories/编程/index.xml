@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Thu, 01 Jun 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/categories/%E7%BC%96%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
     <title>Python部署推送</title>
     <link>https://www.bysec.cn/20170601/</link>
-    <pubDate>Thu, 01 Jun 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170601/</guid>
+    <pubDate>Thu, 01 Jun 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170601/</guid>
     <description><![CDATA[<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -166,9 +166,9 @@
 </item><item>
     <title>Python实现自动推送到仓库</title>
     <link>https://www.bysec.cn/20170501/</link>
-    <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170501/</guid>
+    <pubDate>Mon, 01 May 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170501/</guid>
     <description><![CDATA[<h2 id="实现自动推送到仓库">实现自动推送到仓库</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -320,9 +320,9 @@
 </item><item>
     <title>Python批量修改文档编码</title>
     <link>https://www.bysec.cn/20170401/</link>
-    <pubDate>Sat, 01 Apr 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170401/</guid>
+    <pubDate>Sat, 01 Apr 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170401/</guid>
     <description><![CDATA[<h2 id="批量修改文档编码">批量修改文档编码</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -416,9 +416,9 @@
 </item><item>
     <title>Tkinter多线程</title>
     <link>https://www.bysec.cn/20170301/</link>
-    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170301/</guid>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170301/</guid>
     <description><![CDATA[<h2 id="tkinter多线程">tkinter多线程</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -500,9 +500,9 @@
 </item><item>
     <title>python读取yaml文件</title>
     <link>https://www.bysec.cn/20170201/</link>
-    <pubDate>Wed, 01 Feb 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170201/</guid>
+    <pubDate>Wed, 01 Feb 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170201/</guid>
     <description><![CDATA[<h2 id="读取yaml文件">读取yaml文件</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -532,9 +532,9 @@
 </item><item>
     <title>python图片切片</title>
     <link>https://www.bysec.cn/20170101/</link>
-    <pubDate>Sun, 01 Jan 2017 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20170101/</guid>
+    <pubDate>Sun, 01 Jan 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170101/</guid>
     <description><![CDATA[<h2 id="图片切片">图片切片</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -589,9 +589,9 @@
 </item><item>
     <title>C# 多线程</title>
     <link>https://www.bysec.cn/20161201/</link>
-    <pubDate>Thu, 01 Dec 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161201/</guid>
+    <pubDate>Thu, 01 Dec 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161201/</guid>
     <description><![CDATA[<h2 id="主线程">主线程</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -852,9 +852,9 @@
 </item><item>
     <title>C# 下载图片到本地</title>
     <link>https://www.bysec.cn/20161101/</link>
-    <pubDate>Tue, 01 Nov 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161101/</guid>
+    <pubDate>Tue, 01 Nov 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161101/</guid>
     <description><![CDATA[<h2 id="下载图片到本地">下载图片到本地</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -898,9 +898,9 @@
 </item><item>
     <title>C# 使用Newtonsoft.Json解析json</title>
     <link>https://www.bysec.cn/20161001/</link>
-    <pubDate>Sat, 01 Oct 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20161001/</guid>
+    <pubDate>Sat, 01 Oct 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20161001/</guid>
     <description><![CDATA[<h2 id="使用newtonsoftjson解析json">使用Newtonsoft.Json解析json</h2>
 <p>Visual Studio中搜索安装Newtonsoft.Json插件</p>
 <div class="highlight"><div class="chroma">
@@ -933,9 +933,9 @@
 </item><item>
     <title>C# 复制、粘贴文本信息到剪贴板</title>
     <link>https://www.bysec.cn/20160901/</link>
-    <pubDate>Thu, 01 Sep 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160901/</guid>
+    <pubDate>Thu, 01 Sep 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160901/</guid>
     <description><![CDATA[<h2 id="复制粘贴文本信息到剪贴板">复制、粘贴文本信息到剪贴板</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -979,9 +979,9 @@
 </item><item>
     <title>C# 通过URL获取图片并显示在PictureBox上的方法</title>
     <link>https://www.bysec.cn/20160801/</link>
-    <pubDate>Mon, 01 Aug 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160801/</guid>
+    <pubDate>Mon, 01 Aug 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160801/</guid>
     <description><![CDATA[<h2 id="通过url获取图片并显示在picturebox上的方法">通过URL获取图片并显示在PictureBox上的方法</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1007,9 +1007,9 @@
 </item><item>
     <title>C# 禁止Form窗口调整大小</title>
     <link>https://www.bysec.cn/20160701/</link>
-    <pubDate>Fri, 01 Jul 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160701/</guid>
+    <pubDate>Fri, 01 Jul 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160701/</guid>
     <description><![CDATA[<h2 id="禁止form窗口调整大小">禁止Form窗口调整大小</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1035,9 +1035,9 @@
 </item><item>
     <title>Python批量安装依赖</title>
     <link>https://www.bysec.cn/20160601/</link>
-    <pubDate>Wed, 01 Jun 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160601/</guid>
+    <pubDate>Wed, 01 Jun 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160601/</guid>
     <description><![CDATA[<h2 id="新建-requirementstxt">新建 requirements.txt</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1115,9 +1115,9 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 </item><item>
     <title>PyQt5多线程模块QThread使用方法</title>
     <link>https://www.bysec.cn/20160501/</link>
-    <pubDate>Sun, 01 May 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160501/</guid>
+    <pubDate>Sun, 01 May 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160501/</guid>
     <description><![CDATA[<h2 id="mainpy">main.py</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1383,9 +1383,9 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 </item><item>
     <title>C# winform中DataGridView的数据实现导出excel</title>
     <link>https://www.bysec.cn/20160401/</link>
-    <pubDate>Fri, 01 Apr 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160401/</guid>
+    <pubDate>Fri, 01 Apr 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160401/</guid>
     <description><![CDATA[<h2 id="引入">引入</h2>
 <blockquote>
 <p>使用这个方法需要装有微软office</p>
@@ -1522,9 +1522,9 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 </item><item>
     <title>C# 连SqlServer数据库</title>
     <link>https://www.bysec.cn/20160301/</link>
-    <pubDate>Tue, 01 Mar 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160301/</guid>
+    <pubDate>Tue, 01 Mar 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160301/</guid>
     <description><![CDATA[<h2 id="环境">环境</h2>
 <p>VS2010 + SqlServer 2008</p>
 <p>首先，按照面向对象的程序设计思想，设计一个数据库操作工具类MyTool.cs，该类中封装了关于数据库连接和操作的方法，各个功能模块在需进行数据库操作时只需调用相应的函数</p>
@@ -1661,9 +1661,9 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 </item><item>
     <title>C# MD5加密</title>
     <link>https://www.bysec.cn/20160201/</link>
-    <pubDate>Mon, 01 Feb 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160201/</guid>
+    <pubDate>Mon, 01 Feb 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160201/</guid>
     <description><![CDATA[<h2 id="md5加密">MD5加密</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1815,9 +1815,9 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 </item><item>
     <title>C# WINFORM 打开新窗体 关闭当前窗体</title>
     <link>https://www.bysec.cn/20160101/</link>
-    <pubDate>Fri, 01 Jan 2016 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20160101/</guid>
+    <pubDate>Fri, 01 Jan 2016 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20160101/</guid>
     <description><![CDATA[<h2 id="winform-打开新窗体-关闭当前窗体">WINFORM 打开新窗体 关闭当前窗体</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

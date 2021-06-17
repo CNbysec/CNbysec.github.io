@@ -7,9 +7,9 @@
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="self" type="application/rss+xml" /><item>
     <title>NPS内网穿透配置</title>
     <link>https://www.bysec.cn/20201101/</link>
-    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.bysec.cn/20201101/</guid>
+    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20201101/</guid>
     <description><![CDATA[<h1 id="nps内网穿透配置nps">NPS内网穿透配置NPS</h1>
 <h2 id="github项目地址">github项目地址</h2>
 <div class="highlight"><div class="chroma">

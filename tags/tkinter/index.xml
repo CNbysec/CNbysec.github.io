@@ -1,23 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Tkinter on ExampleSite</title>
-    <link>https://examplesite.com/tags/tkinter/</link>
-    <description>Recent content in Tkinter on ExampleSite</description>
-    <image>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/tkinter/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tkinter多线程</title>
-      <link>https://examplesite.com/posts/20170301/</link>
-      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/posts/20170301/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tkinter - 标签 - bysec</title>
+        <link>https://www.bysec.cn/tags/tkinter/</link>
+        <description>Tkinter - 标签 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
+            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/tkinter/" rel="self" type="application/rss+xml" /><item>
+    <title>Tkinter多线程</title>
+    <link>https://www.bysec.cn/20170301/</link>
+    <pubDate>Wed, 01 Mar 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170301/</guid>
+    <description><![CDATA[<h2 id="tkinter多线程">tkinter多线程</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="c1"># -*-coding:utf-8-*-</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">tkinter</span>
+<span class="kn">import</span> <span class="nn">tkinter.messagebox</span>
+
+
+<span class="k">def</span> <span class="nf">message</span><span class="p">():</span>
+    <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&#34;弹出消息&#34;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sta</span><span class="p">():</span>
+    <span class="n">th</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">main</span><span class="p">)</span>
+    <span class="n">th</span><span class="o">.</span><span class="n">setDaemon</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">th</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;title&#34;</span><span class="p">)</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">iconbitmap</span><span class="p">(</span><span class="s2">&#34;favicon.ico&#34;</span><span class="p">)</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">resizable</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">sw</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">winfo_screenwidth</span><span class="p">()</span>
+    <span class="n">sh</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">winfo_screenheight</span><span class="p">()</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">sw</span> <span class="o">-</span> <span class="mi">300</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">sh</span> <span class="o">-</span> <span class="mi">300</span><span class="p">)</span> <span class="o">/</span> <span class="mi">5</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%d</span><span class="s2">x</span><span class="si">%d</span><span class="s2">+</span><span class="si">%d</span><span class="s2">+</span><span class="si">%d</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+
+    <span class="n">message</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&#34;弹框消息&#34;</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+    <span class="n">message</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">65</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+
+    <span class="n">sta</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&#34;开 始&#34;</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">sta</span><span class="p">)</span>
+    <span class="n">sta</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">sta</span> <span class="o">=</span> <span class="n">sta</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+
+    <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item></channel>
 </rss>

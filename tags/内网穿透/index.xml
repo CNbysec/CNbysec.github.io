@@ -1,23 +1,153 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>内网穿透 on ExampleSite</title>
-    <link>https://examplesite.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
-    <description>Recent content in 内网穿透 on ExampleSite</description>
-    <image>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>NPS内网穿透配置</title>
-      <link>https://examplesite.com/posts/20201101/</link>
-      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://examplesite.com/posts/20201101/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>内网穿透 - 标签 - bysec</title>
+        <link>https://www.bysec.cn/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+        <description>内网穿透 - 标签 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
+            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>NPS内网穿透配置</title>
+    <link>https://www.bysec.cn/20201101/</link>
+    <pubDate>Sun, 01 Nov 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20201101/</guid>
+    <description><![CDATA[<h1 id="nps内网穿透配置nps">NPS内网穿透配置NPS</h1>
+<h2 id="github项目地址">github项目地址</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">https://github.com/cnlh/nps
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="原理">原理</h2>
+<p></p>
+<h2 id="服务器端配置">服务器端配置</h2>
+<ul>
+<li>准备工作
+<ul>
+<li>一台拥有公网IP的VPS</li>
+<li>安装nps软件包</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget https://github.com/cnlh/nps/releases/download/v0.23.1/linux_amd64_server.tar.gz
+tar -zxvf linux_amd64_server.tar.gz
+<span class="nb">cd</span> nps/
+./nps start
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>配置server端
+在安装完成，启动nps后，便可访问server_IP:8080来访问nps配置dashboard了
+要求登陆，默认的用户名：admin，密码：123
+</li>
+</ul>
+<p>网页dashboard的用户名和密码可在nps/conf/nps.conf配置文件中的web模块中修改
+</p>
+<p>登陆进入dashboard后,看到界面，默认客户端为0（这里我已经创建了一个）
+默认的客户端链接端口为8024（该端口为客户端用于链接服务器的端口，来保持链接，原理与反向代理相似）
+</p>
+<ul>
+<li>新建客户端
+这里我们创建一个新的客户端，
+这里的客户端只是在server配置的客户端，之后使用客户端软件链接，所以要与客户端配置一致
+</li>
+</ul>
+<p>创建好的客户端是这样的，status为offline，因为客户端还没链接
+这里server会自动随机生成一个vkey=7oswclqe5knqu15x（之后配置客户端会使用）
+</p>
+<hr>
+<h2 id="客户端配置">客户端配置</h2>
+<p><strong>Windows</strong></p>
+<ul>
+<li>下载客户端
+<a href="https://github.com/cnlh/nps/releases/download/v0.23.1/win_amd64_client.tar.gz" target="_blank" rel="noopener noreffer">https://github.com/cnlh/nps/releases/download/v0.23.1/win_amd64_client.tar.gz</a>
+这里使用windows作为客户端
+下载解压后配置vps.conf，
+将其他配置删除，只保留如图所示的配置</li>
+<li>修改
+server_addr为VPS的公网ip和dashboard的默认客户端链接端口
+vkey为server网页上新建的客户端生成的vkey</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">server_addr=server_IP:8024
+conn_type=tcp
+vkey=7oswclqe5knqu15x
+auto_reconnection=true
+max_conn=1000
+flow_limit=1000
+rate_limit=1000
+basic_username=11
+basic_password=3
+web_username=user
+web_password=123
+crypt=true
+compress=true
+</code></pre></td></tr></table>
+</div>
+</div><p></p>
+<p>修改完配置文件后运行nsp.exe，显示成功链接
+</p>
+<h2 id="centos">CentOS</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">wget https://github.com/cnlh/nps/releases/download/v0.23.1/linux_amd64_client.tar.gz
+tar -zxvf linux_amd64_client.tar.gz
+<span class="nb">cd</span> npc/
+./npc -server<span class="o">=</span>66.42.81.9:8024 -vkey<span class="o">=</span>7oswclqe5knqu15x -type<span class="o">=</span>tcp
+</code></pre></td></tr></table>
+</div>
+</div><p>链接成功
+<strong>两者链接成功后server端中客户端status转为online</strong>
+</p>
+<h2 id="使用测试">使用测试</h2>
+<p>创建tcp tunnel
+这里使用内网router配置网页做测试
+</p>
+<p>点击tunnel创建tcp隧道
+</p>
+<p>点击新增
+这里我的router内网ip为192.168.1.1
+</p>
+<p>创建完成
+</p>
+<p>访问测试
+访问server_ip:10001
+成功访问到内网router配置网页
+</p>
+<blockquote>
+<p>中文文档： <a href="https://github.com/ehang-io/nps/blob/master/README_zh.md">https://github.com/ehang-io/nps/blob/master/README_zh.md</a></p>
+</blockquote>]]></description>
+</item></channel>
 </rss>

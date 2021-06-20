@@ -1548,32 +1548,45 @@ tar -zxvf linux_amd64_client.tar.gz
 <p></p>
 <p></p>]]></description>
 </item><item>
-    <title>Python部署推送</title>
+    <title>python3实现AES加密</title>
     <link>https://www.bysec.cn/20170701/</link>
     <pubDate>Sat, 01 Jul 2017 00:00:00 &#43;0000</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/20170701/</guid>
     <description><![CDATA[<blockquote>
-<p>转载自：https://blog.csdn.net/chouzhou9701/article/details/89339625</p>
+<p>转载自：<a href="https://blog.csdn.net/chouzhou9701/article/details/89339625" target="_blank" rel="noopener noreffer">https://blog.csdn.net/chouzhou9701/article/details/89339625</a></p>
 </blockquote>
 <h1 id="前言">前言</h1>
 <p>这几天研究了一下 python 实现 AES 加密，有很多坑</p>
 <p>AES 加密的参数及其条件
 这个 AES 加密的主要坑就在于这些条件， 首先 aes 加密有一下几个参数</p>
 <ol>
-<li>秘钥：加密的时候用秘钥，解密的时候需要同样的秘钥才能解出来</li>
-<li>明文：需要加密的参数</li>
-<li>模式：aes 加密常用的有 ECB 和 CBC 模式（我只用了这两个模式，还有其他模式）</li>
-<li>iv 偏移量：这个参数在 ECB 模式下不需要，在 CBC 模式下需要</li>
+<li>
+<p>秘钥：加密的时候用秘钥，解密的时候需要同样的秘钥才能解出来</p>
+</li>
+<li>
+<p>明文：需要加密的参数</p>
+</li>
+<li>
+<p>模式：aes 加密常用的有 ECB 和 CBC 模式（我只用了这两个模式，还有其他模式）</p>
+</li>
+<li>
+<p>iv 偏移量：这个参数在 ECB 模式下不需要，在 CBC 模式下需要</p>
+</li>
 </ol>
 <p>需要输入这些参数才能返回一个密文
 下面是重点
 下面说一下这几个参数的条件：</p>
 <ol>
-<li>秘钥：必须是16位字节或者24位字节或者32位字节（因为python3的字符串是unicode编码，需要 encode才可以转换成字节型数据）</li>
-<li>明文：字节长度需要是16位的倍数</li>
+<li>
+<p>秘钥：必须是16位字节或者24位字节或者32位字节（因为python3的字符串是unicode编码，需要 encode才可以转换成字节型数据）</p>
+</li>
+<li>
+<p>明文：字节长度需要是16位的倍数</p>
+</li>
 </ol>
 <p>下面我用python3简单的方法实现:</p>
+<h2 id="简单方法">简单方法</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1606,7 +1619,7 @@ tar -zxvf linux_amd64_client.tar.gz
 <span class="k">print</span><span class="p">(</span><span class="n">en_text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>输出</p>
+</div><h2 id="输出">输出</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1619,7 +1632,10 @@ tar -zxvf linux_amd64_client.tar.gz
 <span class="n">dXzNDNxckOrb7uz2ON0AAA</span><span class="o">==</span>
 </code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><p>这里有个问题就是密钥和加密的文本内容都必须是固定的16位（根据我前面说的参数要求）</p>
+<p>所以下面优化的代码（将秘钥和需要加密的文本补成对应的位数）</p>
+<h2 id="优化的代码">优化的代码</h2>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1641,15 +1657,9 @@ tar -zxvf linux_amd64_client.tar.gz
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">这里有个问题就是密钥和加密的文本内容都必须是固定的</span><span class="mi">16</span><span class="err">位（根据我前面说的参数要求）</span>
-<span class="err">所以下面优化的代码（将秘钥和需要加密的文本补成对应的位数）</span>
-
-<span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
 <span class="kn">import</span> <span class="nn">base64</span>
 
 <span class="k">def</span> <span class="nf">add_to_16</span><span class="p">(</span><span class="n">par</span><span class="p">):</span>
@@ -1673,11 +1683,18 @@ tar -zxvf linux_amd64_client.tar.gz
 </div>
 </div><p>这里简单的说一下几个存在的问题</p>
 <ol>
-<li>其实上述代码我简单省略的进行补全到16位，而秘钥24位也是可以的，你可以自己写一个函数来进行秘钥的补全</li>
-<li>为什么进行补全之前先进行 .encode() ? 首先 encode() 不加参数默认是以 utf8 编码的，另外先进行 encode 的原因是因为怕加密的文本中存在汉字，而汉字的 utf8 编码的字节长度是3（gbk对汉字的编码字节长度是2），所以为了防止补全的位数不正确，这里必须先进行转换（我看到很多别的文章先补全后进行转换的，而且还是拿空格补全的。。。）</li>
-<li>不知道有没有发现，aes.encrypt() 在第一个程序中我传递的是字符串类型，第二个程序传递的是字节型数据，这个函数其实是既可以传递字符串数据类型也可以传递字节型数据的</li>
+<li>
+<p>其实上述代码我简单省略的进行补全到16位，而秘钥24位也是可以的，你可以自己写一个函数来进行秘钥的补全</p>
+</li>
+<li>
+<p>为什么进行补全之前先进行 .encode() ? 首先 encode() 不加参数默认是以 utf8 编码的，另外先进行 encode 的原因是因为怕加密的文本中存在汉字，而汉字的 utf8 编码的字节长度是3（gbk对汉字的编码字节长度是2），所以为了防止补全的位数不正确，这里必须先进行转换（我看到很多别的文章先补全后进行转换的，而且还是拿空格补全的。。。）</p>
+</li>
+<li>
+<p>不知道有没有发现，aes.encrypt() 在第一个程序中我传递的是字符串类型，第二个程序传递的是字节型数据，这个函数其实是既可以传递字符串数据类型也可以传递字节型数据的</p>
+</li>
 </ol>
 <p>上面的程序没有解密函数，所以我对整个加密解密进行了一个类的最终封装</p>
+<h2 id="最终封装">最终封装</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1754,17 +1771,18 @@ tar -zxvf linux_amd64_client.tar.gz
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;明文:&#39;</span><span class="p">,</span><span class="n">pr</span><span class="o">.</span><span class="n">aesdecrypt</span><span class="p">(</span><span class="n">en_text</span><span class="p">))</span>
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="时隔多天-我终于用上了以上的代码然后我发现我的代码是错误的评论区也有指出">时隔多天, 我终于用上了以上的代码,然后我发现我的代码是错误的,评论区也有指出</h1>
+</div><p>时隔多天, 我终于用上了以上的代码然后我发现我的代码是错误的,评论区也有指出</p>
 <p>所以我又重新测试发现在ECB模式是没有问题的, 在使用CBC 模式的条件下, 不可以在类的构造函数里面构建 aes对象, 也就是说在CBC模式下 每一次加密和解密 都需要重新构建aes对象 self.aes = AES.new(self.key,self.model,iv), 否则加密和解密的结果就会不一致或者报错</p>
-<p>另外就是关于 padding模式方面的问题
-ZeroPadding
-PKCS7Padding
-PKCS5Padding</p>
+<p>另外就是关于 padding模式方面的问题</p>
+<ul>
+<li>ZeroPadding</li>
+<li>PKCS7Padding</li>
+<li>PKCS5Padding</li>
+</ul>
 <p>这几种模式的区别, 我也不从算法方面探讨了, 因为我发现当你用什么补全的时候, 解密回来的字符串里是包含补全使用的字符串的所以代码中用'\x00' 补全是没有问题的, 你用什么补全都可以(这里我用的是python,至于别的语言是不是这样我就不知道了)</p>
 <p>最后一个点就是 关于base64编码的问题了,我也不知道这个是不是由于padding 模式区别导致的, 因为有的密文采用的是base64编码, 有点密文采用的是 hexstr编码, 反正无论采用什么编码,在真正加密和解密的时候是绝对会转换成 bytes类型的</p>
 <p>所以我最终只做一个只是针对 bytes 的AES加密解密类</p>
-<p>from Crypto.Cipher import AES
-import base64</p>
+<h2 id="加密解密类">加密解密类</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -1810,9 +1828,15 @@ import base64</p>
 </span><span class="lnt">41
 </span><span class="lnt">42
 </span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Aescrypt</span><span class="p">():</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+
+<span class="k">class</span> <span class="nc">Aescrypt</span><span class="p">():</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">model</span><span class="p">,</span><span class="n">iv</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_16</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
@@ -1860,6 +1884,7 @@ import base64</p>
 </div><p>上面这段代码 你输入的 所有参数都应该是字符串或者 字节型数据, 并且输出的都是 字节型数据</p>
 <p>如果进行一些编码转换可以在类的外部进行完成, 这里我就不写了, 到这里我才真正的明白为什么 python自己不封装一下这个算法, 确实可能的情况太多了, 这样还是比较灵活的。(其实进一步封装也是可以的, 就是判断输入的是base64字符串,还是hexstr,或者bytes, 然后在自定义一下输出,不过我是懒得弄了)</p>
 <p>另外附上 base64 编码解码 和 hexstr 编码解码</p>
+<h2 id="编码解码">编码解码</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1

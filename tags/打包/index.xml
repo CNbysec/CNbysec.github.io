@@ -1,91 +1,23 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>打包 - 标签 - bysec</title>
-        <link>https://www.bysec.cn/tags/%E6%89%93%E5%8C%85/</link>
-        <description>打包 - 标签 - bysec</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
-            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Thu, 01 Oct 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E6%89%93%E5%8C%85/" rel="self" type="application/rss+xml" /><item>
-    <title>使用好压打包成单个exe文件</title>
-    <link>https://www.bysec.cn/20201001/</link>
-    <pubDate>Thu, 01 Oct 2020 00:00:00 &#43;0000</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/20201001/</guid>
-    <description><![CDATA[<blockquote>
-<p>在线抠图：<a href="https://www.remove.bg" target="_blank" rel="noopener noreffer">https://www.remove.bg</a></p>
-</blockquote>
-<blockquote>
-<p>png转ico：<a href="https://www.easyicon.net/covert" target="_blank" rel="noopener noreffer">https://www.easyicon.net/covert</a></p>
-</blockquote>
-<h2 id="准备">准备</h2>
-<ul>
-<li>准备个压缩软件，例如好压，WinRAR等等，根据文字举一反三即可</li>
-<li>这是将要打包的主目录文件</li>
-</ul>
-<p></p>
-<p></p>
-<p>exe在哪里就复制哪里的相对路径，以主文件目录为准，一定要相对路径，否则移动到别的地方会无法使用</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">\Program\Thunder.exe
-</code></pre></td></tr></table>
-</div>
-</div><p></p>
-<h2 id="打包exe">打包exe</h2>
-<ol>
-<li>选择-压缩文件格式</li>
-<li>勾选-创建自解压格式</li>
-<li>点击-自解压选项
-</li>
-<li>选项卡选择-解压</li>
-<li>解压后运行-输入相对路径</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">\Program\Thunder.exe
-</code></pre></td></tr></table>
-</div>
-</div><p></p>
-<blockquote>
-<p>强调下，一定要相对路径否则移动到别处会无法使用</p>
-</blockquote>
-<ol start="6">
-<li>
-<p>选项卡选择-模式</p>
-</li>
-<li>
-<p>勾选-解包到临时文件夹</p>
-</li>
-<li>
-<p>选择-全部隐藏
-</p>
-</li>
-<li>
-<p>选项卡选择-更新</p>
-</li>
-<li>
-<p>解压并替换文件</p>
-</li>
-<li>
-<p>覆盖所有文件
-</p>
-</li>
-<li>
-<p>选项卡选择-图标</p>
-</li>
-<li>
-<p>浏览选择绝对路径的ico图标文件
-</p>
-</li>
-</ol>
-<h2 id="完成">完成</h2>
-<p></p>
-<p>打包好后删除了主文件只保留exe文件后移动到别处也可以使用
-</p>]]></description>
-</item></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>打包 on ExampleSite</title>
+    <link>https://examplesite.com/tags/%E6%89%93%E5%8C%85/</link>
+    <description>Recent content in 打包 on ExampleSite</description>
+    <image>
+      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/%E6%89%93%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用好压打包成单个exe文件</title>
+      <link>https://examplesite.com/posts/20201001/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://examplesite.com/posts/20201001/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
 </rss>

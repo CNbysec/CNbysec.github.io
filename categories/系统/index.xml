@@ -269,6 +269,31 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 </div>
 </div>]]></description>
 </item><item>
+    <title>Hyper-V开启关闭</title>
+    <link>https://www.bysec.cn/20170801/</link>
+    <pubDate>Tue, 01 Aug 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170801/</guid>
+    <description><![CDATA[<h2 id="禁用">禁用</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">bcdedit /set hypervisorlaunchtype off
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="开启">开启</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">bcdedit /set hypervisorlaunchtype auto
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
     <title>Win10创建快捷方式时去掉快捷方式后缀</title>
     <link>https://www.bysec.cn/20151101/</link>
     <pubDate>Sun, 01 Nov 2015 00:00:00 &#43;0000</pubDate><author>

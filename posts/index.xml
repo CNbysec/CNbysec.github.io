@@ -1548,6 +1548,31 @@ tar -zxvf linux_amd64_client.tar.gz
 <p></p>
 <p></p>]]></description>
 </item><item>
+    <title>Hyper-V开启关闭</title>
+    <link>https://www.bysec.cn/20170801/</link>
+    <pubDate>Tue, 01 Aug 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170801/</guid>
+    <description><![CDATA[<h2 id="禁用">禁用</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">bcdedit /set hypervisorlaunchtype off
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="开启">开启</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">bcdedit /set hypervisorlaunchtype auto
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
     <title>python3实现AES加密</title>
     <link>https://www.bysec.cn/20170701/</link>
     <pubDate>Sat, 01 Jul 2017 00:00:00 &#43;0000</pubDate><author>
@@ -2802,41 +2827,6 @@ tar -zxvf linux_amd64_client.tar.gz
         <span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>C# 使用Newtonsoft.Json解析json</title>
-    <link>https://www.bysec.cn/20161001/</link>
-    <pubDate>Sat, 01 Oct 2016 00:00:00 &#43;0000</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/20161001/</guid>
-    <description><![CDATA[<h2 id="使用newtonsoftjson解析json">使用Newtonsoft.Json解析json</h2>
-<p>Visual Studio中搜索安装Newtonsoft.Json插件</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="c1">// 解析对象
-</span><span class="c1"></span><span class="kt">string</span> <span class="n">jsonText</span> <span class="p">=</span> <span class="s">&#34;{\&#34;zone\&#34;:\&#34;海淀\&#34;,\&#34;zone_en\&#34;:\&#34;haidian\&#34;}&#34;</span><span class="p">;</span>
-<span class="n">JObject</span> <span class="n">jo</span> <span class="p">=</span> <span class="p">(</span><span class="n">JObject</span><span class="p">)</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">(</span><span class="n">jsonText</span><span class="p">);</span>
-<span class="kt">string</span> <span class="n">zone</span> <span class="p">=</span> <span class="n">jo</span><span class="p">[</span><span class="s">&#34;zone&#34;</span><span class="p">].</span><span class="n">ToString</span><span class="p">();</span>
-<span class="kt">string</span> <span class="n">zone_en</span> <span class="p">=</span> <span class="n">jo</span><span class="p">[</span><span class="s">&#34;zone_en&#34;</span><span class="p">].</span><span class="n">ToString</span><span class="p">();</span>
-
-<span class="c1">// 解析数组
-</span><span class="c1"></span><span class="kt">string</span> <span class="n">jsonText</span> <span class="p">=</span> <span class="s">&#34;[\&#34;海淀\&#34;,\&#34;北京\&#34;,\&#34;上海\&#34;}&#34;</span><span class="p">;</span>
-<span class="n">JObject</span> <span class="n">jo</span> <span class="p">=</span> <span class="p">(</span><span class="n">JObject</span><span class="p">)</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">(</span><span class="n">jsonText</span><span class="p">);</span>
-<span class="n">JArray</span> <span class="n">rangQiuList</span> <span class="p">=</span> <span class="p">(</span><span class="n">JArray</span><span class="p">)</span><span class="n">jo</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>

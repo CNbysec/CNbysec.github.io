@@ -195,7 +195,7 @@
     <span class="n">img_size</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span>
     <span class="n">region</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">crop</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">))</span>
     <span class="n">region</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;cutImg.png&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">format</span><span class="p">(</span><span class="n">img_size</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">format</span><span class="p">(</span><span class="n">img_size</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="获取图片位置上的rgb颜色">获取图片位置上的rgb颜色</h2>
@@ -221,7 +221,7 @@
     <span class="n">str_strlist</span> <span class="o">=</span> <span class="n">img_src</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">str_strlist</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">pixelX</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">pixelY</span><span class="p">)]</span>
     <span class="n">img_src</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">data</span>
 </code></pre></td></tr></table>
 </div>

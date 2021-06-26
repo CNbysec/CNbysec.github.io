@@ -139,12 +139,12 @@
 		<span class="n">r</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="n">table</span><span class="p">[</span><span class="n">x</span><span class="o">//</span><span class="mi">58</span><span class="o">**</span><span class="n">i</span><span class="o">%</span><span class="mi">58</span><span class="p">]</span>
 	<span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="s1">&#39;BV17x411w7KC&#39;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="s1">&#39;BV1Q541167Qg&#39;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="s1">&#39;BV1mK4y1C7Bz&#39;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="mi">170001</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="mi">455017605</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="mi">882584971</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="s1">&#39;BV17x411w7KC&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="s1">&#39;BV1Q541167Qg&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dec</span><span class="p">(</span><span class="s1">&#39;BV1mK4y1C7Bz&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="mi">170001</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="mi">455017605</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">enc</span><span class="p">(</span><span class="mi">882584971</span><span class="p">))</span>
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>

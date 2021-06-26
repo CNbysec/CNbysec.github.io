@@ -276,8 +276,8 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="cm">/*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
+</span></code></pre></td></tr></table>
 </div>
 </div><p>这些都是去掉空格的合法语句,当然如果不拦截<code>/*/或/!*/</code>的话,也可以尝试这两个</p>
 <blockquote>

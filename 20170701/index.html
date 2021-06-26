@@ -238,11 +238,11 @@
 <span class="n">aes</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">password</span><span class="p">,</span><span class="n">model</span><span class="p">)</span> <span class="c1">#创建一个aes对象</span>
 
 <span class="n">en_text</span> <span class="o">=</span> <span class="n">aes</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="c1">#加密明文</span>
-<span class="k">print</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
 <span class="n">en_text</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">encodebytes</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span> <span class="c1">#将返回的字节型数据转进行base64编码</span>
-<span class="k">print</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
 <span class="n">en_text</span> <span class="o">=</span> <span class="n">en_text</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span> <span class="c1">#将字节型数据转换成python中的字符串类型</span>
-<span class="k">print</span><span class="p">(</span><span class="n">en_text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">en_text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="输出">输出</h2>
@@ -300,11 +300,11 @@
 <span class="n">aes</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">add_to_16</span><span class="p">(</span><span class="n">password</span><span class="p">),</span><span class="n">model</span><span class="p">)</span> <span class="c1">#创建一个aes对象</span>
 
 <span class="n">en_text</span> <span class="o">=</span> <span class="n">aes</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">add_to_16</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> <span class="c1">#加密明文</span>
-<span class="k">print</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
 <span class="n">en_text</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">encodebytes</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span> <span class="c1">#将返回的字节型数据转进行base64编码</span>
-<span class="k">print</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
 <span class="n">en_text</span> <span class="o">=</span> <span class="n">en_text</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span> <span class="c1">#将字节型数据转换成python中的字符串类型</span>
-<span class="k">print</span><span class="p">(</span><span class="n">en_text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">en_text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>这里简单的说一下几个存在的问题</p>
@@ -393,8 +393,8 @@
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">pr</span> <span class="o">=</span> <span class="n">aescrypt</span><span class="p">(</span><span class="s1">&#39;12345&#39;</span><span class="p">,</span><span class="s1">&#39;ECB&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;gbk&#39;</span><span class="p">)</span>
     <span class="n">en_text</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">aesencrypt</span><span class="p">(</span><span class="s1">&#39;好好学习&#39;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;密文:&#39;</span><span class="p">,</span><span class="n">en_text</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;明文:&#39;</span><span class="p">,</span><span class="n">pr</span><span class="o">.</span><span class="n">aesdecrypt</span><span class="p">(</span><span class="n">en_text</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;密文:&#39;</span><span class="p">,</span><span class="n">en_text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;明文:&#39;</span><span class="p">,</span><span class="n">pr</span><span class="o">.</span><span class="n">aesdecrypt</span><span class="p">(</span><span class="n">en_text</span><span class="p">))</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>时隔多天, 我终于用上了以上的代码然后我发现我的代码是错误的,评论区也有指出</p>
@@ -502,9 +502,9 @@
     <span class="c1"># aescryptor = Aescrypt(passwd,AES.MODE_ECB,&#34;&#34;) # ECB模式</span>
     <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;好好学习&#34;</span>
     <span class="n">en_text</span> <span class="o">=</span> <span class="n">aescryptor</span><span class="o">.</span><span class="n">aesencrypt</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;密文:&#34;</span><span class="p">,</span><span class="n">en_text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;密文:&#34;</span><span class="p">,</span><span class="n">en_text</span><span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">aescryptor</span><span class="o">.</span><span class="n">aesdecrypt</span><span class="p">(</span><span class="n">en_text</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;明文:&#34;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;明文:&#34;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>上面这段代码 你输入的 所有参数都应该是字符串或者 字节型数据, 并且输出的都是 字节型数据</p>
@@ -530,13 +530,13 @@
 <span class="kn">import</span> <span class="nn">binascii</span>
 <span class="n">data</span> <span class="o">=</span> <span class="s2">&#34;hello&#34;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;base64编码:&#34;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;base64编码:&#34;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;base64解码:&#34;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;base64解码:&#34;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">b2a_hex</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;hexstr编码:&#34;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hexstr编码:&#34;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">a2b_hex</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;hexstr解码:&#34;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hexstr解码:&#34;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>如果你真的认真的读了我的这篇文章, 我相信你肯定解决了你的问题, 如果不是这样可以评论区提出</p></div><div class="post-footer" id="post-footer">

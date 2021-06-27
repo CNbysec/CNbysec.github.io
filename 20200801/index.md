@@ -12,9 +12,7 @@
 
 ```text
 Application name 随便填
-
 Homepage URL https://[name].github.io/
-
 Authorization callback URL 有自己域名就写自己域名没就写 https://[name].github.io/
 ```
 **写完后最下面 Update application 按钮点击提交**
@@ -37,9 +35,9 @@ Authorization callback URL 有自己域名就写自己域名没就写 https://[n
 
 ```toml
 [params.page.comment.gitalk]
-enable = true   # 开启
-owner = "" # owner 指的是你的GitHub名字
-repo = "" # repo 写你的项目名
+enable = true # 开启
+owner = "" # owner指的是你的GitHub名字
+repo = "" # repo写你的项目名
 clientId = "" # 上面复制的 clientId
 clientSecret = "" # 上面复制的 clientSecret
 ```

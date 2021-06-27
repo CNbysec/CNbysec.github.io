@@ -1,9 +1,7 @@
-﻿# C# WINFORM 打开新窗体 关闭当前窗体
+﻿# C# WINFORM 窗体
 
 
 <!--more-->
-
-## WINFORM 打开新窗体 关闭当前窗体
 
 ```CSharp
 Form1 的 Button 下

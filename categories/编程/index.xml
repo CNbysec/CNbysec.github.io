@@ -2180,12 +2180,13 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
 </div>
 </div>]]></description>
 </item><item>
-    <title>C# WINFORM 窗体</title>
+    <title>C# WINFORM 打开新窗体 关闭当前窗体</title>
     <link>https://www.bysec.cn/20160101/</link>
     <pubDate>Fri, 01 Jan 2016 00:00:00 &#43;0000</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/20160101/</guid>
-    <description><![CDATA[<div class="highlight"><div class="chroma">
+    <description><![CDATA[<h2 id="窗体开关">窗体开关</h2>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2

@@ -1,0 +1,68 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo - 标签 - bysec</title>
+        <link>https://www.bysec.cn/tags/hugo/</link>
+        <description>Hugo - 标签 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
+            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Sat, 01 Aug 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo添加gitalk评论</title>
+    <link>https://www.bysec.cn/20200801/</link>
+    <pubDate>Sat, 01 Aug 2020 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20200801/</guid>
+    <description><![CDATA[<h2 id="注册-github-application">注册 GitHub Application</h2>
+<p><strong>首先要注册一下 GitHub Application</strong></p>
+<p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener noreffer">https://github.com/settings/applications/new</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">Application name 随便填
+
+Homepage URL https://[name].github.io/
+
+Authorization callback URL 有自己域名就写自己域名没就写 https://[name].github.io/
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>写完后最下面 Update application 按钮点击提交</strong></p>
+<p></p>
+<h2 id="获取-client-id-和-client-secrets">获取 Client ID 和 Client secrets</h2>
+<p><strong>提交后当前页面找到 Generate a new client secret 点击生成 Client secrets</strong></p>
+<p><strong>复制 Client ID 和 Client secrets 保存好</strong></p>
+<p></p>
+<h2 id="填写配置信息">填写配置信息</h2>
+<p><strong>我的的Hugo-LoveIt主题，别的主题也差不多看主要关键字填写信息就好</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">comment</span><span class="p">.</span><span class="nx">gitalk</span><span class="p">]</span>
+<span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>   <span class="c"># 开启</span>
+<span class="nx">owner</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># owner 指的是你的GitHub名字</span>
+<span class="nx">repo</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># repo 写你的项目名</span>
+<span class="nx">clientId</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 上面复制的 clientId</span>
+<span class="nx">clientSecret</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 上面复制的 clientSecret</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="填坑">填坑</h2>
+<ol>
+<li>
+<p>一开始是默认没有任何issues的，配置正确无报错的情况下，你要登录自己GitHub账号在那个页面刷新下才会生成新的issues，每个页面都需要这样，否则别人是评论不了的。</p>
+</li>
+<li>
+<p>issues一般是默认开启，如果没反应可以去检查下是否开启。项目文件-Settings-Options-Features下的 Issues 勾选即可。</p>
+</li>
+</ol>]]></description>
+</item></channel>
+</rss>

@@ -1,4 +1,4 @@
-﻿# 彩蛋
+﻿# Love
 
 
 {{< typeit group=paragraph tag=h2 >}}

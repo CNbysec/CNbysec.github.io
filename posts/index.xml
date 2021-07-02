@@ -1604,6 +1604,35 @@ Authorization callback URL 有自己域名就写自己域名没就写 https://[n
 </li>
 </ol>]]></description>
 </item><item>
+    <title>Excel解除工作表密码保护</title>
+    <link>https://www.bysec.cn/20171001/</link>
+    <pubDate>Sun, 01 Oct 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20171001/</guid>
+    <description><![CDATA[<h2 id="复制代码">复制代码</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Sub DeletePW()
+ActiveSheet.Protect DrawingObjects:=True, Contents:=True, AllowFiltering:=True
+ActiveSheet.Protect DrawingObjects:=False, Contents:=True, AllowFiltering:=True
+ActiveSheet.Protect DrawingObjects:=True, Contents:=True, AllowFiltering:=True
+ActiveSheet.Protect DrawingObjects:=False, Contents:=True, AllowFiltering:=True
+ActiveSheet.Unprotect
+End Sub
+</code></pre></td></tr></table>
+</div>
+</div><p></p>
+<p></p>]]></description>
+</item><item>
     <title>Python通过selenium获取cookie</title>
     <link>https://www.bysec.cn/20170901/</link>
     <pubDate>Fri, 01 Sep 2017 00:00:00 &#43;0000</pubDate><author>
@@ -2584,63 +2613,6 @@ Authorization callback URL 有自己域名就写自己域名没就写 https://[n
     <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">yamlPath</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">full_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">data</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>python图片切片</title>
-    <link>https://www.bysec.cn/20170101/</link>
-    <pubDate>Sun, 01 Jan 2017 00:00:00 &#43;0000</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/20170101/</guid>
-    <description><![CDATA[<h2 id="图片切片">图片切片</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-
-<span class="k">def</span> <span class="nf">cutImg</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
-    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-    <span class="n">img_size</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span>
-    <span class="n">region</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">crop</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">))</span>
-    <span class="n">region</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;cutImg.png&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">format</span><span class="p">(</span><span class="n">img_size</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="获取图片位置上的rgb颜色">获取图片位置上的rgb颜色</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-
-<span class="k">def</span> <span class="nf">getPix</span><span class="p">(</span><span class="n">Path</span><span class="p">,</span> <span class="n">pixelX</span><span class="p">,</span> <span class="n">pixelY</span><span class="p">):</span>
-    <span class="n">img_src</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">Path</span><span class="p">)</span>
-    <span class="n">img_src</span> <span class="o">=</span> <span class="n">img_src</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">)</span>
-    <span class="n">str_strlist</span> <span class="o">=</span> <span class="n">img_src</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">str_strlist</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">pixelX</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">pixelY</span><span class="p">)]</span>
-    <span class="n">img_src</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">data</span>
 </code></pre></td></tr></table>
 </div>

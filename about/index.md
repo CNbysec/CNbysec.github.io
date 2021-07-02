@@ -11,7 +11,7 @@
 * :computer: 技术宅，热爱关于计算机的一切
 * :scream: 强迫症与拖延症患者
 * :thinking: 热衷于了解世界的运转机制
-* :heart: 爱好游戏、摄影
+* :heart: 爱好动漫、音乐、游戏
 
 ## 关于版权
 **本站所有的原创文章均受 [创作共享 署名-非商业性 4.0 许可协议 / CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 保护。**

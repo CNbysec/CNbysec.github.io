@@ -333,16 +333,18 @@ Authorization callback URL 有自己域名就写自己域名没就写 https://[n
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Sub DeletePW()
-ActiveSheet.Protect DrawingObjects:=True, Contents:=True, AllowFiltering:=True
-ActiveSheet.Protect DrawingObjects:=False, Contents:=True, AllowFiltering:=True
-ActiveSheet.Protect DrawingObjects:=True, Contents:=True, AllowFiltering:=True
-ActiveSheet.Protect DrawingObjects:=False, Contents:=True, AllowFiltering:=True
-ActiveSheet.Unprotect
-End Sub
+<pre class="chroma"><code class="language-vb" data-lang="vb"><span class="k">Sub</span> <span class="nf">DeletePW</span><span class="p">()</span>
+<span class="n">ActiveSheet</span><span class="p">.</span><span class="n">Protect</span> <span class="n">DrawingObjects</span><span class="p">:</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">Contents</span><span class="p">:</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">AllowFiltering</span><span class="p">:</span><span class="o">=</span><span class="k">True</span>
+<span class="n">ActiveSheet</span><span class="p">.</span><span class="n">Protect</span> <span class="n">DrawingObjects</span><span class="p">:</span><span class="o">=</span><span class="k">False</span><span class="p">,</span> <span class="n">Contents</span><span class="p">:</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">AllowFiltering</span><span class="p">:</span><span class="o">=</span><span class="k">True</span>
+<span class="n">ActiveSheet</span><span class="p">.</span><span class="n">Protect</span> <span class="n">DrawingObjects</span><span class="p">:</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">Contents</span><span class="p">:</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">AllowFiltering</span><span class="p">:</span><span class="o">=</span><span class="k">True</span>
+<span class="n">ActiveSheet</span><span class="p">.</span><span class="n">Protect</span> <span class="n">DrawingObjects</span><span class="p">:</span><span class="o">=</span><span class="k">False</span><span class="p">,</span> <span class="n">Contents</span><span class="p">:</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">AllowFiltering</span><span class="p">:</span><span class="o">=</span><span class="k">True</span>
+<span class="n">ActiveSheet</span><span class="p">.</span><span class="n">Unprotect</span>
+<span class="k">End</span> <span class="k">Sub</span>
 </code></pre></td></tr></table>
 </div>
-</div><p></p>
+</div><hr>
+<p></p>
+</br>
 <p></p>]]></description>
 </item><item>
     <title>Emoji 支持</title>

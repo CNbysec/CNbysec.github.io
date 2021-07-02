@@ -181,6 +181,74 @@
 </div>
 </div>]]></description>
 </item><item>
+    <title>Python通过selenium获取cookie</title>
+    <link>https://www.bysec.cn/20170901/</link>
+    <pubDate>Fri, 01 Sep 2017 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20170901/</guid>
+    <description><![CDATA[<h2 id="实例">实例</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">json</span>
+ 
+ 
+<span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxOptions</span><span class="p">()</span>
+<span class="n">dr</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
+ 
+<span class="n">dr</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://cn.bing.com/search?q=objective</span><span class="si">%20le</span><span class="s1">ns</span><span class="si">%20o</span><span class="s1">f</span><span class="si">%20c</span><span class="s1">ompound%20microscope&amp;qs=ds&amp;form=QBRE&#39;</span><span class="p">)</span>
+ 
+<span class="n">cookie_test</span> <span class="o">=</span> <span class="n">dr</span><span class="o">.</span><span class="n">get_cookies</span><span class="p">()</span>
+<span class="c1"># 未整理的cookie</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cookie_test</span><span class="p">)</span>
+ 
+<span class="n">cookie</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&#34;=&#34;</span> <span class="o">+</span> <span class="n">item</span><span class="p">[</span><span class="s2">&#34;value&#34;</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cookie_test</span><span class="p">]</span>
+<span class="n">cookiestr</span> <span class="o">=</span> <span class="s1">&#39;; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cookie</span><span class="p">)</span>
+<span class="c1"># 整理后的cookie</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cookiestr</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="未整理的cookie为">未整理的cookie为</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">[{</span><span class="err">&#39;name&#39;:</span> <span class="err">&#39;SRCHD&#39;,</span> <span class="err">&#39;value&#39;:</span> <span class="err">&#39;AF=QBRE&#39;,</span> <span class="err">&#39;path&#39;:</span> <span class="err">&#39;/&#39;,</span> <span class="err">&#39;domain&#39;:</span> <span class="err">&#39;.bing.com&#39;,</span> <span class="err">&#39;expiry&#39;:</span> <span class="err">1624095919,</span> <span class="err">&#39;secure&#39;:</span> <span class="err">False,</span> <span class="err">&#39;httpOnly&#39;:</span> <span class="err">False</span><span class="p">},</span> <span class="p">{</span><span class="err">&#39;name&#39;:</span> <span class="err">&#39;SRCHUID&#39;,</span> <span class="err">&#39;value&#39;:</span> <span class="err">&#39;V=2&amp;GUID=0AA209DFB56549E1AABE3300BE0C055D&amp;dmnchg=1&#39;,</span> <span class="err">&#39;path&#39;:</span> <span class="err">&#39;/&#39;,</span> <span class="err">&#39;domain&#39;:</span> <span class="err">&#39;.bing.com&#39;,</span> <span class="err">&#39;expiry&#39;:</span> <span class="err">1624095919,</span> <span class="err">&#39;secure&#39;:</span> <span class="err">False,</span> <span class="err">&#39;httpOnly&#39;:</span> <span class="err">False</span><span class="p">},</span> <span class="p">{</span><span class="err">&#39;name&#39;:</span> <span class="err">&#39;SRCHUSR&#39;,</span> <span class="err">&#39;value&#39;:</span> <span class="err">&#39;DOB=20190619&#39;,</span> <span class="err">&#39;path&#39;:</span> <span class="err">&#39;/&#39;,</span> <span class="err">&#39;domain&#39;:</span> <span class="err">&#39;.bing.com&#39;,</span> <span class="err">&#39;expiry&#39;:</span> <span class="err">1624095919,</span> <span class="err">&#39;secure&#39;:</span> <span class="err">False,</span> <span class="err">&#39;httpOnly&#39;:</span> <span class="err">False</span><span class="p">},</span> <span class="p">{</span><span class="err">&#39;name&#39;:</span> <span class="err">&#39;_EDGE_S&#39;,</span> <span class="err">&#39;value&#39;:</span> <span class="err">&#39;F=1&amp;SID=1B8FEA8F99976FF11A3FE70F98B96ED0&#39;,</span> <span class="err">&#39;path&#39;:</span> <span class="err">&#39;/&#39;,</span> <span class="err">&#39;domain&#39;:</span> <span class="err">&#39;.bing.com&#39;,</span> <span class="err">&#39;expiry&#39;:</span> <span class="err">None,</span> <span class="err">&#39;secure&#39;:</span> <span class="err">False,</span> <span class="err">&#39;httpOnly&#39;:</span> <span class="err">True</span><span class="p">},</span> <span class="p">{</span><span class="err">&#39;name&#39;:</span> <span class="err">&#39;_EDGE_V&#39;,</span> <span class="err">&#39;value&#39;:</span> <span class="err">&#39;1&#39;,</span> <span class="err">&#39;path&#39;:</span> <span class="err">&#39;/&#39;,</span> <span class="err">&#39;domain&#39;:</span> <span class="err">&#39;.bing.com&#39;,</span> <span class="err">&#39;expiry&#39;:</span> <span class="err">1594633519,</span> <span class="err">&#39;secure&#39;:</span> <span class="err">False,</span> <span class="err">&#39;httpOnly&#39;:</span> <span class="err">True</span><span class="p">},</span> <span class="p">{</span><span class="err">&#39;name&#39;:</span> <span class="err">&#39;MUID&#39;,</span> <span class="err">&#39;value&#39;:</span> <span class="err">&#39;20D548F9F8E36E4532D24579F9CD6FDF&#39;,</span> <span class="err">&#39;path&#39;:</span> <span class="err">&#39;/&#39;,</span> <span class="err">&#39;domain&#39;:</span> <span class="err">&#39;.bing.com&#39;,</span> <span class="err">&#39;expiry&#39;:</span> <span class="err">1594633519,</span> <span class="err">&#39;secure&#39;:</span> <span class="err">False,</span> <span class="err">&#39;httpOnly&#39;:</span> <span class="err">False</span><span class="p">},</span> <span class="p">{</span><span class="err">&#39;name&#39;:</span> <span class="err">&#39;MUIDB&#39;,</span> <span class="err">&#39;value&#39;:</span> <span class="err">&#39;20D548F9F8E36E4532D24579F9CD6FDF&#39;,</span> <span class="err">&#39;path&#39;:</span> <span class="err">&#39;/&#39;,</span> <span class="err">&#39;domain&#39;:</span> <span class="err">&#39;cn.bing.com&#39;,</span> <span class="err">&#39;expiry&#39;:</span> <span class="err">1594633519,</span> <span class="err">&#39;secure&#39;:</span> <span class="err">False,</span> <span class="err">&#39;httpOnly&#39;:</span> <span class="err">True</span><span class="p">},</span> <span class="p">{</span><span class="err">&#39;name&#39;:</span> <span class="err">&#39;_SS&#39;,</span> <span class="err">&#39;value&#39;:</span> <span class="err">&#39;SID=1B8FEA8F99976FF11A3FE70F98B96ED0&amp;HV=1560937520&#39;,</span> <span class="err">&#39;path&#39;:</span> <span class="err">&#39;/&#39;,</span> <span class="err">&#39;domain&#39;:</span> <span class="err">&#39;.bing.com&#39;,</span> <span class="err">&#39;expiry&#39;:</span> <span class="err">None,</span> <span class="err">&#39;secure&#39;:</span> <span class="err">False,</span> <span class="err">&#39;httpOnly&#39;:</span> <span class="err">False</span><span class="p">}]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="整理后的cookie为">整理后的cookie为</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">SRCHD=AF=QBRE;</span> <span class="err">SRCHUID=V=</span><span class="mi">2</span><span class="err">&amp;GUID=</span><span class="mi">0</span><span class="err">AA</span><span class="mi">209</span><span class="err">DFB</span><span class="mf">56549E1</span><span class="err">AABE</span><span class="mi">3300</span><span class="err">BE</span><span class="mi">0</span><span class="err">C</span><span class="mi">055</span><span class="err">D&amp;dmnchg=</span><span class="mi">1</span><span class="err">;</span> <span class="err">SRCHUSR=DOB=</span><span class="mi">20190619</span><span class="err">;</span> <span class="err">_EDGE_S=F=</span><span class="mi">1</span><span class="err">&amp;SID=</span><span class="mi">1</span><span class="err">B</span><span class="mi">8</span><span class="err">FEA</span><span class="mi">8</span><span class="err">F</span><span class="mi">99976</span><span class="err">FF</span><span class="mi">11</span><span class="err">A</span><span class="mi">3</span><span class="err">FE</span><span class="mi">70</span><span class="err">F</span><span class="mi">98</span><span class="err">B</span><span class="mi">96</span><span class="err">ED</span><span class="mi">0</span><span class="err">;</span> <span class="err">_EDGE_V=</span><span class="mi">1</span><span class="err">;</span> <span class="err">MUID=</span><span class="mi">20</span><span class="err">D</span><span class="mi">548</span><span class="err">F</span><span class="mi">9</span><span class="err">F</span><span class="mf">8E36</span><span class="err">E</span><span class="mi">4532</span><span class="err">D</span><span class="mi">24579</span><span class="err">F</span><span class="mi">9</span><span class="err">CD</span><span class="mi">6</span><span class="err">FDF;</span> <span class="err">MUIDB=</span><span class="mi">20</span><span class="err">D</span><span class="mi">548</span><span class="err">F</span><span class="mi">9</span><span class="err">F</span><span class="mf">8E36</span><span class="err">E</span><span class="mi">4532</span><span class="err">D</span><span class="mi">24579</span><span class="err">F</span><span class="mi">9</span><span class="err">CD</span><span class="mi">6</span><span class="err">FDF;</span> <span class="err">_SS=SID=</span><span class="mi">1</span><span class="err">B</span><span class="mi">8</span><span class="err">FEA</span><span class="mi">8</span><span class="err">F</span><span class="mi">99976</span><span class="err">FF</span><span class="mi">11</span><span class="err">A</span><span class="mi">3</span><span class="err">FE</span><span class="mi">70</span><span class="err">F</span><span class="mi">98</span><span class="err">B</span><span class="mi">96</span><span class="err">ED</span><span class="mi">0</span><span class="err">&amp;HV=</span><span class="mi">1560937520</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
     <title>python3实现AES加密</title>
     <link>https://www.bysec.cn/20170701/</link>
     <pubDate>Sat, 01 Jul 2017 00:00:00 &#43;0000</pubDate><author>

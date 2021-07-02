@@ -277,6 +277,7 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
     <description><![CDATA[<blockquote>
 <p>网易云音乐把.mp3音乐文件加密为.ncm文件，导致不能将下载好的音乐复制到其它设备，或使用非网易云音乐播放器播放，该程序可将.ncm文件逆向解密为.mp3文件，并保留原始音质。</p>
 </blockquote>
+<h2 id="python实例">python实例</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -443,7 +444,8 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
         <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Usage: python ncmdump.py </span><span class="se">\&#34;</span><span class="s2">File Name</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div>]]></description>
+</div><h2 id="工具">工具</h2>
+<p><a href="https://github.com/unlock-music/unlock-music" target="_blank" rel="noopener noreffer">https://github.com/unlock-music/unlock-music</a></p>]]></description>
 </item><item>
     <title>B站AV号BV号互相转换脚本</title>
     <link>https://www.bysec.cn/20210301/</link>

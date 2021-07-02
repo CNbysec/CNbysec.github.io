@@ -5,6 +5,7 @@
 
 > 网易云音乐把.mp3音乐文件加密为.ncm文件，导致不能将下载好的音乐复制到其它设备，或使用非网易云音乐播放器播放，该程序可将.ncm文件逆向解密为.mp3文件，并保留原始音质。
 
+## python实例
 ```Python
 # 依赖pycrypto库
 
@@ -88,4 +89,6 @@ if __name__ == '__main__':
         print("Usage: python ncmdump.py \"File Name\"")
 ```
 
+## 工具
 
+[https://github.com/unlock-music/unlock-music](https://github.com/unlock-music/unlock-music)

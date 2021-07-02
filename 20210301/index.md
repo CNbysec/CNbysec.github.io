@@ -3,8 +3,10 @@
 
 <!--more-->
 
-## AV号BV号互相转换脚本
 
+# AV号BV号互相转换脚本
+
+## PHP实例
 ```PHP
 class Bilibili
 {
@@ -43,6 +45,7 @@ echo $str->dec('BV17x411w7KC'); // 输出: 170001
 echo $str->enc(170001);  // 输出: BV17x411w7KC
 ```
 
+## python实例
 ```python
 table='fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF'
 tr={}

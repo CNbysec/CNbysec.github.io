@@ -186,7 +186,8 @@
     <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/20210301/</guid>
-    <description><![CDATA[<h2 id="av号bv号互相转换脚本">AV号BV号互相转换脚本</h2>
+    <description><![CDATA[<h1 id="av号bv号互相转换脚本">AV号BV号互相转换脚本</h1>
+<h2 id="php实例">PHP实例</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -263,7 +264,8 @@
 </span><span class="c1"></span><span class="k">echo</span> <span class="nv">$str</span><span class="o">-&gt;</span><span class="na">enc</span><span class="p">(</span><span class="mi">170001</span><span class="p">);</span>  <span class="c1">// 输出: BV17x411w7KC
 </span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><h2 id="python实例">python实例</h2>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2

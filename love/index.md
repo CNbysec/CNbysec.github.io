@@ -8,7 +8,7 @@ Here is a story about <font color=#e64ba1>love</font>…
 {{< typeit group=paragraph tag=h2 code=python >}}
 u = Girl("x")
 i = Boy("y")
-# [2015/09/01](/about/) is a Special Day
+# [2020/05/20](/about/) is a Special Day
 from datetime import date
 anniversary = date(2015, 9, 1)
 i.tell(u, "I love U!")

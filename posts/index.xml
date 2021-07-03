@@ -727,6 +727,19 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <li><a href="https://mooc.study.163.com/smartSpec/detail/1001386007.htm?share=1&amp;shareId=9305777" target="_blank" rel="noopener noreffer">《Web安全工程师微专业》进阶版</a></li>
 </ol>]]></description>
 </item><item>
+    <title>给表弟的Web安全入门建议</title>
+    <link>https://www.bysec.cn/20210701/</link>
+    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210701/</guid>
+    <description><![CDATA[<p>nmap</p>
+<p>dirmap</p>
+<p>XSStrike</p>
+<p>sqlmap</p>
+<p>BurpSuite</p>
+<p>Wireshark</p>
+<p>metasploit-framework</p>]]></description>
+</item><item>
     <title>安全技能书简版</title>
     <link>https://www.bysec.cn/20210101/</link>
     <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate><author>
@@ -2594,38 +2607,6 @@ Authorization callback URL 有自己域名就写自己域名没就写 https://[n
     <span class="n">sta</span> <span class="o">=</span> <span class="n">sta</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 
     <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>python读取yaml文件</title>
-    <link>https://www.bysec.cn/20170201/</link>
-    <pubDate>Wed, 01 Feb 2017 00:00:00 &#43;0000</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/20170201/</guid>
-    <description><![CDATA[<h2 id="读取yaml文件">读取yaml文件</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Python" data-lang="Python"><span class="kn">import</span> <span class="nn">yaml</span>
-
-<span class="k">def</span> <span class="nf">getYaml</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-    <span class="n">proPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
-    <span class="n">yamlPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">proPath</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">yamlPath</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">full_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">data</span>
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>

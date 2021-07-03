@@ -729,6 +729,19 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <li><a href="https://mooc.study.163.com/smartSpec/detail/1001386007.htm?share=1&amp;shareId=9305777" target="_blank" rel="noopener noreffer">《Web安全工程师微专业》进阶版</a></li>
 </ol>]]></description>
 </item><item>
+    <title>给表弟的Web安全入门建议</title>
+    <link>https://www.bysec.cn/20210701/</link>
+    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210701/</guid>
+    <description><![CDATA[<p>nmap</p>
+<p>dirmap</p>
+<p>XSStrike</p>
+<p>sqlmap</p>
+<p>BurpSuite</p>
+<p>Wireshark</p>
+<p>metasploit-framework</p>]]></description>
+</item><item>
     <title>安全技能书简版</title>
     <link>https://www.bysec.cn/20210101/</link>
     <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate><author>
@@ -3479,145 +3492,6 @@ https://pypi.tuna.tsinghua.edu.cn/simple/
     <span class="nt">&lt;resources/&gt;</span>
     <span class="nt">&lt;connections/&gt;</span>
 <span class="nt">&lt;/ui&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>C# winform中DataGridView的数据实现导出excel</title>
-    <link>https://www.bysec.cn/20160401/</link>
-    <pubDate>Fri, 01 Apr 2016 00:00:00 &#43;0000</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/20160401/</guid>
-    <description><![CDATA[<h2 id="引入">引入</h2>
-<blockquote>
-<p>使用这个方法需要装有微软office</p>
-</blockquote>
-<ol>
-<li>引入程序集: Microsoft.Office.Interop.Excel.dll</li>
-<li>没有就网上下载一份然后引用即可</li>
-</ol>
-<h2 id="实现方法">实现方法</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">private</span> <span class="k">void</span> <span class="n">ExportExcels</span><span class="p">(</span><span class="kt">string</span> <span class="n">fileName</span><span class="p">,</span> <span class="n">DataGridView</span> <span class="n">myDGV</span><span class="p">)</span>
-   <span class="p">{</span>
-       <span class="kt">string</span> <span class="n">saveFileName</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
-       <span class="n">SaveFileDialog</span> <span class="n">saveDialog</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SaveFileDialog</span><span class="p">();</span>
-       <span class="n">saveDialog</span><span class="p">.</span><span class="n">DefaultExt</span> <span class="p">=</span> <span class="s">&#34;xls&#34;</span><span class="p">;</span>
-       <span class="n">saveDialog</span><span class="p">.</span><span class="n">Filter</span> <span class="p">=</span> <span class="s">&#34;Excel文件|*.xls&#34;</span><span class="p">;</span>
-       <span class="n">saveDialog</span><span class="p">.</span><span class="n">FileName</span> <span class="p">=</span> <span class="n">fileName</span><span class="p">;</span>
-       <span class="n">saveDialog</span><span class="p">.</span><span class="n">ShowDialog</span><span class="p">();</span>
-       <span class="n">saveFileName</span> <span class="p">=</span> <span class="n">saveDialog</span><span class="p">.</span><span class="n">FileName</span><span class="p">;</span>
-       <span class="k">if</span> <span class="p">(</span><span class="n">saveFileName</span><span class="p">.</span><span class="n">IndexOf</span><span class="p">(</span><span class="s">&#34;:&#34;</span><span class="p">)</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> <span class="c1">//被点了取消
-</span><span class="c1"></span>       <span class="n">Microsoft</span><span class="p">.</span><span class="n">Office</span><span class="p">.</span><span class="n">Interop</span><span class="p">.</span><span class="n">Excel</span><span class="p">.</span><span class="n">Application</span> <span class="n">xlApp</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Office</span><span class="p">.</span><span class="n">Interop</span><span class="p">.</span><span class="n">Excel</span><span class="p">.</span><span class="n">Application</span><span class="p">();</span>
-       <span class="k">if</span> <span class="p">(</span><span class="n">xlApp</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
-       <span class="p">{</span>
-           <span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&#34;无法创建Excel对象，可能您的机子未安装Excel&#34;</span><span class="p">);</span>
-           <span class="k">return</span><span class="p">;</span>
-       <span class="p">}</span>
-       <span class="n">Microsoft</span><span class="p">.</span><span class="n">Office</span><span class="p">.</span><span class="n">Interop</span><span class="p">.</span><span class="n">Excel</span><span class="p">.</span><span class="n">Workbooks</span> <span class="n">workbooks</span> <span class="p">=</span> <span class="n">xlApp</span><span class="p">.</span><span class="n">Workbooks</span><span class="p">;</span>
-       <span class="n">Microsoft</span><span class="p">.</span><span class="n">Office</span><span class="p">.</span><span class="n">Interop</span><span class="p">.</span><span class="n">Excel</span><span class="p">.</span><span class="n">Workbook</span> <span class="n">workbook</span> <span class="p">=</span> <span class="n">workbooks</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Microsoft</span><span class="p">.</span><span class="n">Office</span><span class="p">.</span><span class="n">Interop</span><span class="p">.</span><span class="n">Excel</span><span class="p">.</span><span class="n">XlWBATemplate</span><span class="p">.</span><span class="n">xlWBATWorksheet</span><span class="p">);</span>
-       <span class="n">Microsoft</span><span class="p">.</span><span class="n">Office</span><span class="p">.</span><span class="n">Interop</span><span class="p">.</span><span class="n">Excel</span><span class="p">.</span><span class="n">Worksheet</span> <span class="n">worksheet</span> <span class="p">=</span> <span class="p">(</span><span class="n">Microsoft</span><span class="p">.</span><span class="n">Office</span><span class="p">.</span><span class="n">Interop</span><span class="p">.</span><span class="n">Excel</span><span class="p">.</span><span class="n">Worksheet</span><span class="p">)</span><span class="n">workbook</span><span class="p">.</span><span class="n">Worksheets</span><span class="p">[</span><span class="m">1</span><span class="p">];</span><span class="c1">//取得sheet1
-</span><span class="c1"></span>       <span class="c1">//写入标题
-</span><span class="c1"></span>       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">myDGV</span><span class="p">.</span><span class="n">ColumnCount</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
-       <span class="p">{</span>
-           <span class="n">worksheet</span><span class="p">.</span><span class="n">Cells</span><span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="n">myDGV</span><span class="p">.</span><span class="n">Columns</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">HeaderText</span><span class="p">;</span>
-       <span class="p">}</span>
-       <span class="c1">//写入数值
-</span><span class="c1"></span>       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">r</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">r</span> <span class="p">&lt;</span> <span class="n">myDGV</span><span class="p">.</span><span class="n">Rows</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">r</span><span class="p">++)</span>
-       <span class="p">{</span>
-           <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">myDGV</span><span class="p">.</span><span class="n">ColumnCount</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
-           <span class="p">{</span>
-               <span class="n">worksheet</span><span class="p">.</span><span class="n">Cells</span><span class="p">[</span><span class="n">r</span> <span class="p">+</span> <span class="m">2</span><span class="p">,</span> <span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="n">myDGV</span><span class="p">.</span><span class="n">Rows</span><span class="p">[</span><span class="n">r</span><span class="p">].</span><span class="n">Cells</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Value</span><span class="p">;</span>
-           <span class="p">}</span>
-           <span class="n">System</span><span class="p">.</span><span class="n">Windows</span><span class="p">.</span><span class="n">Forms</span><span class="p">.</span><span class="n">Application</span><span class="p">.</span><span class="n">DoEvents</span><span class="p">();</span>
-       <span class="p">}</span>
-       <span class="n">worksheet</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">EntireColumn</span><span class="p">.</span><span class="n">AutoFit</span><span class="p">();</span><span class="c1">//列宽自适应
-</span><span class="c1"></span>       <span class="k">if</span> <span class="p">(</span><span class="n">saveFileName</span> <span class="p">!=</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
-       <span class="p">{</span>
-           <span class="k">try</span>
-           <span class="p">{</span>
-               <span class="n">workbook</span><span class="p">.</span><span class="n">Saved</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
-               <span class="n">workbook</span><span class="p">.</span><span class="n">SaveCopyAs</span><span class="p">(</span><span class="n">saveFileName</span><span class="p">);</span>
-           <span class="p">}</span>
-           <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
-           <span class="p">{</span>
-               <span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&#34;导出文件时出错,文件可能正被打开！\n&#34;</span> <span class="p">+</span> <span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
-           <span class="p">}</span>
-       <span class="p">}</span>
-       <span class="n">xlApp</span><span class="p">.</span><span class="n">Quit</span><span class="p">();</span>
-       <span class="n">GC</span><span class="p">.</span><span class="n">Collect</span><span class="p">();</span> <span class="c1">//强行销毁
-</span><span class="c1"></span>       <span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&#34;文件： &#34;</span> <span class="p">+</span> <span class="n">fileName</span> <span class="p">+</span> <span class="s">&#34;.xls 保存成功&#34;</span><span class="p">,</span> <span class="s">&#34;信息提示&#34;</span><span class="p">,</span> <span class="n">MessageBoxButtons</span><span class="p">.</span><span class="n">OK</span><span class="p">,</span> <span class="n">MessageBoxIcon</span><span class="p">.</span><span class="n">Information</span><span class="p">);</span>
-   <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="点击按钮调用">点击按钮调用</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="k">private</span> <span class="k">void</span> <span class="n">button1_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">string</span> <span class="n">a</span> <span class="p">=</span> <span class="s">&#34;D:&#34;</span> <span class="p">+</span> <span class="s">&#34;\\KKHMD.xls&#34;</span><span class="p">;</span>
-    <span class="n">ExportExcels</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">dataGridView1</span><span class="p">);</span>
-<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>

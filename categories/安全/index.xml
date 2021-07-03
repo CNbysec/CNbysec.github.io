@@ -5,6 +5,19 @@
         <description>安全 - 分类 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.bysec.cn/categories/%E5%AE%89%E5%85%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>工具集</title>
+    <link>https://www.bysec.cn/20210701/</link>
+    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/20210701/</guid>
+    <description><![CDATA[<p>nmap</p>
+<p>dirmap</p>
+<p>XSStrike</p>
+<p>sqlmap</p>
+<p>BurpSuite</p>
+<p>Wireshark</p>
+<p>metasploit-framework</p>]]></description>
+</item><item>
     <title>给表弟的Web安全入门建议</title>
     <link>https://www.bysec.cn/20210201/</link>
     <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate><author>
@@ -138,19 +151,6 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <li><a href="https://mooc.study.163.com/smartSpec/detail/1001227001.htm?share=1&amp;shareId=9305777" target="_blank" rel="noopener noreffer">《Web安全工程师微专业》</a></li>
 <li><a href="https://mooc.study.163.com/smartSpec/detail/1001386007.htm?share=1&amp;shareId=9305777" target="_blank" rel="noopener noreffer">《Web安全工程师微专业》进阶版</a></li>
 </ol>]]></description>
-</item><item>
-    <title>给表弟的Web安全入门建议</title>
-    <link>https://www.bysec.cn/20210701/</link>
-    <pubDate>Mon, 01 Feb 2021 00:00:00 &#43;0000</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/20210701/</guid>
-    <description><![CDATA[<p>nmap</p>
-<p>dirmap</p>
-<p>XSStrike</p>
-<p>sqlmap</p>
-<p>BurpSuite</p>
-<p>Wireshark</p>
-<p>metasploit-framework</p>]]></description>
 </item><item>
     <title>安全技能书简版</title>
     <link>https://www.bysec.cn/20210101/</link>

@@ -2,12 +2,15 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://www.bysec.cn/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.bysec.cn/categories/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://www.bysec.cn/</loc><lastmod>2021-07-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.bysec.cn/categories/</loc><lastmod>2021-07-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.bysec.cn/posts/</loc><lastmod>2021-07-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.bysec.cn/tags/</loc><lastmod>2021-07-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.bysec.cn/categories/%E5%AE%89%E5%85%A8/</loc><lastmod>2021-07-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.bysec.cn/tags/%E5%B7%A5%E5%85%B7/</loc><lastmod>2021-07-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.bysec.cn/20210701/</loc><lastmod>2021-07-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://www.bysec.cn/tags/linux/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://www.bysec.cn/20210601/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.bysec.cn/posts/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://www.bysec.cn/tags/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/</loc><lastmod>2021-06-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://www.bysec.cn/tags/kali/</loc><lastmod>2021-05-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.bysec.cn/20210501/</loc><lastmod>2021-05-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -16,9 +19,6 @@
             <loc>https://www.bysec.cn/20210401/</loc><lastmod>2021-04-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.bysec.cn/20210301/</loc><lastmod>2021-03-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.bysec.cn/tags/php/</loc><lastmod>2021-03-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.bysec.cn/categories/%E5%AE%89%E5%85%A8/</loc><lastmod>2021-02-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.bysec.cn/tags/%E5%B7%A5%E5%85%B7/</loc><lastmod>2021-02-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.bysec.cn/20210701/</loc><lastmod>2021-02-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.bysec.cn/tags/%E6%8A%80%E8%83%BD/</loc><lastmod>2021-02-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.bysec.cn/20210201/</loc><lastmod>2021-02-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.bysec.cn/20210101/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

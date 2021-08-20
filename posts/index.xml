@@ -882,33 +882,6 @@ Content-Length头长度大于4008
 正常参数放置在脏数据后面</p>
 <p></p>]]></description>
 </item><item>
-    <title>高级搜索语法</title>
-    <link>https://www.bysec.cn/%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/</link>
-    <pubDate>Tue, 03 Nov 2020 08:53:53 &#43;0800</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/</guid>
-    <description><![CDATA[<hr>
-<ul>
-<li>site：可以限制你搜索范围的域名.</li>
-<li>inurl：用于搜索网页上包含的URL，这个语法对寻找网页上的搜索，帮助之类的很有用.</li>
-<li>intext: 只搜索网页部分中包含的文字(也就是忽略了标题、URL等的文字)</li>
-<li>intitle: 查包含关键词的页面，一般用于社工别人的webshell密码</li>
-<li>filetype：搜索文件的后缀或者扩展名</li>
-<li>intitle：限制你搜索的网页标题.</li>
-<li>link: 可以得到一个所有包含了某个指定URL的页面列表.</li>
-</ul>
-<hr>
-<ul>
-<li>查找后台地址：site域名 inurl:login|admin|manage|member|admin_login|login_admin|system|login|user|main|cms</li>
-<li>查找文本内容：site:域名 intext:管理|后台|登陆|用户名|密码|验证码|系统|帐号|admin|login|sys|managetem|password|username</li>
-<li>查找可注入点：site:域名 inurl:aspx|jsp|php|asp</li>
-<li>查找上传漏洞：site:域名 inurl:file|load|editor|Files</li>
-<li>找eweb编辑器：site:域名 inurl:ewebeditor|editor|uploadfile|eweb|edit</li>
-<li>存在的数据库：site:域名 filetype:mdb|asp|#</li>
-<li>查看脚本类型：site:域名 filetype:asp/aspx/php/jsp</li>
-<li>迂回策略入侵：inurl:cms/data/templates/images/index/</li>
-</ul>]]></description>
-</item><item>
     <title>工具集</title>
     <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7%E9%9B%86/</link>
     <pubDate>Fri, 15 May 2020 19:08:11 &#43;0800</pubDate><author>

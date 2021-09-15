@@ -7,7 +7,7 @@
 > 
 > 邮箱: [CNbysec@foxmail.com](mailto:CNbysec@foxmail.com)
 
-## 关于作者 [:heartpulse:](/love/)
+## 关于作者
 * :computer: 技术宅，热爱关于计算机的一切
 * :scream: 强迫症与拖延症患者
 * :thinking: 热衷于了解世界的运转机制

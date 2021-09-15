@@ -3,18 +3,17 @@
 
 <!--more-->
 
+# nmap
 
-nmap
+#  dirmap
 
-dirmap
+# XSStrike
 
-XSStrike
+# sqlmap
 
-sqlmap
+# BurpSuite
 
-BurpSuite
+# Wireshark
 
-Wireshark
-
-metasploit-framework
+# metasploit-framework
 

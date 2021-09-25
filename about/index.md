@@ -29,24 +29,3 @@
 **本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。**
 {{< /admonition >}}
 
-<script src="https://www.bysec.cn/OSS/js/jquery.min.js"></script>
-<script src="https://www.bysec.cn/OSS/js/live2dcubismcore.min.js"></script>
-<script src="https://www.bysec.cn/OSS/js/pixi.min.js"></script>
-<script src="https://www.bysec.cn/OSS/js/live2dcubismframework.js"></script>
-<script src="https://www.bysec.cn/OSS/js/live2dcubismpixi.js"></script>
-<script src="https://www.bysec.cn/OSS/js/l2d.js"></script>
-<script src="https://www.bysec.cn/OSS/js/main.js"></script>
-<div class="Canvas" id="L2dCanvas"></div>
-<script>
-    var config = {
-        width: 300,
-        height: 300,
-        left: '500px',
-        bottom: '0px',
-        basePath: 'https://www.bysec.cn/Live2d-Model/%E7%A2%A7%E8%93%9D%E8%88%AA%E7%BA%BF/',
-        role: 'edu_3',
-        // background: 'https://cdn.jsdelivr.net/gh/alg-wiki/AzurLaneL2DViewer@gh-pages/assets/bg/bg_church_jp.png',
-        opacity: 1
-    }
-    var v = new Viewer(config);
-</script>

@@ -65,7 +65,7 @@ class Viewer {
             }
 
         };
-        this.isClick = true;
+        this.isClick = false;
         this.app.view.addEventListener('mousedown', (event) => {
             this.isClick = true;
         });

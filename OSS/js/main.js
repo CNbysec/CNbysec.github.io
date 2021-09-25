@@ -19,8 +19,8 @@ class Viewer {
 
         this.l2d.load(role, this);      
         this.app = new PIXI.Application({
-            width: width,
-            height: height, 
+            width: 500,
+            height: 500, 
             transparent: true, 
             antialias: true // 抗锯齿
         });

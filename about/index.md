@@ -41,7 +41,7 @@
     var config = {
         width: 300,
         height: 300,
-        left: '0px',
+        left: '500px',
         bottom: '0px',
         basePath: 'https://www.bysec.cn/Live2d-Model/%E7%A2%A7%E8%93%9D%E8%88%AA%E7%BA%BF/',
         role: 'edu_3',

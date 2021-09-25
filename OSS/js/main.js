@@ -58,7 +58,7 @@ class Viewer {
             this.app.renderer.resize(width, height);
             
             if (this.model) {
-                this.model.position = new PIXI.Point((width), (height));
+                this.model.position = new PIXI.Point((width * 0.5), (height * 0.5));
                 this.model.scale = new PIXI.Point((this.model.position.x * 0.06), (this.model.position.x * 0.06));
                 this.model.masks.resize(this.app.view.width, this.app.view.height);
             }
@@ -100,8 +100,8 @@ class Viewer {
                 }
             }
 
-            this.isClick = false;
-            this.model.inDrag = false;
+            this.isClick = true;
+            this.model.inDrag = true;
         });
         console.log("Init finished.")
     }

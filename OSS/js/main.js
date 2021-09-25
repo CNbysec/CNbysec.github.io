@@ -19,8 +19,8 @@ class Viewer {
 
         this.l2d.load(role, this);      
         this.app = new PIXI.Application({
-            width: 500,
-            height: 500, 
+            width: width,
+            height: height, 
             transparent: true, 
             antialias: true // 抗锯齿
         });
@@ -79,8 +79,8 @@ class Viewer {
             if (this.model) {
                 let mouse_x = this.model.position.x - event.offsetX;
                 let mouse_y = this.model.position.y - event.offsetY;
-                this.model.pointerX = -mouse_x / this.app.view.height;
-                this.model.pointerY = -mouse_y / this.app.view.width;
+                this.model.pointerX = -mouse_x / 200;
+                this.model.pointerY = -mouse_y / 200;
             }
         });
         this.app.view.addEventListener('mouseup', (event) => {

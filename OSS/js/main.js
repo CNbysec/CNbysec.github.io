@@ -1,12 +1,12 @@
 class Viewer {
     constructor (config) {
-        let width = config.width
-        let height = config.height
+        let width = config.width || 800
+        let height = config.height || 600
         let role = config.role
-        let left = config.left 
-        let top = config.top 
-        let right = config.right 
-        let bottom = config.bottom
+        let left = config.left //|| '0px'
+        let top = config.top //|| '0px'
+        let right = config.right //|| '0px'
+        let bottom = config.bottom //|| '0px'
         let bg = config.background
         let opa = config.opacity
         let mobile = config.mobile
@@ -100,8 +100,8 @@ class Viewer {
                 }
             }
 
-            this.isClick = true;
-            this.model.inDrag = true;
+            this.isClick = false;
+            this.model.inDrag = false;
         });
         console.log("Init finished.")
     }

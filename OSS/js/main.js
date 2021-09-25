@@ -1,12 +1,12 @@
 class Viewer {
     constructor (config) {
-        let width = config.width || 800
-        let height = config.height || 600
+        let width = config.width
+        let height = config.height
         let role = config.role
-        let left = config.left //|| '0px'
-        let top = config.top //|| '0px'
-        let right = config.right //|| '0px'
-        let bottom = config.bottom //|| '0px'
+        let left = config.left 
+        let top = config.top 
+        let right = config.right 
+        let bottom = config.bottom
         let bg = config.background
         let opa = config.opacity
         let mobile = config.mobile
@@ -65,7 +65,7 @@ class Viewer {
             }
 
         };
-        this.isClick = false;
+        this.isClick = true;
         this.app.view.addEventListener('mousedown', (event) => {
             this.isClick = true;
         });

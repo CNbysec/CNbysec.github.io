@@ -101,7 +101,7 @@ class Viewer {
                 }
             }
 
-            this.isClick = true;
+            this.isClick = false;
             this.model.inDrag = false;
         });
         console.log("Init finished.")

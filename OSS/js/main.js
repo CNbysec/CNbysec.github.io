@@ -58,7 +58,7 @@ class Viewer {
             this.app.renderer.resize(width, height);
             
             if (this.model) {
-                this.model.position = new PIXI.Point((width * 0.5), (height * 0.5));
+                this.model.position = new PIXI.Point((550), (550));
                 this.model.scale = new PIXI.Point((this.model.position.x * 0.06), (this.model.position.x * 0.06));
                 this.model.masks.resize(this.app.view.width, this.app.view.height);
             }
@@ -79,8 +79,8 @@ class Viewer {
             if (this.model) {
                 let mouse_x = this.model.position.x - event.offsetX;
                 let mouse_y = this.model.position.y - event.offsetY;
-                this.model.pointerX = -mouse_x / 200;
-                this.model.pointerY = -mouse_y / 200;
+                this.model.pointerX = -mouse_x / this.app.view.height;
+                this.model.pointerY = -mouse_y / this.app.view.width;
             }
         });
         this.app.view.addEventListener('mouseup', (event) => {

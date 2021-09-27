@@ -4,9 +4,25 @@
         <link>https://www.bysec.cn/</link>
         <description>bysec个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
-            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</lastBuildDate>
+            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Tue, 21 Sep 2021 08:16:48 &#43;0800</lastBuildDate>
             <atom:link href="https://www.bysec.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>tesst</title>
+    <link>https://www.bysec.cn/test/</link>
+    <pubDate>Tue, 21 Sep 2021 08:16:48 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/test/</guid>
+    <description><![CDATA[<h2 id="打开配置文件">打开配置文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/apt/sources.list
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
     <title>kali修改为国内源</title>
     <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>

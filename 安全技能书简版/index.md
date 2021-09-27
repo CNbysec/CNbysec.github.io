@@ -5,7 +5,7 @@
 
 > *转载自： [https://evilcos.me/security_skill_tree_basic/index.html](https://evilcos.me/security_skill_tree_basic/index.html)*
 
-![](/OSS/img/安全技能书简版/1.png)
+![](https://cdn.jsdelivr.net/gh/CNbysec/CNbysec.github.io/OSS/img/安全技能书简版/1.png)
 
 ## HTTP
 

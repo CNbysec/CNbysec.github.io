@@ -1,0 +1,175 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>系统 - 分类 - bysec</title>
+        <link>https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/</link>
+        <description>系统 - 分类 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
+            <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>kali修改为国内源</title>
+    <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+    <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+    <description><![CDATA[<h2 id="打开配置文件">打开配置文件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/apt/sources.list
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="kali源">kali源</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#中科大</span>
+deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+ 
+<span class="c1">#阿里云</span>
+deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+ 
+<span class="c1">#清华大学</span>
+deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
+ 
+<span class="c1">#浙大</span>
+deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
+deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
+ 
+<span class="c1">#东软大学</span>
+deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
+deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
+ 
+<span class="c1">#官方源</span>
+deb http://http.kali.org/kali kali-rolling main non-free contrib
+deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="debian源">debian源</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 中科大源</span>
+deb http://mirrors.ustc.edu.cn/debian buster main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free
+
+<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
+<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
+<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free</span>
+<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
+
+<span class="c1"># 阿里云</span>
+deb http://mirrors.aliyun.com/debian/ buster main non-free contrib
+deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
+deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
+deb http://mirrors.aliyun.com/debian-security buster/updates main
+
+<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.aliyun.com/debian-security buster/updates main</span>
+
+<span class="c1"># 网易源</span>
+deb http://mirrors.163.com/debian/ buster main non-free contrib
+deb http://mirrors.163.com/debian/ buster-updates main non-free contrib
+deb http://mirrors.163.com/debian/ buster-backports main non-free contrib
+deb http://mirrors.163.com/debian-security/ buster/updates main non-free contrib
+
+<span class="c1">#deb-src http://mirrors.163.com/debian/ buster main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.163.com/debian/ buster-updates main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.163.com/debian/ buster-backports main non-free contrib</span>
+<span class="c1">#deb-src http://mirrors.163.com/debian-security/ buster/updates main non-free contrib</span>
+
+<span class="c1"># 官方源</span>
+deb http://deb.debian.org/debian buster main contrib non-free
+deb http://deb.debian.org/debian buster-updates main contrib non-free
+deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+
+<span class="c1">#deb-src http://deb.debian.org/debian buster main contrib non-free</span>
+<span class="c1">#deb-src http://deb.debian.org/debian buster-updates main contrib non-free</span>
+<span class="c1">#deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="更新软件列表并更新软件">更新软件列表并更新软件</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item></channel>
+</rss>

@@ -883,18 +883,5 @@ GET类型请求转换成POST类型
 Content-Length头长度大于4008
 正常参数放置在脏数据后面</p>
 <p></p>]]></description>
-</item><item>
-    <title>工具集</title>
-    <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7%E9%9B%86/</link>
-    <pubDate>Fri, 15 May 2020 19:08:11 &#43;0800</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7%E9%9B%86/</guid>
-    <description><![CDATA[<h1 id="nmap">nmap</h1>
-<h1 id="dirmap">dirmap</h1>
-<h1 id="xsstrike">XSStrike</h1>
-<h1 id="sqlmap">sqlmap</h1>
-<h1 id="burpsuite">BurpSuite</h1>
-<h1 id="wireshark">Wireshark</h1>
-<h1 id="metasploit-framework">metasploit-framework</h1>]]></description>
 </item></channel>
 </rss>

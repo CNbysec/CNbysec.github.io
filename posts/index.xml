@@ -5,6 +5,19 @@
         <description>所有文章 | bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>CNbysec@foxmail.com (bysec)</managingEditor>
             <webMaster>CNbysec@foxmail.com (bysec)</webMaster><lastBuildDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>工具集</title>
+    <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7%E9%9B%86/</link>
+    <pubDate>Fri, 15 May 2020 19:08:11 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7%E9%9B%86/</guid>
+    <description><![CDATA[<h1 id="nmap">nmap</h1>
+<h1 id="dirmap">dirmap</h1>
+<h1 id="xsstrike">XSStrike</h1>
+<h1 id="sqlmap">sqlmap</h1>
+<h1 id="burpsuite">BurpSuite</h1>
+<h1 id="wireshark">Wireshark</h1>
+<h1 id="metasploit-framework">metasploit-framework</h1>]]></description>
+</item><item>
     <title>kali修改为国内源</title>
     <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>

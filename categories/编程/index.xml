@@ -250,11 +250,11 @@
 </div>
 </div>]]></description>
 </item><item>
-    <title>Python中的句柄操作的方法示例</title>
-    <link>https://www.bysec.cn/python%E4%B8%AD%E7%9A%84%E5%8F%A5%E6%9F%84%E6%93%8D%E4%BD%9C%E7%9A%84%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B/</link>
+    <title>Python中的句柄操作</title>
+    <link>https://www.bysec.cn/python%E4%B8%AD%E7%9A%84%E5%8F%A5%E6%9F%84%E6%93%8D%E4%BD%9C/</link>
     <pubDate>Fri, 19 Nov 2021 18:41:25 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/python%E4%B8%AD%E7%9A%84%E5%8F%A5%E6%9F%84%E6%93%8D%E4%BD%9C%E7%9A%84%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B/</guid>
+    </author><guid>https://www.bysec.cn/python%E4%B8%AD%E7%9A%84%E5%8F%A5%E6%9F%84%E6%93%8D%E4%BD%9C/</guid>
     <description><![CDATA[<h1 id="遍历windows下-所有句柄及窗口名称">遍历windows下 所有句柄及窗口名称</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

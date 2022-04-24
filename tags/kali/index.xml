@@ -16,8 +16,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/apt/sources.list
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/apt/sources.list
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="kali源">kali源</h2>
 <div class="highlight"><div class="chroma">
@@ -47,30 +47,30 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#中科大</span>
-deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
-deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
- 
-<span class="c1">#阿里云</span>
-deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
-deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
- 
-<span class="c1">#清华大学</span>
-deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
-deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
- 
-<span class="c1">#浙大</span>
-deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
-deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
- 
-<span class="c1">#东软大学</span>
-deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
-deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
- 
-<span class="c1">#官方源</span>
-deb http://http.kali.org/kali kali-rolling main non-free contrib
-deb-src http://http.kali.org/kali kali-rolling main non-free contrib
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#中科大</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#阿里云</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#清华大学</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
+</span></span><span class="line"><span class="cl">deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#浙大</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#东软大学</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#官方源</span>
+</span></span><span class="line"><span class="cl">deb http://http.kali.org/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl">deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="debian源">debian源</h2>
 <div class="highlight"><div class="chroma">
@@ -118,48 +118,48 @@ deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 中科大源</span>
-deb http://mirrors.ustc.edu.cn/debian buster main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free
-
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free</span>
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
-
-<span class="c1"># 阿里云</span>
-deb http://mirrors.aliyun.com/debian/ buster main non-free contrib
-deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
-deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
-deb http://mirrors.aliyun.com/debian-security buster/updates main
-
-<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.aliyun.com/debian-security buster/updates main</span>
-
-<span class="c1"># 网易源</span>
-deb http://mirrors.163.com/debian/ buster main non-free contrib
-deb http://mirrors.163.com/debian/ buster-updates main non-free contrib
-deb http://mirrors.163.com/debian/ buster-backports main non-free contrib
-deb http://mirrors.163.com/debian-security/ buster/updates main non-free contrib
-
-<span class="c1">#deb-src http://mirrors.163.com/debian/ buster main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.163.com/debian/ buster-updates main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.163.com/debian/ buster-backports main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.163.com/debian-security/ buster/updates main non-free contrib</span>
-
-<span class="c1"># 官方源</span>
-deb http://deb.debian.org/debian buster main contrib non-free
-deb http://deb.debian.org/debian buster-updates main contrib non-free
-deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
-
-<span class="c1">#deb-src http://deb.debian.org/debian buster main contrib non-free</span>
-<span class="c1">#deb-src http://deb.debian.org/debian buster-updates main contrib non-free</span>
-<span class="c1">#deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 中科大源</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/debian buster main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 阿里云</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/debian/ buster main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/debian-security buster/updates main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.aliyun.com/debian-security buster/updates main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 网易源</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.163.com/debian/ buster main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.163.com/debian/ buster-updates main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.163.com/debian/ buster-backports main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.163.com/debian-security/ buster/updates main non-free contrib
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.163.com/debian/ buster main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.163.com/debian/ buster-updates main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.163.com/debian/ buster-backports main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.163.com/debian-security/ buster/updates main non-free contrib</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 官方源</span>
+</span></span><span class="line"><span class="cl">deb http://deb.debian.org/debian buster main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://deb.debian.org/debian buster-updates main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://deb.debian.org/debian buster main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://deb.debian.org/debian buster-updates main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="更新软件列表并更新软件">更新软件列表并更新软件</h2>
 <div class="highlight"><div class="chroma">
@@ -167,8 +167,8 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description>
 </item></channel>

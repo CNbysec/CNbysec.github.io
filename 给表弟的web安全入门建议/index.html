@@ -21,8 +21,8 @@
 <meta name="apple-mobile-web-app-title" content="bysec">
 
 <meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://s.pc.qq.com/tousu/img/20210627/2136793_1624804512.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://www.bysec.cn/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/" /><link rel="prev" href="https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/" /><link rel="next" href="https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
-    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
-    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,7 +42,7 @@
     </script></head>
 
 <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
         function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
         function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
         if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
@@ -112,7 +112,26 @@
 <main class="main">
             <div class="container"><div class="toc" id="toc-auto">
         <h2 class="toc-title">目录</h2>
-        <div class="toc-content" id="toc-content-auto"></div>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#适合初学者的web安全书籍">适合初学者的Web安全书籍</a></li>
+    <li><a href="#工具与实战">工具与实战</a></li>
+    <li><a href="#适合初学者的社区和资讯站点">适合初学者的社区和资讯站点</a></li>
+    <li><a href="#大学在校生可以关注的一些比赛">大学在校生可以关注的一些比赛</a></li>
+    <li><a href="#挖洞博客与团队">挖洞、博客与团队</a></li>
+    <li><a href="#一些进阶的书籍和资源推荐">一些进阶的书籍和资源推荐</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#入门与进阶">入门与进阶</a></li>
+    <li><a href="#等准备好了再实践">等准备好了再“实践”？</a></li>
+    <li><a href="#从想到学到-到-做到">从“想到”、“学到” 到 “做到”</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#本文相关链接资源整理">本文相关链接资源整理：</a></li>
+  </ul>
+</nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">给表弟的Web安全入门建议</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreffer author" class="author">bysec</a>
@@ -155,9 +174,9 @@
 <li>Windows下下载 <a href="http://www.phpstudy.net/" target="_blank" rel="noopener noreffer">phpStudy</a> 或者 <a href="http://www.wampserver.com/" target="_blank" rel="noopener noreffer">WAMP</a> ，在本地搭建Web服务器环境，然后自己搜索两篇文章学习下基本的操作方法。这个本地Web服务器也就相当于学习过程中的一个实验环境了。</li>
 <li>学习浏览器的开发者工具（通常快捷键F12调出），搜索一些教学文章，掌握Chrome或者Firefox浏览器开发者工具中的Network、Elements功能的常见用法，可以<strong>查看HTTP数据包以及定位页面元素</strong>。</li>
 </ol>
-<h1 id="0x01-给表弟的web安全入门建议">0x01 给表弟的Web安全入门建议</h1>
-<h2 id="适合初学者的web安全书籍">适合初学者的Web安全书籍</h2>
-<ol>
+<h1 id="0x01-给表弟的web安全入门建议" class="headerLink">
+    <a href="#0x01-%e7%bb%99%e8%a1%a8%e5%bc%9f%e7%9a%84web%e5%ae%89%e5%85%a8%e5%85%a5%e9%97%a8%e5%bb%ba%e8%ae%ae" class="header-mark"></a>0x01 给表弟的Web安全入门建议</h1><h2 id="适合初学者的web安全书籍" class="headerLink">
+    <a href="#%e9%80%82%e5%90%88%e5%88%9d%e5%ad%a6%e8%80%85%e7%9a%84web%e5%ae%89%e5%85%a8%e4%b9%a6%e7%b1%8d" class="header-mark"></a>适合初学者的Web安全书籍</h2><ol>
 <li><a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5aEQISA1AYUyUCEgJcGVMSBSJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIXDlcTXBIdS0IJRmtqW1VPUUQGHGJsZR5uJhV%2Bc1U0R1pTDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%2BOtg7CzDtP%2FlI6dlSIPVhxdEwQRAVMrWxEDEwRcEl8WChMEXStcJXd0RQhTayUyIg%3D%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsVBxsFXRxcCltXWwg%3D" target="_blank" rel="noopener noreffer">《白帽子讲Web安全》</a>
 道哥出品，很多人的Web安全启蒙书。</li>
 <li><a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5aEQISA1AYUyUCEgdcG1IXASJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQISDlUSWRYdS0IJRmt3BGRXFloyC2dLcVRsPBN4W1sHX1JlDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%2BOtg7CzDtP%2FlI6dlSIPVhxdEwQRAVMrWxEDEwRcHVMWABsFUCtcJXd0RQhTayUyIg%3D%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsVAhsHXBlYCltXWwg%3D" target="_blank" rel="noopener noreffer">《Web前端黑客技术揭秘》</a>
@@ -165,12 +184,12 @@
 </ol>
 <p>对于读书，我觉得<strong>读书的目的是：学以致用</strong>。应该把<strong>注意力放在如何应用读到的知识，提高自己的技术，而不是学了多少内容。
 一年哪怕只学习了一本书，也要让这本书的内容结结实实地提升自己的技能，而不是只为了多一点谈资或者阅读清单上多一个数目</strong>。这也是我这里只推荐了两本书的原因，因为我觉得这两本书，能够认真学习完，并且<strong>实践</strong>书中的案例和技能，已经很难得了，同时相比于简单翻一遍，要多花费很多的时间和精力。</p>
-<h2 id="工具与实战">工具与实战</h2>
-<p>那学习Web安全呢，同时还要掌握一些工具：<strong>浏览器开发者工具与浏览器插件（如HackBar、ProxySwitcher）、抓包工具如Burpsuite、漏洞扫描和验证工具如御剑、sqlmap、AWVS</strong>，工具可以在 <a href="http://www.freebuf.com/" target="_blank" rel="noopener noreffer">Freebuf</a>上自行搜索下载，教程可以参考<a href="https://www.ichunqiu.com/newRelease/darrPath/105" target="_blank" rel="noopener noreffer">Web安全-i春秋</a>系列教程中对应这几款工具的章节学习。</p>
+<h2 id="工具与实战" class="headerLink">
+    <a href="#%e5%b7%a5%e5%85%b7%e4%b8%8e%e5%ae%9e%e6%88%98" class="header-mark"></a>工具与实战</h2><p>那学习Web安全呢，同时还要掌握一些工具：<strong>浏览器开发者工具与浏览器插件（如HackBar、ProxySwitcher）、抓包工具如Burpsuite、漏洞扫描和验证工具如御剑、sqlmap、AWVS</strong>，工具可以在 <a href="http://www.freebuf.com/" target="_blank" rel="noopener noreffer">Freebuf</a>上自行搜索下载，教程可以参考<a href="https://www.ichunqiu.com/newRelease/darrPath/105" target="_blank" rel="noopener noreffer">Web安全-i春秋</a>系列教程中对应这几款工具的章节学习。</p>
 <p>好的工具可以帮助我们提高测试效率，扩展测试思路。除了工具的使用，通过搭建本地实战环境练习手工技巧，也是很好的进阶之路，这里建议可以搭建 <a href="http://www.dvwa.co.uk/" target="_blank" rel="noopener noreffer">DVWA</a>漏洞测试环境，然后参考 <a href="http://www.freebuf.com/?s=DVWA" target="_blank" rel="noopener noreffer">DVWA系列教程_Freebuf</a>进行学习。</p>
 <p>学习的同时也可以在在<a href="https://src.edu-info.edu.cn/" target="_blank" rel="noopener noreffer">教育行业SRC</a>等漏洞平台上挖掘漏洞，赢得认可，也是一种动力，但挖掘漏洞的时候一定要注意规范和界限，可以参考<a href="https://sosly.me/index.php/2017/06/02/wangluoanquanfa/" target="_blank" rel="noopener noreffer">自律方能自由，《网络安全法》实施后的白帽子行为参考</a>，挖掘漏洞的同时也要注意保护自己。</p>
-<h2 id="适合初学者的社区和资讯站点">适合初学者的社区和资讯站点</h2>
-<ol>
+<h2 id="适合初学者的社区和资讯站点" class="headerLink">
+    <a href="#%e9%80%82%e5%90%88%e5%88%9d%e5%ad%a6%e8%80%85%e7%9a%84%e7%a4%be%e5%8c%ba%e5%92%8c%e8%b5%84%e8%ae%af%e7%ab%99%e7%82%b9" class="header-mark"></a>适合初学者的社区和资讯站点</h2><ol>
 <li>
 <p><a href="https://bbs.ichunqiu.com/forum-59-1.html" target="_blank" rel="noopener noreffer">网站安全_i春秋社区</a>
 i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门和进阶的文章都有，可以多多交流。</p>
@@ -178,8 +197,8 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <li>
 <p><a href="http://www.freebuf.com/" target="_blank" rel="noopener noreffer">Freebuf</a>
 很多科普和梳理性的文章，也经常会有时下的热点讨论。</p>
-<h2 id="大学在校生可以关注的一些比赛">大学在校生可以关注的一些比赛</h2>
-</li>
+<h2 id="大学在校生可以关注的一些比赛" class="headerLink">
+    <a href="#%e5%a4%a7%e5%ad%a6%e5%9c%a8%e6%a0%a1%e7%94%9f%e5%8f%af%e4%bb%a5%e5%85%b3%e6%b3%a8%e7%9a%84%e4%b8%80%e4%ba%9b%e6%af%94%e8%b5%9b" class="header-mark"></a>大学在校生可以关注的一些比赛</h2></li>
 <li>
 <p><a href="http://www.ciscn.cn/" target="_blank" rel="noopener noreffer">全国大学生信息安全竞赛</a>
 这个和<strong>全国大学生电子设计竞赛信息安全技术专题邀请赛</strong>一样，都是做一个安全软硬件系统来解决一些安全问题，通常有项目文档提交、源代码提交、现场演示答辩等几个步骤，分为初赛复赛，<strong>全国大学生信息安全竞赛</strong>为每年一次，<strong>全国大学生电子设计竞赛信息安全技术专题邀请赛</strong>通常两年一次，这两个比赛获奖对于大学生都有竞赛加分，在锻炼自己的同时，对评奖学金和保研也有帮助。</p>
@@ -189,13 +208,13 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 这个是和i春秋合作的线上赛，和线下赛目前看来还没什么关联，CTF性质的。每年的CTF比赛很多，大家可以关注i春秋等一些站点的资讯就行了，大学生组队参加CTF比赛的挺多，也是很好的锻炼方式。</p>
 </li>
 </ol>
-<h2 id="挖洞博客与团队">挖洞、博客与团队</h2>
-<p>既然是入门了，建议就可以随着学习的深入，<strong>在一些SRC平台上挖掘漏洞，如果你不太喜欢走这个路线，也可以整理自己的学习过程，写一些技术博客进行分享</strong>，俗话说来“<strong>你挖洞来我拍砖</strong>”，都可以，而且一些平台如Freebuf、先知社区都有付费文章奖励计划，这两种都可以在学习技术的同时获取到一些物质上的奖励，如果你慢慢有了一些编程能力（Python、Web前后端等），除了让自己的安全技术自动化之外，还可以再Github等平台分享一些开源项目。相关的SRC站点我随后再说。
+<h2 id="挖洞博客与团队" class="headerLink">
+    <a href="#%e6%8c%96%e6%b4%9e%e5%8d%9a%e5%ae%a2%e4%b8%8e%e5%9b%a2%e9%98%9f" class="header-mark"></a>挖洞、博客与团队</h2><p>既然是入门了，建议就可以随着学习的深入，<strong>在一些SRC平台上挖掘漏洞，如果你不太喜欢走这个路线，也可以整理自己的学习过程，写一些技术博客进行分享</strong>，俗话说来“<strong>你挖洞来我拍砖</strong>”，都可以，而且一些平台如Freebuf、先知社区都有付费文章奖励计划，这两种都可以在学习技术的同时获取到一些物质上的奖励，如果你慢慢有了一些编程能力（Python、Web前后端等），除了让自己的安全技术自动化之外，还可以再Github等平台分享一些开源项目。相关的SRC站点我随后再说。
 关于写博客，如果自己搭建站点的话，可以考虑<strong>使用hexo+github搭建免费个人博客</strong>，或者租用一台VPS部署Wordpress博客程序。其实我觉得，初学的话，可以不在站点搭建上浪费时间，在一些比较优质的博客平台上注册一个帐号即可，也可以有自己的个性域名。如<a href="https://www.oschina.net/blog" target="_blank" rel="noopener noreffer">oschina</a>、<a href="https://www.cnblogs.com/" target="_blank" rel="noopener noreffer">博客园</a>、<a href="http://www.jianshu.com/" target="_blank" rel="noopener noreffer">简书</a>。写博客本身就是对自己知识技能的巩固和梳理，不要怕写不好，博客就当是给自己看的。
 有一个点要提示一下，既然想走安全这条路，那么给自己想一个个性的ID（昵称），提交漏洞或者注册博客时都用这个，好好维护，当做自己的个人品牌认真经营，随着你的贡献和分享越来越多，你的ID会被越来越多的人了解和认可。
 积累的过程中，如果恰好遇到几个志同道合的小伙伴，那就组个小团队吧，平时技术切磋交流，或者组团挖洞，打CTF等都是极好的。也可以主动去搜寻，或者申请加入一些公开招新的安全团队。<strong>一个人有时候可以走的更快，但一个团队往往可以走的更远</strong>。</p>
-<h2 id="一些进阶的书籍和资源推荐">一些进阶的书籍和资源推荐</h2>
-<p>这部分内容按需选择即可，等你入门了之后，有了一定的技术和经验，你已经足够去规划自己的发展了。</p>
+<h2 id="一些进阶的书籍和资源推荐" class="headerLink">
+    <a href="#%e4%b8%80%e4%ba%9b%e8%bf%9b%e9%98%b6%e7%9a%84%e4%b9%a6%e7%b1%8d%e5%92%8c%e8%b5%84%e6%ba%90%e6%8e%a8%e8%8d%90" class="header-mark"></a>一些进阶的书籍和资源推荐</h2><p>这部分内容按需选择即可，等你入门了之后，有了一定的技术和经验，你已经足够去规划自己的发展了。</p>
 <ol>
 <li><a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5aEQISA1AYUyUCEgZRHF8RBSJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQITA1IfXxIdS0IJRmtHAWhBL1spfWBSABd9OGlSTmUGYT1TDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%2BOtg7CzDtP%2FlI6dlSIPVhxdEwQRAVMrWxEDEwRcHVMSABoEUStcJXd0RQhTayUyIg%3D%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsVAxYAUR9cCltXWwg%3D" target="_blank" rel="noopener noreffer">《HTTP权威指南》</a>
 平时可以当做词典来翻阅。</li>
@@ -210,12 +229,12 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5aEQISA1AYUyUCEgVXGF8UBSJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIQBVYfWhIdS0IJRmtMe1NuJV8%2FUGFQQx1YX0xkaVwwWztlDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%2BOtg7CzDtP%2FlI6dlSIPVhxdEwQRAVMrWxEDEwVQGVgTAxABUCtcJXd0RQhTayUyIg%3D%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsVABAEURpcCltXWwg%3D" target="_blank" rel="noopener noreffer">《Head First HTML与CSS》</a>
 <a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5aEQISA1AYUyUCEw9RG1oXBCJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQMaA1UaWRMdS0IJRmtFAmQGJlMuVmIUdSVLPE19SVgqWTplDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%2BOtg7CzDtP%2FlI6dlSIPVhxdEwQRAVMrWxEDEwVQGVkUBxUPUCtcJXd0RQhTayUyIg%3D%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsUChYHVBldCltXWwg%3D" target="_blank" rel="noopener noreffer">《JavaScript高级程序设计》</a></p>
 <p>站点可以浏览下 <a href="http://www.anquanquan.info/" target="_blank" rel="noopener noreffer">安全圈info</a> 与 <a href="https://www.sec-wiki.com/" target="_blank" rel="noopener noreffer">SecWiki</a> ，前者是一个持续更新的安全圈站点导航，总能找到你想要的网站，之前说的SRC站点这里都有，后者是一个安全资讯的收录分享平台，有什么安全问题可以搜索一些历史文章看看。</p>
-<h1 id="0x02-聊聊学习与实践">0x02 聊聊“学习”与“实践”</h1>
-<h2 id="入门与进阶">入门与进阶</h2>
-<p><strong>对于初学者来说，找一个靠谱的教程或者老师，帮助自己快速入门是非常有必要的。入门之后，虽然高手的点拨也很重要，但更多的功课其实是需要你自己来做的</strong>。这也是为什么优秀的入门教程很多，但是优质的进阶版本教程却不多。
+<h1 id="0x02-聊聊学习与实践" class="headerLink">
+    <a href="#0x02-%e8%81%8a%e8%81%8a%e5%ad%a6%e4%b9%a0%e4%b8%8e%e5%ae%9e%e8%b7%b5" class="header-mark"></a>0x02 聊聊“学习”与“实践”</h1><h2 id="入门与进阶" class="headerLink">
+    <a href="#%e5%85%a5%e9%97%a8%e4%b8%8e%e8%bf%9b%e9%98%b6" class="header-mark"></a>入门与进阶</h2><p><strong>对于初学者来说，找一个靠谱的教程或者老师，帮助自己快速入门是非常有必要的。入门之后，虽然高手的点拨也很重要，但更多的功课其实是需要你自己来做的</strong>。这也是为什么优秀的入门教程很多，但是优质的进阶版本教程却不多。
 有一句话叫“<strong>付费就是占便宜</strong>”，对于新手来说，入门阶段花一点钱买一套优质的课程，让有经验的内行带着自己学习，往往是最优的选择。还有一句话叫“免费的就是最贵的”，免费的教学资源，质量参差不齐难以保证，不用花钱，但耗费的是你筛选的精力和时间。自己根据条件取舍，现在已经逐渐进入了一种知识付费的时代，这就是我给表弟买了一套云课堂的<a href="https://mooc.study.163.com/smartSpec/detail/1001227001.htm?share=1&amp;shareId=9305777" target="_blank" rel="noopener noreffer">《Web安全工程师微专业》</a>课程作为入门学习的原因，一套优质的网课，相比于昂贵的线下班性价比很不错。</p>
-<h2 id="等准备好了再实践">等准备好了再“实践”？</h2>
-<p>李笑来老师有一个观点，学习任何一个学科的时候，都有一个概念很重要：</p>
+<h2 id="等准备好了再实践" class="headerLink">
+    <a href="#%e7%ad%89%e5%87%86%e5%a4%87%e5%a5%bd%e4%ba%86%e5%86%8d%e5%ae%9e%e8%b7%b5" class="header-mark"></a>等准备好了再“实践”？</h2><p>李笑来老师有一个观点，学习任何一个学科的时候，都有一个概念很重要：</p>
 <blockquote>
 <p><strong>最少必要知识</strong>
 <strong>MAKE</strong> : <strong>M</strong>inimal <strong>A</strong>ctionable <strong>K</strong>nowledge and <strong>E</strong>xperience</p>
@@ -228,17 +247,17 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <strong>用和学，用比学重要。用时比学时重要</strong>。“用时”是一个很好的概念。
 很多人说自己“学”了那么多年英语，但现在依然说不出，听不懂。其实他们就是在用“学时”代替“用时”来计算自己的付出的。
 我们总说有效学习，其实衡量有效学习最好的方式就是：计算使用的时间。在安全技术学习上，就是：<strong>实践的时间</strong>。</p>
-<h2 id="从想到学到-到-做到">从“想到”、“学到” 到 “做到”</h2>
-<p>“用”比“学”重要；“做”比“想”重要；边做边想，比单纯想想不知道好多少倍。只有做到了才是掌握了。“人至‘践’则无敌”。
+<h2 id="从想到学到-到-做到" class="headerLink">
+    <a href="#%e4%bb%8e%e6%83%b3%e5%88%b0%e5%ad%a6%e5%88%b0-%e5%88%b0-%e5%81%9a%e5%88%b0" class="header-mark"></a>从“想到”、“学到” 到 “做到”</h2><p>“用”比“学”重要；“做”比“想”重要；边做边想，比单纯想想不知道好多少倍。只有做到了才是掌握了。“人至‘践’则无敌”。
 只要你开始做，高估或低估的困难就不仅仅是一个估计，而是一个摆在面前需要解决的现实问题。你对于它的理解不会再飘忽不定，而会变得非常具体。
 <strong>很多人在做得不好的时候，总是喜欢退缩回原来的舒适区，认为是由于自己的基础还不好所以才这么不顺利，而忘记了这些践行过程中的困难，才是真正帮他们打牢基础的过程</strong>。</p>
-<h1 id="0x03-结语">0x03 结语</h1>
-<p>很多人梦想找到一个牛逼的师父，几天速成然后笑傲江湖。可是每一个真正练就一身武艺的人都是靠冬练三九夏练三伏这么过来的，他们靠着一种忘我的热情持续投入进去磨练，数年如一日，最终自己也不知道怎么就发现具备了无坚不摧的实力。 同样，就算是要开好挖掘机，或着当一个好厨师，也要在自己的技能树上，一步一步地积累技能点，把过路点都点满了，才能点出大招。
+<h1 id="0x03-结语" class="headerLink">
+    <a href="#0x03-%e7%bb%93%e8%af%ad" class="header-mark"></a>0x03 结语</h1><p>很多人梦想找到一个牛逼的师父，几天速成然后笑傲江湖。可是每一个真正练就一身武艺的人都是靠冬练三九夏练三伏这么过来的，他们靠着一种忘我的热情持续投入进去磨练，数年如一日，最终自己也不知道怎么就发现具备了无坚不摧的实力。 同样，就算是要开好挖掘机，或着当一个好厨师，也要在自己的技能树上，一步一步地积累技能点，把过路点都点满了，才能点出大招。
 我们从小到大往往会听到长辈们的建议：“戒骄戒躁”。虽然“戒骄”放在前面，但“戒骄”其实是有了一定成绩之后的事情。对大多数人来说，首先要“戒躁”，才有机会“戒骄”。</p>
 <p>一个人能获得的最可贵的能力，都和掌握一门语言一样，你所付出的努力不是能够获得即时回馈的，甚至在很长的一段时间内没有任何收获，直到积累到了一定的阶段后，忽然爆发出惊人的力量，连你自己都不清楚这一切是如何发生的。比如锻炼身体，读书写作。当你经历了足够的量变终于引起质变时拥有的技能，大部分人是终身难以企及的，不是因为他们太笨，恰恰相反，因为他们都太聪明了。选择一个正确的方向，对那些无法立即获得回报的事情，依然能付出十年如一日的专注和热情，最终的结果也许不足以让你独孤求败，但足以出类拔萃。</p>
 <p>祝表弟早日成为表哥，然后带带我~</p>
-<h2 id="本文相关链接资源整理">本文相关链接资源整理：</h2>
-<ol>
+<h2 id="本文相关链接资源整理" class="headerLink">
+    <a href="#%e6%9c%ac%e6%96%87%e7%9b%b8%e5%85%b3%e9%93%be%e6%8e%a5%e8%b5%84%e6%ba%90%e6%95%b4%e7%90%86" class="header-mark"></a>本文相关链接资源整理：</h2><ol>
 <li><a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5aEQISA1AYUyUCEgJcGVMSBSJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIXDlcTXBIdS0IJRmtqW1VPUUQGHGJsZR5uJhV%2Bc1U0R1pTDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%2BOtg7CzDtP%2FlI6dlSIPVhxdEwQRAVMrWxEDEwRcEl8WChMEXStcJXd0RQhTayUyIg%3D%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsVBxsFXRxcCltXWwg%3D" target="_blank" rel="noopener noreffer">《白帽子讲Web安全》</a></li>
 <li><a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5aEQISA1AYUyUCEgdcG1IXASJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQISDlUSWRYdS0IJRmt3BGRXFloyC2dLcVRsPBN4W1sHX1JlDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%2BOtg7CzDtP%2FlI6dlSIPVhxdEwQRAVMrWxEDEwRcHVMWABsFUCtcJXd0RQhTayUyIg%3D%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsVAhsHXBlYCltXWwg%3D" target="_blank" rel="noopener noreffer">《Web前端黑客技术揭秘》</a></li>
 <li><a href="https://union-click.jd.com/jdc?e=0&amp;p=AyIHZR5aEQISA1AYUyUCEgZRHF8RBSJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQITA1IfXxIdS0IJRmtHAWhBL1spfWBSABd9OGlSTmUGYT1TDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%2BOtg7CzDtP%2FlI6dlSIPVhxdEwQRAVMrWxEDEwRcHVMSABoEUStcJXd0RQhTayUyIg%3D%3D&amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVsVAxYAUR9cCltXWwg%3D" target="_blank" rel="noopener noreffer">《HTTP权威指南》</a></li>
@@ -282,9 +301,8 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
-            <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/index.md" target="_blank" rel="noopener noreferrer">阅读原始文档</a>
-                        </span></div>
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
             <div class="post-info-share">
                 <span></span>
             </div>
@@ -306,10 +324,13 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
             </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
         </div>
 
     
-    
+
     </footer></div>
 
     <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
@@ -317,13 +338,10 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
 
-<div class="pjax-assets"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"f3b8aa4e2d30234fb633","clientSecret":"d6b9e82ef69f1cee85d40fc37e3c87b8eec7943d","id":"2021-01-13T09:32:44+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"给表弟的Web安全入门建议"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/gitalk/gitalk.min.css">
-    <noscript><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/lightgallery/lightgallery.min.css">
-    <noscript><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
-    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-    <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"f3b8aa4e2d30234fb633","clientSecret":"d6b9e82ef69f1cee85d40fc37e3c87b8eec7943d","id":"2021-01-13T09:32:44+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"给表弟的Web安全入门建议"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
 </body>
 
 </html>

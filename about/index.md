@@ -1,10 +1,9 @@
-# 关于
+﻿# 关于
 
 
 ## 关于网站
 ###### 个人博客，欢迎交流。 
-> QQ: [547968300](https://api.btstu.cn/qqtalk/api.php?qq=547968300) 
-> 
+
 > 邮箱: [CNbysec@foxmail.com](mailto:CNbysec@foxmail.com)
 
 ## 关于作者

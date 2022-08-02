@@ -4,7 +4,7 @@
 ## 关于网站
 ###### 个人博客，欢迎交流。 
 
-> 邮箱: [CNbysec@foxmail.com](mailto:CNbysec@foxmail.com)
+> 邮箱: [bysec@qq.com](mailto:bysec@qq.com)
 
 ## 关于作者
 * :computer: 技术宅，热爱关于计算机的一切

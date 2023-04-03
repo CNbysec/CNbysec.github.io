@@ -1,9 +1,7 @@
-﻿# 友链
+# 友链
 
 
 {{< friend "缥缈博客" "https://blog.btstu.cn/" "https://q.qlogo.cn/headimg_dl?dst_uin=1807139605&spec=100" "缥缈个人博客" >}}
-
-{{< friend "AP_ZYT的博客" "https://blog.apzyt.work/" "https://blog.apzyt.work/img/kotori.gif" "AP_ZYT的博客客" >}}
 
 ---
 
@@ -24,6 +22,6 @@
 ```Code
 网站名称：bysec
 网站链接：https://www.bysec.cn/
-网站头像：https://q.qlogo.cn/headimg_dl?dst_uin=547968300&spec=100
+网站头像：https://www.bysec.cn/OSS/看门狗.png
 网站描述：bysec信息安全个人博客
 ```

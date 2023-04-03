@@ -10,13 +10,12 @@
     <pubDate>Fri, 15 May 2020 19:08:11 &#43;0800</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7%E9%9B%86/</guid>
-    <description><![CDATA[<h1 id="nmap" class="headerLink">
-    <a href="#nmap" class="header-mark"></a>nmap</h1><h1 id="dirmap" class="headerLink">
-    <a href="#dirmap" class="header-mark"></a>dirmap</h1><h1 id="xsstrike" class="headerLink">
-    <a href="#xsstrike" class="header-mark"></a>XSStrike</h1><h1 id="sqlmap" class="headerLink">
-    <a href="#sqlmap" class="header-mark"></a>sqlmap</h1><h1 id="burpsuite" class="headerLink">
-    <a href="#burpsuite" class="header-mark"></a>BurpSuite</h1><h1 id="wireshark" class="headerLink">
-    <a href="#wireshark" class="header-mark"></a>Wireshark</h1><h1 id="metasploit-framework" class="headerLink">
-    <a href="#metasploit-framework" class="header-mark"></a>metasploit-framework</h1>]]></description>
+    <description><![CDATA[<h1 id="nmap">nmap</h1>
+<h1 id="dirmap">dirmap</h1>
+<h1 id="xsstrike">XSStrike</h1>
+<h1 id="sqlmap">sqlmap</h1>
+<h1 id="burpsuite">BurpSuite</h1>
+<h1 id="wireshark">Wireshark</h1>
+<h1 id="metasploit-framework">metasploit-framework</h1>]]></description>
 </item></channel>
 </rss>

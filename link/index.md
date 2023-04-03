@@ -7,6 +7,8 @@
 
 {{< friend "独自等待博客" "https://www.waitalone.cn/" "https://s2.ax1x.com/2019/11/22/M7UdCd.jpg" "关注信息安全" >}}
 
+{{< friend "国光" "https://www.sqlsec.com/" "https://image.3001.net/images/20210606/16229390604952.png" "逆水行舟，不进则退。" >}}
+
 ---
 
 > 1. 本站优先招原创内容的博客或网站，站点主题内容是互联网、技术、生活分享类博客优先。

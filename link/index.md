@@ -28,6 +28,6 @@
 ```Code
 网站名称：bysec
 网站链接：https://www.bysec.cn/
-网站头像：https://www.bysec.cn/OSS/看门狗.png
+网站头像：https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&spec=100
 网站描述：bysec信息安全个人博客
 ```

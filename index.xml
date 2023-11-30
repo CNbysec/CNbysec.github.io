@@ -567,6 +567,66 @@
 <h4 id="总结" class="headerLink">
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
+    <title>如何在mac上抓小程序的流量</title>
+    <link>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+    <pubDate>Wed, 29 Nov 2023 08:06:55 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
+</blockquote>
+<h2 id="如何在mac上抓小程序的流量" class="headerLink">
+    <a href="#%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f" class="header-mark"></a>如何在mac上抓小程序的流量</h2><p>通过Proxifier工具代理微信小程序流量到Burp</p>
+<ol>
+<li>安装Burpsuite证书到macOS系统中</li>
+</ol>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/1.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png">
+        
+    </a></figure></p>
+<ol start="2">
+<li>安装proxifier并添加Proxifier规则</li>
+</ol>
+<blockquote>
+<p>Your name or company name:<br>
+macwk.com<br>
+Your registration key:<br>
+2DNRX-V3PNK-TEGYN-DR01D-9UGGT</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew install --cask proxifier
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/2.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png">
+        
+    </a></figure></p>
+<p>添加代理和配置代理规则</p>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/3.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png">
+        
+    </a></figure></p>
+<blockquote>
+<p>微信小程序路径 : /Applications/WeChat.app/Contents/MacOS/Mini Program.app</p>
+</blockquote>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/4.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png">
+        
+    </a></figure></p>
+<blockquote>
+<p>⚠️ 先启动Proxifier，再启动Burpsuite，最后打开微信小程序,(最好关掉其他代理)</p>
+</blockquote>
+<p>抓包成功</p>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/5.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png">
+        
+    </a></figure></p>
+<p>存在其他代理(如clashX)时，Proxifier设置方法</p>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/6.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png">
+        
+    </a></figure></p>
+<hr>
+<p>转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 <a href="mailto:askding@qq.com" rel="">askding@qq.com</a></p>]]></description>
+</item><item>
     <title>kali修改为国内源</title>
     <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>

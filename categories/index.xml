@@ -4,7 +4,14 @@
         <link>https://www.bysec.cn/categories/</link>
         <description>Categories - 分类 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 15 May 2022 19:08:11 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>学习</title>
+    <link>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>工具</title>
     <link>https://www.bysec.cn/categories/%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Sun, 15 May 2022 19:08:11 &#43;0800</pubDate><author>
@@ -17,13 +24,6 @@
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>学习</title>
-    <link>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Wed, 13 Jan 2021 09:32:44 &#43;0800</pubDate><author>
-        <name>bysec</name>
-    </author><guid>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>技术</title>

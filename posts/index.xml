@@ -4,13 +4,36 @@
         <link>https://www.bysec.cn/posts/</link>
         <description>所有文章 | bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/posts/" rel="self" type="application/rss+xml" /><item>
     <title>工具集</title>
     <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Sun, 15 May 2022 19:08:11 &#43;0800</pubDate><author>
         <name>bysec</name>
     </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
+</item><item>
+    <title>安装BurpSuite</title>
+    <link>https://www.bysec.cn/macos%E5%AE%89%E8%A3%85burpsuite/</link>
+    <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/macos%E5%AE%89%E8%A3%85burpsuite/</guid>
+    <description><![CDATA[<h1 id="下载" class="headerLink">
+    <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h1><p><a href="https://portswigger.net/burp/releases#professional" target="_blank" rel="noopener noreferrer">BurpSuite</a>
+<a href="https://github.com/Leon406/BurpSuiteCN-Release/releases" target="_blank" rel="noopener noreferrer">注册启动汉化</a></p>
+<h1 id="安装" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85" class="header-mark"></a>安装</h1><ol>
+<li>安装完成后先启动一次burp，然后关闭，否则会报错损坏。</li>
+<li>在应用程序中找到BurpSuite右键显示包内容，依次打开 ./Contents/Resources/app，把启动器放入其中。</li>
+<li>返回到Contents目录，编辑vmoptions.txt，末尾追加内容
+、、、txt
+&ndash;add-opens=java.base/java.lang=ALL-UNNAMED
+&ndash;add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED
+&ndash;add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
+&ndash;add-opens=java.base/jdk.internal.org.objectweb.asm.Opcodes=ALL-UNNAMED
+-javaagent:burpsuitloader-all.jar
+-noverify
+、、、</li>
+</ol>]]></description>
 </item><item>
     <title>SRC混子的漏洞挖掘之道</title>
     <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>

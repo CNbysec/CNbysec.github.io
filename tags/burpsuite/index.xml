@@ -5,11 +5,11 @@
         <description>BurpSuite - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
             <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/burpsuite/" rel="self" type="application/rss+xml" /><item>
-    <title>安装BurpSuite</title>
-    <link>https://www.bysec.cn/macos%E5%AE%89%E8%A3%85burpsuite/</link>
+    <title>BurpSuite安装</title>
+    <link>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</link>
     <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/macos%E5%AE%89%E8%A3%85burpsuite/</guid>
+    </author><guid>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<h2 id="下载" class="headerLink">
     <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><ul>
 <li><a href="https://portswigger.net/burp/releases#professional" target="_blank" rel="noopener noreferrer">BurpSuite</a></li>
@@ -17,12 +17,13 @@
 </ul>
 <h2 id="安装" class="headerLink">
     <a href="#%e5%ae%89%e8%a3%85" class="header-mark"></a>安装</h2><ol>
-<li>安装完成后先启动一次burp，然后关闭，否则会报错损坏</li>
-<li>在应用程序中找到BurpSuite右键显示包内容</li>
-<li>依次打开文件夹 &gt; Contents/Resources/app，把启动器放入其中。</li>
-<li>返回到Contents目录，编辑vmoptions.txt，末尾追加内容</li>
+<li>安装完成后先启动一次 BurpSuite 然后关闭，否则会报错损坏</li>
+<li>在应用程序中找到 BurpSuite 右键 &gt; 显示包内容</li>
+<li>依次打开文件夹 &gt; Contents/Resources/app，把启动器放入其中</li>
+<li>返回到Contents目录，编辑 vmoptions.txt，末尾追加内容</li>
 </ol>
-<div class="highlight"><div class="chroma">
+<h2 id="配置" class="headerLink">
+    <a href="#%e9%85%8d%e7%bd%ae" class="header-mark"></a>配置</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2

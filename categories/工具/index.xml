@@ -24,8 +24,9 @@
 </ul>
 <h2 id="安装" class="headerLink">
     <a href="#%e5%ae%89%e8%a3%85" class="header-mark"></a>安装</h2><ol>
-<li>安装完成后先启动一次burp，然后关闭，否则会报错损坏。</li>
-<li>在应用程序中找到BurpSuite右键显示包内容，依次打开 ./Contents/Resources/app，把启动器放入其中。</li>
+<li>安装完成后先启动一次burp，然后关闭，否则会报错损坏</li>
+<li>在应用程序中找到BurpSuite右键显示包内容</li>
+<li>依次打开文件夹 &gt; Contents/Resources/app，把启动器放入其中。</li>
 <li>返回到Contents目录，编辑vmoptions.txt，末尾追加内容</li>
 </ol>
 <div class="highlight"><div class="chroma">

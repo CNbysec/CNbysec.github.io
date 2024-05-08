@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>学习 - 分类 - bysec</title>
-        <link>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</link>
+        <link>http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0/</link>
         <description>学习 - 分类 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
     <title>SRC混子的漏洞挖掘之道</title>
-    <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
+    <link>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
+    </author><guid>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -251,7 +251,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-2" 
+    id="codeblock-id-1" 
     class="
       chroma 
       !tw-block 
@@ -373,7 +373,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-3" 
+    id="codeblock-id-2" 
     class="
       chroma 
       !tw-block 
@@ -646,7 +646,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-4" 
+    id="codeblock-id-3" 
     class="
       chroma 
       !tw-block 
@@ -745,7 +745,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-5" 
+    id="codeblock-id-4" 
     class="
       chroma 
       !tw-block 
@@ -847,7 +847,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-6" 
+    id="codeblock-id-5" 
     class="
       chroma 
       !tw-block 
@@ -951,7 +951,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-7" 
+    id="codeblock-id-6" 
     class="
       chroma 
       !tw-block 
@@ -1067,7 +1067,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-8" 
+    id="codeblock-id-7" 
     class="
       chroma 
       !tw-block 
@@ -1175,7 +1175,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-9" 
+    id="codeblock-id-8" 
     class="
       chroma 
       !tw-block 
@@ -1239,10 +1239,10 @@
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark" aria-label="Header mark for '总结'"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
     <title>给表弟的Web安全入门建议</title>
-    <link>https://www.bysec.cn/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</link>
+    <link>http://localhost:1313/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</link>
     <pubDate>Wed, 13 Jan 2021 09:32:44 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</guid>
+    </author><guid>http://localhost:1313/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://sosly.me/index.php/2017/07/17/studywebsec/" target="_blank" rel="noopener noreferrer">https://sosly.me/index.php/2017/07/17/studywebsec/</a></em></p>
 </blockquote>

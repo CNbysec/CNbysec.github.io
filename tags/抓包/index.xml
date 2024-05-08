@@ -1,0 +1,62 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>抓包 - 标签 - bysec</title>
+        <link>https://www.bysec.cn/tags/%E6%8A%93%E5%8C%85/</link>
+        <description>抓包 - 标签 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E6%8A%93%E5%8C%85/" rel="self" type="application/rss+xml" /><item>
+    <title>如何在mac上抓小程序的流量</title>
+    <link>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+    <pubDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
+</blockquote>
+<h2 id="如何在mac上抓小程序的流量" class="headerLink">
+    <a href="#%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f" class="header-mark"></a>如何在mac上抓小程序的流量</h2><p>通过Proxifier工具代理微信小程序流量到Burp</p>
+<h3 id="安装burpsuite证书到macos系统中" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85burpsuite%e8%af%81%e4%b9%a6%e5%88%b0macos%e7%b3%bb%e7%bb%9f%e4%b8%ad" class="header-mark"></a>安装Burpsuite证书到macOS系统中</h3><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/1.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png">
+        
+    </a></figure></p>
+<h3 id="安装proxifier并添加proxifier规则" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85proxifier%e5%b9%b6%e6%b7%bb%e5%8a%a0proxifier%e8%a7%84%e5%88%99" class="header-mark"></a>安装proxifier并添加Proxifier规则</h3><blockquote>
+<p>Your name or company name:<br>
+macwk.com<br>
+Your registration key:<br>
+2DNRX-V3PNK-TEGYN-DR01D-9UGGT</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew install --cask proxifier
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/2.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png">
+        
+    </a></figure></p>
+<h3 id="添加代理和配置代理规则" class="headerLink">
+    <a href="#%e6%b7%bb%e5%8a%a0%e4%bb%a3%e7%90%86%e5%92%8c%e9%85%8d%e7%bd%ae%e4%bb%a3%e7%90%86%e8%a7%84%e5%88%99" class="header-mark"></a>添加代理和配置代理规则</h3><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/3.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png">
+        
+    </a></figure></p>
+<blockquote>
+<p>微信小程序路径 : /Applications/WeChat.app/Contents/MacOS/Mini Program.app</p>
+</blockquote>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/4.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png">
+        
+    </a></figure></p>
+<blockquote>
+<p>⚠️ 先启动Proxifier，再启动Burpsuite，最后打开微信小程序,(最好关掉其他代理)</p>
+</blockquote>
+<h3 id="抓包成功" class="headerLink">
+    <a href="#%e6%8a%93%e5%8c%85%e6%88%90%e5%8a%9f" class="header-mark"></a>抓包成功</h3><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/5.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png">
+        
+    </a></figure></p>
+<h3 id="存在其他代理如clashx时proxifier设置方法" class="headerLink">
+    <a href="#%e5%ad%98%e5%9c%a8%e5%85%b6%e4%bb%96%e4%bb%a3%e7%90%86%e5%a6%82clashx%e6%97%b6proxifier%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95" class="header-mark"></a>存在其他代理(如clashX)时，Proxifier设置方法</h3><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/6.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png">
+        
+    </a></figure></p>]]></description>
+</item></channel>
+</rss>

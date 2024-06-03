@@ -1,0 +1,43 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - 标签 - bysec</title>
+        <link>https://www.bysec.cn/tags/</link>
+        <description>Tags - 标签 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>BurpSuite</title>
+    <link>https://www.bysec.cn/tags/burpsuite/</link>
+    <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/tags/burpsuite/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>技能</title>
+    <link>https://www.bysec.cn/tags/%E6%8A%80%E8%83%BD/</link>
+    <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/tags/%E6%8A%80%E8%83%BD/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>抓包</title>
+    <link>https://www.bysec.cn/tags/%E6%8A%93%E5%8C%85/</link>
+    <pubDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/tags/%E6%8A%93%E5%8C%85/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Kali</title>
+    <link>https://www.bysec.cn/tags/kali/</link>
+    <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/tags/kali/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Waf</title>
+    <link>https://www.bysec.cn/tags/waf/</link>
+    <pubDate>Tue, 15 Dec 2020 21:18:35 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/tags/waf/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

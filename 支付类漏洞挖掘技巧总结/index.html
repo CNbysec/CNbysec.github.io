@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>支付类漏洞挖掘技巧总结 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="支付类漏洞挖掘技巧总结" />
+<meta property="og:description" content="前言：支付类逻辑漏洞在漏洞挖掘中是常常出现的问题之一。此类漏洞挖掘思路多，奖励高，是炙手可热的漏洞。此篇文章主要围绕挖掘支付逻辑漏洞时的一些" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" /><meta property="og:image" content="https://www.bysec.cn/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-07-28T18:22:32+08:00" />
+<meta property="article:modified_time" content="2024-07-28T18:22:32+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.bysec.cn/logo.png" /><meta name="twitter:title" content="支付类漏洞挖掘技巧总结"/>
+<meta name="twitter:description" content="前言：支付类逻辑漏洞在漏洞挖掘中是常常出现的问题之一。此类漏洞挖掘思路多，奖励高，是炙手可热的漏洞。此篇文章主要围绕挖掘支付逻辑漏洞时的一些"/>
+<meta name="application-name" content="bysec">
+<meta name="apple-mobile-web-app-title" content="bysec">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=100"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" /><link rel="prev" href="https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/" /><link rel="next" href="https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "支付类漏洞挖掘技巧总结",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.bysec.cn\/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93\/"
+        },"genre": "posts","wordcount":  2532 ,
+        "url": "https:\/\/www.bysec.cn\/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93\/","datePublished": "2024-07-28T18:22:32+08:00","dateModified": "2024-07-28T18:22:32+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "bysec"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="bysec">bysec</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa-fw fas fa-home'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa-fw fas fa-archive'></i> 归档 </a><a class="menu-item" href="/categories/"><i class='fa-fw fas fa-folder-open'></i> 分类 </a><a class="menu-item" href="/tags/"><i class='fa-fw fas fa-tags'></i> 标签 </a><a class="menu-item" href="/link/"><i class='fa-fw fas fa-link'></i> 友链 </a><a class="menu-item" href="/about/"><i class='fa-fw fas fa-comment-dots'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="bysec">bysec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa-fw fas fa-home'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa-fw fas fa-archive'></i>归档</a><a class="menu-item" href="/categories/" title=""><i class='fa-fw fas fa-folder-open'></i>分类</a><a class="menu-item" href="/tags/" title=""><i class='fa-fw fas fa-tags'></i>标签</a><a class="menu-item" href="/link/" title=""><i class='fa-fw fas fa-link'></i>友链</a><a class="menu-item" href="/about/" title=""><i class='fa-fw fas fa-comment-dots'></i>关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言：</a></li>
+    <li><a href="#支付逻辑漏洞成因">支付逻辑漏洞成因：</a></li>
+    <li><a href="#支付逻辑漏洞挖掘技巧">支付逻辑漏洞挖掘技巧：</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#一更改支付金额">一、更改支付金额</a></li>
+            <li><a href="#二更改支付状态">二、更改支付状态</a></li>
+            <li><a href="#三修改支付类型">三、修改支付类型</a></li>
+            <li><a href="#四更改订单信息">四、更改订单信息</a></li>
+            <li><a href="#五更改数量实现优惠支付">五、更改数量实现优惠支付</a></li>
+            <li><a href="#六重复支付突破限购">六、重复支付，突破限购</a></li>
+            <li><a href="#七优惠券多次使用">七、优惠券多次使用</a></li>
+            <li><a href="#八遍历隐藏或者下架优惠id获取优惠链接">八、遍历隐藏或者下架优惠id获取优惠链接</a></li>
+            <li><a href="#九利用小数点精度四舍五入">九、利用小数点精度四舍五入</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">支付类漏洞挖掘技巧总结</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">bysec</a>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-28">2024-07-28</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-28">2024-07-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2532 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言：</a></li>
+    <li><a href="#支付逻辑漏洞成因">支付逻辑漏洞成因：</a></li>
+    <li><a href="#支付逻辑漏洞挖掘技巧">支付逻辑漏洞挖掘技巧：</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#一更改支付金额">一、更改支付金额</a></li>
+            <li><a href="#二更改支付状态">二、更改支付状态</a></li>
+            <li><a href="#三修改支付类型">三、修改支付类型</a></li>
+            <li><a href="#四更改订单信息">四、更改订单信息</a></li>
+            <li><a href="#五更改数量实现优惠支付">五、更改数量实现优惠支付</a></li>
+            <li><a href="#六重复支付突破限购">六、重复支付，突破限购</a></li>
+            <li><a href="#七优惠券多次使用">七、优惠券多次使用</a></li>
+            <li><a href="#八遍历隐藏或者下架优惠id获取优惠链接">八、遍历隐藏或者下架优惠id获取优惠链接</a></li>
+            <li><a href="#九利用小数点精度四舍五入">九、利用小数点精度四舍五入</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言：</h2><p>支付类逻辑漏洞在漏洞挖掘中是常常出现的问题之一。此类漏洞挖掘思路多，奖励高，是炙手可热的漏洞。此篇文章主要围绕挖掘支付逻辑漏洞时的一些思路分享。</p>
+<h2 id="支付逻辑漏洞成因" class="headerLink">
+    <a href="#%e6%94%af%e4%bb%98%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e%e6%88%90%e5%9b%a0" class="header-mark"></a>支付逻辑漏洞成因：</h2><p>支付漏洞可能由以下原因造成：</p>
+<ol>
+<li>前端验证不充分：在前端页面上，没有进行足够的验证和限制，使得用户可以通过修改页面元素或发送自定义请求来篡改支付金额、支付类型、支付状态等。</li>
+<li>客户端数据不可信：客户端（如移动应用）在进行支付时，没有对传输的数据进行完整性验证和加密，导致恶意用户可以直接修改数据包中的支付金额、订单号等与订单有关的参数。</li>
+<li>服务器端验证不严格：支付请求在到达服务器端时，没有进行足够的验证和校验，使得攻击者能够更改支付相关参数并绕过服务器端的验证机制。</li>
+<li>不安全的存储和传输：支付金额数据在存储或传输过程中未经适当的加密保护，导致黑客可以窃取或篡改数据。</li>
+</ol>
+<h2 id="支付逻辑漏洞挖掘技巧" class="headerLink">
+    <a href="#%e6%94%af%e4%bb%98%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7" class="header-mark"></a>支付逻辑漏洞挖掘技巧：</h2><p>在实际漏洞挖掘中，一般最先尝试的就是更改数据包发包内容，可以直接修改支付金额、更改支付状态、更改支付类型、更改提交订单支付的时候其中的订单信息等等，当然也会有一些新奇的功能点可以测试。这些在测试中会遇到的操作可以分为以下几类：</p>
+<h4 id="一更改支付金额" class="headerLink">
+    <a href="#%e4%b8%80%e6%9b%b4%e6%94%b9%e6%94%af%e4%bb%98%e9%87%91%e9%a2%9d" class="header-mark"></a>一、更改支付金额</h4><p>在支付流程中，可以修改支付价格的步骤有很多，包括订购、确认信息、付款等。在涉及到价格的步骤中都可以尝试修改，如果网站在某一环节存在逻辑上的漏洞，就可以利用该漏洞对支付价格进行修改。可以直接修改提交订单中的价格字段，一般可尝试0.01，1.00，1等</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg" title="image-20240110144659185" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg, https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg">
+    </a></p>
+<h4 id="二更改支付状态" class="headerLink">
+    <a href="#%e4%ba%8c%e6%9b%b4%e6%94%b9%e6%94%af%e4%bb%98%e7%8a%b6%e6%80%81" class="header-mark"></a>二、更改支付状态</h4><p>在测试中有的时候订单得支付状态是由用户提交订单时的某个数据包参数决定的，服务端通过支付状态判断订单支付与否，这时我们可以尝试找到这个参数（可以通过正常支付订单的数据包进行对比），对支付状态进行修改。或者还有一种情况是通过检查订单是否支付，这个时候可以通过抓取已支付的订单数据包将其中的订单编号改为未支付的编号，实现绕过。</p>
+<p>1、直接修改为已支付状态</p>
+<p>2、修改未支付的订单号为已支付订单号</p>
+<h4 id="三修改支付类型" class="headerLink">
+    <a href="#%e4%b8%89%e4%bf%ae%e6%94%b9%e6%94%af%e4%bb%98%e7%b1%bb%e5%9e%8b" class="header-mark"></a>三、修改支付类型</h4><p>通常在提交订单付款时，这里的type一般是对支付方式的判断，可能会存在开发人员测试的时候遗留的无需支付的type值，根据支付方式判断支付与否。可以通过fuzz特定值去实现绕过。比如比较常见的值0（这里需要结合实际进行测试不同的处理方式type值不同），可以实现不需要付款订单就会自动生成。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg" title="image-20240109155239418" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg, https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg">
+    </a></p>
+<h4 id="四更改订单信息" class="headerLink">
+    <a href="#%e5%9b%9b%e6%9b%b4%e6%94%b9%e8%ae%a2%e5%8d%95%e4%bf%a1%e6%81%af" class="header-mark"></a>四、更改订单信息</h4><p>服务端只检查支付是否完成，并没有确认订单金额与银行支付金额是否相同，过分信任客户端提交的数据。此时可以通过替换支付订单号、更换商品id的方式，来完成花少钱买更贵的东西。同时生成两个订单号，一个贵的一个便宜，首先支付便宜的，银行往回返回的时候，替换订单号，然后就可以完成两个订单的同时支付。</p>
+<p>常见位置在生成订单、生成支付链接等。</p>
+<p>1、修改商品编号</p>
+<p>直接在生成的订单中替换商品编号。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg" title="image-20240110101427801" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg, https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg">
+    </a></p>
+<p>2、修改订单号</p>
+<p>将金额不同的订单进行替换，可以支付一个金额较少的订单，然后将订单号修改为金额较大的订单，少付实际金额。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg" title="image-20240110103259992" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg, https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg">
+    </a></p>
+<p>3、越权使用他人优惠券、越权使用他人积分等</p>
+<h4 id="五更改数量实现优惠支付" class="headerLink">
+    <a href="#%e4%ba%94%e6%9b%b4%e6%94%b9%e6%95%b0%e9%87%8f%e5%ae%9e%e7%8e%b0%e4%bc%98%e6%83%a0%e6%94%af%e4%bb%98" class="header-mark"></a>五、更改数量实现优惠支付</h4><p>支付金额是由购买数量乘以商品单价决定的，这时我们在数据包中修改购买数量，将其修改为负数或者小数，如果站点后台对此没有进行过滤，就有可能存在支付漏洞。</p>
+<p>1、将正常的数量值修改至最小值0.01，可以实现低价购买。比如：原价300修改修量为0.01后实付金额变为3。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg" title="image-20240109160656541" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg, https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg">
+    </a></p>
+<p>2、未对负数做检验的还可以将数量改为负数。（这里需要注意，因为后端大部分会校验不允许实付金额小于0或者0.01等，所以有的时候要想实现订单成功生成需要结合实际修改价格）</p>
+<p>生成订单时有参数表示商品数量，修改为-1</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg" title="image-20240110114704324" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg, https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg">
+    </a></p>
+<p>修改数量为-1后会发现，此时金额为负数。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg" title="image-20240110114800810" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg, https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg">
+    </a></p>
+<p>在提交订单支付的时候，为保证支付成功需要修改金额。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg" title="image-20240110115204600" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg, https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg">
+    </a></p>
+<p>3、对数量没有做负数校验的时候也可以巧用负数抵消实现0元购</p>
+<p>在计算价格时，没有对负数进行验证，通过修改某个商品数量为-1实现与1的抵消实现0元购。</p>
+<p>同时购买两件商品，修改两件商品其中价格低的商品的金额为负数，实现价格的抵消，低价购买商品。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg" title="image-20240110154805679" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg, https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg">
+    </a></p>
+<p>4、手动增加订单中商品相关的多个参数以达到少付多买的目的。</p>
+<p>有的时候在提交订单时抓取数据包可以看到只有一套商品的信息，尝试多添加几套同样的参数订单是否会有变化。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg" title="image-20240110152818004" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg, https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg">
+    </a></p>
+<p>尝试在提交订单的时候多添加几个此类参数</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg" title="image-20240110153021212" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg, https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg">
+    </a><br>
+提交订单实际支付金额未变仍是一个商品的价格，但是实际套餐已经变成了四个。</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg" title="image-20240110153517777" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg, https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg">
+    </a></p>
+<h4 id="六重复支付突破限购" class="headerLink">
+    <a href="#%e5%85%ad%e9%87%8d%e5%a4%8d%e6%94%af%e4%bb%98%e7%aa%81%e7%a0%b4%e9%99%90%e8%b4%ad" class="header-mark"></a>六、重复支付，突破限购</h4><p>在支付系统中，服务端没有做好相关验证，比如订单状态被错误更新或者未更新，未对订单多重提交进行校验。那么就可以并发订单实现优惠订单多次提交。需要注意的是这里有的时候会根据实际支付订单判断，并发了多个订单也可能只有一个优惠订单可以正常支付。</p>
+<p>并发订单，多台设备同时提交优惠订单。</p>
+<p>常见于限购，一个账号仅许购买一次等</p>
+<p>1、限制一个优惠订单时直接并发生成多个优惠订单</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg" title="image-20240110143709606" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg, https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg">
+    </a></p>
+<p>2、使用多台设备、多个浏览器、多种支付方式（wx、支付宝等）购买优惠订单</p>
+<p>常见于购买会员，会员第一个月往往会有优惠价。生成一个优惠订单后不支付，打开多个设备或者虚拟器设备，同时提交生成优惠订单，再分别支付，有的时候会发现会员截至日期顺延，突破限制以优惠价格购买会员。</p>
+<p>3、退款处并发。退款的时候可以发起同一订单多次退款，达到多退款的目的。</p>
+<h4 id="七优惠券多次使用" class="headerLink">
+    <a href="#%e4%b8%83%e4%bc%98%e6%83%a0%e5%88%b8%e5%a4%9a%e6%ac%a1%e4%bd%bf%e7%94%a8" class="header-mark"></a>七、优惠券多次使用</h4><p>常见于涉及优惠券的订单中。可以在提交订单的时候修改发包中优惠券的值尝试使用大额优惠券，或者按照原数据包中优惠券的构造参数手工添加几张优惠券，达到优惠券叠用的目的。有优惠券面值参数的也可以直接修改数据包中优惠券的面值。</p>
+<p>1、在一个订单中叠加使用优惠券</p>
+<p>2、修改优惠券标识，尝试使用其他商品中的大额优惠券</p>
+<p>3、直接修改优惠券的面值。实际金额计算会扣除优惠的部分，此时修改优惠券面值可以实现低价购买。</p>
+<h4 id="八遍历隐藏或者下架优惠id获取优惠链接" class="headerLink">
+    <a href="#%e5%85%ab%e9%81%8d%e5%8e%86%e9%9a%90%e8%97%8f%e6%88%96%e8%80%85%e4%b8%8b%e6%9e%b6%e4%bc%98%e6%83%a0id%e8%8e%b7%e5%8f%96%e4%bc%98%e6%83%a0%e9%93%be%e6%8e%a5" class="header-mark"></a>八、遍历隐藏或者下架优惠id获取优惠链接</h4><p>漏洞常见位置：会员处、商品处（隐藏商品，已下架商品，开发测试低价商品等）</p>
+<p>1、遍历隐藏优惠券</p>
+<p>一般会有一些开发时测试的大额优惠券，或者已经过期下架的优惠券，通过遍历可以被使用。</p>
+<p>2、遍历商品id从而fuzz到已下架的商品</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg" title="image-20240109171142727" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg, https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg">
+    </a></p>
+<h4 id="九利用小数点精度四舍五入" class="headerLink">
+    <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-07-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/" class="prev" rel="prev" title="万字总结信息收集全网最全"><i class="fas fa-angle-left fa-fw"></i>万字总结信息收集全网最全</a>
+            <a href="/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/" class="next" rel="next" title="教育行业渗透打点">教育行业渗透打点<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"Ov23li64ijr3L89wsfoj","clientSecret":"a291b75ee7aaf91f94e71d89a39cf8098ee8ed80","id":"2024-07-28T18:22:32+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"支付类漏洞挖掘技巧总结"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

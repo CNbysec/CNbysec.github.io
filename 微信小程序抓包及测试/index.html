@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>微信小程序抓包及测试 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="微信小程序抓包及测试" />
+<meta property="og:description" content="转载自： https://forum.butian.net/share/2477 网上大多数的小程序测试抓包都是用的安卓模拟器，这里使用的是BurpSuite&#43;Proxifer&#43;微信客户端的抓包方式 环境准备Bur" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/" /><meta property="og:image" content="https://www.bysec.cn/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-14T18:24:56+08:00" />
+<meta property="article:modified_time" content="2024-06-14T18:24:56+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.bysec.cn/logo.png" /><meta name="twitter:title" content="微信小程序抓包及测试"/>
+<meta name="twitter:description" content="转载自： https://forum.butian.net/share/2477 网上大多数的小程序测试抓包都是用的安卓模拟器，这里使用的是BurpSuite&#43;Proxifer&#43;微信客户端的抓包方式 环境准备Bur"/>
+<meta name="application-name" content="bysec">
+<meta name="apple-mobile-web-app-title" content="bysec">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=100"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/" /><link rel="prev" href="https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/" /><link rel="next" href="https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "微信小程序抓包及测试",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.bysec.cn\/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95\/"
+        },"genre": "posts","keywords": "微信小程序, 抓包","wordcount":  1788 ,
+        "url": "https:\/\/www.bysec.cn\/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95\/","datePublished": "2024-06-14T18:24:56+08:00","dateModified": "2024-06-14T18:24:56+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "bysec"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="bysec">bysec</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa-fw fas fa-home'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa-fw fas fa-archive'></i> 归档 </a><a class="menu-item" href="/categories/"><i class='fa-fw fas fa-folder-open'></i> 分类 </a><a class="menu-item" href="/tags/"><i class='fa-fw fas fa-tags'></i> 标签 </a><a class="menu-item" href="/link/"><i class='fa-fw fas fa-link'></i> 友链 </a><a class="menu-item" href="/about/"><i class='fa-fw fas fa-comment-dots'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="bysec">bysec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa-fw fas fa-home'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa-fw fas fa-archive'></i>归档</a><a class="menu-item" href="/categories/" title=""><i class='fa-fw fas fa-folder-open'></i>分类</a><a class="menu-item" href="/tags/" title=""><i class='fa-fw fas fa-tags'></i>标签</a><a class="menu-item" href="/link/" title=""><i class='fa-fw fas fa-link'></i>友链</a><a class="menu-item" href="/about/" title=""><i class='fa-fw fas fa-comment-dots'></i>关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#环境准备">环境准备</a></li>
+    <li><a href="#小程序反编译">小程序反编译</a></li>
+    <li><a href="#一不小心getshell">一不小心getshell</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">微信小程序抓包及测试</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">bysec</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-06-14">2024-06-14</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-06-14">2024-06-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1788 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#环境准备">环境准备</a></li>
+    <li><a href="#小程序反编译">小程序反编译</a></li>
+    <li><a href="#一不小心getshell">一不小心getshell</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2477" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2477</a></em></p>
+</blockquote>
+<p>网上大多数的小程序测试抓包都是用的安卓模拟器，这里使用的是BurpSuite+Proxifer+微信客户端的抓包方式</p>
+<h2 id="环境准备" class="headerLink">
+    <a href="#%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87" class="header-mark"></a>环境准备</h2><p>Burp2023.9.2</p>
+<p>Proxifier4.5</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-4d2e55e1fec1c1cb3586004390da5f833c29e420.png" title="图片1.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-4d2e55e1fec1c1cb3586004390da5f833c29e420.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-4d2e55e1fec1c1cb3586004390da5f833c29e420.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-4d2e55e1fec1c1cb3586004390da5f833c29e420.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-4d2e55e1fec1c1cb3586004390da5f833c29e420.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-4d2e55e1fec1c1cb3586004390da5f833c29e420.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-4d2e55e1fec1c1cb3586004390da5f833c29e420.png">
+    </a></p>
+<p>安装就无脑next就好了，安装好后打开</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-db4b774ccbc93572be2fe92a70333ddeb69faac9.png" title="图片2.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-db4b774ccbc93572be2fe92a70333ddeb69faac9.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-db4b774ccbc93572be2fe92a70333ddeb69faac9.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-db4b774ccbc93572be2fe92a70333ddeb69faac9.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-db4b774ccbc93572be2fe92a70333ddeb69faac9.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-db4b774ccbc93572be2fe92a70333ddeb69faac9.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-db4b774ccbc93572be2fe92a70333ddeb69faac9.png">
+    </a></p>
+<p>点击注册，名字随便写，随便复制一个注册码点击ok即可</p>
+<p>Proxifier配置</p>
+<p>打开proxifier，点击profile添加一个代理服务器</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-98f4fbf43de3b082dc119cf9ec059a5b01a4612a.png" title="图片3.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-98f4fbf43de3b082dc119cf9ec059a5b01a4612a.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-98f4fbf43de3b082dc119cf9ec059a5b01a4612a.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-98f4fbf43de3b082dc119cf9ec059a5b01a4612a.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-98f4fbf43de3b082dc119cf9ec059a5b01a4612a.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-98f4fbf43de3b082dc119cf9ec059a5b01a4612a.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-98f4fbf43de3b082dc119cf9ec059a5b01a4612a.png">
+    </a></p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9096bd780cc36e2e816cc981d5f002a505fb974b.png" title="图片4.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9096bd780cc36e2e816cc981d5f002a505fb974b.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9096bd780cc36e2e816cc981d5f002a505fb974b.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9096bd780cc36e2e816cc981d5f002a505fb974b.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9096bd780cc36e2e816cc981d5f002a505fb974b.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9096bd780cc36e2e816cc981d5f002a505fb974b.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9096bd780cc36e2e816cc981d5f002a505fb974b.png">
+    </a></p>
+<p>地址127.0.0.1，端口自定义，我这里是8888，协议选择https</p>
+<p>继续添加一条代理规则</p>
+<p>在我们用微信打开小程序时，进程里会多出一个WeChatAppEx</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-86b0a870351c40d04703f4e7520f04230c157947.png" title="图片5.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-86b0a870351c40d04703f4e7520f04230c157947.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-86b0a870351c40d04703f4e7520f04230c157947.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-86b0a870351c40d04703f4e7520f04230c157947.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-86b0a870351c40d04703f4e7520f04230c157947.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-86b0a870351c40d04703f4e7520f04230c157947.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-86b0a870351c40d04703f4e7520f04230c157947.png">
+    </a></p>
+<p>这个程序就是微信小程序的进程</p>
+<p>添加规则</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-68540540ceae9c54bb676907813a6524979ed581.png" title="图片7.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-68540540ceae9c54bb676907813a6524979ed581.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-68540540ceae9c54bb676907813a6524979ed581.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-68540540ceae9c54bb676907813a6524979ed581.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-68540540ceae9c54bb676907813a6524979ed581.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-68540540ceae9c54bb676907813a6524979ed581.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-68540540ceae9c54bb676907813a6524979ed581.png">
+    </a></p>
+<p>Applications就选择小程序进程应用（这里可以手动输入），Action就选择刚刚新建的代理服务器</p>
+<p>Burp配置</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e1dc66577ec9705ec6bb7a5c284258bdee6a2f43.png" title="图片8.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e1dc66577ec9705ec6bb7a5c284258bdee6a2f43.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e1dc66577ec9705ec6bb7a5c284258bdee6a2f43.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e1dc66577ec9705ec6bb7a5c284258bdee6a2f43.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e1dc66577ec9705ec6bb7a5c284258bdee6a2f43.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e1dc66577ec9705ec6bb7a5c284258bdee6a2f43.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e1dc66577ec9705ec6bb7a5c284258bdee6a2f43.png">
+    </a></p>
+<p>只要编辑代理监听器和proxifier里的代理服务器一样即可，监听127.0.0.1:8888</p>
+<p>这时微信打开一个小程序，可以看到WeChatAppEx的流量先经过proxifier，再用过127.0.0.1:8888到burp<br>
+<a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b73b6b2d230d072ed04dfd1be3c866666a3eceee.png" title="图片9.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b73b6b2d230d072ed04dfd1be3c866666a3eceee.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b73b6b2d230d072ed04dfd1be3c866666a3eceee.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b73b6b2d230d072ed04dfd1be3c866666a3eceee.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b73b6b2d230d072ed04dfd1be3c866666a3eceee.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b73b6b2d230d072ed04dfd1be3c866666a3eceee.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b73b6b2d230d072ed04dfd1be3c866666a3eceee.png">
+    </a></p>
+<p>现在就可以像平时测试web站点一样的方式在burp里对数据包进行测试</p>
+<h2 id="小程序反编译" class="headerLink">
+    <a href="#%e5%b0%8f%e7%a8%8b%e5%ba%8f%e5%8f%8d%e7%bc%96%e8%af%91" class="header-mark"></a>小程序反编译</h2><p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-349dcd9bd61e5c42664c7166219db042149fe515.png" title="图片10.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-349dcd9bd61e5c42664c7166219db042149fe515.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-349dcd9bd61e5c42664c7166219db042149fe515.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-349dcd9bd61e5c42664c7166219db042149fe515.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-349dcd9bd61e5c42664c7166219db042149fe515.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-349dcd9bd61e5c42664c7166219db042149fe515.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-349dcd9bd61e5c42664c7166219db042149fe515.png">
+    </a></p>
+<p>在微信的设置里面可以找到微信文件保存的位置</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-37df8dbd152531f07af00a221de694621c4ce8ba.png" title="图片11.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-37df8dbd152531f07af00a221de694621c4ce8ba.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-37df8dbd152531f07af00a221de694621c4ce8ba.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-37df8dbd152531f07af00a221de694621c4ce8ba.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-37df8dbd152531f07af00a221de694621c4ce8ba.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-37df8dbd152531f07af00a221de694621c4ce8ba.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-37df8dbd152531f07af00a221de694621c4ce8ba.png">
+    </a></p>
+<p>目录下的Applet就是小程序缓存文件的保存地址</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-490a935d7b05aa27a031ab6ea1f4571777b4607b.png" title="图片12.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-490a935d7b05aa27a031ab6ea1f4571777b4607b.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-490a935d7b05aa27a031ab6ea1f4571777b4607b.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-490a935d7b05aa27a031ab6ea1f4571777b4607b.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-490a935d7b05aa27a031ab6ea1f4571777b4607b.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-490a935d7b05aa27a031ab6ea1f4571777b4607b.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-490a935d7b05aa27a031ab6ea1f4571777b4607b.png">
+    </a></p>
+<p>平时使用的小程序越多，对应的文件也就越多，如果找不到自己想要测试的小程序包，可以根据修改日期来找，或者直接简单粗暴，删除所有的缓存文件，再重新打开你想要测试的小程序</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6be612003e6141ec96a3500413b4e1ea0ad08b24.png" title="图片13.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6be612003e6141ec96a3500413b4e1ea0ad08b24.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6be612003e6141ec96a3500413b4e1ea0ad08b24.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6be612003e6141ec96a3500413b4e1ea0ad08b24.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6be612003e6141ec96a3500413b4e1ea0ad08b24.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6be612003e6141ec96a3500413b4e1ea0ad08b24.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6be612003e6141ec96a3500413b4e1ea0ad08b24.png">
+    </a></p>
+<p>这时里面的就是我们要测试小程序对应的缓存文件夹</p>
+<p>点开里面就是我们要解的包</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-1aeb1bf29f642b4320fdb659fa56b89491c4c462.png" title="图片14.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-1aeb1bf29f642b4320fdb659fa56b89491c4c462.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-1aeb1bf29f642b4320fdb659fa56b89491c4c462.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-1aeb1bf29f642b4320fdb659fa56b89491c4c462.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-1aeb1bf29f642b4320fdb659fa56b89491c4c462.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-1aeb1bf29f642b4320fdb659fa56b89491c4c462.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-1aeb1bf29f642b4320fdb659fa56b89491c4c462.png">
+    </a></p>
+<p>这是一个加密的包，当用户在微信中搜索或扫描小程序二维码后，微信后台会将该小程序的相关信息打包成 .wxapkg 文件并下发到用户的设备中，这种文件格式实际上是一个压缩包，其中包含了小程序的所有代码、资源和配置文件等内容，以及一个特定的描述文件 app.json。</p>
+<p>由于是加密的包，所以先来解密，下面是大佬的解密工具链接</p>
+<p>链接：<a href="https://pan.baidu.com/s/1BzfvBVwD4vLpakX9PAyrsg?pwd=qz3z" target="_blank" rel="noopener noreferrer">https://pan.baidu.com/s/1BzfvBVwD4vLpakX9PAyrsg?pwd=qz3z</a></p>
+<p>提取码：qz3z</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-a9387f90f0446617863593bbad6cc276084dd480.png" title="图片15.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-a9387f90f0446617863593bbad6cc276084dd480.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-a9387f90f0446617863593bbad6cc276084dd480.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-a9387f90f0446617863593bbad6cc276084dd480.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-a9387f90f0446617863593bbad6cc276084dd480.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-a9387f90f0446617863593bbad6cc276084dd480.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-a9387f90f0446617863593bbad6cc276084dd480.png">
+    </a></p>
+<p>选中加密的包</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9ee25050a82e038433727e3a1632aaf2f87f2089.png" title="图片16.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9ee25050a82e038433727e3a1632aaf2f87f2089.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9ee25050a82e038433727e3a1632aaf2f87f2089.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9ee25050a82e038433727e3a1632aaf2f87f2089.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9ee25050a82e038433727e3a1632aaf2f87f2089.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9ee25050a82e038433727e3a1632aaf2f87f2089.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-9ee25050a82e038433727e3a1632aaf2f87f2089.png">
+    </a></p>
+<p>解密成功后在工具目录的wxpack目录下</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6412df6f50df64d3ac541b43a606c00751787478.png" title="图片17.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6412df6f50df64d3ac541b43a606c00751787478.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6412df6f50df64d3ac541b43a606c00751787478.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6412df6f50df64d3ac541b43a606c00751787478.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6412df6f50df64d3ac541b43a606c00751787478.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6412df6f50df64d3ac541b43a606c00751787478.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-6412df6f50df64d3ac541b43a606c00751787478.png">
+    </a></p>
+<p>接下来进行反编译</p>
+<p>首先安装nodejs，下载链接<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener noreferrer">https://nodejs.org/zh-cn/download/</a> ，安装就一直下一步就好了，安装好之后添加环境变量</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-8a4b87da4d361b9e00b334e9d05f564e2acf4e85.png" title="图片18.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-8a4b87da4d361b9e00b334e9d05f564e2acf4e85.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-8a4b87da4d361b9e00b334e9d05f564e2acf4e85.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-8a4b87da4d361b9e00b334e9d05f564e2acf4e85.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-8a4b87da4d361b9e00b334e9d05f564e2acf4e85.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-8a4b87da4d361b9e00b334e9d05f564e2acf4e85.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-8a4b87da4d361b9e00b334e9d05f564e2acf4e85.png">
+    </a></p>
+<p>加好环境变量后cmd输入命令会得到回显</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-860a62f19c4893ed97f14bbde7fc732c0ec79090.png" title="图片19.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-860a62f19c4893ed97f14bbde7fc732c0ec79090.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-860a62f19c4893ed97f14bbde7fc732c0ec79090.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-860a62f19c4893ed97f14bbde7fc732c0ec79090.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-860a62f19c4893ed97f14bbde7fc732c0ec79090.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-860a62f19c4893ed97f14bbde7fc732c0ec79090.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-860a62f19c4893ed97f14bbde7fc732c0ec79090.png">
+    </a></p>
+<p>接下来使用反编译工具wxappUnpacker</p>
+<p>原链接<a href="https://github.com/system-cpu/wxappUnpacker" target="_blank" rel="noopener noreferrer">https://github.com/system-cpu/wxappUnpacker</a></p>
+<p>网盘链接：<a href="https://pan.baidu.com/s/19O2KDqWn2Zyars8AREJ1LQ?pwd=22qj" target="_blank" rel="noopener noreferrer">https://pan.baidu.com/s/19O2KDqWn2Zyars8AREJ1LQ?pwd=22qj</a></p>
+<p>提取码：22qj</p>
+<p>来到工具目录</p>
+<p>安装</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-3a3c0d2a33dae60a85f525ec3127d4e0a96c7b89.png" title="图片20.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-3a3c0d2a33dae60a85f525ec3127d4e0a96c7b89.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-3a3c0d2a33dae60a85f525ec3127d4e0a96c7b89.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-3a3c0d2a33dae60a85f525ec3127d4e0a96c7b89.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-3a3c0d2a33dae60a85f525ec3127d4e0a96c7b89.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-3a3c0d2a33dae60a85f525ec3127d4e0a96c7b89.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-3a3c0d2a33dae60a85f525ec3127d4e0a96c7b89.png">
+    </a></p>
+<p>安装依赖</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">esprima</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">css</span><span class="o">-</span><span class="nx">tree</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">cssbeautify</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">vm2</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">uglify</span><span class="o">-</span><span class="nx">es</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">js</span><span class="o">-</span><span class="nx">beautify</span> <span class="nx">逐条执行以上命令</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>逐条执行以上命令</p>
+<p>接下来反编译</p>
+<p>执行命令</p>
+<p>node wuWxapkg.js 解密后小程序的路径</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b7d0ab204a2f80c771b94551c736a983bf8201e3.png" title="图片21.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b7d0ab204a2f80c771b94551c736a983bf8201e3.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b7d0ab204a2f80c771b94551c736a983bf8201e3.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b7d0ab204a2f80c771b94551c736a983bf8201e3.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b7d0ab204a2f80c771b94551c736a983bf8201e3.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b7d0ab204a2f80c771b94551c736a983bf8201e3.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b7d0ab204a2f80c771b94551c736a983bf8201e3.png">
+    </a></p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0af832ad5ba899b3f681e45b8602552faec4e9af.png" title="图片22.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0af832ad5ba899b3f681e45b8602552faec4e9af.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0af832ad5ba899b3f681e45b8602552faec4e9af.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0af832ad5ba899b3f681e45b8602552faec4e9af.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0af832ad5ba899b3f681e45b8602552faec4e9af.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0af832ad5ba899b3f681e45b8602552faec4e9af.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0af832ad5ba899b3f681e45b8602552faec4e9af.png">
+    </a></p>
+<p>执行完后会在被反编译的包的目录下生成一个目录</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-2a4e9e054d1c8857a5c642aeb3a11fa01d9ca54c.png" title="图片23.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-2a4e9e054d1c8857a5c642aeb3a11fa01d9ca54c.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-2a4e9e054d1c8857a5c642aeb3a11fa01d9ca54c.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-2a4e9e054d1c8857a5c642aeb3a11fa01d9ca54c.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-2a4e9e054d1c8857a5c642aeb3a11fa01d9ca54c.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-2a4e9e054d1c8857a5c642aeb3a11fa01d9ca54c.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-2a4e9e054d1c8857a5c642aeb3a11fa01d9ca54c.png">
+    </a></p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e51b317a5d1370a4703995ac1340f586c3506e47.png" title="图片24.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e51b317a5d1370a4703995ac1340f586c3506e47.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e51b317a5d1370a4703995ac1340f586c3506e47.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e51b317a5d1370a4703995ac1340f586c3506e47.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e51b317a5d1370a4703995ac1340f586c3506e47.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e51b317a5d1370a4703995ac1340f586c3506e47.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e51b317a5d1370a4703995ac1340f586c3506e47.png">
+    </a></p>
+<p>里面就是反编译过后得到的文件了</p>
+<p>下载微信开发者工具</p>
+<p>官网下载链接</p>
+<p><a href="https://servicewechat.com/wxa-dev-logic/download_redirect?type=win32_x64&amp;from=mpwiki&amp;download_version=1062308310&amp;version_type=1" target="_blank" rel="noopener noreferrer">https://servicewechat.com/wxa-dev-logic/download_redirect?type=win32_x64&amp;from=mpwiki&amp;download_version=1062308310&amp;version_type=1</a></p>
+<p>安装好后打开</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0f9ef773b1b308a080b7a8a37234980c32976343.png" title="图片25.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0f9ef773b1b308a080b7a8a37234980c32976343.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0f9ef773b1b308a080b7a8a37234980c32976343.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0f9ef773b1b308a080b7a8a37234980c32976343.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0f9ef773b1b308a080b7a8a37234980c32976343.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0f9ef773b1b308a080b7a8a37234980c32976343.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-0f9ef773b1b308a080b7a8a37234980c32976343.png">
+    </a></p>
+<p>点击加号</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ac2407b8f4015beaae078ddbeacdad16c5a7cb15.png" title="图片26.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ac2407b8f4015beaae078ddbeacdad16c5a7cb15.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ac2407b8f4015beaae078ddbeacdad16c5a7cb15.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ac2407b8f4015beaae078ddbeacdad16c5a7cb15.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ac2407b8f4015beaae078ddbeacdad16c5a7cb15.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ac2407b8f4015beaae078ddbeacdad16c5a7cb15.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ac2407b8f4015beaae078ddbeacdad16c5a7cb15.png">
+    </a></p>
+<p>目录选择反编译后的目录，后端服务选择不使用云服务，点击确定</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-bf1573b20e0d570fb18653eb664f6400e36c8f4c.png" title="图片29.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-bf1573b20e0d570fb18653eb664f6400e36c8f4c.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-bf1573b20e0d570fb18653eb664f6400e36c8f4c.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-bf1573b20e0d570fb18653eb664f6400e36c8f4c.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-bf1573b20e0d570fb18653eb664f6400e36c8f4c.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-bf1573b20e0d570fb18653eb664f6400e36c8f4c.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-bf1573b20e0d570fb18653eb664f6400e36c8f4c.png">
+    </a></p>
+<p>就可以查看小程序的js代码了</p>
+<p>测试</p>
+<p>点击发送验证码的功能</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-d430d1c3caa7362d50e5365286310c2fb6568469.png" title="图片30.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-d430d1c3caa7362d50e5365286310c2fb6568469.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-d430d1c3caa7362d50e5365286310c2fb6568469.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-d430d1c3caa7362d50e5365286310c2fb6568469.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-d430d1c3caa7362d50e5365286310c2fb6568469.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-d430d1c3caa7362d50e5365286310c2fb6568469.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-d430d1c3caa7362d50e5365286310c2fb6568469.png">
+    </a></p>
+<p>是/api/shop/ipad/login/sms路径</p>
+<p>在代码里面找到发送功能的代码</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b6f2b86056cb7d8f3d5473db86cdc295c09062e2.png" title="图片31.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b6f2b86056cb7d8f3d5473db86cdc295c09062e2.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b6f2b86056cb7d8f3d5473db86cdc295c09062e2.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b6f2b86056cb7d8f3d5473db86cdc295c09062e2.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b6f2b86056cb7d8f3d5473db86cdc295c09062e2.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b6f2b86056cb7d8f3d5473db86cdc295c09062e2.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b6f2b86056cb7d8f3d5473db86cdc295c09062e2.png">
+    </a></p>
+<p>发现只有/login/sms</p>
+<p>现在基本确认了路径访问规则，将接口拼接到/api/shop/ipad之后，找其他接口拼接尝试有没有未授权</p>
+<p>找一个首页的路径拼接</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-f20f4a48c23e12105a4ea8ceedb1294ea5b6c802.png" title="图片32.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-f20f4a48c23e12105a4ea8ceedb1294ea5b6c802.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-f20f4a48c23e12105a4ea8ceedb1294ea5b6c802.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-f20f4a48c23e12105a4ea8ceedb1294ea5b6c802.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-f20f4a48c23e12105a4ea8ceedb1294ea5b6c802.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-f20f4a48c23e12105a4ea8ceedb1294ea5b6c802.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-f20f4a48c23e12105a4ea8ceedb1294ea5b6c802.png">
+    </a></p>
+<p>直接发包返回404</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ef9bd48622617be187e188c7051c8d5db8775f59.png" title="图片33.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ef9bd48622617be187e188c7051c8d5db8775f59.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ef9bd48622617be187e188c7051c8d5db8775f59.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ef9bd48622617be187e188c7051c8d5db8775f59.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ef9bd48622617be187e188c7051c8d5db8775f59.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ef9bd48622617be187e188c7051c8d5db8775f59.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-ef9bd48622617be187e188c7051c8d5db8775f59.png">
+    </a></p>
+<p>拼接/api/shop/ipad之后发包</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-7d1ea317abb2a47b3e7ffc83a7503d40b5ff3c65.png" title="图片34.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-7d1ea317abb2a47b3e7ffc83a7503d40b5ff3c65.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-7d1ea317abb2a47b3e7ffc83a7503d40b5ff3c65.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-7d1ea317abb2a47b3e7ffc83a7503d40b5ff3c65.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-7d1ea317abb2a47b3e7ffc83a7503d40b5ff3c65.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-7d1ea317abb2a47b3e7ffc83a7503d40b5ff3c65.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-7d1ea317abb2a47b3e7ffc83a7503d40b5ff3c65.png">
+    </a></p>
+<p>可以确定路径是对了，但是不存在未授权，这一个路径不存在，并不完全代表所有接口都不存在，也许有那么几个接口漏掉了没做鉴权，就会造成未授权，信息泄露之类的</p>
+<h2 id="一不小心getshell" class="headerLink">
+    <a href="#%e4%b8%80%e4%b8%8d%e5%b0%8f%e5%bf%83getshell" class="header-mark"></a>一不小心getshell</h2><p>继续看刚刚发送验证码的接口，看看有没有短信轰炸之类的</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-296f854c1c47736c116f9fc30fc2a4a7c36a81e4.png" title="图片35.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-296f854c1c47736c116f9fc30fc2a4a7c36a81e4.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-296f854c1c47736c116f9fc30fc2a4a7c36a81e4.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-296f854c1c47736c116f9fc30fc2a4a7c36a81e4.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-296f854c1c47736c116f9fc30fc2a4a7c36a81e4.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-296f854c1c47736c116f9fc30fc2a4a7c36a81e4.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-296f854c1c47736c116f9fc30fc2a4a7c36a81e4.png">
+    </a></p>
+<p>访问/login/sms接口，并且以post方式接收mobile参数</p>
+<p>构造包</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e183fd21bd663084e938e8deaee9ca4760809aa8.png" title="图片36.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e183fd21bd663084e938e8deaee9ca4760809aa8.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e183fd21bd663084e938e8deaee9ca4760809aa8.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e183fd21bd663084e938e8deaee9ca4760809aa8.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e183fd21bd663084e938e8deaee9ca4760809aa8.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e183fd21bd663084e938e8deaee9ca4760809aa8.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-e183fd21bd663084e938e8deaee9ca4760809aa8.png">
+    </a></p>
+<p>输入一个不存在的手机号，显示手机号码有误</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-44fc2bba3a85a267d6fcbf00dfaeec8f2fee9cc0.png" title="图片37.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-44fc2bba3a85a267d6fcbf00dfaeec8f2fee9cc0.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-44fc2bba3a85a267d6fcbf00dfaeec8f2fee9cc0.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-44fc2bba3a85a267d6fcbf00dfaeec8f2fee9cc0.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-44fc2bba3a85a267d6fcbf00dfaeec8f2fee9cc0.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-44fc2bba3a85a267d6fcbf00dfaeec8f2fee9cc0.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-44fc2bba3a85a267d6fcbf00dfaeec8f2fee9cc0.png">
+    </a></p>
+<p>输入一个真实的也提示有误，有可能只有系统存在的账户手机号才有效</p>
+<p>看到参数习惯性打个单引号</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-822b5eeeef60b8ee854b02f465b218512bd771ac.png" title="图片38.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-822b5eeeef60b8ee854b02f465b218512bd771ac.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-822b5eeeef60b8ee854b02f465b218512bd771ac.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-822b5eeeef60b8ee854b02f465b218512bd771ac.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-822b5eeeef60b8ee854b02f465b218512bd771ac.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-822b5eeeef60b8ee854b02f465b218512bd771ac.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-822b5eeeef60b8ee854b02f465b218512bd771ac.png">
+    </a></p>
+<p>哦豁，再加个单引号</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-13df49f5eb179f9cecdf0f768092c79b2eeccb9c.png" title="图片39.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-13df49f5eb179f9cecdf0f768092c79b2eeccb9c.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-13df49f5eb179f9cecdf0f768092c79b2eeccb9c.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-13df49f5eb179f9cecdf0f768092c79b2eeccb9c.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-13df49f5eb179f9cecdf0f768092c79b2eeccb9c.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-13df49f5eb179f9cecdf0f768092c79b2eeccb9c.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-13df49f5eb179f9cecdf0f768092c79b2eeccb9c.png">
+    </a></p>
+<p>哦豁+1<br>
+看返回数据包可以判断出用的.net，个人觉得这个框架是很多注入的，尝试手注没有回显，sqlmap一把梭，https加上&ndash;force-ssl参数</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-fd575a3ab46f2f4d087c3afd33016ac5454dfdb0.png" title="图片40.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-fd575a3ab46f2f4d087c3afd33016ac5454dfdb0.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-fd575a3ab46f2f4d087c3afd33016ac5454dfdb0.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-fd575a3ab46f2f4d087c3afd33016ac5454dfdb0.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-fd575a3ab46f2f4d087c3afd33016ac5454dfdb0.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-fd575a3ab46f2f4d087c3afd33016ac5454dfdb0.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-fd575a3ab46f2f4d087c3afd33016ac5454dfdb0.png">
+    </a></p>
+<p>成功跑出SQL注入，而且是堆叠注入，尝试&ndash;os-shell</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b89b572d63ee1722e98b471b55605837b50085c4.png" title="图片41.png" data-thumbnail="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b89b572d63ee1722e98b471b55605837b50085c4.png">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b89b572d63ee1722e98b471b55605837b50085c4.png"
+            srcset="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b89b572d63ee1722e98b471b55605837b50085c4.png, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b89b572d63ee1722e98b471b55605837b50085c4.png 1.5x, https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b89b572d63ee1722e98b471b55605837b50085c4.png 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/attack_forum/2023/10/attach-b89b572d63ee1722e98b471b55605837b50085c4.png">
+    </a></p>
+<p>直接下班</p></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-06-14</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>,&nbsp;<a href="/tags/%E6%8A%93%E5%8C%85/">抓包</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/" class="prev" rel="prev" title="验证码渗透最全总结"><i class="fas fa-angle-left fa-fw"></i>验证码渗透最全总结</a>
+            <a href="/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/" class="next" rel="next" title="教育行业渗透打点">教育行业渗透打点<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"Ov23li64ijr3L89wsfoj","clientSecret":"a291b75ee7aaf91f94e71d89a39cf8098ee8ed80","id":"2024-06-14T18:24:56+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"微信小程序抓包及测试"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>任意用户登录漏洞挖掘思路 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="任意用户登录漏洞挖掘思路" />
+<meta property="og:description" content="转载自： https://forum.butian.net/share/2553 任意用户登录漏洞挖掘思路 前言任意用户登录漏洞以利用漏洞利用难度低、危害高、奖金高已经成为src/众测漏洞挖掘中的香饽饽，本文将分享" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/" /><meta property="og:image" content="https://www.bysec.cn/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-20T18:17:14+08:00" />
+<meta property="article:modified_time" content="2024-01-20T18:17:14+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.bysec.cn/logo.png" /><meta name="twitter:title" content="任意用户登录漏洞挖掘思路"/>
+<meta name="twitter:description" content="转载自： https://forum.butian.net/share/2553 任意用户登录漏洞挖掘思路 前言任意用户登录漏洞以利用漏洞利用难度低、危害高、奖金高已经成为src/众测漏洞挖掘中的香饽饽，本文将分享"/>
+<meta name="application-name" content="bysec">
+<meta name="apple-mobile-web-app-title" content="bysec">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=100"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/" /><link rel="prev" href="https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/" /><link rel="next" href="https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "任意用户登录漏洞挖掘思路",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.bysec.cn\/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF\/"
+        },"genre": "posts","keywords": "总结, 用户登录","wordcount":  2586 ,
+        "url": "https:\/\/www.bysec.cn\/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF\/","datePublished": "2024-01-20T18:17:14+08:00","dateModified": "2024-01-20T18:17:14+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "bysec"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="bysec">bysec</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa-fw fas fa-home'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa-fw fas fa-archive'></i> 归档 </a><a class="menu-item" href="/categories/"><i class='fa-fw fas fa-folder-open'></i> 分类 </a><a class="menu-item" href="/tags/"><i class='fa-fw fas fa-tags'></i> 标签 </a><a class="menu-item" href="/link/"><i class='fa-fw fas fa-link'></i> 友链 </a><a class="menu-item" href="/about/"><i class='fa-fw fas fa-comment-dots'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="bysec">bysec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa-fw fas fa-home'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa-fw fas fa-archive'></i>归档</a><a class="menu-item" href="/categories/" title=""><i class='fa-fw fas fa-folder-open'></i>分类</a><a class="menu-item" href="/tags/" title=""><i class='fa-fw fas fa-tags'></i>标签</a><a class="menu-item" href="/link/" title=""><i class='fa-fw fas fa-link'></i>友链</a><a class="menu-item" href="/about/" title=""><i class='fa-fw fas fa-comment-dots'></i>关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#任意用户登录漏洞挖掘思路">任意用户登录漏洞挖掘思路</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#1手机验证码问题导致的任意用户登录">1.手机验证码问题导致的任意用户登录</a>
+      <ul>
+        <li><a href="#11-验证码爆破">1.1 验证码爆破</a></li>
+        <li><a href="#12-验证码明文返回">1.2 验证码明文返回</a></li>
+        <li><a href="#13-存在万能验证码">1.3 存在万能验证码</a></li>
+        <li><a href="#14-验证码未绑定用户">1.4 验证码未绑定用户</a></li>
+        <li><a href="#15-获取验证码的手机号字段可双写">1.5 获取验证码的手机号字段可双写</a></li>
+        <li><a href="#16-验证码为空任意验证码可成功验证">1.6 验证码为空/任意验证码可成功验证</a></li>
+      </ul>
+    </li>
+    <li><a href="#2凭证安全问题导致的任意用户登录">2.凭证安全问题导致的任意用户登录</a>
+      <ul>
+        <li><a href="#21-凭证泄露">2.1 凭证泄露</a>
+          <ul>
+            <li><a href="#211-页面缓存被搜索引擎抓取">2.1.1 页面缓存被搜索引擎抓取</a></li>
+            <li><a href="#212-httptracedruid等组件中的凭证泄露">2.1.2 httptrace/druid等组件中的凭证泄露</a>
+              <ul>
+                <li><a href="#httptrace">httptrace</a></li>
+                <li><a href="#durid">durid</a></li>
+              </ul>
+            </li>
+            <li><a href="#212-sessionkey泄露">2.1.2 sessionkey泄露</a></li>
+            <li><a href="#213-其他接口中的信息泄露">2.1.3 其他接口中的信息泄露</a></li>
+          </ul>
+        </li>
+        <li><a href="#22-凭证可伪造">2.2 凭证可伪造</a>
+          <ul>
+            <li><a href="#221-jwt未验参弱密钥">2.2.1 jwt未验参/弱密钥</a>
+              <ul>
+                <li><a href="#jwt未验参">jwt未验参</a></li>
+                <li><a href="#jwt弱密钥">jwt弱密钥</a></li>
+              </ul>
+            </li>
+            <li><a href="#222-弱cookie">2.2.2 弱cookie</a></li>
+          </ul>
+        </li>
+        <li><a href="#23-凭证过早返回">2.3 凭证过早返回</a></li>
+      </ul>
+    </li>
+    <li><a href="#3逻辑漏洞导致的任意用户登录">3.逻辑漏洞导致的任意用户登录</a>
+      <ul>
+        <li><a href="#31-登录完全依赖数据包中的参数且参数可控">3.1 登录完全依赖数据包中的参数且参数可控</a>
+          <ul>
+            <li><a href="#修改第一个请求的返回包">修改第一个请求的返回包</a></li>
+            <li><a href="#修改第二个请求的请求包">修改第二个请求的请求包</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-更改登录type">3.2 更改登录type</a></li>
+        <li><a href="#33-账号数据覆盖">3.3 账号数据覆盖</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">任意用户登录漏洞挖掘思路</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">bysec</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw"></i>学习</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-20">2024-01-20</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-01-20">2024-01-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2586 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#任意用户登录漏洞挖掘思路">任意用户登录漏洞挖掘思路</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#1手机验证码问题导致的任意用户登录">1.手机验证码问题导致的任意用户登录</a>
+      <ul>
+        <li><a href="#11-验证码爆破">1.1 验证码爆破</a></li>
+        <li><a href="#12-验证码明文返回">1.2 验证码明文返回</a></li>
+        <li><a href="#13-存在万能验证码">1.3 存在万能验证码</a></li>
+        <li><a href="#14-验证码未绑定用户">1.4 验证码未绑定用户</a></li>
+        <li><a href="#15-获取验证码的手机号字段可双写">1.5 获取验证码的手机号字段可双写</a></li>
+        <li><a href="#16-验证码为空任意验证码可成功验证">1.6 验证码为空/任意验证码可成功验证</a></li>
+      </ul>
+    </li>
+    <li><a href="#2凭证安全问题导致的任意用户登录">2.凭证安全问题导致的任意用户登录</a>
+      <ul>
+        <li><a href="#21-凭证泄露">2.1 凭证泄露</a>
+          <ul>
+            <li><a href="#211-页面缓存被搜索引擎抓取">2.1.1 页面缓存被搜索引擎抓取</a></li>
+            <li><a href="#212-httptracedruid等组件中的凭证泄露">2.1.2 httptrace/druid等组件中的凭证泄露</a>
+              <ul>
+                <li><a href="#httptrace">httptrace</a></li>
+                <li><a href="#durid">durid</a></li>
+              </ul>
+            </li>
+            <li><a href="#212-sessionkey泄露">2.1.2 sessionkey泄露</a></li>
+            <li><a href="#213-其他接口中的信息泄露">2.1.3 其他接口中的信息泄露</a></li>
+          </ul>
+        </li>
+        <li><a href="#22-凭证可伪造">2.2 凭证可伪造</a>
+          <ul>
+            <li><a href="#221-jwt未验参弱密钥">2.2.1 jwt未验参/弱密钥</a>
+              <ul>
+                <li><a href="#jwt未验参">jwt未验参</a></li>
+                <li><a href="#jwt弱密钥">jwt弱密钥</a></li>
+              </ul>
+            </li>
+            <li><a href="#222-弱cookie">2.2.2 弱cookie</a></li>
+          </ul>
+        </li>
+        <li><a href="#23-凭证过早返回">2.3 凭证过早返回</a></li>
+      </ul>
+    </li>
+    <li><a href="#3逻辑漏洞导致的任意用户登录">3.逻辑漏洞导致的任意用户登录</a>
+      <ul>
+        <li><a href="#31-登录完全依赖数据包中的参数且参数可控">3.1 登录完全依赖数据包中的参数且参数可控</a>
+          <ul>
+            <li><a href="#修改第一个请求的返回包">修改第一个请求的返回包</a></li>
+            <li><a href="#修改第二个请求的请求包">修改第二个请求的请求包</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-更改登录type">3.2 更改登录type</a></li>
+        <li><a href="#33-账号数据覆盖">3.3 账号数据覆盖</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
+</blockquote>
+<h2 id="任意用户登录漏洞挖掘思路" class="headerLink">
+    <a href="#%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af" class="header-mark"></a>任意用户登录漏洞挖掘思路</h2><h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>任意用户登录漏洞以利用漏洞利用难度低、危害高、奖金高已经成为src/众测漏洞挖掘中的香饽饽，本文将分享一下众测/src中任意用户登录漏洞的挖掘思路。</p>
+<h2 id="1手机验证码问题导致的任意用户登录" class="headerLink">
+    <a href="#1%e6%89%8b%e6%9c%ba%e9%aa%8c%e8%af%81%e7%a0%81%e9%97%ae%e9%a2%98%e5%af%bc%e8%87%b4%e7%9a%84%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95" class="header-mark"></a>1.手机验证码问题导致的任意用户登录</h2><h3 id="11-验证码爆破" class="headerLink">
+    <a href="#11-%e9%aa%8c%e8%af%81%e7%a0%81%e7%88%86%e7%a0%b4" class="header-mark"></a>1.1 验证码爆破</h3><p>当登录流程使用手机验证码登录，没有图片验证码/图片验证码可重用/图片验证码简单可识别（可以使用captcha-killer-modified插件）且后端没有限制手机验证码验证错误次数时，可以尝试爆破手机验证码登录其他用户。</p>
+<p>4位验证码的爆破老生常谈不再赘述；随着厂商们服务器性能的提高，服务器的rps的上升也使得6位验证码的爆破越来越快，可以使用如下方法爆破（！！！需留意服务器的rps以及测试厂商的注意事项，rps低的老系统或者厂商禁止批量爆破的项目谨慎使用6位验证码的爆破！！！）：</p>
+<p>使用burpsuite的Turbo Intruder插件，编写如下脚本：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">import</span> <span class="nx">re</span> <span class="nx">def</span> <span class="nx">queueRequests</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">wordlists</span><span class="p">)</span><span class="o">:</span> <span class="nx">engine</span> <span class="o">=</span> <span class="nx">RequestEngine</span><span class="p">(</span><span class="nx">endpoint</span><span class="o">=</span><span class="nx">target</span><span class="o">.</span><span class="nx">endpoint</span><span class="p">,</span> <span class="nx">concurrentConnections</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="nx">requestsPerConnection</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="nx">pipeline</span><span class="o">=</span><span class="k">True</span> <span class="p">)</span> <span class="k">for</span> <span class="nx">i</span> <span class="nx">in</span> <span class="nx">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span><span class="o">:</span> <span class="c1">#生成六位验证码字典 number = &#34;{:06d}&#34;.format(i) engine.queue(target.req, number.rstrip()) def handleResponse(req, interesting): # currently available attributes are req.status, req.wordcount, req.length and req.response if req.status &lt;404: &#39;&#39;&#39;res = re.findall(&#39;Msg&#34;:&#34;(.*?)&#34;&#39;,req.response)[0] if len(res)&gt;18:&#39;&#39;&#39; #六位数的验证码爆破结果展示列太多，可根据实际情况自行筛选展示 table.add(req)
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>成功案例如下：</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg" title="image-20231026152744211" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg, https://shs3.b.qianxin.com/butian_public/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg">
+    </a></p>
+<h3 id="12-验证码明文返回" class="headerLink">
+    <a href="#12-%e9%aa%8c%e8%af%81%e7%a0%81%e6%98%8e%e6%96%87%e8%bf%94%e5%9b%9e" class="header-mark"></a>1.2 验证码明文返回</h3><p>获取手机验证码时，验证码直接在返回包里</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg" title="image-20231026153621371" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg, https://shs3.b.qianxin.com/butian_public/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg">
+    </a></p>
+<h3 id="13-存在万能验证码" class="headerLink">
+    <a href="#13-%e5%ad%98%e5%9c%a8%e4%b8%87%e8%83%bd%e9%aa%8c%e8%af%81%e7%a0%81" class="header-mark"></a>1.3 存在万能验证码</h3><p>一般是测试为了功能测试方便，设置了诸如000000，123456（六位验证码爆破能发现）之类的万能验证码，项目上线时忘记下掉，导致任意用户登录</p>
+<h3 id="14-验证码未绑定用户" class="headerLink">
+    <a href="#14-%e9%aa%8c%e8%af%81%e7%a0%81%e6%9c%aa%e7%bb%91%e5%ae%9a%e7%94%a8%e6%88%b7" class="header-mark"></a>1.4 验证码未绑定用户</h3><p>a.后端仅验证了验证码是否正确，没有验证验证码与获取手机号的对应关系，导致可以先输入自己的手机号A获取验证码，再输入他人手机号B获取验证码后，填写自己手机号A接收到的验证码，达到登录手机号B的目的</p>
+<p>b.后端仅验证码了手机号与验证码是否一致，并未校验手机号是否为号主本人的,导致可以使用自己的手机号+验证码绕过。常见于用户绑定的功能处。举个栗子：</p>
+<p>某系统输入商户号与手机号可绑定到该用户</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg" title="image-20231026155939201" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg, https://shs3.b.qianxin.com/butian_public/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg">
+    </a></p>
+<p>通过用户注册的功能处，输入自己的手机号获取验证码</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg" title="image-20231026160036332" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg, https://shs3.b.qianxin.com/butian_public/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg">
+    </a></p>
+<p>返回绑定功能处，输入任意验证码抓包，将手机号与验证码字段改为自己的手机号+验证码</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg" title="image-20231026160250988" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg, https://shs3.b.qianxin.com/butian_public/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg">
+    </a></p>
+<p>成功登录他人账号</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg" title="image-20231026160327497" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg, https://shs3.b.qianxin.com/butian_public/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg">
+    </a></p>
+<h3 id="15-获取验证码的手机号字段可双写" class="headerLink">
+    <a href="#15-%e8%8e%b7%e5%8f%96%e9%aa%8c%e8%af%81%e7%a0%81%e7%9a%84%e6%89%8b%e6%9c%ba%e5%8f%b7%e5%ad%97%e6%ae%b5%e5%8f%af%e5%8f%8c%e5%86%99" class="header-mark"></a>1.5 获取验证码的手机号字段可双写</h3><p>输入手机号获取验证码时抓包，双写手机号字段，使得两个手机号获取到同一个验证码，便可以登录其他用户</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg" title="image-20231026160708565" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg, https://shs3.b.qianxin.com/butian_public/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg">
+    </a></p>
+<p>输入自己的手机号抓包，将手机字段后面加一个逗号或者分号后再加一个手机号，或者双写手机号字段phone=13333333333&amp;phone=18888888888，当两个手机号均收到一个验证码时大概率漏洞存在。使用自己的手机号便可以任意登录其他手机号</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f1298410bdcead04991a6070a151953c584540f0068d1.jpg" title="image-20231026161544754" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f1298410bdcead04991a6070a151953c584540f0068d1.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f1298410bdcead04991a6070a151953c584540f0068d1.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f1298410bdcead04991a6070a151953c584540f0068d1.jpg, https://shs3.b.qianxin.com/butian_public/f1298410bdcead04991a6070a151953c584540f0068d1.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f1298410bdcead04991a6070a151953c584540f0068d1.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f1298410bdcead04991a6070a151953c584540f0068d1.jpg">
+    </a></p>
+<h3 id="16-验证码为空任意验证码可成功验证" class="headerLink">
+    <a href="#16-%e9%aa%8c%e8%af%81%e7%a0%81%e4%b8%ba%e7%a9%ba%e4%bb%bb%e6%84%8f%e9%aa%8c%e8%af%81%e7%a0%81%e5%8f%af%e6%88%90%e5%8a%9f%e9%aa%8c%e8%af%81" class="header-mark"></a>1.6 验证码为空/任意验证码可成功验证</h3><p>比较奇葩的例子，验证码为空时，手机号正确则成功登录（账号密码登录体系也发现过这种情况，空密码的情况下账号存在即登录）</p>
+<h2 id="2凭证安全问题导致的任意用户登录" class="headerLink">
+    <a href="#2%e5%87%ad%e8%af%81%e5%ae%89%e5%85%a8%e9%97%ae%e9%a2%98%e5%af%bc%e8%87%b4%e7%9a%84%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95" class="header-mark"></a>2.凭证安全问题导致的任意用户登录</h2><h3 id="21-凭证泄露" class="headerLink">
+    <a href="#21-%e5%87%ad%e8%af%81%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1 凭证泄露</h3><h4 id="211-页面缓存被搜索引擎抓取" class="headerLink">
+    <a href="#211-%e9%a1%b5%e9%9d%a2%e7%bc%93%e5%ad%98%e8%a2%ab%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e6%8a%93%e5%8f%96" class="header-mark"></a>2.1.1 页面缓存被搜索引擎抓取</h4><p>搜索引擎搜索该域名，发现有登录后的页面被抓取，直接访问登录目标账户</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg" title="image-20231026111018248" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg, https://shs3.b.qianxin.com/butian_public/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg">
+    </a></p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg" title="image-20231026111129791" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg, https://shs3.b.qianxin.com/butian_public/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg">
+    </a></p>
+<h4 id="212-httptracedruid等组件中的凭证泄露" class="headerLink">
+    <a href="#212-httptracedruid%e7%ad%89%e7%bb%84%e4%bb%b6%e4%b8%ad%e7%9a%84%e5%87%ad%e8%af%81%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.2 httptrace/druid等组件中的凭证泄露</h4><h5 id="httptrace" class="headerLink">
+    <a href="#httptrace" class="header-mark"></a>httptrace</h5><p>spring的httptrace端点往往会记录用户的会话信息，若发现spring未授权访问且存在类似端点可以访问的话，可尝试获取用户凭证进行登录</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg" title="image-20231026163705868" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg, https://shs3.b.qianxin.com/butian_public/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg">
+    </a></p>
+<h5 id="durid" class="headerLink">
+    <a href="#durid" class="header-mark"></a>durid</h5><p>druid的session监控若发现有效的会话信息时，可以通过此登录任意用户，将druid的未授权中危漏洞提升至高危</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg" title="image-20231026113057179" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg, https://shs3.b.qianxin.com/butian_public/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg">
+    </a></p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg" title="image-20231026113234298" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg, https://shs3.b.qianxin.com/butian_public/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg">
+    </a></p>
+<h4 id="212-sessionkey泄露" class="headerLink">
+    <a href="#212-sessionkey%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.2 sessionkey泄露</h4><p>微信小程序官方提供了一套微信快捷登录的登录逻辑，用户授权手机号快捷登录时，会将本地的手机号使用sessionkey和iv进行aes加密，后端解密后返回该手机号的登录凭证。当sessionkey发生泄露时，攻击者便可以伪造手机号登录任意手机号</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg" title="image-20231026164613313" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg, https://shs3.b.qianxin.com/butian_public/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg">
+    </a></p>
+<p>修改任意手机号，利用sessionkey和iv重新加密数据</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg" title="image-20231026164903153" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg, https://shs3.b.qianxin.com/butian_public/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg">
+    </a></p>
+<p>成功登录他人账号</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg" title="image-20231026165003227" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg, https://shs3.b.qianxin.com/butian_public/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg">
+    </a></p>
+<h4 id="213-其他接口中的信息泄露" class="headerLink">
+    <a href="#213-%e5%85%b6%e4%bb%96%e6%8e%a5%e5%8f%a3%e4%b8%ad%e7%9a%84%e4%bf%a1%e6%81%af%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.3 其他接口中的信息泄露</h4><p>这个一般发现于js或者api-docs中的某些特殊接口，例如getToken之类的，有没有取决于开发有没有开发类似的功能接口</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg" title="image-20231026165405684" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg, https://shs3.b.qianxin.com/butian_public/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg">
+    </a></p>
+<h3 id="22-凭证可伪造" class="headerLink">
+    <a href="#22-%e5%87%ad%e8%af%81%e5%8f%af%e4%bc%aa%e9%80%a0" class="header-mark"></a>2.2 凭证可伪造</h3><h4 id="221-jwt未验参弱密钥" class="headerLink">
+    <a href="#221-jwt%e6%9c%aa%e9%aa%8c%e5%8f%82%e5%bc%b1%e5%af%86%e9%92%a5" class="header-mark"></a>2.2.1 jwt未验参/弱密钥</h4><p>系统使用jwt作为认证字段，且其中关键用户信息字段可以遍历时，若未验参或者使用弱密钥时，便可以将用户信息字段进行更改，删除/爆破弱密钥重新生成签名，到达任意用户登录</p>
+<h5 id="jwt未验参" class="headerLink">
+    <a href="#jwt%e6%9c%aa%e9%aa%8c%e5%8f%82" class="header-mark"></a>jwt未验参</h5><p>删除签名部分(或者更改头部中的alg为none再删除签名)，访问登录后的接口成功访问，说明jwt未验参()</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg" title="image-20231026170046925" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg, https://shs3.b.qianxin.com/butian_public/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg">
+    </a></p>
+<p>遍历data字段即可登录其他用户（此处的data为用户id）</p>
+<h5 id="jwt弱密钥" class="headerLink">
+    <a href="#jwt%e5%bc%b1%e5%af%86%e9%92%a5" class="header-mark"></a>jwt弱密钥</h5><p>jwt使用了弱密钥时，爆破到弱密钥后同样修改jwt中的用户信息字段，使用密钥重新生成签名即可获取到其他用户的jwt字段</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg" title="image-20231026103900241" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg, https://shs3.b.qianxin.com/butian_public/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg">
+    </a></p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg" title="image-20231026103943886" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg, https://shs3.b.qianxin.com/butian_public/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg">
+    </a></p>
+<h4 id="222-弱cookie" class="headerLink">
+    <a href="#222-%e5%bc%b1cookie" class="header-mark"></a>2.2.2 弱cookie</h4><p>系统使用cookie认证，且cookie字段可伪造</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg" title="image-20231026170524323" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg, https://shs3.b.qianxin.com/butian_public/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg">
+    </a></p>
+<h3 id="23-凭证过早返回" class="headerLink">
+    <a href="#23-%e5%87%ad%e8%af%81%e8%bf%87%e6%97%a9%e8%bf%94%e5%9b%9e" class="header-mark"></a>2.3 凭证过早返回</h3><p>一般正常的登录流程为服务端校验完用户身份后，返回用户凭证，但某些系统由于登录前会有很多的查询用户信息类的功能请求，经常导致在登录验证前就返回了用户凭证。</p>
+<p>某金融项目，输入手机号会先去查询手机号是否为已注册用户，是的话进入用户信息查询的逻辑，再跳转登录。在信息查询的阶段过早返回了sessionid,导致任意用户登录</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg" title="image-20231026171141852" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg, https://shs3.b.qianxin.com/butian_public/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg">
+    </a></p>
+<h2 id="3逻辑漏洞导致的任意用户登录" class="headerLink">
+    <a href="#3%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e%e5%af%bc%e8%87%b4%e7%9a%84%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95" class="header-mark"></a>3.逻辑漏洞导致的任意用户登录</h2><h3 id="31-登录完全依赖数据包中的参数且参数可控" class="headerLink">
+    <a href="#31-%e7%99%bb%e5%bd%95%e5%ae%8c%e5%85%a8%e4%be%9d%e8%b5%96%e6%95%b0%e6%8d%ae%e5%8c%85%e4%b8%ad%e7%9a%84%e5%8f%82%e6%95%b0%e4%b8%94%e5%8f%82%e6%95%b0%e5%8f%af%e6%8e%a7" class="header-mark"></a>3.1 登录完全依赖数据包中的参数且参数可控</h3><p>最常规的任意用户登录漏洞，常见于两步/多步登录的登录逻辑处</p>
+<p>以两步登录为例，登录输入账号密码/手机号验证码/其他的凭证信息后第一个请求校验其正确性后，第二个请求根据后端返回的账号/手机号/用户id等字段去获取用户凭证的登录逻辑。</p>
+<p>只要修改第一个请求中的返回包或者修改第二个请求中的字段即可</p>
+<h4 id="修改第一个请求的返回包" class="headerLink">
+    <a href="#%e4%bf%ae%e6%94%b9%e7%ac%ac%e4%b8%80%e4%b8%aa%e8%af%b7%e6%b1%82%e7%9a%84%e8%bf%94%e5%9b%9e%e5%8c%85" class="header-mark"></a>修改第一个请求的返回包</h4><p>当请求字段加密时，此方法非常便捷</p>
+<p>以下为例</p>
+<p>分析登录流程为，第一个请求请求微信接口获取用户手机号，返回到一个请求的返回包中</p>
+<p>第二个请求获取返回包中的手机号加密发给服务端，返回其登录凭证</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg" title="image-20231026175959686" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg, https://shs3.b.qianxin.com/butian_public/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg">
+    </a></p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg" title="image-20231026180521839" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg, https://shs3.b.qianxin.com/butian_public/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg">
+    </a></p>
+<p>所以此处只需要替换第一个请求包的返回包中的手机号即可</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg" title="image-20231026180607177" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg, https://shs3.b.qianxin.com/butian_public/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg">
+    </a></p>
+<h4 id="修改第二个请求的请求包" class="headerLink">
+    <a href="#%e4%bf%ae%e6%94%b9%e7%ac%ac%e4%ba%8c%e4%b8%aa%e8%af%b7%e6%b1%82%e7%9a%84%e8%af%b7%e6%b1%82%e5%8c%85" class="header-mark"></a>修改第二个请求的请求包</h4><p>如下登录数据包，直接更改其中手机号即可</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg" title="image-20231026181117618" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg, https://shs3.b.qianxin.com/butian_public/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg">
+    </a></p>
+<h3 id="32-更改登录type" class="headerLink">
+    <a href="#32-%e6%9b%b4%e6%94%b9%e7%99%bb%e5%bd%95type" class="header-mark"></a>3.2 更改登录type</h3><p>部分系统有免密登录/快捷登录之类的功能，只要一个账号就能登录，当遇到登录数据包中含有type之类的字段时，可以尝试此方法</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg" title="image-20231026183616031" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg, https://shs3.b.qianxin.com/butian_public/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg">
+    </a></p>
+<h3 id="33-账号数据覆盖" class="headerLink">
+    <a href="#33-%e8%b4%a6%e5%8f%b7%e6%95%b0%e6%8d%ae%e8%a6%86%e7%9b%96" class="header-mark"></a>3.3 账号数据覆盖</h3><p>常见于用账号信息更新处，例如修改手机号、账户重新绑定功能、修改账号等功能点处</p>
+<p>以修改手机号为例，此处修改需要输入新手机号与新手机号的验证码</p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg" title="image-20231026104342413" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg, https://shs3.b.qianxin.com/butian_public/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg">
+    </a></p>
+<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg" title="image-20231026104439045" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://shs3.b.qianxin.com/butian_public/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg"
+            srcset="https://shs3.b.qianxin.com/butian_public/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg, https://shs3.b.qianxin.com/butian_public/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg 1.5x, https://shs3.b.qianxin.com/butian_public/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg 2x"
+            sizes="auto"
+            alt="https://shs3.b.qianxin.com/butian_public/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg">
+    </a></p>
+<p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-01-20</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%80%BB%E7%BB%93/">总结</a>,&nbsp;<a href="/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/">用户登录</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/burpsuite%E5%AE%89%E8%A3%85/" class="prev" rel="prev" title="BurpSuite安装"><i class="fas fa-angle-left fa-fw"></i>BurpSuite安装</a>
+            <a href="/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/" class="next" rel="next" title="攻防实战外网突破">攻防实战外网突破<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"Ov23li64ijr3L89wsfoj","clientSecret":"a291b75ee7aaf91f94e71d89a39cf8098ee8ed80","id":"2024-01-20T18:17:14+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"任意用户登录漏洞挖掘思路"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

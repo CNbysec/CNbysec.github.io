@@ -1,7 +1,9 @@
-# 微信小程序抓包及测试
+﻿# 微信小程序抓包及测试
 
 
 <!--more-->
+
+> *转载自： [https://forum.butian.net/share/2477](https://forum.butian.net/share/2477)*
 
 网上大多数的小程序测试抓包都是用的安卓模拟器，这里使用的是BurpSuite+Proxifer+微信客户端的抓包方式
 
@@ -10,12 +12,6 @@
 Burp2023.9.2
 
 Proxifier4.5
-
-Proxifier是一款功能非常强大的socks5客户端，可以让不支持通过代理服务器，工作的网络程序能通过HTTPS或socks或代理链。其是收费软件，免费试用31天，这里给一个破解版链接
-
-链接：[https://pan.baidu.com/s/14QElyGxDpMBGTuCFTPl4tQ?pwd=7o50](https://pan.baidu.com/s/14QElyGxDpMBGTuCFTPl4tQ?pwd=7o50)
-
-提取码：7o50
 
 ![图片1.png](https://shs3.b.qianxin.com/attack_forum/2023/10/attach-4d2e55e1fec1c1cb3586004390da5f833c29e420.png)
 

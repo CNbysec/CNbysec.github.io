@@ -1,7 +1,9 @@
-# 验证码渗透最全总结
+﻿# 验证码渗透最全总结
 
 
 <!--more-->
+
+> *转载自： [https://forum.butian.net/share/2602](https://forum.butian.net/share/2602)*
 
 ## 验证码渗透最全总结
 

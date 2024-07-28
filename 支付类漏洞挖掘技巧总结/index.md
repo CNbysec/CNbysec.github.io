@@ -1,7 +1,9 @@
-# 支付类漏洞挖掘技巧总结
+﻿# 支付类漏洞挖掘技巧总结
 
 
 <!--more-->
+
+> *转载自： [https://forum.butian.net/share/2778](https://forum.butian.net/share/2778)*
 
 ## 前言：
 

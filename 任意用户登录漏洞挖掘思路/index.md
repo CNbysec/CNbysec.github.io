@@ -1,7 +1,9 @@
-# 任意用户登录漏洞挖掘思路
+﻿# 任意用户登录漏洞挖掘思路
 
 
 <!--more-->
+
+> *转载自： [https://forum.butian.net/share/2553](https://forum.butian.net/share/2553)*
 
 ## 任意用户登录漏洞挖掘思路
 

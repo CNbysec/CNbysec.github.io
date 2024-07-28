@@ -1,36 +1,36 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - 分类 - bysec</title>
-        <link>https://www.bysec.cn/categories/</link>
+        <link>http://localhost:1313/categories/</link>
         <description>Categories - 分类 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:24:56 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:24:56 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
     <title>技术</title>
-    <link>https://www.bysec.cn/categories/%E6%8A%80%E6%9C%AF/</link>
+    <link>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/</link>
     <pubDate>Sun, 28 Jul 2024 18:24:56 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/categories/%E6%8A%80%E6%9C%AF/</guid>
+    </author><guid>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>工具</title>
-    <link>https://www.bysec.cn/categories/%E5%B7%A5%E5%85%B7/</link>
+    <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/categories/%E5%B7%A5%E5%85%B7/</guid>
+    </author><guid>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>学习</title>
-    <link>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</link>
+    <link>http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</guid>
+    </author><guid>http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>系统</title>
-    <link>https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/</link>
+    <link>http://localhost:1313/categories/%E7%B3%BB%E7%BB%9F/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/categories/%E7%B3%BB%E7%BB%9F/</guid>
+    </author><guid>http://localhost:1313/categories/%E7%B3%BB%E7%BB%9F/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

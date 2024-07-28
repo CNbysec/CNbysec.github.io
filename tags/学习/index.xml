@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>学习 - 标签 - bysec</title>
-        <link>https://www.bysec.cn/tags/%E5%AD%A6%E4%B9%A0/</link>
+        <link>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0/</link>
         <description>学习 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:22:32 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:22:32 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
     <title>支付类漏洞挖掘技巧总结</title>
-    <link>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+    <link>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
     <pubDate>Sun, 28 Jul 2024 18:22:32 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<h2 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言：</h2><p>支付类逻辑漏洞在漏洞挖掘中是常常出现的问题之一。此类漏洞挖掘思路多，奖励高，是炙手可热的漏洞。此篇文章主要围绕挖掘支付逻辑漏洞时的一些思路分享。</p>
 <h2 id="支付逻辑漏洞成因" class="headerLink">
@@ -116,10 +116,10 @@
     <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sun, 28 Jul 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<h2 id="任意用户登录漏洞挖掘思路" class="headerLink">
     <a href="#%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af" class="header-mark"></a>任意用户登录漏洞挖掘思路</h2><h2 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>任意用户登录漏洞以利用漏洞利用难度低、危害高、奖金高已经成为src/众测漏洞挖掘中的香饽饽，本文将分享一下众测/src中任意用户登录漏洞的挖掘思路。</p>
@@ -289,10 +289,10 @@
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>
 </item><item>
     <title>验证码渗透最全总结</title>
-    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Sun, 28 Jul 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<h2 id="验证码渗透最全总结" class="headerLink">
     <a href="#%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93" class="header-mark"></a>验证码渗透最全总结</h2><p>不少人在碰见验证码的时候，大多数只是看了一眼就过去了，没想到验证码还有啥可测试的。但其实验证码也能在项目中导致<strong>高危</strong>,并且验证码漏洞能在一定情况下造成危害。</p>
 <h2 id="验证码总结" class="headerLink">

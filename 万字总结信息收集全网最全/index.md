@@ -362,19 +362,19 @@
 
 [https://whois.aizhan.com/](https://whois.aizhan.com/)
 
-![](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png)
+![](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png)
 
 ### 微步
 
 [https://x.threatbook.cn/](https://x.threatbook.cn/)
 
-![image-20240318211050117](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png)
+![image-20240318211050117](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png)
 
 ### 国外的who.is
 
 [https://who.is/](https://who.is/)
 
-![image-20240318211100783](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-89bff3e05618bd3349d50461833488d162c42dc5.png)
+![image-20240318211100783](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-89bff3e05618bd3349d50461833488d162c42dc5.png)
 
 ### 阿里云域名信息查询
 
@@ -396,19 +396,19 @@
 
 [http://www.gsxt.gov.cn/index.html](http://www.gsxt.gov.cn/index.html)
 
-![image-20240318211116598](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png)
+![image-20240318211116598](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png)
 
 ### ICP备案查询网
 
 [https://www.beianx.cn/](https://www.beianx.cn/)
 
-![image-20240318211229330](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png)
+![image-20240318211229330](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png)
 
 ### ICP备案查询 - 站长工具
 
 [http://icp.chinaz.com/](http://icp.chinaz.com/)
 
-![image-20240318211245885](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png)
+![image-20240318211245885](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png)
 
 ### 天眼查
 
@@ -416,13 +416,13 @@
 
 根据前面获取的企业名称可以获取目标企业的微信公众号、微博、备案站点、APP、软件著作权等信息
 
-![image-20240318211257183](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png)
+![image-20240318211257183](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png)
 
 ### 企查查
 
 [https://www.qcc.com/](https://www.qcc.com/)
 
-![image-20240318211310422](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png)
+![image-20240318211310422](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png)
 
 ## SEO(Search Engine Optimization)查询
 
@@ -430,13 +430,13 @@
 
 [https://www.aizhan.com/cha/](https://www.aizhan.com/cha/)
 
-可以根据域名来收集目标站点的备案信息、名称、注册人等信息![image-20240318211322521](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png)
+可以根据域名来收集目标站点的备案信息、名称、注册人等信息![image-20240318211322521](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png)
 
 ### 站长-SEO综合查询
 
 [http://seo.chinaz.com/](http://seo.chinaz.com/)
 
-![image-20240318211336606](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-192ff56d8e5ec565530acadd73369738422c9819.png)
+![image-20240318211336606](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-192ff56d8e5ec565530acadd73369738422c9819.png)
 
 ### Google、bing、baidu
 
@@ -470,19 +470,19 @@ Ps:\`\`搜索引擎一般用来收集信息泄露和隐藏较深的路由
 
 \-----------------[https://dorks.faisalahmed.me/](https://dorks.faisalahmed.me/) (国外版)
 
-![image-20240318211349607](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png)
+![image-20240318211349607](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png)
 
 ## Github
 
 GitHub源码泄露肯定都听说过，但是真正找的源码的案例可能很少，可能是你用的方法有问题，网站域名、网站JS路径、网站备案、网站下的技术支持这些都可以放进去GitHub搜
 
-![image-20240318211404704](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png)
+![image-20240318211404704](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png)
 
-![image-20240318211411084](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-2158b74be8703460d50a8f68855da3c47875a609.png)
+![image-20240318211411084](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2158b74be8703460d50a8f68855da3c47875a609.png)
 
 精确搜索：被双引号引起来的部分代表精确匹配
 
-![image-20240318211423694](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-3131445766e66dac6b07a75cbf86b194670d2336.png)
+![image-20240318211423694](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3131445766e66dac6b07a75cbf86b194670d2336.png)
 
 **Fofa 360** **鹰图 钟馗之眼**
 
@@ -490,7 +490,7 @@ GitHub源码泄露肯定都听说过，但是真正找的源码的案例可能�
 
 web.icon=="4eeb8a8eb30b70af511dcc28c11a3216"
 
-![image-20240318211439447](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png)
+![image-20240318211439447](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png)
 
 \\=模糊
 
@@ -500,7 +500,7 @@ Fofa
 
 icon\_hash="174665376"
 
-![image-20240318211452914](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png)
+![image-20240318211452914](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png)
 
 其实，这时候可以发现很多图标，两者是相辅相成的，通过收集图标提炼共性标题，通过收集标题找到共性图标
 
@@ -508,7 +508,7 @@ icon\_hash="174665376"
 
 web.icon=="4eeb8a8eb30b70af511dcc28c11a3216"&&title="ruoyi"
 
-![image-20240318211512753](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png)
+![image-20240318211512753](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png)
 
 \`Web\`\`的内容\`\`\`
 
@@ -526,11 +526,11 @@ body=ruoyi
 
 body=prod-api/
 
-![image-20240318211634230](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png)
+![image-20240318211634230](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png)
 
 可以找到站点中带有若依的超链接路由
 
-![image-20240318212159505](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png)
+![image-20240318212159505](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png)
 
 打开之后我们就可以发现确实超链接指向的是若依的系统
 
@@ -556,7 +556,7 @@ body=prod-api/
 
 普通与高级功能差别：漏洞搜索过滤器
 
-![image-20240318212230888](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-91886143a3662c855eacb265d65427a71892b6a0.png)
+![image-20240318212230888](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-91886143a3662c855eacb265d65427a71892b6a0.png)
 
 #### 语法
 
@@ -616,7 +616,7 @@ VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w
 
 高级与VIP功能差别：蜜罐识别
 
-![image-20240318212239297](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png)
+![image-20240318212239297](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png)
 
 #### 语法
 
@@ -662,7 +662,7 @@ VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w
 
 **邀请码： Cm2TX9**
 
-![image-20240318212247742](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png)
+![image-20240318212247742](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png)
 
 #### 语法
 
@@ -709,51 +709,51 @@ VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w
 
 通过当前APP查询所属公司的所有APP
 
-![image-20240318212256021](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png)
+![image-20240318212256021](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png)
 
 通过当前APP查询同开发者应用
 
-![image-20240318212301308](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png)
+![image-20240318212301308](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png)
 
 ### 1.2、AppStore(安卓和IOS)
 
 查询同开发者应用
 
-![image-20240318213120983](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png)
+![image-20240318213120983](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png)
 
 ## 2、微信公众号和小程序
 
 通过微信搜索公众号并去关注，然后进去点击文章之类的，下拉可以看到它的网页来源，大部分是微信提供的，所以需要去阅读原文，但是原文也可能是第三方提供的，所以还需要自己自行去判断，找到它的url后又可以去爆一波子域名了，
 
-![image-20240318213133715](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png)
+![image-20240318213133715](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png)
 
 随便点击文章通过下拉查看域名，例如：
 
-![image-20240318213145758](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png)
+![image-20240318213145758](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png)
 
 ## 4、logo
 
 当你不确定目标产品是什么时，比如你不知道他是谁家的WAF或者路由器，可以利用查看网站logo地址，然后复制logo地址，点击按图片搜索，到谷歌里面查询；也可以把目标logo下载下来，利用上传图片来查询，通过搜索出来的结果可以判断目标产品和厂商。
 
-![image-20240318213245804](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-19fe23983d34793a19756320b38c79aaccbde945.png)
+![image-20240318213245804](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-19fe23983d34793a19756320b38c79aaccbde945.png)
 
-![image-20240318213250034](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png)
+![image-20240318213250034](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png)
 
-![image-20240318214058575](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png)
+![image-20240318214058575](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png)
 
 ## 5、favicon.ico
 
 首先先来介绍一下什么favicon.ico文件，所谓favicon，便是其可以让浏览器的收藏夹中除显示相应的标题外，还以图标的方式区别不同的网站。favicon.ico也被称为 website icon（网页图标）、page icon（页面图标）或url icon（URL图标），具体细节请问度娘。下面这个小东西就是 Favicon.ico，我们可以通过在shodan里寻找它的哈希并去查找相关资产，打开shodan页面，或者用shodan插件都行。
 
-![image-20240318214108788](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png)
+![image-20240318214108788](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png)
 
-![image-20240318214114650](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png)
+![image-20240318214114650](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png)
 
-![image-20240318214142064](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png)
+![image-20240318214142064](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png)
 
-![image-20240318214154617](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png)
+![image-20240318214154617](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png)
 
-![image-20240318214159248](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png)
+![image-20240318214159248](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png)
 
 ## 三、子域名收集(挖掘)
 
@@ -761,9 +761,9 @@ VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w
 
 点击浏览器网站旁边的小锁，然后点击证书就可以查看到该网站的SSL证书了
 
-![image-20240318214253774](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-a6949b5126971885b1789786f3fbecb076868c0c.png)
+![image-20240318214253774](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a6949b5126971885b1789786f3fbecb076868c0c.png)
 
-![image-20240318214300153](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png)
+![image-20240318214300153](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png)
 
 ### 1.1、大厂商SSL证书一证多用
 
@@ -771,7 +771,7 @@ VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w
 
 如百度：[https://www.baidu.com](https://www.baidu.com/)
 
-![image-20240318214312481](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png)
+![image-20240318214312481](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png)
 
 如搜狐：[https://vpn.sohu-inc.com](https://vpn.sohu-inc.com/)
 
@@ -779,7 +779,7 @@ VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w
 
 有时候https证书报错会泄露域名
 
-![image-20240318214545325](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png)
+![image-20240318214545325](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png)
 
 ### 1.3、在线网站证书查询
 
@@ -787,7 +787,7 @@ VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w
 
 [https://censys.io/](https://censys.io/)
 
-![image-20240318214636905](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png)
+![image-20240318214636905](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png)
 
 ## 2、网络深度爬虫
 
@@ -919,7 +919,7 @@ ls命令列出某个域中的所有域名;如果太长不适合查看可定向�
 
 exit命令退出
 
-![image-20240318214733140](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png)
+![image-20240318214733140](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png)
 
 ## 4、在线DNS数据
 
@@ -973,11 +973,11 @@ _**泛解析这个问题的解决方法很简单，向DNS请求\*记录，然后
 
 这是向DNS请求部分的：
 
-![image-20240318215406584](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png)
+![image-20240318215406584](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png)
 
 这是DNS服务器回传的报文：
 
-![image-20240318215636520](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png)
+![image-20240318215636520](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png)
 
 只需要按照这个协议的格式做正则提取即可获得我们想要的信息，A记录的是固定的正则，CNAME记录需要嵌套一层正则才能获取。
 
@@ -1001,9 +1001,9 @@ focus.cn
 
 020_信息收集_子域名OneForAll
 
-![image-20240318220750492](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png)
+![image-20240318220750492](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png)
 
-![image-20240318220755282](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png)
+![image-20240318220755282](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png)
 
 ### 9.2、subDomainBrute
 
@@ -1013,7 +1013,7 @@ focus.cn
 
 020_信息收集_子域名subDomainsBrute
 
-![image-20240318223332308](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png)
+![image-20240318223332308](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png)
 
 ### 9.3、Layer
 
@@ -1021,7 +1021,7 @@ Layer子域名挖掘机是一款域名查询工具，可提供网站子域名查
 
 通过查看WEB服务器信息，筛选版本比较低的服务器（win2003+iis6.0），查看每个子域名是否开启常见的端口（3389、3306、21端口等），利用爆破工具进行枚举，会达到事半功倍的效果。
 
-![image-20240318223844214](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png)
+![image-20240318223844214](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png)
 
 ### 9.4、FuzSub
 
@@ -1203,7 +1203,7 @@ Allow:/images/
 
 002_目录信息_dirsearch
 
-![image-20240318223946570](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png)
+![image-20240318223946570](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png)
 
 ## 2、dirbuster
 
@@ -1219,13 +1219,13 @@ Firefox 3.6 Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.2.8;baidu Tra
 
 Chrome Mozilla/5.0 (en-us) AppleWebKit/534.14 (KHTML, like Gecko; Google Wireless Transcoder) Chrome/9.0.597 Safari/534.14 谷歌转码浏览欺骗
 
-![image-20240318224002259](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-dff5d1680324323642d895b1451522b43dd28b1c.png)
+![image-20240318224002259](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-dff5d1680324323642d895b1451522b43dd28b1c.png)
 
 ## 3、7kbscan
 
 工具：[https://github.com/7kbstorm/7kbscan-WebPathBrute](https://github.com/7kbstorm/7kbscan-WebPathBrute)
 
-![image-20240318224015520](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png)
+![image-20240318224015520](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png)
 
 ## 4、Webrobot
 
@@ -1269,7 +1269,7 @@ Chrome Mozilla/5.0 (en-us) AppleWebKit/534.14 (KHTML, like Gecko; Google Wireles
 
 ## 1、各服务开启的默认端口以及攻击方向
 
-![image-20240318224051389](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png)
+![image-20240318224051389](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png)
 
 ## 2、在线查询网站
 
@@ -1287,21 +1287,21 @@ Nmap扫描中一些常见的服务
 
 msmq? ：默认对于的是1801端口，是 MSMQ Microsoft Message Queuing微软消息队列的简称，是windows系统提供的一个功能，开启了该功能，则默认1801端口打开。该服务暂未发现漏洞。
 
-![image-20240318224248649](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png)
+![image-20240318224248649](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png)
 
-![image-20240318224306226](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png)
+![image-20240318224306226](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png)
 
 msrpc：Microsoft Remote Procedure Call微软远程过程调用，是 Windows 操作系统使用的一个协议。RPC 提供一种内部进程通讯机制，允许在一台电脑上运行的程序无缝的执行远程系统中的代码。
 
-![image-20240318224314679](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png)
+![image-20240318224314679](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png)
 
 tcpwrapped：端口状态后经常标记tcpwrapped。tcpwrapped表示服务器运行 tcp\_wrappers服务。tcp\_wrappers是一种应用级防火墙。它可以根据预设，对SSH、Telnet、FTP服务的请求进行拦截，判断是否符合预设要求。如果符合，就会转发给对应的服务进程；否则，会中断连接请求。这说明tcp三次握手已经完成，但是并没有和目标主机建立连接。这表明，虽然目标主机的某项服务是可提供的，但你不在允许访问主机的名单列表中。当大量的端口服务都为tcpwrapped时，这说明可能是有负载均衡或者防火墙阻断了你的连接请求。
 
-![image-20240318224326847](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png)
+![image-20240318224326847](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png)
 
 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)：这是SQL Server中的SQL Reporting Service 服务使用的Microsoft HTTPAPI。
 
-![image-20240318224341790](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-2816d3017e53b6d30098486fd83178454deb36d9.png)
+![image-20240318224341790](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2816d3017e53b6d30098486fd83178454deb36d9.png)
 
 ### 3.2、masscan
 
@@ -1309,11 +1309,11 @@ Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)：这是SQL Server中的SQL Reporting Se
 
 通过ping等方式获取网站IP，然后开始扫描
 
-![image-20240318224425359](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png)
+![image-20240318224425359](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png)
 
 ### 3.4、webrobot
 
-![image-20240318224438848](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png)
+![image-20240318224438848](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png)
 
 ## 七、旁站C段
 
@@ -1339,7 +1339,7 @@ C端：是和服务器IP处在一个C段的其他服务器
 
 [https://webscan.cc/](https://webscan.cc/)
 
-![image-20240318224505782](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-e279f958bb4899a484b3ce373980e5ec67533039.png)
+![image-20240318224505782](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e279f958bb4899a484b3ce373980e5ec67533039.png)
 
 ### 1.2、Google Hacking、Bing
 
@@ -1381,11 +1381,11 @@ masscan -p 22,21,443,8080-Pn --rate=1000172.178.40.0/24
 
 判断是Linux还是Windows最简单就是通过ping来探测，Windows的TTL值都是一般是128，Linux则是64。所以大于100的肯定是Windows，而几十的肯定是Linux。但是，通过TTL值来判断服务器类型也不是百分之百准确的，有些windows服务器的TTL值也是几十，而且有的服务器禁止ping。
 
-![image-20240318224523272](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png)
+![image-20240318224523272](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png)
 
 而判断目标网站服务器的具体的版本的话，可以采用 nmap 进行扫描， -O 和 -A 参数都能扫描出来
 
-![image-20240318224542950](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png)
+![image-20240318224542950](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png)
 
 检测服务器平台、版本等，获取后可以制定漏洞挖掘方案（如IIS6.0存在解析漏洞等）。
 
@@ -1397,7 +1397,7 @@ masscan -p 22,21,443,8080-Pn --rate=1000172.178.40.0/24
 
 ### 1.1、 云悉WEB资产梳理
 
-![image-20240318224635116](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png)
+![image-20240318224635116](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png)
 
 [http://www.yunsee.cn/](http://www.yunsee.cn/)，根据IIS版本判断Windows系统，系统对应版本通过搜索引擎查找。
 
@@ -1411,7 +1411,7 @@ masscan -p 22,21,443,8080-Pn --rate=1000172.178.40.0/24
 
 ### 2.1、火狐渗透测试浏览器
 
-![image-20240318224652100](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png)
+![image-20240318224652100](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png)
 
 ### 2.2、云悉WEB资产梳理\\
 
@@ -1425,7 +1425,7 @@ masscan -p 22,21,443,8080-Pn --rate=1000172.178.40.0/24
 
 3）可以根据Firefox的插件来判断
 
-![image-20240318224729502](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png)
+![image-20240318224729502](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png)
 
 ### 3.1、通过修改首页文件后缀查看页面响应判断
 
@@ -1449,31 +1449,31 @@ Webrobot
 
 [https://www.yunsee.cn/](https://www.yunsee.cn/)
 
-![image-20240318224745687](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png)
+![image-20240318224745687](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png)
 
 ### 4.2、ThreatScan
 
 [https://scan.top15.cn/web/](https://scan.top15.cn/web/)
 
-![image-20240318224806210](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-039eb6b513752749827e5cb1921b6209396d953d.png)
+![image-20240318224806210](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-039eb6b513752749827e5cb1921b6209396d953d.png)
 
 ### 4.3、wappalyzer
 
 [https://www.wappalyzer.com/](https://www.wappalyzer.com/)
 
-![image-20240318224818148](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png)
+![image-20240318224818148](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png)
 
 ### 4.4、WhatWeb
 
 [http://whatweb.net/](https://whatweb.net/)
 
-![image-20240318224833360](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-4917e9369baabdd749819b421843aa40762ffdd7.png)
+![image-20240318224833360](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4917e9369baabdd749819b421843aa40762ffdd7.png)
 
 ### 4.5、BugScaner
 
 [http://whatweb.bugscaner.com/](http://whatweb.bugscaner.com/)
 
-![image-20240318224842513](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-11f6d51361219f0834c539d6696031840bb53fd2.png)
+![image-20240318224842513](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-11f6d51361219f0834c539d6696031840bb53fd2.png)
 
 ### 4.6、潮汐指纹
 
@@ -1541,13 +1541,13 @@ WAFW00F探测WAF
 
 云悉WEB资产梳理
 
-![image-20240318224859531](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png)
+![image-20240318224859531](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png)
 
 ### 6.2、手动检测是拦截页面或者HTTP可识别字段
 
 在搜索框中输入XSS弹窗代码<script>alert('XSS')</script> ，WAF拦截后判断WAF。
 
-![image-20240318224910129](https://shs3.b.qianxin.com/attack_forum/2024/04/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png)
+![image-20240318224910129](https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png)
 
 在可能存在的注入页面输入检测注入漏洞代码and 1=2，被WAF拦截后判断WAF。
 

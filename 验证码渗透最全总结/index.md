@@ -13,7 +13,7 @@
 
 验证码分为两块内容，一块是图形验证码，一块是短信验证码。下面是对这些技巧总结的思维导图。
 
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-07aa8805b4a3ac1f699898097c63b75d100e7c61.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-07aa8805b4a3ac1f699898097c63b75d100e7c61.png)
 
 ### 图形验证码
 
@@ -21,12 +21,12 @@
 
 简单测试方法，就是看到一个登录框，然后新建打开图片链接，在图片链接中就有机会看到两个参数值，一个是 width，一个是 length。这两个参数是计算图片验证码的长宽，如果长宽过高就会过度消耗的是服务器的 CPU 资源。
 
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-f8edf220db2f6f553e493615a6245671be2f3cc8.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-f8edf220db2f6f553e493615a6245671be2f3cc8.png)  
 当length为比较大的时候，响应时间为2767millis  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-23af811d5dc12caad125af766529881f2fe7a073.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-23af811d5dc12caad125af766529881f2fe7a073.png)  
 **注意**：该漏洞能造成服务器拒绝服务攻击。有的 SRC 里面注明了，禁止使用 DDOS 攻击，这种漏洞是不收的，如果提交了漏洞，很有可能面临**法律责任**。
 
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-9f2f1a9fdac9a1537fc050f5b62bfc6516573602.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-9f2f1a9fdac9a1537fc050f5b62bfc6516573602.png)
 
 #### 图形验证码可绕过
 
@@ -43,10 +43,10 @@
 #### 图形验证码随机值可控
 
 都知道图形验证码是后端随机生成的。那么随机生成的时候，有没有可能是能控制这个随机值？有可能! 生成验证码的随机值被写在了 url 里面  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-e20c13ca97d25e047ade9b3bd983a245cffe43b4.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-e20c13ca97d25e047ade9b3bd983a245cffe43b4.png)
 
 将characters固定为aaaa，可以看到图形验证码为aaaa  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-2aaf0c5c6bd69d7d5452b3bc34f22c22b702cc77.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-2aaf0c5c6bd69d7d5452b3bc34f22c22b702cc77.png)
 
 #### 图形验证码返回到前端
 
@@ -59,18 +59,18 @@
 #### 短信炸弹纵向
 
 在一个限制时间的情况下对一个手机号，发送的短信验证码条数超过发送预期，这种漏洞我们都称为`短信炸弹`or`短信轰炸`or`短信炸弹纵向`  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-9ee1bcaa0a03fc53f87c05e0a5a038a39bcc48bb.png)  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-d3aa32373abf5cf438642122ea553b6f9b1e1925.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-9ee1bcaa0a03fc53f87c05e0a5a038a39bcc48bb.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-d3aa32373abf5cf438642122ea553b6f9b1e1925.png)  
 不停点击repeter或者放到intruder里面，就可以实现一个手机号接收到多条短信  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-5b65929eb4576fc9bacc70153d32df2ef028b37a.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-5b65929eb4576fc9bacc70153d32df2ef028b37a.png)
 
 #### 短信炸弹横向
 
 上面我们提到了在限定时间内，对一个手机号发送超过预期的短信条数是短信轰炸。造成的结果就是浪费短信资源。如果开发把这个漏洞给改了，那么还有没有漏洞？还有？不能给一个人发送短信验证了，那么给其他人发送验证码一样的。  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-7dcfda9d6162e5385a3f94aee05566b7ca188ba3.png)  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-49694c38b745d0949ae23a750b711c645018d603.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-7dcfda9d6162e5385a3f94aee05566b7ca188ba3.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-49694c38b745d0949ae23a750b711c645018d603.png)  
 将phone设置成变量，进行遍历  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-1336295b9eb2d85f64ea1c6ec3f2a4513503529d.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-1336295b9eb2d85f64ea1c6ec3f2a4513503529d.png)
 
 #### 短信验证码可爆破
 
@@ -79,10 +79,10 @@
 #### 短信验证码可编辑
 
 我们讲了发送短信验证码以及爆破短信验证码。我们知道短信验证码功能发送的是短信，那么我们就有可能把短信内容给更改。  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-a65ad9daae02cac08992fedca5bb6e768d759359.png)  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-3dd9859a71ffbf19616b439137a403e573f45f6f.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-a65ad9daae02cac08992fedca5bb6e768d759359.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-3dd9859a71ffbf19616b439137a403e573f45f6f.png)  
 通过修改transAmt 参数内容，可随意修改短信内容  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-b910d6dc4e0703a3c7825f053ed10fc6211a8129.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-b910d6dc4e0703a3c7825f053ed10fc6211a8129.png)
 
 ### 短信炸弹的绕过技巧
 
@@ -93,11 +93,11 @@
 通常，开发在发送短信验证码的时候，没有对特殊字符进行过滤。比如在手机号是 15312341234。我们加上+86，变成+8615312341234，这样的话服务器就有可能判定为两个手机号了。
 
 在 mobile=15312341234 的前面，加`空格`，`86`，`086`，`0086`，`+86`，`0`，`00`，`/r,/n`,`?`,`#`,`!`,`,`...只要想法多就有可能绕过。  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-cdfb9f6773ed4c516bfff1b1b64f429e0c00c0fe.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-cdfb9f6773ed4c516bfff1b1b64f429e0c00c0fe.png)
 
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-176b46bb24c9974b759d9af83924bcf1f76799a1.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-176b46bb24c9974b759d9af83924bcf1f76799a1.png)  
 控制phone参数进行攻击  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-b0755303a59aa0bf852a2964d3409ef1f5624ccf.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-b0755303a59aa0bf852a2964d3409ef1f5624ccf.png)
 
 #### 短信炸弹的绕过技巧 2--添加 XFF
 
@@ -119,8 +119,8 @@
 
 对短信验证码的数据包进行并发，有机会绕过限制
 
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-569f362e7ef69d7c32d5f7a714ec89b1486b42fd.png)  
-![image.png](https://shs3.b.qianxin.com/attack_forum/2023/11/attach-2e05570fe2a88f4cb915508987e529e497cf9acf.png)
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-569f362e7ef69d7c32d5f7a714ec89b1486b42fd.png)  
+![image.png](https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-2e05570fe2a88f4cb915508987e529e497cf9acf.png)
 
 #### 在响应包里面可以看到短信验证码
 

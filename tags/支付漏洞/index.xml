@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>支付漏洞 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E/</link>
+        <link>https://www.bysec.cn/tags/%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E/</link>
         <description>支付漏洞 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E/" rel="self" type="application/rss+xml" /><item>
     <title>支付类漏洞挖掘技巧总结</title>
-    <link>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2778" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2778</a></em></p>
 </blockquote>
@@ -27,7 +27,7 @@
     <a href="#%e6%94%af%e4%bb%98%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7" class="header-mark"></a>支付逻辑漏洞挖掘技巧：</h2><p>在实际漏洞挖掘中，一般最先尝试的就是更改数据包发包内容，可以直接修改支付金额、更改支付状态、更改支付类型、更改提交订单支付的时候其中的订单信息等等，当然也会有一些新奇的功能点可以测试。这些在测试中会遇到的操作可以分为以下几类：</p>
 <h4 id="一更改支付金额" class="headerLink">
     <a href="#%e4%b8%80%e6%9b%b4%e6%94%b9%e6%94%af%e4%bb%98%e9%87%91%e9%a2%9d" class="header-mark"></a>一、更改支付金额</h4><p>在支付流程中，可以修改支付价格的步骤有很多，包括订购、确认信息、付款等。在涉及到价格的步骤中都可以尝试修改，如果网站在某一环节存在逻辑上的漏洞，就可以利用该漏洞对支付价格进行修改。可以直接修改提交订单中的价格字段，一般可尝试0.01，1.00，1等</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg" title="image-20240110144659185" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg" title="image-20240110144659185" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg">
         
     </a></p>
 <h4 id="二更改支付状态" class="headerLink">
@@ -36,7 +36,7 @@
 <p>2、修改未支付的订单号为已支付订单号</p>
 <h4 id="三修改支付类型" class="headerLink">
     <a href="#%e4%b8%89%e4%bf%ae%e6%94%b9%e6%94%af%e4%bb%98%e7%b1%bb%e5%9e%8b" class="header-mark"></a>三、修改支付类型</h4><p>通常在提交订单付款时，这里的type一般是对支付方式的判断，可能会存在开发人员测试的时候遗留的无需支付的type值，根据支付方式判断支付与否。可以通过fuzz特定值去实现绕过。比如比较常见的值0（这里需要结合实际进行测试不同的处理方式type值不同），可以实现不需要付款订单就会自动生成。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg" title="image-20240109155239418" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg" title="image-20240109155239418" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg">
         
     </a></p>
 <h4 id="四更改订单信息" class="headerLink">
@@ -44,51 +44,51 @@
 <p>常见位置在生成订单、生成支付链接等。</p>
 <p>1、修改商品编号</p>
 <p>直接在生成的订单中替换商品编号。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg" title="image-20240110101427801" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg" title="image-20240110101427801" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg">
         
     </a></p>
 <p>2、修改订单号</p>
 <p>将金额不同的订单进行替换，可以支付一个金额较少的订单，然后将订单号修改为金额较大的订单，少付实际金额。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg" title="image-20240110103259992" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg" title="image-20240110103259992" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg">
         
     </a></p>
 <p>3、越权使用他人优惠券、越权使用他人积分等</p>
 <h4 id="五更改数量实现优惠支付" class="headerLink">
     <a href="#%e4%ba%94%e6%9b%b4%e6%94%b9%e6%95%b0%e9%87%8f%e5%ae%9e%e7%8e%b0%e4%bc%98%e6%83%a0%e6%94%af%e4%bb%98" class="header-mark"></a>五、更改数量实现优惠支付</h4><p>支付金额是由购买数量乘以商品单价决定的，这时我们在数据包中修改购买数量，将其修改为负数或者小数，如果站点后台对此没有进行过滤，就有可能存在支付漏洞。</p>
 <p>1、将正常的数量值修改至最小值0.01，可以实现低价购买。比如：原价300修改修量为0.01后实付金额变为3。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg" title="image-20240109160656541" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg" title="image-20240109160656541" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg">
         
     </a></p>
 <p>2、未对负数做检验的还可以将数量改为负数。（这里需要注意，因为后端大部分会校验不允许实付金额小于0或者0.01等，所以有的时候要想实现订单成功生成需要结合实际修改价格）</p>
 <p>生成订单时有参数表示商品数量，修改为-1</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg" title="image-20240110114704324" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg" title="image-20240110114704324" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg">
         
     </a></p>
 <p>修改数量为-1后会发现，此时金额为负数。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg" title="image-20240110114800810" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg" title="image-20240110114800810" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg">
         
     </a></p>
 <p>在提交订单支付的时候，为保证支付成功需要修改金额。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg" title="image-20240110115204600" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg" title="image-20240110115204600" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg">
         
     </a></p>
 <p>3、对数量没有做负数校验的时候也可以巧用负数抵消实现0元购</p>
 <p>在计算价格时，没有对负数进行验证，通过修改某个商品数量为-1实现与1的抵消实现0元购。</p>
 <p>同时购买两件商品，修改两件商品其中价格低的商品的金额为负数，实现价格的抵消，低价购买商品。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg" title="image-20240110154805679" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg" title="image-20240110154805679" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg">
         
     </a></p>
 <p>4、手动增加订单中商品相关的多个参数以达到少付多买的目的。</p>
 <p>有的时候在提交订单时抓取数据包可以看到只有一套商品的信息，尝试多添加几套同样的参数订单是否会有变化。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg" title="image-20240110152818004" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg" title="image-20240110152818004" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg">
         
     </a></p>
 <p>尝试在提交订单的时候多添加几个此类参数</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg" title="image-20240110153021212" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg" title="image-20240110153021212" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg">
         
     </a><br>
 提交订单实际支付金额未变仍是一个商品的价格，但是实际套餐已经变成了四个。</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg" title="image-20240110153517777" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg" title="image-20240110153517777" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg">
         
     </a></p>
 <h4 id="六重复支付突破限购" class="headerLink">
@@ -96,7 +96,7 @@
 <p>并发订单，多台设备同时提交优惠订单。</p>
 <p>常见于限购，一个账号仅许购买一次等</p>
 <p>1、限制一个优惠订单时直接并发生成多个优惠订单</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg" title="image-20240110143709606" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg" title="image-20240110143709606" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg">
         
     </a></p>
 <p>2、使用多台设备、多个浏览器、多种支付方式（wx、支付宝等）购买优惠订单</p>
@@ -112,7 +112,7 @@
 <p>1、遍历隐藏优惠券</p>
 <p>一般会有一些开发时测试的大额优惠券，或者已经过期下架的优惠券，通过遍历可以被使用。</p>
 <p>2、遍历商品id从而fuzz到已下架的商品</p>
-<p><a class="lightgallery" href="https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg" title="image-20240109171142727" data-thumbnail="https://shs3.b.qianxin.com/butian_public/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%af%e4%bb%98%e7%b1%bb%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7%e6%80%bb%e7%bb%93/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg" title="image-20240109171142727" data-thumbnail="https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg">
         
     </a></p>
 <h4 id="九利用小数点精度四舍五入" class="headerLink">

@@ -1,4 +1,4 @@
-# 任意用户登录漏洞挖掘思路
+﻿# 任意用户登录漏洞挖掘思路
 
 
 <!--more-->
@@ -27,13 +27,13 @@ import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=
 
 成功案例如下：
 
-![image-20231026152744211](https://shs3.b.qianxin.com/butian_public/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg)
+![image-20231026152744211](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg)
 
 ### 1.2 验证码明文返回
 
  获取手机验证码时，验证码直接在返回包里
 
-![image-20231026153621371](https://shs3.b.qianxin.com/butian_public/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg)
+![image-20231026153621371](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg)
 
 ### 1.3 存在万能验证码
 
@@ -47,29 +47,29 @@ import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=
 
 某系统输入商户号与手机号可绑定到该用户
 
-![image-20231026155939201](https://shs3.b.qianxin.com/butian_public/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg)
+![image-20231026155939201](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg)
 
 通过用户注册的功能处，输入自己的手机号获取验证码
 
-![image-20231026160036332](https://shs3.b.qianxin.com/butian_public/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg)
+![image-20231026160036332](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg)
 
 返回绑定功能处，输入任意验证码抓包，将手机号与验证码字段改为自己的手机号+验证码
 
-![image-20231026160250988](https://shs3.b.qianxin.com/butian_public/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg)
+![image-20231026160250988](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg)
 
 成功登录他人账号
 
-![image-20231026160327497](https://shs3.b.qianxin.com/butian_public/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg)
+![image-20231026160327497](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg)
 
 ### 1.5 获取验证码的手机号字段可双写
 
  输入手机号获取验证码时抓包，双写手机号字段，使得两个手机号获取到同一个验证码，便可以登录其他用户
 
-![image-20231026160708565](https://shs3.b.qianxin.com/butian_public/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg)
+![image-20231026160708565](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg)
 
 输入自己的手机号抓包，将手机字段后面加一个逗号或者分号后再加一个手机号，或者双写手机号字段phone=13333333333&phone=18888888888，当两个手机号均收到一个验证码时大概率漏洞存在。使用自己的手机号便可以任意登录其他手机号
 
-![image-20231026161544754](https://shs3.b.qianxin.com/butian_public/f1298410bdcead04991a6070a151953c584540f0068d1.jpg)
+![image-20231026161544754](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f1298410bdcead04991a6070a151953c584540f0068d1.jpg)
 
 ### 1.6 验证码为空/任意验证码可成功验证
 
@@ -83,9 +83,9 @@ import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=
 
  搜索引擎搜索该域名，发现有登录后的页面被抓取，直接访问登录目标账户
 
-![image-20231026111018248](https://shs3.b.qianxin.com/butian_public/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg)
+![image-20231026111018248](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg)
 
-![image-20231026111129791](https://shs3.b.qianxin.com/butian_public/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg)
+![image-20231026111129791](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg)
 
 #### 2.1.2 httptrace/druid等组件中的凭证泄露
 
@@ -93,35 +93,35 @@ import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=
 
  spring的httptrace端点往往会记录用户的会话信息，若发现spring未授权访问且存在类似端点可以访问的话，可尝试获取用户凭证进行登录
 
-![image-20231026163705868](https://shs3.b.qianxin.com/butian_public/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg)
+![image-20231026163705868](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg)
 
 ##### durid
 
  druid的session监控若发现有效的会话信息时，可以通过此登录任意用户，将druid的未授权中危漏洞提升至高危
 
-![image-20231026113057179](https://shs3.b.qianxin.com/butian_public/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg)
+![image-20231026113057179](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg)
 
-![image-20231026113234298](https://shs3.b.qianxin.com/butian_public/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg)
+![image-20231026113234298](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg)
 
 #### 2.1.2 sessionkey泄露
 
  微信小程序官方提供了一套微信快捷登录的登录逻辑，用户授权手机号快捷登录时，会将本地的手机号使用sessionkey和iv进行aes加密，后端解密后返回该手机号的登录凭证。当sessionkey发生泄露时，攻击者便可以伪造手机号登录任意手机号
 
-![image-20231026164613313](https://shs3.b.qianxin.com/butian_public/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg)
+![image-20231026164613313](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg)
 
 修改任意手机号，利用sessionkey和iv重新加密数据
 
-![image-20231026164903153](https://shs3.b.qianxin.com/butian_public/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg)
+![image-20231026164903153](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg)
 
 成功登录他人账号
 
-![image-20231026165003227](https://shs3.b.qianxin.com/butian_public/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg)
+![image-20231026165003227](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg)
 
 #### 2.1.3 其他接口中的信息泄露
 
 这个一般发现于js或者api-docs中的某些特殊接口，例如getToken之类的，有没有取决于开发有没有开发类似的功能接口
 
-![image-20231026165405684](https://shs3.b.qianxin.com/butian_public/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg)
+![image-20231026165405684](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg)
 
 ### 2.2 凭证可伪造
 
@@ -133,7 +133,7 @@ import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=
 
 删除签名部分(或者更改头部中的alg为none再删除签名)，访问登录后的接口成功访问，说明jwt未验参()
 
-![image-20231026170046925](https://shs3.b.qianxin.com/butian_public/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg)
+![image-20231026170046925](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg)
 
 遍历data字段即可登录其他用户（此处的data为用户id）
 
@@ -141,15 +141,15 @@ import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=
 
 jwt使用了弱密钥时，爆破到弱密钥后同样修改jwt中的用户信息字段，使用密钥重新生成签名即可获取到其他用户的jwt字段
 
-![image-20231026103900241](https://shs3.b.qianxin.com/butian_public/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg)
+![image-20231026103900241](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg)
 
-![image-20231026103943886](https://shs3.b.qianxin.com/butian_public/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg)
+![image-20231026103943886](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg)
 
 #### 2.2.2 弱cookie
 
 系统使用cookie认证，且cookie字段可伪造
 
-![image-20231026170524323](https://shs3.b.qianxin.com/butian_public/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg)
+![image-20231026170524323](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg)
 
 ### 2.3 凭证过早返回
 
@@ -157,7 +157,7 @@ jwt使用了弱密钥时，爆破到弱密钥后同样修改jwt中的用户信�
 
 某金融项目，输入手机号会先去查询手机号是否为已注册用户，是的话进入用户信息查询的逻辑，再跳转登录。在信息查询的阶段过早返回了sessionid,导致任意用户登录
 
-![image-20231026171141852](https://shs3.b.qianxin.com/butian_public/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg)
+![image-20231026171141852](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg)
 
 ## 3.逻辑漏洞导致的任意用户登录
 
@@ -179,25 +179,25 @@ jwt使用了弱密钥时，爆破到弱密钥后同样修改jwt中的用户信�
 
  第二个请求获取返回包中的手机号加密发给服务端，返回其登录凭证
 
-![image-20231026175959686](https://shs3.b.qianxin.com/butian_public/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg)
+![image-20231026175959686](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg)
 
-![image-20231026180521839](https://shs3.b.qianxin.com/butian_public/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg)
+![image-20231026180521839](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg)
 
 所以此处只需要替换第一个请求包的返回包中的手机号即可
 
-![image-20231026180607177](https://shs3.b.qianxin.com/butian_public/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg)
+![image-20231026180607177](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg)
 
 #### 修改第二个请求的请求包
 
 如下登录数据包，直接更改其中手机号即可
 
-![image-20231026181117618](https://shs3.b.qianxin.com/butian_public/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg)
+![image-20231026181117618](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg)
 
 ### 3.2 更改登录type
 
 部分系统有免密登录/快捷登录之类的功能，只要一个账号就能登录，当遇到登录数据包中含有type之类的字段时，可以尝试此方法
 
-![image-20231026183616031](https://shs3.b.qianxin.com/butian_public/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg)
+![image-20231026183616031](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg)
 
 ### 3.3 账号数据覆盖
 
@@ -205,8 +205,8 @@ jwt使用了弱密钥时，爆破到弱密钥后同样修改jwt中的用户信�
 
 以修改手机号为例，此处修改需要输入新手机号与新手机号的验证码
 
-![image-20231026104342413](https://shs3.b.qianxin.com/butian_public/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg)
+![image-20231026104342413](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg)
 
-![image-20231026104439045](https://shs3.b.qianxin.com/butian_public/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg)
+![image-20231026104439045](https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg)
 
 修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录

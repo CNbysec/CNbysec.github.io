@@ -1,4 +1,4 @@
-# 如何在mac上抓小程序的流量
+﻿# 如何在mac上抓小程序的流量
 
 
 <!--more-->
@@ -11,7 +11,7 @@
 
 ### 安装Burpsuite证书到macOS系统中
 
-![](https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/1.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000031O3G92eYkbQ.png)
 
 ### 安装proxifier并添加Proxifier规则
 
@@ -24,23 +24,23 @@
 brew install --cask proxifier
 ```
 
-![](https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/2.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002AYVbh2hAfxw.png)
 
 ### 添加代理和配置代理规则
 
-![](https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/3.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000031FC5M2J3OAy.png)
 
 > 微信小程序路径 : /Applications/WeChat.app/Contents/MacOS/Mini Program.app
 
-![](https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/4.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001Dt1n33TI4dL.png)
 
 > ⚠️ 先启动Proxifier，再启动Burpsuite，最后打开微信小程序,(最好关掉其他代理)
 
 ### 抓包成功
 
-![](https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/5.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003WPjtl4CwhR7.png)
 
 ### 存在其他代理(如clashX)时，Proxifier设置方法
 
-![](https://www.bysec.cn/OSS/img/如何在mac上抓小程序的流量/6.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002gcN0O3WXpp3.png)
 

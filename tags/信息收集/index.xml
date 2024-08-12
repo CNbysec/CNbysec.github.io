@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>信息收集 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+        <link>https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
         <description>信息收集 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -302,10 +302,10 @@
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -1271,10 +1271,10 @@
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>
@@ -1282,32 +1282,32 @@
 <h2 id="1供应链" class="headerLink">
     <a href="#1%e4%be%9b%e5%ba%94%e9%93%be" class="header-mark"></a>1、供应链</h2><p>在经历了多年的攻防对抗之后，大量目标单位逐渐认识到安全防护的重要性。因此，他们已采取措施尽可能收敛资产暴露面，并加倍部署各种安全设备。但安全防护注重全面性，具有明显的短板效应，一处出现短板，整个防护体系就可能瞬间崩溃。而目标单位的供应链往往是这些薄弱点的集中体现。这些供应链不仅暴露在外，而且由于复杂的关系，使得对它们的监控和管理变得更为困难。因此，攻击团队通常会选择从供应链着手，以一种迂回的方式绕过目标单位强大的防御体系，获得对目标单位的控制权限。</p>
 <p>通过在搜索引擎上搜索&quot;系统名称&quot;目标单位</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png">
         
     </a><br>
 找到相关的供应商信息，通过对供应商进行攻击，获取目标单位的数据及权限。!</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-06c417df425049e840d6fc969931aea2c57abc86.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-06c417df425049e840d6fc969931aea2c57abc86.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png">
         
     </a></p>
 <h2 id="11heapdump泄露" class="headerLink">
     <a href="#11heapdump%e6%b3%84%e9%9c%b2" class="header-mark"></a>1.1、heapdump泄露</h2><p>通过对供应商资产进行渗透，发现某资产admin目录下存在heapdump文件泄露</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png">
         
     </a></p>
 <p>对于heapdump的利用方式这里就不太赘述，有许多文章对其原理和利用都进行了深入的研究，特定情况下还可以直接进行RCE，这里泄露了大量敏感信息，密码信息加入密码本</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-66928849da0ca5930c02525ce43efa892d6b634a.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-66928849da0ca5930c02525ce43efa892d6b634a.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png">
         
     </a></p>
 <p>登录MinIO，发现大量所属目标单位的敏感信息，也存在其它单位的敏感信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png">
         
     </a></p>
 <p>登录Nacos，大量配置文件，密码信息加入密码本![]</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png">
         
     </a><br>
 登录OSS，发现大量所属目标单位的敏感信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png">
         
     </a></p>
 <h2 id="12微信小程序接口未授权" class="headerLink">
@@ -1342,7 +1342,7 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">C</span><span class="o">:</span><span class="nx">\Users\</span><span class="p">{</span><span class="nx">系统用户名</span><span class="p">}</span><span class="nx">\Documents\WeChat</span> <span class="nx">Files\Applet\</span><span class="p">{</span><span class="nx">小程序的AppID</span><span class="p">}</span><span class="nx">\</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png">
         
     </a></p>
 <h4 id="1212解密操作" class="headerLink">
@@ -1350,11 +1350,11 @@
 <p><a href="https://github.com/superdashu/pc_wxapkg_decrypt_python" target="_blank" rel="noopener noreferrer">https://github.com/superdashu/pc_wxapkg_decrypt_python</a><br>
 <a href="https://github.com/BlackTrace/pc_wxapkg_decrypt" target="_blank" rel="noopener noreferrer">https://github.com/BlackTrace/pc_wxapkg_decrypt</a></p>
 <p>解密原理</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-d27d47fad9d778623595d826710881eb124d9568.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-d27d47fad9d778623595d826710881eb124d9568.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png">
         
     </a><br>
 成功解密</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png">
         
     </a></p>
 <h4 id="1212解包操作" class="headerLink">
@@ -1368,68 +1368,68 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">node</span> <span class="nx">wuWxapkg</span><span class="o">.</span><span class="nx">js</span> <span class="mf">1.</span><span class="nx">wxapkg</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-34059d3982e40191688ff91a62ff887f20664ed1.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-34059d3982e40191688ff91a62ff887f20664ed1.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png">
         
     </a></p>
 <p>对小程序进行解包操作，获取到前端JS代码后中，从中进行提取获得接口</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png">
         
     </a></p>
 <p>直接访问目标接口，前端页面虽然显示初始化失败</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png">
         
     </a><br>
 但流量包中已获取数据，近千万条目标单位敏感信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png">
         
     </a></p>
 <h2 id="13web程序越权" class="headerLink">
     <a href="#13web%e7%a8%8b%e5%ba%8f%e8%b6%8a%e6%9d%83" class="header-mark"></a>1.3、web程序越权</h2><p>通过上述收集到的密码，撞密码撞出一个账号，但是此账号为最低权限，无任何操作权限，点击搜索组织架构，此时无任何返回信息<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png">
+<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png">
         
     </a></p>
 <p>抓包将parentId和orgLevel去除，再发包，即可越权看到全员组织架构</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png">
         
     </a></p>
 <p>点击修改密码，然后将上述获取到的roleId添加进去，即可获取全部权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png">
         
     </a></p>
 <p>获取到大量数据</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-aaceb387674ff04511482b780b03369902094232.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-aaceb387674ff04511482b780b03369902094232.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png">
         
     </a></p>
 <h2 id="14公众号" class="headerLink">
     <a href="#14%e5%85%ac%e4%bc%97%e5%8f%b7" class="header-mark"></a>1.4、公众号</h2><p>js泄露密码，密码可撞库目标单位公众号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png">
         
     </a></p>
 <h2 id="2云原生安全" class="headerLink">
     <a href="#2%e4%ba%91%e5%8e%9f%e7%94%9f%e5%ae%89%e5%85%a8" class="header-mark"></a>2、云原生安全</h2><p>容器化部署和微服务架构为应用程序开发和部署提供了更好的灵活性、可伸缩性、可维护性和性能，受到了越来越多厂商的使用，新的应用就会引入新的攻击面，如容器逃逸、服务间攻击、API滥用等。攻击者可以利用这些新的入口点来攻击应用程序和数据。并且在云原生环境下管理用户和服务的身份验证和授权变得更加复杂。许多应用开发商在追求容器化和云原生架构的便利性和效率时，安全性常常被忽视或放在次要位置。这就直接导致了云原生环境的脆弱，容易受到各种安全威胁和攻击。</p>
 <h2 id="21harbor-镜像仓库" class="headerLink">
     <a href="#21harbor-%e9%95%9c%e5%83%8f%e4%bb%93%e5%ba%93" class="header-mark"></a>2.1、Harbor 镜像仓库</h2><p>Harbor是一个开源的容器镜像仓库管理器，旨在帮助组织存储、管理和分发Docker容器镜像，但是Harbor存在一个充满争议的“漏洞”：任意用户能够直接获取public的镜像。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png">
         
     </a></p>
 <p>可以直接拉取下载镜像文件，可以利用脚本批量下载</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png">
         
     </a></p>
 <h2 id="22疑似后门" class="headerLink">
     <a href="#22%e7%96%91%e4%bc%bc%e5%90%8e%e9%97%a8" class="header-mark"></a>2.2、疑似后门</h2><p>通过镜像文件获取jar包，获取配置文件等敏感信息，对jar包的class文件进行反编译，进行代码审计获取到一个类似后门的漏洞，该接口只需要使用用户名，即可登录系统后台。管理员权限配合文件上传获取服务器权限。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png">
         
     </a></p>
 <p>通过配置文件连接数据库等</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png">
         
     </a></p>
 <h2 id="23docker未授权" class="headerLink">
     <a href="#23docker%e6%9c%aa%e6%8e%88%e6%9d%83" class="header-mark"></a>2.3、docker未授权</h2><h3 id="231-registry-api未授权访问" class="headerLink">
     <a href="#231-registry-api%e6%9c%aa%e6%8e%88%e6%9d%83%e8%ae%bf%e9%97%ae" class="header-mark"></a>2.3.1、 registry api未授权访问</h3><p>在 Docker Registry API 中，认证和授权通常是基于访问令牌（Access Token）或者用户名和密码的。如果未正确设置访问控制权限，即会造成未授权访问漏洞，攻击者可直接下载registry仓库的所有镜像容器。</p>
 <p>访问/v2/_catalog接口即可查看全部仓库内容</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png">
         
     </a><br>
 <a href="https://github.com/Soufaker/docker_v2_catalog" target="_blank" rel="noopener noreferrer">https://github.com/Soufaker/docker_v2_catalog</a></p>
@@ -1444,7 +1444,7 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">#查看容器 docker -H tcp://&lt;target&gt;:2375 ps -a
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-51cfb8bea7521008030a205378af8c6c852f3660.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-51cfb8bea7521008030a205378af8c6c852f3660.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png">
         
     </a></p>
 <div class="highlight"><div class="chroma">
@@ -1462,11 +1462,11 @@
 <p><strong>任意用户添加</strong>：POST <a href="http://192.168.80.131:8848/nacos/v1/auth/users?pageNo=1&amp;pageSize=1" target="_blank" rel="noopener noreferrer">/nacos/v1/auth/users</a> username= &amp; password=</p>
 <p><strong>任意用户密码修改</strong>：curl -X PUT &lsquo;<a href="http://127.0.0.1:8848/nacos/v1/auth/users?accessToken" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8848/nacos/v1/auth/users?accessToken</a>\=&rsquo; -H &lsquo;User-Agent:Nacos-Server&rsquo; -d &lsquo;username\=test1&amp;newPassword\=test2&rsquo;</p>
 <p><strong>弱口令</strong>：nacos/nacos</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png">
         
     </a></p>
 <p>通过编排密码爆破进后台，发现大量配置文件，但敏感信息均被加密</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png">
         
     </a></p>
 <h3 id="241jasypt加密" class="headerLink">
@@ -1499,19 +1499,19 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>但是客户端加密的安全性主要依赖于客户端代码的保护和可信任性，当密码泄露后，加密也就自然失效了，在ncaos一个文件中发现jasypt加密密码，可以直接进行解密操作</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png">
         
     </a><br>
 成功连接OSS</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png">
         
     </a></p>
 <p>成功连接数据库</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-a758622d45da44e07aa10ed7765337f625f449c5.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-a758622d45da44e07aa10ed7765337f625f449c5.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png">
         
     </a></p>
 <p>小程序token，接管小程序</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png">
         
     </a></p>
 <p>达梦数据库是国产化的关系型数据库，使用下面工具可以进行连接</p>
@@ -1520,7 +1520,7 @@
     <a href="#3nday" class="header-mark"></a>3、Nday</h2><h2 id="31yongyounc-jsinvoke-rce漏洞" class="headerLink">
     <a href="#31yongyounc-jsinvoke-rce%e6%bc%8f%e6%b4%9e" class="header-mark"></a>3.1、yongyouNC jsInvoke rce漏洞</h2><p>漏洞利用方法，通过Java反射机制创建一个javax.naming.InitialContext对象，并使用LDAP协议连接到指定的IP地址和端口，然后调用&quot;nc.itf.iufo.IBaseSPService&quot;服务中的&quot;saveXStreamConfig&quot;方法，接受对象和字符串作为参数，达到命令执行的效果。</p>
 <p>命令执行成功，但是目标系统存在杀软，无法直接上传文件</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png">
         
     </a></p>
 <h3 id="311certutil" class="headerLink">
@@ -1533,7 +1533,7 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">bash64编码后的免杀马</span> <span class="o">&gt;</span> <span class="nx">myfile</span><span class="o">.</span><span class="nx">jsp</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png">
         
     </a></p>
 <p>使用certutil进行解码</p>
@@ -1545,37 +1545,37 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">certutil</span> <span class="o">-</span><span class="nx">decode</span> <span class="nx">木马相对路径</span> <span class="nx">解码后的木马相对路径</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png">
+</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png">
         
     </a></p>
 <p>冰蝎上线并上线CS</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-1c88c33f8c747709119140b588136098628a120c.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-1c88c33f8c747709119140b588136098628a120c.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png">
         
     </a></p>
 <h2 id="32若依二开" class="headerLink">
     <a href="#32%e8%8b%a5%e4%be%9d%e4%ba%8c%e5%bc%80" class="header-mark"></a>3.2、若依二开</h2><p>shiro的洞修复了，找到一个前台信息泄露漏洞</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png">
         
     </a></p>
 <p>通过获取到的用户名，使用弱口令进入后台，普通权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png">
         
     </a></p>
 <p>再次对公告发布人员猜解密码，成功登录后台，多了系统管理权限，直接添加用户赋予最高权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cc108479b419389d1d681b8639c528727d8286a6.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cc108479b419389d1d681b8639c528727d8286a6.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png">
         
     </a></p>
 <p>新增用户登录，发现定时任务功能，直接使用定时任务执行命令</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png">
         
     </a></p>
 <h2 id="33shiro" class="headerLink">
     <a href="#33shiro" class="header-mark"></a>3.3、shiro</h2><p>目标路径在被访问时，会先跳转到统一认证登录，导致大部分都忽视了该路径是存在shiro反序列化漏洞的</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png">
         
     </a></p>
 <p>本着试一试的心态进行了shiro的扫描，默认密钥，直接获取权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png">
+<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png">
         
     </a></p>]]></description>
 </item></channel>

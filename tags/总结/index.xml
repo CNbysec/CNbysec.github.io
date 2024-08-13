@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>总结 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E6%80%BB%E7%BB%93/</link>
+        <link>https://www.bysec.cn/tags/%E6%80%BB%E7%BB%93/</link>
         <description>总结 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 20 May 2024 17:55:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%80%BB%E7%BB%93/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 20 May 2024 17:55:46 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E6%80%BB%E7%BB%93/" rel="self" type="application/rss+xml" /><item>
     <title>验证码渗透最全总结</title>
-    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Mon, 20 May 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p>
 </blockquote>
@@ -17,21 +17,21 @@
     <a href="#%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93" class="header-mark"></a>验证码渗透最全总结</h2><p>不少人在碰见验证码的时候，大多数只是看了一眼就过去了，没想到验证码还有啥可测试的。但其实验证码也能在项目中导致<strong>高危</strong>,并且验证码漏洞能在一定情况下造成危害。</p>
 <h2 id="验证码总结" class="headerLink">
     <a href="#%e9%aa%8c%e8%af%81%e7%a0%81%e6%80%bb%e7%bb%93" class="header-mark"></a>验证码总结</h2><p>验证码分为两块内容，一块是图形验证码，一块是短信验证码。下面是对这些技巧总结的思维导图。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-07aa8805b4a3ac1f699898097c63b75d100e7c61.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-07aa8805b4a3ac1f699898097c63b75d100e7c61.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-07aa8805b4a3ac1f699898097c63b75d100e7c61.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-07aa8805b4a3ac1f699898097c63b75d100e7c61.png">
         
     </a></p>
 <h3 id="图形验证码" class="headerLink">
     <a href="#%e5%9b%be%e5%bd%a2%e9%aa%8c%e8%af%81%e7%a0%81" class="header-mark"></a>图形验证码</h3><h4 id="图形验证码长宽可控" class="headerLink">
     <a href="#%e5%9b%be%e5%bd%a2%e9%aa%8c%e8%af%81%e7%a0%81%e9%95%bf%e5%ae%bd%e5%8f%af%e6%8e%a7" class="header-mark"></a>图形验证码长宽可控</h4><p>简单测试方法，就是看到一个登录框，然后新建打开图片链接，在图片链接中就有机会看到两个参数值，一个是 width，一个是 length。这两个参数是计算图片验证码的长宽，如果长宽过高就会过度消耗的是服务器的 CPU 资源。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-f8edf220db2f6f553e493615a6245671be2f3cc8.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-f8edf220db2f6f553e493615a6245671be2f3cc8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-f8edf220db2f6f553e493615a6245671be2f3cc8.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-f8edf220db2f6f553e493615a6245671be2f3cc8.png">
         
     </a><br>
 当length为比较大的时候，响应时间为2767millis<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-23af811d5dc12caad125af766529881f2fe7a073.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-23af811d5dc12caad125af766529881f2fe7a073.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-23af811d5dc12caad125af766529881f2fe7a073.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-23af811d5dc12caad125af766529881f2fe7a073.png">
         
     </a><br>
 <strong>注意</strong>：该漏洞能造成服务器拒绝服务攻击。有的 SRC 里面注明了，禁止使用 DDOS 攻击，这种漏洞是不收的，如果提交了漏洞，很有可能面临<strong>法律责任</strong>。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-9f2f1a9fdac9a1537fc050f5b62bfc6516573602.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-9f2f1a9fdac9a1537fc050f5b62bfc6516573602.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-9f2f1a9fdac9a1537fc050f5b62bfc6516573602.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-9f2f1a9fdac9a1537fc050f5b62bfc6516573602.png">
         
     </a></p>
 <h4 id="图形验证码可绕过" class="headerLink">
@@ -42,11 +42,11 @@
     <a href="#%e5%9b%be%e5%bd%a2%e9%aa%8c%e8%af%81%e7%a0%81%e5%8f%af%e8%af%86%e5%88%ab" class="header-mark"></a>图形验证码可识别</h4><p>这个就是开发在制作图形验证码功能的时候，没有将图形验证码加入足够多的噪点，使验证码能够被现有的工具进行识别。一般是项目硬凑数用的，SRC 全部都不收。具体不做解释</p>
 <h4 id="图形验证码随机值可控" class="headerLink">
     <a href="#%e5%9b%be%e5%bd%a2%e9%aa%8c%e8%af%81%e7%a0%81%e9%9a%8f%e6%9c%ba%e5%80%bc%e5%8f%af%e6%8e%a7" class="header-mark"></a>图形验证码随机值可控</h4><p>都知道图形验证码是后端随机生成的。那么随机生成的时候，有没有可能是能控制这个随机值？有可能! 生成验证码的随机值被写在了 url 里面<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-e20c13ca97d25e047ade9b3bd983a245cffe43b4.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-e20c13ca97d25e047ade9b3bd983a245cffe43b4.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-e20c13ca97d25e047ade9b3bd983a245cffe43b4.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-e20c13ca97d25e047ade9b3bd983a245cffe43b4.png">
         
     </a></p>
 <p>将characters固定为aaaa，可以看到图形验证码为aaaa<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-2aaf0c5c6bd69d7d5452b3bc34f22c22b702cc77.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-2aaf0c5c6bd69d7d5452b3bc34f22c22b702cc77.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-2aaf0c5c6bd69d7d5452b3bc34f22c22b702cc77.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-2aaf0c5c6bd69d7d5452b3bc34f22c22b702cc77.png">
         
     </a></p>
 <h4 id="图形验证码返回到前端" class="headerLink">
@@ -55,40 +55,40 @@
     <a href="#%e7%9f%ad%e4%bf%a1%e9%aa%8c%e8%af%81%e7%a0%81" class="header-mark"></a>短信验证码</h3><p>我们已经写完了图形验证码部分，现实情况下短信验证码也是比较多。短信验证码的漏洞技巧要比图形验证码<strong>多很多</strong></p>
 <h4 id="短信炸弹纵向" class="headerLink">
     <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%ba%b5%e5%90%91" class="header-mark"></a>短信炸弹纵向</h4><p>在一个限制时间的情况下对一个手机号，发送的短信验证码条数超过发送预期，这种漏洞我们都称为<code>短信炸弹</code>or<code>短信轰炸</code>or<code>短信炸弹纵向</code><br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-9ee1bcaa0a03fc53f87c05e0a5a038a39bcc48bb.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-9ee1bcaa0a03fc53f87c05e0a5a038a39bcc48bb.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-9ee1bcaa0a03fc53f87c05e0a5a038a39bcc48bb.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-9ee1bcaa0a03fc53f87c05e0a5a038a39bcc48bb.png">
         
     </a><br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-d3aa32373abf5cf438642122ea553b6f9b1e1925.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-d3aa32373abf5cf438642122ea553b6f9b1e1925.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-d3aa32373abf5cf438642122ea553b6f9b1e1925.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-d3aa32373abf5cf438642122ea553b6f9b1e1925.png">
         
     </a><br>
 不停点击repeter或者放到intruder里面，就可以实现一个手机号接收到多条短信<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-5b65929eb4576fc9bacc70153d32df2ef028b37a.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-5b65929eb4576fc9bacc70153d32df2ef028b37a.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-5b65929eb4576fc9bacc70153d32df2ef028b37a.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-5b65929eb4576fc9bacc70153d32df2ef028b37a.png">
         
     </a></p>
 <h4 id="短信炸弹横向" class="headerLink">
     <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e6%a8%aa%e5%90%91" class="header-mark"></a>短信炸弹横向</h4><p>上面我们提到了在限定时间内，对一个手机号发送超过预期的短信条数是短信轰炸。造成的结果就是浪费短信资源。如果开发把这个漏洞给改了，那么还有没有漏洞？还有？不能给一个人发送短信验证了，那么给其他人发送验证码一样的。<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-7dcfda9d6162e5385a3f94aee05566b7ca188ba3.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-7dcfda9d6162e5385a3f94aee05566b7ca188ba3.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-7dcfda9d6162e5385a3f94aee05566b7ca188ba3.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-7dcfda9d6162e5385a3f94aee05566b7ca188ba3.png">
         
     </a><br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-49694c38b745d0949ae23a750b711c645018d603.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-49694c38b745d0949ae23a750b711c645018d603.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-49694c38b745d0949ae23a750b711c645018d603.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-49694c38b745d0949ae23a750b711c645018d603.png">
         
     </a><br>
 将phone设置成变量，进行遍历<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-1336295b9eb2d85f64ea1c6ec3f2a4513503529d.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-1336295b9eb2d85f64ea1c6ec3f2a4513503529d.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-1336295b9eb2d85f64ea1c6ec3f2a4513503529d.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-1336295b9eb2d85f64ea1c6ec3f2a4513503529d.png">
         
     </a></p>
 <h4 id="短信验证码可爆破" class="headerLink">
     <a href="#%e7%9f%ad%e4%bf%a1%e9%aa%8c%e8%af%81%e7%a0%81%e5%8f%af%e7%88%86%e7%a0%b4" class="header-mark"></a>短信验证码可爆破</h4><p>我们讲了 2 个发送短信验证码，都知道验证码通常 4 位数或者 6 位数的数字验证码。如果服务器没有限制提交的验证码的次数，那么我们可以爆破这个验证码。并且如果有 4 位验证码被爆破成功的话，在 SRC 里面通常是按照高危处理。</p>
 <h4 id="短信验证码可编辑" class="headerLink">
     <a href="#%e7%9f%ad%e4%bf%a1%e9%aa%8c%e8%af%81%e7%a0%81%e5%8f%af%e7%bc%96%e8%be%91" class="header-mark"></a>短信验证码可编辑</h4><p>我们讲了发送短信验证码以及爆破短信验证码。我们知道短信验证码功能发送的是短信，那么我们就有可能把短信内容给更改。<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-a65ad9daae02cac08992fedca5bb6e768d759359.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-a65ad9daae02cac08992fedca5bb6e768d759359.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-a65ad9daae02cac08992fedca5bb6e768d759359.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-a65ad9daae02cac08992fedca5bb6e768d759359.png">
         
     </a><br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-3dd9859a71ffbf19616b439137a403e573f45f6f.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-3dd9859a71ffbf19616b439137a403e573f45f6f.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-3dd9859a71ffbf19616b439137a403e573f45f6f.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-3dd9859a71ffbf19616b439137a403e573f45f6f.png">
         
     </a><br>
 通过修改transAmt 参数内容，可随意修改短信内容<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-b910d6dc4e0703a3c7825f053ed10fc6211a8129.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-b910d6dc4e0703a3c7825f053ed10fc6211a8129.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-b910d6dc4e0703a3c7825f053ed10fc6211a8129.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-b910d6dc4e0703a3c7825f053ed10fc6211a8129.png">
         
     </a></p>
 <h3 id="短信炸弹的绕过技巧" class="headerLink">
@@ -96,14 +96,14 @@
 <h4 id="短信炸弹的绕过技巧-1--特殊字符" class="headerLink">
     <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-1--%e7%89%b9%e6%ae%8a%e5%ad%97%e7%ac%a6" class="header-mark"></a>短信炸弹的绕过技巧 1&ndash;特殊字符</h4><p>通常，开发在发送短信验证码的时候，没有对特殊字符进行过滤。比如在手机号是 15312341234。我们加上+86，变成+8615312341234，这样的话服务器就有可能判定为两个手机号了。</p>
 <p>在 mobile=15312341234 的前面，加<code>空格</code>，<code>86</code>，<code>086</code>，<code>0086</code>，<code>+86</code>，<code>0</code>，<code>00</code>，<code>/r,/n</code>,<code>?</code>,<code>#</code>,<code>!</code>,<code>,</code>&hellip;只要想法多就有可能绕过。<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-cdfb9f6773ed4c516bfff1b1b64f429e0c00c0fe.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-cdfb9f6773ed4c516bfff1b1b64f429e0c00c0fe.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-cdfb9f6773ed4c516bfff1b1b64f429e0c00c0fe.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-cdfb9f6773ed4c516bfff1b1b64f429e0c00c0fe.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-176b46bb24c9974b759d9af83924bcf1f76799a1.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-176b46bb24c9974b759d9af83924bcf1f76799a1.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-176b46bb24c9974b759d9af83924bcf1f76799a1.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-176b46bb24c9974b759d9af83924bcf1f76799a1.png">
         
     </a><br>
 控制phone参数进行攻击<br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-b0755303a59aa0bf852a2964d3409ef1f5624ccf.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-b0755303a59aa0bf852a2964d3409ef1f5624ccf.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-b0755303a59aa0bf852a2964d3409ef1f5624ccf.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-b0755303a59aa0bf852a2964d3409ef1f5624ccf.png">
         
     </a></p>
 <h4 id="短信炸弹的绕过技巧-2--添加-xff" class="headerLink">
@@ -116,10 +116,10 @@
     <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-5--%e4%bf%ae%e6%94%b9%e8%bf%94%e5%9b%9e%e5%8c%85" class="header-mark"></a>短信炸弹的绕过技巧 5&ndash;修改返回包</h4><p>在发送短信验证码的数据包，修改返回包的 Flase 为 Success</p>
 <h4 id="短信炸弹的绕过技巧-6--并发" class="headerLink">
     <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-6--%e5%b9%b6%e5%8f%91" class="header-mark"></a>短信炸弹的绕过技巧 6&ndash;并发</h4><p>对短信验证码的数据包进行并发，有机会绕过限制</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-569f362e7ef69d7c32d5f7a714ec89b1486b42fd.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-569f362e7ef69d7c32d5f7a714ec89b1486b42fd.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-569f362e7ef69d7c32d5f7a714ec89b1486b42fd.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-569f362e7ef69d7c32d5f7a714ec89b1486b42fd.png">
         
     </a><br>
-<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-2e05570fe2a88f4cb915508987e529e497cf9acf.png" title="image.png" data-thumbnail="https://www.bysec.cn/OSS/img/验证码渗透最全总结/attach-2e05570fe2a88f4cb915508987e529e497cf9acf.png">
+<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93/attach-2e05570fe2a88f4cb915508987e529e497cf9acf.png" title="image.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/验证码渗透最全总结/attach-2e05570fe2a88f4cb915508987e529e497cf9acf.png">
         
     </a></p>
 <h4 id="在响应包里面可以看到短信验证码" class="headerLink">
@@ -139,10 +139,10 @@
 <p>本文仅用于技术讨论与学习，利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者及本公众号不为此承担任何责任。</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -328,17 +328,17 @@
 <p><strong>电话反查：<a href="http://whois.chinaz.com/reverse?ddlSearchMode=1" target="_blank" rel="noopener noreferrer">http://whois.chinaz.com/reverse?ddlSearchMode=1</a></strong></p>
 <h3 id="爱站" class="headerLink">
     <a href="#%e7%88%b1%e7%ab%99" class="header-mark"></a>爱站</h3><p><a href="https://whois.aizhan.com/" target="_blank" rel="noopener noreferrer">https://whois.aizhan.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png" title="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png" title="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-6b0c89cb5e9c67a076c770ff866bc4828a637fea.png">
         
     </a></p>
 <h3 id="微步" class="headerLink">
     <a href="#%e5%be%ae%e6%ad%a5" class="header-mark"></a>微步</h3><p><a href="https://x.threatbook.cn/" target="_blank" rel="noopener noreferrer">https://x.threatbook.cn/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png" title="image-20240318211050117" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png" title="image-20240318211050117" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-604de8d0d82a771abccecab60d17a4602b3a64e2.png">
         
     </a></p>
 <h3 id="国外的whois" class="headerLink">
     <a href="#%e5%9b%bd%e5%a4%96%e7%9a%84whois" class="header-mark"></a>国外的who.is</h3><p><a href="https://who.is/" target="_blank" rel="noopener noreferrer">https://who.is/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-89bff3e05618bd3349d50461833488d162c42dc5.png" title="image-20240318211100783" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-89bff3e05618bd3349d50461833488d162c42dc5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-89bff3e05618bd3349d50461833488d162c42dc5.png" title="image-20240318211100783" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-89bff3e05618bd3349d50461833488d162c42dc5.png">
         
     </a></p>
 <h3 id="阿里云域名信息查询" class="headerLink">
@@ -351,39 +351,39 @@
     <a href="#icpinternet-content-provider%e5%a4%87%e6%a1%88%e6%9f%a5%e8%af%a2" class="header-mark"></a>ICP(Internet Content Provider)备案查询</h2><p>可以查询该单位备案的其它网站</p>
 <h3 id="国家企业信用信息公示系统" class="headerLink">
     <a href="#%e5%9b%bd%e5%ae%b6%e4%bc%81%e4%b8%9a%e4%bf%a1%e7%94%a8%e4%bf%a1%e6%81%af%e5%85%ac%e7%a4%ba%e7%b3%bb%e7%bb%9f" class="header-mark"></a>国家企业信用信息公示系统</h3><p><a href="http://www.gsxt.gov.cn/index.html" target="_blank" rel="noopener noreferrer">http://www.gsxt.gov.cn/index.html</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png" title="image-20240318211116598" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png" title="image-20240318211116598" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-a18add304d0d2c057fa95ced5200752df7b29e1a.png">
         
     </a></p>
 <h3 id="icp备案查询网" class="headerLink">
     <a href="#icp%e5%a4%87%e6%a1%88%e6%9f%a5%e8%af%a2%e7%bd%91" class="header-mark"></a>ICP备案查询网</h3><p><a href="https://www.beianx.cn/" target="_blank" rel="noopener noreferrer">https://www.beianx.cn/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png" title="image-20240318211229330" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png" title="image-20240318211229330" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-8a7aa2e4b0a4ad3bf8c8723fa4086dae4a67f15e.png">
         
     </a></p>
 <h3 id="icp备案查询---站长工具" class="headerLink">
     <a href="#icp%e5%a4%87%e6%a1%88%e6%9f%a5%e8%af%a2---%e7%ab%99%e9%95%bf%e5%b7%a5%e5%85%b7" class="header-mark"></a>ICP备案查询 - 站长工具</h3><p><a href="http://icp.chinaz.com/" target="_blank" rel="noopener noreferrer">http://icp.chinaz.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png" title="image-20240318211245885" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png" title="image-20240318211245885" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-ba334bbd7deb48d316e7e7f11178376c02ac32d8.png">
         
     </a></p>
 <h3 id="天眼查" class="headerLink">
     <a href="#%e5%a4%a9%e7%9c%bc%e6%9f%a5" class="header-mark"></a>天眼查</h3><p><a href="https://www.tianyancha.com/" target="_blank" rel="noopener noreferrer">https://www.tianyancha.com/</a></p>
 <p>根据前面获取的企业名称可以获取目标企业的微信公众号、微博、备案站点、APP、软件著作权等信息</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png" title="image-20240318211257183" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png" title="image-20240318211257183" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-e3a11a823fd482f821aa2eb5769fe58b7d98e07b.png">
         
     </a></p>
 <h3 id="企查查" class="headerLink">
     <a href="#%e4%bc%81%e6%9f%a5%e6%9f%a5" class="header-mark"></a>企查查</h3><p><a href="https://www.qcc.com/" target="_blank" rel="noopener noreferrer">https://www.qcc.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png" title="image-20240318211310422" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png" title="image-20240318211310422" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-dd5a3a46140714898648d4afb5209e7cb8c5000e.png">
         
     </a></p>
 <h2 id="seosearch-engine-optimization查询" class="headerLink">
     <a href="#seosearch-engine-optimization%e6%9f%a5%e8%af%a2" class="header-mark"></a>SEO(Search Engine Optimization)查询</h2><h3 id="爱站-seo综合查询" class="headerLink">
     <a href="#%e7%88%b1%e7%ab%99-seo%e7%bb%bc%e5%90%88%e6%9f%a5%e8%af%a2" class="header-mark"></a>爱站-SEO综合查询</h3><p><a href="https://www.aizhan.com/cha/" target="_blank" rel="noopener noreferrer">https://www.aizhan.com/cha/</a></p>
-<p>可以根据域名来收集目标站点的备案信息、名称、注册人等信息<a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png" title="image-20240318211322521" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png">
+<p>可以根据域名来收集目标站点的备案信息、名称、注册人等信息<a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png" title="image-20240318211322521" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-a078b1f77b41bc109b822dead6f72878a4c953d2.png">
         
     </a></p>
 <h3 id="站长-seo综合查询" class="headerLink">
     <a href="#%e7%ab%99%e9%95%bf-seo%e7%bb%bc%e5%90%88%e6%9f%a5%e8%af%a2" class="header-mark"></a>站长-SEO综合查询</h3><p><a href="http://seo.chinaz.com/" target="_blank" rel="noopener noreferrer">http://seo.chinaz.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-192ff56d8e5ec565530acadd73369738422c9819.png" title="image-20240318211336606" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-192ff56d8e5ec565530acadd73369738422c9819.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-192ff56d8e5ec565530acadd73369738422c9819.png" title="image-20240318211336606" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-192ff56d8e5ec565530acadd73369738422c9819.png">
         
     </a></p>
 <h3 id="googlebingbaidu" class="headerLink">
@@ -402,38 +402,38 @@
 <p>这里给大家推荐一个网站 (本人也是看别人的知道的【信息收集之-你不知道的骚思路】<a href="https://www.bilibili.com/video/BV1yP4y117Q2?vd_source=6ce69e079d1dd642d7810fbf2e9c817e" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1yP4y117Q2?vd_source=6ce69e079d1dd642d7810fbf2e9c817e</a>)</p>
 <p>二开谷歌语法&mdash;&mdash;<a href="https://searchtool.drtsrc.com/" target="_blank" rel="noopener noreferrer">https://searchtool.drtsrc.com/</a> (国内版)</p>
 <p>-&mdash;&mdash;&mdash;&mdash;&mdash;-<a href="https://dorks.faisalahmed.me/" target="_blank" rel="noopener noreferrer">https://dorks.faisalahmed.me/</a> (国外版)</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png" title="image-20240318211349607" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png" title="image-20240318211349607" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-e884f65dc7ebc7a1992994b797c57666c724fdcf.png">
         
     </a></p>
 <h2 id="github" class="headerLink">
     <a href="#github" class="header-mark"></a>Github</h2><p>GitHub源码泄露肯定都听说过，但是真正找的源码的案例可能很少，可能是你用的方法有问题，网站域名、网站JS路径、网站备案、网站下的技术支持这些都可以放进去GitHub搜</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png" title="image-20240318211404704" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png" title="image-20240318211404704" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-329e15405217eabb9f33e3f97f00690af6f2395b.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2158b74be8703460d50a8f68855da3c47875a609.png" title="image-20240318211411084" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2158b74be8703460d50a8f68855da3c47875a609.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2158b74be8703460d50a8f68855da3c47875a609.png" title="image-20240318211411084" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-2158b74be8703460d50a8f68855da3c47875a609.png">
         
     </a></p>
 <p>精确搜索：被双引号引起来的部分代表精确匹配</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3131445766e66dac6b07a75cbf86b194670d2336.png" title="image-20240318211423694" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3131445766e66dac6b07a75cbf86b194670d2336.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3131445766e66dac6b07a75cbf86b194670d2336.png" title="image-20240318211423694" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-3131445766e66dac6b07a75cbf86b194670d2336.png">
         
     </a></p>
 <p><strong>Fofa 360</strong> <strong>鹰图 钟馗之眼</strong></p>
 <p>鹰图提炼图标很好用</p>
 <p>web.icon==&ldquo;4eeb8a8eb30b70af511dcc28c11a3216&rdquo;</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png" title="image-20240318211439447" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png" title="image-20240318211439447" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-c5d3c75284a6db7469c0ee707d2c42f55435832e.png">
         
     </a></p>
 <p>\=模糊</p>
 <p>\==精准</p>
 <p>Fofa</p>
 <p>icon_hash=&ldquo;174665376&rdquo;</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png" title="image-20240318211452914" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png" title="image-20240318211452914" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-95b6f0f1c2fa41fcfef1a1da0ed8e502aa3d1ef2.png">
         
     </a></p>
 <p>其实，这时候可以发现很多图标，两者是相辅相成的，通过收集图标提炼共性标题，通过收集标题找到共性图标</p>
 <p>最好多加个几个精准条件</p>
 <p>web.icon==&ldquo;4eeb8a8eb30b70af511dcc28c11a3216&rdquo;&amp;&amp;title=&ldquo;ruoyi&rdquo;</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png" title="image-20240318211512753" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png" title="image-20240318211512753" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-67ca4324402cd6f7cf84de1574c0c86d6061076b.png">
         
     </a></p>
 <p>`Web``的内容```</p>
@@ -444,11 +444,11 @@
 <p>因此我们从路由的角度来体验</p>
 <p>一种是找超链接的提炼方式</p>
 <p>body=prod-api/</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png" title="image-20240318211634230" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png" title="image-20240318211634230" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-6a523af9532ad5869b4eb9384399e5961d59e822.png">
         
     </a></p>
 <p>可以找到站点中带有若依的超链接路由</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png" title="image-20240318212159505" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png" title="image-20240318212159505" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-d8efcb9e369b9753fc23a021fd437501ba970d7d.png">
         
     </a></p>
 <p>打开之后我们就可以发现确实超链接指向的是若依的系统</p>
@@ -463,7 +463,7 @@
 <p>高级：359美元 每月最多 2000 万个结果 每月扫描多达 65,536 个 IP 65,536 个 IP 的网络监控</p>
 <p>超级：1099元 每月无限 每月扫描多达 327,680 个 IP 327,680 个 IP 的网络监控</p>
 <p>普通与高级功能差别：漏洞搜索过滤器</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-91886143a3662c855eacb265d65427a71892b6a0.png" title="image-20240318212230888" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-91886143a3662c855eacb265d65427a71892b6a0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-91886143a3662c855eacb265d65427a71892b6a0.png" title="image-20240318212230888" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-91886143a3662c855eacb265d65427a71892b6a0.png">
         
     </a></p>
 <h4 id="语法" class="headerLink">
@@ -505,7 +505,7 @@
 <p>高级：4800/年 查询结果展示量：1千条 查询API额度：每月3w</p>
 <p>VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w</p>
 <p>高级与VIP功能差别：蜜罐识别</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png" title="image-20240318212239297" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png" title="image-20240318212239297" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-30771c54f4f5c259c5d9688c630a1d08a10d772b.png">
         
     </a></p>
 <h4 id="语法-1" class="headerLink">
@@ -540,7 +540,7 @@
 <p>终身：999 数据广度开放性：1W条 Quake积分 ：5W/月</p>
 <p>功能差别：相似图标、深度识别、专用语法、圈内交流</p>
 <p><strong>邀请码： Cm2TX9</strong></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png" title="image-20240318212247742" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png" title="image-20240318212247742" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-b445c2758c9e2882e50979d8dffcf86f0d5bdbb8.png">
         
     </a></p>
 <h4 id="语法-2" class="headerLink">
@@ -574,80 +574,80 @@
     <a href="#1app%e4%bf%a1%e6%81%af%e6%90%9c%e9%9b%86" class="header-mark"></a>1、APP信息搜集</h2><h3 id="11七麦数据" class="headerLink">
     <a href="#11%e4%b8%83%e9%ba%a6%e6%95%b0%e6%8d%ae" class="header-mark"></a>1.1、七麦数据</h3><p><a href="https://www.qimai.cn/" target="_blank" rel="noopener noreferrer">https://www.qimai.cn/</a></p>
 <p>通过当前APP查询所属公司的所有APP</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png" title="image-20240318212256021" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png" title="image-20240318212256021" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-5a0e64e9f22d7e8ffe8716a468c9b432c0205b6a.png">
         
     </a></p>
 <p>通过当前APP查询同开发者应用</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png" title="image-20240318212301308" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png" title="image-20240318212301308" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-43bdbe80295303d8a4306db84e5e246a2ba9ca6e.png">
         
     </a></p>
 <h3 id="12appstore安卓和ios" class="headerLink">
     <a href="#12appstore%e5%ae%89%e5%8d%93%e5%92%8cios" class="header-mark"></a>1.2、AppStore(安卓和IOS)</h3><p>查询同开发者应用</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png" title="image-20240318213120983" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png" title="image-20240318213120983" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-3e73f4a78b398a26f0f06094cfcafff57be4876a.png">
         
     </a></p>
 <h2 id="2微信公众号和小程序" class="headerLink">
     <a href="#2%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7%e5%92%8c%e5%b0%8f%e7%a8%8b%e5%ba%8f" class="header-mark"></a>2、微信公众号和小程序</h2><p>通过微信搜索公众号并去关注，然后进去点击文章之类的，下拉可以看到它的网页来源，大部分是微信提供的，所以需要去阅读原文，但是原文也可能是第三方提供的，所以还需要自己自行去判断，找到它的url后又可以去爆一波子域名了，</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png" title="image-20240318213133715" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png" title="image-20240318213133715" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-4a5a6b737f38931bbfe8bc5289fff45f39b54bf6.png">
         
     </a></p>
 <p>随便点击文章通过下拉查看域名，例如：</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png" title="image-20240318213145758" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png" title="image-20240318213145758" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-d53e706f4c3fa0fc9dffdd67f5993a9bfdad34e0.png">
         
     </a></p>
 <h2 id="4logo" class="headerLink">
     <a href="#4logo" class="header-mark"></a>4、logo</h2><p>当你不确定目标产品是什么时，比如你不知道他是谁家的WAF或者路由器，可以利用查看网站logo地址，然后复制logo地址，点击按图片搜索，到谷歌里面查询；也可以把目标logo下载下来，利用上传图片来查询，通过搜索出来的结果可以判断目标产品和厂商。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-19fe23983d34793a19756320b38c79aaccbde945.png" title="image-20240318213245804" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-19fe23983d34793a19756320b38c79aaccbde945.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-19fe23983d34793a19756320b38c79aaccbde945.png" title="image-20240318213245804" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-19fe23983d34793a19756320b38c79aaccbde945.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png" title="image-20240318213250034" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png" title="image-20240318213250034" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-b0b27b2a69daa400657d01b1456b36f5a58b7909.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png" title="image-20240318214058575" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png" title="image-20240318214058575" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-f751011831118cbbad3a3af63d1fe895e045f4d1.png">
         
     </a></p>
 <h2 id="5faviconico" class="headerLink">
     <a href="#5faviconico" class="header-mark"></a>5、favicon.ico</h2><p>首先先来介绍一下什么favicon.ico文件，所谓favicon，便是其可以让浏览器的收藏夹中除显示相应的标题外，还以图标的方式区别不同的网站。favicon.ico也被称为 website icon（网页图标）、page icon（页面图标）或url icon（URL图标），具体细节请问度娘。下面这个小东西就是 Favicon.ico，我们可以通过在shodan里寻找它的哈希并去查找相关资产，打开shodan页面，或者用shodan插件都行。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png" title="image-20240318214108788" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png" title="image-20240318214108788" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-3afa9d1b3afa239c35e19284955beb2a884e13be.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png" title="image-20240318214114650" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png" title="image-20240318214114650" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-93ada0eed3bb7559a73a349725fdba1fb9821864.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png" title="image-20240318214142064" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png" title="image-20240318214142064" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-83c0cb9582210821838fd7c6e478b07c66a59022.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png" title="image-20240318214154617" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png" title="image-20240318214154617" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-5dd1a1e922e1f5b8952a15e74b691026b73747aa.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png" title="image-20240318214159248" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png" title="image-20240318214159248" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-237c3d3113fe9b9a3189becf8a57907fc8016bf4.png">
         
     </a></p>
 <h2 id="三子域名收集挖掘" class="headerLink">
     <a href="#%e4%b8%89%e5%ad%90%e5%9f%9f%e5%90%8d%e6%94%b6%e9%9b%86%e6%8c%96%e6%8e%98" class="header-mark"></a>三、子域名收集(挖掘)</h2><h2 id="1sslhttps证书" class="headerLink">
     <a href="#1sslhttps%e8%af%81%e4%b9%a6" class="header-mark"></a>1、SSL(HTTPS)证书</h2><p>点击浏览器网站旁边的小锁，然后点击证书就可以查看到该网站的SSL证书了</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a6949b5126971885b1789786f3fbecb076868c0c.png" title="image-20240318214253774" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-a6949b5126971885b1789786f3fbecb076868c0c.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-a6949b5126971885b1789786f3fbecb076868c0c.png" title="image-20240318214253774" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-a6949b5126971885b1789786f3fbecb076868c0c.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png" title="image-20240318214300153" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png" title="image-20240318214300153" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-7f5be2e3ea1d8a7e9505b44e446bd05a1cc7a454.png">
         
     </a></p>
 <h3 id="11大厂商ssl证书一证多用" class="headerLink">
     <a href="#11%e5%a4%a7%e5%8e%82%e5%95%86ssl%e8%af%81%e4%b9%a6%e4%b8%80%e8%af%81%e5%a4%9a%e7%94%a8" class="header-mark"></a>1.1、大厂商SSL证书一证多用</h3><p>大厂商的SSL证书一般都是<strong>一证多用</strong>，根据证书透明日志这个特性，可以得知一些子域名。</p>
 <p>如百度：<a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">https://www.baidu.com</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png" title="image-20240318214312481" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png" title="image-20240318214312481" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-1e7449610f26d26e979b950228ae3b24db5d8ccd.png">
         
     </a></p>
 <p>如搜狐：<a href="https://vpn.sohu-inc.com/" target="_blank" rel="noopener noreferrer">https://vpn.sohu-inc.com</a></p>
 <h3 id="12https证书错误泄露域名" class="headerLink">
     <a href="#12https%e8%af%81%e4%b9%a6%e9%94%99%e8%af%af%e6%b3%84%e9%9c%b2%e5%9f%9f%e5%90%8d" class="header-mark"></a>1.2、HTTPS证书错误泄露域名</h3><p>有时候https证书报错会泄露域名</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png" title="image-20240318214545325" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png" title="image-20240318214545325" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-5e919d93be3284e3dfe8646b93514ef68cf37a9f.png">
         
     </a></p>
 <h3 id="13在线网站证书查询" class="headerLink">
     <a href="#13%e5%9c%a8%e7%ba%bf%e7%bd%91%e7%ab%99%e8%af%81%e4%b9%a6%e6%9f%a5%e8%af%a2" class="header-mark"></a>1.3、在线网站证书查询</h3><p><a href="https://crt.sh/" target="_blank" rel="noopener noreferrer">https://crt.sh/</a></p>
 <p><a href="https://censys.io/" target="_blank" rel="noopener noreferrer">https://censys.io/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png" title="image-20240318214636905" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png" title="image-20240318214636905" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-4e6667b1e50d27f18d67cbb72cd30906570fd805.png">
         
     </a></p>
 <h2 id="2网络深度爬虫" class="headerLink">
@@ -715,7 +715,7 @@
 <p>server 命令参数设定查询将要使用的DNS服务器;针对某个域名可先输入域名获取dns信息。</p>
 <p>ls命令列出某个域中的所有域名;如果太长不适合查看可定向保存至文件夹中。</p>
 <p>exit命令退出</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png" title="image-20240318214733140" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png" title="image-20240318214733140" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-ddea2b5312329a51ed12f3c88fbdabc0c0c97f2d.png">
         
     </a></p>
 <h2 id="4在线dns数据" class="headerLink">
@@ -744,11 +744,11 @@
 <p>也就是说，<strong>如果一个域名他的泛解析是一个CNAME记录而且这又是一个CDN域名</strong>(恰巧这个又不少)，那么不是自己定制的dns查询函数，一般都会出现大量泛解析误报。这就有点像是灯下黑，知道了怎么做就可以了，却一直没有解决的办法。</p>
 <p>如果要自己定制的话需要研究一下DNS报文协议，这里引用两张图片做简要分析</p>
 <p>这是向DNS请求部分的：</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png" title="image-20240318215406584" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png" title="image-20240318215406584" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-3a54865a6b9d86c5d9a35ba4260e231a94f5d1af.png">
         
     </a></p>
 <p>这是DNS服务器回传的报文：</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png" title="image-20240318215636520" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png" title="image-20240318215636520" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-7b3a549629a1d72960f6589a53e358481a97e2ea.png">
         
     </a></p>
 <p>只需要按照这个协议的格式做正则提取即可获得我们想要的信息，A记录的是固定的正则，CNAME记录需要嵌套一层正则才能获取。</p>
@@ -762,23 +762,23 @@
     <a href="#91oneforall" class="header-mark"></a>9.1、OneForAll</h3><p>下载地址：<a href="https://github.com/shmilylty/OneForAll" target="_blank" rel="noopener noreferrer">https://github.com/shmilylty/OneForAll</a></p>
 <p>目前支持一键收集：子域、子域常用端口、子域Title、子域状态、子域服务器等</p>
 <p>020_信息收集_子域名OneForAll</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png" title="image-20240318220750492" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png" title="image-20240318220750492" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-d458cc2121cc80f9372c2aa98d85c293e99ba1c9.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png" title="image-20240318220755282" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png" title="image-20240318220755282" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-38fe8dfe06c49f4131b75270360e3d44f3788bfe.png">
         
     </a></p>
 <h3 id="92subdomainbrute" class="headerLink">
     <a href="#92subdomainbrute" class="header-mark"></a>9.2、subDomainBrute</h3><p>工具地址： <a href="https://github.com/lijiejie/subDomainsBrute" target="_blank" rel="noopener noreferrer">https://github.com/lijiejie/subDomainsBrute</a></p>
 <p>高并发的DNS暴力枚举工具</p>
 <p>020_信息收集_子域名subDomainsBrute</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png" title="image-20240318223332308" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png" title="image-20240318223332308" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-944cc4b5a7746ebe86c542130929900239d49ed3.png">
         
     </a></p>
 <h3 id="93layer" class="headerLink">
     <a href="#93layer" class="header-mark"></a>9.3、Layer</h3><p>Layer子域名挖掘机是一款域名查询工具，可提供网站子域名查询服务；拥有简洁的界面、简单的操作模式，支持服务接口、暴力搜索、同服挖掘三种模式，支持打开网站、复制域名、复制IP、复制CDN、导出域名、导出IP、导出域名+IP、导出域名+IP+WEB服务器以及导出存活网站！</p>
 <p>通过查看WEB服务器信息，筛选版本比较低的服务器（win2003+iis6.0），查看每个子域名是否开启常见的端口（3389、3306、21端口等），利用爆破工具进行枚举，会达到事半功倍的效果。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png" title="image-20240318223844214" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png" title="image-20240318223844214" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-b7f69762bfd198a51b4f205c45d69ea1682a42bf.png">
         
     </a></p>
 <h3 id="94fuzsub" class="headerLink">
@@ -871,7 +871,7 @@
 <h2 id="1dirsearch" class="headerLink">
     <a href="#1dirsearch" class="header-mark"></a>1、dirsearch</h2><p>工具地址：<a href="https://github.com/maurosoria/dirsearch" target="_blank" rel="noopener noreferrer">https://github.com/maurosoria/dirsearch</a></p>
 <p>002_目录信息_dirsearch</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png" title="image-20240318223946570" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png" title="image-20240318223946570" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-cd2731804d040fd44ab39c011b263b8128b2a908.png">
         
     </a></p>
 <h2 id="2dirbuster" class="headerLink">
@@ -881,12 +881,12 @@
 <p>Mozilla/5.0 (compatible; Googlebot/2.1; <a href="http://www.google.com/bot.html" target="_blank" rel="noopener noreferrer">http://www.google.com/bot.html</a>) 谷歌蜘蛛抓取欺骗</p>
 <p>Firefox 3.6 Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.2.8;baidu Transcoder) Gecko/20100722 Firefox/3.6.8 ( .NET CLR 3.5.30729) 百度转码浏览欺骗</p>
 <p>Chrome Mozilla/5.0 (en-us) AppleWebKit/534.14 (KHTML, like Gecko; Google Wireless Transcoder) Chrome/9.0.597 Safari/534.14 谷歌转码浏览欺骗</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-dff5d1680324323642d895b1451522b43dd28b1c.png" title="image-20240318224002259" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-dff5d1680324323642d895b1451522b43dd28b1c.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-dff5d1680324323642d895b1451522b43dd28b1c.png" title="image-20240318224002259" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-dff5d1680324323642d895b1451522b43dd28b1c.png">
         
     </a></p>
 <h2 id="37kbscan" class="headerLink">
     <a href="#37kbscan" class="header-mark"></a>3、7kbscan</h2><p>工具：<a href="https://github.com/7kbstorm/7kbscan-WebPathBrute" target="_blank" rel="noopener noreferrer">https://github.com/7kbstorm/7kbscan-WebPathBrute</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png" title="image-20240318224015520" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png" title="image-20240318224015520" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-9a03d3e6d87ddc4be1a249d43fdc24c1071e38b8.png">
         
     </a></p>
 <h2 id="4webrobot" class="headerLink">
@@ -910,7 +910,7 @@
 <p>查看80端口被哪个进程或程序占用：tasklist|findstr &ldquo;80&rdquo;</p>
 <p>结束该进程或程序：taskkill /f /t /im XX.exe</p>
 <h2 id="1各服务开启的默认端口以及攻击方向" class="headerLink">
-    <a href="#1%e5%90%84%e6%9c%8d%e5%8a%a1%e5%bc%80%e5%90%af%e7%9a%84%e9%bb%98%e8%ae%a4%e7%ab%af%e5%8f%a3%e4%bb%a5%e5%8f%8a%e6%94%bb%e5%87%bb%e6%96%b9%e5%90%91" class="header-mark"></a>1、各服务开启的默认端口以及攻击方向</h2><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png" title="image-20240318224051389" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png">
+    <a href="#1%e5%90%84%e6%9c%8d%e5%8a%a1%e5%bc%80%e5%90%af%e7%9a%84%e9%bb%98%e8%ae%a4%e7%ab%af%e5%8f%a3%e4%bb%a5%e5%8f%8a%e6%94%bb%e5%87%bb%e6%96%b9%e5%90%91" class="header-mark"></a>1、各服务开启的默认端口以及攻击方向</h2><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png" title="image-20240318224051389" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-829b2e7c91f90ba980f831fbc8c4671a5a199976.png">
         
     </a></p>
 <h2 id="2在线查询网站" class="headerLink">
@@ -921,32 +921,32 @@
 <h3 id="31nmapzmap" class="headerLink">
     <a href="#31nmapzmap" class="header-mark"></a>3.1、nmap(zmap)</h3><p>Nmap扫描中一些常见的服务</p>
 <p>msmq? ：默认对于的是1801端口，是 MSMQ Microsoft Message Queuing微软消息队列的简称，是windows系统提供的一个功能，开启了该功能，则默认1801端口打开。该服务暂未发现漏洞。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png" title="image-20240318224248649" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png" title="image-20240318224248649" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-24463e1ce4118de12e61728339bfbd6a2f12c9b7.png">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png" title="image-20240318224306226" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png" title="image-20240318224306226" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-25526c36983f8ea3fcf9d75821953d0d6e47b974.png">
         
     </a></p>
 <p>msrpc：Microsoft Remote Procedure Call微软远程过程调用，是 Windows 操作系统使用的一个协议。RPC 提供一种内部进程通讯机制，允许在一台电脑上运行的程序无缝的执行远程系统中的代码。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png" title="image-20240318224314679" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png" title="image-20240318224314679" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-2675b1651130e44efc4c51ae9e448842a94f0e04.png">
         
     </a></p>
 <p>tcpwrapped：端口状态后经常标记tcpwrapped。tcpwrapped表示服务器运行 tcp_wrappers服务。tcp_wrappers是一种应用级防火墙。它可以根据预设，对SSH、Telnet、FTP服务的请求进行拦截，判断是否符合预设要求。如果符合，就会转发给对应的服务进程；否则，会中断连接请求。这说明tcp三次握手已经完成，但是并没有和目标主机建立连接。这表明，虽然目标主机的某项服务是可提供的，但你不在允许访问主机的名单列表中。当大量的端口服务都为tcpwrapped时，这说明可能是有负载均衡或者防火墙阻断了你的连接请求。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png" title="image-20240318224326847" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png" title="image-20240318224326847" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-9a98d77153057b1aa90d637537378b2aa394d2d4.png">
         
     </a></p>
 <p>Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)：这是SQL Server中的SQL Reporting Service 服务使用的Microsoft HTTPAPI。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2816d3017e53b6d30098486fd83178454deb36d9.png" title="image-20240318224341790" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-2816d3017e53b6d30098486fd83178454deb36d9.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-2816d3017e53b6d30098486fd83178454deb36d9.png" title="image-20240318224341790" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-2816d3017e53b6d30098486fd83178454deb36d9.png">
         
     </a></p>
 <h3 id="32masscan" class="headerLink">
     <a href="#32masscan" class="header-mark"></a>3.2、masscan</h3><h3 id="33scanport" class="headerLink">
     <a href="#33scanport" class="header-mark"></a>3.3、ScanPort</h3><p>通过ping等方式获取网站IP，然后开始扫描</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png" title="image-20240318224425359" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png" title="image-20240318224425359" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-47b2aa77763ba20651442baa128c4c90b6cadad9.png">
         
     </a></p>
 <h3 id="34webrobot" class="headerLink">
-    <a href="#34webrobot" class="header-mark"></a>3.4、webrobot</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png" title="image-20240318224438848" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png">
+    <a href="#34webrobot" class="header-mark"></a>3.4、webrobot</h3><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png" title="image-20240318224438848" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-091ea8900e9cc73306480b2b07be6c096b897eeb.png">
         
     </a></p>
 <h2 id="七旁站c段" class="headerLink">
@@ -961,7 +961,7 @@
 <p><a href="https://dns.aizhan.com/" target="_blank" rel="noopener noreferrer">https://dns.aizhan.com/</a></p>
 <p><a href="http://www.5kik.com/c/" target="_blank" rel="noopener noreferrer"><strong>http://www.5kik.com/c/</strong></a> <strong>？登不上</strong></p>
 <p><a href="https://webscan.cc/" target="_blank" rel="noopener noreferrer">https://webscan.cc/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e279f958bb4899a484b3ce373980e5ec67533039.png" title="image-20240318224505782" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-e279f958bb4899a484b3ce373980e5ec67533039.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-e279f958bb4899a484b3ce373980e5ec67533039.png" title="image-20240318224505782" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-e279f958bb4899a484b3ce373980e5ec67533039.png">
         
     </a></p>
 <h3 id="12google-hackingbing" class="headerLink">
@@ -984,11 +984,11 @@
     <a href="#%e5%85%ab%e6%95%b4%e7%ab%99%e5%88%86%e6%9e%90" class="header-mark"></a>八、整站分析</h2><h2 id="1服务器类型" class="headerLink">
     <a href="#1%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%b1%bb%e5%9e%8b" class="header-mark"></a>1、服务器类型</h2><p>服务器信息包括服务器用的操作系统：Linux 还是 Windows 。现在企业网站服务器的操作系统有百分之九十以上用的是Linux操作系统。知道了服务器的操作系统之后，还需要知道操作系统使用的具体版本。因为很多低版本的操作系统都存在已知的漏洞。</p>
 <p>判断是Linux还是Windows最简单就是通过ping来探测，Windows的TTL值都是一般是128，Linux则是64。所以大于100的肯定是Windows，而几十的肯定是Linux。但是，通过TTL值来判断服务器类型也不是百分之百准确的，有些windows服务器的TTL值也是几十，而且有的服务器禁止ping。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png" title="image-20240318224523272" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png" title="image-20240318224523272" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-420bf81e98eff3ebf99c3175a0b7c670220a9e90.png">
         
     </a></p>
 <p>而判断目标网站服务器的具体的版本的话，可以采用 nmap 进行扫描， -O 和 -A 参数都能扫描出来</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png" title="image-20240318224542950" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png" title="image-20240318224542950" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-90fe369b6c4abbda7ef3ed41417487519c73dab8.png">
         
     </a></p>
 <p>检测服务器平台、版本等，获取后可以制定漏洞挖掘方案（如IIS6.0存在解析漏洞等）。</p>
@@ -996,7 +996,7 @@
 <p>区分大小写（页面报错）&ndash;Linux</p>
 <p>不区分大小写（页面正常）&ndash;Windows</p>
 <h3 id="11-云悉web资产梳理" class="headerLink">
-    <a href="#11-%e4%ba%91%e6%82%89web%e8%b5%84%e4%ba%a7%e6%a2%b3%e7%90%86" class="header-mark"></a>1.1、 云悉WEB资产梳理</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png" title="image-20240318224635116" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png">
+    <a href="#11-%e4%ba%91%e6%82%89web%e8%b5%84%e4%ba%a7%e6%a2%b3%e7%90%86" class="header-mark"></a>1.1、 云悉WEB资产梳理</h3><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png" title="image-20240318224635116" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-bf4e1adf631a7c74b4460c4c9d42184ff7829a35.png">
         
     </a></p>
 <p><a href="http://www.yunsee.cn/" target="_blank" rel="noopener noreferrer">http://www.yunsee.cn/</a>，根据IIS版本判断Windows系统，系统对应版本通过搜索引擎查找。</p>
@@ -1005,7 +1005,7 @@
     <a href="#2%e7%bd%91%e7%ab%99%e5%ae%b9%e5%99%a8" class="header-mark"></a>2、网站容器</h2><p>知道了这些信息之后，我们就需要知道网站用的web服务器是什么类型的：Apache、Nginx、Tomcat 还是 IIS。知道了web服务器是哪种类型后，我们还要探测web服务器具体的版本。比如Ngnix版本&lt;0.83会有解析漏洞 ，IIS6.0会有文件名解析漏洞、IIS7.0会有畸形解析漏洞等。不同的web服务器版本，存在着不同漏洞。</p>
 <p>搭建网站的服务组件，例如：iis、Apache、nginx、tomcat等，通过网站容器判断存在的漏洞（如：Apache解析漏洞，nginx解析漏洞）。</p>
 <h3 id="21火狐渗透测试浏览器" class="headerLink">
-    <a href="#21%e7%81%ab%e7%8b%90%e6%b8%97%e9%80%8f%e6%b5%8b%e8%af%95%e6%b5%8f%e8%a7%88%e5%99%a8" class="header-mark"></a>2.1、火狐渗透测试浏览器</h3><p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png" title="image-20240318224652100" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png">
+    <a href="#21%e7%81%ab%e7%8b%90%e6%b8%97%e9%80%8f%e6%b5%8b%e8%af%95%e6%b5%8f%e8%a7%88%e5%99%a8" class="header-mark"></a>2.1、火狐渗透测试浏览器</h3><p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png" title="image-20240318224652100" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-293739ff524f101f7df852e11e2aee860b32ae0d.png">
         
     </a></p>
 <h3 id="22云悉web资产梳理" class="headerLink">
@@ -1014,7 +1014,7 @@
 <p>1）可以根据网站URL来判断</p>
 <p>2）site:xxx filetype:php</p>
 <p>3）可以根据Firefox的插件来判断</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png" title="image-20240318224729502" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png" title="image-20240318224729502" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-520a887bc15ded7d20cab8839955402aaec02bf5.png">
         
     </a></p>
 <h3 id="31通过修改首页文件后缀查看页面响应判断" class="headerLink">
@@ -1028,27 +1028,27 @@
 <p>识别dedecms、phpcms、emlog、帝国cms等，通过网站使用的CMS找取该CMS已经公布的漏洞进行利用，进一步渗透网站。</p>
 <h3 id="41云悉指纹" class="headerLink">
     <a href="#41%e4%ba%91%e6%82%89%e6%8c%87%e7%ba%b9" class="header-mark"></a>4.1、云悉指纹</h3><p><a href="https://www.yunsee.cn/" target="_blank" rel="noopener noreferrer">https://www.yunsee.cn/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png" title="image-20240318224745687" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png" title="image-20240318224745687" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-ea7cd0bc83312b110b594e6b73b2c16dd49fdfd7.png">
         
     </a></p>
 <h3 id="42threatscan" class="headerLink">
     <a href="#42threatscan" class="header-mark"></a>4.2、ThreatScan</h3><p><a href="https://scan.top15.cn/web/" target="_blank" rel="noopener noreferrer">https://scan.top15.cn/web/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-039eb6b513752749827e5cb1921b6209396d953d.png" title="image-20240318224806210" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-039eb6b513752749827e5cb1921b6209396d953d.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-039eb6b513752749827e5cb1921b6209396d953d.png" title="image-20240318224806210" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-039eb6b513752749827e5cb1921b6209396d953d.png">
         
     </a></p>
 <h3 id="43wappalyzer" class="headerLink">
     <a href="#43wappalyzer" class="header-mark"></a>4.3、wappalyzer</h3><p><a href="https://www.wappalyzer.com/" target="_blank" rel="noopener noreferrer">https://www.wappalyzer.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png" title="image-20240318224818148" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png" title="image-20240318224818148" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-edbf30fba7410f4669643ee406f70f7bd40a5840.png">
         
     </a></p>
 <h3 id="44whatweb" class="headerLink">
     <a href="#44whatweb" class="header-mark"></a>4.4、WhatWeb</h3><p><a href="https://whatweb.net/" target="_blank" rel="noopener noreferrer">http://whatweb.net/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4917e9369baabdd749819b421843aa40762ffdd7.png" title="image-20240318224833360" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-4917e9369baabdd749819b421843aa40762ffdd7.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-4917e9369baabdd749819b421843aa40762ffdd7.png" title="image-20240318224833360" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-4917e9369baabdd749819b421843aa40762ffdd7.png">
         
     </a></p>
 <h3 id="45bugscaner" class="headerLink">
     <a href="#45bugscaner" class="header-mark"></a>4.5、BugScaner</h3><p><a href="http://whatweb.bugscaner.com/" target="_blank" rel="noopener noreferrer">http://whatweb.bugscaner.com/</a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-11f6d51361219f0834c539d6696031840bb53fd2.png" title="image-20240318224842513" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-11f6d51361219f0834c539d6696031840bb53fd2.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-11f6d51361219f0834c539d6696031840bb53fd2.png" title="image-20240318224842513" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-11f6d51361219f0834c539d6696031840bb53fd2.png">
         
     </a></p>
 <h3 id="46潮汐指纹" class="headerLink">
@@ -1084,12 +1084,12 @@
 <p>命令：wafw00f -a 域名</p>
 <h3 id="61在线资产识别" class="headerLink">
     <a href="#61%e5%9c%a8%e7%ba%bf%e8%b5%84%e4%ba%a7%e8%af%86%e5%88%ab" class="header-mark"></a>6.1、在线资产识别</h3><p>云悉WEB资产梳理</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png" title="image-20240318224859531" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png" title="image-20240318224859531" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-bdbbbee08710a8f6d3d67b0a0ca820e3d6bdcf55.png">
         
     </a></p>
 <h3 id="62手动检测是拦截页面或者http可识别字段" class="headerLink">
     <a href="#62%e6%89%8b%e5%8a%a8%e6%a3%80%e6%b5%8b%e6%98%af%e6%8b%a6%e6%88%aa%e9%a1%b5%e9%9d%a2%e6%88%96%e8%80%85http%e5%8f%af%e8%af%86%e5%88%ab%e5%ad%97%e6%ae%b5" class="header-mark"></a>6.2、手动检测是拦截页面或者HTTP可识别字段</h3><p>在搜索框中输入XSS弹窗代码<script>alert(&lsquo;XSS&rsquo;)</script> ，WAF拦截后判断WAF。</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png" title="image-20240318224910129" data-thumbnail="https://www.bysec.cn/OSS/img/万字总结信息收集全网最全/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%b8%87%e5%ad%97%e6%80%bb%e7%bb%93%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86%e5%85%a8%e7%bd%91%e6%9c%80%e5%85%a8/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png" title="image-20240318224910129" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/万字总结信息收集全网最全/attach-6f3ff949ae9133c2e3d419fefe8336d950b6e0f0.png">
         
     </a></p>
 <p>在可能存在的注入页面输入检测注入漏洞代码and 1=2，被WAF拦截后判断WAF。</p>
@@ -1108,10 +1108,10 @@
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>
@@ -1132,12 +1132,12 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>成功案例如下：</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg" title="image-20231026152744211" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg" title="image-20231026152744211" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg">
         
     </a></p>
 <h3 id="12-验证码明文返回" class="headerLink">
     <a href="#12-%e9%aa%8c%e8%af%81%e7%a0%81%e6%98%8e%e6%96%87%e8%bf%94%e5%9b%9e" class="header-mark"></a>1.2 验证码明文返回</h3><p>获取手机验证码时，验证码直接在返回包里</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg" title="image-20231026153621371" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg" title="image-20231026153621371" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg">
         
     </a></p>
 <h3 id="13-存在万能验证码" class="headerLink">
@@ -1146,28 +1146,28 @@
     <a href="#14-%e9%aa%8c%e8%af%81%e7%a0%81%e6%9c%aa%e7%bb%91%e5%ae%9a%e7%94%a8%e6%88%b7" class="header-mark"></a>1.4 验证码未绑定用户</h3><p>a.后端仅验证了验证码是否正确，没有验证验证码与获取手机号的对应关系，导致可以先输入自己的手机号A获取验证码，再输入他人手机号B获取验证码后，填写自己手机号A接收到的验证码，达到登录手机号B的目的</p>
 <p>b.后端仅验证码了手机号与验证码是否一致，并未校验手机号是否为号主本人的,导致可以使用自己的手机号+验证码绕过。常见于用户绑定的功能处。举个栗子：</p>
 <p>某系统输入商户号与手机号可绑定到该用户</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg" title="image-20231026155939201" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg" title="image-20231026155939201" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg">
         
     </a></p>
 <p>通过用户注册的功能处，输入自己的手机号获取验证码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg" title="image-20231026160036332" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg" title="image-20231026160036332" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg">
         
     </a></p>
 <p>返回绑定功能处，输入任意验证码抓包，将手机号与验证码字段改为自己的手机号+验证码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg" title="image-20231026160250988" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg" title="image-20231026160250988" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg">
         
     </a></p>
 <p>成功登录他人账号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg" title="image-20231026160327497" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg" title="image-20231026160327497" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg">
         
     </a></p>
 <h3 id="15-获取验证码的手机号字段可双写" class="headerLink">
     <a href="#15-%e8%8e%b7%e5%8f%96%e9%aa%8c%e8%af%81%e7%a0%81%e7%9a%84%e6%89%8b%e6%9c%ba%e5%8f%b7%e5%ad%97%e6%ae%b5%e5%8f%af%e5%8f%8c%e5%86%99" class="header-mark"></a>1.5 获取验证码的手机号字段可双写</h3><p>输入手机号获取验证码时抓包，双写手机号字段，使得两个手机号获取到同一个验证码，便可以登录其他用户</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg" title="image-20231026160708565" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg" title="image-20231026160708565" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg">
         
     </a></p>
 <p>输入自己的手机号抓包，将手机字段后面加一个逗号或者分号后再加一个手机号，或者双写手机号字段phone=13333333333&amp;phone=18888888888，当两个手机号均收到一个验证码时大概率漏洞存在。使用自己的手机号便可以任意登录其他手机号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f1298410bdcead04991a6070a151953c584540f0068d1.jpg" title="image-20231026161544754" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f1298410bdcead04991a6070a151953c584540f0068d1.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f1298410bdcead04991a6070a151953c584540f0068d1.jpg" title="image-20231026161544754" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f1298410bdcead04991a6070a151953c584540f0068d1.jpg">
         
     </a></p>
 <h3 id="16-验证码为空任意验证码可成功验证" class="headerLink">
@@ -1176,42 +1176,42 @@
     <a href="#2%e5%87%ad%e8%af%81%e5%ae%89%e5%85%a8%e9%97%ae%e9%a2%98%e5%af%bc%e8%87%b4%e7%9a%84%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95" class="header-mark"></a>2.凭证安全问题导致的任意用户登录</h2><h3 id="21-凭证泄露" class="headerLink">
     <a href="#21-%e5%87%ad%e8%af%81%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1 凭证泄露</h3><h4 id="211-页面缓存被搜索引擎抓取" class="headerLink">
     <a href="#211-%e9%a1%b5%e9%9d%a2%e7%bc%93%e5%ad%98%e8%a2%ab%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e6%8a%93%e5%8f%96" class="header-mark"></a>2.1.1 页面缓存被搜索引擎抓取</h4><p>搜索引擎搜索该域名，发现有登录后的页面被抓取，直接访问登录目标账户</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg" title="image-20231026111018248" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg" title="image-20231026111018248" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg" title="image-20231026111129791" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg" title="image-20231026111129791" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg">
         
     </a></p>
 <h4 id="212-httptracedruid等组件中的凭证泄露" class="headerLink">
     <a href="#212-httptracedruid%e7%ad%89%e7%bb%84%e4%bb%b6%e4%b8%ad%e7%9a%84%e5%87%ad%e8%af%81%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.2 httptrace/druid等组件中的凭证泄露</h4><h5 id="httptrace" class="headerLink">
     <a href="#httptrace" class="header-mark"></a>httptrace</h5><p>spring的httptrace端点往往会记录用户的会话信息，若发现spring未授权访问且存在类似端点可以访问的话，可尝试获取用户凭证进行登录</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg" title="image-20231026163705868" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg" title="image-20231026163705868" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg">
         
     </a></p>
 <h5 id="durid" class="headerLink">
     <a href="#durid" class="header-mark"></a>durid</h5><p>druid的session监控若发现有效的会话信息时，可以通过此登录任意用户，将druid的未授权中危漏洞提升至高危</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg" title="image-20231026113057179" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg" title="image-20231026113057179" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg" title="image-20231026113234298" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg" title="image-20231026113234298" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg">
         
     </a></p>
 <h4 id="212-sessionkey泄露" class="headerLink">
     <a href="#212-sessionkey%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.2 sessionkey泄露</h4><p>微信小程序官方提供了一套微信快捷登录的登录逻辑，用户授权手机号快捷登录时，会将本地的手机号使用sessionkey和iv进行aes加密，后端解密后返回该手机号的登录凭证。当sessionkey发生泄露时，攻击者便可以伪造手机号登录任意手机号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg" title="image-20231026164613313" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg" title="image-20231026164613313" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg">
         
     </a></p>
 <p>修改任意手机号，利用sessionkey和iv重新加密数据</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg" title="image-20231026164903153" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg" title="image-20231026164903153" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg">
         
     </a></p>
 <p>成功登录他人账号</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg" title="image-20231026165003227" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg" title="image-20231026165003227" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg">
         
     </a></p>
 <h4 id="213-其他接口中的信息泄露" class="headerLink">
     <a href="#213-%e5%85%b6%e4%bb%96%e6%8e%a5%e5%8f%a3%e4%b8%ad%e7%9a%84%e4%bf%a1%e6%81%af%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.3 其他接口中的信息泄露</h4><p>这个一般发现于js或者api-docs中的某些特殊接口，例如getToken之类的，有没有取决于开发有没有开发类似的功能接口</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg" title="image-20231026165405684" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg" title="image-20231026165405684" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg">
         
     </a></p>
 <h3 id="22-凭证可伪造" class="headerLink">
@@ -1219,27 +1219,27 @@
     <a href="#221-jwt%e6%9c%aa%e9%aa%8c%e5%8f%82%e5%bc%b1%e5%af%86%e9%92%a5" class="header-mark"></a>2.2.1 jwt未验参/弱密钥</h4><p>系统使用jwt作为认证字段，且其中关键用户信息字段可以遍历时，若未验参或者使用弱密钥时，便可以将用户信息字段进行更改，删除/爆破弱密钥重新生成签名，到达任意用户登录</p>
 <h5 id="jwt未验参" class="headerLink">
     <a href="#jwt%e6%9c%aa%e9%aa%8c%e5%8f%82" class="header-mark"></a>jwt未验参</h5><p>删除签名部分(或者更改头部中的alg为none再删除签名)，访问登录后的接口成功访问，说明jwt未验参()</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg" title="image-20231026170046925" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg" title="image-20231026170046925" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg">
         
     </a></p>
 <p>遍历data字段即可登录其他用户（此处的data为用户id）</p>
 <h5 id="jwt弱密钥" class="headerLink">
     <a href="#jwt%e5%bc%b1%e5%af%86%e9%92%a5" class="header-mark"></a>jwt弱密钥</h5><p>jwt使用了弱密钥时，爆破到弱密钥后同样修改jwt中的用户信息字段，使用密钥重新生成签名即可获取到其他用户的jwt字段</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg" title="image-20231026103900241" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg" title="image-20231026103900241" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg" title="image-20231026103943886" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg" title="image-20231026103943886" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg">
         
     </a></p>
 <h4 id="222-弱cookie" class="headerLink">
     <a href="#222-%e5%bc%b1cookie" class="header-mark"></a>2.2.2 弱cookie</h4><p>系统使用cookie认证，且cookie字段可伪造</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg" title="image-20231026170524323" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg" title="image-20231026170524323" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg">
         
     </a></p>
 <h3 id="23-凭证过早返回" class="headerLink">
     <a href="#23-%e5%87%ad%e8%af%81%e8%bf%87%e6%97%a9%e8%bf%94%e5%9b%9e" class="header-mark"></a>2.3 凭证过早返回</h3><p>一般正常的登录流程为服务端校验完用户身份后，返回用户凭证，但某些系统由于登录前会有很多的查询用户信息类的功能请求，经常导致在登录验证前就返回了用户凭证。</p>
 <p>某金融项目，输入手机号会先去查询手机号是否为已注册用户，是的话进入用户信息查询的逻辑，再跳转登录。在信息查询的阶段过早返回了sessionid,导致任意用户登录</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg" title="image-20231026171141852" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg" title="image-20231026171141852" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg">
         
     </a></p>
 <h2 id="3逻辑漏洞导致的任意用户登录" class="headerLink">
@@ -1252,33 +1252,33 @@
 <p>以下为例</p>
 <p>分析登录流程为，第一个请求请求微信接口获取用户手机号，返回到一个请求的返回包中</p>
 <p>第二个请求获取返回包中的手机号加密发给服务端，返回其登录凭证</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg" title="image-20231026175959686" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg" title="image-20231026175959686" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg" title="image-20231026180521839" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg" title="image-20231026180521839" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg">
         
     </a></p>
 <p>所以此处只需要替换第一个请求包的返回包中的手机号即可</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg" title="image-20231026180607177" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg" title="image-20231026180607177" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg">
         
     </a></p>
 <h4 id="修改第二个请求的请求包" class="headerLink">
     <a href="#%e4%bf%ae%e6%94%b9%e7%ac%ac%e4%ba%8c%e4%b8%aa%e8%af%b7%e6%b1%82%e7%9a%84%e8%af%b7%e6%b1%82%e5%8c%85" class="header-mark"></a>修改第二个请求的请求包</h4><p>如下登录数据包，直接更改其中手机号即可</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg" title="image-20231026181117618" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg" title="image-20231026181117618" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg">
         
     </a></p>
 <h3 id="32-更改登录type" class="headerLink">
     <a href="#32-%e6%9b%b4%e6%94%b9%e7%99%bb%e5%bd%95type" class="header-mark"></a>3.2 更改登录type</h3><p>部分系统有免密登录/快捷登录之类的功能，只要一个账号就能登录，当遇到登录数据包中含有type之类的字段时，可以尝试此方法</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg" title="image-20231026183616031" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg" title="image-20231026183616031" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg">
         
     </a></p>
 <h3 id="33-账号数据覆盖" class="headerLink">
     <a href="#33-%e8%b4%a6%e5%8f%b7%e6%95%b0%e6%8d%ae%e8%a6%86%e7%9b%96" class="header-mark"></a>3.3 账号数据覆盖</h3><p>常见于用账号信息更新处，例如修改手机号、账户重新绑定功能、修改账号等功能点处</p>
 <p>以修改手机号为例，此处修改需要输入新手机号与新手机号的验证码</p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg" title="image-20231026104342413" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg" title="image-20231026104342413" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://www.bysec.cn/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg" title="image-20231026104439045" data-thumbnail="https://www.bysec.cn/OSS/img/任意用户登录漏洞挖掘思路/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg">
+<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg" title="image-20231026104439045" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg">
         
     </a></p>
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>

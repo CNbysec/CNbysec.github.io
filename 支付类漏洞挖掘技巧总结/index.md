@@ -1,4 +1,4 @@
-# 支付类漏洞挖掘技巧总结
+﻿# 支付类漏洞挖掘技巧总结
 
 
 <!--more-->
@@ -26,7 +26,7 @@
 
 在支付流程中，可以修改支付价格的步骤有很多，包括订购、确认信息、付款等。在涉及到价格的步骤中都可以尝试修改，如果网站在某一环节存在逻辑上的漏洞，就可以利用该漏洞对支付价格进行修改。可以直接修改提交订单中的价格字段，一般可尝试0.01，1.00，1等
 
-![image-20240110144659185](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg)
+![image-20240110144659185](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f3574934b2709537f1827cfb7dd40ab1ea22aa6595a14.jpg)
 
 #### 二、更改支付状态
 
@@ -40,7 +40,7 @@
 
 通常在提交订单付款时，这里的type一般是对支付方式的判断，可能会存在开发人员测试的时候遗留的无需支付的type值，根据支付方式判断支付与否。可以通过fuzz特定值去实现绕过。比如比较常见的值0（这里需要结合实际进行测试不同的处理方式type值不同），可以实现不需要付款订单就会自动生成。
 
-![image-20240109155239418](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg)
+![image-20240109155239418](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f8945932b8f23aef9c041ae46ed705411e63daeb869fc.jpg)
 
 #### 四、更改订单信息
 
@@ -52,13 +52,13 @@
 
 直接在生成的订单中替换商品编号。
 
-![image-20240110101427801](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg)
+![image-20240110101427801](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f87753788ed288f74f10e348d434695a4fdff6371921b.jpg)
 
 2、修改订单号
 
 将金额不同的订单进行替换，可以支付一个金额较少的订单，然后将订单号修改为金额较大的订单，少付实际金额。
 
-![image-20240110103259992](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg)
+![image-20240110103259992](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f1269092cb6d7051c8328597a394b762ac701acf79516.jpg)
 
 3、越权使用他人优惠券、越权使用他人积分等
 
@@ -68,21 +68,21 @@
 
 1、将正常的数量值修改至最小值0.01，可以实现低价购买。比如：原价300修改修量为0.01后实付金额变为3。
 
-![image-20240109160656541](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg)
+![image-20240109160656541](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f854767372d569d88ea1b9229694af14db7b2bfc4fe91.jpg)
 
 2、未对负数做检验的还可以将数量改为负数。（这里需要注意，因为后端大部分会校验不允许实付金额小于0或者0.01等，所以有的时候要想实现订单成功生成需要结合实际修改价格）
 
 生成订单时有参数表示商品数量，修改为-1
 
-![image-20240110114704324](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg)
+![image-20240110114704324](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f877676e7a3b21b94567d09d0775f8ff299fcee360481.jpg)
 
 修改数量为-1后会发现，此时金额为负数。
 
-![image-20240110114800810](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg)
+![image-20240110114800810](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f41642026e77e358c0be29d427ef2d4fe9344144b7df5.jpg)
 
 在提交订单支付的时候，为保证支付成功需要修改金额。
 
-![image-20240110115204600](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg)
+![image-20240110115204600](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f4865593451df8607a8a168c3156aa3217a7ba6f2ff04.jpg)
 
 3、对数量没有做负数校验的时候也可以巧用负数抵消实现0元购
 
@@ -90,20 +90,20 @@
 
 同时购买两件商品，修改两件商品其中价格低的商品的金额为负数，实现价格的抵消，低价购买商品。
 
-![image-20240110154805679](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg)
+![image-20240110154805679](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f668754bdebe029b91efb8912fdcf4f6ded373335e293.jpg)
 
 4、手动增加订单中商品相关的多个参数以达到少付多买的目的。
 
 有的时候在提交订单时抓取数据包可以看到只有一套商品的信息，尝试多添加几套同样的参数订单是否会有变化。
 
-![image-20240110152818004](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg)
+![image-20240110152818004](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f2753175001cbfd29afc6630cafec90ad772e024359c3.jpg)
 
 尝试在提交订单的时候多添加几个此类参数
 
-![image-20240110153021212](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg)  
+![image-20240110153021212](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f628227c8dd980d623a6f0b5c5986aeadd3af217fe0b8.jpg)  
 提交订单实际支付金额未变仍是一个商品的价格，但是实际套餐已经变成了四个。
 
-![image-20240110153517777](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg)
+![image-20240110153517777](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f584594b46a54c736a47f51a93d8c30a32c89937450af.jpg)
 
 #### 六、重复支付，突破限购
 
@@ -115,7 +115,7 @@
 
 1、限制一个优惠订单时直接并发生成多个优惠订单
 
-![image-20240110143709606](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg)
+![image-20240110143709606](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f9371130d8e1ec7ff621f551c5922822dcd08fa505b00.jpg)
 
 2、使用多台设备、多个浏览器、多种支付方式（wx、支付宝等）购买优惠订单
 
@@ -143,7 +143,7 @@
 
 2、遍历商品id从而fuzz到已下架的商品
 
-![image-20240109171142727](https://www.bysec.cn/OSS/img/支付类漏洞挖掘技巧总结/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg)
+![image-20240109171142727](https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/支付类漏洞挖掘技巧总结/f201795a3e30d18032dd11cc87b0edeb8ddb2c1f378be.jpg)
 
 #### 九、利用小数点精度四舍五入
 

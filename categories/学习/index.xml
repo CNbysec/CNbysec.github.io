@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>学习 - 分类 - bysec</title>
-        <link>http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0/</link>
+        <link>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</link>
         <description>学习 - 分类 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -302,10 +302,10 @@
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>验证码渗透最全总结</title>
-    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Mon, 20 May 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p>
 </blockquote>
@@ -435,10 +435,10 @@
 <p>本文仅用于技术讨论与学习，利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者及本公众号不为此承担任何责任。</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -1404,10 +1404,10 @@
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>支付类漏洞挖掘技巧总结</title>
-    <link>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2778" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2778</a></em></p>
 </blockquote>
@@ -1517,10 +1517,10 @@
     <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>
@@ -1826,10 +1826,10 @@
     </a></p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>
@@ -2002,10 +2002,10 @@
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>
 </item><item>
     <title>SRC混子的漏洞挖掘之道</title>
-    <link>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
+    <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
+    </author><guid>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -2554,101 +2554,11 @@
 <h4 id="总结" class="headerLink">
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
-    <title>给表弟的Web安全入门建议</title>
-    <link>http://localhost:1313/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</link>
-    <pubDate>Wed, 13 Jan 2021 09:32:44 &#43;0800</pubDate><author>
-        <name>bysec</name>
-    </author><guid>http://localhost:1313/%E7%BB%99%E8%A1%A8%E5%BC%9F%E7%9A%84web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</guid>
-    <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://sosly.me/index.php/2017/07/17/studywebsec/" target="_blank" rel="noopener noreferrer">https://sosly.me/index.php/2017/07/17/studywebsec/</a></em></p>
-</blockquote>
-<p>表弟大一刚结束，学的是计算机相关的专业，上学期开始学安全相关的技术，我就给他买了一套云课堂的  <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fmooc.study.163.com%2FsmartSpec%2Fdetail%2F1001227001.htm%3Fshare%3D1%26shareId%3D9305777" target="_blank" rel="noopener noreferrer">《Web安全工程师微专业》</a> 课程，结果这货学到第一课的时候，因为错过章节考试时间直接没及格&hellip;&hellip;好在后边几课都按部就班的学习了，然后应该是6月份开始试着在  <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fsrc.edu-info.edu.cn%2F" target="_blank" rel="noopener noreferrer">教育行业SRC</a> 挖掘漏洞，到现在也只是发现了几个XSS、敏感文件泄露之类的小漏洞，和他同期学习课程的一些同学已经挖了很多了排名很靠前，还有在企业SRC挖洞的，看看别人家的表弟&hellip;之前表弟要准备课程的期末考试之类的，现在放暑假了，我就建议说可以再好好学习那套课程，趁着暑假，多实践。然后就讨论到 <strong>有没有适合入门阶段学习的Web安全书籍</strong> 这个问题。</p>
-<p>说到Web安全书籍，这几年其实是一种百家齐放的状态，不断有优秀的书籍出版，那这里就<strong>尽可能少地整理几本我阅读过的Web安全入门书籍</strong>作为推荐。</p>
-<p>如果没学过相关课程的小伙伴，真的从0基础开始的话，还是需要先掌握一些基本的技能：</p>
-<ol>
-<li>
-<p>学习  <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.w3school.com.cn%2Fweb%2Findex.asp" target="_blank" rel="noopener noreferrer">网站构建初级教程_W3C</a> 以及  <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.runoob.com%2Fhttp%2Fhttp-tutorial.html" target="_blank" rel="noopener noreferrer">HTTP协议基础-runoob</a> 上了解Web前后端以及HTTP协议的一些基础介绍，花半天时间对相关技术有个概念性的了解就够了。</p>
-</li>
-<li>
-<p>Windows下下载  <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.phpstudy.net%2F" target="_blank" rel="noopener noreferrer">phpStudy</a> 或者  <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.wampserver.com%2F" target="_blank" rel="noopener noreferrer">WAMP</a> ，在本地搭建Web服务器环境，然后自己搜索两篇文章学习下基本的操作方法。这个本地Web服务器也就相当于学习过程中的一个实验环境了。</p>
-</li>
-<li>
-<p>学习浏览器的开发者工具（通常快捷键F12调出），搜索一些教学文章，掌握Chrome或者Firefox浏览器开发者工具中的Network、Elements功能的常见用法，可以<strong>查看HTTP数据包以及定位页面元素</strong>。</p>
-</li>
-</ol>
-<p>0x01 给表弟的Web安全入门建议</p>
-<p>适合初学者的Web安全书籍</p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D0%26p%3DAyIHZR5aEQISA1AYUyUCEgJcGVMSBSJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIXDlcTXBIdS0IJRmtqW1VPUUQGHGJsZR5uJhV%252Bc1U0R1pTDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%252BOtg7CzDtP%252FlI6dlSIPVhxdEwQRAVMrWxEDEwRcEl8WChMEXStcJXd0RQhTayUyIg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVBxsFXRxcCltXWwg%253D" target="_blank" rel="noopener noreferrer">《白帽子讲Web安全》</a></p>
-<p>道哥出品，很多人的Web安全启蒙书。</p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D0%26p%3DAyIHZR5aEQISA1AYUyUCEgdcG1IXASJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQISDlUSWRYdS0IJRmt3BGRXFloyC2dLcVRsPBN4W1sHX1JlDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%252BOtg7CzDtP%252FlI6dlSIPVhxdEwQRAVMrWxEDEwRcHVMWABsFUCtcJXd0RQhTayUyIg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVAhsHXBlYCltXWwg%253D" target="_blank" rel="noopener noreferrer">《Web前端黑客技术揭秘》</a></p>
-<p>前端黑客技术，余弦的作品。</p>
-<p>对于读书，我觉得<strong>读书的目的是：学以致用</strong>。应该把<strong>注意力放在如何应用读到的知识，提高自己的技术，而不是学了多少内容。</strong></p>
-<p>一年哪怕只学习了一本书，也要让这本书的内容结结实实地提升自己的技能，而不是只为了多一点谈资或者阅读清单上多一个数目</p>
-<p>。这也是我这里只推荐了两本书的原因，因为我觉得这两本书，能够认真学习完，并且<strong>实践</strong>书中的案例和技能，已经很难得了，同时相比于简单翻一遍，要多花费很多的时间和精力。</p>
-<p>工具与实战</p>
-<p>那学习Web安全呢，同时还要掌握一些工具：<strong>浏览器开发者工具与浏览器插件（如HackBar、ProxySwitcher）、抓包工具如Burpsuite、漏洞扫描和验证工具如御剑、sqlmap、AWVS</strong>，工具可以在  <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.freebuf.com%2F" target="_blank" rel="noopener noreferrer">Freebuf</a>上自行搜索下载，教程可以参考 <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.ichunqiu.com%2FnewRelease%2FdarrPath%2F105" target="_blank" rel="noopener noreferrer">Web安全-i春秋</a>系列教程中对应这几款工具的章节学习。</p>
-<p>好的工具可以帮助我们提高测试效率，扩展测试思路。除了工具的使用，通过搭建本地实战环境练习手工技巧，也是很好的进阶之路，这里建议可以搭建  <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.dvwa.co.uk%2F" target="_blank" rel="noopener noreferrer">DVWA</a>漏洞测试环境，然后参考  <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.freebuf.com%2F%3Fs%3DDVWA" target="_blank" rel="noopener noreferrer">DVWA系列教程_Freebuf</a>进行学习。</p>
-<p>学习的同时也可以在在 <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fsrc.edu-info.edu.cn%2F" target="_blank" rel="noopener noreferrer">教育行业SRC</a>等漏洞平台上挖掘漏洞，赢得认可，也是一种动力，但挖掘漏洞的时候一定要注意规范和界限，可以参考 <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fsosly.me%2Findex.php%2F2017%2F06%2F02%2Fwangluoanquanfa%2F" target="_blank" rel="noopener noreferrer">自律方能自由，《网络安全法》实施后的白帽子行为参考</a>，挖掘漏洞的同时也要注意保护自己。</p>
-<p>适合初学者的社区和资讯站点</p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fbbs.ichunqiu.com%2Fforum-59-1.html" target="_blank" rel="noopener noreferrer">网站安全_i春秋社区</a></p>
-<p>i春秋社区聚集了很多的人气，有好多学生，也很活跃，入门和进阶的文章都有，可以多多交流。</p>
-<p> <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.freebuf.com%2F" target="_blank" rel="noopener noreferrer">Freebuf</a></p>
-<p>很多科普和梳理性的文章，也经常会有时下的热点讨论。</p>
-<p>大学在校生可以关注的一些比赛</p>
-<p> <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.ciscn.cn%2F" target="_blank" rel="noopener noreferrer">全国大学生信息安全竞赛</a></p>
-<p>这个和<strong>全国大学生电子设计竞赛信息安全技术专题邀请赛</strong>一样，都是做一个安全软硬件系统来解决一些安全问题，通常有项目文档提交、源代码提交、现场演示答辩等几个步骤，分为初赛复赛，<strong>全国大学生信息安全竞赛</strong>为每年一次，<strong>全国大学生电子设计竞赛信息安全技术专题邀请赛</strong>通常两年一次，这两个比赛获奖对于大学生都有竞赛加分，在锻炼自己的同时，对评奖学金和保研也有帮助。</p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2F2017ncstisc.ichunqiu.com%2F" target="_blank" rel="noopener noreferrer">全国大学生信息安全竞赛创新实践能力线上赛（CTF形式）</a></p>
-<p>这个是和i春秋合作的线上赛，和线下赛目前看来还没什么关联，CTF性质的。每年的CTF比赛很多，大家可以关注i春秋等一些站点的资讯就行了，大学生组队参加CTF比赛的挺多，也是很好的锻炼方式。</p>
-<p>挖洞、博客与团队</p>
-<p>既然是入门了，建议就可以随着学习的深入，<strong>在一些SRC平台上挖掘漏洞，如果你不太喜欢走这个路线，也可以整理自己的学习过程，写一些技术博客进行分享</strong>，俗话说来“<strong>你挖洞来我拍砖</strong>”，都可以，而且一些平台如Freebuf、先知社区都有付费文章奖励计划，这两种都可以在学习技术的同时获取到一些物质上的奖励，如果你慢慢有了一些编程能力（Python、Web前后端等），除了让自己的安全技术自动化之外，还可以再Github等平台分享一些开源项目。相关的SRC站点我随后再说。</p>
-<p>关于写博客，如果自己搭建站点的话，可以考虑<strong>使用hexo+github搭建免费个人博客</strong>，或者租用一台VPS部署Wordpress博客程序。其实我觉得，初学的话，可以不在站点搭建上浪费时间，在一些比较优质的博客平台上注册一个帐号即可，也可以有自己的个性域名。如oschina、博客园、 <a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer">简书</a>。写博客本身就是对自己知识技能的巩固和梳理，不要怕写不好，博客就当是给自己看的。</p>
-<p>有一个点要提示一下，既然想走安全这条路，那么给自己想一个个性的ID（昵称），提交漏洞或者注册博客时都用这个，好好维护，当做自己的个人品牌认真经营，随着你的贡献和分享越来越多，你的ID会被越来越多的人了解和认可。</p>
-<p>积累的过程中，如果恰好遇到几个志同道合的小伙伴，那就组个小团队吧，平时技术切磋交流，或者组团挖洞，打CTF等都是极好的。也可以主动去搜寻，或者申请加入一些公开招新的安全团队。<strong>一个人有时候可以走的更快，但一个团队往往可以走的更远</strong>。</p>
-<p>一些进阶的书籍和资源推荐</p>
-<p>这部分内容按需选择即可，等你入门了之后，有了一定的技术和经验，你已经足够去规划自己的发展了。</p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D0%26p%3DAyIHZR5aEQISA1AYUyUCEgZRHF8RBSJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQITA1IfXxIdS0IJRmtHAWhBL1spfWBSABd9OGlSTmUGYT1TDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%252BOtg7CzDtP%252FlI6dlSIPVhxdEwQRAVMrWxEDEwRcHVMSABoEUStcJXd0RQhTayUyIg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVAxYAUR9cCltXWwg%253D" target="_blank" rel="noopener noreferrer">《HTTP权威指南》</a></p>
-<p>平时可以当做词典来翻阅。</p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D0%26p%3DAyIHZR5aEQISA1AYUyUCEgZWGloWASJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQITBFQaWBYdS0IJRmtMCnt%252FI3pbUGJLAAx%252BIXJEYkEQEj5DDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%252BOtg7CzDtP%252FlI6dlSIPVhxdEwQRAVMrWxEDEwRcEloUAhoHVCtcJXd0RQhTayUyIg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVAxEGVBhYCltXWwg%253D" target="_blank" rel="noopener noreferrer">《黑客攻防技术宝典 Web实战篇》</a></p>
-<p>深入剖析Web安全技术。</p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fu.jd.com%2FXQQNOf" target="_blank" rel="noopener noreferrer">《黑客秘笈 渗透测试实用指南》</a></p>
-<p>可以在虚拟机VMware中，下载运行kali Linux的VM版本进行学习和实践。</p>
-<p>编程技术相关的书籍和教程， <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.w3school.com.cn%2F" target="_blank" rel="noopener noreferrer">W3C</a>、 <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.runoob.com%2F" target="_blank" rel="noopener noreferrer">菜鸟教程runoob</a> 和 <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.nowamagic.net%2Facademy%2F" target="_blank" rel="noopener noreferrer">现代魔法学院</a>已经能解决很多问题了，然后语言相关的官方文档都可以当做词典来查，如果想找本书系统学习的话，这里推荐下Python、PHP和Web前端的书。</p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D0%26p%3DAyIHZR5aEQISA1AYUyUCEg9XHFgXCyJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIaBVIYWRwdS0IJRmttRmFzKRldUWdEVxQdD2hhYmAmS0FDDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%252BOtg7CzDtP%252FlI6dlSIPVhxdEwQRAVMrWxEDEwVQGVsRAxUPVytcJXd0RQhTayUyIg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVChAAVhlSCltXWwg%253D" target="_blank" rel="noopener noreferrer">《Python核心编程》</a></p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fu.jd.com%2FIOPdyM" target="_blank" rel="noopener noreferrer">《PHP和MySQL Web开发》</a></p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D0%26p%3DAyIHZR5aEQISA1AYUyUCEgVXGF8UBSJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQIQBVYfWhIdS0IJRmtMe1NuJV8%252FUGFQQx1YX0xkaVwwWztlDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%252BOtg7CzDtP%252FlI6dlSIPVhxdEwQRAVMrWxEDEwVQGVgTAxABUCtcJXd0RQhTayUyIg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsVABAEURpcCltXWwg%253D" target="_blank" rel="noopener noreferrer">《Head First HTML与CSS》</a></p>
-<p> <a href="https://links.jianshu.com/go?to=https%3A%2F%2Funion-click.jd.com%2Fjdc%3Fe%3D0%26p%3DAyIHZR5aEQISA1AYUyUCEw9RG1oXBCJDCkMFSjJLQhBaUAscSkIBR0ROVw1VC0dFFQMaA1UaWRMdS0IJRmtFAmQGJlMuVmIUdSVLPE19SVgqWTplDh43XRhcHAMTBFUTaxUDEwZVGVoRBRc3ZRtaJVB83%252BOtg7CzDtP%252FlI6dlSIPVhxdEwQRAVMrWxEDEwVQGVkUBxUPUCtcJXd0RQhTayUyIg%253D%253D%26t%3DW1dCFBBFC1pXUwkEAEAdQFkJBVsUChYHVBldCltXWwg%253D" target="_blank" rel="noopener noreferrer">《JavaScript高级程序设计》</a></p>
-<p>站点可以浏览下  <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.anquanquan.info%2F" target="_blank" rel="noopener noreferrer">安全圈info</a> 与  <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.sec-wiki.com%2F" target="_blank" rel="noopener noreferrer">SecWiki</a> ，前者是一个持续更新的安全圈站点导航，总能找到你想要的网站，之前说的SRC站点这里都有，后者是一个安全资讯的收录分享平台，有什么安全问题可以搜索一些历史文章看看。</p>
-<p>0x02 聊聊“学习”与“实践”</p>
-<p>入门与进阶</p>
-<p><strong>对于初学者来说，找一个靠谱的教程或者老师，帮助自己快速入门是非常有必要的。入门之后，虽然高手的点拨也很重要，但更多的功课其实是需要你自己来做的</strong>。这也是为什么优秀的入门教程很多，但是优质的进阶版本教程却不多。</p>
-<p>有一句话叫“<strong>付费就是占便宜</strong>”，对于新手来说，入门阶段花一点钱买一套优质的课程，让有经验的内行带着自己学习，往往是最优的选择。还有一句话叫“免费的就是最贵的”，免费的教学资源，质量参差不齐难以保证，不用花钱，但耗费的是你筛选的精力和时间。自己根据条件取舍，现在已经逐渐进入了一种知识付费的时代，这就是我给表弟买了一套云课堂的 <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fmooc.study.163.com%2FsmartSpec%2Fdetail%2F1001227001.htm%3Fshare%3D1%26shareId%3D9305777" target="_blank" rel="noopener noreferrer">《Web安全工程师微专业》</a>课程作为入门学习的原因，一套优质的网课，相比于昂贵的线下班性价比很不错。</p>
-<p>等准备好了再“实践”？</p>
-<p>李笑来老师有一个观点，学习任何一个学科的时候，都有一个概念很重要：</p>
-<p><strong>最少必要知识</strong></p>
-<p><strong>MAKE</strong> : <strong>M</strong>inimal <strong>A</strong>ctionable <strong>K</strong>nowledge and <strong>E</strong>xperience</p>
-<p>就是说，当我们在学习某项技能的时候，就要用最快的时间摸索清楚<strong>最少必要知识 （MAKE）</strong> 都有哪些？ 然后迅速地掌握它们，这样就实现了“<strong>快速入门</strong>”，然后就可以开始<strong>动手实践</strong>，然后在实践中印证理论、加深理解，同时继续扩展学习。</p>
-<p><strong>同样的时间，一个用来等待，另一个用来践行，两者的差距可能是天壤之别。你要知道没有任何考试是在你准备充分了才开始的</strong>。</p>
-<p>有些人喜欢等待，等到合适的时机出现的时候，再采取行动。另一些人则喜欢边做边想，有不足的地方就改进，有新的问题就解决。</p>
-<p>一段时间过去之后，后者可能已经前进了很长一段路程，而前者多半还在等待一个“恰当的时机”。</p>
-<p><strong>我原来就有这个问题，老想着先体系化学完某门技术&hellip;结果就是坚持不实践，过了很久还是啥都不会，反而之前看的那些知识因为没实践过也都忘了</strong>。</p>
-<p><strong>用和学，用比学重要。用时比学时重要</strong>。“用时”是一个很好的概念。</p>
-<p>很多人说自己“学”了那么多年英语，但现在依然说不出，听不懂。其实他们就是在用“学时”代替“用时”来计算自己的付出的。</p>
-<p>我们总说有效学习，其实衡量有效学习最好的方式就是：计算使用的时间。在安全技术学习上，就是：<strong>实践的时间</strong>。</p>
-<p>从“想到”、“学到” 到 “做到”</p>
-<p>“用”比“学”重要；“做”比“想”重要；边做边想，比单纯想想不知道好多少倍。只有做到了才是掌握了。“人至‘践’则无敌”。</p>
-<p>只要你开始做，高估或低估的困难就不仅仅是一个估计，而是一个摆在面前需要解决的现实问题。你对于它的理解不会再飘忽不定，而会变得非常具体。</p>
-<p><strong>很多人在做得不好的时候，总是喜欢退缩回原来的舒适区，认为是由于自己的基础还不好所以才这么不顺利，而忘记了这些践行过程中的困难，才是真正帮他们打牢基础的过程</strong>。</p>
-<p>0x03 结语</p>
-<p>很多人梦想找到一个牛逼的师父，几天速成然后笑傲江湖。可是每一个真正练就一身武艺的人都是靠冬练三九夏练三伏这么过来的，他们靠着一种忘我的热情持续投入进去磨练，数年如一日，最终自己也不知道怎么就发现具备了无坚不摧的实力。 同样，就算是要开好挖掘机，或着当一个好厨师，也要在自己的技能树上，一步一步地积累技能点，把过路点都点满了，才能点出大招。</p>
-<p>我们从小到大往往会听到长辈们的建议：“戒骄戒躁”。虽然“戒骄”放在前面，但“戒骄”其实是有了一定成绩之后的事情。对大多数人来说，首先要“戒躁”，才有机会“戒骄”。</p>
-<p>一个人能获得的最可贵的能力，都和掌握一门语言一样，你所付出的努力不是能够获得即时回馈的，甚至在很长的一段时间内没有任何收获，直到积累到了一定的阶段后，忽然爆发出惊人的力量，连你自己都不清楚这一切是如何发生的。比如锻炼身体，读书写作。当你经历了足够的量变终于引起质变时拥有的技能，大部分人是终身难以企及的，不是因为他们太笨，恰恰相反，因为他们都太聪明了。选择一个正确的方向，对那些无法立即获得回报的事情，依然能付出十年如一日的专注和热情，最终的结果也许不足以让你独孤求败，但足以出类拔萃。</p>
-<p>祝表弟早日成为表哥，然后带带我~</p>]]></description>
-</item><item>
     <title>绕waf系列之绕安全狗</title>
-    <link>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
+    <link>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
     <pubDate>Tue, 15 Dec 2020 21:18:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
+    </author><guid>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="%e7%bd%91%e7%bb%9c" rel="">网络</a></em></p>
 </blockquote>

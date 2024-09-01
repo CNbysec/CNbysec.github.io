@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>用户登录 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/</link>
+        <link>https://www.bysec.cn/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/</link>
         <description>用户登录 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>
@@ -30,12 +30,12 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>成功案例如下：</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg" title="image-20231026152744211" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f569252ea38f1a70e1f19836eea8bf50341ab80a2127e.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000na0AX3EhNC1.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000na0AX3EhNC1.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000na0AX3EhNC1.jpg">
         
     </a></p>
 <h3 id="12-验证码明文返回" class="headerLink">
     <a href="#12-%e9%aa%8c%e8%af%81%e7%a0%81%e6%98%8e%e6%96%87%e8%bf%94%e5%9b%9e" class="header-mark"></a>1.2 验证码明文返回</h3><p>获取手机验证码时，验证码直接在返回包里</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg" title="image-20231026153621371" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f29427169da964cc10157fa9ec98efa75a51f93ff59f0.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000SI1J74QyrXo.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000SI1J74QyrXo.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000SI1J74QyrXo.jpg">
         
     </a></p>
 <h3 id="13-存在万能验证码" class="headerLink">
@@ -44,28 +44,28 @@
     <a href="#14-%e9%aa%8c%e8%af%81%e7%a0%81%e6%9c%aa%e7%bb%91%e5%ae%9a%e7%94%a8%e6%88%b7" class="header-mark"></a>1.4 验证码未绑定用户</h3><p>a.后端仅验证了验证码是否正确，没有验证验证码与获取手机号的对应关系，导致可以先输入自己的手机号A获取验证码，再输入他人手机号B获取验证码后，填写自己手机号A接收到的验证码，达到登录手机号B的目的</p>
 <p>b.后端仅验证码了手机号与验证码是否一致，并未校验手机号是否为号主本人的,导致可以使用自己的手机号+验证码绕过。常见于用户绑定的功能处。举个栗子：</p>
 <p>某系统输入商户号与手机号可绑定到该用户</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg" title="image-20231026155939201" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f6452944ddfaec6db93aa224f926873e2692cfaa51ddc.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003W8q0w3aCx2L.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003W8q0w3aCx2L.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003W8q0w3aCx2L.jpg">
         
     </a></p>
 <p>通过用户注册的功能处，输入自己的手机号获取验证码</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg" title="image-20231026160036332" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f1467599b8a33c200cbdfc0cd5c248398f5a05fc7756e.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000zy9Fr1SuSVs.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000zy9Fr1SuSVs.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000zy9Fr1SuSVs.jpg">
         
     </a></p>
 <p>返回绑定功能处，输入任意验证码抓包，将手机号与验证码字段改为自己的手机号+验证码</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg" title="image-20231026160250988" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f8121562fa557770f53d99e14151945ea13a41f59f673.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000SKoCg2FDERP.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000SKoCg2FDERP.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000SKoCg2FDERP.jpg">
         
     </a></p>
 <p>成功登录他人账号</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg" title="image-20231026160327497" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f71223424542bfb8b033dd4a6de695a0454da99fe0dda.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000UZlNh0N2Yp5.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000UZlNh0N2Yp5.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000UZlNh0N2Yp5.jpg">
         
     </a></p>
 <h3 id="15-获取验证码的手机号字段可双写" class="headerLink">
     <a href="#15-%e8%8e%b7%e5%8f%96%e9%aa%8c%e8%af%81%e7%a0%81%e7%9a%84%e6%89%8b%e6%9c%ba%e5%8f%b7%e5%ad%97%e6%ae%b5%e5%8f%af%e5%8f%8c%e5%86%99" class="header-mark"></a>1.5 获取验证码的手机号字段可双写</h3><p>输入手机号获取验证码时抓包，双写手机号字段，使得两个手机号获取到同一个验证码，便可以登录其他用户</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg" title="image-20231026160708565" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f957197d0bac9fd9865630e16883ec371423407a0c1ee.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000QoHv82xbUbX.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000QoHv82xbUbX.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000QoHv82xbUbX.jpg">
         
     </a></p>
 <p>输入自己的手机号抓包，将手机字段后面加一个逗号或者分号后再加一个手机号，或者双写手机号字段phone=13333333333&amp;phone=18888888888，当两个手机号均收到一个验证码时大概率漏洞存在。使用自己的手机号便可以任意登录其他手机号</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f1298410bdcead04991a6070a151953c584540f0068d1.jpg" title="image-20231026161544754" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f1298410bdcead04991a6070a151953c584540f0068d1.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000043wyUj4awEfc.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000043wyUj4awEfc.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000043wyUj4awEfc.jpg">
         
     </a></p>
 <h3 id="16-验证码为空任意验证码可成功验证" class="headerLink">
@@ -74,42 +74,42 @@
     <a href="#2%e5%87%ad%e8%af%81%e5%ae%89%e5%85%a8%e9%97%ae%e9%a2%98%e5%af%bc%e8%87%b4%e7%9a%84%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95" class="header-mark"></a>2.凭证安全问题导致的任意用户登录</h2><h3 id="21-凭证泄露" class="headerLink">
     <a href="#21-%e5%87%ad%e8%af%81%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1 凭证泄露</h3><h4 id="211-页面缓存被搜索引擎抓取" class="headerLink">
     <a href="#211-%e9%a1%b5%e9%9d%a2%e7%bc%93%e5%ad%98%e8%a2%ab%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e6%8a%93%e5%8f%96" class="header-mark"></a>2.1.1 页面缓存被搜索引擎抓取</h4><p>搜索引擎搜索该域名，发现有登录后的页面被抓取，直接访问登录目标账户</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg" title="image-20231026111018248" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f4091122410659bb3807c58c04a8a0e16998417e9b325.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004LgXKI1urayk.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004LgXKI1urayk.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004LgXKI1urayk.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg" title="image-20231026111129791" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f9782237ebec4441168fe52169f957b9e5370a0a1b18c.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003uTESL3QwhZY.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003uTESL3QwhZY.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003uTESL3QwhZY.jpg">
         
     </a></p>
 <h4 id="212-httptracedruid等组件中的凭证泄露" class="headerLink">
     <a href="#212-httptracedruid%e7%ad%89%e7%bb%84%e4%bb%b6%e4%b8%ad%e7%9a%84%e5%87%ad%e8%af%81%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.2 httptrace/druid等组件中的凭证泄露</h4><h5 id="httptrace" class="headerLink">
     <a href="#httptrace" class="header-mark"></a>httptrace</h5><p>spring的httptrace端点往往会记录用户的会话信息，若发现spring未授权访问且存在类似端点可以访问的话，可尝试获取用户凭证进行登录</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg" title="image-20231026163705868" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f3018070bc7fb934f1e5f06cf5d0ad0f6b08542225789.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000011xiMV1pzBWm.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000011xiMV1pzBWm.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000011xiMV1pzBWm.jpg">
         
     </a></p>
 <h5 id="durid" class="headerLink">
     <a href="#durid" class="header-mark"></a>durid</h5><p>druid的session监控若发现有效的会话信息时，可以通过此登录任意用户，将druid的未授权中危漏洞提升至高危</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg" title="image-20231026113057179" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f449949895ad92d513e2154772ee8676047ce70a1f4a0.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000023jT9E2hL89w.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000023jT9E2hL89w.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000023jT9E2hL89w.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg" title="image-20231026113234298" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f269203959c6bc73dbd71560c963f123e4727b378ffc1.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000178axm0EEJhL.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00000178axm0EEJhL.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000178axm0EEJhL.jpg">
         
     </a></p>
 <h4 id="212-sessionkey泄露" class="headerLink">
     <a href="#212-sessionkey%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.2 sessionkey泄露</h4><p>微信小程序官方提供了一套微信快捷登录的登录逻辑，用户授权手机号快捷登录时，会将本地的手机号使用sessionkey和iv进行aes加密，后端解密后返回该手机号的登录凭证。当sessionkey发生泄露时，攻击者便可以伪造手机号登录任意手机号</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg" title="image-20231026164613313" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f435754b0adfe30b25f1261d93d1ac2d276c4ef2c224b.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002t9AkW3lh4F0.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002t9AkW3lh4F0.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002t9AkW3lh4F0.jpg">
         
     </a></p>
 <p>修改任意手机号，利用sessionkey和iv重新加密数据</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg" title="image-20231026164903153" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f282873664a2d4f77cf7f0fb934e1272844ac9234329e.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001U8N2o2aFeSZ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001U8N2o2aFeSZ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001U8N2o2aFeSZ.jpg">
         
     </a></p>
 <p>成功登录他人账号</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg" title="image-20231026165003227" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f21869586dca7202d7ad49fdf2fd62983bb26c7a25afd.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002OfGjt36xeWs.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002OfGjt36xeWs.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002OfGjt36xeWs.jpg">
         
     </a></p>
 <h4 id="213-其他接口中的信息泄露" class="headerLink">
     <a href="#213-%e5%85%b6%e4%bb%96%e6%8e%a5%e5%8f%a3%e4%b8%ad%e7%9a%84%e4%bf%a1%e6%81%af%e6%b3%84%e9%9c%b2" class="header-mark"></a>2.1.3 其他接口中的信息泄露</h4><p>这个一般发现于js或者api-docs中的某些特殊接口，例如getToken之类的，有没有取决于开发有没有开发类似的功能接口</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg" title="image-20231026165405684" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f94347450d57e69d7429bfd2cb5c5565c2b4f3d75c3e6.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000000i0Jp0TQS5q.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000000i0Jp0TQS5q.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000000i0Jp0TQS5q.jpg">
         
     </a></p>
 <h3 id="22-凭证可伪造" class="headerLink">
@@ -117,27 +117,27 @@
     <a href="#221-jwt%e6%9c%aa%e9%aa%8c%e5%8f%82%e5%bc%b1%e5%af%86%e9%92%a5" class="header-mark"></a>2.2.1 jwt未验参/弱密钥</h4><p>系统使用jwt作为认证字段，且其中关键用户信息字段可以遍历时，若未验参或者使用弱密钥时，便可以将用户信息字段进行更改，删除/爆破弱密钥重新生成签名，到达任意用户登录</p>
 <h5 id="jwt未验参" class="headerLink">
     <a href="#jwt%e6%9c%aa%e9%aa%8c%e5%8f%82" class="header-mark"></a>jwt未验参</h5><p>删除签名部分(或者更改头部中的alg为none再删除签名)，访问登录后的接口成功访问，说明jwt未验参()</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg" title="image-20231026170046925" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f3944195587a7f73d26e1987f25578d5a76f94a3b3207.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002a1r4Q0HaM4O.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002a1r4Q0HaM4O.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002a1r4Q0HaM4O.jpg">
         
     </a></p>
 <p>遍历data字段即可登录其他用户（此处的data为用户id）</p>
 <h5 id="jwt弱密钥" class="headerLink">
     <a href="#jwt%e5%bc%b1%e5%af%86%e9%92%a5" class="header-mark"></a>jwt弱密钥</h5><p>jwt使用了弱密钥时，爆破到弱密钥后同样修改jwt中的用户信息字段，使用密钥重新生成签名即可获取到其他用户的jwt字段</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg" title="image-20231026103900241" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f25971001b760f531bbb9b0c11655940e750b31e22060.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004WYHBe2mCDn0.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004WYHBe2mCDn0.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004WYHBe2mCDn0.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg" title="image-20231026103943886" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f3421878f82ea6d3399fbeb79b5993d541a1689fa306d.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000029sOX2QC3cy.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00000029sOX2QC3cy.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000029sOX2QC3cy.jpg">
         
     </a></p>
 <h4 id="222-弱cookie" class="headerLink">
     <a href="#222-%e5%bc%b1cookie" class="header-mark"></a>2.2.2 弱cookie</h4><p>系统使用cookie认证，且cookie字段可伪造</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg" title="image-20231026170524323" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f343545db5d56506f6e6a71bf07fac703d138dbcfc2a7.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000164AXZ1PLsjq.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00000164AXZ1PLsjq.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000164AXZ1PLsjq.jpg">
         
     </a></p>
 <h3 id="23-凭证过早返回" class="headerLink">
     <a href="#23-%e5%87%ad%e8%af%81%e8%bf%87%e6%97%a9%e8%bf%94%e5%9b%9e" class="header-mark"></a>2.3 凭证过早返回</h3><p>一般正常的登录流程为服务端校验完用户身份后，返回用户凭证，但某些系统由于登录前会有很多的查询用户信息类的功能请求，经常导致在登录验证前就返回了用户凭证。</p>
 <p>某金融项目，输入手机号会先去查询手机号是否为已注册用户，是的话进入用户信息查询的逻辑，再跳转登录。在信息查询的阶段过早返回了sessionid,导致任意用户登录</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg" title="image-20231026171141852" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f800254e5355b68a543e3ee9e1658501b0859a0d32d17.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003a117v3icq28.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003a117v3icq28.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003a117v3icq28.jpg">
         
     </a></p>
 <h2 id="3逻辑漏洞导致的任意用户登录" class="headerLink">
@@ -150,33 +150,33 @@
 <p>以下为例</p>
 <p>分析登录流程为，第一个请求请求微信接口获取用户手机号，返回到一个请求的返回包中</p>
 <p>第二个请求获取返回包中的手机号加密发给服务端，返回其登录凭证</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg" title="image-20231026175959686" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f76774979cb77858123a944c51b566d6ecc4a6459bdd3.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002oT9dv1rrZTW.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002oT9dv1rrZTW.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002oT9dv1rrZTW.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg" title="image-20231026180521839" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f176433269fbc7fa524a4ec02bd5b970f940e0b0d8cc6.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003CNptr4QLUld.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003CNptr4QLUld.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003CNptr4QLUld.jpg">
         
     </a></p>
 <p>所以此处只需要替换第一个请求包的返回包中的手机号即可</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg" title="image-20231026180607177" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f177451e5ce45cf31ffd4eb5e0b7892c28fa428acdc03.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001JHFHh2LjpJM.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001JHFHh2LjpJM.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001JHFHh2LjpJM.jpg">
         
     </a></p>
 <h4 id="修改第二个请求的请求包" class="headerLink">
     <a href="#%e4%bf%ae%e6%94%b9%e7%ac%ac%e4%ba%8c%e4%b8%aa%e8%af%b7%e6%b1%82%e7%9a%84%e8%af%b7%e6%b1%82%e5%8c%85" class="header-mark"></a>修改第二个请求的请求包</h4><p>如下登录数据包，直接更改其中手机号即可</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg" title="image-20231026181117618" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f47908133233caa9edcbe17466a28a602a913d87212a1.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001TXV1C3XB3Q8.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001TXV1C3XB3Q8.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001TXV1C3XB3Q8.jpg">
         
     </a></p>
 <h3 id="32-更改登录type" class="headerLink">
     <a href="#32-%e6%9b%b4%e6%94%b9%e7%99%bb%e5%bd%95type" class="header-mark"></a>3.2 更改登录type</h3><p>部分系统有免密登录/快捷登录之类的功能，只要一个账号就能登录，当遇到登录数据包中含有type之类的字段时，可以尝试此方法</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg" title="image-20231026183616031" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f376579a190ac9b62ccdbedbb53ee6f9fd7aaeabe7d9c.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000039QDx21hFYtx.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000039QDx21hFYtx.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000039QDx21hFYtx.jpg">
         
     </a></p>
 <h3 id="33-账号数据覆盖" class="headerLink">
     <a href="#33-%e8%b4%a6%e5%8f%b7%e6%95%b0%e6%8d%ae%e8%a6%86%e7%9b%96" class="header-mark"></a>3.3 账号数据覆盖</h3><p>常见于用账号信息更新处，例如修改手机号、账户重新绑定功能、修改账号等功能点处</p>
 <p>以修改手机号为例，此处修改需要输入新手机号与新手机号的验证码</p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg" title="image-20231026104342413" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f577428b15ded18a8dd0cb84e3fa4875ee4514325a601.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000SIWEa3YcdRV.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000SIWEa3YcdRV.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000SIWEa3YcdRV.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg" title="image-20231026104439045" data-thumbnail="https://cdn.jsdelivr.net/gh/cnbysec/cnbysec.github.io/OSS/img/任意用户登录漏洞挖掘思路/f9769675e17c3e4dc7fa3d6ab35702169fe922bbb9033.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001L1Ho00CZCua.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001L1Ho00CZCua.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001L1Ho00CZCua.jpg">
         
     </a></p>
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>

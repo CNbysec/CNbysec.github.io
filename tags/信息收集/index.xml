@@ -1,15 +1,247 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>信息收集 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+        <link>https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
         <description>信息收集 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
+    <title>一次经典教育系统后台漏洞打包</title>
+    <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+    <pubDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+    <description><![CDATA[<h2 id="记一次经典教育系统后台漏洞打包" class="headerLink">
+    <a href="#%e8%ae%b0%e4%b8%80%e6%ac%a1%e7%bb%8f%e5%85%b8%e6%95%99%e8%82%b2%e7%b3%bb%e7%bb%9f%e5%90%8e%e5%8f%b0%e6%bc%8f%e6%b4%9e%e6%89%93%e5%8c%85" class="header-mark"></a>记:一次经典教育系统后台漏洞打包!</h2><h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言:</h2><p>小编认为像什么什么大学比较显眼的 &ldquo;统一认证登录&rdquo;||&ldquo;学生综合管理&rdquo;,基本上弱口令是不太行,别的漏洞的话好多也都被大佬们打完了或者利用上不太容易(菜鸟的内心崩塌)，对于自己渗透能力的有限，信息收集就尤为重要! 既然主站打不了，就打旁站吧！（基本的方式都是通用的） 这里先分享一下<strong>小编自用的谷歌语法：谷歌语法基础的符号：</strong> “xxx”: 将要搜索的关键字用引号括起来 (表示完全匹配，即关键词不能分开，顺序也不能变)</p>
+<p>例如：腾讯课堂如果不加“ ”的话，就会针对腾讯和课堂进行拆分，既对腾讯进行搜索也对课堂进行搜索，所以加上“ ”的话就会对腾讯课堂进行绑定，只对腾讯课堂进行搜索</p>
+<p>+：“xxx” +baidu.com</p>
+<p>搜索 xxx 与 baidu.com 相关的内容</p>
+<p>例如：腾讯课堂 +ke.qq.com，那么这里就会显示 ke.qq.com 相关的内容</p>
+<p>-：“xxx” -baidu.com</p>
+<p>搜索结果里面除去 baidu.com 相关的内容</p>
+<p>例如：腾讯课堂 -ke.qq.com，这里再搜索的时候，就会把这个网址屏蔽掉</p>
+<p>谷歌语法的基础使用 在渗透测试的过程中，运用谷歌语法能快速地帮我们找到可能存在漏洞的页面</p>
+<p>谷歌语法常用搜索参数： site： 指定域名，如：site:edu.cn 搜索教育网站</p>
+<p>inurl： 用于搜索包含的 url 关键词的网页，如：inurl:uploads 文件上传，搜索关于公司有关的网址中含有 login 的网页，</p>
+<p>intitle： 搜索网页标题中的关键字，如：</p>
+<p>intitle:“index of /admin” robots.txt</p>
+<p>intitle:“robots.txt”</p>
+<p>intext： 搜索网页正文中的关键字，如：intext:登陆/注册/用户名/密码</p>
+<p>filetype： 按指定文件类型即文件后缀名搜索，如：filetpye:php/asp/jsp</p>
+<p>cache： 已经删除的缓存网页，推荐组合使用</p>
+<p><strong>谷歌语法拓展</strong> <strong>查找后台</strong> site:xx.com intext:管理|后台|登陆|用户名|密码|系统|帐号|admin|login|sys|managetem|password|username</p>
+<p>site:xx.com inurl:login|admin|manage|member|admin_login|login_admin|system|login|user</p>
+<p><strong>查找 sql 注入漏洞</strong> inurl:.php?id=23 公司</p>
+<p>inurl:.asp?id=11</p>
+<p><strong>查找上传点：</strong> site:xx.com inurl:file| uploadfile</p>
+<p><strong>查找敏感信息泄露</strong> intitle:“Index of /admin”</p>
+<p>intitle:“Index of /root”</p>
+<p>intitle:“Index of /” +password.txt</p>
+<p>intitle:phpinfo()或者 inurl:phpinfo.php</p>
+<p><strong>查找未授权访问</strong>phpmyadmin inurl:.php? intext:CHARACTER_SETS,COLLATIONS, ?intitle:phpmyadmin</p>
+<p><strong>这次案例就是</strong>：site:xxx.edu.cn “管理登录”||“登录”||“用户登录” 由于一次意外经历，意外获得该学校的秘密规律（方式有且不限于用户手册/小程序），所以是一场有针对性的后台登录</p>
+<h2 id="某实践教学毕设管理平台" class="headerLink">
+    <a href="#%e6%9f%90%e5%ae%9e%e8%b7%b5%e6%95%99%e5%ad%a6%e6%af%95%e8%ae%be%e7%ae%a1%e7%90%86%e5%b9%b3%e5%8f%b0" class="header-mark"></a>某实践教学毕设管理平台</h2><p>像这一种一眼二开的老旧学校管理系统，就感觉有戏，不出所料利用收集到的密码规律也是成功登陆了</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg">
+        
+    </a></p>
+<h3 id="信息泄露" class="headerLink">
+    <a href="#%e4%bf%a1%e6%81%af%e6%b3%84%e9%9c%b2" class="header-mark"></a>信息泄露</h3><p>进来直接就给了惊喜（<strong>学生账号也能看到同学和老师</strong>）个人感觉这种毕设学校都是这样整的</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg">
+        
+    </a><br>
+直接发现大量学号规律，已经算是信息泄露了，但是都进来了哪有那么容易走， 于是开始用自己三脚猫功夫&ndash;再加上又有学号规律，可以试试越权咯！</p>
+<h3 id="越权测试" class="headerLink">
+    <a href="#%e8%b6%8a%e6%9d%83%e6%b5%8b%e8%af%95" class="header-mark"></a>越权测试</h3><p>翻了翻功能点发现有个修改密码，哎！好像这类一般有越权修改密码哦！开搞</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg">
+        
+    </a><br>
+点击修改密码抓包：</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg">
+        
+    </a><br>
+发现可以修改的参数都在 cookie 里面： ASP.NET_SessionId 这一看就是加密签名咯（能力有限留给逆向大佬） OA_User=id=54598 （感觉跟用户 id 有关系） unumber 和 ip 分别是用户名和 IP 地址（感觉也没法改） Powerid= 6 (这个个位数参数猜测是权限上面的）</p>
+<h5 id="注意" class="headerLink">
+    <a href="#%e6%b3%a8%e6%84%8f" class="header-mark"></a>（注意）</h5><p><strong>这里面我在每一次点击功能点时会连续抓取 4~5 个包，为了达成越权目的必须确保每一个数据包都进行修改！！</strong></p>
+<p>尝试修改 OA_User=id= 54597 （先减一位然后再减一位）</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg">
+        
+    </a><br>
+发现对应的用户名也是对应着改变，（只是不和 id 匹配）</p>
+<p>哎！这不就是直接可以越权修改密码！水平越权有了！</p>
+<h4 id="扩展垂直越权" class="headerLink">
+    <a href="#%e6%89%a9%e5%b1%95%e5%9e%82%e7%9b%b4%e8%b6%8a%e6%9d%83" class="header-mark"></a>扩展：垂直越权</h4><p>不过这些都是修改 OA_User=id= 发现都是便利的一些学生 id，就想下能不能 get 到<strong>教师</strong>或者<strong>管理员</strong></p>
+<p>记得还有个参数 Powerid= 6</p>
+<p>便利学生的时候就发现有些 id 是遍历不出来的（这些可能就是管理员/教师）<strong>其中就有一个 id 是 5.</strong></p>
+<p>为了方便确定信息这次点击个人基本信息</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg">
+        
+    </a><br>
+1.通过遍历结果尝试修改 OA_User=id=54590 powerid=5</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg">
+        
+    </a><br>
+发现和我猜测的一样 ‘5’ 就是教师权限！拿到老师权限同样也是可以直接越权修改老师密码!</p>
+<p>2.老师权限都试出来了，就想着管理员！！！</p>
+<h5 id="划重点" class="headerLink">
+    <a href="#%e5%88%92%e9%87%8d%e7%82%b9" class="header-mark"></a>**!!!**划重点!!!</h5><p>这里,通过遍历发现 40000-55000 都是可以便利的点,管理员这里面并没有出现!</p>
+<p>所以说:一般这种系统<strong>管理员权限特殊</strong>会比较特殊，根据小编多年扣脚的经验 ，管理员 id=1，（这一点适用于大多数管理系统），同时权限做出的是数字越小权限越大，这里 powerid=1 放包注意和上面一样</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg">
+        
+    </a></p>
+<p>成功拿到管理员权限！泄露大量账号密码信息：</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg">
+        
+    </a></p>
+<p>测试添加用户</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg">
+        
+    </a></p>
+<p>直接可以任意添加管理员和导师账户！<strong>（声明：所有测试账户均已经删除，仅为测试所用）</strong></p>
+<p>同样，进行功能点抓包修改可以越权修改管理员密码！</p>
+<h3 id="xss经典绕-waf" class="headerLink">
+    <a href="#xss%e7%bb%8f%e5%85%b8%e7%bb%95-waf" class="header-mark"></a>XSS（经典绕 waf）</h3><p>既然我能越权至教师账户，那就接着试一试 xss</p>
+<p>在教师的功能点里面有一个学生信息列表，可以直接读取学生个人信息</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg">
+        
+    </a></p>
+<p>同时学生信息可以上传这些信息，那不是多好的储存型 xss 模板</p>
+<p>话不多说开测：</p>
+<h4 id="测试最基础的-payload" class="headerLink">
+    <a href="#%e6%b5%8b%e8%af%95%e6%9c%80%e5%9f%ba%e7%a1%80%e7%9a%84-payload" class="header-mark"></a>测试最基础的 payload</h4><script>alert(1)</script>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg">
+        
+    </a><br>
+初步测试只有<strong>专业特长</strong>和<strong>姓名</strong>没有输入限制，（别的只能是纯数字）</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg">
+        
+    </a></p>
+<p>好好好，这一下算是踢到软柿子中的最硬的了&ndash;waf (吗喽痛苦)</p>
+<p>不过都到这里了，怎么也要绕一下！</p>
+<h4 id="xss-绕-waf" class="headerLink">
+    <a href="#xss-%e7%bb%95-waf" class="header-mark"></a>xss 绕 waf</h4><p>绕过一般思路! <strong>一、更改提交方式</strong> 在默认配置下，为了节省资源，许多 WAF 只会对 GET 请求进行过滤拦截，而忽略了对 POST 请求、Cookie、HTTP Header 等其他提交方式的检测。因此，攻击者可以尝试更改有害语句的提交方式，如将 GET 请求修改为 POST 请求，或者通过 Cookie、HTTP Header 等方式提交恶意脚本，以绕过 WAF 的拦截。</p>
+<p><strong>二、混淆伪装绕过</strong> 混淆伪装是一种常见的绕过 WAF 的手段，攻击者通过编码、大小写混淆、双写、转义字符等方式对恶意脚本进行伪装，使其绕过 WAF 的关键词过滤规则。例如，将 JavaScript 代码中的关键字进行大小写混淆（如<scriPT>），或者使用 Unicode 编码、Base64 编码等方式对代码进行编码。</p>
+<p><strong>三、标签和事件函数变换</strong> XSS 攻击主要是通过触发 HTML 标签中的事件函数来执行恶意脚本。因此，WAF 会重点识别能够触发事件函数的 HTML 标签和事件函数字段。攻击者可以尝试使用其他可以执行 JavaScript 代码的 HTML 标签（如<svg>, <button>, 等）替换常用的<script>标签，或者使用其他事件函数（如 onerror, oninput, onmousedown 等）替换常用的 onclick 事件函数，以绕过 WAF 的拦截。</p>
+<p><strong>四、利用 WAF 的缺陷和配置不当</strong> 「增加 WAF 负担」：有些 WAF 在处理大量数据时可能会降低检测精度或放弃检测部分数据包。攻击者可以通过向 WAF 发送大量正常数据包并夹杂异常数据包的方式，增加 WAF 的负担，从而绕过 WAF 的检测。</p>
+<p>「利用 WAF 配置不当」：WAF 的配置可能存在漏洞或不当之处，如只检测部分参数、忽略某些类型的请求等。攻击者可以通过分析 WAF 的配置规则，构造绕过 WAF 检测的请求。</p>
+<p>「旁站绕过」：在某些情况下，网站管理员可能只对主站进行了 WAF 防护，而忽略了旁站或子域名的防护。攻击者可以尝试通过旁站或子域名绕过 WAF 的防护。</p>
+<p><strong>五、使用自动化工具</strong> 自动化工具如 XSStrike 等可以帮助攻击者自动测试 WAF 的防护效果，并生成绕过 WAF 的 payload。这些工具通常包含多种绕过 WAF 的技巧和策略，可以显著提高攻击的成功率。 XSStrike 开源地址：<a href="https://github.com/s0md3v/XSStrike" target="_blank" rel="noopener noreferrer">https://github.com/s0md3v/XSStrike</a><br>
+<strong>六、其他技巧</strong></p>
+<ul>
+<li>「利用伪协议」：某些 HTML 属性支持伪协议（如 javascript:），攻击者可以利用这些属性执行恶意脚本。</li>
+<li>「利用 CSS 跨站」：在某些情况下，攻击者可以利用 CSS 中的某些特性（如 expression()）执行 JavaScript 代码。</li>
+<li>「利用全局变量和函数」：JavaScript 中的全局变量和函数（如 eval(), window.onload 等）可以在不直接引用脚本标签的情况下执行代码，攻击者可以尝试利用这些变量和函数绕过 WAF 的防护。</li>
+</ul>
+<h4 id="这里进行一个一个尝试" class="headerLink">
+    <a href="#%e8%bf%99%e9%87%8c%e8%bf%9b%e8%a1%8c%e4%b8%80%e4%b8%aa%e4%b8%80%e4%b8%aa%e5%b0%9d%e8%af%95" class="header-mark"></a>这里进行一个一个尝试</h4><h4 id="1大小写绕过" class="headerLink">
+    <a href="#1%e5%a4%a7%e5%b0%8f%e5%86%99%e7%bb%95%e8%bf%87" class="header-mark"></a><strong>1.大小写绕过</strong></h4><sCript>alert(1)</Script>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg">
+        
+    </a></p>
+<h4 id="2双写绕过不行" class="headerLink">
+    <a href="#2%e5%8f%8c%e5%86%99%e7%bb%95%e8%bf%87%e4%b8%8d%e8%a1%8c" class="header-mark"></a>2、双写绕过(不行)</h4><p>&lt;sCri<script>alert(1)</script>SC<script>ripT&gt;</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg">
+        
+    </a></p>
+<h4 id="3img-标签" class="headerLink">
+    <a href="#3img-%e6%a0%87%e7%ad%be" class="header-mark"></a>3.img 标签</h4><p>\&lt;img src\=15 onerror\=(function(){alert(15)})()&gt;</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg">
+        
+    </a></p>
+<h4 id="4onmouseover-事件" class="headerLink">
+    <a href="#4onmouseover-%e4%ba%8b%e4%bb%b6" class="header-mark"></a>4、onmouseover 事件</h4><p>&lt;a onmousemove\=&ldquo;do something here&rdquo;&gt;` 当用户鼠标移动时即可运行代码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg">
+        
+    </a></p>
+<p>5、主动闭合标签实现注入代码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg">
+        
+    </a></p>
+<h4 id="6绕过-html-注释符" class="headerLink">
+    <a href="#6%e7%bb%95%e8%bf%87-html-%e6%b3%a8%e9%87%8a%e7%ac%a6" class="header-mark"></a>6.绕过 HTML 注释符</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg">
+        
+    </a></p>
+<h4 id="7利用换行符绕过" class="headerLink">
+    <a href="#7%e5%88%a9%e7%94%a8%e6%8d%a2%e8%a1%8c%e7%ac%a6%e7%bb%95%e8%bf%87" class="header-mark"></a>7.利用换行符绕过</h4><p>&lt;img/src\=14 onerror\=window.alert(14)&gt;</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg">
+        
+    </a></p>
+<h4 id="崩溃我是真的崩溃上字典开跑" class="headerLink">
+    <a href="#%e5%b4%a9%e6%ba%83%e6%88%91%e6%98%af%e7%9c%9f%e7%9a%84%e5%b4%a9%e6%ba%83%e4%b8%8a%e5%ad%97%e5%85%b8%e5%bc%80%e8%b7%91" class="header-mark"></a>崩溃,我是真的崩溃!!!，上字典开跑</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg">
+        
+    </a></p>
+<h4 id="最后也是跑出来了一个" class="headerLink">
+    <a href="#%e6%9c%80%e5%90%8e%e4%b9%9f%e6%98%af%e8%b7%91%e5%87%ba%e6%9d%a5%e4%ba%86%e4%b8%80%e4%b8%aa" class="header-mark"></a>最后也是跑出来了一个！！！</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg">
+        
+    </a></p>
+<p>发现<strong>使用 <code>&lt;svg&gt;</code> 标签和 <code>onload</code> 事件</strong>：</p>
+<p>利用 <code>&lt;svg&gt;</code> 标签的 <code>onload</code> 事件触发 JavaScript 代码执行,使用 <code>unescape</code> 和 <code>eval</code> 结合的方式，对代码进行混淆和编码,将字符串 <code>'alert(1)'</code> 编码为 <code>'%61%6c%65%72%74%28%31%29'</code>，然后通过 <code>unescape</code> 将其还原，再使用 <code>eval</code> 执行还原后的代码</p>
+<p>推测目标服务器:缺乏对动态代码执行的检测，或检测机制不足以处理复杂的动态执行逻辑。对常见的 <code>onclick</code>、<code>onmouseover</code> 等事件进行了更严格的过滤，但对 <code>onload</code> 事件的过滤不足。通过 <code>onload</code> 事件触发执行，绕过了可能针对其他事件（如 <code>onclick</code>、<code>onmouseover</code>）的过滤。可以尝试其他不常见但有效的事件（如 <code>onfocus</code>、<code>onerror</code>）进行绕过。服务器可能没有对 URI 编码（如 <code>%61%6c%65%72%74%28%31%29</code>）进行解码并检查。这表示过滤器可能缺乏对编码/解码操作的深度检测。</p>
+<p>牛掰,还是网传的字典牛掰,自己还得练</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg">
+        
+    </a></p>
+<p>最终也是终于弹出来了</p>
+<h3 id="文件上传-xss" class="headerLink">
+    <a href="#%e6%96%87%e4%bb%b6%e4%b8%8a%e4%bc%a0-xss" class="header-mark"></a>文件上传 XSS</h3><p>在测试功能点的时候发现存在文件上传点,</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg">
+        
+    </a><br>
+aspx 语言首先想尝试一句话木马</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg">
+        
+    </a></p>
+<p>直接又是不行,这里小编上传木马能力有限,抓包分析</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg">
+        
+    </a><br>
+发现他是接收 html 的</p>
+<p>尝试用 html 弹出一个 xss</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg">
+        
+    </a><br>
+老师界面观察也是成功的打上一下(水平较低)</p>
+<p>整体拿下来观察是非常经典的一次后台打包,根据分析<strong>该系统普遍存在于学校毕业设计</strong>,整体的思路都是通用的,想类似的系统可以多尝试,类似是一种毕设通杀!!</p>
+<p>(所有增添账号和上传文件均删除)</p>]]></description>
+</item><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -302,10 +534,10 @@
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -1271,10 +1503,10 @@
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>

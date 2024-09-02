@@ -1,7 +1,9 @@
-# 一次经典教育系统后台漏洞打包
+﻿# 一次经典教育系统后台漏洞打包
 
 
 <!--more-->
+
+> *转载自： [https://forum.butian.net/share/3693](https://forum.butian.net/share/3693)*
 
 ## 记:一次经典教育系统后台漏洞打包!
 
@@ -67,23 +69,23 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 像这一种一眼二开的老旧学校管理系统，就感觉有戏，不出所料利用收集到的密码规律也是成功登陆了
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002lBSz93HGtv2.jpg)
 
 ### 信息泄露
 
 进来直接就给了惊喜（**学生账号也能看到同学和老师**）个人感觉这种毕设学校都是这样整的
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000021e8Ox0nNje7.jpg)  
 直接发现大量学号规律，已经算是信息泄露了，但是都进来了哪有那么容易走， 于是开始用自己三脚猫功夫--再加上又有学号规律，可以试试越权咯！
 
 ### 越权测试
 
 翻了翻功能点发现有个修改密码，哎！好像这类一般有越权修改密码哦！开搞
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000000vxZf82X8dIg.jpg)  
 点击修改密码抓包：
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002szITk3Su3Hb.jpg)  
 发现可以修改的参数都在 cookie 里面： ASP.NET_SessionId 这一看就是加密签名咯（能力有限留给逆向大佬） OA_User=id=54598 （感觉跟用户 id 有关系） unumber 和 ip 分别是用户名和 IP 地址（感觉也没法改） Powerid= 6 (这个个位数参数猜测是权限上面的）
 
 ##### （注意）
@@ -92,9 +94,9 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 尝试修改 OA_User=id= 54597 （先减一位然后再减一位）
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002ghYh04dk5sh.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002ykNRs0oJibw.jpg)  
 发现对应的用户名也是对应着改变，（只是不和 id 匹配）
 
 哎！这不就是直接可以越权修改密码！水平越权有了！
@@ -109,12 +111,12 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 为了方便确定信息这次点击个人基本信息
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002U8V3g2n7Cvu.jpg)  
 1.通过遍历结果尝试修改 OA_User=id=54590 powerid=5
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000024Svjr4K12Z3.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001v1zZ51J1eh6.jpg)  
 发现和我猜测的一样 ‘5’ 就是教师权限！拿到老师权限同样也是可以直接越权修改老师密码!
 
 2.老师权限都试出来了，就想着管理员！！！
@@ -125,21 +127,21 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 所以说:一般这种系统**管理员权限特殊**会比较特殊，根据小编多年扣脚的经验 ，管理员 id=1，（这一点适用于大多数管理系统），同时权限做出的是数字越小权限越大，这里 powerid=1 放包注意和上面一样
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003Nl2Iz1BqrJF.jpg)
 
 成功拿到管理员权限！泄露大量账号密码信息：
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001TdX773HxjdQ.jpg)
 
 测试添加用户
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002MsEx31yDvk1.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003YicyK1X0Dyi.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD00000020ZMu1SddCi.jpg)
 
 直接可以任意添加管理员和导师账户！**（声明：所有测试账户均已经删除，仅为测试所用）**
 
@@ -151,9 +153,9 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 在教师的功能点里面有一个学生信息列表，可以直接读取学生个人信息
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001WJExk1Z9awx.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002BLRej1r4lK0.jpg)
 
 同时学生信息可以上传这些信息，那不是多好的储存型 xss 模板
 
@@ -161,12 +163,12 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 #### 测试最基础的 payload
 
-<script>alert(1)</script>
+```<script>alert(1)</script>```
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg)  
 初步测试只有**专业特长**和**姓名**没有输入限制，（别的只能是纯数字）
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000020YKS333hc8s.jpg)
 
 好好好，这一下算是踢到软柿子中的最硬的了--waf (吗喽痛苦)
 
@@ -197,55 +199,55 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 #### **1.大小写绕过**
 
-<sCript>alert(1)</Script>
+```<sCript>alert(1)</Script>```
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg)
 
 #### 2、双写绕过(不行)
 
-<sCri<script>alert(1)</script>SC<script>ripT>
+```<sCri<script>alert(1)</script>SC<script>ripT>```
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg)
 
 #### 3.img 标签
 
-\\<img src\\=15 onerror\\=(function(){alert(15)})()>
+```<img src\\=15 onerror\\=(function(){alert(15)})()>```
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg)
 
 #### 4、onmouseover 事件
 
 <a onmousemove\\="do something here">\` 当用户鼠标移动时即可运行代码
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg)
 
 5、主动闭合标签实现注入代码
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000004GvwoR4PHjXZ.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002ZoOAZ21hhhn.jpg)
 
 #### 6.绕过 HTML 注释符
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002jCpmK48IqBV.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003Om67G04ySfK.jpg)
 
 #### 7.利用换行符绕过
 
-<img/src\\=14 onerror\\=window.alert(14)>
+```<img/src\\=14 onerror\\=window.alert(14)>```
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg)
 
 #### 崩溃,我是真的崩溃!!!，上字典开跑
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000004etUAp42SukB.jpg)
 
 #### 最后也是跑出来了一个！！！
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000004cV06n3V702h.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003xyVEK4ABQwB.jpg)
 
 发现**使用 `<svg>` 标签和 `onload` 事件**：
 
@@ -255,7 +257,7 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 牛掰,还是网传的字典牛掰,自己还得练
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001KE9yE2gqtX7.jpg)
 
 最终也是终于弹出来了
 
@@ -263,23 +265,23 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 在测试功能点的时候发现存在文件上传点,
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000004XMn6M3QoFmJ.jpg)  
 aspx 语言首先想尝试一句话木马
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000003rEVVM2Kiy66.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000000uLhwX4HTBjX.jpg)
 
 直接又是不行,这里小编上传木马能力有限,抓包分析
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001CA2pO49aS9Y.jpg)  
 发现他是接收 html 的
 
 尝试用 html 弹出一个 xss
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg)
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000001HM2C63VO1B9.jpg)
 
-![图片.png](https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg)  
+![](https://qqq.gtimg.cn/music/photo_new/T053XD000002I5bYE4T8z2C.jpg)  
 老师界面观察也是成功的打上一下(水平较低)
 
 整体拿下来观察是非常经典的一次后台打包,根据分析**该系统普遍存在于学校毕业设计**,整体的思路都是通用的,想类似的系统可以多尝试,类似是一种毕设通杀!!

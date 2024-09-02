@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>抓包 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E6%8A%93%E5%8C%85/</link>
+        <link>https://www.bysec.cn/tags/%E6%8A%93%E5%8C%85/</link>
         <description>抓包 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Fri, 14 Jun 2024 18:24:56 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%8A%93%E5%8C%85/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Fri, 14 Jun 2024 18:24:56 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E6%8A%93%E5%8C%85/" rel="self" type="application/rss+xml" /><item>
     <title>微信小程序抓包及测试</title>
-    <link>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
+    <link>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
     <pubDate>Fri, 14 Jun 2024 18:24:56 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
+    </author><guid>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2477" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2477</a></em></p>
 </blockquote>
@@ -105,23 +105,33 @@
 <p>网盘链接：<a href="https://pan.baidu.com/s/19O2KDqWn2Zyars8AREJ1LQ?pwd=22qj" target="_blank" rel="noopener noreferrer">https://pan.baidu.com/s/19O2KDqWn2Zyars8AREJ1LQ?pwd=22qj</a></p>
 <p>提取码：22qj</p>
 <p>来到工具目录</p>
-<p>安装</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg">
+<h3 id="安装" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85" class="header-mark"></a>安装</h3><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg">
         
     </a></p>
 <p>安装依赖</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">esprima</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">css</span><span class="o">-</span><span class="nx">tree</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">cssbeautify</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">vm2</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">uglify</span><span class="o">-</span><span class="nx">es</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">js</span><span class="o">-</span><span class="nx">beautify</span> <span class="nx">逐条执行以上命令</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install esprima
+</span></span><span class="line"><span class="cl">npm install css-tree
+</span></span><span class="line"><span class="cl">npm install cssbeautify
+</span></span><span class="line"><span class="cl">npm install vm2
+</span></span><span class="line"><span class="cl">npm install uglify-es
+</span></span><span class="line"><span class="cl">npm install js-beautify
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>逐条执行以上命令</p>
 <p>接下来反编译</p>
-<p>执行命令</p>
-<p>node wuWxapkg.js 解密后小程序的路径</p>
+<h3 id="执行命令" class="headerLink">
+    <a href="#%e6%89%a7%e8%a1%8c%e5%91%bd%e4%bb%a4" class="header-mark"></a>执行命令</h3><p>node wuWxapkg.js 解密后小程序的路径</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000mk3kg3QwlHC.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000mk3kg3QwlHC.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000mk3kg3QwlHC.jpg">
         
     </a></p>
@@ -152,8 +162,8 @@
         
     </a></p>
 <p>就可以查看小程序的js代码了</p>
-<p>测试</p>
-<p>点击发送验证码的功能</p>
+<h3 id="测试" class="headerLink">
+    <a href="#%e6%b5%8b%e8%af%95" class="header-mark"></a>测试</h3><p>点击发送验证码的功能</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002O509l2lPsjr.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002O509l2lPsjr.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002O509l2lPsjr.jpg">
         
     </a></p>
@@ -183,8 +193,8 @@
         
     </a></p>
 <p>访问/login/sms接口，并且以post方式接收mobile参数</p>
-<p>构造包</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg">
+<h3 id="构造包" class="headerLink">
+    <a href="#%e6%9e%84%e9%80%a0%e5%8c%85" class="header-mark"></a>构造包</h3><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg">
         
     </a></p>
 <p>输入一个不存在的手机号，显示手机号码有误</p>
@@ -212,10 +222,10 @@
 <p>直接下班</p>]]></description>
 </item><item>
     <title>如何在mac上抓小程序的流量</title>
-    <link>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+    <link>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
     <pubDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+    </author><guid>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>

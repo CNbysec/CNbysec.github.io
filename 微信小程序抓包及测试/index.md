@@ -1,4 +1,4 @@
-# 微信小程序抓包及测试
+﻿# 微信小程序抓包及测试
 
 
 <!--more-->
@@ -116,21 +116,26 @@ Burp配置
 
 来到工具目录
 
-安装
+### 安装
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg)
 
 安装依赖
 
-```js
-npm install esprima npm install css-tree npm install cssbeautify npm install vm2 npm install uglify-es npm install js-beautify 逐条执行以上命令
+```bash
+npm install esprima
+npm install css-tree
+npm install cssbeautify
+npm install vm2
+npm install uglify-es
+npm install js-beautify
 ```
 
 逐条执行以上命令
 
 接下来反编译
 
-执行命令
+### 执行命令
 
 node wuWxapkg.js 解密后小程序的路径
 
@@ -166,7 +171,7 @@ node wuWxapkg.js 解密后小程序的路径
 
 就可以查看小程序的js代码了
 
-测试
+### 测试
 
 点击发送验证码的功能
 
@@ -204,7 +209,7 @@ node wuWxapkg.js 解密后小程序的路径
 
 访问/login/sms接口，并且以post方式接收mobile参数
 
-构造包
+### 构造包
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg)
 

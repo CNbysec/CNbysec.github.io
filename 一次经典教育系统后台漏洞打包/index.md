@@ -1,9 +1,9 @@
-# 一次经典教育系统后台漏洞打包
+﻿# 一次经典教育系统后台漏洞打包
 
 
 <!--more-->
 
-> *转载自： [https://forum.butian.net/share/3693](https://forum.butian.net/share/3693)*
+> _转载自： [https://forum.butian.net/share/3693](https://forum.butian.net/share/3693)_
 
 ## 记:一次经典教育系统后台漏洞打包!
 
@@ -121,7 +121,7 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 2.老师权限都试出来了，就想着管理员！！！
 
-##### \*\*!!!\*\*划重点!!!
+##### 划重点
 
 这里,通过遍历发现 40000-55000 都是可以便利的点,管理员这里面并没有出现!
 
@@ -163,7 +163,7 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 #### 测试最基础的 payload
 
-```<script>alert(1)</script>```
+`<script>alert(1)</script>`
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD0000014AWSv17XAoQ.jpg)  
 初步测试只有**专业特长**和**姓名**没有输入限制，（别的只能是纯数字）
@@ -178,9 +178,9 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 绕过一般思路! **一、更改提交方式** 在默认配置下，为了节省资源，许多 WAF 只会对 GET 请求进行过滤拦截，而忽略了对 POST 请求、Cookie、HTTP Header 等其他提交方式的检测。因此，攻击者可以尝试更改有害语句的提交方式，如将 GET 请求修改为 POST 请求，或者通过 Cookie、HTTP Header 等方式提交恶意脚本，以绕过 WAF 的拦截。
 
-**二、混淆伪装绕过** 混淆伪装是一种常见的绕过 WAF 的手段，攻击者通过编码、大小写混淆、双写、转义字符等方式对恶意脚本进行伪装，使其绕过 WAF 的关键词过滤规则。例如，将 JavaScript 代码中的关键字进行大小写混淆（如<scriPT>），或者使用 Unicode 编码、Base64 编码等方式对代码进行编码。
+**二、混淆伪装绕过** 混淆伪装是一种常见的绕过 WAF 的手段，攻击者通过编码、大小写混淆、双写、转义字符等方式对恶意脚本进行伪装，使其绕过 WAF 的关键词过滤规则。例如，将 JavaScript 代码中的关键字进行大小写混淆（如`<scriPT>`），或者使用 Unicode 编码、Base64 编码等方式对代码进行编码。
 
-**三、标签和事件函数变换** XSS 攻击主要是通过触发 HTML 标签中的事件函数来执行恶意脚本。因此，WAF 会重点识别能够触发事件函数的 HTML 标签和事件函数字段。攻击者可以尝试使用其他可以执行 JavaScript 代码的 HTML 标签（如<svg>, <button>, <img>等）替换常用的<script>标签，或者使用其他事件函数（如 onerror, oninput, onmousedown 等）替换常用的 onclick 事件函数，以绕过 WAF 的拦截。
+**三、标签和事件函数变换** XSS 攻击主要是通过触发 HTML 标签中的事件函数来执行恶意脚本。因此，WAF 会重点识别能够触发事件函数的 HTML 标签和事件函数字段。攻击者可以尝试使用其他可以执行 JavaScript 代码的 HTML 标签（如`<svg>, <button>, <img>`等）替换常用的`<script>`标签，或者使用其他事件函数（如 onerror, oninput, onmousedown 等）替换常用的 onclick 事件函数，以绕过 WAF 的拦截。
 
 **四、利用 WAF 的缺陷和配置不当** 「增加 WAF 负担」：有些 WAF 在处理大量数据时可能会降低检测精度或放弃检测部分数据包。攻击者可以通过向 WAF 发送大量正常数据包并夹杂异常数据包的方式，增加 WAF 的负担，从而绕过 WAF 的检测。
 
@@ -199,25 +199,25 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 #### **1.大小写绕过**
 
-```<sCript>alert(1)</Script>```
+`<sCript>alert(1)</Script>`
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD000002lCzrr0iCCT1.jpg)
 
 #### 2、双写绕过(不行)
 
-```<sCri<script>alert(1)</script>SC<script>ripT>```
+`<sCri<script>alert(1)</script>SC<script>ripT>`
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD000003T4vux3I97Ki.jpg)
 
 #### 3.img 标签
 
-```<img src\\=15 onerror\\=(function(){alert(15)})()>```
+`<img src\\=15 onerror\\=(function(){alert(15)})()>`
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD0000019CJYT2MNXdN.jpg)
 
 #### 4、onmouseover 事件
 
-<a onmousemove\\="do something here">\` 当用户鼠标移动时即可运行代码
+`` <a onmousemove\\="do something here">\`  ``当用户鼠标移动时即可运行代码
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg)
 
@@ -235,7 +235,7 @@ intitle:phpinfo()或者 inurl:phpinfo.php
 
 #### 7.利用换行符绕过
 
-```<img/src\\=14 onerror\\=window.alert(14)>```
+`<img/src\\=14 onerror\\=window.alert(14)>`
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD0000026eidt3p4ccn.jpg)
 

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>信息收集 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+        <link>https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
         <description>信息收集 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" rel="self" type="application/rss+xml" /><item>
     <title>一次经典教育系统后台漏洞打包</title>
-    <link>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+    <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
     <pubDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3693" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3693</a></em></p>
 </blockquote>
@@ -93,7 +93,7 @@
 发现和我猜测的一样 ‘5’ 就是教师权限！拿到老师权限同样也是可以直接越权修改老师密码!</p>
 <p>2.老师权限都试出来了，就想着管理员！！！</p>
 <h5 id="划重点" class="headerLink">
-    <a href="#%e5%88%92%e9%87%8d%e7%82%b9" class="header-mark"></a>**!!!**划重点!!!</h5><p>这里,通过遍历发现 40000-55000 都是可以便利的点,管理员这里面并没有出现!</p>
+    <a href="#%e5%88%92%e9%87%8d%e7%82%b9" class="header-mark"></a>划重点</h5><p>这里,通过遍历发现 40000-55000 都是可以便利的点,管理员这里面并没有出现!</p>
 <p>所以说:一般这种系统<strong>管理员权限特殊</strong>会比较特殊，根据小编多年扣脚的经验 ，管理员 id=1，（这一点适用于大多数管理系统），同时权限做出的是数字越小权限越大，这里 powerid=1 放包注意和上面一样</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003zGAYN1ycXwP.jpg">
         
@@ -141,8 +141,8 @@
 <p>不过都到这里了，怎么也要绕一下！</p>
 <h4 id="xss-绕-waf" class="headerLink">
     <a href="#xss-%e7%bb%95-waf" class="header-mark"></a>xss 绕 waf</h4><p>绕过一般思路! <strong>一、更改提交方式</strong> 在默认配置下，为了节省资源，许多 WAF 只会对 GET 请求进行过滤拦截，而忽略了对 POST 请求、Cookie、HTTP Header 等其他提交方式的检测。因此，攻击者可以尝试更改有害语句的提交方式，如将 GET 请求修改为 POST 请求，或者通过 Cookie、HTTP Header 等方式提交恶意脚本，以绕过 WAF 的拦截。</p>
-<p><strong>二、混淆伪装绕过</strong> 混淆伪装是一种常见的绕过 WAF 的手段，攻击者通过编码、大小写混淆、双写、转义字符等方式对恶意脚本进行伪装，使其绕过 WAF 的关键词过滤规则。例如，将 JavaScript 代码中的关键字进行大小写混淆（如<scriPT>），或者使用 Unicode 编码、Base64 编码等方式对代码进行编码。</p>
-<p><strong>三、标签和事件函数变换</strong> XSS 攻击主要是通过触发 HTML 标签中的事件函数来执行恶意脚本。因此，WAF 会重点识别能够触发事件函数的 HTML 标签和事件函数字段。攻击者可以尝试使用其他可以执行 JavaScript 代码的 HTML 标签（如<svg>, <button>, 等）替换常用的<script>标签，或者使用其他事件函数（如 onerror, oninput, onmousedown 等）替换常用的 onclick 事件函数，以绕过 WAF 的拦截。</p>
+<p><strong>二、混淆伪装绕过</strong> 混淆伪装是一种常见的绕过 WAF 的手段，攻击者通过编码、大小写混淆、双写、转义字符等方式对恶意脚本进行伪装，使其绕过 WAF 的关键词过滤规则。例如，将 JavaScript 代码中的关键字进行大小写混淆（如<code>&lt;scriPT&gt;</code>），或者使用 Unicode 编码、Base64 编码等方式对代码进行编码。</p>
+<p><strong>三、标签和事件函数变换</strong> XSS 攻击主要是通过触发 HTML 标签中的事件函数来执行恶意脚本。因此，WAF 会重点识别能够触发事件函数的 HTML 标签和事件函数字段。攻击者可以尝试使用其他可以执行 JavaScript 代码的 HTML 标签（如<code>&lt;svg&gt;, &lt;button&gt;, &lt;img&gt;</code>等）替换常用的<code>&lt;script&gt;</code>标签，或者使用其他事件函数（如 onerror, oninput, onmousedown 等）替换常用的 onclick 事件函数，以绕过 WAF 的拦截。</p>
 <p><strong>四、利用 WAF 的缺陷和配置不当</strong> 「增加 WAF 负担」：有些 WAF 在处理大量数据时可能会降低检测精度或放弃检测部分数据包。攻击者可以通过向 WAF 发送大量正常数据包并夹杂异常数据包的方式，增加 WAF 的负担，从而绕过 WAF 的检测。</p>
 <p>「利用 WAF 配置不当」：WAF 的配置可能存在漏洞或不当之处，如只检测部分参数、忽略某些类型的请求等。攻击者可以通过分析 WAF 的配置规则，构造绕过 WAF 检测的请求。</p>
 <p>「旁站绕过」：在某些情况下，网站管理员可能只对主站进行了 WAF 防护，而忽略了旁站或子域名的防护。攻击者可以尝试通过旁站或子域名绕过 WAF 的防护。</p>
@@ -170,7 +170,7 @@
         
     </a></p>
 <h4 id="4onmouseover-事件" class="headerLink">
-    <a href="#4onmouseover-%e4%ba%8b%e4%bb%b6" class="header-mark"></a>4、onmouseover 事件</h4><p>&lt;a onmousemove\=&ldquo;do something here&rdquo;&gt;` 当用户鼠标移动时即可运行代码</p>
+    <a href="#4onmouseover-%e4%ba%8b%e4%bb%b6" class="header-mark"></a>4、onmouseover 事件</h4><p><code>&lt;a onmousemove\\=&quot;do something here&quot;&gt;\` </code>当用户鼠标移动时即可运行代码</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004BrGdx2wX2Ks.jpg">
         
     </a></p>
@@ -241,10 +241,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>(所有增添账号和上传文件均删除)</p>]]></description>
 </item><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -537,10 +537,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -1506,10 +1506,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>

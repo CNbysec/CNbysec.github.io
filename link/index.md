@@ -1,9 +1,9 @@
-# 友链
+﻿# 友链
 
 
-{{< friend "缥缈博客" "https://blog.btstu.cn/" "https://q.qlogo.cn/headimg_dl?dst_uin=1807139605&spec=100" "缥缈个人博客" >}}
+{{< friend "缥缈博客" "https://blog.btstu.cn/" "https://q.qlogo.cn/headimg_dl?dst_uin=1807139605&spec=640" "缥缈个人博客" >}}
 
-{{< friend "远海的博客" "https://websecuritys.cn/" "https://q.qlogo.cn/headimg_dl?dst_uin=20441594&spec=100" "远海的博客" >}}
+{{< friend "远海的博客" "https://websecuritys.cn/" "https://q.qlogo.cn/headimg_dl?dst_uin=20441594&spec=640" "远海的博客" >}}
 
 {{< friend "独自等待博客" "https://www.waitalone.cn/" "https://s2.ax1x.com/2019/11/22/M7UdCd.jpg" "关注信息安全" >}}
 
@@ -29,7 +29,7 @@
 ```Code
 网站名称：bysec
 网站链接：https://www.bysec.cn/
-网站头像：https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&spec=100
+网站头像：https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&spec=640
 网站描述：bysec信息安全个人博客
 ```
 

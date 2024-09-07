@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>病毒分析 on </title>
-    <link>/tags/%E7%97%85%E6%AF%92%E5%88%86%E6%9E%90/</link>
+    <link>//localhost:1313/tags/%E7%97%85%E6%AF%92%E5%88%86%E6%9E%90/</link>
     <description>Recent content in 病毒分析 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 02 Sep 2024 19:12:35 +0800</lastBuildDate>
-    <atom:link href="/tags/%E7%97%85%E6%AF%92%E5%88%86%E6%9E%90/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/%E7%97%85%E6%AF%92%E5%88%86%E6%9E%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>免杀大佬加入黑灰产还打得过吗</title>
-      <link>/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</link>
+      <link>//localhost:1313/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</link>
       <pubDate>Mon, 02 Sep 2024 19:12:35 +0800</pubDate>
-      <guid>/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</guid>
+      <guid>//localhost:1313/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</guid>
       <description>转载自： https://forum.butian.net/share/3705&#xA;一、前言 大家好，我是来自顺丰安全成文实验室的一名老兵，代号“PX0”，我的任务是追踪威胁情报，深入分析最新黑灰产动向。近期，实验室捕获到一组“银狐”样本，经查，样本来源于伪装成主流会议软件的网站，网站通过提高搜索引擎的收录权重来诱骗用户下载该病毒软件。&#xA;此前我也曾分析过“银狐”相关样本，但这回的新版本，免杀技术简直出神入化，主流的安全软件几乎拿它没辙。这让我心里直犯嘀咕：“难道真的有免杀界的高手‘叛变’，跑去给黑灰产当军师了？”不过别担心，接下来，就让我来带大家揭秘这位高手的免杀大招，再教大家几个怎么识别和防住它的高招！&#xA;二、本文关注点 此银狐分支样本在出现阶段，主流沙箱、EDR 几乎无法检测，本文主要分享新增部分功能 攻击者更加注重杀软和防御能力对抗，引入了 bypass 检测、防病毒模拟器检测、RPC 构建持久化 样本的进化更倾向于多段的内存加载、运行时动态解密，后续可能会出现 rootkit 类型的完全隐蔽后门 根据样本的函数代码通用特征提取检测规则、检测思路分享 三、正文分析 1、加载过程 在近期捕获的一批样本中，初始投递的加载器代码几乎一致，攻击者通过最少的 API 调用完成第一阶段的 shellcode 加载 (对通用杀毒软件来说，敏感 API 调用越少，风险相对越小)；&#xA;shellcode 加载完成后，通过内联 jmp rbx 跳转 0x1B0000 执行，这里其实是有一步 mov 的地址转移操作，作用是避免出现 jmp rax 的明显内存调用特征，在 8 月迭代样本也出现了其他的寄存器调用；&#xA;2、解密过程 进入 shellcode 内部，实际只有 call 一个有效指令，后续的所有字节都是加密状态；这类似 cobaltstrike 睡眠解密，此类函数适合作为检测特征，区别是此函数需在程序启动时检测；&#xA;解密函数即运行时的内部计算，进行了一系列循环右移、减法和取反操作，用于动态解密后续指令；&#xA;经对比可以看出，右侧部分指令被解密，被解密出来的部分实际是一个新的异或解密函数；&#xA;经过长期跟踪发现，此函数出现在银狐多个版本，为了更清楚地了解功能和检测，我们代码还原这个函数；&#xA;1 unsigned char key = 0x91; 从内存可以看到整个倒序解密的过程，运行完成后，整块 shellcode 代码被解密完成；&#xA;3、环境检测、绕过 解密完成后首先进入 sub_99A5 函数，此函数集成一些 bypass 和环境检测能力，是对比以往样本的增强部分；&#xA;首先是 bypass ETW 和 AMSI，实现方式完全相同；都是通过 patch 到对应函数开头一个 0x3C 字节即 ret 指令，完成扫描、日志输出的代码跳过；</description>
     </item>
   </channel>

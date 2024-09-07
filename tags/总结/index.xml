@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>总结 on </title>
-    <link>/tags/%E6%80%BB%E7%BB%93/</link>
+    <link>//localhost:1313/tags/%E6%80%BB%E7%BB%93/</link>
     <description>Recent content in 总结 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 20 May 2024 17:55:46 +0800</lastBuildDate>
-    <atom:link href="/tags/%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>验证码渗透最全总结</title>
-      <link>/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+      <link>//localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
       <pubDate>Mon, 20 May 2024 17:55:46 +0800</pubDate>
-      <guid>/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+      <guid>//localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
       <description>转载自： https://forum.butian.net/share/2602&#xA;验证码渗透最全总结 不少人在碰见验证码的时候，大多数只是看了一眼就过去了，没想到验证码还有啥可测试的。但其实验证码也能在项目中导致高危,并且验证码漏洞能在一定情况下造成危害。&#xA;验证码总结 验证码分为两块内容，一块是图形验证码，一块是短信验证码。下面是对这些技巧总结的思维导图。&#xA;图形验证码 图形验证码长宽可控 简单测试方法，就是看到一个登录框，然后新建打开图片链接，在图片链接中就有机会看到两个参数值，一个是 width，一个是 length。这两个参数是计算图片验证码的长宽，如果长宽过高就会过度消耗的是服务器的 CPU 资源。&#xA;当length为比较大的时候，响应时间为2767millis&#xA;注意：该漏洞能造成服务器拒绝服务攻击。有的 SRC 里面注明了，禁止使用 DDOS 攻击，这种漏洞是不收的，如果提交了漏洞，很有可能面临法律责任。&#xA;图形验证码可绕过 有时候开发，会写两套图形验证码流程，一套是在生产运行阶段必须使用正确验证码才能通过服务器校验。另外一套是在测试 SIT 环境下，把验证码设置为只要是 null 或者是空都可以登录验证码置为空，提高开发工作效率。还有的时候，将验证码修改为 true 就好了。这个是因为开发在进行图形验证码判断的时候，只要是验证码收到的是 true 就会通过。具体测试过程已经找不到了，大概写一下吧。&#xA;图形验证码不失效 简单易懂，图形验证码没有对应的失效机制。导致图形验证码能被多次利用。图形验证码在使用后未失效，发送短信时抓包，发送到Repeter中进行重放，可以发送成功!&#xA;图形验证码可识别 这个就是开发在制作图形验证码功能的时候，没有将图形验证码加入足够多的噪点，使验证码能够被现有的工具进行识别。一般是项目硬凑数用的，SRC 全部都不收。具体不做解释&#xA;图形验证码随机值可控 都知道图形验证码是后端随机生成的。那么随机生成的时候，有没有可能是能控制这个随机值？有可能! 生成验证码的随机值被写在了 url 里面&#xA;将characters固定为aaaa，可以看到图形验证码为aaaa&#xA;图形验证码返回到前端 测试过程已经找不到了，口头描述下大致就是登录后会在响应包中返回了下次图形验证码的内容。&#xA;短信验证码 我们已经写完了图形验证码部分，现实情况下短信验证码也是比较多。短信验证码的漏洞技巧要比图形验证码多很多&#xA;短信炸弹纵向 在一个限制时间的情况下对一个手机号，发送的短信验证码条数超过发送预期，这种漏洞我们都称为短信炸弹or短信轰炸or短信炸弹纵向&#xA;不停点击repeter或者放到intruder里面，就可以实现一个手机号接收到多条短信&#xA;短信炸弹横向 上面我们提到了在限定时间内，对一个手机号发送超过预期的短信条数是短信轰炸。造成的结果就是浪费短信资源。如果开发把这个漏洞给改了，那么还有没有漏洞？还有？不能给一个人发送短信验证了，那么给其他人发送验证码一样的。&#xA;将phone设置成变量，进行遍历&#xA;短信验证码可爆破 我们讲了 2 个发送短信验证码，都知道验证码通常 4 位数或者 6 位数的数字验证码。如果服务器没有限制提交的验证码的次数，那么我们可以爆破这个验证码。并且如果有 4 位验证码被爆破成功的话，在 SRC 里面通常是按照高危处理。&#xA;短信验证码可编辑 我们讲了发送短信验证码以及爆破短信验证码。我们知道短信验证码功能发送的是短信，那么我们就有可能把短信内容给更改。&#xA;通过修改transAmt 参数内容，可随意修改短信内容&#xA;短信炸弹的绕过技巧 我们在了解基础短信验证码的漏洞后，相应的开发也会进行了解。那么我们就需要增加技巧来绕过这些东西。&#xA;短信炸弹的绕过技巧 1&amp;ndash;特殊字符 通常，开发在发送短信验证码的时候，没有对特殊字符进行过滤。比如在手机号是 15312341234。我们加上+86，变成+8615312341234，这样的话服务器就有可能判定为两个手机号了。</description>
     </item>
     <item>
       <title>万字总结信息收集全网最全</title>
-      <link>/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+      <link>//localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
       <pubDate>Fri, 26 Apr 2024 18:19:39 +0800</pubDate>
-      <guid>/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+      <guid>//localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
       <description>转载自： https://forum.butian.net/share/2841&#xA;万字吐血总结信息收集&#xA;一、信息收集前言&#xA;二、域名信息&#xA;1、Whois查询&#xA;1.1、站长之家&#xA;1.2、爱站&#xA;1.3、微步&#xA;1.4、国外的who.is&#xA;1.5、阿里云域名信息查询&#xA;1.6、腾讯查询&#xA;1.7、中国互联网信息中心&#xA;2、ICP(Internet Content Provider)备案查询&#xA;2.1、国家企业信用信息公示系统&#xA;2.2、ICP备案查询网&#xA;2.3、ICP备案查询 - 站长工具&#xA;2.4、天眼查&#xA;2.5、企查查&#xA;3、SEO(Search Engine Optimization)查询&#xA;3.1、爱站-SEO综合查询&#xA;3.2、站长-SEO综合查询&#xA;4、历史漏洞&#xA;4.1、乌云漏洞库&#xA;5、Google Hacking&#xA;5.1、intext:后台管理&#xA;5.2、intitle：管理登录&#xA;5.3、filetype:pdf&#xA;5.4、inurl: php?id=&#xA;5.5、site：baidu.com&#xA;5.6、filetype：pdf site:baidu.com&#xA;6、Github&#xA;7、维基和百度百科&#xA;8、网络空间搜索引擎&#xA;8.1、Fofa&#xA;8.2、Shodan&#xA;8.3、Zoomeye(钟馗之眼)&#xA;8.4、Spyse&#xA;8.5、Censys&#xA;9、REG007&#xA;二、APP、小程序、公众号信息收集&#xA;1、APP信息搜集&#xA;1.1、七麦数据&#xA;1.2、AppStore(安卓和IOS)&#xA;2、微信公众号和小程序&#xA;4、logo&#xA;5、favicon.ico&#xA;三、子域名收集(挖掘)&#xA;1、SSL(HTTPS)证书&#xA;1.1、大厂商SSL证书一证多用&#xA;1.2、HTTPS证书错误泄露域名&#xA;1.3、在线网站证书查询&#xA;2、网络深度爬虫&#xA;3、域传送漏洞&#xA;3.1、常用DNS记录&#xA;3.2、DNS区域传送&#xA;3.3、域传送漏洞&#xA;3.4、检测&#xA;4、在线DNS数据&#xA;4.1、VirusTotal</description>
     </item>
     <item>
       <title>任意用户登录漏洞挖掘思路</title>
-      <link>/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+      <link>//localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
       <pubDate>Sat, 20 Jan 2024 18:17:14 +0800</pubDate>
-      <guid>/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+      <guid>//localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
       <description>转载自： https://forum.butian.net/share/2553&#xA;任意用户登录漏洞挖掘思路 前言 任意用户登录漏洞以利用漏洞利用难度低、危害高、奖金高已经成为src/众测漏洞挖掘中的香饽饽，本文将分享一下众测/src中任意用户登录漏洞的挖掘思路。&#xA;1.手机验证码问题导致的任意用户登录 1.1 验证码爆破 当登录流程使用手机验证码登录，没有图片验证码/图片验证码可重用/图片验证码简单可识别（可以使用captcha-killer-modified插件）且后端没有限制手机验证码验证错误次数时，可以尝试爆破手机验证码登录其他用户。&#xA;4位验证码的爆破老生常谈不再赘述；随着厂商们服务器性能的提高，服务器的rps的上升也使得6位验证码的爆破越来越快，可以使用如下方法爆破（！！！需留意服务器的rps以及测试厂商的注意事项，rps低的老系统或者厂商禁止批量爆破的项目谨慎使用6位验证码的爆破！！！）：&#xA;使用burpsuite的Turbo Intruder插件，编写如下脚本：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 import re def queueRequests(target, wordlists): engine = RequestEngine(endpoint=target.endpoint, concurrentConnections=30, requestsPerConnection=30, pipeline=True ) for i in range(1000000): #生成六位验证码字典 number = &amp;#34;{:06d}&amp;#34;.format(i) engine.queue(target.req, number.rstrip()) def handleResponse(req, interesting): # currently available attributes are req.status, req.wordcount, req.length and req.response if req.status &amp;lt;404: &amp;#39;&amp;#39;&amp;#39;res = re.</description>
     </item>
   </channel>

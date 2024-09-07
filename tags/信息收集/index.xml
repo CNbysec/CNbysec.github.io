@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>信息收集 on </title>
-    <link>//localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+    <link>/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
     <description>Recent content in 信息收集 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 02 Sep 2024 18:34:17 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一次经典教育系统后台漏洞打包</title>
-      <link>//localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+      <link>/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
       <pubDate>Mon, 02 Sep 2024 18:34:17 +0800</pubDate>
-      <guid>//localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+      <guid>/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
       <description>转载自： https://forum.butian.net/share/3693&#xA;记:一次经典教育系统后台漏洞打包! 前言: 小编认为像什么什么大学比较显眼的 &amp;ldquo;统一认证登录&amp;rdquo;||&amp;ldquo;学生综合管理&amp;rdquo;,基本上弱口令是不太行,别的漏洞的话好多也都被大佬们打完了或者利用上不太容易(菜鸟的内心崩塌)，对于自己渗透能力的有限，信息收集就尤为重要! 既然主站打不了，就打旁站吧！（基本的方式都是通用的） 这里先分享一下小编自用的谷歌语法：谷歌语法基础的符号： “xxx”: 将要搜索的关键字用引号括起来 (表示完全匹配，即关键词不能分开，顺序也不能变)&#xA;例如：腾讯课堂如果不加“ ”的话，就会针对腾讯和课堂进行拆分，既对腾讯进行搜索也对课堂进行搜索，所以加上“ ”的话就会对腾讯课堂进行绑定，只对腾讯课堂进行搜索&#xA;+：“xxx” +baidu.com&#xA;搜索 xxx 与 baidu.com 相关的内容&#xA;例如：腾讯课堂 +ke.qq.com，那么这里就会显示 ke.qq.com 相关的内容&#xA;-：“xxx” -baidu.com&#xA;搜索结果里面除去 baidu.com 相关的内容&#xA;例如：腾讯课堂 -ke.qq.com，这里再搜索的时候，就会把这个网址屏蔽掉&#xA;谷歌语法的基础使用 在渗透测试的过程中，运用谷歌语法能快速地帮我们找到可能存在漏洞的页面&#xA;谷歌语法常用搜索参数： site： 指定域名，如：site:edu.cn 搜索教育网站&#xA;inurl： 用于搜索包含的 url 关键词的网页，如：inurl:uploads 文件上传，搜索关于公司有关的网址中含有 login 的网页，&#xA;intitle： 搜索网页标题中的关键字，如：&#xA;intitle:“index of /admin” robots.txt&#xA;intitle:“robots.txt”&#xA;intext： 搜索网页正文中的关键字，如：intext:登陆/注册/用户名/密码&#xA;filetype： 按指定文件类型即文件后缀名搜索，如：filetpye:php/asp/jsp&#xA;cache： 已经删除的缓存网页，推荐组合使用&#xA;谷歌语法拓展 查找后台 site:xx.com intext:管理|后台|登陆|用户名|密码|系统|帐号|admin|login|sys|managetem|password|username&#xA;site:xx.com inurl:login|admin|manage|member|admin_login|login_admin|system|login|user&#xA;查找 sql 注入漏洞 inurl:.php?id=23 公司</description>
     </item>
     <item>
       <title>教育行业渗透打点</title>
-      <link>//localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+      <link>/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
       <pubDate>Sun, 28 Jul 2024 18:23:14 +0800</pubDate>
-      <guid>//localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+      <guid>/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
       <description>转载自： https://forum.butian.net/share/2423&#xA;1、OA系统密码找回 找回密码 系统使用说明文档中发现登录账号 600030 密码找回，找回方式选择密保问题 问题选择出生地，密保问题答案填写高校所在地 即可修改密码 修改密码，即可以图文信息&amp;hellip;&#xA;1、OA系统密码找回 找回密码 系统使用说明文档中发现登录账号 600030&#xA;密码找回，找回方式选择密保问题&#xA;问题选择出生地，密保问题答案填写高校所在地&#xA;即可修改密码&#xA;修改密码，即可以图文信息中心的身份登录OA系统&#xA;在文件中找到1400多名学生的敏感信息文件，其中存在手机号、身份证号、学号，可以组合密码本进行统一身份认证系统的爆破登录，默认密码为身份证后六位&#xA;成功登录一部分账号&#xA;登录VPN 进行内网扫描，利用MS17010拿下C段多台主机权限&#xA;钓鱼 利用OA系统的通讯功能，散播木马&#xA;获取多台机器权限&#xA;2、逻辑漏洞修改密码 GitHub密码泄漏 GitHub泄漏学号密码&#xA;但账号已被禁用&#xA;获取学号手机号 存在注册功能的网站注册用户，然后登录&#xA;通过以下接口获得用户ID /User/GetUserListByKeyWord&#xA;可以通过以下接口遍历用户ID，获取任意用户的姓名 手机号 邮箱等敏感信息&#xA;/User/Tip?time61&amp;amp;id=caec35e7-9956-4f68-98bc-e2aee73ebda5&amp;amp;_=1664438691592&#xA;获取多组学号、姓名、手机号&#xA;修改密码 点击同意门户的忘记密码功能，输入上面得到的学号&#xA;输入手机号，点击获取验证码并抓包&#xA;记录回包内容&#xA;1 &amp;#34;datas&amp;#34;:&amp;#34;{\&amp;#34;sign\&amp;#34;:\&amp;#34;407ec6dc275f4766a4525e059a60ca16\&amp;#34;}&amp;#34;,&amp;#34;code&amp;#34;:&amp;#34;0&amp;#34;,&amp;#34;message&amp;#34;:&amp;#34;获取成功&amp;#34; 随意输入验证码，点击下一步，并把上面的流量包直接返回&#xA;可以看到页面跳转到了设置密码&#xA;成功更改密码&#xA;79个应用，通过其中一个aspx站SQL注入拿到shell&#xA;3、Github泄漏账号密码 账号密码 1、GitHub搜索&amp;quot;学校域名&amp;quot; &amp;ldquo;password&amp;rdquo; 发现邮箱账号密码&#xA;2、登录邮箱发现手机号身份证号&#xA;统一门户 3、手机号加邮箱密码直接登录统一门户&#xA;泛微OA 跳转到泛微OA,文件上传GetShell&#xA;4、向日葵密码读取 heapdump文件泄漏 直接下载heapdump文件&#xA;读取到mssql账号密码&#xA;向日葵密码读取 成功连接mssql服务器，执行xp_cmdshell&#xA;C:\Program Files\Oray\SunLogin\SunloginClient\config.ini为向日葵的默认安装配置文件，直接尝试读取&#xA;fastcode将第一位字母去除就为本机识别码，encry_pwd为加密后的本机验证码&#xA;可以使用GitHub解密项目https://github.com/wafinfo/Sunflower_get_Password进行解密。&#xA;解密后成功连接目标主机服务器</description>
     </item>
     <item>
       <title>万字总结信息收集全网最全</title>
-      <link>//localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+      <link>/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
       <pubDate>Fri, 26 Apr 2024 18:19:39 +0800</pubDate>
-      <guid>//localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+      <guid>/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
       <description>转载自： https://forum.butian.net/share/2841&#xA;万字吐血总结信息收集&#xA;一、信息收集前言&#xA;二、域名信息&#xA;1、Whois查询&#xA;1.1、站长之家&#xA;1.2、爱站&#xA;1.3、微步&#xA;1.4、国外的who.is&#xA;1.5、阿里云域名信息查询&#xA;1.6、腾讯查询&#xA;1.7、中国互联网信息中心&#xA;2、ICP(Internet Content Provider)备案查询&#xA;2.1、国家企业信用信息公示系统&#xA;2.2、ICP备案查询网&#xA;2.3、ICP备案查询 - 站长工具&#xA;2.4、天眼查&#xA;2.5、企查查&#xA;3、SEO(Search Engine Optimization)查询&#xA;3.1、爱站-SEO综合查询&#xA;3.2、站长-SEO综合查询&#xA;4、历史漏洞&#xA;4.1、乌云漏洞库&#xA;5、Google Hacking&#xA;5.1、intext:后台管理&#xA;5.2、intitle：管理登录&#xA;5.3、filetype:pdf&#xA;5.4、inurl: php?id=&#xA;5.5、site：baidu.com&#xA;5.6、filetype：pdf site:baidu.com&#xA;6、Github&#xA;7、维基和百度百科&#xA;8、网络空间搜索引擎&#xA;8.1、Fofa&#xA;8.2、Shodan&#xA;8.3、Zoomeye(钟馗之眼)&#xA;8.4、Spyse&#xA;8.5、Censys&#xA;9、REG007&#xA;二、APP、小程序、公众号信息收集&#xA;1、APP信息搜集&#xA;1.1、七麦数据&#xA;1.2、AppStore(安卓和IOS)&#xA;2、微信公众号和小程序&#xA;4、logo&#xA;5、favicon.ico&#xA;三、子域名收集(挖掘)&#xA;1、SSL(HTTPS)证书&#xA;1.1、大厂商SSL证书一证多用&#xA;1.2、HTTPS证书错误泄露域名&#xA;1.3、在线网站证书查询&#xA;2、网络深度爬虫&#xA;3、域传送漏洞&#xA;3.1、常用DNS记录&#xA;3.2、DNS区域传送&#xA;3.3、域传送漏洞&#xA;3.4、检测&#xA;4、在线DNS数据&#xA;4.1、VirusTotal</description>
     </item>
     <item>
       <title>攻防实战外网突破</title>
-      <link>//localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+      <link>/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
       <pubDate>Sun, 11 Feb 2024 18:24:29 +0800</pubDate>
-      <guid>//localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+      <guid>/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
       <description>转载自： https://forum.butian.net/share/2442&#xA;在经历了多年的攻防对抗之后，大量目标单位逐渐认识到安全防护的重要性。因此，他们已采取措施尽可能收敛资产暴露面，并加倍部署各种安全设备。但安全防护注重全面性，具有明显的短板&amp;hellip;&#xA;1、供应链 在经历了多年的攻防对抗之后，大量目标单位逐渐认识到安全防护的重要性。因此，他们已采取措施尽可能收敛资产暴露面，并加倍部署各种安全设备。但安全防护注重全面性，具有明显的短板效应，一处出现短板，整个防护体系就可能瞬间崩溃。而目标单位的供应链往往是这些薄弱点的集中体现。这些供应链不仅暴露在外，而且由于复杂的关系，使得对它们的监控和管理变得更为困难。因此，攻击团队通常会选择从供应链着手，以一种迂回的方式绕过目标单位强大的防御体系，获得对目标单位的控制权限。&#xA;通过在搜索引擎上搜索&amp;quot;系统名称&amp;quot;目标单位&#xA;找到相关的供应商信息，通过对供应商进行攻击，获取目标单位的数据及权限。!&#xA;1.1、heapdump泄露 通过对供应商资产进行渗透，发现某资产admin目录下存在heapdump文件泄露&#xA;对于heapdump的利用方式这里就不太赘述，有许多文章对其原理和利用都进行了深入的研究，特定情况下还可以直接进行RCE，这里泄露了大量敏感信息，密码信息加入密码本&#xA;登录MinIO，发现大量所属目标单位的敏感信息，也存在其它单位的敏感信息&#xA;登录Nacos，大量配置文件，密码信息加入密码本![]&#xA;登录OSS，发现大量所属目标单位的敏感信息&#xA;1.2、微信小程序接口未授权 1.2.1、微信小程序解包 想要对微信小程序进行解包操作，首先是要获取目标小程序的wxapkg文件。wxapkg文件是微信小程序的安装包文件格式，用于将小程序的代码、资源以及其他必要的文件打包成一个单独的文件。但是Windows环境下的wxapkg文件中的js代码和资源文件一般是被加密的，需要使用专门设计的解密工具先进行解密，再进行解包操作，获取文件内容。iOS和Android平台下可直接进行解包操作。&#xA;1.2.1.1、获取wxapkg文件 在获取wxapkg文件时，最好将文件夹中的文件先删除，然后再重新打开小程序，防止其它文件干扰&#xA;iOS wxapkg 文件存放路径为：&#xA;1 /var/mobile/Containers/Data/Application/{系统UUID}/Library/WechatPrivate/{user哈希值}/WeApp/LocalCache/release/{小程序的AppID} Android wxapkg 文件存放路径为：&#xA;1 /data/data/com.tencent.mm/MicroMsg/{user哈希值}/appbrand/pkg/ Windows wxapkg 文件存放路径为：&#xA;1 C:\Users\{系统用户名}\Documents\WeChat Files\Applet\{小程序的AppID}\ 1.2.1.2、解密操作 下面两个github项目都可以进行解密操作&#xA;https://github.com/superdashu/pc_wxapkg_decrypt_python&#xA;https://github.com/BlackTrace/pc_wxapkg_decrypt&#xA;解密原理&#xA;成功解密&#xA;1.2.1.2、解包操作 国光大佬提供的工具下载链接&#xA;https://sqlsec.lanzoub.com/i1NEP0mx694f&#xA;1 node wuWxapkg.js 1.wxapkg 对小程序进行解包操作，获取到前端JS代码后中，从中进行提取获得接口&#xA;直接访问目标接口，前端页面虽然显示初始化失败&#xA;但流量包中已获取数据，近千万条目标单位敏感信息&#xA;1.3、web程序越权 通过上述收集到的密码，撞密码撞出一个账号，但是此账号为最低权限，无任何操作权限，点击搜索组织架构，此时无任何返回信息&#xA;抓包将parentId和orgLevel去除，再发包，即可越权看到全员组织架构&#xA;点击修改密码，然后将上述获取到的roleId添加进去，即可获取全部权限&#xA;获取到大量数据&#xA;1.4、公众号 js泄露密码，密码可撞库目标单位公众号&#xA;2、云原生安全 容器化部署和微服务架构为应用程序开发和部署提供了更好的灵活性、可伸缩性、可维护性和性能，受到了越来越多厂商的使用，新的应用就会引入新的攻击面，如容器逃逸、服务间攻击、API滥用等。攻击者可以利用这些新的入口点来攻击应用程序和数据。并且在云原生环境下管理用户和服务的身份验证和授权变得更加复杂。许多应用开发商在追求容器化和云原生架构的便利性和效率时，安全性常常被忽视或放在次要位置。这就直接导致了云原生环境的脆弱，容易受到各种安全威胁和攻击。&#xA;2.1、Harbor 镜像仓库 Harbor是一个开源的容器镜像仓库管理器，旨在帮助组织存储、管理和分发Docker容器镜像，但是Harbor存在一个充满争议的“漏洞”：任意用户能够直接获取public的镜像。&#xA;可以直接拉取下载镜像文件，可以利用脚本批量下载&#xA;2.2、疑似后门 通过镜像文件获取jar包，获取配置文件等敏感信息，对jar包的class文件进行反编译，进行代码审计获取到一个类似后门的漏洞，该接口只需要使用用户名，即可登录系统后台。管理员权限配合文件上传获取服务器权限。&#xA;通过配置文件连接数据库等&#xA;2.3、docker未授权 2.3.1、 registry api未授权访问 在 Docker Registry API 中，认证和授权通常是基于访问令牌（Access Token）或者用户名和密码的。如果未正确设置访问控制权限，即会造成未授权访问漏洞，攻击者可直接下载registry仓库的所有镜像容器。</description>
     </item>
   </channel>

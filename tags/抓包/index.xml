@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>抓包 on </title>
-    <link>//localhost:1313/tags/%E6%8A%93%E5%8C%85/</link>
+    <link>/tags/%E6%8A%93%E5%8C%85/</link>
     <description>Recent content in 抓包 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 14 Jun 2024 18:24:56 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/%E6%8A%93%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/%E6%8A%93%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>微信小程序抓包及测试</title>
-      <link>//localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
+      <link>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Fri, 14 Jun 2024 18:24:56 +0800</pubDate>
-      <guid>//localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
+      <guid>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
       <description>转载自： https://forum.butian.net/share/2477&#xA;网上大多数的小程序测试抓包都是用的安卓模拟器，这里使用的是BurpSuite+Proxifer+微信客户端的抓包方式&#xA;环境准备 Burp2023.9.2&#xA;Proxifier4.5&#xA;安装就无脑next就好了，安装好后打开&#xA;点击注册，名字随便写，随便复制一个注册码点击ok即可&#xA;Proxifier配置&#xA;打开proxifier，点击profile添加一个代理服务器&#xA;地址127.0.0.1，端口自定义，我这里是8888，协议选择https&#xA;继续添加一条代理规则&#xA;在我们用微信打开小程序时，进程里会多出一个WeChatAppEx&#xA;这个程序就是微信小程序的进程&#xA;添加规则&#xA;Applications就选择小程序进程应用（这里可以手动输入），Action就选择刚刚新建的代理服务器&#xA;Burp配置&#xA;只要编辑代理监听器和proxifier里的代理服务器一样即可，监听127.0.0.1:8888&#xA;这时微信打开一个小程序，可以看到WeChatAppEx的流量先经过proxifier，再用过127.0.0.1:8888到burp&#xA;现在就可以像平时测试web站点一样的方式在burp里对数据包进行测试&#xA;小程序反编译 在微信的设置里面可以找到微信文件保存的位置&#xA;目录下的Applet就是小程序缓存文件的保存地址&#xA;平时使用的小程序越多，对应的文件也就越多，如果找不到自己想要测试的小程序包，可以根据修改日期来找，或者直接简单粗暴，删除所有的缓存文件，再重新打开你想要测试的小程序&#xA;这时里面的就是我们要测试小程序对应的缓存文件夹&#xA;点开里面就是我们要解的包&#xA;这是一个加密的包，当用户在微信中搜索或扫描小程序二维码后，微信后台会将该小程序的相关信息打包成 .wxapkg 文件并下发到用户的设备中，这种文件格式实际上是一个压缩包，其中包含了小程序的所有代码、资源和配置文件等内容，以及一个特定的描述文件 app.json。&#xA;由于是加密的包，所以先来解密，下面是大佬的解密工具链接&#xA;链接：https://pan.baidu.com/s/1BzfvBVwD4vLpakX9PAyrsg?pwd=qz3z&#xA;提取码：qz3z&#xA;选中加密的包&#xA;解密成功后在工具目录的wxpack目录下&#xA;接下来进行反编译&#xA;首先安装nodejs，下载链接https://nodejs.org/zh-cn/download/ ，安装就一直下一步就好了，安装好之后添加环境变量&#xA;加好环境变量后cmd输入命令会得到回显&#xA;接下来使用反编译工具wxappUnpacker&#xA;原链接https://github.com/system-cpu/wxappUnpacker&#xA;网盘链接：https://pan.baidu.com/s/19O2KDqWn2Zyars8AREJ1LQ?pwd=22qj&#xA;提取码：22qj&#xA;来到工具目录&#xA;安装 安装依赖&#xA;1 2 3 4 5 6 npm install esprima npm install css-tree npm install cssbeautify npm install vm2 npm install uglify-es npm install js-beautify 逐条执行以上命令</description>
     </item>
     <item>
       <title>如何在mac上抓小程序的流量</title>
-      <link>//localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+      <link>/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
       <pubDate>Sat, 22 Oct 2022 11:24:28 +0800</pubDate>
-      <guid>//localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+      <guid>/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
       <description> 转载自： https://xz.aliyun.com/t/8501&#xA;如何在mac上抓小程序的流量 通过Proxifier工具代理微信小程序流量到Burp&#xA;安装Burpsuite证书到macOS系统中 安装proxifier并添加Proxifier规则 Your name or company name:&#xA;macwk.com&#xA;Your registration key:&#xA;2DNRX-V3PNK-TEGYN-DR01D-9UGGT&#xA;1 brew install --cask proxifier 添加代理和配置代理规则 微信小程序路径 : /Applications/WeChat.app/Contents/MacOS/Mini Program.app&#xA;⚠️ 先启动Proxifier，再启动Burpsuite，最后打开微信小程序,(最好关掉其他代理)&#xA;抓包成功 存在其他代理(如clashX)时，Proxifier设置方法 </description>
     </item>
   </channel>

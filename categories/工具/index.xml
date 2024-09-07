@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on </title>
-    <link>//localhost:1313/categories/%E5%B7%A5%E5%85%B7/</link>
+    <link>/categories/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 03 Dec 2023 13:43:37 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>工具集</title>
-      <link>//localhost:1313/%E5%B7%A5%E5%85%B7/</link>
+      <link>/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Wed, 01 Jan 2020 12:18:39 +0800</pubDate>
-      <guid>//localhost:1313/%E5%B7%A5%E5%85%B7/</guid>
+      <guid>/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     <item>
       <title>BurpSuite安装</title>
-      <link>//localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</link>
+      <link>/burpsuite%E5%AE%89%E8%A3%85/</link>
       <pubDate>Sun, 03 Dec 2023 13:43:37 +0800</pubDate>
-      <guid>//localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</guid>
+      <guid>/burpsuite%E5%AE%89%E8%A3%85/</guid>
       <description>下载 BurpSuite 注册启动汉化 安装 安装完成后先启动一次 BurpSuite 然后关闭，否则会报错损坏 在应用程序中找到 BurpSuite 右键 &amp;gt; 显示包内容 依次打开文件夹 &amp;gt; Contents/Resources/app，把启动器放入其中 返回到Contents目录，编辑 vmoptions.txt，末尾追加内容 配置 1 2 3 4 5 6 --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.Opcodes=ALL-UNNAMED -javaagent:burpsuitloader-all.jar -noverify </description>
     </item>
   </channel>

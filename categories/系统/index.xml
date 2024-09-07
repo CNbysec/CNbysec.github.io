@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>系统 on </title>
-    <link>//localhost:1313/categories/%E7%B3%BB%E7%BB%9F/</link>
+    <link>/categories/%E7%B3%BB%E7%BB%9F/</link>
     <description>Recent content in 系统 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 21 Mar 2021 08:16:48 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>kali修改为国内源</title>
-      <link>//localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <link>/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
       <pubDate>Sun, 21 Mar 2021 08:16:48 +0800</pubDate>
-      <guid>//localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <guid>/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
       <description>打开配置文件 1 vim /etc/apt/sources.list kali源 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #中科大 deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib #阿里云 deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib #清华大学 deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free #浙大 deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free deb-src http://mirrors.</description>
     </item>
   </channel>

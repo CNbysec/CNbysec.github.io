@@ -1,75 +1,114 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noodp" />
-    <title>支付类漏洞挖掘技巧总结 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="支付类漏洞挖掘技巧总结" />
+    <meta name="robots" content="noodp" /><title>支付类漏洞挖掘技巧总结 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:title" content="支付类漏洞挖掘技巧总结" />
 <meta property="og:description" content="转载自： https://forum.butian.net/share/2778 前言：支付类逻辑漏洞在漏洞挖掘中是常常出现的问题之一。此类漏洞挖掘思路多，奖励高，是炙手可热的漏洞。此篇文章主要围绕挖掘支付逻辑漏" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" /><meta property="og:image" content="http://localhost:1313/logo.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" /><meta property="og:image" content="https://www.bysec.cn/logo.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-03-22T18:22:32+08:00" />
 <meta property="article:modified_time" content="2024-03-22T18:22:32+08:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/logo.png" /><meta name="twitter:title" content="支付类漏洞挖掘技巧总结"/>
+<meta name="twitter:image" content="https://www.bysec.cn/logo.png" /><meta name="twitter:title" content="支付类漏洞挖掘技巧总结"/>
 <meta name="twitter:description" content="转载自： https://forum.butian.net/share/2778 前言：支付类逻辑漏洞在漏洞挖掘中是常常出现的问题之一。此类漏洞挖掘思路多，奖励高，是炙手可热的漏洞。此篇文章主要围绕挖掘支付逻辑漏"/>
 <meta name="application-name" content="bysec">
 <meta name="apple-mobile-web-app-title" content="bysec">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=640"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" /><link rel="prev" href="http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/" /><link rel="next" href="http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=640"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<link rel="canonical" href="https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" /><link rel="prev" href="https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/" /><link rel="next" href="https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/" />
+<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
         "headline": "支付类漏洞挖掘技巧总结",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93\/"
-        },"genre": "posts","keywords": "支付漏洞","wordcount":  2537 ,
-        "url": "http:\/\/localhost:1313\/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93\/","datePublished": "2024-03-22T18:22:32+08:00","dateModified": "2024-03-22T18:22:32+08:00","publisher": {
+            "@id": "https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/"
+        },"genre": "posts","keywords":["支付漏洞"],"wordcount":  2537 ,
+        "url": "https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/","datePublished": "2024-03-22T18:22:32+08:00","dateModified": "2024-03-22T18:22:32+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
-                "name": "bysec"
+                "name": "bysec",
+                "url": "https://www.bysec.cn/"
             },"description": ""
-    }
-    </script></head>
+    }</script></head>
 
-<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
-        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+
+<body data-instant-intensity="viewport" ><script type="text/javascript">
+        function setTheme(theme) {
+          document.body.setAttribute('theme', theme); 
+          document.documentElement.className = theme;
+          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('tw-dark')
+          } else {
+            document.documentElement.classList.add('tw-dark')
+          }
+          window.theme = theme;   
+          window.isDark = window.theme !== 'light' 
+        }
         function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
         function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
-        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
-        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        if (window.localStorage && localStorage.getItem('theme')) {
+            let theme = localStorage.getItem('theme');
+            if (theme === 'light' || theme === 'dark') {
+            setTheme(theme);
+            } else {
+                if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    setTheme('dark');
+                } else {
+                    setTheme('light');
+                }
+            }
+         } else { 
+            if ('auto' === 'light' || 'auto' === 'dark') 
+                setTheme('auto'), saveTheme('auto'); 
+            else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');
+        }
+        let metaColors = {'light': '#f8f8f8','dark': '#161b22'}
         getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
     </script>
     <div id="back-to-top"></div>
-    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
             <a href="/" title="bysec">bysec</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa-fw fas fa-home'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa-fw fas fa-archive'></i> 归档 </a><a class="menu-item" href="/categories/"><i class='fa-fw fas fa-folder-open'></i> 分类 </a><a class="menu-item" href="/tags/"><i class='fa-fw fas fa-tags'></i> 标签 </a><a class="menu-item" href="/link/"><i class='fa-fw fas fa-link'></i> 友链 </a><a class="menu-item" href="/about/"><i class='fa-fw fas fa-comment-dots'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a></div>
+            <div class="menu-inner"><a class="menu-item"
+                    href="/" ><i class='fa-fw fas fa-home'></i> 首页 </a><a class="menu-item"
+                    href="/posts/" ><i class='fa-fw fas fa-archive'></i> 归档 </a><a class="menu-item"
+                    href="/categories/" ><i class='fa-fw fas fa-folder-open'></i> 分类 </a><a class="menu-item"
+                    href="/tags/" ><i class='fa-fw fas fa-tags'></i> 标签 </a><a class="menu-item"
+                    href="/link/" ><i class='fa-fw fas fa-link'></i> 友链 </a><a class="menu-item"
+                    href="/about/" ><i class='fa-fw fas fa-comment-dots'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <button class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </span><button class="menu-item theme-switch" aria-label="切换主题">
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                </button></div>
         </div>
     </div>
-</header><header class="mobile" id="header-mobile">
+</header><header class="mobile print:!tw-hidden" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
@@ -80,24 +119,30 @@
             </div>
         </div>
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
-                        取消
-                    </a>
-                </div><a class="menu-item" href="/" title=""><i class='fa-fw fas fa-home'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa-fw fas fa-archive'></i>归档</a><a class="menu-item" href="/categories/" title=""><i class='fa-fw fas fa-folder-open'></i>分类</a><a class="menu-item" href="/tags/" title=""><i class='fa-fw fas fa-tags'></i>标签</a><a class="menu-item" href="/link/" title=""><i class='fa-fw fas fa-link'></i>友链</a><a class="menu-item" href="/about/" title=""><i class='fa-fw fas fa-comment-dots'></i>关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </div>
+                <button class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </button>
+            </div><a class="menu-item" href="/" title="" ><i class='fa-fw fas fa-home'></i>首页</a><a class="menu-item" href="/posts/" title="" ><i class='fa-fw fas fa-archive'></i>归档</a><a class="menu-item" href="/categories/" title="" ><i class='fa-fw fas fa-folder-open'></i>分类</a><a class="menu-item" href="/tags/" title="" ><i class='fa-fw fas fa-tags'></i>标签</a><a class="menu-item" href="/link/" title="" ><i class='fa-fw fas fa-link'></i>友链</a><a class="menu-item" href="/about/" title="" ><i class='fa-fw fas fa-comment-dots'></i>关于</a><button class="menu-item theme-switch tw-w-full" aria-label="切换主题">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+            </button></div>
     </div>
 </header>
 <div class="search-dropdown desktop">
@@ -105,9 +150,8 @@
 </div>
 <div class="search-dropdown mobile">
     <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-            <div class="container"><div class="toc" id="toc-auto">
+</div><main class="main">
+            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
@@ -132,16 +176,22 @@
     </li>
   </ul>
 </nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">支付类漏洞挖掘技巧总结</h1><div class="post-meta">
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title">支付类漏洞挖掘技巧总结</h1><div class="post-meta">
             <div class="post-meta-line">
-                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">bysec</a>
-                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw"></i>学习</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-03-22">2024-03-22</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-03-22">2024-03-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2537 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="">
+                <span class="post-author"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">bysec</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%AD%A6%E4%B9%A0/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>学习</a></span></div>
+            <div class="post-meta-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="2024-03-22">2024-03-22</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime="2024-03-22">2024-03-22</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;约 2537 字&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -183,156 +233,52 @@
     <a href="#%e6%94%af%e4%bb%98%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%8a%80%e5%b7%a7" class="header-mark"></a>支付逻辑漏洞挖掘技巧：</h2><p>在实际漏洞挖掘中，一般最先尝试的就是更改数据包发包内容，可以直接修改支付金额、更改支付状态、更改支付类型、更改提交订单支付的时候其中的订单信息等等，当然也会有一些新奇的功能点可以测试。这些在测试中会遇到的操作可以分为以下几类：</p>
 <h4 id="一更改支付金额" class="headerLink">
     <a href="#%e4%b8%80%e6%9b%b4%e6%94%b9%e6%94%af%e4%bb%98%e9%87%91%e9%a2%9d" class="header-mark"></a>一、更改支付金额</h4><p>在支付流程中，可以修改支付价格的步骤有很多，包括订购、确认信息、付款等。在涉及到价格的步骤中都可以尝试修改，如果网站在某一环节存在逻辑上的漏洞，就可以利用该漏洞对支付价格进行修改。可以直接修改提交订单中的价格字段，一般可尝试0.01，1.00，1等</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000004MjQPo2OZaiZ.jpg"     ></p>
 <h4 id="二更改支付状态" class="headerLink">
     <a href="#%e4%ba%8c%e6%9b%b4%e6%94%b9%e6%94%af%e4%bb%98%e7%8a%b6%e6%80%81" class="header-mark"></a>二、更改支付状态</h4><p>在测试中有的时候订单得支付状态是由用户提交订单时的某个数据包参数决定的，服务端通过支付状态判断订单支付与否，这时我们可以尝试找到这个参数（可以通过正常支付订单的数据包进行对比），对支付状态进行修改。或者还有一种情况是通过检查订单是否支付，这个时候可以通过抓取已支付的订单数据包将其中的订单编号改为未支付的编号，实现绕过。</p>
 <p>1、直接修改为已支付状态</p>
 <p>2、修改未支付的订单号为已支付订单号</p>
 <h4 id="三修改支付类型" class="headerLink">
     <a href="#%e4%b8%89%e4%bf%ae%e6%94%b9%e6%94%af%e4%bb%98%e7%b1%bb%e5%9e%8b" class="header-mark"></a>三、修改支付类型</h4><p>通常在提交订单付款时，这里的type一般是对支付方式的判断，可能会存在开发人员测试的时候遗留的无需支付的type值，根据支付方式判断支付与否。可以通过fuzz特定值去实现绕过。比如比较常见的值0（这里需要结合实际进行测试不同的处理方式type值不同），可以实现不需要付款订单就会自动生成。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000001pnauw1Ymu6Z.jpg"     ></p>
 <h4 id="四更改订单信息" class="headerLink">
     <a href="#%e5%9b%9b%e6%9b%b4%e6%94%b9%e8%ae%a2%e5%8d%95%e4%bf%a1%e6%81%af" class="header-mark"></a>四、更改订单信息</h4><p>服务端只检查支付是否完成，并没有确认订单金额与银行支付金额是否相同，过分信任客户端提交的数据。此时可以通过替换支付订单号、更换商品id的方式，来完成花少钱买更贵的东西。同时生成两个订单号，一个贵的一个便宜，首先支付便宜的，银行往回返回的时候，替换订单号，然后就可以完成两个订单的同时支付。</p>
 <p>常见位置在生成订单、生成支付链接等。</p>
 <p>1、修改商品编号</p>
 <p>直接在生成的订单中替换商品编号。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000003s92Zl1VIR4n.jpg"     ></p>
 <p>2、修改订单号</p>
 <p>将金额不同的订单进行替换，可以支付一个金额较少的订单，然后将订单号修改为金额较大的订单，少付实际金额。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000003qQiMy4KSGVN.jpg"     ></p>
 <p>3、越权使用他人优惠券、越权使用他人积分等</p>
 <h4 id="五更改数量实现优惠支付" class="headerLink">
     <a href="#%e4%ba%94%e6%9b%b4%e6%94%b9%e6%95%b0%e9%87%8f%e5%ae%9e%e7%8e%b0%e4%bc%98%e6%83%a0%e6%94%af%e4%bb%98" class="header-mark"></a>五、更改数量实现优惠支付</h4><p>支付金额是由购买数量乘以商品单价决定的，这时我们在数据包中修改购买数量，将其修改为负数或者小数，如果站点后台对此没有进行过滤，就有可能存在支付漏洞。</p>
 <p>1、将正常的数量值修改至最小值0.01，可以实现低价购买。比如：原价300修改修量为0.01后实付金额变为3。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000000cLXyq2IZ3q1.jpg"     ></p>
 <p>2、未对负数做检验的还可以将数量改为负数。（这里需要注意，因为后端大部分会校验不允许实付金额小于0或者0.01等，所以有的时候要想实现订单成功生成需要结合实际修改价格）</p>
 <p>生成订单时有参数表示商品数量，修改为-1</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD0000023TEHC4JXHEk.jpg"     ></p>
 <p>修改数量为-1后会发现，此时金额为负数。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000002mHCM24Ep2Hu.jpg"     ></p>
 <p>在提交订单支付的时候，为保证支付成功需要修改金额。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000000DJWwc2a3UKp.jpg"     ></p>
 <p>3、对数量没有做负数校验的时候也可以巧用负数抵消实现0元购</p>
 <p>在计算价格时，没有对负数进行验证，通过修改某个商品数量为-1实现与1的抵消实现0元购。</p>
 <p>同时购买两件商品，修改两件商品其中价格低的商品的金额为负数，实现价格的抵消，低价购买商品。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000002L6UuK1qaTkQ.jpg"     ></p>
 <p>4、手动增加订单中商品相关的多个参数以达到少付多买的目的。</p>
 <p>有的时候在提交订单时抓取数据包可以看到只有一套商品的信息，尝试多添加几套同样的参数订单是否会有变化。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000000BjHX11tquF6.jpg"     ></p>
 <p>尝试在提交订单的时候多添加几个此类参数</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg">
-    </a><br>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD0000012VUKS2wsK6H.jpg"     ><br>
 提交订单实际支付金额未变仍是一个商品的价格，但是实际套餐已经变成了四个。</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000000917SD2jyn1W.jpg"     ></p>
 <h4 id="六重复支付突破限购" class="headerLink">
     <a href="#%e5%85%ad%e9%87%8d%e5%a4%8d%e6%94%af%e4%bb%98%e7%aa%81%e7%a0%b4%e9%99%90%e8%b4%ad" class="header-mark"></a>六、重复支付，突破限购</h4><p>在支付系统中，服务端没有做好相关验证，比如订单状态被错误更新或者未更新，未对订单多重提交进行校验。那么就可以并发订单实现优惠订单多次提交。需要注意的是这里有的时候会根据实际支付订单判断，并发了多个订单也可能只有一个优惠订单可以正常支付。</p>
 <p>并发订单，多台设备同时提交优惠订单。</p>
 <p>常见于限购，一个账号仅许购买一次等</p>
 <p>1、限制一个优惠订单时直接并发生成多个优惠订单</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000004de7oX37PnkS.jpg"     ></p>
 <p>2、使用多台设备、多个浏览器、多种支付方式（wx、支付宝等）购买优惠订单</p>
 <p>常见于购买会员，会员第一个月往往会有优惠价。生成一个优惠订单后不支付，打开多个设备或者虚拟器设备，同时提交生成优惠订单，再分别支付，有的时候会发现会员截至日期顺延，突破限制以优惠价格购买会员。</p>
 <p>3、退款处并发。退款的时候可以发起同一订单多次退款，达到多退款的目的。</p>
@@ -346,15 +292,7 @@
 <p>1、遍历隐藏优惠券</p>
 <p>一般会有一些开发时测试的大额优惠券，或者已经过期下架的优惠券，通过遍历可以被使用。</p>
 <p>2、遍历商品id从而fuzz到已下架的商品</p>
-<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg">
-        <img
-            
-            loading="lazy"
-            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg"
-            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg 2x"
-            sizes="auto"
-            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg">
-    </a></p>
+<p><img class="tw-inline" loading="lazy" src="https://qqq.gtimg.cn/music/photo_new/T053XD000001ycjrs2sR1Cs.jpg"     ></p>
 <h4 id="九利用小数点精度四舍五入" class="headerLink">
     <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p></div>
 
@@ -366,41 +304,126 @@
             </div>
             <div class="post-info-license"></div>
         </div>
-        <div class="post-info-line">
+        <div class="post-info-line print:!tw-hidden">
             <div class="post-info-md"><span><a class="link-to-mardown" href=/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
-            <div class="post-info-share">
-                <span></span>
-            </div>
+            <div class="post-info-share"></div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E/">支付漏洞</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        <section class="post-tags"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href="/tags/%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E/">支付漏洞</a></section>
+        <section class="print:!tw-hidden">
+            <span><button class="tw-text-fgColor-link-muted hover:tw-text-fgColor-link-muted-hover" onclick="window.history.back();">返回</button></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/" class="prev" rel="prev" title="攻防实战外网突破"><i class="fas fa-angle-left fa-fw"></i>攻防实战外网突破</a>
-            <a href="/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/" class="next" rel="next" title="万字总结信息收集全网最全">万字总结信息收集全网最全<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav print:tw-hidden"><a href="/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/" class="prev" rel="prev" title="攻防实战外网突破"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>攻防实战外网突破</a>
+            <a href="/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/" class="next" rel="next" title="万字总结信息收集全网最全">万字总结信息收集全网最全<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
-</article></div>
+<div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
         </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
-                    <span class="icp"><a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2024294125号</a></span></div>
+        <div class="footer-container"><div class="footer-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2015 - 2024<span class="author">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">粤ICP备2024294125号</span></div>
             <div class="footer-line"></div>
             <div class="footer-line">
             </div>
         </div></footer></div>
 
-    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
-            <i class="fas fa-arrow-up fa-fw"></i>
-        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-            <i class="fas fa-comment fa-fw"></i>
-        </a>
-    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button tw-transition-opacity tw-opacity-0" title="回到顶部">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a><a href="#comments" id="view-comments" class="fixed-button" title="查看评论">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>
+        </a></div><div id="cookieconsent-container"></div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css">
+<script>window.config={"autocomplete.min.js":"/lib/autocomplete/autocomplete.min.js","comment":{"gitalk":{"admin":["CNbysec"],"clientID":"Ov23li64ijr3L89wsfoj","clientSecret":"a291b75ee7aaf91f94e71d89a39cf8098ee8ed80","id":"2024-03-22T18:22:32+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"支付类漏洞挖掘技巧总结"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"fuse.min.js":"/lib/fuse/fuse.min.js","lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script
+    src="/lib/twemoji/twemoji.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/js/twemoji.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/lightgallery/lightgallery.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-thumbnail.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-zoom.min.js"
+    
+  ></script><script
+    src="/lib/katex/katex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/auto-render.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/copy-tex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/katex/mhchem.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/js/katex.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/cookieconsent/cookieconsent.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/js/cookieconsent.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/js/theme.min.js"
+    
+      defer
+    
+  ></script><script
+    src="/lib/gitalk/gitalk.min.js"
+    
+  ></script><script
+    src="/js/gitalk.min.js"
+    
+      defer
+    
+  ></script>
+    
+    <script type="speculationrules">
+        {
+          "prerender": [
+            {
+              "where": { "href_matches": "/*" },
+              "eagerness": "moderate"
+            }
+          ]
+        }
+    </script>
+      
 </body>
 
 </html>

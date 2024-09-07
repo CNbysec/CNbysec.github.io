@@ -1,0 +1,147 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Test - 标签 - bysec</title>
+        <link>https://www.bysec.cn/tags/test/</link>
+        <description>Test - 标签 - bysec</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sat, 07 Sep 2024 12:11:17 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/test/" rel="self" type="application/rss+xml" /><item>
+    <title>Test</title>
+    <link>https://www.bysec.cn/test/</link>
+    <pubDate>Sat, 07 Sep 2024 12:11:17 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/test/</guid>
+    <description><![CDATA[<h2 id="markdown-基本语法" class="headerLink">
+    <a href="#markdown-%e5%9f%ba%e6%9c%ac%e8%af%ad%e6%b3%95" class="header-mark"></a>Markdown 基本语法</h2><p>这部分内容在 <a href="../basic-markdown-syntax/" rel="">Markdown 基本语法页面</a> 中介绍.</p>
+<h2 id="extended-markdown-syntax" class="headerLink">
+    <a href="#extended-markdown-syntax" class="header-mark"></a>Markdown 扩展语法</h2><p><strong>DoIt</strong> 主题提供了一些扩展的语法便于你撰写文章.</p>
+<h3 id="emoji-支持" class="headerLink">
+    <a href="#emoji-%e6%94%af%e6%8c%81" class="header-mark"></a>Emoji 支持</h3><p>这部分内容在 <a href="../emoji-support/" rel="">Emoji 支持页面</a> 中介绍.</p>
+<h3 id="数学公式" class="headerLink">
+    <a href="#%e6%95%b0%e5%ad%a6%e5%85%ac%e5%bc%8f" class="header-mark"></a>数学公式</h3><p><strong>DoIt</strong> 基于 <a href="https://katex.org/" target="_blank" rel="noopener noreferrer">$ \KaTeX $</a> 提供数学公式的支持.</p>
+<p>在你的 <a href="../theme-documentation-basics#site-configuration" rel="">网站配置</a> 中添加如下设置来启用数学公式支持：</p>
+<div class="highlight" title="hugo.toml"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">extensions</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">extensions</span><span class="p">.</span><span class="nx">passthrough</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">extensions</span><span class="p">.</span><span class="nx">passthrough</span><span class="p">.</span><span class="nx">delimiters</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">block</span> <span class="p">=</span> <span class="p">[[</span><span class="s1">&#39;\[&#39;</span><span class="p">,</span> <span class="s1">&#39;\]&#39;</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">inline</span> <span class="p">=</span> <span class="p">[[</span><span class="s1">&#39;\(&#39;</span><span class="p">,</span> <span class="s1">&#39;\)&#39;</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">page</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">page</span><span class="p">.</span><span class="nx">math</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">blockLeftDelimiter</span> <span class="p">=</span> <span class="s1">&#39;\[&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">blockRightDelimiter</span> <span class="p">=</span> <span class="s1">&#39;\]&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">inlineLeftDelimiter</span> <span class="p">=</span> <span class="s1">&#39;\(&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">inlineRightDelimiter</span> <span class="p">=</span> <span class="s1">&#39;\)&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">copyTex</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">mhchem</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">这是一份 <a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener noreferrer">$ \KaTeX $ 中支持的 $ \TeX $ 函数</a> 列表。</div>
+        </div>
+    </div>
+<h4 id="公式块" class="headerLink">
+    <a href="#%e5%85%ac%e5%bc%8f%e5%9d%97" class="header-mark"></a>公式块</h4><p>默认的公式块分割符是 <code>\[ \]</code>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">\[ c = \pm\sqrt{a^2 + b^2} \]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
+</span></span></code></pre></div><p>呈现的输出效果如下：</p>
+<p>[ c = \pm\sqrt{a^2 + b^2} ]</p>
+<p>[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi ]</p>
+<h4 id="行内公式" class="headerLink">
+    <a href="#%e8%a1%8c%e5%86%85%e5%85%ac%e5%bc%8f" class="header-mark"></a>行内公式</h4><p>默认的行内公式分割符是 <code>\( \)</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">\( c = \pm\sqrt{a^2 + b^2} \) and \( f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呈现的输出效果如下:</p>
+<p>( c = \pm\sqrt{a^2 + b^2} ) and ( f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi )</p>
+<h4 id="copy-tex" class="headerLink">
+    <a href="#copy-tex" class="header-mark"></a>Copy-tex</h4><p><strong><a href="https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex" target="_blank" rel="noopener noreferrer">Copy-tex</a></strong> 是一个 <strong>$ \KaTeX $</strong> 的插件.</p>
+<p>通过这个扩展, 在选择并复制 $ \KaTeX $ 渲染的公式时, 会将其 $ \LaTeX $ 源代码复制到剪贴板.</p>
+<p>在你的 <a href="../theme-documentation-basics#site-configuration" rel="">网站配置</a> 中的 <code>[params.math]</code> 下面设置属性 <code>copyTex = true</code> 来启用 Copy-tex.</p>
+<p>选择并复制上一节中渲染的公式, 可以发现复制的内容为 LaTeX 源代码.</p>
+<h4 id="mhchem" class="headerLink">
+    <a href="#mhchem" class="header-mark"></a>mhchem</h4><p><strong><a href="https://github.com/Khan/KaTeX/tree/master/contrib/mhchem" target="_blank" rel="noopener noreferrer">mhchem</a></strong> 是一个 <strong>$ \KaTeX $</strong> 的插件.</p>
+<p>通过这个扩展, 你可以在文章中轻松编写漂亮的化学方程式.</p>
+<p>在你的 <a href="../theme-documentation-basics#site-configuration" rel="">网站配置</a> 中的 <code>[params.math]</code> 下面设置属性 <code>mhchem = true</code> 来启用 mhchem.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">\[ \ce{CO2 + C -&gt; 2 CO} \]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">\[ \ce{Hg^2+ -&gt;[I-] HgI2 -&gt;[I-] [Hg^{II}I4]^2-} \]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呈现的输出效果如下:</p>
+<p>[ \ce{CO2 + C -&gt; 2 CO} ]</p>
+<p>[ \ce{Hg^2+ -&gt;[I-] HgI2 -&gt;[I-] [Hg^{II}I4]^2-} ]</p>
+<h3 id="ruby" class="headerLink">
+    <a href="#ruby" class="header-mark"></a>字符注音或者注释</h3><p><strong>DoIt</strong> 主题支持一种 <strong>字符注音或者注释</strong> Markdown 扩展语法:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">[Hugo]^(一个开源的静态网站生成工具)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呈现的输出效果如下:</p>
+<p><strong><ruby>Hugo<rt>一个开源的静态网站生成工具</rt></ruby></strong></p>
+<h3 id="fraction" class="headerLink">
+    <a href="#fraction" class="header-mark"></a>分数</h3><a href="https://github.com/HEIGE-PCloud/DoIt/releases/tag/v0.2.0" rel="noopener noreferrer" target="_blank"></a>
+<p><strong>DoIt</strong> 主题支持一种 <strong>分数</strong> Markdown 扩展语法:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">[浅色]/[深色]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[99]/[100]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呈现的输出效果如下:</p>
+<p><sup>浅色</sup>/<sub>深色</sub></p>
+<p><sup>90</sup>/<sub>100</sub></p>]]></description>
+</item></channel>
+</rss>

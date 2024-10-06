@@ -853,14 +853,14 @@ ___
 #! -*-conding=: UTF-8 -*-
 # @Author  : 海哥python
 # @Software: PyCharm
-
-import re
-import json
-import sys
-import execjs
-import requests
-from loguru import logger
-from fake_useragent import UserAgent
+`
+# import re
+# import json
+# import sys
+# import execjs
+# import requests
+# from loguru import logger
+# from fake_useragent import UserAgent
 
 session = requests.session()
 ua = UserAgent()
@@ -990,13 +990,13 @@ ___
 # @Author  : 海哥python
 # @Software: PyCharm
 
-import hashlib
-import re
-import json
-import execjs
-import requests
-from loguru import logger
-from fake_useragent import UserAgent
+# import hashlib
+# import re
+# import json
+# import execjs
+# import requests
+# from loguru import logger
+# from fake_useragent import UserAgent
 
 session = requests.session()
 ua = UserAgent()

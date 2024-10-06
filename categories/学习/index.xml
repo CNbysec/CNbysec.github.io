@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>学习 - 分类 - bysec</title>
-        <link>https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/</link>
+        <link>http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0/</link>
         <description>学习 - 分类 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 06 Oct 2024 19:59:39 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 06 Oct 2024 19:59:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
     <title>常用的30种未授权访问漏洞汇总</title>
-    <link>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
+    <link>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
     <pubDate>Sun, 06 Oct 2024 19:59:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
+    </author><guid>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://www.freebuf.com/articles/web/338459.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/338459.html</a></em></p>
 </blockquote>
@@ -1403,10 +1403,10 @@
 <p><a href="https://www.freebuf.com/articles/web/278245.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/278245.html</a></p>]]></description>
 </item><item>
     <title>比较有意思的几个漏洞挖掘记录</title>
-    <link>https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</link>
+    <link>http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</link>
     <pubDate>Mon, 02 Sep 2024 20:06:21 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</guid>
+    </author><guid>http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3692" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3692</a></em></p>
 </blockquote>
@@ -1648,10 +1648,10 @@
     </a></p>]]></description>
 </item><item>
     <title>一次经典教育系统后台漏洞打包</title>
-    <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+    <link>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
     <pubDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+    </author><guid>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3693" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3693</a></em></p>
 </blockquote>
@@ -1883,10 +1883,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>(所有增添账号和上传文件均删除)</p>]]></description>
 </item><item>
     <title>教育行业渗透打点</title>
-    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -2179,10 +2179,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>验证码渗透最全总结</title>
-    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Mon, 20 May 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p>
 </blockquote>
@@ -2312,10 +2312,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>本文仅用于技术讨论与学习，利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者及本公众号不为此承担任何责任。</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -3281,10 +3281,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>支付类漏洞挖掘技巧总结</title>
-    <link>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+    <link>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2778" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2778</a></em></p>
 </blockquote>
@@ -3394,10 +3394,10 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>
@@ -3703,10 +3703,10 @@ aspx 语言首先想尝试一句话木马</p>
     </a></p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>
@@ -3915,10 +3915,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>
 </item><item>
     <title>SRC混子的漏洞挖掘之道</title>
-    <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
+    <link>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
+    </author><guid>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -4468,10 +4468,10 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
     <title>绕waf系列之绕安全狗</title>
-    <link>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
+    <link>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
     <pubDate>Tue, 15 Dec 2020 21:18:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
+    </author><guid>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="%e7%bd%91%e7%bb%9c" rel="">网络</a></em></p>
 </blockquote>

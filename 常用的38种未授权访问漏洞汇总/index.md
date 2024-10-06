@@ -1,4 +1,4 @@
-# 常用的38种未授权访问漏洞汇总
+﻿# 常用的38种未授权访问漏洞汇总
 
 
 <!--more-->
@@ -314,9 +314,9 @@ Apache CouchDB 是一个开源数据库，默认会在5984端口开放Restful的
 
 2、未授权访问kali测试命令
 
-curl 192.168.126.130:5984
+`curl 192.168.126.130:5984`
 
-curl 192.168.126.130:5984/\_config
+`curl 192.168.126.130:5984/\_config`
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD00001lb4Dw0ztslv.jpg)
 
@@ -384,7 +384,7 @@ Redis未授权访问在4.x/5.0.5以前版本下，可以使用master/slave模式
 **漏洞检测**
 
 -   **端口扫描**
--   **Kali****连接主机**
+-   **Kali连接主机**
 
 （1）kali安装redis-cli远程连接工具
 
@@ -432,15 +432,15 @@ redis-cli -h 目标主机IP
 
 `requirepass  mypasswd`
 
-3、在需要对外开放的时候修改默认端口（端口不重复就可以）
+3. 在需要对外开放的时候修改默认端口（端口不重复就可以）
 
 `port 2344`
 
-4、以低权限运行 Redis 服务（重启redis才能生效）
+4. 以低权限运行 Redis 服务（重启redis才能生效）
 
 为 Redis 服务创建单独的用户和家目录，并且配置禁止登陆
 
-5、最后还可以配合iptables限制开放
+5. 最后还可以配合iptables限制开放
 
 ## 12. Weblogic 未授权访问（7001）
 
@@ -495,7 +495,7 @@ Hadoop是一款由Apache基金会推出的分布式系统框架，它通过著�
 
 http://192.168.126.130:8088/
 
-[http://192.168.126.130:8088/cluster](http://192.168.126.130:8088/cluster)
+http://192.168.126.130:8088/cluster
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD00003yMfMf1KyFD3.jpg)
 
@@ -603,7 +603,7 @@ Kubernetes 的服务在正常启动后会开启两个端口：Localhost Port （
 
 2. 检测
 
-（1）端口：8080 [http://10.10.4.89:8080/](http://10.10.4.89:8080/)
+（1）端口：8080 http://10.10.4.89:8080/
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD00004TvEQr3OJPAf.jpg)
 
@@ -651,9 +651,9 @@ Jupyter Notebook（此前被称为 IPython notebook）是一个交互式笔记�
 
 1. 使用vulhub搭建漏洞演示环境
 
-cd /vulhub/jupyter/notebook-rce
+`cd /vulhub/jupyter/notebook-rce`
 
-docker-compose up -d
+`docker-compose up -d`
 
 2. 端口扫描
 
@@ -778,10 +778,8 @@ RabbitMQ是目前非常热门的一款消息中间件，基于AMQP协议的，�
 
 默认账号密码都是guest
 
-[http://10.10.4.89:15672](http://10.10.4.89:15672/)
-
+http://10.10.4.89:15672
 http://10.10.4.89:15692
-
 http://10.10.4.89:25672
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD000019g3pk18vKlS.jpg)
@@ -884,17 +882,12 @@ Druid是阿里巴巴数据库出品的，为监控而生的数据库连接池，
 
 直接在网站的url中后加上：
 
-```
-/druid/index.htm
+`/druid/index.htm`
+`/druid/websession.htm`
+`/druid/datasource.htm`
+`/druid/sql.htm`
+`/druid/spring.html`
 
-/druid/websession.htm
-
-/druid/datasource.htm
-
-/druid/sql.htm
-
-/druid/spring.html
-```
 
 如果可以无需登录，即可登录到Druid监控界面，则说明该网站存在Druid未授权访问漏洞
 
@@ -938,11 +931,11 @@ Actuator 是 springboot 提供的用来对应用系统进行自省和监控的�
 
 http://10.2.20.48/actuator/autoconfig
 
-[http://10.2.20.48 /actuator/env](http://10.2.20.48/env)
+http://10.2.20.48/actuator/env
 
 http://10.2.20.48/actuator/dump
 
-[http://10.2.20.48/actuator/headdump](http://10.2.20.48/actuator/headdump)可下载
+http://10.2.20.48/actuator/headdump 
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD00002UcRo10yaQFY.jpg)
 
@@ -950,9 +943,9 @@ http://10.2.20.48/actuator/dump
 
 使用burpsuite的插件：APIKit
 
-介绍：[https://www.bilibili.com/read/cv15912732](https://www.bilibili.com/read/cv15912732)
+介绍：https://www.bilibili.com/read/cv15912732
 
-介绍：https://blog.csdn.net/qq\_50854790/article/details/122894291
+介绍：https://blog.csdn.net/qq_50854790/article/details/122894291
 
 **漏洞修复**
 
@@ -973,6 +966,7 @@ Swagger 是一个规范且完整的框架，用于生成、描述、调用和可
 **漏洞检测**
 
 可利用未授权访问漏洞，直接访问以下链接（目录遍历）
+
 ```
 /api
 
@@ -1183,7 +1177,7 @@ phpmyadmin未鉴权，可通过特定地址直接登录数据库的漏洞。
 
 **漏洞检测**
 
-1. 目录扫描：/pma   或者 /phpmyadmin
+1. 目录扫描：/pma 或者 /phpmyadmin
 
 2. 漏洞URL：http://ip:888/pma
 
@@ -1215,7 +1209,7 @@ Atlassian Crowd和Crowd Data Center在其某些发行版本中错误地启用了
 
 漏洞利用脚本github地址：https://github.com/jas502n/CVE-2019-11580
 
-```
+```shell
 git clone https://github.com/jas502n/CVE-2019-11580
 
 cd CVE-2019-11580/
@@ -1261,7 +1255,7 @@ curl http://192.168.18.138:8095/crowd/plugins/servlet/exp?cmd=cat%20/etc/shadow
 
 **漏洞复现**
 
-可参考[https://www.cnblogs.com/cn-gov/p/13715861.html](https://www.cnblogs.com/cn-gov/p/13715861.html)
+可参考 [https://www.cnblogs.com/cn-gov/p/13715861.html](https://www.cnblogs.com/cn-gov/p/13715861.html)
 
 ## 归纳补充
 

@@ -113,6 +113,7 @@ document.cookie=('_')+('_')+('j')+('s')+('l')+('_')+('c')+('l')+('e')+('a')+('r'
 
 
 ```javascript
+/*
 var _0x4f9d = ['HnJu', 'w4Jow5Ak', 'CCrDq8KX', 'KMOVZMOX', 'MCDDjzg=', 'w553w5PDpw==', 'CsOXbcOX', 'woXChMOAwq0=', 'JsOPXcO+', 'wplFw6JY', 'bX8pwpU=', 'w6fDjkzCmw==', 'woB0wrrDkg==', 'w6HCmMOiZA==', 'GRbCklw=', 'dw03Kw==', 'w47DqcO7Tg==', 'D8ORfwI=', 'GsOCSsOt', 'TjUePw==', 'wpXCnHRJ', 'w4xRw7bDrQ==', 'ScKdwqDDuQ==', 'M1hDwrQ=', 'woLCusOhwos=', 'eFZBw70=', 'w7XDocKsdA==', 'CDfDjkM=', 'w6czWcK8', 'X1gqwrc=', 'wr/DoDvDig==', 'flHDuAg=', 'HBbDjMKL', 'QFLCpcOi', 'I8OBccOM', 'w6Amw4nClQ==', 'PEHCoDg=', 'w5RYworDrg==', 'w4Z/wqHDnQ==', 'OifDgDc=', 'HWxlwpk=', 'aX7DnQU=', 'w73DtcOnwoQ=', 'YmHCncOD', 'WXw5wp0=', 'P1bCosKl', 'wpzCj8OrwrQ=', 'w4QGw6nDsQ==', 'a8KswrvDkw==', 'ACzDmH0=', 'wonDl8OtwrM=', 'JWVbwq0=', 'Z3YdwpQ=', 'CGjCgsKx', 'w5MaPMO3', 'w5sgLMOT', 'IlPCtX4=', 'w6rDl8OUUA==', 'w4TDksODWw==', 'wqLDuCLDlA==', 'w6LDksOOVg==', 'Vxcwwp0=', 'w5rCv8KcKw==', 'ccKSCsK7', 'am5Xw5c=', 'w78Jw6nDpQ==', 'KUPCqsKQ', 'w53CjcKHAA==', 'w7HCncK4NA==', 'wrnCt8OZwoQ=', 'wpMfwpXCjQ==', 'w5AIBsOT', 'w5fDs1jCjw==', 'w5RDw7Mz', 'wrwkwqbCqg==', 'w4V6wrXDhw==', 'GCrDvA==', 'wqfDkMOWw4U=', 'Gx3DksKo', 'w6c6bcKE', 'EwDDuwk=', 'ehvCh20=', 'w6tUw5TCkw==', 'w4tHw6/Dhg==', 'GMKZw7HDsg==', 'w5MCAMO3', 'w7hSw6nDgA==', 'w7TDlcOLwqI=', 'w602a8K6', 'w7p9w7wu', 'wrkuw6w4', 'w6tJw5PCmw==', 'fljDpBs=', 'w6DDq8KYSg==', 'LGHCv8Kd', 'enbCtXQ=', '6K2i5rGm6aia6K6c', 'w4gCAsO7', 'PsOrYgI=', 'cDIrNA==', 'w7PCghEU', 'wrsTw5XClQ==', 'wpQKw4Yq', 'DQDDiRI=', 'w67DtMOmwrU=', 'DmjCiMKk', 'XcKBwpnDow==', 'wqk0HMO0', 'w4Y7w6XDsw==', 'wrjDtCDDhA==', 'woDDoQvDgg==', 'wo06wrjCvA==', 'w5JewoHDiQ==', 'NkLCpcK6', 'wrLCuHpi', 'YHo6wpo=', 'w7vCosK+w7c=', 'w4NMw5sw', 'wpY1woXCiQ==', 'wqsMwoTCoA==', 'w5dMwpzDtQ==', 'w4J1w4vCqw==', 'w4HCoMOVVA==', 'w7zCo8Kww50=', 'wp/CmURc', 'w7dKw7IW', 'w7IbwqI=', 'wrDCjMOYwqs=', 'al3CicOl', 'w5LCosOcQg==', 'J8OIZMOR', 'w4HDssKjfQ==', 'w5ZJworDiA==', 'w4wBacKd', 'JBzDnBA=', 'wohaw6zDgg==', 'w6VAw7oT', 'w5zCpMKdw6c=', 'aBUWPg==', 'w5zDsMOfVQ==', 'w7dtwofDjQ==', 'wrvDphrDoA==', 'wqYnwqpC', 'OzzDnyw=', 'w7LCnsK7wr4=', 'w70pw77DiA==', 'wq98w5xQ', 'Ah3Cl1w=', 'wrZ4w73DgQ==', 'IsOjX8Ou', 'enFMw7o=', 'w53DpcKPYg==', 'w7J9wq3DlQ==', 'E8OMf8OC', 'aR4hwpY=', 'NTLDiTA=', 'BMOvbCA=', 'Z20pwoE=', 'wpZxw5BY', 'YFjDoSA=', 'w43DosOpfw==', 'w7xJw4c6', 'wrjCn1J4', 'wrPCs21R', 'w5dfw6fCmg==', 'bcKwwoXDjw==', 'B3FowpY=', 'WWdaw5I=', 'wq14w4Re', 'KFnCucKe', 'w6M4fcKm', 'dH9pw5A=', 'woLDjMOiw5g=', 'J0bCug==', 'E17CqMK8', 'w4FWw4fDhw==', 'FxDDhj0=', 'w4vDr8OgwqU=', 'w4JNwrjDoA==', 'wqgQAMOj', 'w6l3wqnDlw==', 'wowfRcOi', 'JTPChG4=', 'w5PDosOrwro=', 'wqIwBsO8', 'CSbDrEg=', 'enQh', 'O8KwLsOX', 'w4pTw4/Ckw==', 'wozDu8OYw78=', 'ASTCgG4=', 'w6sLO8Oz', 'w7vCrSwy', 'FVrCqMK9', 'w5R4w4TCtw==', 'IsOPacOw', 'w5HDh8O0WA==', 'woUbwp/Djw==', 'wpIcw5wZ', 'BcOybcOO', 'E8KVw4DDmA==', 'cBQpwr0=', 'wqzCh8OlwqU=', 'V2JMw7I=', 'w5Bjw643', 'w6ciw73Cjw==', 'LMOFcsOH', 'XMK2wpfDjw==', 'fEjDnj0=', 'AMOZQ8OI', 'MwHDgcKB', 'w6NzwpnDnA==', 'LzHDgcKW', 'I8OaSzE=', 'wqADw5DCpA==', 'wofDnsOjw70=', 'wqDCnFhW', 'w5rDrMONXA==', 'w4FQw5g8', 'w4tTw6LDog==', 'w6JEw4rDjg==', 'w4hcwo3DtQ==', 'QmbCpMO+', 'QxYQwqI=', 'cEdFw70=', 'AHHCgMKp', 'J8OPasOI', 'PQfDisKg', 'UsKwwpzDrg==', 'KGjCokI=', 'cMK3wpbCkQ==', 'wos+McOC', 'QWFPw60=', 'w7fDjV7CnQ==', 'w77Dk8KeSQ==', 'C8OQSMOh', 'w6PCtTkN', 'w6MWX8KP', 'EsOMZMOM', 'CBrDuz0=', 'w7vCk8K9w78=', 'K8OedsOl', 'w4jDssOQwpw=', 'wqrCgMOewoU=', 'woVRw4Vg', 'w6gJw4/Dow==', 'NgXDocKq', 'wqjCusODwro=']; (function(_0x19121c, _0x4f9dfd) {
     var _0x242e7e = function(_0x1234f2) {
         while (--_0x1234f2) {
@@ -592,6 +593,7 @@ go({
     "vt": "3600",
     "wt": "1500"
 })
+*/
 ```
 
 > 其中有明显的特征，我们能判断出这是一个`OB混淆`加密：
@@ -603,6 +605,7 @@ go({
 使用（`decode_obfuscator`）反混淆工具还原代码后，整体的结构就清晰了很多。
 
 ```javascript
+/*
 function hash(_0x9060ec) {
   function _0x4f2105(_0x548e11, _0xd6f7ee) {
     return (_0x548e11 & 2147483647) + (_0xd6f7ee & 2147483647) ^ _0x548e11 & 2147483648 ^ _0xd6f7ee & 2147483648;
@@ -790,7 +793,7 @@ go({
   "vt": "3600",
   "wt": "1500"
 });
-
+*/
 ```
 
 `setTimeout`函数是异步执行的，它不会立即返回值，做一下处理，并让`go`函数返回`cookies`。
@@ -803,14 +806,14 @@ go({
 
 然后，我们迫不及待的运行：
 
-```shell
-node.exe .\final.js
-```
+`node.exe .\final.js`
 
 回应我们的就是`ReferenceError: window is not defined`等报错，依次补上：
 
 ```javascript
+/*
 window = {} window.navigator={ 'userAgent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36' } document = global location = {}
+*/
 ```
 
 再次运行得到：

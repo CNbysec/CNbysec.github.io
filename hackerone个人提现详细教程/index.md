@@ -5,19 +5,19 @@
 
 > _转载自： [https://cloud.tencent.com/developer/inventory/28529/article/1971100](https://cloud.tencent.com/developer/inventory/28529/article/1971100)_
 
-## 0x01 前言
+## 前言
 
 国内的人赚点美金不容易，提出来更加不容易，提现中还有许多坑，小智在这里做了一个总结。
 
 Hackeron 的提现是可以自动提到 Paypal 的，所以我们需要提前绑定好 Paypal 收款账号。
 
-## 0x02 Paypal 注册
+## Paypal注册
 
 注册好 Paypal 收款账号，把自己信息实名好，该认证的都认证一下，在这里注册个人用户账号。
 
 [https://www.paypal.com/c2/webapps/mpp/account-selection](https://www.paypal.com/c2/webapps/mpp/account-selection)
 
-## 0x03 HackerOne 平台绑定 Paypal
+## HackerOne平台绑定Paypal
 
 在 HackerOne 后台绑定 Paypal 账号，输入自己注册过的 Paypal 邮箱即可。
 
@@ -25,7 +25,7 @@ Hackeron 的提现是可以自动提到 Paypal 的，所以我们需要提前绑
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD00003OaZuA2CgLCt.jpg)
 
-## 0x04 填写税表
+## 填写税表
 
 如果你是第一次获取赏金，那你还填写一下税表（W-8BEN），可以在这里填写。
 
@@ -37,7 +37,7 @@ Hackeron 的提现是可以自动提到 Paypal 的，所以我们需要提前绑
 
 (W-8BEN)的税表填写教程：[https://jixiaobai.club/w8ben-tutorial/](https://jixiaobai.club/w8ben-tutorial/)
 
-## 0x05 Paypal 提现到招商银行
+## Paypal提现到招商银行
 
 钱到 Paypal 后，就要提现到国内银行卡了，在这里关联提现银行卡
 **（提现注意，这里一定是选择 关联银行账户，非关联卡）**
@@ -58,7 +58,7 @@ Hackeron 的提现是可以自动提到 Paypal 的，所以我们需要提前绑
 
 ![](https://qqq.gtimg.cn/music/photo_new/T053XD00001TWLvi3DKbhZ.jpg)
 
-## 0x06 招商银行转人民币
+## 招商银行转人民币
 
 提到招商银行后，3天左右会收到外汇的短信过来，让你进行申报（有些金额小的也不用申报），最好下载一个招商银行客户端专业版 PC 端，去招商官网下载就行。
 

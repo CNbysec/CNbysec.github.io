@@ -20,28 +20,28 @@
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://cloud.tencent.com/developer/inventory/28529/article/1971100" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/inventory/28529/article/1971100</a></em></p>
 </blockquote>
-<h2 id="0x01-前言" class="headerLink">
-    <a href="#0x01-%e5%89%8d%e8%a8%80" class="header-mark"></a>0x01 前言</h2><p>国内的人赚点美金不容易，提出来更加不容易，提现中还有许多坑，小智在这里做了一个总结。</p>
+<h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>国内的人赚点美金不容易，提出来更加不容易，提现中还有许多坑，小智在这里做了一个总结。</p>
 <p>Hackeron 的提现是可以自动提到 Paypal 的，所以我们需要提前绑定好 Paypal 收款账号。</p>
-<h2 id="0x02-paypal-注册" class="headerLink">
-    <a href="#0x02-paypal-%e6%b3%a8%e5%86%8c" class="header-mark"></a>0x02 Paypal 注册</h2><p>注册好 Paypal 收款账号，把自己信息实名好，该认证的都认证一下，在这里注册个人用户账号。</p>
+<h2 id="paypal注册" class="headerLink">
+    <a href="#paypal%e6%b3%a8%e5%86%8c" class="header-mark"></a>Paypal注册</h2><p>注册好 Paypal 收款账号，把自己信息实名好，该认证的都认证一下，在这里注册个人用户账号。</p>
 <p><a href="https://www.paypal.com/c2/webapps/mpp/account-selection" target="_blank" rel="noopener noreferrer">https://www.paypal.com/c2/webapps/mpp/account-selection</a></p>
-<h2 id="0x03-hackerone-平台绑定-paypal" class="headerLink">
-    <a href="#0x03-hackerone-%e5%b9%b3%e5%8f%b0%e7%bb%91%e5%ae%9a-paypal" class="header-mark"></a>0x03 HackerOne 平台绑定 Paypal</h2><p>在 HackerOne 后台绑定 Paypal 账号，输入自己注册过的 Paypal 邮箱即可。</p>
+<h2 id="hackerone平台绑定paypal" class="headerLink">
+    <a href="#hackerone%e5%b9%b3%e5%8f%b0%e7%bb%91%e5%ae%9apaypal" class="header-mark"></a>HackerOne平台绑定Paypal</h2><p>在 HackerOne 后台绑定 Paypal 账号，输入自己注册过的 Paypal 邮箱即可。</p>
 <p><a href="https://hackerone.com/settings/payment_preferences" target="_blank" rel="noopener noreferrer">https://hackerone.com/settings/payment_preferences</a></p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00003OaZuA2CgLCt.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00003OaZuA2CgLCt.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00003OaZuA2CgLCt.jpg">
         
     </a></p>
-<h2 id="0x04-填写税表" class="headerLink">
-    <a href="#0x04-%e5%a1%ab%e5%86%99%e7%a8%8e%e8%a1%a8" class="header-mark"></a>0x04 填写税表</h2><p>如果你是第一次获取赏金，那你还填写一下税表（W-8BEN），可以在这里填写。</p>
+<h2 id="填写税表" class="headerLink">
+    <a href="#%e5%a1%ab%e5%86%99%e7%a8%8e%e8%a1%a8" class="header-mark"></a>填写税表</h2><p>如果你是第一次获取赏金，那你还填写一下税表（W-8BEN），可以在这里填写。</p>
 <p><a href="https://hackerone.com/settings/bounties" target="_blank" rel="noopener noreferrer">https://hackerone.com/settings/bounties</a></p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004PTnC2wBjwn.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004PTnC2wBjwn.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004PTnC2wBjwn.jpg">
         
     </a></p>
 <p>一定要如实填写，真实姓名用拼音 倒置，W-8BEN 填写审核通过后，后面提现就不用再填写了。</p>
 <p>(W-8BEN)的税表填写教程：<a href="https://jixiaobai.club/w8ben-tutorial/" target="_blank" rel="noopener noreferrer">https://jixiaobai.club/w8ben-tutorial/</a></p>
-<h2 id="0x05-paypal-提现到招商银行" class="headerLink">
-    <a href="#0x05-paypal-%e6%8f%90%e7%8e%b0%e5%88%b0%e6%8b%9b%e5%95%86%e9%93%b6%e8%a1%8c" class="header-mark"></a>0x05 Paypal 提现到招商银行</h2><p>钱到 Paypal 后，就要提现到国内银行卡了，在这里关联提现银行卡
+<h2 id="paypal提现到招商银行" class="headerLink">
+    <a href="#paypal%e6%8f%90%e7%8e%b0%e5%88%b0%e6%8b%9b%e5%95%86%e9%93%b6%e8%a1%8c" class="header-mark"></a>Paypal提现到招商银行</h2><p>钱到 Paypal 后，就要提现到国内银行卡了，在这里关联提现银行卡
 <strong>（提现注意，这里一定是选择 关联银行账户，非关联卡）</strong></p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00002RFeHi0l6t3u.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00002RFeHi0l6t3u.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00002RFeHi0l6t3u.jpg">
         
@@ -59,8 +59,8 @@
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00001TWLvi3DKbhZ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00001TWLvi3DKbhZ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00001TWLvi3DKbhZ.jpg">
         
     </a></p>
-<h2 id="0x06-招商银行转人民币" class="headerLink">
-    <a href="#0x06-%e6%8b%9b%e5%95%86%e9%93%b6%e8%a1%8c%e8%bd%ac%e4%ba%ba%e6%b0%91%e5%b8%81" class="header-mark"></a>0x06 招商银行转人民币</h2><p>提到招商银行后，3天左右会收到外汇的短信过来，让你进行申报（有些金额小的也不用申报），最好下载一个招商银行客户端专业版 PC 端，去招商官网下载就行。</p>
+<h2 id="招商银行转人民币" class="headerLink">
+    <a href="#%e6%8b%9b%e5%95%86%e9%93%b6%e8%a1%8c%e8%bd%ac%e4%ba%ba%e6%b0%91%e5%b8%81" class="header-mark"></a>招商银行转人民币</h2><p>提到招商银行后，3天左右会收到外汇的短信过来，让你进行申报（有些金额小的也不用申报），最好下载一个招商银行客户端专业版 PC 端，去招商官网下载就行。</p>
 <p>由于我这笔已经申报过了，这里会显示查看</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000022s0Qb0yi4Kx.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000022s0Qb0yi4Kx.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000022s0Qb0yi4Kx.jpg">
         

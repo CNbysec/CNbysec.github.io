@@ -4,7 +4,7 @@
         <link>http://localhost:1313/</link>
         <description>bysec个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Sun, 06 Oct 2024 20:42:37 &#43;0800</lastBuildDate>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 07 Oct 2024 12:12:33 &#43;0800</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>工具集</title>
@@ -13,6 +13,70 @@
         <name>bysec</name>
     </author><guid>http://localhost:1313/%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
+</item><item>
+    <title>Hackerone个人提现详细教程</title>
+    <link>http://localhost:1313/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
+    <pubDate>Mon, 07 Oct 2024 12:12:33 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>http://localhost:1313/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>转载自： <a href="https://cloud.tencent.com/developer/inventory/28529/article/1971100" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/inventory/28529/article/1971100</a></em></p>
+</blockquote>
+<p><strong>0x01 前言</strong></p>
+<p>国内的人赚点美金不容易，提出来更加不容易，提现中还有许多坑，小智在这里做了一个总结。</p>
+<p>Hackeron 的提现是可以自动提到 Paypal 的，所以我们需要提前绑定好 Paypal 收款账号。</p>
+<p><strong>0x02 Paypal 注册</strong></p>
+<p>注册好 Paypal 收款账号，把自己信息实名好，该认证的都认证一下，在这里注册个人用户账号。</p>
+<p><a href="https://www.paypal.com/c2/webapps/mpp/account-selection" target="_blank" rel="noopener noreferrer">https://www.paypal.com/c2/webapps/mpp/account-selection</a></p>
+<p><strong>0x03 HackerOne 平台绑定 Paypal</strong></p>
+<p>在 HackerOne 后台绑定 Paypal 账号，输入自己注册过的 Paypal 邮箱即可。</p>
+<p><a href="https://hackerone.com/settings/payment_preferences" target="_blank" rel="noopener noreferrer">https://hackerone.com/settings/payment_preferences</a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00003OaZuA2CgLCt.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00003OaZuA2CgLCt.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00003OaZuA2CgLCt.jpg">
+        
+    </a></p>
+<p><strong>0x04 填写税表</strong></p>
+<p>如果你是第一次获取赏金，那你还填写一下税表（W-8BEN），可以在这里填写。</p>
+<p><a href="https://hackerone.com/settings/bounties" target="_blank" rel="noopener noreferrer">https://hackerone.com/settings/bounties</a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000004PTnC2wBjwn.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000004PTnC2wBjwn.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000004PTnC2wBjwn.jpg">
+        
+    </a></p>
+<p>一定要如实填写，真实姓名用拼音 倒置，W-8BEN 填写审核通过后，后面提现就不用再填写了。</p>
+<p>(W-8BEN)的税表填写教程：<a href="https://jixiaobai.club/w8ben-tutorial/" target="_blank" rel="noopener noreferrer">https://jixiaobai.club/w8ben-tutorial/</a></p>
+<p><strong>0x05 Paypal 提现到招商银行</strong></p>
+<p>钱到 Paypal 后，就要提现到国内银行卡了，在这里关联提现银行卡（<strong>提现注意，这里一定是选择 关联银行账户，非关联卡</strong>）</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00002RFeHi0l6t3u.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00002RFeHi0l6t3u.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00002RFeHi0l6t3u.jpg">
+        
+    </a></p>
+<p>银行名称输入：CHINA MERCHANTS BANK，这时会自动填补 SWIFT 代码，没有补全就填：CMBCCNBS</p>
+<p>分行地址可不填，账号就是你的账号卡账号，绑定即可。</p>
+<p>银行卡真实身份一定要与 Paypal 真实身份能对上，不能拿别人的银行卡提现，否责会被退回，还可能被风控封号。</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00001BoN8k2t6R7w.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00001BoN8k2t6R7w.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00001BoN8k2t6R7w.jpg">
+        
+    </a></p>
+<p>绑定后就可以在 Paypal 直接点转账，转账到刚才提现的银行卡中</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00002lKI5R0TJfqH.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00002lKI5R0TJfqH.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00002lKI5R0TJfqH.jpg">
+        
+    </a></p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00001TWLvi3DKbhZ.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00001TWLvi3DKbhZ.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00001TWLvi3DKbhZ.jpg">
+        
+    </a></p>
+<p><strong>0x06 招商银行转人民币</strong></p>
+<p>提到招商银行后，3天左右会收到外汇的短信过来，让你进行申报（有些金额小的也不用申报），最好下载一个招商银行客户端专业版 PC 端，去招商官网下载就行。</p>
+<p>由于我这笔已经申报过了，这里会显示查看</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000022s0Qb0yi4Kx.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000022s0Qb0yi4Kx.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000022s0Qb0yi4Kx.jpg">
+        
+    </a></p>
+<p>申报时，有两个地方需要注意，地址选：新加坡，交易编码选择 ：122030 未纳入海关统计的网络购物</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00002o47DY1XKiBp.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00002o47DY1XKiBp.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00002o47DY1XKiBp.jpg">
+        
+    </a></p>
+<p>填写没问题的话，申报后，很快就会被审核（1~3天），审核通过后会有短信通知结果。</p>
+<p>申报成功后，这时就要把银行卡中的美金结汇成人民币。</p>
+<p>如下图，在这里结汇，把美元结汇成人民币即可，结汇是实时到账的，结汇成功后，钱就到账了，其他银行也是类似。</p>
+<p>这时钱就已经到账银行卡了。</p>
+<p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00001Y7WpZ2rK71y.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00001Y7WpZ2rK71y.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00001Y7WpZ2rK71y.jpg">
+        
+    </a></p>]]></description>
 </item><item>
     <title>逆向分析某网站加速乐参数流程详解</title>
     <link>http://localhost:1313/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</link>
@@ -1002,7 +1066,7 @@
 </item><item>
     <title>常用的38种未授权访问漏洞汇总</title>
     <link>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
-    <pubDate>Sun, 06 Oct 2024 19:59:39 &#43;0800</pubDate><author>
+    <pubDate>Thu, 03 Oct 2024 19:50:39 &#43;0800</pubDate><author>
         <name>bysec</name>
     </author><guid>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
     <description><![CDATA[<blockquote>

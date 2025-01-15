@@ -1,22 +1,74 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - bysec</title>
-        <link>http://localhost:1313/posts/</link>
+        <link>https://www.bysec.cn/posts/</link>
         <description>所有文章 | bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Mon, 07 Oct 2024 12:12:33 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Wed, 15 Jan 2025 16:40:18 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/posts/" rel="self" type="application/rss+xml" /><item>
     <title>工具集</title>
-    <link>http://localhost:1313/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Wed, 01 Jan 2020 12:18:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B7%A5%E5%85%B7/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>Hackerone个人提现详细教程</title>
-    <link>http://localhost:1313/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
-    <pubDate>Mon, 07 Oct 2024 12:12:33 &#43;0800</pubDate><author>
+    <title>解决APP双向证书校验，抓取某灵魂聊天软件的通信包</title>
+    <link>https://www.bysec.cn/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</link>
+    <pubDate>Wed, 15 Jan 2025 16:40:18 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
+    </author><guid>https://www.bysec.cn/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</guid>
+    <description><![CDATA[<blockquote>
+<p><em>转载自： <a href="https://www.52pojie.cn/thread-1408337-1-1.html" target="_blank" rel="noopener noreferrer">https://www.52pojie.cn/thread-1408337-1-1.html</a></em></p>
+</blockquote>
+<h1 id="解决-app-双向证书校验抓取某灵魂聊天软件的通信包" class="headerLink">
+    <a href="#%e8%a7%a3%e5%86%b3-app-%e5%8f%8c%e5%90%91%e8%af%81%e4%b9%a6%e6%a0%a1%e9%aa%8c%e6%8a%93%e5%8f%96%e6%9f%90%e7%81%b5%e9%ad%82%e8%81%8a%e5%a4%a9%e8%bd%af%e4%bb%b6%e7%9a%84%e9%80%9a%e4%bf%a1%e5%8c%85" class="header-mark"></a>解决 APP 双向证书校验，抓取某灵魂聊天软件的通信包</h1><p>部分 android APK 为了通信的安全，采用了服务器和客户端双向证书校验，会导致我们无法正常抓包。</p>
+<p>双向认证，顾名思义，客户端和服务器端都需要验证对方的身份，在建立 Https 连接的过程中，握手的流程比单向认证多了几步。单向认证的过程，客户端从服务器端下载服务器端公钥证书进行验证，然后建立安全通信通道。双向通信流程，客户端除了需要从服务器端下载服务器的公钥证书进行验证外，还需要把客户端的公钥证书上传到服务器端给服务器端进行验证，等双方都认证通过了，才开始建立安全通信通道进行数据传输。而常规的 https 只是客户端校验服务端的证书验证服务器的身份。</p>
+<p>因此双向证书认证在一定程度上能增大中间人攻击的难度和我们抓包分析的难度。<br>
+例如最近大火的某灵魂软件，soul，直接 burp 或者 fidder 等是抓不到包的，因为用了 3 层保护，第一层是服务器 https 证书强验证，二是 ssl pining，三是服务器验证客户端身份（双向认证）。</p>
+<p>安装了 JustTrustMe 等插件，我们使用 burpsuite、charles 等抓包工具也只能抓到上行包。但由于我们使用了抓包工具，通信包相当于是被抓包工具拦截，然后转发至服务器，此时服务器检测到通信包没有带上正常的客户端证书，也就是无法认证客户端身份，会响应异常。<br>
+解决了服务器证书校验和 ssl pining 后，可以抓到上行包，但观察响应时，会发现服务器返回了 400 异常信息：
+<a class="lightgallery" href="https://wx.y.gtimg.cn/music/photo_new/T053XD000039gEFv0AXpO4.jpg" title="https://wx.y.gtimg.cn/music/photo_new/T053XD000039gEFv0AXpO4.jpg" data-thumbnail="https://wx.y.gtimg.cn/music/photo_new/T053XD000039gEFv0AXpO4.jpg">
+        
+    </a></p>
+<p>这个信息告诉我们，我们用了抓包工具以后发出去的包没有带上客户端证书，所以服务器端拒绝处理。想要正常抓包，就必须导入客户端证书，同时需要输入证书密码。<br>
+这就说明 app 使用了双向证书校验，也就是说 app 客户端一定是夹带了一张证书的。最常用的就是 p12 证书了。所以我们可以直接用 apktool 等工具反编译 apk 或者直接解压缩。证书这类文件通常放在 assets 目录下面，我们在里面找 p12 后缀名的文件即可：<br>
+<a class="lightgallery" href="https://wx.y.gtimg.cn/music/photo_new/T053XD00002qH3Wn0cfv79.jpg" title="https://wx.y.gtimg.cn/music/photo_new/T053XD00002qH3Wn0cfv79.jpg" data-thumbnail="https://wx.y.gtimg.cn/music/photo_new/T053XD00002qH3Wn0cfv79.jpg">
+        
+    </a></p>
+<p>把这个文件复制出来保存到任意位置，第一步就完成了。但光有证书，不知道证书密码也没用。<br>
+所以第二部：找证书密码。<br>
+直接 dex2jar 或者 jadx 等工具逆向出 java 代码，搜索关键词“client.p12”，或者搜索 java.security.KeyStore.open()方法，基本能直接找到使用证书的地方。此处我们搜索“client.p12”:<br>
+<a class="lightgallery" href="https://wx.y.gtimg.cn/music/photo_new/T053XD00000GUoQY4BkUhl.jpg" title="https://wx.y.gtimg.cn/music/photo_new/T053XD00000GUoQY4BkUhl.jpg" data-thumbnail="https://wx.y.gtimg.cn/music/photo_new/T053XD00000GUoQY4BkUhl.jpg">
+        
+    </a></p>
+<p>如果是 jadx 可以右键查找使用的地方，跟进去：<br>
+<a class="lightgallery" href="https://wx.y.gtimg.cn/music/photo_new/T053XD00003QsjoJ1ptP25.jpg" title="https://wx.y.gtimg.cn/music/photo_new/T053XD00003QsjoJ1ptP25.jpg" data-thumbnail="https://wx.y.gtimg.cn/music/photo_new/T053XD00003QsjoJ1ptP25.jpg">
+        
+    </a></p>
+<p>上下文中就能找到加载证书的地方，找到 load 方法，这个 load 方法第一个参数是证书文件流，第二个参数即为证书的密码，所以我们只要知道这第二个参数传进来的值是什么就可以了。从代码可以看到第二个参数 c2 来源是 SoulNetworkSDK.c 方法，c 方法返回值即为我们需要的证书密码，这时候办法就多了，代码能力强的直接阅读逻辑能看出来，像我等比较懒的就喜欢在这儿下断点动态调试直接看参数和返回值。<br>
+不过我最喜欢的方法是直接 hook，可以自己写 xposed 模块，也可以用我之前写的另一个基于 xposed 的 hook 工具：easyHook，直接填入包名类名方法名和对应参数类型，即可显示出参数和返回值，详情和下载地址见我的另一篇帖子:<a href="https://www.52pojie.cn/thread-1408286-1-1.html" target="_blank" rel="noopener noreferrer">https://www.52pojie.cn/thread-1408286-1-1.html</a><br>
+<a class="lightgallery" href="https://wx.y.gtimg.cn/music/photo_new/T053XD00003NnPyY1kEPl5.jpg" title="https://wx.y.gtimg.cn/music/photo_new/T053XD00003NnPyY1kEPl5.jpg" data-thumbnail="https://wx.y.gtimg.cn/music/photo_new/T053XD00003NnPyY1kEPl5.jpg">
+        
+    </a></p>
+<p>填写好这个灵魂软件的包名、以及对应的类名方法名和参数类型，点击保存，打开悬浮窗，运行灵魂软件，效果如下：<br>
+<a class="lightgallery" href="https://wx.y.gtimg.cn/music/photo_new/T053XD00003eJ8ZE0wZnzZ.jpg" title="https://wx.y.gtimg.cn/music/photo_new/T053XD00003eJ8ZE0wZnzZ.jpg" data-thumbnail="https://wx.y.gtimg.cn/music/photo_new/T053XD00003eJ8ZE0wZnzZ.jpg">
+        
+    </a></p>
+<p>可以看到，证书密码已经轻松获取到了，长按可以直接复制到剪切板。这时候把先前保存的证书文件导入 charles。<br>
+点击 charles&gt;proxy&gt;ssl proxy settings&gt;client certificates,创建一个，密码随便输入，自己记住。点击 add，然后添加我们需要抓包的网站地址和端口（https 端口默认为 443），点击右下角的 import p12,导入我们之前找到的 client.p12 文件，输入我们刚刚 hook 到的证书密码，即可开始正常抓包。<br>
+<a class="lightgallery" href="https://wx.y.gtimg.cn/music/photo_new/T053XD00003ij5Yz30MKfA.jpg" title="https://wx.y.gtimg.cn/music/photo_new/T053XD00003ij5Yz30MKfA.jpg" data-thumbnail="https://wx.y.gtimg.cn/music/photo_new/T053XD00003ij5Yz30MKfA.jpg">
+        
+    </a></p>
+<p>再次运行灵魂软件，即可开始正常抓包：
+<a class="lightgallery" href="https://wx.y.gtimg.cn/music/photo_new/T053XD000015thfH4KSINp.jpg" title="https://wx.y.gtimg.cn/music/photo_new/T053XD000015thfH4KSINp.jpg" data-thumbnail="https://wx.y.gtimg.cn/music/photo_new/T053XD000015thfH4KSINp.jpg">
+        
+    </a></p>]]></description>
+</item><item>
+    <title>Hackerone个人提现详细教程</title>
+    <link>https://www.bysec.cn/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
+    <pubDate>Thu, 12 Dec 2024 12:12:12 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://cloud.tencent.com/developer/inventory/28529/article/1971100" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/inventory/28529/article/1971100</a></em></p>
 </blockquote>
@@ -78,10 +130,10 @@
     </a></p>]]></description>
 </item><item>
     <title>逆向分析某网站加速乐参数流程详解</title>
-    <link>http://localhost:1313/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</link>
-    <pubDate>Sun, 06 Oct 2024 20:42:37 &#43;0800</pubDate><author>
+    <link>https://www.bysec.cn/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</link>
+    <pubDate>Tue, 26 Nov 2024 22:40:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</guid>
+    </author><guid>https://www.bysec.cn/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://juejin.cn/post/7386485874300977178" target="_blank" rel="noopener noreferrer">https://juejin.cn/post/7386485874300977178</a></em></p>
 </blockquote>
@@ -1064,10 +1116,10 @@
 <p>欢迎随时与我联系，我期待与大家交流心得，共同学习，共同进步。</p>]]></description>
 </item><item>
     <title>常用的38种未授权访问漏洞汇总</title>
-    <link>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
+    <link>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
     <pubDate>Thu, 03 Oct 2024 19:50:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://www.freebuf.com/articles/web/338459.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/338459.html</a></em></p>
 </blockquote>
@@ -2447,10 +2499,10 @@ http://10.10.4.89:25672</p>
 <p><a href="https://www.freebuf.com/articles/web/278245.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/278245.html</a></p>]]></description>
 </item><item>
     <title>比较有意思的几个漏洞挖掘记录</title>
-    <link>http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</link>
+    <link>https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</link>
     <pubDate>Mon, 02 Sep 2024 20:06:21 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</guid>
+    </author><guid>https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3692" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3692</a></em></p>
 </blockquote>
@@ -2692,10 +2744,10 @@ http://10.10.4.89:25672</p>
     </a></p>]]></description>
 </item><item>
     <title>免杀大佬加入黑灰产还打得过吗</title>
-    <link>http://localhost:1313/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</link>
+    <link>https://www.bysec.cn/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</link>
     <pubDate>Mon, 02 Sep 2024 19:12:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</guid>
+    </author><guid>https://www.bysec.cn/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3705" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3705</a></em></p>
 </blockquote>
@@ -2907,10 +2959,10 @@ http://10.10.4.89:25672</p>
 <p>（针对样本的具体 yara、TTPs 规则等，后续将会同步到顺丰安全应急响应中心预推出的<strong>成文实验室知识星球</strong>，敬请期待！）</p>]]></description>
 </item><item>
     <title>一次经典教育系统后台漏洞打包</title>
-    <link>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+    <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
     <pubDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3693" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3693</a></em></p>
 </blockquote>
@@ -3142,10 +3194,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>(所有增添账号和上传文件均删除)</p>]]></description>
 </item><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -3438,10 +3490,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>微信小程序抓包及测试</title>
-    <link>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
+    <link>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
     <pubDate>Fri, 14 Jun 2024 18:24:56 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
+    </author><guid>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2477" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2477</a></em></p>
 </blockquote>
@@ -3654,10 +3706,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>直接下班</p>]]></description>
 </item><item>
     <title>验证码渗透最全总结</title>
-    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Mon, 20 May 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p>
 </blockquote>
@@ -3787,10 +3839,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>本文仅用于技术讨论与学习，利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者及本公众号不为此承担任何责任。</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -4756,10 +4808,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>支付类漏洞挖掘技巧总结</title>
-    <link>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2778" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2778</a></em></p>
 </blockquote>
@@ -4869,10 +4921,10 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>
@@ -5178,10 +5230,10 @@ aspx 语言首先想尝试一句话木马</p>
     </a></p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>
@@ -5390,10 +5442,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>
 </item><item>
     <title>BurpSuite安装</title>
-    <link>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</link>
+    <link>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</link>
     <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</guid>
+    </author><guid>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<h2 id="下载" class="headerLink">
     <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><ul>
 <li><a href="https://portswigger.net/burp/releases#professional" target="_blank" rel="noopener noreferrer">BurpSuite</a></li>
@@ -5428,10 +5480,10 @@ aspx 语言首先想尝试一句话木马</p>
 </div>]]></description>
 </item><item>
     <title>SRC混子的漏洞挖掘之道</title>
-    <link>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
+    <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
+    </author><guid>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -5981,10 +6033,10 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
     <title>如何在mac上抓小程序的流量</title>
-    <link>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+    <link>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
     <pubDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+    </author><guid>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -6035,10 +6087,10 @@ Your registration key:<br>
     </a></p>]]></description>
 </item><item>
     <title>kali修改为国内源</title>
-    <link>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+    <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+    </author><guid>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
     <description><![CDATA[<h2 id="打开配置文件" class="headerLink">
     <a href="#%e6%89%93%e5%bc%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="header-mark"></a>打开配置文件</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -6202,10 +6254,10 @@ Your registration key:<br>
 </div>]]></description>
 </item><item>
     <title>绕waf系列之绕安全狗</title>
-    <link>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
+    <link>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
     <pubDate>Tue, 15 Dec 2020 21:18:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
+    </author><guid>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="%e7%bd%91%e7%bb%9c" rel="">网络</a></em></p>
 </blockquote>

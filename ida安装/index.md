@@ -1,4 +1,4 @@
-# IDA安装
+﻿# IDA安装
 
 
 <!--more-->
@@ -6,7 +6,7 @@
 ## 下载
 [https://my.hex-rays.com/dashboard/download-center/downloads](https://my.hex-rays.com/dashboard/download-center/downloads)
 
-# Win版
+## Win版
 1. 编辑许可证信息，注意到期时间不要超过10年
 2. 将ida/ida64 dll/so/dylib放在与script相同的目录下
 3. 运行脚本生成license

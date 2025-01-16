@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>IDA - 标签 - bysec</title>
-        <link>https://www.bysec.cn/tags/ida/</link>
+        <link>http://localhost:1313/tags/ida/</link>
         <description>IDA - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/ida/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/ida/" rel="self" type="application/rss+xml" /><item>
     <title>IDA安装</title>
-    <link>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</link>
+    <link>http://localhost:1313/ida%E5%AE%89%E8%A3%85/</link>
     <pubDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</guid>
+    </author><guid>http://localhost:1313/ida%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<h2 id="下载" class="headerLink">
     <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><p><a href="https://my.hex-rays.com/dashboard/download-center/downloads" target="_blank" rel="noopener noreferrer">https://my.hex-rays.com/dashboard/download-center/downloads</a></p>
 <h2 id="win版" class="headerLink">

@@ -1,24 +1,520 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>bysec</title>
-        <link>http://localhost:1313/</link>
+        <link>https://www.bysec.cn/</link>
         <description>bysec个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Wed, 15 Jan 2025 16:40:18 &#43;0800</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</lastBuildDate>
+            <atom:link href="https://www.bysec.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>工具集</title>
-    <link>http://localhost:1313/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Wed, 01 Jan 2020 12:18:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B7%A5%E5%85%B7/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
 </item><item>
+    <title>IDA安装</title>
+    <link>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</link>
+    <pubDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</pubDate><author>
+        <name>bysec</name>
+    </author><guid>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</guid>
+    <description><![CDATA[<h1 id="下载" class="headerLink">
+    <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h1><p><a href="https://my.hex-rays.com/dashboard/download-center/downloads" target="_blank" rel="noopener noreferrer">https://my.hex-rays.com/dashboard/download-center/downloads</a></p>
+<h1 id="win版" class="headerLink">
+    <a href="#win%e7%89%88" class="header-mark"></a>Win版</h1><ol>
+<li>编辑许可证信息，注意到期时间不要超过10年</li>
+<li>将ida/ida64 dll/so/dylib放在与script相同的目录下</li>
+<li>运行脚本生成license</li>
+<li>复制生成的license，并将dll替换为补丁</li>
+<li>运行激活</li>
+</ol>
+<h1 id="mac版" class="headerLink">
+    <a href="#mac%e7%89%88" class="header-mark"></a>Mac版</h1><ol>
+<li>将所需破解文件与脚本放置于同一目录并运行
+<strong>于下面路径中寻找libida64.dylib与libida.dylib文件:</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">/Applications/IDA Professional 9.0.app/Contents/MacOS
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>将两个文件复制并置于CRACK同一目录并运行,运行script后，获取生成的.dylib文件</strong></p>
+<ol start="2">
+<li>
+<p>去掉文件后缀
+<strong>将生成的.dylib.patch文件的.patch后缀去掉，保留为.dylib</strong></p>
+</li>
+<li>
+<p>文件放置
+<strong>将修改后的.dylib文件与ida.hexlic文件放置在以下目录中:</strong></p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">/Applications/IDA Professional 9.0.app/Contents/MacOS
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>文件签名
+<strong>对放置在上述目录中的.dylib文件依次进行签名，参考以下命令:</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo codesign --force --deep --sign - /Applications/IDA<span class="se">\ </span>Professional<span class="se">\ </span>9.0.app/Contents/MacOS/libida64.dylib
+</span></span><span class="line"><span class="cl">sudo codesign --force --deep --sign - /Applications/IDA<span class="se">\ </span>Professional<span class="se">\ </span>9.0.app/Contents/MacOS/libida.dylib
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>确认签名成功
+<strong>删除 /Applications/IDA Professional 9.0.app/Contents/MacOS/plugins/arm_mac_user64.dylib</strong></li>
+</ol>
+<h1 id="配置" class="headerLink">
+    <a href="#%e9%85%8d%e7%bd%ae" class="header-mark"></a>配置</h1><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">hashlib</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">license</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;header&#34;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&#34;version&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;payload&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;meow :3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;hi@hex-rays.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;licenses&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;48-2137-ACAB-99&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;license_type&#34;</span><span class="p">:</span> <span class="s2">&#34;named&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;product&#34;</span><span class="p">:</span> <span class="s2">&#34;IDA&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;seats&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;start_date&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-08-10 00:00:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;end_date&#34;</span><span class="p">:</span> <span class="s2">&#34;2033-12-31 23:59:59&#34;</span><span class="p">,</span>  <span class="c1"># This can&#39;t be more than 10 years!</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;issued_on&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-08-10 00:00:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;owner&#34;</span><span class="p">:</span> <span class="s2">&#34;cracked by alula :3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;add_ons&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># {</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;id&#34;: &#34;48-1337-DEAD-01&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;code&#34;: &#34;HEXX86L&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;owner&#34;: &#34;48-0000-0000-00&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;start_date&#34;: &#34;2024-08-10 00:00:00&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;end_date&#34;: &#34;2033-12-31 23:59:59&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># },</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># {</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;id&#34;: &#34;48-1337-DEAD-02&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;code&#34;: &#34;HEXX64L&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;owner&#34;: &#34;48-0000-0000-00&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;start_date&#34;: &#34;2024-08-10 00:00:00&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#     &#34;end_date&#34;: &#34;2033-12-31 23:59:59&#34;,</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># },</span>
+</span></span><span class="line"><span class="cl">                <span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;features&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">add_every_addon</span><span class="p">(</span><span class="n">license</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platforms</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;W&#34;</span><span class="p">,</span>  <span class="c1"># Windows</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;L&#34;</span><span class="p">,</span>  <span class="c1"># Linux</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;M&#34;</span><span class="p">,</span>  <span class="c1"># macOS</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">addons</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXX86&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXX64&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXARM&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXARM64&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXMIPS&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXMIPS64&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXPPC&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXPPC64&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXRV64&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXARC&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;HEXARC64&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Probably cloud?</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCX86&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCX64&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCARM&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCARM64&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCMIPS&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCMIPS64&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCPPC&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCPPC64&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCRV&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCRV64&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCARC&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;HEXCARC64&#34;,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">addon</span> <span class="ow">in</span> <span class="n">addons</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">license</span><span class="p">[</span><span class="s2">&#34;payload&#34;</span><span class="p">][</span><span class="s2">&#34;licenses&#34;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&#34;add_ons&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;id&#34;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&#34;48-1337-DEAD-</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">02</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;code&#34;</span><span class="p">:</span> <span class="n">addon</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;owner&#34;</span><span class="p">:</span> <span class="n">license</span><span class="p">[</span><span class="s2">&#34;payload&#34;</span><span class="p">][</span><span class="s2">&#34;licenses&#34;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&#34;id&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;start_date&#34;</span><span class="p">:</span> <span class="s2">&#34;2024-08-10 00:00:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;end_date&#34;</span><span class="p">:</span> <span class="s2">&#34;2033-12-31 23:59:59&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># for addon in addons:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#     for platform in platforms:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#         i += 1</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#         license[&#34;payload&#34;][&#34;licenses&#34;][0][&#34;add_ons&#34;].append(</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#             {</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#                 &#34;id&#34;: f&#34;48-1337-DEAD-{i:02}&#34;,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#                 &#34;code&#34;: addon + platform,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#                 &#34;owner&#34;: license[&#34;payload&#34;][&#34;licenses&#34;][0][&#34;id&#34;],</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#                 &#34;start_date&#34;: &#34;2024-08-10 00:00:00&#34;,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#                 &#34;end_date&#34;: &#34;2033-12-31 23:59:59&#34;,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#             }</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#         )</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">add_every_addon</span><span class="p">(</span><span class="n">license</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">json_stringify_alphabetical</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">separators</span><span class="o">=</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">,</span> <span class="s2">&#34;:&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">buf_to_bigint</span><span class="p">(</span><span class="n">buf</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s2">&#34;little&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">bigint_to_buf</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">i</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">((</span><span class="n">i</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s2">&#34;little&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Yup, you only have to patch 5c -&gt; cb in libida64.so</span>
+</span></span><span class="line"><span class="cl"><span class="n">pub_modulus_hexrays</span> <span class="o">=</span> <span class="n">buf_to_bigint</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;edfd425cf978546e8911225884436c57140525650bcf6ebfe80edbc5fb1de68f4c66c29cb22eb668788afcb0abbb718044584b810f8970cddf227385f75d5dddd91d4f18937a08aa83b28c49d12dc92e7505bb38809e91bd0fbd2f2e6ab1d2e33c0c55d5bddd478ee8bf845fcef3c82b9d2929ecb71f4d1b3db96e3a8e7aaf93&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pub_modulus_patched</span> <span class="o">=</span> <span class="n">buf_to_bigint</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;edfd42cbf978546e8911225884436c57140525650bcf6ebfe80edbc5fb1de68f4c66c29cb22eb668788afcb0abbb718044584b810f8970cddf227385f75d5dddd91d4f18937a08aa83b28c49d12dc92e7505bb38809e91bd0fbd2f2e6ab1d2e33c0c55d5bddd478ee8bf845fcef3c82b9d2929ecb71f4d1b3db96e3a8e7aaf93&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">private_key</span> <span class="o">=</span> <span class="n">buf_to_bigint</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;77c86abbb7f3bb134436797b68ff47beb1a5457816608dbfb72641814dd464dd640d711d5732d3017a1c4e63d835822f00a4eab619a2c4791cf33f9f57f9c2ae4d9eed9981e79ac9b8f8a411f68f25b9f0c05d04d11e22a3a0d8d4672b56a61f1532282ff4e4e74759e832b70e98b9d102d07e9fb9ba8d15810b144970029874&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">decrypted</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">buf_to_bigint</span><span class="p">(</span><span class="n">message</span><span class="p">),</span> <span class="n">exponent</span><span class="p">,</span> <span class="n">pub_modulus_patched</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">decrypted</span> <span class="o">=</span> <span class="n">bigint_to_buf</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">decrypted</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">encrypted</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">buf_to_bigint</span><span class="p">(</span><span class="n">message</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="n">private_key</span><span class="p">,</span> <span class="n">pub_modulus_patched</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">encrypted</span> <span class="o">=</span> <span class="n">bigint_to_buf</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">encrypted</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">exponent</span> <span class="o">=</span> <span class="mh">0x13</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">sign_hexlic</span><span class="p">(</span><span class="n">payload</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;payload&#34;</span><span class="p">:</span> <span class="n">payload</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data_str</span> <span class="o">=</span> <span class="n">json_stringify_alphabetical</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">buffer</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># first 33 bytes are random</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">33</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x42</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># compute sha256 of the data</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sha256</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sha256</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data_str</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="n">digest</span> <span class="o">=</span> <span class="n">sha256</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># copy the sha256 digest to the buffer</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">buffer</span><span class="p">[</span><span class="mi">33</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">digest</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># encrypt the buffer</span>
+</span></span><span class="line"><span class="cl">    <span class="n">encrypted</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">encrypted</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">generate_patched_dll</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Didn&#39;t find </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">, skipping patch generation&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&#34;rb&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s2">&#34;EDFD42CBF978&#34;</span><span class="p">))</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> looks to be already patched :)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s2">&#34;EDFD425CF978&#34;</span><span class="p">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> doesn&#39;t contain the original modulus.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s2">&#34;EDFD425CF978&#34;</span><span class="p">),</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s2">&#34;EDFD42CBF978&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">patched_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">.patched&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">patched_filename</span><span class="p">,</span> <span class="s2">&#34;wb&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Generated modulus patch to </span><span class="si">{</span><span class="n">patched_filename</span><span class="si">}</span><span class="s2">! To apply the patch, replace the original file with the patched file&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># message = bytes.fromhex(license[&#34;signature&#34;])</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(decrypt(message).hex())</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(encrypt(decrypt(message)).hex())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">license</span><span class="p">[</span><span class="s2">&#34;signature&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sign_hexlic</span><span class="p">(</span><span class="n">license</span><span class="p">[</span><span class="s2">&#34;payload&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">serialized</span> <span class="o">=</span> <span class="n">json_stringify_alphabetical</span><span class="p">(</span><span class="n">license</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># write to ida.hexlic</span>
+</span></span><span class="line"><span class="cl"><span class="n">filename</span> <span class="o">=</span> <span class="s2">&#34;ida.hexlic&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">serialized</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Saved new license to </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">generate_patched_dll</span><span class="p">(</span><span class="s2">&#34;ida.dll&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">generate_patched_dll</span><span class="p">(</span><span class="s2">&#34;ida64.dll&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">generate_patched_dll</span><span class="p">(</span><span class="s2">&#34;libida.so&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">generate_patched_dll</span><span class="p">(</span><span class="s2">&#34;libida64.so&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">generate_patched_dll</span><span class="p">(</span><span class="s2">&#34;libida.dylib&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">generate_patched_dll</span><span class="p">(</span><span class="s2">&#34;libida64.dylib&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item><item>
     <title>解决APP双向证书校验，抓取某灵魂聊天软件的通信包</title>
-    <link>http://localhost:1313/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</link>
+    <link>https://www.bysec.cn/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</link>
     <pubDate>Wed, 15 Jan 2025 16:40:18 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</guid>
+    </author><guid>https://www.bysec.cn/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://www.52pojie.cn/thread-1408337-1-1.html" target="_blank" rel="noopener noreferrer">https://www.52pojie.cn/thread-1408337-1-1.html</a></em></p>
 </blockquote>
@@ -67,10 +563,10 @@
     </a></p>]]></description>
 </item><item>
     <title>Hackerone个人提现详细教程</title>
-    <link>http://localhost:1313/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
+    <link>https://www.bysec.cn/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
     <pubDate>Thu, 12 Dec 2024 12:12:12 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
+    </author><guid>https://www.bysec.cn/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://cloud.tencent.com/developer/inventory/28529/article/1971100" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/inventory/28529/article/1971100</a></em></p>
 </blockquote>
@@ -132,10 +628,10 @@
     </a></p>]]></description>
 </item><item>
     <title>逆向分析某网站加速乐参数流程详解</title>
-    <link>http://localhost:1313/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</link>
+    <link>https://www.bysec.cn/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</link>
     <pubDate>Tue, 26 Nov 2024 22:40:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</guid>
+    </author><guid>https://www.bysec.cn/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://juejin.cn/post/7386485874300977178" target="_blank" rel="noopener noreferrer">https://juejin.cn/post/7386485874300977178</a></em></p>
 </blockquote>
@@ -1118,10 +1614,10 @@
 <p>欢迎随时与我联系，我期待与大家交流心得，共同学习，共同进步。</p>]]></description>
 </item><item>
     <title>常用的38种未授权访问漏洞汇总</title>
-    <link>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
+    <link>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
     <pubDate>Thu, 03 Oct 2024 19:50:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://www.freebuf.com/articles/web/338459.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/338459.html</a></em></p>
 </blockquote>
@@ -2501,10 +2997,10 @@ http://10.10.4.89:25672</p>
 <p><a href="https://www.freebuf.com/articles/web/278245.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/278245.html</a></p>]]></description>
 </item><item>
     <title>比较有意思的几个漏洞挖掘记录</title>
-    <link>http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</link>
+    <link>https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</link>
     <pubDate>Mon, 02 Sep 2024 20:06:21 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</guid>
+    </author><guid>https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3692" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3692</a></em></p>
 </blockquote>
@@ -2746,10 +3242,10 @@ http://10.10.4.89:25672</p>
     </a></p>]]></description>
 </item><item>
     <title>免杀大佬加入黑灰产还打得过吗</title>
-    <link>http://localhost:1313/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</link>
+    <link>https://www.bysec.cn/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</link>
     <pubDate>Mon, 02 Sep 2024 19:12:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</guid>
+    </author><guid>https://www.bysec.cn/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3705" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3705</a></em></p>
 </blockquote>
@@ -2961,10 +3457,10 @@ http://10.10.4.89:25672</p>
 <p>（针对样本的具体 yara、TTPs 规则等，后续将会同步到顺丰安全应急响应中心预推出的<strong>成文实验室知识星球</strong>，敬请期待！）</p>]]></description>
 </item><item>
     <title>一次经典教育系统后台漏洞打包</title>
-    <link>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+    <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
     <pubDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/3693" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3693</a></em></p>
 </blockquote>
@@ -3196,10 +3692,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>(所有增添账号和上传文件均删除)</p>]]></description>
 </item><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
 </blockquote>
@@ -3492,10 +3988,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>微信小程序抓包及测试</title>
-    <link>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
+    <link>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
     <pubDate>Fri, 14 Jun 2024 18:24:56 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
+    </author><guid>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2477" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2477</a></em></p>
 </blockquote>
@@ -3708,10 +4204,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>直接下班</p>]]></description>
 </item><item>
     <title>验证码渗透最全总结</title>
-    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Mon, 20 May 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p>
 </blockquote>
@@ -3841,10 +4337,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>本文仅用于技术讨论与学习，利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者及本公众号不为此承担任何责任。</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
 </blockquote>
@@ -4810,10 +5306,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>支付类漏洞挖掘技巧总结</title>
-    <link>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2778" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2778</a></em></p>
 </blockquote>
@@ -4923,10 +5419,10 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
 </blockquote>
@@ -5232,10 +5728,10 @@ aspx 语言首先想尝试一句话木马</p>
     </a></p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
 </blockquote>
@@ -5444,10 +5940,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>
 </item><item>
     <title>BurpSuite安装</title>
-    <link>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</link>
+    <link>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</link>
     <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</guid>
+    </author><guid>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<h2 id="下载" class="headerLink">
     <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><ul>
 <li><a href="https://portswigger.net/burp/releases#professional" target="_blank" rel="noopener noreferrer">BurpSuite</a></li>
@@ -5482,10 +5978,10 @@ aspx 语言首先想尝试一句话木马</p>
 </div>]]></description>
 </item><item>
     <title>SRC混子的漏洞挖掘之道</title>
-    <link>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
+    <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
+    </author><guid>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -6035,10 +6531,10 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
     <title>如何在mac上抓小程序的流量</title>
-    <link>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+    <link>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
     <pubDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+    </author><guid>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
 </blockquote>
@@ -6089,10 +6585,10 @@ Your registration key:<br>
     </a></p>]]></description>
 </item><item>
     <title>kali修改为国内源</title>
-    <link>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+    <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+    </author><guid>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
     <description><![CDATA[<h2 id="打开配置文件" class="headerLink">
     <a href="#%e6%89%93%e5%bc%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="header-mark"></a>打开配置文件</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -6256,10 +6752,10 @@ Your registration key:<br>
 </div>]]></description>
 </item><item>
     <title>绕waf系列之绕安全狗</title>
-    <link>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
+    <link>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
     <pubDate>Tue, 15 Dec 2020 21:18:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
+    </author><guid>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
     <description><![CDATA[<blockquote>
 <p><em>转载自： <a href="%e7%bd%91%e7%bb%9c" rel="">网络</a></em></p>
 </blockquote>

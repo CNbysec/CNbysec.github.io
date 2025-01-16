@@ -1,9 +1,9 @@
-# IDA安装
+﻿# IDA安装
 
 
 <!--more-->
 
-# 下载
+## 下载
 [https://my.hex-rays.com/dashboard/download-center/downloads](https://my.hex-rays.com/dashboard/download-center/downloads)
 
 # Win版
@@ -13,7 +13,7 @@
 4. 复制生成的license，并将dll替换为补丁
 5. 运行激活
 
-# Mac版
+## Mac版
 1. 将所需破解文件与脚本放置于同一目录并运行
 **于下面路径中寻找libida64.dylib与libida.dylib文件:**
 ```txt
@@ -41,7 +41,7 @@ sudo codesign --force --deep --sign - /Applications/IDA\ Professional\ 9.0.app/C
 **删除 /Applications/IDA Professional 9.0.app/Contents/MacOS/plugins/arm_mac_user64.dylib**
 
 
-# 配置
+## 配置
 
 ```Python
 import json

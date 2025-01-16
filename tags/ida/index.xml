@@ -1,17 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>IDA - 标签 - bysec</title>
-        <link>http://localhost:1313/tags/ida/</link>
+        <link>https://www.bysec.cn/tags/ida/</link>
         <description>IDA - 标签 - bysec</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
-            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/ida/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</lastBuildDate><atom:link href="https://www.bysec.cn/tags/ida/" rel="self" type="application/rss+xml" /><item>
     <title>IDA安装</title>
-    <link>http://localhost:1313/ida%E5%AE%89%E8%A3%85/</link>
+    <link>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</link>
     <pubDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/ida%E5%AE%89%E8%A3%85/</guid>
-    <description><![CDATA[<h1 id="下载" class="headerLink">
-    <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h1><p><a href="https://my.hex-rays.com/dashboard/download-center/downloads" target="_blank" rel="noopener noreferrer">https://my.hex-rays.com/dashboard/download-center/downloads</a></p>
+    </author><guid>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</guid>
+    <description><![CDATA[<h2 id="下载" class="headerLink">
+    <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><p><a href="https://my.hex-rays.com/dashboard/download-center/downloads" target="_blank" rel="noopener noreferrer">https://my.hex-rays.com/dashboard/download-center/downloads</a></p>
 <h1 id="win版" class="headerLink">
     <a href="#win%e7%89%88" class="header-mark"></a>Win版</h1><ol>
 <li>编辑许可证信息，注意到期时间不要超过10年</li>
@@ -20,8 +20,8 @@
 <li>复制生成的license，并将dll替换为补丁</li>
 <li>运行激活</li>
 </ol>
-<h1 id="mac版" class="headerLink">
-    <a href="#mac%e7%89%88" class="header-mark"></a>Mac版</h1><ol>
+<h2 id="mac版" class="headerLink">
+    <a href="#mac%e7%89%88" class="header-mark"></a>Mac版</h2><ol>
 <li>将所需破解文件与脚本放置于同一目录并运行
 <strong>于下面路径中寻找libida64.dylib与libida.dylib文件:</strong></li>
 </ol>
@@ -70,8 +70,8 @@
 <li>确认签名成功
 <strong>删除 /Applications/IDA Professional 9.0.app/Contents/MacOS/plugins/arm_mac_user64.dylib</strong></li>
 </ol>
-<h1 id="配置" class="headerLink">
-    <a href="#%e9%85%8d%e7%bd%ae" class="header-mark"></a>配置</h1><div class="highlight"><div class="chroma">
+<h2 id="配置" class="headerLink">
+    <a href="#%e9%85%8d%e7%bd%ae" class="header-mark"></a>配置</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2

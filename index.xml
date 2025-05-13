@@ -1,24 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>bysec</title>
-        <link>http://localhost:1313/</link>
+        <link>https://www.bysec.cn/</link>
         <description>bysec个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>bysec@qq.com (bysec)</managingEditor>
             <webMaster>bysec@qq.com (bysec)</webMaster><lastBuildDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://www.bysec.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>工具集</title>
-    <link>http://localhost:1313/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Wed, 01 Jan 2020 12:18:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B7%A5%E5%85%B7/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>IDA安装</title>
-    <link>http://localhost:1313/ida%E5%AE%89%E8%A3%85/</link>
+    <link>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</link>
     <pubDate>Thu, 16 Jan 2025 14:31:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/ida%E5%AE%89%E8%A3%85/</guid>
+    </author><guid>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<h2 id="下载" class="headerLink">
     <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><p><a href="https://my.hex-rays.com/dashboard/download-center/downloads" target="_blank" rel="noopener noreferrer">https://my.hex-rays.com/dashboard/download-center/downloads</a></p>
 <h2 id="win版" class="headerLink">
@@ -511,13 +511,12 @@
 </div>]]></description>
 </item><item>
     <title>解决APP双向证书校验，抓取某灵魂聊天软件的通信包</title>
-    <link>http://localhost:1313/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</link>
+    <link>https://www.bysec.cn/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</link>
     <pubDate>Wed, 15 Jan 2025 16:40:18 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</guid>
+    </author><guid>https://www.bysec.cn/%E8%A7%A3%E5%86%B3app%E5%8F%8C%E5%90%91%E8%AF%81%E4%B9%A6%E6%A0%A1%E9%AA%8C%E6%8A%93%E5%8F%96%E6%9F%90%E7%81%B5%E9%AD%82%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1%E5%8C%85/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://www.52pojie.cn/thread-1408337-1-1.html" target="_blank" rel="noopener noreferrer">https://www.52pojie.cn/thread-1408337-1-1.html</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://www.52pojie.cn/thread-1408337-1-1.html" target="_blank" rel="noopener noreferrer">https://www.52pojie.cn/thread-1408337-1-1.html</a></em></p></blockquote>
 <h1 id="解决-app-双向证书校验抓取某灵魂聊天软件的通信包" class="headerLink">
     <a href="#%e8%a7%a3%e5%86%b3-app-%e5%8f%8c%e5%90%91%e8%af%81%e4%b9%a6%e6%a0%a1%e9%aa%8c%e6%8a%93%e5%8f%96%e6%9f%90%e7%81%b5%e9%ad%82%e8%81%8a%e5%a4%a9%e8%bd%af%e4%bb%b6%e7%9a%84%e9%80%9a%e4%bf%a1%e5%8c%85" class="header-mark"></a>解决 APP 双向证书校验，抓取某灵魂聊天软件的通信包</h1><p>部分 android APK 为了通信的安全，采用了服务器和客户端双向证书校验，会导致我们无法正常抓包。</p>
 <p>双向认证，顾名思义，客户端和服务器端都需要验证对方的身份，在建立 Https 连接的过程中，握手的流程比单向认证多了几步。单向认证的过程，客户端从服务器端下载服务器端公钥证书进行验证，然后建立安全通信通道。双向通信流程，客户端除了需要从服务器端下载服务器的公钥证书进行验证外，还需要把客户端的公钥证书上传到服务器端给服务器端进行验证，等双方都认证通过了，才开始建立安全通信通道进行数据传输。而常规的 https 只是客户端校验服务端的证书验证服务器的身份。</p>
@@ -563,13 +562,12 @@
     </a></p>]]></description>
 </item><item>
     <title>Hackerone个人提现详细教程</title>
-    <link>http://localhost:1313/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
+    <link>https://www.bysec.cn/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
     <pubDate>Thu, 12 Dec 2024 12:12:12 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
+    </author><guid>https://www.bysec.cn/hackerone%E4%B8%AA%E4%BA%BA%E6%8F%90%E7%8E%B0%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://cloud.tencent.com/developer/inventory/28529/article/1971100" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/inventory/28529/article/1971100</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://cloud.tencent.com/developer/inventory/28529/article/1971100" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/inventory/28529/article/1971100</a></em></p></blockquote>
 <h2 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>国内的人赚点美金不容易，提出来更加不容易，提现中还有许多坑，小智在这里做了一个总结。</p>
 <p>Hackeron 的提现是可以自动提到 Paypal 的，所以我们需要提前绑定好 Paypal 收款账号。</p>
@@ -628,19 +626,17 @@
     </a></p>]]></description>
 </item><item>
     <title>逆向分析某网站加速乐参数流程详解</title>
-    <link>http://localhost:1313/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</link>
+    <link>https://www.bysec.cn/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</link>
     <pubDate>Tue, 26 Nov 2024 22:40:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</guid>
+    </author><guid>https://www.bysec.cn/%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%9F%90%E7%BD%91%E7%AB%99%E5%8A%A0%E9%80%9F%E4%B9%90%E5%8F%82%E6%95%B0%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://juejin.cn/post/7386485874300977178" target="_blank" rel="noopener noreferrer">https://juejin.cn/post/7386485874300977178</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://juejin.cn/post/7386485874300977178" target="_blank" rel="noopener noreferrer">https://juejin.cn/post/7386485874300977178</a></em></p></blockquote>
 <h2 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>加速乐作为一种常见的反爬虫技术，在网络上已有大量详尽深入的教程可供参考。然而，对于那些初次接触的人来说，直接面对它可能仍会感到困惑。</p>
 <h2 id="声明" class="headerLink">
     <a href="#%e5%a3%b0%e6%98%8e" class="header-mark"></a>声明</h2><blockquote>
-<p>本文仅用于学习交流，学习探讨逆向知识，欢迎私信共享学习心得。如有侵权，联系博主删除。请勿商用，否则后果自负。</p>
-</blockquote>
+<p>本文仅用于学习交流，学习探讨逆向知识，欢迎私信共享学习心得。如有侵权，联系博主删除。请勿商用，否则后果自负。</p></blockquote>
 <h2 id="什么是加速乐" class="headerLink">
     <a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%8a%a0%e9%80%9f%e4%b9%90" class="header-mark"></a>什么是加速乐？</h2><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000010CdJ93CHwXA.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000010CdJ93CHwXA.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000010CdJ93CHwXA.jpg">
         
@@ -693,8 +689,7 @@
         
     </a></p>
 <blockquote>
-<p>观察结果揭示了对同一页面共发起了三次<code>HTTP</code>请求：前两次请求均遭遇了<code>521</code>状态码的响应，而最后一次请求成功收到了<code>200</code>状态码。这种模式正是加速乐反爬虫机制的显著特征。</p>
-</blockquote>
+<p>观察结果揭示了对同一页面共发起了三次<code>HTTP</code>请求：前两次请求均遭遇了<code>521</code>状态码的响应，而最后一次请求成功收到了<code>200</code>状态码。这种模式正是加速乐反爬虫机制的显著特征。</p></blockquote>
 <h2 id="流程分析-抓包工具" class="headerLink">
     <a href="#%e6%b5%81%e7%a8%8b%e5%88%86%e6%9e%90-%e6%8a%93%e5%8c%85%e5%b7%a5%e5%85%b7" class="header-mark"></a>流程分析-抓包工具</h2><p>浏览器上我们没能看到具体的响应，我们借助抓包工具试试，这里使用的<code>Fiddler</code>。</p>
 <h3 id="第一次请求-1" class="headerLink">
@@ -710,8 +705,7 @@
         
     </a></p>
 <blockquote>
-<p>同样，看到了三次请求的过程，并且向我们展示了具体的响应。</p>
-</blockquote>
+<p>同样，看到了三次请求的过程，并且向我们展示了具体的响应。</p></blockquote>
 <h2 id="逆向分析" class="headerLink">
     <a href="#%e9%80%86%e5%90%91%e5%88%86%e6%9e%90" class="header-mark"></a>逆向分析</h2><h3 id="获取第一个__jsl_clearance_s" class="headerLink">
     <a href="#%e8%8e%b7%e5%8f%96%e7%ac%ac%e4%b8%80%e4%b8%aa__jsl_clearance_s" class="header-mark"></a>获取第一个<code>__jsl_clearance_s</code></h3><p>通过<code>Fiddler</code>或使用<code>python</code>模拟请求，得到下面这样一段JS代码：</p>
@@ -733,8 +727,7 @@
         
     </a></p>
 <blockquote>
-<p>真的老登。为了使代码难以阅读和分析，还进行了<code>AAEncode</code>加密混淆。</p>
-</blockquote>
+<p>真的老登。为了使代码难以阅读和分析，还进行了<code>AAEncode</code>加密混淆。</p></blockquote>
 <h3 id="获取第二个__jsl_clearance_s" class="headerLink">
     <a href="#%e8%8e%b7%e5%8f%96%e7%ac%ac%e4%ba%8c%e4%b8%aa__jsl_clearance_s" class="header-mark"></a>获取第二个<code>__jsl_clearance_s</code></h3><p>使用第一个请求后得到的 Cookies 继续发起第二段请求得到新的 JS 代码：</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000Y8Qgg2tnsDM.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00000Y8Qgg2tnsDM.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000Y8Qgg2tnsDM.jpg">
@@ -756,8 +749,7 @@
 <li>一般由一个大数组或者含有大数组的函数、一个自执行函数、解密函数和加密后的函数四部分组成；</li>
 <li>函数名和变量名通常以<code>_0x</code>或者<code>0x</code>开头，后接<code>1~6</code>位数字或字母组合；</li>
 <li>自执行函数，进行移位操作，有明显的<code>push、shift</code>关键字；</li>
-</ol>
-</blockquote>
+</ol></blockquote>
 <p>使用（<code>decode_obfuscator</code>）反混淆工具还原代码后，整体的结构就清晰了很多。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1146,8 +1138,7 @@
 <li><code>https://tool.yuanrenxue.cn/decode_obfuscator</code></li>
 <li><code>https://de4js.kshift.me/</code>、<code>https://www.dejs.vip/2obfuscator</code></li>
 <li>浏览器插件<code>v_tools</code>等</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p>然后，我们迫不及待的运行：</p>
 <p><code>node.exe .\final.js</code></p>
 <p>回应我们的就是<code>ReferenceError: window is not defined</code>等报错，依次补上：</p>
@@ -1173,8 +1164,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
-<p>拿去和抓包得到的cookie进行比较，结果一致。</p>
-</blockquote>
+<p>拿去和抓包得到的cookie进行比较，结果一致。</p></blockquote>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00001qPkWG1rHzdx.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00001qPkWG1rHzdx.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00001qPkWG1rHzdx.jpg">
         
     </a></p>
@@ -1339,12 +1329,10 @@
         
     </a></p>
 <blockquote>
-<p>通过尝试（抓包），发现加密函数共有<code>sha256</code>、<code>sha1</code>、<code>md5</code>三种情况。</p>
-</blockquote>
+<p>通过尝试（抓包），发现加密函数共有<code>sha256</code>、<code>sha1</code>、<code>md5</code>三种情况。</p></blockquote>
 <p>因此，我们完全可以按照之前的步骤分别得到<code>sha256</code>、<code>sha1</code>、<code>md5</code>三种情况下的<code>js</code>代码，并根据第二次请求时返回的<code>js</code>中的<code>ha</code>调用对应的<code>js</code>得到最终的<code>__jsl_clearance_s</code>。</p>
 <blockquote>
-<p>又因<code>sha256</code>、<code>sha1</code>、<code>md5</code>的实现并未被魔改，因此完全可以使用<code>Javascript</code>（<code>npm install crypto-js</code>）或<code>python</code>进行简化改写。</p>
-</blockquote>
+<p>又因<code>sha256</code>、<code>sha1</code>、<code>md5</code>的实现并未被魔改，因此完全可以使用<code>Javascript</code>（<code>npm install crypto-js</code>）或<code>python</code>进行简化改写。</p></blockquote>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD00000JW4ge1uBApB.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD00000JW4ge1uBApB.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD00000JW4ge1uBApB.jpg">
         
     </a></p>
@@ -1614,13 +1602,12 @@
 <p>欢迎随时与我联系，我期待与大家交流心得，共同学习，共同进步。</p>]]></description>
 </item><item>
     <title>常用的38种未授权访问漏洞汇总</title>
-    <link>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
+    <link>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</link>
     <pubDate>Thu, 03 Oct 2024 19:50:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
+    </author><guid>https://www.bysec.cn/%E5%B8%B8%E7%94%A8%E7%9A%8438%E7%A7%8D%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E6%B1%87%E6%80%BB/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://www.freebuf.com/articles/web/338459.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/338459.html</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://www.freebuf.com/articles/web/338459.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/338459.html</a></em></p></blockquote>
 <p><strong>本文仅限技术研究与讨论，严禁用于非法用途，否则产生的一切后果自行承担</strong></p>
 <p>本文导读：</p>
 <ul>
@@ -2997,13 +2984,12 @@ http://10.10.4.89:25672</p>
 <p><a href="https://www.freebuf.com/articles/web/278245.html" target="_blank" rel="noopener noreferrer">https://www.freebuf.com/articles/web/278245.html</a></p>]]></description>
 </item><item>
     <title>比较有意思的几个漏洞挖掘记录</title>
-    <link>http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</link>
+    <link>https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</link>
     <pubDate>Mon, 02 Sep 2024 20:06:21 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</guid>
+    </author><guid>https://www.bysec.cn/%E6%AF%94%E8%BE%83%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%87%A0%E4%B8%AA%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%AE%B0%E5%BD%95/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/3692" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3692</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/3692" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3692</a></em></p></blockquote>
 <h2 id="sql-注入" class="headerLink">
     <a href="#sql-%e6%b3%a8%e5%85%a5" class="header-mark"></a>sql 注入</h2><p>某条数据，点击详情的数据包，单引号报错</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003rXNGz44bsvx.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003rXNGz44bsvx.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003rXNGz44bsvx.jpg">
@@ -3242,13 +3228,12 @@ http://10.10.4.89:25672</p>
     </a></p>]]></description>
 </item><item>
     <title>免杀大佬加入黑灰产还打得过吗</title>
-    <link>http://localhost:1313/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</link>
+    <link>https://www.bysec.cn/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</link>
     <pubDate>Mon, 02 Sep 2024 19:12:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</guid>
+    </author><guid>https://www.bysec.cn/%E5%85%8D%E6%9D%80%E5%A4%A7%E4%BD%AC%E5%8A%A0%E5%85%A5%E9%BB%91%E7%81%B0%E4%BA%A7%E8%BF%98%E6%89%93%E5%BE%97%E8%BF%87%E5%90%97/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/3705" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3705</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/3705" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3705</a></em></p></blockquote>
 <h2 id="一前言" class="headerLink">
     <a href="#%e4%b8%80%e5%89%8d%e8%a8%80" class="header-mark"></a><strong>一、前言</strong></h2><p>大家好，我是来自顺丰安全成文实验室的一名老兵，代号“PX0”，我的任务是追踪威胁情报，深入分析最新黑灰产动向。近期，实验室捕获到一组“银狐”样本，经查，样本来源于伪装成主流会议软件的网站，网站通过提高搜索引擎的收录权重来诱骗用户下载该病毒软件。</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001j6XZo2eGJUT.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001j6XZo2eGJUT.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001j6XZo2eGJUT.jpg">
@@ -3452,18 +3437,16 @@ http://10.10.4.89:25672</p>
 <p>98o.oss-cn-beijing.aliyuncs.com</p>
 <p>vauwjw.net</p>
 <p>cinskw.net</p>
-<p>hucgiu.net</p>
-</blockquote>
+<p>hucgiu.net</p></blockquote>
 <p>（针对样本的具体 yara、TTPs 规则等，后续将会同步到顺丰安全应急响应中心预推出的<strong>成文实验室知识星球</strong>，敬请期待！）</p>]]></description>
 </item><item>
     <title>一次经典教育系统后台漏洞打包</title>
-    <link>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+    <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
     <pubDate>Mon, 02 Sep 2024 18:34:17 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/3693" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3693</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/3693" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/3693</a></em></p></blockquote>
 <h2 id="记一次经典教育系统后台漏洞打包" class="headerLink">
     <a href="#%e8%ae%b0%e4%b8%80%e6%ac%a1%e7%bb%8f%e5%85%b8%e6%95%99%e8%82%b2%e7%b3%bb%e7%bb%9f%e5%90%8e%e5%8f%b0%e6%bc%8f%e6%b4%9e%e6%89%93%e5%8c%85" class="header-mark"></a>记:一次经典教育系统后台漏洞打包!</h2><h2 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言:</h2><p>小编认为像什么什么大学比较显眼的 &ldquo;统一认证登录&rdquo;||&ldquo;学生综合管理&rdquo;,基本上弱口令是不太行,别的漏洞的话好多也都被大佬们打完了或者利用上不太容易(菜鸟的内心崩塌)，对于自己渗透能力的有限，信息收集就尤为重要! 既然主站打不了，就打旁站吧！（基本的方式都是通用的） 这里先分享一下<strong>小编自用的谷歌语法：谷歌语法基础的符号：</strong> “xxx”: 将要搜索的关键字用引号括起来 (表示完全匹配，即关键词不能分开，顺序也不能变)</p>
@@ -3692,13 +3675,12 @@ aspx 语言首先想尝试一句话木马</p>
 <p>(所有增添账号和上传文件均删除)</p>]]></description>
 </item><item>
     <title>教育行业渗透打点</title>
-    <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+    <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
     <pubDate>Sun, 28 Jul 2024 18:23:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+    </author><guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2423" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2423</a></em></p></blockquote>
 <p>1、OA系统密码找回 找回密码 系统使用说明文档中发现登录账号 600030 密码找回，找回方式选择密保问题 问题选择出生地，密保问题答案填写高校所在地 即可修改密码 修改密码，即可以图文信息&hellip;</p>
 <h2 id="1oa系统密码找回" class="headerLink">
     <a href="#1oa%e7%b3%bb%e7%bb%9f%e5%af%86%e7%a0%81%e6%89%be%e5%9b%9e" class="header-mark"></a>1、OA系统密码找回</h2><h2 id="找回密码" class="headerLink">
@@ -3988,13 +3970,12 @@ aspx 语言首先想尝试一句话木马</p>
 <p>总结起来就是多信息收集，信息收集yyds</p>]]></description>
 </item><item>
     <title>微信小程序抓包及测试</title>
-    <link>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
+    <link>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</link>
     <pubDate>Fri, 14 Jun 2024 18:24:56 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
+    </author><guid>https://www.bysec.cn/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%93%E5%8C%85%E5%8F%8A%E6%B5%8B%E8%AF%95/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/2477" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2477</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2477" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2477</a></em></p></blockquote>
 <p>网上大多数的小程序测试抓包都是用的安卓模拟器，这里使用的是BurpSuite+Proxifer+微信客户端的抓包方式</p>
 <h2 id="环境准备" class="headerLink">
     <a href="#%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87" class="header-mark"></a>环境准备</h2><p>Burp2023.9.2</p>
@@ -4204,13 +4185,12 @@ aspx 语言首先想尝试一句话木马</p>
 <p>直接下班</p>]]></description>
 </item><item>
     <title>验证码渗透最全总结</title>
-    <link>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</link>
     <pubDate>Mon, 20 May 2024 17:55:46 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%B8%97%E9%80%8F%E6%9C%80%E5%85%A8%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2602" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2602</a></em></p></blockquote>
 <h2 id="验证码渗透最全总结" class="headerLink">
     <a href="#%e9%aa%8c%e8%af%81%e7%a0%81%e6%b8%97%e9%80%8f%e6%9c%80%e5%85%a8%e6%80%bb%e7%bb%93" class="header-mark"></a>验证码渗透最全总结</h2><p>不少人在碰见验证码的时候，大多数只是看了一眼就过去了，没想到验证码还有啥可测试的。但其实验证码也能在项目中导致<strong>高危</strong>,并且验证码漏洞能在一定情况下造成危害。</p>
 <h2 id="验证码总结" class="headerLink">
@@ -4291,8 +4271,8 @@ aspx 语言首先想尝试一句话木马</p>
     </a></p>
 <h3 id="短信炸弹的绕过技巧" class="headerLink">
     <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7" class="header-mark"></a>短信炸弹的绕过技巧</h3><p>我们在了解基础短信验证码的漏洞后，相应的开发也会进行了解。那么我们就需要增加技巧来绕过这些东西。</p>
-<h4 id="短信炸弹的绕过技巧-1--特殊字符" class="headerLink">
-    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-1--%e7%89%b9%e6%ae%8a%e5%ad%97%e7%ac%a6" class="header-mark"></a>短信炸弹的绕过技巧 1&ndash;特殊字符</h4><p>通常，开发在发送短信验证码的时候，没有对特殊字符进行过滤。比如在手机号是 15312341234。我们加上+86，变成+8615312341234，这样的话服务器就有可能判定为两个手机号了。</p>
+<h4 id="短信炸弹的绕过技巧-1特殊字符" class="headerLink">
+    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-1%e7%89%b9%e6%ae%8a%e5%ad%97%e7%ac%a6" class="header-mark"></a>短信炸弹的绕过技巧 1&ndash;特殊字符</h4><p>通常，开发在发送短信验证码的时候，没有对特殊字符进行过滤。比如在手机号是 15312341234。我们加上+86，变成+8615312341234，这样的话服务器就有可能判定为两个手机号了。</p>
 <p>在 mobile=15312341234 的前面，加<code>空格</code>，<code>86</code>，<code>086</code>，<code>0086</code>，<code>+86</code>，<code>0</code>，<code>00</code>，<code>/r,/n</code>,<code>?</code>,<code>#</code>,<code>!</code>,<code>,</code>&hellip;只要想法多就有可能绕过。<br>
 <a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003z29pV3SsQlN.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003z29pV3SsQlN.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003z29pV3SsQlN.jpg">
         
@@ -4304,16 +4284,16 @@ aspx 语言首先想尝试一句话木马</p>
 <a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000002dZuwq4TjTvo.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000002dZuwq4TjTvo.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000002dZuwq4TjTvo.jpg">
         
     </a></p>
-<h4 id="短信炸弹的绕过技巧-2--添加-xff" class="headerLink">
-    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-2--%e6%b7%bb%e5%8a%a0-xff" class="header-mark"></a>短信炸弹的绕过技巧 2&ndash;添加 XFF</h4><p>在请求包中添加XFF头，有的时候服务器是按照IP地址进行判定的。</p>
-<h4 id="短信炸弹的绕过技巧-3--添加多个值" class="headerLink">
-    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-3--%e6%b7%bb%e5%8a%a0%e5%a4%9a%e4%b8%aa%e5%80%bc" class="header-mark"></a>短信炸弹的绕过技巧 3&ndash;添加多个值</h4><p>在发送手机短信验证码的时候可以把一个参数赋上多个值。比如 Mobile=18312341234,13612341234&amp;code=1234</p>
-<h4 id="短信炸弹的绕过技巧-4--添加多个参数" class="headerLink">
-    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-4--%e6%b7%bb%e5%8a%a0%e5%a4%9a%e4%b8%aa%e5%8f%82%e6%95%b0" class="header-mark"></a>短信炸弹的绕过技巧 4&ndash;添加多个参数</h4><p>比如 Mobile=18312341234&amp;Mobile=13612341234</p>
-<h4 id="短信炸弹的绕过技巧-5--修改返回包" class="headerLink">
-    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-5--%e4%bf%ae%e6%94%b9%e8%bf%94%e5%9b%9e%e5%8c%85" class="header-mark"></a>短信炸弹的绕过技巧 5&ndash;修改返回包</h4><p>在发送短信验证码的数据包，修改返回包的 Flase 为 Success</p>
-<h4 id="短信炸弹的绕过技巧-6--并发" class="headerLink">
-    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-6--%e5%b9%b6%e5%8f%91" class="header-mark"></a>短信炸弹的绕过技巧 6&ndash;并发</h4><p>对短信验证码的数据包进行并发，有机会绕过限制</p>
+<h4 id="短信炸弹的绕过技巧-2添加-xff" class="headerLink">
+    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-2%e6%b7%bb%e5%8a%a0-xff" class="header-mark"></a>短信炸弹的绕过技巧 2&ndash;添加 XFF</h4><p>在请求包中添加XFF头，有的时候服务器是按照IP地址进行判定的。</p>
+<h4 id="短信炸弹的绕过技巧-3添加多个值" class="headerLink">
+    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-3%e6%b7%bb%e5%8a%a0%e5%a4%9a%e4%b8%aa%e5%80%bc" class="header-mark"></a>短信炸弹的绕过技巧 3&ndash;添加多个值</h4><p>在发送手机短信验证码的时候可以把一个参数赋上多个值。比如 Mobile=18312341234,13612341234&amp;code=1234</p>
+<h4 id="短信炸弹的绕过技巧-4添加多个参数" class="headerLink">
+    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-4%e6%b7%bb%e5%8a%a0%e5%a4%9a%e4%b8%aa%e5%8f%82%e6%95%b0" class="header-mark"></a>短信炸弹的绕过技巧 4&ndash;添加多个参数</h4><p>比如 Mobile=18312341234&amp;Mobile=13612341234</p>
+<h4 id="短信炸弹的绕过技巧-5修改返回包" class="headerLink">
+    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-5%e4%bf%ae%e6%94%b9%e8%bf%94%e5%9b%9e%e5%8c%85" class="header-mark"></a>短信炸弹的绕过技巧 5&ndash;修改返回包</h4><p>在发送短信验证码的数据包，修改返回包的 Flase 为 Success</p>
+<h4 id="短信炸弹的绕过技巧-6并发" class="headerLink">
+    <a href="#%e7%9f%ad%e4%bf%a1%e7%82%b8%e5%bc%b9%e7%9a%84%e7%bb%95%e8%bf%87%e6%8a%80%e5%b7%a7-6%e5%b9%b6%e5%8f%91" class="header-mark"></a>短信炸弹的绕过技巧 6&ndash;并发</h4><p>对短信验证码的数据包进行并发，有机会绕过限制</p>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001X3faW1LPOg0.jpg" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001X3faW1LPOg0.jpg" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001X3faW1LPOg0.jpg">
         
     </a><br>
@@ -4337,13 +4317,12 @@ aspx 语言首先想尝试一句话木马</p>
 <p>本文仅用于技术讨论与学习，利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者及本公众号不为此承担任何责任。</p>]]></description>
 </item><item>
     <title>万字总结信息收集全网最全</title>
-    <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+    <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
     <pubDate>Fri, 26 Apr 2024 18:19:39 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+    </author><guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2841" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2841</a></em></p></blockquote>
 <p><strong>万字吐血总结信息收集</strong></p>
 <p><a href="https://forum.butian.net/share/2841#9313-1608956864075" target="_blank" rel="noopener noreferrer">一、信息收集前言</a></p>
 <p><a href="https://forum.butian.net/share/2841#1540-1608954143250" target="_blank" rel="noopener noreferrer">二、域名信息</a></p>
@@ -4693,12 +4672,12 @@ aspx 语言首先想尝试一句话木马</p>
 <p>country:jp &amp;&amp; os:Windows Server 2008 R2 &amp;&amp; port:3389</p>
 <p>搜索日本国家，操作系统是Windows Server并且存在永恒之蓝漏洞的机器(更高级会员才能使用vuln)</p>
 <p>country:jp &amp;&amp; os:Windows Server * &amp;&amp; vuln:CVE-2017-0146</p>
-<h4 id="shodanhttpssocsdnnetsosearchqshodanspm1001210130017020语法参考资料" class="headerLink">
-    <a href="#shodanhttpssocsdnnetsosearchqshodanspm1001210130017020%e8%af%ad%e6%b3%95%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-mark"></a><a href="https://so.csdn.net/so/search?q=shodan&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreferrer">shodan</a>语法参考资料</h4><p><a href="https://www.shodan.io/search/filters" target="_blank" rel="noopener noreferrer">Filter Reference</a> <a href="https://www.shodan.io/search/filters" target="_blank" rel="noopener noreferrer">https://www.shodan.io/search/filters</a></p>
+<h4 id="shodan语法参考资料" class="headerLink">
+    <a href="#shodan%e8%af%ad%e6%b3%95%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-mark"></a><a href="https://so.csdn.net/so/search?q=shodan&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreferrer">shodan</a>语法参考资料</h4><p><a href="https://www.shodan.io/search/filters" target="_blank" rel="noopener noreferrer">Filter Reference</a> <a href="https://www.shodan.io/search/filters" target="_blank" rel="noopener noreferrer">https://www.shodan.io/search/filters</a></p>
 <p><a href="https://www.cnblogs.com/H4ck3R-XiX/p/12950736.html" target="_blank" rel="noopener noreferrer">Shodan使用指南 - zha0gongz1 - 博客园</a><a href="https://www.cnblogs.com/H4ck3R-XiX/p/12950736.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/H4ck3R-XiX/p/12950736.html</a></p>
 <p><a href="https://blog.csdn.net/weixin_41489908/article/details/110404340" target="_blank" rel="noopener noreferrer">暗黑引擎 &ndash; Shodan常用搜索语法_web安全工具库的博客-CSDN博客_shodan搜索语法</a><a href="https://blog.csdn.net/weixin_41489908/article/details/110404340" target="_blank" rel="noopener noreferrer">https://blog.csdn.net/weixin_41489908/article/details/110404340</a></p>
-<h3 id="钟馗之眼--知道创宇" class="headerLink">
-    <a href="#%e9%92%9f%e9%a6%97%e4%b9%8b%e7%9c%bc--%e7%9f%a5%e9%81%93%e5%88%9b%e5%ae%87" class="header-mark"></a>钟馗之眼&ndash;知道创宇</h3><p><a href="https://www.zoomeye.org/" target="_blank" rel="noopener noreferrer">ZoomEye - Cyberspace Search Engine</a> <a href="https://www.zoomeye.org/" target="_blank" rel="noopener noreferrer">https://www.zoomeye.org/</a></p>
+<h3 id="钟馗之眼知道创宇" class="headerLink">
+    <a href="#%e9%92%9f%e9%a6%97%e4%b9%8b%e7%9c%bc%e7%9f%a5%e9%81%93%e5%88%9b%e5%ae%87" class="header-mark"></a>钟馗之眼&ndash;知道创宇</h3><p><a href="https://www.zoomeye.org/" target="_blank" rel="noopener noreferrer">ZoomEye - Cyberspace Search Engine</a> <a href="https://www.zoomeye.org/" target="_blank" rel="noopener noreferrer">https://www.zoomeye.org/</a></p>
 <p>免费： 查询结果展示量：4百条 查询API额度：每月1w</p>
 <p>高级：4800/年 查询结果展示量：1千条 查询API额度：每月3w</p>
 <p>VIP：9600/年 查询结果展示量：2千条 查询API额度：每月4w</p>
@@ -4731,8 +4710,8 @@ aspx 语言首先想尝试一句话木马</p>
 <p><a href="https://blog.csdn.net/ncafei/article/details/63683377" target="_blank" rel="noopener noreferrer">zoomeye用户使用手册_ncafei的博客-CSDN博客_zoomeye</a></p>
 <p><a href="https://www.cnblogs.com/someone9/p/8688636.html" target="_blank" rel="noopener noreferrer">ZoomEye（钟馗之眼）搜索技巧记录： - _H0f - 博客园</a></p>
 <p><a href="https://www.freebuf.com/sectool/163782.html" target="_blank" rel="noopener noreferrer">信息收集利器：ZoomEye - FreeBuf网络安全行业门户</a></p>
-<h3 id="360-quake--360" class="headerLink">
-    <a href="#360-quake--360" class="header-mark"></a>360 QUAKE&ndash;360</h3><p><a href="https://quake.360.cn/quake/#/index" target="_blank" rel="noopener noreferrer">360网络空间测绘 — 因为看见，所以安全</a></p>
+<h3 id="360-quake360" class="headerLink">
+    <a href="#360-quake360" class="header-mark"></a>360 QUAKE&ndash;360</h3><p><a href="https://quake.360.cn/quake/#/index" target="_blank" rel="noopener noreferrer">360网络空间测绘 — 因为看见，所以安全</a></p>
 <p>免费 数据广度开放性：5百条 Quake积分：3千/月</p>
 <p>高级：299/年 数据广度开放性：5千条 Quake积分 ：3W/月</p>
 <p>终身：999 数据广度开放性：1W条 Quake积分 ：5W/月</p>
@@ -4852,8 +4831,8 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#2%e7%bd%91%e7%bb%9c%e6%b7%b1%e5%ba%a6%e7%88%ac%e8%99%ab" class="header-mark"></a>2、网络深度爬虫</h2><p>以<a href="https://forum.butian.net/share/www.sina.com.cn" target="_blank" rel="noopener noreferrer">www.sina.com.cn</a>为例，我们使用正则表达式抓取页面以sina.com.cn结尾的所有的URL（一级深度）。</p>
 <h2 id="usrbinenv-python" class="headerLink">
     <a href="#usrbinenv-python" class="header-mark"></a>!/usr/bin/env python</h2><h2 id="codingutf-8" class="headerLink">
-    <a href="#codingutf-8" class="header-mark"></a>coding=utf-8</h2><h2 id="authordavefangoutlookcommailtodavefangoutlookcom" class="headerLink">
-    <a href="#authordavefangoutlookcommailtodavefangoutlookcom" class="header-mark"></a>author=<a href="mailto:dave.fang@outlook.com" rel="">dave.fang@outlook.com</a></h2><h2 id="create20160701" class="headerLink">
+    <a href="#codingutf-8" class="header-mark"></a>coding=utf-8</h2><h2 id="authordavefangoutlookcom" class="headerLink">
+    <a href="#authordavefangoutlookcom" class="header-mark"></a>author=<a href="mailto:dave.fang@outlook.com" rel="">dave.fang@outlook.com</a></h2><h2 id="create20160701" class="headerLink">
     <a href="#create20160701" class="header-mark"></a>create=20160701</h2><p>import re</p>
 <p>import requests</p>
 <p>from pprint import pprint</p>
@@ -5306,13 +5285,12 @@ aspx 语言首先想尝试一句话木马</p>
 <p>·12社工、XSS利用社会工程系获取后台，利用存储型XSs获取后台</p>]]></description>
 </item><item>
     <title>支付类漏洞挖掘技巧总结</title>
-    <link>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+    <link>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 22 Mar 2024 18:22:32 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%AF%E4%BB%98%E7%B1%BB%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/2778" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2778</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2778" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2778</a></em></p></blockquote>
 <h2 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言：</h2><p>支付类逻辑漏洞在漏洞挖掘中是常常出现的问题之一。此类漏洞挖掘思路多，奖励高，是炙手可热的漏洞。此篇文章主要围绕挖掘支付逻辑漏洞时的一些思路分享。</p>
 <h2 id="支付逻辑漏洞成因" class="headerLink">
@@ -5419,13 +5397,12 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e4%b9%9d%e5%88%a9%e7%94%a8%e5%b0%8f%e6%95%b0%e7%82%b9%e7%b2%be%e5%ba%a6%e5%9b%9b%e8%88%8d%e4%ba%94%e5%85%a5" class="header-mark"></a>九、利用小数点精度四舍五入</h4><p>0.019=0.02（比如充值0.019元，第三方支付截取到分也就是0.01元，但是系统四舍五入为0.02）。</p>]]></description>
 </item><item>
     <title>攻防实战外网突破</title>
-    <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+    <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
     <pubDate>Sun, 11 Feb 2024 18:24:29 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+    </author><guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2442" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2442</a></em></p></blockquote>
 <p>在经历了多年的攻防对抗之后，大量目标单位逐渐认识到安全防护的重要性。因此，他们已采取措施尽可能收敛资产暴露面，并加倍部署各种安全设备。但安全防护注重全面性，具有明显的短板&hellip;</p>
 <h2 id="1供应链" class="headerLink">
     <a href="#1%e4%be%9b%e5%ba%94%e9%93%be" class="header-mark"></a>1、供应链</h2><p>在经历了多年的攻防对抗之后，大量目标单位逐渐认识到安全防护的重要性。因此，他们已采取措施尽可能收敛资产暴露面，并加倍部署各种安全设备。但安全防护注重全面性，具有明显的短板效应，一处出现短板，整个防护体系就可能瞬间崩溃。而目标单位的供应链往往是这些薄弱点的集中体现。这些供应链不仅暴露在外，而且由于复杂的关系，使得对它们的监控和管理变得更为困难。因此，攻击团队通常会选择从供应链着手，以一种迂回的方式绕过目标单位强大的防御体系，获得对目标单位的控制权限。</p>
@@ -5728,13 +5705,12 @@ aspx 语言首先想尝试一句话木马</p>
     </a></p>]]></description>
 </item><item>
     <title>任意用户登录漏洞挖掘思路</title>
-    <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+    <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
     <pubDate>Sat, 20 Jan 2024 18:17:14 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+    </author><guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://forum.butian.net/share/2553" target="_blank" rel="noopener noreferrer">https://forum.butian.net/share/2553</a></em></p></blockquote>
 <h2 id="任意用户登录漏洞挖掘思路" class="headerLink">
     <a href="#%e4%bb%bb%e6%84%8f%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95%e6%bc%8f%e6%b4%9e%e6%8c%96%e6%8e%98%e6%80%9d%e8%b7%af" class="header-mark"></a>任意用户登录漏洞挖掘思路</h2><h2 id="前言" class="headerLink">
     <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>任意用户登录漏洞以利用漏洞利用难度低、危害高、奖金高已经成为src/众测漏洞挖掘中的香饽饽，本文将分享一下众测/src中任意用户登录漏洞的挖掘思路。</p>
@@ -5940,10 +5916,10 @@ aspx 语言首先想尝试一句话木马</p>
 <p>修改请求中的oldmobile字段为其他手机号，成功将其他用户的账户数据覆盖到新手机号中，达到任意用户登录</p>]]></description>
 </item><item>
     <title>BurpSuite安装</title>
-    <link>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</link>
+    <link>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</link>
     <pubDate>Sun, 03 Dec 2023 13:43:37 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</guid>
+    </author><guid>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[<h2 id="下载" class="headerLink">
     <a href="#%e4%b8%8b%e8%bd%bd" class="header-mark"></a>下载</h2><ul>
 <li><a href="https://portswigger.net/burp/releases#professional" target="_blank" rel="noopener noreferrer">BurpSuite</a></li>
@@ -5978,13 +5954,12 @@ aspx 语言首先想尝试一句话木马</p>
 </div>]]></description>
 </item><item>
     <title>SRC混子的漏洞挖掘之道</title>
-    <link>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
+    <link>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</link>
     <pubDate>Thu, 30 Nov 2023 09:06:55 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
+    </author><guid>https://www.bysec.cn/src%E6%B7%B7%E5%AD%90%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B9%8B%E9%81%93/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p></blockquote>
 <p>一个SRC混子挖SRC的半年经验分享~,基本都是文字阐述，希望能给同样在挖洞的师傅们带来一点新收获。</p>
 <h3 id="前期信息收集" class="headerLink">
     <a href="#%e5%89%8d%e6%9c%9f%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86" class="header-mark"></a>前期信息收集</h3><p>还是那句老话,渗透测试的本质是信息收集，对于没有0day的弱鸡选手来说，挖SRC感觉更像是对企业的资产梳理，我们往往需要花很长的时间去做信息收集，收集与此公司相关的信息，包括<strong>企业的分公司，全资子公司，网站域名、手机app,微信小程序，企业专利品牌信息，企业邮箱，电话</strong>等等，对于很多万人挖的src来说，你收集到了别人没有收集过的资产，往往离挖到漏洞就不远了。</p>
@@ -6531,13 +6506,12 @@ aspx 语言首先想尝试一句话木马</p>
     <a href="#%e6%80%bb%e7%bb%93" class="header-mark"></a>总结</h4><p>挖SRC需要有一个好心态，国内SRC生态并不是很好，SRC感觉更多的提供了一个相对安全的测试保障，所以更需要抱着一种学习的心态去挖，将我们学习的到的知识灵活运用，发现新的问题。不要想我今晚一定要挖到多少漏洞，要拿到多少奖金，不然可能会被忽略三连打崩心态。</p>]]></description>
 </item><item>
     <title>如何在mac上抓小程序的流量</title>
-    <link>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
+    <link>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</link>
     <pubDate>Sat, 22 Oct 2022 11:24:28 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
+    </author><guid>https://www.bysec.cn/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E6%8A%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B5%81%E9%87%8F/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="https://xz.aliyun.com/t/8501" target="_blank" rel="noopener noreferrer">https://xz.aliyun.com/t/8501</a></em></p></blockquote>
 <h2 id="如何在mac上抓小程序的流量" class="headerLink">
     <a href="#%e5%a6%82%e4%bd%95%e5%9c%a8mac%e4%b8%8a%e6%8a%93%e5%b0%8f%e7%a8%8b%e5%ba%8f%e7%9a%84%e6%b5%81%e9%87%8f" class="header-mark"></a>如何在mac上抓小程序的流量</h2><p>通过Proxifier工具代理微信小程序流量到Burp</p>
 <h3 id="安装burpsuite证书到macos系统中" class="headerLink">
@@ -6549,8 +6523,7 @@ aspx 语言首先想尝试一句话木马</p>
 <p>Your name or company name:<br>
 macwk.com<br>
 Your registration key:<br>
-2DNRX-V3PNK-TEGYN-DR01D-9UGGT</p>
-</blockquote>
+2DNRX-V3PNK-TEGYN-DR01D-9UGGT</p></blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -6567,14 +6540,12 @@ Your registration key:<br>
         
     </a></p>
 <blockquote>
-<p>微信小程序路径 : /Applications/WeChat.app/Contents/MacOS/Mini Program.app</p>
-</blockquote>
+<p>微信小程序路径 : /Applications/WeChat.app/Contents/MacOS/Mini Program.app</p></blockquote>
 <p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000001Dt1n33TI4dL.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000001Dt1n33TI4dL.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000001Dt1n33TI4dL.png">
         
     </a></p>
 <blockquote>
-<p>⚠️ 先启动Proxifier，再启动Burpsuite，最后打开微信小程序,(最好关掉其他代理)</p>
-</blockquote>
+<p>⚠️ 先启动Proxifier，再启动Burpsuite，最后打开微信小程序,(最好关掉其他代理)</p></blockquote>
 <h3 id="抓包成功" class="headerLink">
     <a href="#%e6%8a%93%e5%8c%85%e6%88%90%e5%8a%9f" class="header-mark"></a>抓包成功</h3><p><a class="lightgallery" href="https://qqq.gtimg.cn/music/photo_new/T053XD000003WPjtl4CwhR7.png" title="https://qqq.gtimg.cn/music/photo_new/T053XD000003WPjtl4CwhR7.png" data-thumbnail="https://qqq.gtimg.cn/music/photo_new/T053XD000003WPjtl4CwhR7.png">
         
@@ -6585,10 +6556,10 @@ Your registration key:<br>
     </a></p>]]></description>
 </item><item>
     <title>kali修改为国内源</title>
-    <link>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+    <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
     <pubDate>Sun, 21 Mar 2021 08:16:48 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+    </author><guid>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
     <description><![CDATA[<h2 id="打开配置文件" class="headerLink">
     <a href="#%e6%89%93%e5%bc%80%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="header-mark"></a>打开配置文件</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -6752,13 +6723,12 @@ Your registration key:<br>
 </div>]]></description>
 </item><item>
     <title>绕waf系列之绕安全狗</title>
-    <link>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
+    <link>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</link>
     <pubDate>Tue, 15 Dec 2020 21:18:35 &#43;0800</pubDate><author>
         <name>bysec</name>
-    </author><guid>http://localhost:1313/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
+    </author><guid>https://www.bysec.cn/%E7%BB%95waf%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%95%E5%AE%89%E5%85%A8%E7%8B%97/</guid>
     <description><![CDATA[<blockquote>
-<p><em>转载自： <a href="%e7%bd%91%e7%bb%9c" rel="">网络</a></em></p>
-</blockquote>
+<p><em>转载自： <a href="%e7%bd%91%e7%bb%9c" rel="">网络</a></em></p></blockquote>
 <h1 id="攻击的特定" class="headerLink">
     <a href="#%e6%94%bb%e5%87%bb%e7%9a%84%e7%89%b9%e5%ae%9a" class="header-mark"></a>攻击的特定:</h1><p>攻击二象性:已知攻击和未知攻击</p>
 <h1 id="目前市面主流的waf产品" class="headerLink">
@@ -7060,8 +7030,7 @@ Your registration key:<br>
 </div>
 </div><p>这些都是去掉空格的合法语句,当然如果不拦截<code>/*/或/!*/</code>的话,也可以尝试这两个</p>
 <blockquote>
-<p>提示，安全狗默认不开启对information_schema的拦截，如果开启了，那么就得找支持post传递数据的注入点了，post下不拦截information_schema这个关键词。</p>
-</blockquote>
+<p>提示，安全狗默认不开启对information_schema的拦截，如果开启了，那么就得找支持post传递数据的注入点了，post下不拦截information_schema这个关键词。</p></blockquote>
 <p>补充点
 php+mysql环境下支持的空格有：</p>
 <div class="highlight"><div class="chroma">

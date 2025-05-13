@@ -1,4 +1,4 @@
-# 友链
+﻿# 友链
 
 
 {{< friend "缥缈博客" "https://blog.btstu.cn/" "https://q.qlogo.cn/headimg_dl?dst_uin=1807139605&spec=640" "缥缈个人博客" >}}
@@ -14,6 +14,8 @@
 {{< friend "WebShell'S Blog" "https://www.webshell.cc/" "https://www.webshell.cc/touxiang?apid=230cf8f7e9fb630174e0dd0b88b7f740%3Fs=100&d=mm&r=g" "蛋疼的人生不需要解释！" >}}
 
 {{< friend "Syst1m‘s blog" "https://syst1m.top/" "https://syst1m.top/images/IMG_0010.JPG" "言念君子，温其如玉" >}}
+
+{{< friend "EvilChenChen's Blog" "https://gh0st.cn/" "https://gh0st.cn/assets/avatar.jpg" "分享安全领域的所思、所想、所学。" >}}
 
 ---
 

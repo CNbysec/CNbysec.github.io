@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>信息收集 on bysec</title>
-    <link>https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
+    <link>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/</link>
     <description>Recent content in 信息收集 on bysec</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 02 Sep 2024 18:34:17 +0800</lastBuildDate>
-    <atom:link href="https://www.bysec.cn/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一次经典教育系统后台漏洞打包</title>
-      <link>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
+      <link>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</link>
       <pubDate>Mon, 02 Sep 2024 18:34:17 +0800</pubDate>
-      <guid>https://www.bysec.cn/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
+      <guid>http://localhost:1313/%E4%B8%80%E6%AC%A1%E7%BB%8F%E5%85%B8%E6%95%99%E8%82%B2%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E6%BC%8F%E6%B4%9E%E6%89%93%E5%8C%85/</guid>
       <description></description>
     </item>
     <item>
       <title>教育行业渗透打点</title>
-      <link>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
+      <link>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</link>
       <pubDate>Sun, 28 Jul 2024 18:23:14 +0800</pubDate>
-      <guid>https://www.bysec.cn/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
+      <guid>http://localhost:1313/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E6%B8%97%E9%80%8F%E6%89%93%E7%82%B9/</guid>
       <description></description>
     </item>
     <item>
       <title>万字总结信息收集全网最全</title>
-      <link>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
+      <link>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</link>
       <pubDate>Fri, 26 Apr 2024 18:19:39 +0800</pubDate>
-      <guid>https://www.bysec.cn/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
+      <guid>http://localhost:1313/%E4%B8%87%E5%AD%97%E6%80%BB%E7%BB%93%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%85%A8%E7%BD%91%E6%9C%80%E5%85%A8/</guid>
       <description></description>
     </item>
     <item>
       <title>攻防实战外网突破</title>
-      <link>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
+      <link>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</link>
       <pubDate>Sun, 11 Feb 2024 18:24:29 +0800</pubDate>
-      <guid>https://www.bysec.cn/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
+      <guid>http://localhost:1313/%E6%94%BB%E9%98%B2%E5%AE%9E%E6%88%98%E5%A4%96%E7%BD%91%E7%AA%81%E7%A0%B4/</guid>
       <description></description>
     </item>
   </channel>

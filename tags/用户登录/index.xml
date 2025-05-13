@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>用户登录 on bysec</title>
-    <link>https://www.bysec.cn/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/</link>
+    <link>http://localhost:1313/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/</link>
     <description>Recent content in 用户登录 on bysec</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 20 Jan 2024 18:17:14 +0800</lastBuildDate>
-    <atom:link href="https://www.bysec.cn/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>任意用户登录漏洞挖掘思路</title>
-      <link>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
+      <link>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</link>
       <pubDate>Sat, 20 Jan 2024 18:17:14 +0800</pubDate>
-      <guid>https://www.bysec.cn/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
+      <guid>http://localhost:1313/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E6%80%9D%E8%B7%AF/</guid>
       <description></description>
     </item>
   </channel>

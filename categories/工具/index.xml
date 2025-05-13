@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on bysec</title>
-    <link>https://www.bysec.cn/categories/%E5%B7%A5%E5%85%B7/</link>
+    <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on bysec</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 16 Jan 2025 14:31:29 +0800</lastBuildDate>
-    <atom:link href="https://www.bysec.cn/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>工具集</title>
-      <link>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</link>
+      <link>http://localhost:1313/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Wed, 01 Jan 2020 12:18:39 +0800</pubDate>
-      <guid>https://www.bysec.cn/%E5%B7%A5%E5%85%B7/</guid>
+      <guid>http://localhost:1313/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     <item>
       <title>IDA安装</title>
-      <link>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</link>
+      <link>http://localhost:1313/ida%E5%AE%89%E8%A3%85/</link>
       <pubDate>Thu, 16 Jan 2025 14:31:29 +0800</pubDate>
-      <guid>https://www.bysec.cn/ida%E5%AE%89%E8%A3%85/</guid>
+      <guid>http://localhost:1313/ida%E5%AE%89%E8%A3%85/</guid>
       <description></description>
     </item>
     <item>
       <title>BurpSuite安装</title>
-      <link>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</link>
+      <link>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</link>
       <pubDate>Sun, 03 Dec 2023 13:43:37 +0800</pubDate>
-      <guid>https://www.bysec.cn/burpsuite%E5%AE%89%E8%A3%85/</guid>
+      <guid>http://localhost:1313/burpsuite%E5%AE%89%E8%A3%85/</guid>
       <description></description>
     </item>
     <item>
       <title>kali修改为国内源</title>
-      <link>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <link>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</link>
       <pubDate>Sun, 21 Mar 2021 08:16:48 +0800</pubDate>
-      <guid>https://www.bysec.cn/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <guid>http://localhost:1313/kali%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
       <description></description>
     </item>
   </channel>
